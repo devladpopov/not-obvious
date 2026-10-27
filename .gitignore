@@ -1,0 +1,15 @@
+node_modules/
+dist/
+*.log
+.env
+.DS_Store
+research/
+CHECKPOINT.md
+topic-memory.md
+SOUL.md
+VISION.md
+main-memory.md
+.topic-link
+CLAUDE.md
+recent-messages.jsonl
+INBOX.md
