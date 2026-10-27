@@ -21,7 +21,7 @@ async function main() {
   } else if (cmd === "diverge") {
     const r = await diverge(prompt, rest[0] ?? "constraint-flip");
     console.log(`${r.technique} via ${r.model}:`);
-    for (const s of r.ideas) console.log(`${String(s.cliche).padStart(3)}% cliché  ${s.idea}\n       move: ${s.move}`);
+    for (const s of r.ideas) console.log(`${String(s.cliche).padStart(3)}% cliché  ${s.idea}\n       move: ${s.move}${s.usefulness ? `  | useful ${s.usefulness.score}/10` : ""}`);
   } else {
     throw new Error(`Unknown command ${cmd}`);
   }
