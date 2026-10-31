@@ -62,8 +62,8 @@ export interface ScoreParams {
   spread?: number;
 }
 
-/** Calibrated on bench/prompts.json with cloud-checked labels (docs/calibration.md). */
-export const DEFAULT_PARAMS: ScoreParams = { spreadK: 0.8, nearestWeight: 0.7 };
+/** Calibrated on both sets pooled (bench/prompts.json + bench/set20.json), leave-one-prompt-out, see docs/scoring.md. */
+export const DEFAULT_PARAMS: ScoreParams = { spreadK: 0.4, nearestWeight: 1 };
 
 export function clicheScore(idea: Vector, cloud: Vector[], params: Partial<ScoreParams> = {}): ClicheBreakdown {
   const p = { ...DEFAULT_PARAMS, ...params };
@@ -87,11 +87,14 @@ export function clicheScore(idea: Vector, cloud: Vector[], params: Partial<Score
   return { cliche: Math.round(blended * 100), nearestSim, nearestIndex, centroidSim, density };
 }
 
-/** Weight of the mechanism judge in the final score (calibrated on bench/prompts.json, see docs/calibration.md). */
-export const JUDGE_WEIGHT = 0.6;
+/**
+ * Weight of the mechanism judge in the final score. 0 since day 6: on the pooled 30-prompt set it did not improve
+ * held-out accuracy (docs/scoring.md). The verdict is still computed: it picks the closest cliché and explains overlap.
+ */
+export const JUDGE_WEIGHT = 0;
 
-/** Weight of web prevalence in the final score (calibrated on bench/prompts.json, see docs/calibration.md). */
-export const WEB_WEIGHT = 0;
+/** Weight of web prevalence in the final score, when a web check ran (pooled calibration, docs/scoring.md). */
+export const WEB_WEIGHT = 0.4;
 
 /**
  * Final Cliché Score: embedding distance blended with an LLM judge's verdict on mechanism overlap (0-10),

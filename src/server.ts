@@ -77,13 +77,13 @@ server.registerTool(
   {
     title: "Cliché Score",
     description:
-      "Measure how clichéd ideas are: 0 = far from what every AI says, 100 = the typical AI answer. Blends semantic distance to the cliché cloud for this prompt with an LLM judge of mechanism overlap (same idea in other words?), plus a usefulness critic (1-10). With web: true each idea is also searched on the web and gets a prevalence 0-10 (does it already exist?) with sources; that is a separate axis, not part of the Cliché Score.",
+      "Measure how clichéd ideas are: 0 = far from what every AI says, 100 = the typical AI answer. Semantic distance to the cliché cloud for this prompt (60%) blended with web prevalence (40%): each idea is searched on the web and rated 0-10 for how much of it already exists, with sources. Also returns an LLM judge verdict on mechanism overlap (closest cliché and why) and a usefulness critic (1-10). With web: false the score is the embedding part alone.",
     inputSchema: {
       prompt,
       ideas: z.array(z.string().min(3)).min(1).max(30),
       critic: z.boolean().optional(),
       judge: z.boolean().optional(),
-      web: z.boolean().optional().describe("Also search the web per idea (slower, one search each). Default false."),
+      web: z.boolean().optional().describe("Search the web per idea and blend prevalence into the score (one search each, cached). Default true."),
     },
   },
   ({ prompt, ideas, critic, judge, web }) => run(() => score(prompt, ideas, { critic, judge, web })),

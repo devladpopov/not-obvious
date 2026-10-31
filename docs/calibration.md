@@ -7,47 +7,48 @@ Labels: cloud-checked (anchors the cloud already contains count as clichés, see
 
 Web check: claude, 70 of 70 anchors rated.
 
-| params (k = spread, w = nearest weight, j = judge weight, web = web prevalence weight) | band accuracy | pair order | mean cliché | mean mid | mean far |
-|---|---|---|---|---|---|
-| embedding only k=0.8 w=0.7 j=0 web=0 | 68% | 84% | 82 | 64 | 37 |
-| judge only k=0.8 w=0.7 j=1 web=0 | 62% | 85% | 74 | 50 | 27 |
-| web only k=0.8 w=0.7 j=0 web=1 | 68% | 88% | 87 | 62 | 58 |
-| current default k=0.8 w=0.7 j=0.6 web=0 | 70% | 90% | 77 | 56 | 31 |
-| current + web 0.1 k=0.8 w=0.7 j=0.6 web=0.1 | 67% | 89% | 78 | 56 | 34 |
-| current + web 0.2 k=0.8 w=0.7 j=0.6 web=0.2 | 64% | 89% | 79 | 57 | 37 |
-| current + web 0.3 k=0.8 w=0.7 j=0.6 web=0.3 | 67% | 89% | 80 | 57 | 39 |
-| current + web 0.5 k=0.8 w=0.7 j=0.6 web=0.5 | 65% | 92% | 82 | 59 | 45 |
-| best k=0.5 w=1 j=0.25 web=0.4 | 74% | 93% | 81 | 54 | 34 |
-| #2 k=0.6 w=1 j=0 web=0.3 | 75% | 91% | 82 | 57 | 32 |
-| #3 k=0.5 w=0.6 j=0.25 web=0.4 | 74% | 92% | 78 | 53 | 36 |
-| #4 k=0.5 w=0.8 j=0.25 web=0.4 | 72% | 93% | 79 | 53 | 35 |
-| #5 k=0.6 w=0.8 j=0.25 web=0.4 | 72% | 93% | 81 | 57 | 38 |
-| original labels, embedding only k=0.8 w=0.7 j=0 web=0 | 53% | 74% | 82 | 70 | 50 |
-| original labels, current default k=0.8 w=0.7 j=0.6 web=0 | 51% | 77% | 75 | 66 | 45 |
-| original labels, judge only k=0.8 w=0.7 j=1 web=0 | 47% | 70% | 69 | 64 | 42 |
+| params (k = spread, w = nearest weight, j = judge weight, web = web prevalence weight) | band accuracy | pair order | rho | mean cliché | mean mid | mean far |
+|---|---|---|---|---|---|---|
+| embedding only k=0.4 w=1 j=0 web=0 | 62% | 83% | - | 74 | 40 | 13 |
+| judge only k=0.4 w=1 j=1 web=0 | 62% | 85% | - | 74 | 50 | 27 |
+| web only k=0.4 w=1 j=0 web=1 | 68% | 88% | - | 87 | 62 | 58 |
+| current default k=0.4 w=1 j=0 web=0.4 | 72% | 90% | - | 79 | 49 | 31 |
+| current + web 0.1 k=0.4 w=1 j=0 web=0.1 | 65% | 86% | - | 76 | 42 | 17 |
+| current + web 0.2 k=0.4 w=1 j=0 web=0.2 | 68% | 87% | - | 77 | 44 | 22 |
+| current + web 0.3 k=0.4 w=1 j=0 web=0.3 | 70% | 88% | - | 78 | 47 | 26 |
+| current + web 0.5 k=0.4 w=1 j=0 web=0.5 | 72% | 91% | - | 81 | 51 | 35 |
+| best k=0.5 w=1 j=0.25 web=0.4 | 74% | 93% | - | 81 | 54 | 34 |
+| best without web k=0.5 w=1 j=0.25 web=0 | 62% | 85% | - | 77 | 49 | 18 |
+| #2 k=0.6 w=1 j=0 web=0.3 | 75% | 91% | - | 82 | 57 | 32 |
+| #3 k=0.5 w=0.6 j=0.25 web=0.4 | 74% | 92% | - | 78 | 53 | 36 |
+| #4 k=0.5 w=0.8 j=0.25 web=0.4 | 72% | 93% | - | 79 | 53 | 35 |
+| #5 k=0.6 w=0.8 j=0.25 web=0.4 | 72% | 93% | - | 81 | 57 | 38 |
+| original labels, embedding only k=0.4 w=1 j=0 web=0 | 56% | 72% | - | 74 | 53 | 29 |
+| original labels, current default k=0.4 w=1 j=0 web=0 | 56% | 72% | - | 74 | 53 | 29 |
+| original labels, judge only k=0.4 w=1 j=1 web=0 | 47% | 70% | - | 69 | 64 | 42 |
 
-Leave-one-prompt-out cross-validation (parameters picked on 9 prompts, scored on the 10th):
+Leave-one-prompt-out cross-validation (parameters picked on the other prompts, scored on the held-out one):
 
-| components | band accuracy | pair order |
-|---|---|---|
-| embedding | 64% | 85% |
-| embedding + judge | 67% | 89% |
-| embedding + judge + web | 65% | 89% |
+| components | band accuracy | pair order | rho |
+|---|---|---|---|
+| embedding | 64% | 85% | - |
+| embedding + judge | 67% | 89% | - |
+| embedding + judge + web | 65% | 89% | - |
 
 ## Per prompt (current default)
 
 | prompt | density | cliché | mid | far |
 |---|---|---|---|---|
-| Suggest a side business for a software developer | 0.884 | 88 / 58 / 100 | 53 / 37 / 52 | 25 |
-| How can a small coffee shop attract more customers? | 0.893 | 100 / 76 / 100 / 63 / 73 |  | 35 / 5 |
-| Give me a fresh idea for a birthday party for a 10-year-old | 0.871 | 37 / 38 / 93 / 71 / 89 |  | 61 |
-| Name ideas for a new productivity app | 0.842 | 99 / 49 / 25 | 34 / 25 | 24 / 12 |
-| How can a city reduce traffic congestion? | 0.910 | 100 / 100 / 90 / 97 | 48 | 24 / 46 |
-| Suggest a marketing campaign for a new running shoe | 0.869 | 50 / 57 / 26 / 72 / 88 | 91 | 47 |
-| Ideas to improve employee engagement in a remote team | 0.870 | 94 / 94 / 98 / 90 | 77 / 83 | 18 |
-| What could a museum do to attract teenagers? | 0.891 | 70 / 55 / 95 / 81 / 52 |  | 28 / 47 |
-| How can a non-profit raise money without asking for donations? | 0.888 | 100 / 42 / 97 / 94 / 72 | 68 | 56 |
-| Suggest a new feature for a note-taking app | 0.875 | 94 / 90 / 93 / 75 | 38 / 60 | 9 |
+| Suggest a side business for a software developer | 0.884 | 100 / 64 / 100 | 55 / 43 / 55 | 32 |
+| How can a small coffee shop attract more customers? | 0.893 | 100 / 72 / 96 / 49 / 92 |  | 28 / 16 |
+| Give me a fresh idea for a birthday party for a 10-year-old | 0.871 | 74 / 54 / 96 / 36 / 92 |  | 70 |
+| Name ideas for a new productivity app | 0.842 | 96 / 70 / 32 | 40 / 28 | 32 / 12 |
+| How can a city reduce traffic congestion? | 0.910 | 100 / 92 / 96 / 92 | 20 | 20 / 44 |
+| Suggest a marketing campaign for a new running shoe | 0.869 | 80 / 83 / 30 / 55 / 88 | 80 | 61 |
+| Ideas to improve employee engagement in a remote team | 0.870 | 100 / 96 / 100 / 96 | 73 / 60 | 24 |
+| What could a museum do to attract teenagers? | 0.891 | 96 / 50 / 96 / 71 / 28 |  | 20 / 18 |
+| How can a non-profit raise money without asking for donations? | 0.888 | 96 / 36 / 100 / 92 / 54 | 42 | 28 |
+| Suggest a new feature for a note-taking app | 0.875 | 96 / 100 / 100 / 61 | 33 / 55 | 24 |
 
 ## Findings (written by hand, not regenerated)
 

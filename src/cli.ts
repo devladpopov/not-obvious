@@ -6,7 +6,7 @@ const [cmd, prompt, ...rest] = process.argv.slice(2);
 
 async function main() {
   if (!cmd || !prompt) {
-    console.log('Usage:\n  not-obvious baseline "prompt"\n  not-obvious score "prompt" "idea" ["idea" ...] [--web]\n  not-obvious diverge "prompt" [all|scamper|triz|morphological|far-analogy|constraint-flip]\n  not-obvious remix "prompt" "idea A" "idea B"\n  not-obvious explain "prompt" "idea"');
+    console.log('Usage:\n  not-obvious baseline "prompt"\n  not-obvious score "prompt" "idea" ["idea" ...] [--no-web]\n  not-obvious diverge "prompt" [all|scamper|triz|morphological|far-analogy|constraint-flip]\n  not-obvious remix "prompt" "idea A" "idea B"\n  not-obvious explain "prompt" "idea"');
     process.exit(1);
   }
   if (cmd === "baseline") {
@@ -14,8 +14,8 @@ async function main() {
     console.log(`Cliché cloud (${c.cliches.length}, embedder ${c.embedder}):`);
     for (const x of c.cliches) console.log(`  [${x.model}] ${x.text}`);
   } else if (cmd === "score") {
-    const web = rest.includes("--web");
-    for (const s of await score(prompt, rest.filter((x) => x !== "--web"), { web })) {
+    const web = !rest.includes("--no-web");
+    for (const s of await score(prompt, rest.filter((x) => x !== "--web" && x !== "--no-web"), { web })) {
       console.log(`${String(s.cliche).padStart(3)}% cliché  ${s.idea}`);
       console.log(`       nearest: ${s.nearest}  | embedding ${s.embedding}%${s.judge ? `, overlap ${s.judge.overlap}/10` : ""}${s.usefulness ? `  | useful ${s.usefulness.score}/10` : ""}`);
       if (s.web) console.log(`       web ${s.web.prevalence}/10: ${s.web.why}${s.web.sources[0] ? `  (${s.web.sources[0].url})` : ""}`);

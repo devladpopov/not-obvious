@@ -17,21 +17,21 @@ LLMs converge. Ask five models for a side business and you get five versions of 
 | Tool | What it does |
 |---|---|
 | `baseline` | Asks every configured model the plain question and returns the cliché cloud (cached per prompt). |
-| `diverge` | Generates ideas away from the cloud with a named technique (`scamper`, `triz`, `morphological`, `far-analogy`, `constraint-flip`) or `all` five in parallel. Keeps only ideas with Cliché Score below 50 and usefulness 6+; if too few survive, it regenerates with the rejection reasons. Survivors are then searched on the web; ones that already exist as a common product or practice are flagged `existsOnline` and sorted last. Returns the survivors and the closest misses. |
+| `diverge` | Generates ideas away from the cloud with a named technique (`scamper`, `triz`, `morphological`, `far-analogy`, `constraint-flip`) or `all` five in parallel. Keeps only ideas with an embedding Cliché Score below 50 and usefulness 6+; if too few survive, it regenerates with the rejection reasons. Survivors are then searched on the web, their score gets the web part, and ones that already exist as a common product or practice are flagged `existsOnline` and sorted last. Returns the survivors and the closest misses. |
 | `remix` | Crosses idea A and idea B into hybrids that neither parent nor the cloud contains. Scores the parents first, takes at least one component (mechanism, audience, channel, constraint) from each and flags which hybrids escaped the cloud. |
-| `score` | Cliché Score 0-100 for any list of ideas (0 = far from the AI consensus), with the embedding part and the mechanism judge verdict, plus a usefulness critic 1-10. With `web: true` each idea is also searched on the web: prevalence 0-10 (does it already exist?) with sources. |
+| `score` | Cliché Score 0-100 for any list of ideas (0 = far from the AI consensus and from what already exists), with its parts: embedding distance, web prevalence 0-10 with sources, the mechanism judge verdict (closest cliché and why), plus a usefulness critic 1-10. `web: false` skips the search and returns the embedding part alone. |
 | `explain` | Why an idea scored the way it did, one concrete move to push it further, and the idea rewritten with that move and re-scored (e.g. "programming course for beginners" 88% -> "coding escape-room kits for libraries and team events" 45%). |
 
-## Cliché Score (v0.2)
+## Cliché Score (v0.3)
 
 1. Build the cloud: each model answers the plain prompt; answers are embedded and near-duplicates merged.
-2. Embed the idea and find its nearest cliché and its similarity to the cloud centroid ("the average AI answer").
-3. Normalise against the cloud's own density: an idea as close to the cloud as clichés are to each other scores about 100; the scale adapts to how tight the cloud is (spread = 0.8 x (1 - density)). Blend: 70% nearest cliché, 30% centroid.
-4. Embeddings see wording, not ideas. A mechanism judge (a fast LLM) rates 0-10 whether the idea does the same thing, for the same people, in the same way as some cliché. Final score: 40% embedding distance + 60% judge.
-5. A separate critic rates usefulness so that "far away" never means "nonsense".
-6. Web check, a separate axis: the idea is searched on the web (Claude web search, or Brave Search with `BRAVE_API_KEY`) and rated 0-10 for how much of it already exists, with sources. An idea can escape every model and still be a known product; the two are reported side by side, not blended (blending did not improve held-out calibration).
+2. Embed the idea and find its nearest cliché.
+3. Normalise against the cloud's own density: an idea as close to the cloud as clichés are to each other scores about 100; the scale adapts to how tight the cloud is (spread = 0.4 x (1 - density)).
+4. Web check: the idea is searched on the web (Claude web search, or Brave Search with `BRAVE_API_KEY`) and rated 0-10 for how much of it already exists, with sources. Final score: 60% embedding distance + 40% web prevalence. Without a web check the score is the embedding part alone.
+5. A mechanism judge (a fast LLM) says which cliché the idea is closest to and how much of its mechanism it shares (0-10, with a reason). It explains the score but is not blended in: it did not improve held-out accuracy.
+6. A separate critic rates usefulness so that "far away" never means "nonsense".
 
-Calibration on 10 prompts x 7 hand-labelled anchors ([`docs/calibration.md`](docs/calibration.md)): a cliché outranks a mid idea and a mid idea outranks a far one in 90% of pairs (84% with embeddings alone). Human ratings are on the roadmap. The formula lives in [`src/math.ts`](src/math.ts).
+Calibrated on 270 labelled ideas for 20 prompts: 70 hand-written anchors and 200 generated ideas rated blind by three LLM judges ([`docs/scoring.md`](docs/scoring.md)). With leave-one-prompt-out cross-validation a more clichéd idea outranks a less clichéd one in 86% of pairs (82% with embeddings alone), and the score agrees with the judges' originality ratings at Spearman 0.73. Human ratings are on the roadmap. The formula lives in [`src/math.ts`](src/math.ts).
 
 ## Quick start
 

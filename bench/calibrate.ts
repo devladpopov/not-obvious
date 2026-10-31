@@ -3,6 +3,7 @@
  * (cliche / mid / far) and grid-search the Cliché Score parameters.
  *   bun run bench/calibrate.ts            -> bench/calibration.json + docs/calibration.md
  *   bun run bench/calibrate.ts set20      -> bench/calibration-set20.json + docs/calibration-set20.md (blind-labelled set, see build-set20.ts)
+ *   bun run bench/calibrate.ts all        -> both sets pooled (cross-validation holds out a prompt from both), used to pick the defaults
  * Needs ANTHROPIC_API_KEY and/or GEMINI_API_KEY (embeddings: gemini-embedding-001).
  */
 import { readFile, writeFile, mkdir } from "node:fs/promises";
@@ -19,10 +20,13 @@ const inBand = (b: Band, s: number) => (b === "cliche" ? s >= 70 : b === "mid" ?
 
 const SET = process.argv[2] ?? "prompts";
 const suffix = SET === "prompts" ? "" : `-${SET}`;
-const set = JSON.parse(await readFile(new URL(`./${SET}.json`, import.meta.url), "utf8")) as {
+type SetFile = {
   /** labels: continuous originality per idea (1-7, higher = more original), when the set has them. */
   prompts: ({ prompt: string; relabel?: Record<string, Band | "drop">; labels?: Record<string, number> } & Record<Band, string[]>)[];
 };
+const SOURCES = SET === "all" ? ["prompts", "set20"] : [SET];
+const set: SetFile = { prompts: [] };
+for (const name of SOURCES) set.prompts.push(...(JSON.parse(await readFile(new URL(`./${name}.json`, import.meta.url), "utf8")) as SetFile).prompts);
 const hasRelabel = set.prompts.some((p) => p.relabel);
 const hasLabels = set.prompts.some((p) => p.labels);
 
@@ -94,16 +98,18 @@ function crossValidate(allowed: (g: (typeof grid)[number]) => boolean) {
   const picks: string[] = [];
   const rhos: number[] = [];
   const cands = grid.filter(allowed);
-  rows.forEach((_, held) => {
+  // Fold = prompt text, so a prompt present in both pooled sets is held out from both.
+  [...new Set(rows.map((r) => r.prompt))].forEach((heldPrompt) => {
+    const isHeld = (ri: number) => rows[ri]!.prompt === heldPrompt;
     let top: (typeof grid)[number] | undefined, topV = -1;
     for (const g of cands) {
       const p = g.params;
-      const e = evaluate({ spreadK: p.spreadK, nearestWeight: p.nearestWeight }, p.judgeWeight, "checked", p.webWeight, (ri) => ri !== held);
+      const e = evaluate({ spreadK: p.spreadK, nearestWeight: p.nearestWeight }, p.judgeWeight, "checked", p.webWeight, (ri) => !isHeld(ri));
       const v = e.bandAccuracy + e.pairOrder;
       if (v > topV) (topV = v), (top = g);
     }
     const p = top!.params;
-    const e = evaluate({ spreadK: p.spreadK, nearestWeight: p.nearestWeight }, p.judgeWeight, "checked", p.webWeight, (ri) => ri === held);
+    const e = evaluate({ spreadK: p.spreadK, nearestWeight: p.nearestWeight }, p.judgeWeight, "checked", p.webWeight, isHeld);
     for (const k of Object.keys(sum) as (keyof typeof sum)[]) sum[k] += e.counts[k];
     if (e.spearman !== undefined) rhos.push(e.spearman);
     picks.push(`k=${p.spreadK} w=${p.nearestWeight} j=${p.judgeWeight} web=${p.webWeight}`);
@@ -123,6 +129,8 @@ const webSweep = [0.1, 0.2, 0.3, 0.5].map((ww) => evaluate(DEFAULT_PARAMS, JUDGE
 const webOnly = evaluate(DEFAULT_PARAMS, 0, "checked", 1);
 const webCoverage = rows.flatMap((r) => r.anchors).filter((a) => a.web !== undefined).length;
 const judgeOnly = evaluate(DEFAULT_PARAMS, 1);
+// The best spread / nearest weight with the web component missing: what users get from `score` without web: true.
+const bestNoWeb = evaluate({ spreadK: best.params.spreadK, nearestWeight: best.params.nearestWeight }, best.params.judgeWeight);
 const original = !hasRelabel ? [] : [evaluate(DEFAULT_PARAMS, 0, "original"), evaluate(DEFAULT_PARAMS, JUDGE_WEIGHT, "original"), evaluate(DEFAULT_PARAMS, 1, "original")];
 
 await writeFile(new URL(`./calibration${suffix}.json`, import.meta.url), JSON.stringify({
@@ -130,7 +138,7 @@ await writeFile(new URL(`./calibration${suffix}.json`, import.meta.url), JSON.st
   clouds: rows.map((r) => ({ prompt: r.prompt, size: r.cloudSize, models: r.models })),
   crossValidation: cv,
   web: { mode: webMode(), coverage: webCoverage, sweep: webSweep.map(({ detail, ...g }) => g), webOnly: (({ detail, ...g }) => g)(webOnly) },
-  embeddingOnly: base, current, judgeOnly, originalLabels: original.map(({ detail, ...g }) => g), best: { ...best }, top10: grid.slice(0, 10).map(({ detail, ...g }) => g),
+  embeddingOnly: base, current, judgeOnly, originalLabels: original.map(({ detail, ...g }) => g), best: { ...best }, bestNoWeb: (({ detail, ...g }) => g)(bestNoWeb), top10: grid.slice(0, 10).map(({ detail, ...g }) => g),
 }, null, 2));
 
 const pct = (x: number) => `${Math.round(x * 100)}%`;
@@ -140,11 +148,11 @@ const md = [
   ...(SET === "prompts"
     ? [`Set: ${rows.length} prompts x 7 hand-written anchors (3 cliché, 2 mid, 2 far), see bench/prompts.json. Targets: cliché >= 70, mid 30-70, far <= 35.`, ``,
        `Labels: cloud-checked (anchors the cloud already contains count as clichés, see "relabel" in prompts.json); the last three rows use the labels as originally written.`, ``]
-    : [`Set: ${rows.length} prompts, ${rows.reduce((s, r) => s + r.anchors.length, 0)} ideas, see bench/${SET}.json. Bands from blind judge ratings (originality 1-7: <= 2.5 cliché, >= 4.5 far). Targets: cliché >= 70, mid 30-70, far <= 35.`, ``,
+    : [`Set: ${rows.length} prompt rows, ${rows.reduce((s, r) => s + r.anchors.length, 0)} ideas, see ${SOURCES.map((n) => `bench/${n}.json`).join(" + ")}.${SET === "all" ? " Bands: cloud-checked hand labels (prompts.json) and" : ""} Bands from blind judge ratings (originality 1-7: <= 2.5 cliché, >= 4.5 far). Targets: cliché >= 70, mid 30-70, far <= 35.`, ``,
        `rho = mean per-prompt Spearman between the Cliché Score and the judges' originality (sign flipped, 1 = same order).`, ``]),
   `Web check: ${webMode()}, ${webCoverage} of ${rows.reduce((s, r) => s + r.anchors.length, 0)} anchors rated.`, ``,
   `| params (k = spread, w = nearest weight, j = judge weight, web = web prevalence weight) | band accuracy | pair order | rho | mean cliché | mean mid | mean far |`, `|---|---|---|---|---|---|---|`,
-  ...[["embedding only", base], ["judge only", judgeOnly], ["web only", webOnly], [`current default`, current], ...webSweep.map((g) => [`current + web ${g.params.webWeight}`, g] as const), ["best", best], ...grid.slice(1, 5).map((g, i) => [`#${i + 2}`, g] as const),
+  ...[["embedding only", base], ["judge only", judgeOnly], ["web only", webOnly], [`current default`, current], ...webSweep.map((g) => [`current + web ${g.params.webWeight}`, g] as const), ["best", best], ["best without web", bestNoWeb], ...grid.slice(1, 5).map((g, i) => [`#${i + 2}`, g] as const),
     ...(hasRelabel ? [["original labels, embedding only", original[0]], ["original labels, current default", original[1]], ["original labels, judge only", original[2]]] : [])].map(([n, g]: any) =>
     `| ${n} k=${g.params.spreadK} w=${g.params.nearestWeight} j=${g.params.judgeWeight} web=${g.params.webWeight ?? 0} | ${pct(g.bandAccuracy)} | ${pct(g.pairOrder)} | ${g.spearman?.toFixed(2) ?? "-"} | ${g.means.cliche} | ${g.means.mid} | ${g.means.far} |`),
   ``, `Leave-one-prompt-out cross-validation (parameters picked on the other prompts, scored on the held-out one):`, ``,

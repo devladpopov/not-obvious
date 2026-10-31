@@ -181,7 +181,8 @@ export async function judgeMechanism(prompt: string, ideas: string[], cloud: Clo
 
 /**
  * score: how clichéd are these ideas relative to the cloud for this prompt (0 = original, 100 = what every AI says).
- * web: also search the web for each idea (slower, ~1 search per idea); off by default inside generation loops.
+ * web: also search the web for each idea (one search per idea, cached) and blend its prevalence into the score, as calibrated.
+ * On by default; generation loops pass web: false and check only their survivors.
  */
 export async function score(prompt: string, ideas: string[], opts: { critic?: boolean; judge?: boolean; web?: boolean } = {}): Promise<Scored[]> {
   const cloud = await baseline(prompt);
@@ -190,7 +191,7 @@ export async function score(prompt: string, ideas: string[], opts: { critic?: bo
     opts.critic === false ? [] : usefulness(prompt, ideas).catch(() => []),
     // A failed judge degrades to embedding-only scoring instead of failing the call.
     opts.judge === false ? [] : judgeMechanism(prompt, ideas, cloud).catch(() => []),
-    opts.web ? webCheck(prompt, ideas, CACHE_DIR).catch(() => []) : [],
+    opts.web === false ? [] : webCheck(prompt, ideas, CACHE_DIR).catch(() => []),
   ]);
   return ideas.map((idea, i) => {
     const b = clicheScore(vecs[i]!, cloud.vectors);
@@ -264,7 +265,7 @@ async function divergeOne(prompt: string, techniqueId: string, cloud: Cloud, o: 
       const r = await complete(ask, { tier: "smart", json: true, schema: IdeasSchema });
       model = r.model;
       const raw = parseList<{ idea: string; move: string }>(r.text).filter((x) => x?.idea);
-      const scored = await score(prompt, raw.map((x) => String(x.idea)));
+      const scored = await score(prompt, raw.map((x) => String(x.idea)), { web: false });
       scored.forEach((s, i) => {
         const item = { ...s, move: String(raw[i]?.move ?? ""), technique: t.name };
         (passes(s, o.maxCliche, o.minUseful) ? kept : rejected).push(item);
