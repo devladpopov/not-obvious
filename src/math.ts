@@ -90,12 +90,24 @@ export function clicheScore(idea: Vector, cloud: Vector[], params: Partial<Score
 /** Weight of the mechanism judge in the final score (calibrated on bench/prompts.json, see docs/calibration.md). */
 export const JUDGE_WEIGHT = 0.6;
 
+/** Weight of web prevalence in the final score (calibrated on bench/prompts.json, see docs/calibration.md). */
+export const WEB_WEIGHT = 0;
+
 /**
- * Final Cliché Score: embedding distance blended with an LLM judge's verdict on mechanism overlap (0-10).
- * Embeddings see wording, the judge sees "is this the same idea in other words". No judge = embedding only.
+ * Final Cliché Score: embedding distance blended with an LLM judge's verdict on mechanism overlap (0-10),
+ * then optionally with web prevalence (0-10, "does this already exist out there?").
+ * Embeddings see wording, the judge sees "is this the same idea in other words", the web sees "people already do this".
+ * A missing component drops out: no judge = embedding only, no web check = embedding + judge.
  */
-export function combineScores(embedding: number, overlap: number | undefined, judgeWeight = JUDGE_WEIGHT): number {
-  if (overlap === undefined || !Number.isFinite(overlap)) return embedding;
-  const judged = Math.min(10, Math.max(0, overlap)) * 10;
-  return Math.round((1 - judgeWeight) * embedding + judgeWeight * judged);
+export function combineScores(
+  embedding: number,
+  overlap: number | undefined,
+  judgeWeight = JUDGE_WEIGHT,
+  web?: number,
+  webWeight = WEB_WEIGHT,
+): number {
+  const to100 = (x: number) => Math.min(10, Math.max(0, x)) * 10;
+  const base = overlap === undefined || !Number.isFinite(overlap) ? embedding : (1 - judgeWeight) * embedding + judgeWeight * to100(overlap);
+  const total = web === undefined || !Number.isFinite(web) ? base : (1 - webWeight) * base + webWeight * to100(web);
+  return Math.round(total);
 }

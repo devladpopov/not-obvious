@@ -46,10 +46,11 @@ server.registerTool(
       max_cliche: z.number().min(1).max(100).optional().describe("Keep ideas with Cliché Score below this (default 50)."),
       min_usefulness: z.number().min(1).max(10).optional().describe("Keep ideas rated at least this useful, 1-10 (default 6)."),
       rounds: z.number().int().min(1).max(4).optional().describe("Generation rounds per technique (default 2)."),
+      web: z.boolean().optional().describe("Search the web for each surviving idea and flag ones that already exist online (default true)."),
     },
   },
-  ({ prompt, technique, count, max_cliche, min_usefulness, rounds }) =>
-    run(() => diverge(prompt, technique, { count, maxCliche: max_cliche, minUseful: min_usefulness, rounds })),
+  ({ prompt, technique, count, max_cliche, min_usefulness, rounds, web }) =>
+    run(() => diverge(prompt, technique, { count, maxCliche: max_cliche, minUseful: min_usefulness, rounds, web })),
 );
 
 server.registerTool(
@@ -76,10 +77,16 @@ server.registerTool(
   {
     title: "Cliché Score",
     description:
-      "Measure how clichéd ideas are: 0 = far from what every AI says, 100 = the typical AI answer. Blends semantic distance to the cliché cloud for this prompt with an LLM judge of mechanism overlap (same idea in other words?), plus a usefulness critic (1-10).",
-    inputSchema: { prompt, ideas: z.array(z.string().min(3)).min(1).max(30), critic: z.boolean().optional(), judge: z.boolean().optional() },
+      "Measure how clichéd ideas are: 0 = far from what every AI says, 100 = the typical AI answer. Blends semantic distance to the cliché cloud for this prompt with an LLM judge of mechanism overlap (same idea in other words?), plus a usefulness critic (1-10). With web: true each idea is also searched on the web and gets a prevalence 0-10 (does it already exist?) with sources; that is a separate axis, not part of the Cliché Score.",
+    inputSchema: {
+      prompt,
+      ideas: z.array(z.string().min(3)).min(1).max(30),
+      critic: z.boolean().optional(),
+      judge: z.boolean().optional(),
+      web: z.boolean().optional().describe("Also search the web per idea (slower, one search each). Default false."),
+    },
   },
-  ({ prompt, ideas, critic, judge }) => run(() => score(prompt, ideas, { critic, judge })),
+  ({ prompt, ideas, critic, judge, web }) => run(() => score(prompt, ideas, { critic, judge, web })),
 );
 
 server.registerTool(
@@ -87,7 +94,7 @@ server.registerTool(
   {
     title: "Explain the score",
     description:
-      "Why an idea got its Cliché Score (embedding distance, mechanism judge, closest cliché): what is clichéd, what is new, one concrete move to push it further, and the idea rewritten with that move and re-scored.",
+      "Why an idea got its Cliché Score (embedding distance, mechanism judge, closest cliché, what already exists on the web): what is clichéd, what is new, one concrete move to push it further, and the idea rewritten with that move and re-scored.",
     inputSchema: { prompt, idea: z.string().min(3) },
   },
   ({ prompt, idea }) => run(() => explain(prompt, idea)),

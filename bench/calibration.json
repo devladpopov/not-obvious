@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-31T03:28:15.739Z",
+  "date": "2026-10-31T04:44:20.248Z",
   "embedder": "gemini-embedding-001",
   "clouds": [
     {
@@ -83,13 +83,186 @@
       ]
     }
   ],
+  "crossValidation": {
+    "embeddingOnly": {
+      "bandAccuracy": 0.6376811594202898,
+      "pairOrder": 0.8541666666666666,
+      "picks": [
+        "k=0.7 w=1 j=0 web=0",
+        "k=0.6 w=0.8 j=0 web=0",
+        "k=0.6 w=0.9 j=0 web=0",
+        "k=0.6 w=0.9 j=0 web=0",
+        "k=0.7 w=1 j=0 web=0",
+        "k=0.6 w=0.9 j=0 web=0",
+        "k=0.9 w=0.9 j=0 web=0",
+        "k=0.7 w=1 j=0 web=0",
+        "k=0.6 w=0.9 j=0 web=0",
+        "k=0.6 w=0.9 j=0 web=0"
+      ]
+    },
+    "embeddingJudge": {
+      "bandAccuracy": 0.6666666666666666,
+      "pairOrder": 0.8875,
+      "picks": [
+        "k=0.8 w=0.7 j=0.6 web=0",
+        "k=0.9 w=0.5 j=0.5 web=0",
+        "k=0.7 w=0.9 j=0.25 web=0",
+        "k=0.8 w=0.7 j=0.6 web=0",
+        "k=0.9 w=0.5 j=0.5 web=0",
+        "k=0.8 w=0.7 j=0.6 web=0",
+        "k=0.8 w=0.7 j=0.6 web=0",
+        "k=0.8 w=0.7 j=0.6 web=0",
+        "k=0.8 w=0.7 j=0.6 web=0",
+        "k=0.8 w=0.7 j=0.6 web=0"
+      ]
+    },
+    "embeddingJudgeWeb": {
+      "bandAccuracy": 0.6521739130434783,
+      "pairOrder": 0.8875,
+      "picks": [
+        "k=0.5 w=1 j=0.25 web=0.4",
+        "k=0.5 w=0.6 j=0.25 web=0.4",
+        "k=0.5 w=1 j=0.25 web=0.4",
+        "k=1.5 w=1 j=0.25 web=0.4",
+        "k=0.6 w=1 j=0 web=0.3",
+        "k=0.6 w=1 j=0 web=0.3",
+        "k=1 w=1 j=0.25 web=0.4",
+        "k=0.6 w=1 j=0 web=0.3",
+        "k=0.5 w=0.6 j=0.25 web=0.4",
+        "k=0.5 w=0.6 j=0.25 web=0.4"
+      ]
+    }
+  },
+  "web": {
+    "mode": "claude",
+    "coverage": 70,
+    "sweep": [
+      {
+        "params": {
+          "spreadK": 0.8,
+          "nearestWeight": 0.7,
+          "judgeWeight": 0.6,
+          "webWeight": 0.1
+        },
+        "labels": "checked",
+        "counts": {
+          "hits": 46,
+          "total": 69,
+          "pairs": 120,
+          "ordered": 106.5
+        },
+        "bandAccuracy": 0.6666666666666666,
+        "pairOrder": 0.8875,
+        "means": {
+          "cliche": 78,
+          "mid": 56,
+          "far": 34
+        }
+      },
+      {
+        "params": {
+          "spreadK": 0.8,
+          "nearestWeight": 0.7,
+          "judgeWeight": 0.6,
+          "webWeight": 0.2
+        },
+        "labels": "checked",
+        "counts": {
+          "hits": 44,
+          "total": 69,
+          "pairs": 120,
+          "ordered": 107
+        },
+        "bandAccuracy": 0.6376811594202898,
+        "pairOrder": 0.8916666666666667,
+        "means": {
+          "cliche": 79,
+          "mid": 57,
+          "far": 37
+        }
+      },
+      {
+        "params": {
+          "spreadK": 0.8,
+          "nearestWeight": 0.7,
+          "judgeWeight": 0.6,
+          "webWeight": 0.3
+        },
+        "labels": "checked",
+        "counts": {
+          "hits": 46,
+          "total": 69,
+          "pairs": 120,
+          "ordered": 106.5
+        },
+        "bandAccuracy": 0.6666666666666666,
+        "pairOrder": 0.8875,
+        "means": {
+          "cliche": 80,
+          "mid": 57,
+          "far": 39
+        }
+      },
+      {
+        "params": {
+          "spreadK": 0.8,
+          "nearestWeight": 0.7,
+          "judgeWeight": 0.6,
+          "webWeight": 0.5
+        },
+        "labels": "checked",
+        "counts": {
+          "hits": 45,
+          "total": 69,
+          "pairs": 120,
+          "ordered": 110.5
+        },
+        "bandAccuracy": 0.6521739130434783,
+        "pairOrder": 0.9208333333333333,
+        "means": {
+          "cliche": 82,
+          "mid": 59,
+          "far": 45
+        }
+      }
+    ],
+    "webOnly": {
+      "params": {
+        "spreadK": 0.8,
+        "nearestWeight": 0.7,
+        "judgeWeight": 0,
+        "webWeight": 1
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 47,
+        "total": 69,
+        "pairs": 120,
+        "ordered": 105
+      },
+      "bandAccuracy": 0.6811594202898551,
+      "pairOrder": 0.875,
+      "means": {
+        "cliche": 87,
+        "mid": 62,
+        "far": 58
+      }
+    }
+  },
   "embeddingOnly": {
     "params": {
       "spreadK": 0.8,
       "nearestWeight": 0.7,
-      "judgeWeight": 0
+      "judgeWeight": 0,
+      "webWeight": 0
     },
     "labels": "checked",
+    "counts": {
+      "hits": 47,
+      "total": 69,
+      "pairs": 120,
+      "ordered": 100.5
+    },
     "bandAccuracy": 0.6811594202898551,
     "pairOrder": 0.8375,
     "means": {
@@ -108,6 +281,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 8,
+            "web": 10,
             "density": 0.8841711571196251
           },
           {
@@ -116,6 +290,7 @@
             "cliche": 69,
             "embedding": 69,
             "overlap": 5,
+            "web": 10,
             "density": 0.8841711571196251
           },
           {
@@ -124,6 +299,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 10,
             "density": 0.8841711571196251
           },
           {
@@ -132,6 +308,7 @@
             "cliche": 57,
             "embedding": 57,
             "overlap": 5,
+            "web": 9,
             "density": 0.8841711571196251
           },
           {
@@ -140,6 +317,7 @@
             "cliche": 62,
             "embedding": 62,
             "overlap": 2,
+            "web": 8,
             "density": 0.8841711571196251
           },
           {
@@ -148,6 +326,7 @@
             "cliche": 69,
             "embedding": 69,
             "overlap": 4,
+            "web": 5,
             "density": 0.8841711571196251
           },
           {
@@ -156,6 +335,7 @@
             "cliche": 47,
             "embedding": 47,
             "overlap": 1,
+            "web": 8,
             "density": 0.8841711571196251
           }
         ]
@@ -170,6 +350,7 @@
             "cliche": 99,
             "embedding": 99,
             "overlap": 10,
+            "web": 10,
             "density": 0.8932064966360758
           },
           {
@@ -178,6 +359,7 @@
             "cliche": 70,
             "embedding": 70,
             "overlap": 8,
+            "web": 10,
             "density": 0.8932064966360758
           },
           {
@@ -186,6 +368,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 9,
             "density": 0.8932064966360758
           },
           {
@@ -194,6 +377,7 @@
             "cliche": 68,
             "embedding": 68,
             "overlap": 6,
+            "web": 6,
             "density": 0.8932064966360758
           },
           {
@@ -202,6 +386,7 @@
             "cliche": 93,
             "embedding": 93,
             "overlap": 6,
+            "web": 8,
             "density": 0.8932064966360758
           },
           {
@@ -210,6 +395,7 @@
             "cliche": 58,
             "embedding": 58,
             "overlap": 2,
+            "web": 7,
             "density": 0.8932064966360758
           },
           {
@@ -218,6 +404,7 @@
             "cliche": 13,
             "embedding": 13,
             "overlap": 0,
+            "web": 4,
             "density": 0.8932064966360758
           }
         ]
@@ -232,6 +419,7 @@
             "cliche": 78,
             "embedding": 78,
             "overlap": 1,
+            "web": 10,
             "density": 0.8707030785417171
           },
           {
@@ -240,6 +428,7 @@
             "cliche": 64,
             "embedding": 64,
             "overlap": 2,
+            "web": 9,
             "density": 0.8707030785417171
           },
           {
@@ -248,6 +437,7 @@
             "cliche": 98,
             "embedding": 98,
             "overlap": 9,
+            "web": 9,
             "density": 0.8707030785417171
           },
           {
@@ -256,6 +446,7 @@
             "cliche": 58,
             "embedding": 58,
             "overlap": 8,
+            "web": 6,
             "density": 0.8707030785417171
           },
           {
@@ -264,6 +455,7 @@
             "cliche": 92,
             "embedding": 92,
             "overlap": 4,
+            "web": 5,
             "density": 0.8707030785417171
           },
           {
@@ -272,6 +464,7 @@
             "cliche": 88,
             "embedding": 88,
             "overlap": 9,
+            "web": 9,
             "density": 0.8707030785417171
           }
         ]
@@ -286,6 +479,7 @@
             "cliche": 97,
             "embedding": 97,
             "overlap": 10,
+            "web": 9,
             "density": 0.8417791382290684
           },
           {
@@ -294,6 +488,7 @@
             "cliche": 77,
             "embedding": 77,
             "overlap": 3,
+            "web": 10,
             "density": 0.8417791382290684
           },
           {
@@ -302,6 +497,7 @@
             "cliche": 47,
             "embedding": 47,
             "overlap": 1,
+            "web": 8,
             "density": 0.8417791382290684
           },
           {
@@ -310,6 +506,7 @@
             "cliche": 55,
             "embedding": 55,
             "overlap": 2,
+            "web": 8,
             "density": 0.8417791382290684
           },
           {
@@ -318,6 +515,7 @@
             "cliche": 47,
             "embedding": 47,
             "overlap": 1,
+            "web": 7,
             "density": 0.8417791382290684
           },
           {
@@ -326,6 +524,7 @@
             "cliche": 31,
             "embedding": 31,
             "overlap": 2,
+            "web": 8,
             "density": 0.8417791382290684
           },
           {
@@ -334,6 +533,7 @@
             "cliche": 15,
             "embedding": 15,
             "overlap": 1,
+            "web": 3,
             "density": 0.8417791382290684
           }
         ]
@@ -348,6 +548,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 10,
             "density": 0.9098567385730055
           },
           {
@@ -356,6 +557,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 8,
             "density": 0.9098567385730055
           },
           {
@@ -364,6 +566,7 @@
             "cliche": 90,
             "embedding": 90,
             "overlap": 9,
+            "web": 9,
             "density": 0.9098567385730055
           },
           {
@@ -372,6 +575,7 @@
             "cliche": 93,
             "embedding": 93,
             "overlap": 10,
+            "web": 8,
             "density": 0.9098567385730055
           },
           {
@@ -380,6 +584,7 @@
             "cliche": 0,
             "embedding": 0,
             "overlap": 8,
+            "web": 5,
             "density": 0.9098567385730055
           },
           {
@@ -388,6 +593,7 @@
             "cliche": 0,
             "embedding": 0,
             "overlap": 4,
+            "web": 5,
             "density": 0.9098567385730055
           },
           {
@@ -396,6 +602,7 @@
             "cliche": 54,
             "embedding": 54,
             "overlap": 4,
+            "web": 8,
             "density": 0.9098567385730055
           }
         ]
@@ -410,6 +617,7 @@
             "cliche": 80,
             "embedding": 80,
             "overlap": 3,
+            "web": 10,
             "density": 0.8689931897272473
           },
           {
@@ -418,6 +626,7 @@
             "cliche": 82,
             "embedding": 82,
             "overlap": 4,
+            "web": 10,
             "density": 0.8689931897272473
           },
           {
@@ -426,6 +635,7 @@
             "cliche": 49,
             "embedding": 49,
             "overlap": 1,
+            "web": 5,
             "density": 0.8689931897272473
           },
           {
@@ -434,6 +644,7 @@
             "cliche": 76,
             "embedding": 76,
             "overlap": 7,
+            "web": 6,
             "density": 0.8689931897272473
           },
           {
@@ -442,6 +653,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 8,
+            "web": 7,
             "density": 0.8689931897272473
           },
           {
@@ -450,6 +662,7 @@
             "cliche": 92,
             "embedding": 92,
             "overlap": 9,
+            "web": 5,
             "density": 0.8689931897272473
           },
           {
@@ -458,6 +671,7 @@
             "cliche": 73,
             "embedding": 73,
             "overlap": 3,
+            "web": 5,
             "density": 0.8689931897272473
           }
         ]
@@ -472,6 +686,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 9,
+            "web": 10,
             "density": 0.8698005290357347
           },
           {
@@ -480,6 +695,7 @@
             "cliche": 85,
             "embedding": 85,
             "overlap": 10,
+            "web": 9,
             "density": 0.8698005290357347
           },
           {
@@ -488,6 +704,7 @@
             "cliche": 96,
             "embedding": 96,
             "overlap": 10,
+            "web": 10,
             "density": 0.8698005290357347
           },
           {
@@ -496,6 +713,7 @@
             "cliche": 90,
             "embedding": 90,
             "overlap": 9,
+            "web": 9,
             "density": 0.8698005290357347
           },
           {
@@ -504,6 +722,7 @@
             "cliche": 88,
             "embedding": 88,
             "overlap": 7,
+            "web": 8,
             "density": 0.8698005290357347
           },
           {
@@ -512,6 +731,7 @@
             "cliche": 88,
             "embedding": 88,
             "overlap": 8,
+            "web": 4,
             "density": 0.8698005290357347
           },
           {
@@ -520,6 +740,7 @@
             "cliche": 44,
             "embedding": 44,
             "overlap": 0,
+            "web": 6,
             "density": 0.8698005290357347
           }
         ]
@@ -534,6 +755,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 5,
+            "web": 9,
             "density": 0.8914112204069252
           },
           {
@@ -542,6 +764,7 @@
             "cliche": 62,
             "embedding": 62,
             "overlap": 5,
+            "web": 8,
             "density": 0.8914112204069252
           },
           {
@@ -550,6 +773,7 @@
             "cliche": 88,
             "embedding": 88,
             "overlap": 10,
+            "web": 9,
             "density": 0.8914112204069252
           },
           {
@@ -558,6 +782,7 @@
             "cliche": 83,
             "embedding": 83,
             "overlap": 8,
+            "web": 8,
             "density": 0.8914112204069252
           },
           {
@@ -566,6 +791,7 @@
             "cliche": 9,
             "embedding": 9,
             "overlap": 8,
+            "web": 7,
             "density": 0.8914112204069252
           },
           {
@@ -574,6 +800,7 @@
             "cliche": 11,
             "embedding": 11,
             "overlap": 4,
+            "web": 5,
             "density": 0.8914112204069252
           },
           {
@@ -582,6 +809,7 @@
             "cliche": 43,
             "embedding": 43,
             "overlap": 5,
+            "web": 4,
             "density": 0.8914112204069252
           }
         ]
@@ -596,6 +824,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 9,
             "density": 0.8883391500864029
           },
           {
@@ -604,6 +833,7 @@
             "cliche": 29,
             "embedding": 29,
             "overlap": 5,
+            "web": 9,
             "density": 0.8883391500864029
           },
           {
@@ -612,6 +842,7 @@
             "cliche": 93,
             "embedding": 93,
             "overlap": 10,
+            "web": 10,
             "density": 0.8883391500864029
           },
           {
@@ -620,6 +851,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 9,
+            "web": 8,
             "density": 0.8883391500864029
           },
           {
@@ -628,6 +860,7 @@
             "cliche": 76,
             "embedding": 76,
             "overlap": 7,
+            "web": 4,
             "density": 0.8883391500864029
           },
           {
@@ -636,6 +869,7 @@
             "cliche": 64,
             "embedding": 64,
             "overlap": 7,
+            "web": 6,
             "density": 0.8883391500864029
           },
           {
@@ -644,6 +878,7 @@
             "cliche": 34,
             "embedding": 34,
             "overlap": 7,
+            "web": 7,
             "density": 0.8883391500864029
           }
         ]
@@ -658,6 +893,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 9,
+            "web": 9,
             "density": 0.8754108991263053
           },
           {
@@ -666,6 +902,7 @@
             "cliche": 90,
             "embedding": 90,
             "overlap": 9,
+            "web": 10,
             "density": 0.8754108991263053
           },
           {
@@ -674,6 +911,7 @@
             "cliche": 97,
             "embedding": 97,
             "overlap": 9,
+            "web": 10,
             "density": 0.8754108991263053
           },
           {
@@ -682,6 +920,7 @@
             "cliche": 65,
             "embedding": 65,
             "overlap": 2,
+            "web": 4,
             "density": 0.8754108991263053
           },
           {
@@ -690,6 +929,7 @@
             "cliche": 75,
             "embedding": 75,
             "overlap": 5,
+            "web": 5,
             "density": 0.8754108991263053
           },
           {
@@ -698,6 +938,7 @@
             "cliche": 67,
             "embedding": 67,
             "overlap": 8,
+            "web": 8,
             "density": 0.8754108991263053
           },
           {
@@ -706,6 +947,7 @@
             "cliche": 7,
             "embedding": 7,
             "overlap": 1,
+            "web": 6,
             "density": 0.8754108991263053
           }
         ]
@@ -716,9 +958,16 @@
     "params": {
       "spreadK": 0.8,
       "nearestWeight": 0.7,
-      "judgeWeight": 0.6
+      "judgeWeight": 0.6,
+      "webWeight": 0
     },
     "labels": "checked",
+    "counts": {
+      "hits": 48,
+      "total": 69,
+      "pairs": 120,
+      "ordered": 108.5
+    },
     "bandAccuracy": 0.6956521739130435,
     "pairOrder": 0.9041666666666667,
     "means": {
@@ -737,6 +986,7 @@
             "cliche": 88,
             "embedding": 100,
             "overlap": 8,
+            "web": 10,
             "density": 0.8841711571196251
           },
           {
@@ -745,6 +995,7 @@
             "cliche": 58,
             "embedding": 69,
             "overlap": 5,
+            "web": 10,
             "density": 0.8841711571196251
           },
           {
@@ -753,6 +1004,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 10,
             "density": 0.8841711571196251
           },
           {
@@ -761,6 +1013,7 @@
             "cliche": 53,
             "embedding": 57,
             "overlap": 5,
+            "web": 9,
             "density": 0.8841711571196251
           },
           {
@@ -769,6 +1022,7 @@
             "cliche": 37,
             "embedding": 62,
             "overlap": 2,
+            "web": 8,
             "density": 0.8841711571196251
           },
           {
@@ -777,6 +1031,7 @@
             "cliche": 52,
             "embedding": 69,
             "overlap": 4,
+            "web": 5,
             "density": 0.8841711571196251
           },
           {
@@ -785,6 +1040,7 @@
             "cliche": 25,
             "embedding": 47,
             "overlap": 1,
+            "web": 8,
             "density": 0.8841711571196251
           }
         ]
@@ -799,6 +1055,7 @@
             "cliche": 100,
             "embedding": 99,
             "overlap": 10,
+            "web": 10,
             "density": 0.8932064966360758
           },
           {
@@ -807,6 +1064,7 @@
             "cliche": 76,
             "embedding": 70,
             "overlap": 8,
+            "web": 10,
             "density": 0.8932064966360758
           },
           {
@@ -815,6 +1073,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 9,
             "density": 0.8932064966360758
           },
           {
@@ -823,6 +1082,7 @@
             "cliche": 63,
             "embedding": 68,
             "overlap": 6,
+            "web": 6,
             "density": 0.8932064966360758
           },
           {
@@ -831,6 +1091,7 @@
             "cliche": 73,
             "embedding": 93,
             "overlap": 6,
+            "web": 8,
             "density": 0.8932064966360758
           },
           {
@@ -839,6 +1100,7 @@
             "cliche": 35,
             "embedding": 58,
             "overlap": 2,
+            "web": 7,
             "density": 0.8932064966360758
           },
           {
@@ -847,6 +1109,7 @@
             "cliche": 5,
             "embedding": 13,
             "overlap": 0,
+            "web": 4,
             "density": 0.8932064966360758
           }
         ]
@@ -861,6 +1124,7 @@
             "cliche": 37,
             "embedding": 78,
             "overlap": 1,
+            "web": 10,
             "density": 0.8707030785417171
           },
           {
@@ -869,6 +1133,7 @@
             "cliche": 38,
             "embedding": 64,
             "overlap": 2,
+            "web": 9,
             "density": 0.8707030785417171
           },
           {
@@ -877,6 +1142,7 @@
             "cliche": 93,
             "embedding": 98,
             "overlap": 9,
+            "web": 9,
             "density": 0.8707030785417171
           },
           {
@@ -885,6 +1151,7 @@
             "cliche": 71,
             "embedding": 58,
             "overlap": 8,
+            "web": 6,
             "density": 0.8707030785417171
           },
           {
@@ -893,6 +1160,7 @@
             "cliche": 61,
             "embedding": 92,
             "overlap": 4,
+            "web": 5,
             "density": 0.8707030785417171
           },
           {
@@ -901,6 +1169,7 @@
             "cliche": 89,
             "embedding": 88,
             "overlap": 9,
+            "web": 9,
             "density": 0.8707030785417171
           }
         ]
@@ -915,6 +1184,7 @@
             "cliche": 99,
             "embedding": 97,
             "overlap": 10,
+            "web": 9,
             "density": 0.8417791382290684
           },
           {
@@ -923,6 +1193,7 @@
             "cliche": 49,
             "embedding": 77,
             "overlap": 3,
+            "web": 10,
             "density": 0.8417791382290684
           },
           {
@@ -931,6 +1202,7 @@
             "cliche": 25,
             "embedding": 47,
             "overlap": 1,
+            "web": 8,
             "density": 0.8417791382290684
           },
           {
@@ -939,6 +1211,7 @@
             "cliche": 34,
             "embedding": 55,
             "overlap": 2,
+            "web": 8,
             "density": 0.8417791382290684
           },
           {
@@ -947,6 +1220,7 @@
             "cliche": 25,
             "embedding": 47,
             "overlap": 1,
+            "web": 7,
             "density": 0.8417791382290684
           },
           {
@@ -955,6 +1229,7 @@
             "cliche": 24,
             "embedding": 31,
             "overlap": 2,
+            "web": 8,
             "density": 0.8417791382290684
           },
           {
@@ -963,6 +1238,7 @@
             "cliche": 12,
             "embedding": 15,
             "overlap": 1,
+            "web": 3,
             "density": 0.8417791382290684
           }
         ]
@@ -977,6 +1253,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 10,
             "density": 0.9098567385730055
           },
           {
@@ -985,6 +1262,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 8,
             "density": 0.9098567385730055
           },
           {
@@ -993,6 +1271,7 @@
             "cliche": 90,
             "embedding": 90,
             "overlap": 9,
+            "web": 9,
             "density": 0.9098567385730055
           },
           {
@@ -1001,6 +1280,7 @@
             "cliche": 97,
             "embedding": 93,
             "overlap": 10,
+            "web": 8,
             "density": 0.9098567385730055
           },
           {
@@ -1009,6 +1289,7 @@
             "cliche": 48,
             "embedding": 0,
             "overlap": 8,
+            "web": 5,
             "density": 0.9098567385730055
           },
           {
@@ -1017,6 +1298,7 @@
             "cliche": 24,
             "embedding": 0,
             "overlap": 4,
+            "web": 5,
             "density": 0.9098567385730055
           },
           {
@@ -1025,6 +1307,7 @@
             "cliche": 46,
             "embedding": 54,
             "overlap": 4,
+            "web": 8,
             "density": 0.9098567385730055
           }
         ]
@@ -1039,6 +1322,7 @@
             "cliche": 50,
             "embedding": 80,
             "overlap": 3,
+            "web": 10,
             "density": 0.8689931897272473
           },
           {
@@ -1047,6 +1331,7 @@
             "cliche": 57,
             "embedding": 82,
             "overlap": 4,
+            "web": 10,
             "density": 0.8689931897272473
           },
           {
@@ -1055,6 +1340,7 @@
             "cliche": 26,
             "embedding": 49,
             "overlap": 1,
+            "web": 5,
             "density": 0.8689931897272473
           },
           {
@@ -1063,6 +1349,7 @@
             "cliche": 72,
             "embedding": 76,
             "overlap": 7,
+            "web": 6,
             "density": 0.8689931897272473
           },
           {
@@ -1071,6 +1358,7 @@
             "cliche": 88,
             "embedding": 100,
             "overlap": 8,
+            "web": 7,
             "density": 0.8689931897272473
           },
           {
@@ -1079,6 +1367,7 @@
             "cliche": 91,
             "embedding": 92,
             "overlap": 9,
+            "web": 5,
             "density": 0.8689931897272473
           },
           {
@@ -1087,6 +1376,7 @@
             "cliche": 47,
             "embedding": 73,
             "overlap": 3,
+            "web": 5,
             "density": 0.8689931897272473
           }
         ]
@@ -1101,6 +1391,7 @@
             "cliche": 94,
             "embedding": 100,
             "overlap": 9,
+            "web": 10,
             "density": 0.8698005290357347
           },
           {
@@ -1109,6 +1400,7 @@
             "cliche": 94,
             "embedding": 85,
             "overlap": 10,
+            "web": 9,
             "density": 0.8698005290357347
           },
           {
@@ -1117,6 +1409,7 @@
             "cliche": 98,
             "embedding": 96,
             "overlap": 10,
+            "web": 10,
             "density": 0.8698005290357347
           },
           {
@@ -1125,6 +1418,7 @@
             "cliche": 90,
             "embedding": 90,
             "overlap": 9,
+            "web": 9,
             "density": 0.8698005290357347
           },
           {
@@ -1133,6 +1427,7 @@
             "cliche": 77,
             "embedding": 88,
             "overlap": 7,
+            "web": 8,
             "density": 0.8698005290357347
           },
           {
@@ -1141,6 +1436,7 @@
             "cliche": 83,
             "embedding": 88,
             "overlap": 8,
+            "web": 4,
             "density": 0.8698005290357347
           },
           {
@@ -1149,6 +1445,7 @@
             "cliche": 18,
             "embedding": 44,
             "overlap": 0,
+            "web": 6,
             "density": 0.8698005290357347
           }
         ]
@@ -1163,6 +1460,7 @@
             "cliche": 70,
             "embedding": 100,
             "overlap": 5,
+            "web": 9,
             "density": 0.8914112204069252
           },
           {
@@ -1171,6 +1469,7 @@
             "cliche": 55,
             "embedding": 62,
             "overlap": 5,
+            "web": 8,
             "density": 0.8914112204069252
           },
           {
@@ -1179,6 +1478,7 @@
             "cliche": 95,
             "embedding": 88,
             "overlap": 10,
+            "web": 9,
             "density": 0.8914112204069252
           },
           {
@@ -1187,6 +1487,7 @@
             "cliche": 81,
             "embedding": 83,
             "overlap": 8,
+            "web": 8,
             "density": 0.8914112204069252
           },
           {
@@ -1195,6 +1496,7 @@
             "cliche": 52,
             "embedding": 9,
             "overlap": 8,
+            "web": 7,
             "density": 0.8914112204069252
           },
           {
@@ -1203,6 +1505,7 @@
             "cliche": 28,
             "embedding": 11,
             "overlap": 4,
+            "web": 5,
             "density": 0.8914112204069252
           },
           {
@@ -1211,6 +1514,7 @@
             "cliche": 47,
             "embedding": 43,
             "overlap": 5,
+            "web": 4,
             "density": 0.8914112204069252
           }
         ]
@@ -1225,6 +1529,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 9,
             "density": 0.8883391500864029
           },
           {
@@ -1233,6 +1538,7 @@
             "cliche": 42,
             "embedding": 29,
             "overlap": 5,
+            "web": 9,
             "density": 0.8883391500864029
           },
           {
@@ -1241,6 +1547,7 @@
             "cliche": 97,
             "embedding": 93,
             "overlap": 10,
+            "web": 10,
             "density": 0.8883391500864029
           },
           {
@@ -1249,6 +1556,7 @@
             "cliche": 94,
             "embedding": 100,
             "overlap": 9,
+            "web": 8,
             "density": 0.8883391500864029
           },
           {
@@ -1257,6 +1565,7 @@
             "cliche": 72,
             "embedding": 76,
             "overlap": 7,
+            "web": 4,
             "density": 0.8883391500864029
           },
           {
@@ -1265,6 +1574,7 @@
             "cliche": 68,
             "embedding": 64,
             "overlap": 7,
+            "web": 6,
             "density": 0.8883391500864029
           },
           {
@@ -1273,6 +1583,7 @@
             "cliche": 56,
             "embedding": 34,
             "overlap": 7,
+            "web": 7,
             "density": 0.8883391500864029
           }
         ]
@@ -1287,6 +1598,7 @@
             "cliche": 94,
             "embedding": 100,
             "overlap": 9,
+            "web": 9,
             "density": 0.8754108991263053
           },
           {
@@ -1295,6 +1607,7 @@
             "cliche": 90,
             "embedding": 90,
             "overlap": 9,
+            "web": 10,
             "density": 0.8754108991263053
           },
           {
@@ -1303,6 +1616,7 @@
             "cliche": 93,
             "embedding": 97,
             "overlap": 9,
+            "web": 10,
             "density": 0.8754108991263053
           },
           {
@@ -1311,6 +1625,7 @@
             "cliche": 38,
             "embedding": 65,
             "overlap": 2,
+            "web": 4,
             "density": 0.8754108991263053
           },
           {
@@ -1319,6 +1634,7 @@
             "cliche": 60,
             "embedding": 75,
             "overlap": 5,
+            "web": 5,
             "density": 0.8754108991263053
           },
           {
@@ -1327,6 +1643,7 @@
             "cliche": 75,
             "embedding": 67,
             "overlap": 8,
+            "web": 8,
             "density": 0.8754108991263053
           },
           {
@@ -1335,6 +1652,7 @@
             "cliche": 9,
             "embedding": 7,
             "overlap": 1,
+            "web": 6,
             "density": 0.8754108991263053
           }
         ]
@@ -1345,9 +1663,16 @@
     "params": {
       "spreadK": 0.8,
       "nearestWeight": 0.7,
-      "judgeWeight": 1
+      "judgeWeight": 1,
+      "webWeight": 0
     },
     "labels": "checked",
+    "counts": {
+      "hits": 43,
+      "total": 69,
+      "pairs": 120,
+      "ordered": 101.5
+    },
     "bandAccuracy": 0.6231884057971014,
     "pairOrder": 0.8458333333333333,
     "means": {
@@ -1366,6 +1691,7 @@
             "cliche": 80,
             "embedding": 100,
             "overlap": 8,
+            "web": 10,
             "density": 0.8841711571196251
           },
           {
@@ -1374,6 +1700,7 @@
             "cliche": 50,
             "embedding": 69,
             "overlap": 5,
+            "web": 10,
             "density": 0.8841711571196251
           },
           {
@@ -1382,6 +1709,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 10,
             "density": 0.8841711571196251
           },
           {
@@ -1390,6 +1718,7 @@
             "cliche": 50,
             "embedding": 57,
             "overlap": 5,
+            "web": 9,
             "density": 0.8841711571196251
           },
           {
@@ -1398,6 +1727,7 @@
             "cliche": 20,
             "embedding": 62,
             "overlap": 2,
+            "web": 8,
             "density": 0.8841711571196251
           },
           {
@@ -1406,6 +1736,7 @@
             "cliche": 40,
             "embedding": 69,
             "overlap": 4,
+            "web": 5,
             "density": 0.8841711571196251
           },
           {
@@ -1414,6 +1745,7 @@
             "cliche": 10,
             "embedding": 47,
             "overlap": 1,
+            "web": 8,
             "density": 0.8841711571196251
           }
         ]
@@ -1428,6 +1760,7 @@
             "cliche": 100,
             "embedding": 99,
             "overlap": 10,
+            "web": 10,
             "density": 0.8932064966360758
           },
           {
@@ -1436,6 +1769,7 @@
             "cliche": 80,
             "embedding": 70,
             "overlap": 8,
+            "web": 10,
             "density": 0.8932064966360758
           },
           {
@@ -1444,6 +1778,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 9,
             "density": 0.8932064966360758
           },
           {
@@ -1452,6 +1787,7 @@
             "cliche": 60,
             "embedding": 68,
             "overlap": 6,
+            "web": 6,
             "density": 0.8932064966360758
           },
           {
@@ -1460,6 +1796,7 @@
             "cliche": 60,
             "embedding": 93,
             "overlap": 6,
+            "web": 8,
             "density": 0.8932064966360758
           },
           {
@@ -1468,6 +1805,7 @@
             "cliche": 20,
             "embedding": 58,
             "overlap": 2,
+            "web": 7,
             "density": 0.8932064966360758
           },
           {
@@ -1476,6 +1814,7 @@
             "cliche": 0,
             "embedding": 13,
             "overlap": 0,
+            "web": 4,
             "density": 0.8932064966360758
           }
         ]
@@ -1490,6 +1829,7 @@
             "cliche": 10,
             "embedding": 78,
             "overlap": 1,
+            "web": 10,
             "density": 0.8707030785417171
           },
           {
@@ -1498,6 +1838,7 @@
             "cliche": 20,
             "embedding": 64,
             "overlap": 2,
+            "web": 9,
             "density": 0.8707030785417171
           },
           {
@@ -1506,6 +1847,7 @@
             "cliche": 90,
             "embedding": 98,
             "overlap": 9,
+            "web": 9,
             "density": 0.8707030785417171
           },
           {
@@ -1514,6 +1856,7 @@
             "cliche": 80,
             "embedding": 58,
             "overlap": 8,
+            "web": 6,
             "density": 0.8707030785417171
           },
           {
@@ -1522,6 +1865,7 @@
             "cliche": 40,
             "embedding": 92,
             "overlap": 4,
+            "web": 5,
             "density": 0.8707030785417171
           },
           {
@@ -1530,6 +1874,7 @@
             "cliche": 90,
             "embedding": 88,
             "overlap": 9,
+            "web": 9,
             "density": 0.8707030785417171
           }
         ]
@@ -1544,6 +1889,7 @@
             "cliche": 100,
             "embedding": 97,
             "overlap": 10,
+            "web": 9,
             "density": 0.8417791382290684
           },
           {
@@ -1552,6 +1898,7 @@
             "cliche": 30,
             "embedding": 77,
             "overlap": 3,
+            "web": 10,
             "density": 0.8417791382290684
           },
           {
@@ -1560,6 +1907,7 @@
             "cliche": 10,
             "embedding": 47,
             "overlap": 1,
+            "web": 8,
             "density": 0.8417791382290684
           },
           {
@@ -1568,6 +1916,7 @@
             "cliche": 20,
             "embedding": 55,
             "overlap": 2,
+            "web": 8,
             "density": 0.8417791382290684
           },
           {
@@ -1576,6 +1925,7 @@
             "cliche": 10,
             "embedding": 47,
             "overlap": 1,
+            "web": 7,
             "density": 0.8417791382290684
           },
           {
@@ -1584,6 +1934,7 @@
             "cliche": 20,
             "embedding": 31,
             "overlap": 2,
+            "web": 8,
             "density": 0.8417791382290684
           },
           {
@@ -1592,6 +1943,7 @@
             "cliche": 10,
             "embedding": 15,
             "overlap": 1,
+            "web": 3,
             "density": 0.8417791382290684
           }
         ]
@@ -1606,6 +1958,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 10,
             "density": 0.9098567385730055
           },
           {
@@ -1614,6 +1967,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 8,
             "density": 0.9098567385730055
           },
           {
@@ -1622,6 +1976,7 @@
             "cliche": 90,
             "embedding": 90,
             "overlap": 9,
+            "web": 9,
             "density": 0.9098567385730055
           },
           {
@@ -1630,6 +1985,7 @@
             "cliche": 100,
             "embedding": 93,
             "overlap": 10,
+            "web": 8,
             "density": 0.9098567385730055
           },
           {
@@ -1638,6 +1994,7 @@
             "cliche": 80,
             "embedding": 0,
             "overlap": 8,
+            "web": 5,
             "density": 0.9098567385730055
           },
           {
@@ -1646,6 +2003,7 @@
             "cliche": 40,
             "embedding": 0,
             "overlap": 4,
+            "web": 5,
             "density": 0.9098567385730055
           },
           {
@@ -1654,6 +2012,7 @@
             "cliche": 40,
             "embedding": 54,
             "overlap": 4,
+            "web": 8,
             "density": 0.9098567385730055
           }
         ]
@@ -1668,6 +2027,7 @@
             "cliche": 30,
             "embedding": 80,
             "overlap": 3,
+            "web": 10,
             "density": 0.8689931897272473
           },
           {
@@ -1676,6 +2036,7 @@
             "cliche": 40,
             "embedding": 82,
             "overlap": 4,
+            "web": 10,
             "density": 0.8689931897272473
           },
           {
@@ -1684,6 +2045,7 @@
             "cliche": 10,
             "embedding": 49,
             "overlap": 1,
+            "web": 5,
             "density": 0.8689931897272473
           },
           {
@@ -1692,6 +2054,7 @@
             "cliche": 70,
             "embedding": 76,
             "overlap": 7,
+            "web": 6,
             "density": 0.8689931897272473
           },
           {
@@ -1700,6 +2063,7 @@
             "cliche": 80,
             "embedding": 100,
             "overlap": 8,
+            "web": 7,
             "density": 0.8689931897272473
           },
           {
@@ -1708,6 +2072,7 @@
             "cliche": 90,
             "embedding": 92,
             "overlap": 9,
+            "web": 5,
             "density": 0.8689931897272473
           },
           {
@@ -1716,6 +2081,7 @@
             "cliche": 30,
             "embedding": 73,
             "overlap": 3,
+            "web": 5,
             "density": 0.8689931897272473
           }
         ]
@@ -1730,6 +2096,7 @@
             "cliche": 90,
             "embedding": 100,
             "overlap": 9,
+            "web": 10,
             "density": 0.8698005290357347
           },
           {
@@ -1738,6 +2105,7 @@
             "cliche": 100,
             "embedding": 85,
             "overlap": 10,
+            "web": 9,
             "density": 0.8698005290357347
           },
           {
@@ -1746,6 +2114,7 @@
             "cliche": 100,
             "embedding": 96,
             "overlap": 10,
+            "web": 10,
             "density": 0.8698005290357347
           },
           {
@@ -1754,6 +2123,7 @@
             "cliche": 90,
             "embedding": 90,
             "overlap": 9,
+            "web": 9,
             "density": 0.8698005290357347
           },
           {
@@ -1762,6 +2132,7 @@
             "cliche": 70,
             "embedding": 88,
             "overlap": 7,
+            "web": 8,
             "density": 0.8698005290357347
           },
           {
@@ -1770,6 +2141,7 @@
             "cliche": 80,
             "embedding": 88,
             "overlap": 8,
+            "web": 4,
             "density": 0.8698005290357347
           },
           {
@@ -1778,6 +2150,7 @@
             "cliche": 0,
             "embedding": 44,
             "overlap": 0,
+            "web": 6,
             "density": 0.8698005290357347
           }
         ]
@@ -1792,6 +2165,7 @@
             "cliche": 50,
             "embedding": 100,
             "overlap": 5,
+            "web": 9,
             "density": 0.8914112204069252
           },
           {
@@ -1800,6 +2174,7 @@
             "cliche": 50,
             "embedding": 62,
             "overlap": 5,
+            "web": 8,
             "density": 0.8914112204069252
           },
           {
@@ -1808,6 +2183,7 @@
             "cliche": 100,
             "embedding": 88,
             "overlap": 10,
+            "web": 9,
             "density": 0.8914112204069252
           },
           {
@@ -1816,6 +2192,7 @@
             "cliche": 80,
             "embedding": 83,
             "overlap": 8,
+            "web": 8,
             "density": 0.8914112204069252
           },
           {
@@ -1824,6 +2201,7 @@
             "cliche": 80,
             "embedding": 9,
             "overlap": 8,
+            "web": 7,
             "density": 0.8914112204069252
           },
           {
@@ -1832,6 +2210,7 @@
             "cliche": 40,
             "embedding": 11,
             "overlap": 4,
+            "web": 5,
             "density": 0.8914112204069252
           },
           {
@@ -1840,6 +2219,7 @@
             "cliche": 50,
             "embedding": 43,
             "overlap": 5,
+            "web": 4,
             "density": 0.8914112204069252
           }
         ]
@@ -1854,6 +2234,7 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 9,
             "density": 0.8883391500864029
           },
           {
@@ -1862,6 +2243,7 @@
             "cliche": 50,
             "embedding": 29,
             "overlap": 5,
+            "web": 9,
             "density": 0.8883391500864029
           },
           {
@@ -1870,6 +2252,7 @@
             "cliche": 100,
             "embedding": 93,
             "overlap": 10,
+            "web": 10,
             "density": 0.8883391500864029
           },
           {
@@ -1878,6 +2261,7 @@
             "cliche": 90,
             "embedding": 100,
             "overlap": 9,
+            "web": 8,
             "density": 0.8883391500864029
           },
           {
@@ -1886,6 +2270,7 @@
             "cliche": 70,
             "embedding": 76,
             "overlap": 7,
+            "web": 4,
             "density": 0.8883391500864029
           },
           {
@@ -1894,6 +2279,7 @@
             "cliche": 70,
             "embedding": 64,
             "overlap": 7,
+            "web": 6,
             "density": 0.8883391500864029
           },
           {
@@ -1902,6 +2288,7 @@
             "cliche": 70,
             "embedding": 34,
             "overlap": 7,
+            "web": 7,
             "density": 0.8883391500864029
           }
         ]
@@ -1916,6 +2303,7 @@
             "cliche": 90,
             "embedding": 100,
             "overlap": 9,
+            "web": 9,
             "density": 0.8754108991263053
           },
           {
@@ -1924,6 +2312,7 @@
             "cliche": 90,
             "embedding": 90,
             "overlap": 9,
+            "web": 10,
             "density": 0.8754108991263053
           },
           {
@@ -1932,6 +2321,7 @@
             "cliche": 90,
             "embedding": 97,
             "overlap": 9,
+            "web": 10,
             "density": 0.8754108991263053
           },
           {
@@ -1940,6 +2330,7 @@
             "cliche": 20,
             "embedding": 65,
             "overlap": 2,
+            "web": 4,
             "density": 0.8754108991263053
           },
           {
@@ -1948,6 +2339,7 @@
             "cliche": 50,
             "embedding": 75,
             "overlap": 5,
+            "web": 5,
             "density": 0.8754108991263053
           },
           {
@@ -1956,6 +2348,7 @@
             "cliche": 80,
             "embedding": 67,
             "overlap": 8,
+            "web": 8,
             "density": 0.8754108991263053
           },
           {
@@ -1964,6 +2357,7 @@
             "cliche": 10,
             "embedding": 7,
             "overlap": 1,
+            "web": 6,
             "density": 0.8754108991263053
           }
         ]
@@ -1975,9 +2369,16 @@
       "params": {
         "spreadK": 0.8,
         "nearestWeight": 0.7,
-        "judgeWeight": 0
+        "judgeWeight": 0,
+        "webWeight": 0
       },
       "labels": "original",
+      "counts": {
+        "hits": 37,
+        "total": 70,
+        "pairs": 160,
+        "ordered": 118.5
+      },
       "bandAccuracy": 0.5285714285714286,
       "pairOrder": 0.740625,
       "means": {
@@ -1990,9 +2391,16 @@
       "params": {
         "spreadK": 0.8,
         "nearestWeight": 0.7,
-        "judgeWeight": 0.6
+        "judgeWeight": 0.6,
+        "webWeight": 0
       },
       "labels": "original",
+      "counts": {
+        "hits": 36,
+        "total": 70,
+        "pairs": 160,
+        "ordered": 122.5
+      },
       "bandAccuracy": 0.5142857142857142,
       "pairOrder": 0.765625,
       "means": {
@@ -2005,9 +2413,16 @@
       "params": {
         "spreadK": 0.8,
         "nearestWeight": 0.7,
-        "judgeWeight": 1
+        "judgeWeight": 1,
+        "webWeight": 0
       },
       "labels": "original",
+      "counts": {
+        "hits": 33,
+        "total": 70,
+        "pairs": 160,
+        "ordered": 112
+      },
       "bandAccuracy": 0.4714285714285714,
       "pairOrder": 0.7,
       "means": {
@@ -2019,17 +2434,24 @@
   ],
   "best": {
     "params": {
-      "spreadK": 0.8,
-      "nearestWeight": 0.7,
-      "judgeWeight": 0.6
+      "spreadK": 0.5,
+      "nearestWeight": 1,
+      "judgeWeight": 0.25,
+      "webWeight": 0.4
     },
     "labels": "checked",
-    "bandAccuracy": 0.6956521739130435,
-    "pairOrder": 0.9041666666666667,
+    "counts": {
+      "hits": 51,
+      "total": 69,
+      "pairs": 120,
+      "ordered": 111
+    },
+    "bandAccuracy": 0.7391304347826086,
+    "pairOrder": 0.925,
     "means": {
-      "cliche": 77,
-      "mid": 56,
-      "far": 31
+      "cliche": 81,
+      "mid": 54,
+      "far": 34
     },
     "detail": [
       {
@@ -2039,17 +2461,19 @@
           {
             "band": "cliche",
             "text": "Build a SaaS product for small businesses",
-            "cliche": 88,
+            "cliche": 97,
             "embedding": 100,
             "overlap": 8,
+            "web": 10,
             "density": 0.8841711571196251
           },
           {
             "band": "cliche",
             "text": "Freelance web development on Upwork",
-            "cliche": 58,
-            "embedding": 69,
+            "cliche": 69,
+            "embedding": 48,
             "overlap": 5,
+            "web": 10,
             "density": 0.8841711571196251
           },
           {
@@ -2058,38 +2482,43 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 10,
             "density": 0.8841711571196251
           },
           {
             "band": "mid",
             "text": "Offer fixed-price accessibility audits for local government websites",
-            "cliche": 53,
-            "embedding": 57,
+            "cliche": 62,
+            "embedding": 41,
             "overlap": 5,
+            "web": 9,
             "density": 0.8841711571196251
           },
           {
             "band": "mid",
             "text": "Sell pre-configured home-lab kits for privacy-minded families",
-            "cliche": 37,
-            "embedding": 62,
+            "cliche": 49,
+            "embedding": 30,
             "overlap": 2,
+            "web": 8,
             "density": 0.8841711571196251
           },
           {
             "band": "mid",
             "text": "Rent yourself out as a code archaeologist who documents abandoned legacy systems for insurance audits",
-            "cliche": 52,
-            "embedding": 69,
+            "cliche": 54,
+            "embedding": 63,
             "overlap": 4,
+            "web": 5,
             "density": 0.8841711571196251
           },
           {
             "band": "far",
             "text": "Breed rare aquarium shrimp and sell them through a self-built auction bot",
-            "cliche": 25,
-            "embedding": 47,
+            "cliche": 37,
+            "embedding": 8,
             "overlap": 1,
+            "web": 8,
             "density": 0.8841711571196251
           }
         ]
@@ -2102,56 +2531,63 @@
             "band": "cliche",
             "text": "Start a loyalty card program",
             "cliche": 100,
-            "embedding": 99,
+            "embedding": 100,
             "overlap": 10,
+            "web": 10,
             "density": 0.8932064966360758
           },
           {
             "band": "cliche",
             "text": "Post attractive photos on Instagram",
-            "cliche": 76,
-            "embedding": 70,
+            "cliche": 77,
+            "embedding": 56,
             "overlap": 8,
+            "web": 10,
             "density": 0.8932064966360758
           },
           {
             "band": "cliche",
             "text": "Offer free Wi-Fi and comfortable seating",
-            "cliche": 100,
+            "cliche": 96,
             "embedding": 100,
             "overlap": 10,
+            "web": 9,
             "density": 0.8932064966360758
           },
           {
             "band": "cliche",
             "text": "Host a monthly cupping night where regulars vote on next month's bean",
-            "cliche": 63,
-            "embedding": 68,
+            "cliche": 53,
+            "embedding": 45,
             "overlap": 6,
+            "web": 6,
             "density": 0.8932064966360758
           },
           {
             "band": "cliche",
             "text": "Partner with the nearest coworking space for a shared membership",
-            "cliche": 73,
-            "embedding": 93,
+            "cliche": 86,
+            "embedding": 100,
             "overlap": 6,
+            "web": 8,
             "density": 0.8932064966360758
           },
           {
             "band": "far",
             "text": "Become the neighbourhood's lost-and-found and parcel drop, so people come in for errands",
-            "cliche": 35,
-            "embedding": 58,
+            "cliche": 33,
+            "embedding": 4,
             "overlap": 2,
+            "web": 7,
             "density": 0.8932064966360758
           },
           {
             "band": "far",
             "text": "Let customers pay by fixing one item from the shop's broken-things shelf",
-            "cliche": 5,
-            "embedding": 13,
+            "cliche": 16,
+            "embedding": 0,
             "overlap": 0,
+            "web": 4,
             "density": 0.8932064966360758
           }
         ]
@@ -2163,49 +2599,55 @@
           {
             "band": "cliche",
             "text": "Throw a superhero themed party",
-            "cliche": 37,
-            "embedding": 78,
+            "cliche": 71,
+            "embedding": 66,
             "overlap": 1,
+            "web": 10,
             "density": 0.8707030785417171
           },
           {
             "band": "cliche",
             "text": "Have a pizza and movie night sleepover",
-            "cliche": 38,
-            "embedding": 64,
+            "cliche": 59,
+            "embedding": 44,
             "overlap": 2,
+            "web": 9,
             "density": 0.8707030785417171
           },
           {
             "band": "cliche",
             "text": "Run a backyard escape room built around the child's favourite book",
-            "cliche": 93,
-            "embedding": 98,
+            "cliche": 95,
+            "embedding": 100,
             "overlap": 9,
+            "web": 9,
             "density": 0.8707030785417171
           },
           {
             "band": "cliche",
             "text": "Host a mini bake-off judged by grandparents over video call",
-            "cliche": 71,
-            "embedding": 58,
+            "cliche": 52,
+            "embedding": 36,
             "overlap": 8,
+            "web": 6,
             "density": 0.8707030785417171
           },
           {
             "band": "far",
             "text": "Turn the party into a one-day newspaper: kids interview neighbours and print an edition",
-            "cliche": 61,
-            "embedding": 92,
+            "cliche": 65,
+            "embedding": 86,
             "overlap": 4,
+            "web": 5,
             "density": 0.8707030785417171
           },
           {
             "band": "cliche",
             "text": "Guests arrive as clients of a fake detective agency and must solve who ate the cake",
-            "cliche": 89,
-            "embedding": 88,
+            "cliche": 92,
+            "embedding": 95,
             "overlap": 9,
+            "web": 9,
             "density": 0.8707030785417171
           }
         ]
@@ -2217,57 +2659,64 @@
           {
             "band": "cliche",
             "text": "FocusFlow",
-            "cliche": 99,
-            "embedding": 97,
+            "cliche": 96,
+            "embedding": 100,
             "overlap": 10,
+            "web": 9,
             "density": 0.8417791382290684
           },
           {
             "band": "cliche",
             "text": "TaskMaster",
-            "cliche": 49,
-            "embedding": 77,
+            "cliche": 72,
+            "embedding": 60,
             "overlap": 3,
+            "web": 10,
             "density": 0.8417791382290684
           },
           {
             "band": "cliche",
             "text": "DoneDeal",
-            "cliche": 25,
-            "embedding": 47,
+            "cliche": 40,
+            "embedding": 14,
             "overlap": 1,
+            "web": 8,
             "density": 0.8417791382290684
           },
           {
             "band": "mid",
             "text": "Tomorrow Me",
-            "cliche": 34,
-            "embedding": 55,
+            "cliche": 49,
+            "embedding": 31,
             "overlap": 2,
+            "web": 8,
             "density": 0.8417791382290684
           },
           {
             "band": "mid",
             "text": "Small Hours",
-            "cliche": 25,
-            "embedding": 47,
+            "cliche": 36,
+            "embedding": 15,
             "overlap": 1,
+            "web": 7,
             "density": 0.8417791382290684
           },
           {
             "band": "far",
             "text": "Mudroom",
-            "cliche": 24,
-            "embedding": 31,
+            "cliche": 35,
+            "embedding": 0,
             "overlap": 2,
+            "web": 8,
             "density": 0.8417791382290684
           },
           {
             "band": "far",
             "text": "Third Coffee",
-            "cliche": 12,
-            "embedding": 15,
+            "cliche": 14,
+            "embedding": 0,
             "overlap": 1,
+            "web": 3,
             "density": 0.8417791382290684
           }
         ]
@@ -2282,54 +2731,61 @@
             "cliche": 100,
             "embedding": 100,
             "overlap": 10,
+            "web": 10,
             "density": 0.9098567385730055
           },
           {
             "band": "cliche",
             "text": "Introduce congestion pricing",
-            "cliche": 100,
+            "cliche": 92,
             "embedding": 100,
             "overlap": 10,
+            "web": 8,
             "density": 0.9098567385730055
           },
           {
             "band": "cliche",
             "text": "Build more bike lanes",
-            "cliche": 90,
-            "embedding": 90,
+            "cliche": 95,
+            "embedding": 100,
             "overlap": 9,
+            "web": 9,
             "density": 0.9098567385730055
           },
           {
             "band": "cliche",
             "text": "Stagger school and office start times by district",
-            "cliche": 97,
-            "embedding": 93,
+            "cliche": 92,
+            "embedding": 100,
             "overlap": 10,
+            "web": 8,
             "density": 0.9098567385730055
           },
           {
             "band": "mid",
             "text": "Pay employers per employee who switches to a four-day office week",
-            "cliche": 48,
+            "cliche": 32,
             "embedding": 0,
             "overlap": 8,
+            "web": 5,
             "density": 0.9098567385730055
           },
           {
             "band": "far",
             "text": "Auction the right to deliver parcels in each district to one carrier per day",
-            "cliche": 24,
+            "cliche": 26,
             "embedding": 0,
             "overlap": 4,
+            "web": 5,
             "density": 0.9098567385730055
           },
           {
             "band": "far",
             "text": "Turn traffic lights into a reward system: drivers who skip peak hours earn parking credits",
-            "cliche": 46,
-            "embedding": 54,
+            "cliche": 47,
+            "embedding": 20,
             "overlap": 4,
+            "web": 8,
             "density": 0.9098567385730055
           }
         ]
@@ -2341,57 +2797,64 @@
           {
             "band": "cliche",
             "text": "Sponsor a famous marathon runner",
-            "cliche": 50,
-            "embedding": 80,
+            "cliche": 77,
+            "embedding": 73,
             "overlap": 3,
+            "web": 10,
             "density": 0.8689931897272473
           },
           {
             "band": "cliche",
             "text": "Run an Instagram influencer campaign",
-            "cliche": 57,
-            "embedding": 82,
+            "cliche": 81,
+            "embedding": 77,
             "overlap": 4,
+            "web": 10,
             "density": 0.8689931897272473
           },
           {
             "band": "cliche",
             "text": "Offer a discount for the first 100 buyers",
-            "cliche": 26,
-            "embedding": 49,
+            "cliche": 36,
+            "embedding": 33,
             "overlap": 1,
+            "web": 5,
             "density": 0.8689931897272473
           },
           {
             "band": "cliche",
             "text": "Give the shoe to night-shift nurses and publish their step counts",
-            "cliche": 72,
-            "embedding": 76,
+            "cliche": 62,
+            "embedding": 62,
             "overlap": 7,
+            "web": 6,
             "density": 0.8689931897272473
           },
           {
             "band": "cliche",
             "text": "Let runners trade in worn shoes for credit and show the wear map",
-            "cliche": 88,
+            "cliche": 85,
             "embedding": 100,
             "overlap": 8,
+            "web": 7,
             "density": 0.8689931897272473
           },
           {
             "band": "mid",
             "text": "Release the shoe only to people who finish a route drawn as the brand logo on a city map",
-            "cliche": 91,
-            "embedding": 92,
+            "cliche": 79,
+            "embedding": 100,
             "overlap": 9,
+            "web": 5,
             "density": 0.8689931897272473
           },
           {
             "band": "far",
             "text": "Sponsor the slowest finisher of every local race",
-            "cliche": 47,
-            "embedding": 73,
+            "cliche": 58,
+            "embedding": 75,
             "overlap": 3,
+            "web": 5,
             "density": 0.8689931897272473
           }
         ]
@@ -2403,57 +2866,64 @@
           {
             "band": "cliche",
             "text": "Hold regular virtual team-building activities",
-            "cliche": 94,
+            "cliche": 99,
             "embedding": 100,
             "overlap": 9,
+            "web": 10,
             "density": 0.8698005290357347
           },
           {
             "band": "cliche",
             "text": "Recognize achievements publicly",
-            "cliche": 94,
-            "embedding": 85,
+            "cliche": 96,
+            "embedding": 100,
             "overlap": 10,
+            "web": 9,
             "density": 0.8698005290357347
           },
           {
             "band": "cliche",
             "text": "Run anonymous engagement surveys",
-            "cliche": 98,
-            "embedding": 96,
+            "cliche": 100,
+            "embedding": 100,
             "overlap": 10,
+            "web": 10,
             "density": 0.8698005290357347
           },
           {
             "band": "cliche",
             "text": "Rotate who sets the agenda of the weekly meeting, including juniors",
-            "cliche": 90,
-            "embedding": 90,
+            "cliche": 95,
+            "embedding": 100,
             "overlap": 9,
+            "web": 9,
             "density": 0.8698005290357347
           },
           {
             "band": "mid",
             "text": "Give every employee a yearly budget to visit one colleague in person",
-            "cliche": 77,
-            "embedding": 88,
+            "cliche": 76,
+            "embedding": 74,
             "overlap": 7,
+            "web": 8,
             "density": 0.8698005290357347
           },
           {
             "band": "mid",
             "text": "Pair each person with a colleague in another time zone to swap one task a week",
-            "cliche": 83,
-            "embedding": 88,
+            "cliche": 64,
+            "embedding": 79,
             "overlap": 8,
+            "web": 4,
             "density": 0.8698005290357347
           },
           {
             "band": "far",
             "text": "Publish an internal podcast where teams interview the customers they never meet",
-            "cliche": 18,
-            "embedding": 44,
+            "cliche": 24,
+            "embedding": 0,
             "overlap": 0,
+            "web": 6,
             "density": 0.8698005290357347
           }
         ]
@@ -2465,57 +2935,64 @@
           {
             "band": "cliche",
             "text": "Create interactive exhibits",
-            "cliche": 70,
+            "cliche": 89,
             "embedding": 100,
             "overlap": 5,
+            "web": 9,
             "density": 0.8914112204069252
           },
           {
             "band": "cliche",
             "text": "Host social media challenges",
             "cliche": 55,
-            "embedding": 62,
+            "embedding": 35,
             "overlap": 5,
+            "web": 8,
             "density": 0.8914112204069252
           },
           {
             "band": "cliche",
             "text": "Offer free entry for students",
-            "cliche": 95,
-            "embedding": 88,
+            "cliche": 96,
+            "embedding": 100,
             "overlap": 10,
+            "web": 9,
             "density": 0.8914112204069252
           },
           {
             "band": "cliche",
             "text": "Let teens curate one room each term and write the labels",
-            "cliche": 81,
-            "embedding": 83,
+            "cliche": 75,
+            "embedding": 68,
             "overlap": 8,
+            "web": 8,
             "density": 0.8914112204069252
           },
           {
             "band": "cliche",
             "text": "Open late on Fridays with a DJ playing music from the exhibit's era",
-            "cliche": 52,
-            "embedding": 9,
+            "cliche": 40,
+            "embedding": 0,
             "overlap": 8,
+            "web": 7,
             "density": 0.8914112204069252
           },
           {
             "band": "far",
             "text": "Hide unpublished objects in the storage vault and let teens bid for one to be shown",
-            "cliche": 28,
-            "embedding": 11,
+            "cliche": 26,
+            "embedding": 0,
             "overlap": 4,
+            "web": 5,
             "density": 0.8914112204069252
           },
           {
             "band": "far",
             "text": "Hire teenagers as paid fact-checkers who mark mistakes on old labels",
-            "cliche": 47,
-            "embedding": 43,
+            "cliche": 28,
+            "embedding": 11,
             "overlap": 5,
+            "web": 4,
             "density": 0.8914112204069252
           }
         ]
@@ -2527,57 +3004,64 @@
           {
             "band": "cliche",
             "text": "Sell branded merchandise",
-            "cliche": 100,
+            "cliche": 96,
             "embedding": 100,
             "overlap": 10,
+            "web": 9,
             "density": 0.8883391500864029
           },
           {
             "band": "cliche",
             "text": "Organize a charity run",
-            "cliche": 42,
-            "embedding": 29,
+            "cliche": 44,
+            "embedding": 0,
             "overlap": 5,
+            "web": 9,
             "density": 0.8883391500864029
           },
           {
             "band": "cliche",
             "text": "Apply for grants",
-            "cliche": 97,
-            "embedding": 93,
+            "cliche": 100,
+            "embedding": 100,
             "overlap": 10,
+            "web": 10,
             "density": 0.8883391500864029
           },
           {
             "band": "cliche",
             "text": "License the non-profit's training materials to companies",
-            "cliche": 94,
+            "cliche": 91,
             "embedding": 100,
             "overlap": 9,
+            "web": 8,
             "density": 0.8883391500864029
           },
           {
             "band": "cliche",
             "text": "Run a paid consulting arm staffed by former beneficiaries",
-            "cliche": 72,
-            "embedding": 76,
+            "cliche": 57,
+            "embedding": 68,
             "overlap": 7,
+            "web": 4,
             "density": 0.8883391500864029
           },
           {
             "band": "mid",
             "text": "Rent out the volunteers' skills as a weekend agency and keep the margin",
-            "cliche": 68,
-            "embedding": 64,
+            "cliche": 51,
+            "embedding": 37,
             "overlap": 7,
+            "web": 6,
             "density": 0.8883391500864029
           },
           {
             "band": "far",
             "text": "Auction naming rights to the problems it solves, like a pothole or a broken bench",
-            "cliche": 56,
-            "embedding": 34,
+            "cliche": 39,
+            "embedding": 0,
             "overlap": 7,
+            "web": 7,
             "density": 0.8883391500864029
           }
         ]
@@ -2589,57 +3073,64 @@
           {
             "band": "cliche",
             "text": "AI-powered summarization of notes",
-            "cliche": 94,
+            "cliche": 95,
             "embedding": 100,
             "overlap": 9,
+            "web": 9,
             "density": 0.8754108991263053
           },
           {
             "band": "cliche",
             "text": "Real-time collaboration",
-            "cliche": 90,
-            "embedding": 90,
+            "cliche": 99,
+            "embedding": 100,
             "overlap": 9,
+            "web": 10,
             "density": 0.8754108991263053
           },
           {
             "band": "cliche",
             "text": "Tags and smart folders",
-            "cliche": 93,
-            "embedding": 97,
+            "cliche": 99,
+            "embedding": 100,
             "overlap": 9,
+            "web": 10,
             "density": 0.8754108991263053
           },
           {
             "band": "mid",
             "text": "Notes that expire unless you revisit them",
             "cliche": 38,
-            "embedding": 65,
+            "embedding": 42,
             "overlap": 2,
+            "web": 4,
             "density": 0.8754108991263053
           },
           {
             "band": "mid",
             "text": "Show which old notes contradict the one you are writing",
-            "cliche": 60,
-            "embedding": 75,
+            "cliche": 58,
+            "embedding": 67,
             "overlap": 5,
+            "web": 5,
             "density": 0.8754108991263053
           },
           {
             "band": "cliche",
             "text": "Let a note be sent to your future self only when you return to the same physical place",
-            "cliche": 75,
-            "embedding": 67,
+            "cliche": 70,
+            "embedding": 58,
             "overlap": 8,
+            "web": 8,
             "density": 0.8754108991263053
           },
           {
             "band": "far",
             "text": "A trade mode where you swap one anonymous note a day with a stranger in your field",
-            "cliche": 9,
-            "embedding": 7,
+            "cliche": 26,
+            "embedding": 0,
             "overlap": 1,
+            "web": 6,
             "density": 0.8754108991263053
           }
         ]
@@ -2649,152 +3140,222 @@
   "top10": [
     {
       "params": {
-        "spreadK": 0.8,
-        "nearestWeight": 0.7,
-        "judgeWeight": 0.6
+        "spreadK": 0.5,
+        "nearestWeight": 1,
+        "judgeWeight": 0.25,
+        "webWeight": 0.4
       },
       "labels": "checked",
-      "bandAccuracy": 0.6956521739130435,
-      "pairOrder": 0.9041666666666667,
+      "counts": {
+        "hits": 51,
+        "total": 69,
+        "pairs": 120,
+        "ordered": 111
+      },
+      "bandAccuracy": 0.7391304347826086,
+      "pairOrder": 0.925,
       "means": {
-        "cliche": 77,
-        "mid": 56,
-        "far": 31
+        "cliche": 81,
+        "mid": 54,
+        "far": 34
       }
     },
     {
       "params": {
-        "spreadK": 0.8,
-        "nearestWeight": 0.8,
-        "judgeWeight": 0.6
+        "spreadK": 0.6,
+        "nearestWeight": 1,
+        "judgeWeight": 0,
+        "webWeight": 0.3
       },
       "labels": "checked",
-      "bandAccuracy": 0.6956521739130435,
-      "pairOrder": 0.9041666666666667,
+      "counts": {
+        "hits": 52,
+        "total": 69,
+        "pairs": 120,
+        "ordered": 109
+      },
+      "bandAccuracy": 0.7536231884057971,
+      "pairOrder": 0.9083333333333333,
+      "means": {
+        "cliche": 82,
+        "mid": 57,
+        "far": 32
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.5,
+        "nearestWeight": 0.6,
+        "judgeWeight": 0.25,
+        "webWeight": 0.4
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 51,
+        "total": 69,
+        "pairs": 120,
+        "ordered": 110.5
+      },
+      "bandAccuracy": 0.7391304347826086,
+      "pairOrder": 0.9208333333333333,
       "means": {
         "cliche": 78,
-        "mid": 56,
-        "far": 31
-      }
-    },
-    {
-      "params": {
-        "spreadK": 0.9,
-        "nearestWeight": 0.5,
-        "judgeWeight": 0.5
-      },
-      "labels": "checked",
-      "bandAccuracy": 0.6956521739130435,
-      "pairOrder": 0.9041666666666667,
-      "means": {
-        "cliche": 79,
-        "mid": 58,
-        "far": 37
-      }
-    },
-    {
-      "params": {
-        "spreadK": 0.9,
-        "nearestWeight": 0.6,
-        "judgeWeight": 0.5
-      },
-      "labels": "checked",
-      "bandAccuracy": 0.6956521739130435,
-      "pairOrder": 0.9,
-      "means": {
-        "cliche": 79,
-        "mid": 59,
+        "mid": 53,
         "far": 36
       }
     },
     {
       "params": {
-        "spreadK": 0.9,
-        "nearestWeight": 1,
-        "judgeWeight": 0.6
-      },
-      "labels": "checked",
-      "bandAccuracy": 0.6956521739130435,
-      "pairOrder": 0.9,
-      "means": {
-        "cliche": 79,
-        "mid": 57,
-        "far": 32
-      }
-    },
-    {
-      "params": {
-        "spreadK": 0.8,
-        "nearestWeight": 0.9,
-        "judgeWeight": 0.6
-      },
-      "labels": "checked",
-      "bandAccuracy": 0.6956521739130435,
-      "pairOrder": 0.8958333333333334,
-      "means": {
-        "cliche": 78,
-        "mid": 56,
-        "far": 30
-      }
-    },
-    {
-      "params": {
-        "spreadK": 0.9,
+        "spreadK": 0.5,
         "nearestWeight": 0.8,
-        "judgeWeight": 0.6
+        "judgeWeight": 0.25,
+        "webWeight": 0.4
       },
       "labels": "checked",
-      "bandAccuracy": 0.6956521739130435,
-      "pairOrder": 0.8958333333333334,
-      "means": {
-        "cliche": 78,
-        "mid": 57,
-        "far": 33
-      }
-    },
-    {
-      "params": {
-        "spreadK": 0.9,
-        "nearestWeight": 0.9,
-        "judgeWeight": 0.6
+      "counts": {
+        "hits": 50,
+        "total": 69,
+        "pairs": 120,
+        "ordered": 112
       },
-      "labels": "checked",
-      "bandAccuracy": 0.6956521739130435,
-      "pairOrder": 0.8958333333333334,
+      "bandAccuracy": 0.7246376811594203,
+      "pairOrder": 0.9333333333333333,
       "means": {
         "cliche": 79,
-        "mid": 57,
-        "far": 32
+        "mid": 53,
+        "far": 35
       }
     },
     {
       "params": {
-        "spreadK": 0.9,
-        "nearestWeight": 1,
-        "judgeWeight": 0.5
+        "spreadK": 0.6,
+        "nearestWeight": 0.8,
+        "judgeWeight": 0.25,
+        "webWeight": 0.4
       },
       "labels": "checked",
-      "bandAccuracy": 0.7101449275362319,
-      "pairOrder": 0.8791666666666667,
+      "counts": {
+        "hits": 50,
+        "total": 69,
+        "pairs": 120,
+        "ordered": 112
+      },
+      "bandAccuracy": 0.7246376811594203,
+      "pairOrder": 0.9333333333333333,
       "means": {
-        "cliche": 80,
-        "mid": 59,
+        "cliche": 81,
+        "mid": 57,
+        "far": 38
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.6,
+        "nearestWeight": 0.9,
+        "judgeWeight": 0.25,
+        "webWeight": 0.4
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 50,
+        "total": 69,
+        "pairs": 120,
+        "ordered": 112
+      },
+      "bandAccuracy": 0.7246376811594203,
+      "pairOrder": 0.9333333333333333,
+      "means": {
+        "cliche": 82,
+        "mid": 57,
+        "far": 37
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.6,
+        "nearestWeight": 1,
+        "judgeWeight": 0.25,
+        "webWeight": 0.4
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 50,
+        "total": 69,
+        "pairs": 120,
+        "ordered": 112
+      },
+      "bandAccuracy": 0.7246376811594203,
+      "pairOrder": 0.9333333333333333,
+      "means": {
+        "cliche": 82,
+        "mid": 57,
+        "far": 37
+      }
+    },
+    {
+      "params": {
+        "spreadK": 1,
+        "nearestWeight": 1,
+        "judgeWeight": 0.25,
+        "webWeight": 0.4
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 50,
+        "total": 69,
+        "pairs": 120,
+        "ordered": 112
+      },
+      "bandAccuracy": 0.7246376811594203,
+      "pairOrder": 0.9333333333333333,
+      "means": {
+        "cliche": 85,
+        "mid": 64,
+        "far": 47
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.6,
+        "nearestWeight": 1,
+        "judgeWeight": 0.25,
+        "webWeight": 0.3
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 51,
+        "total": 69,
+        "pairs": 120,
+        "ordered": 110
+      },
+      "bandAccuracy": 0.7391304347826086,
+      "pairOrder": 0.9166666666666666,
+      "means": {
+        "cliche": 81,
+        "mid": 57,
         "far": 33
       }
     },
     {
       "params": {
-        "spreadK": 0.7,
-        "nearestWeight": 1,
-        "judgeWeight": 0.6
+        "spreadK": 0.5,
+        "nearestWeight": 0.7,
+        "judgeWeight": 0.25,
+        "webWeight": 0.4
       },
       "labels": "checked",
-      "bandAccuracy": 0.6956521739130435,
-      "pairOrder": 0.8916666666666667,
+      "counts": {
+        "hits": 50,
+        "total": 69,
+        "pairs": 120,
+        "ordered": 111.5
+      },
+      "bandAccuracy": 0.7246376811594203,
+      "pairOrder": 0.9291666666666667,
       "means": {
-        "cliche": 78,
-        "mid": 54,
-        "far": 27
+        "cliche": 79,
+        "mid": 53,
+        "far": 36
       }
     }
   ]

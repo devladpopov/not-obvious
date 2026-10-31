@@ -7,6 +7,7 @@ import { complete, parseJson, parseList, providers } from "./llm.js";
 import { clicheScore, combineScores, cosine, type ClicheBreakdown } from "./math.js";
 import { AnswersSchema, ExplainSchema, HybridsSchema, IdeasSchema, JudgeSchema, UsefulnessSchema } from "./schemas.js";
 import { technique, TECHNIQUES } from "./techniques.js";
+import { webCheck, type WebCheck } from "./web.js";
 
 export interface Cliche {
   text: string;
@@ -133,7 +134,12 @@ export interface Scored {
   breakdown: ClicheBreakdown;
   judge?: Judgement;
   usefulness?: { score: number; why: string };
+  /** Web prevalence: does the idea already exist online? A separate axis, not folded into cliche (see docs/calibration.md). */
+  web?: WebCheck;
 }
+
+/** Ideas at or above this web prevalence are flagged: already a common product or practice. */
+export const WEB_EXISTS = 8;
 
 async function usefulness(prompt: string, ideas: string[]): Promise<{ score: number; why: string }[]> {
   const ask = `Task: ${prompt}\n\nRate how useful and feasible each idea is for the task (1 = nonsense or impossible, 10 = clearly workable and valuable). Originality is NOT the criterion here. Ideas:\n${ideas
@@ -173,14 +179,18 @@ export async function judgeMechanism(prompt: string, ideas: string[], cloud: Clo
   return ideas.map((i) => memo.get(k(i))!);
 }
 
-/** score: how clichéd are these ideas relative to the cloud for this prompt (0 = original, 100 = what every AI says). */
-export async function score(prompt: string, ideas: string[], opts: { critic?: boolean; judge?: boolean } = {}): Promise<Scored[]> {
+/**
+ * score: how clichéd are these ideas relative to the cloud for this prompt (0 = original, 100 = what every AI says).
+ * web: also search the web for each idea (slower, ~1 search per idea); off by default inside generation loops.
+ */
+export async function score(prompt: string, ideas: string[], opts: { critic?: boolean; judge?: boolean; web?: boolean } = {}): Promise<Scored[]> {
   const cloud = await baseline(prompt);
-  const [{ vectors: vecs }, critic, verdicts] = await Promise.all([
+  const [{ vectors: vecs }, critic, verdicts, web] = await Promise.all([
     embedCached(ideas),
     opts.critic === false ? [] : usefulness(prompt, ideas).catch(() => []),
     // A failed judge degrades to embedding-only scoring instead of failing the call.
     opts.judge === false ? [] : judgeMechanism(prompt, ideas, cloud).catch(() => []),
+    opts.web ? webCheck(prompt, ideas, CACHE_DIR).catch(() => []) : [],
   ]);
   return ideas.map((idea, i) => {
     const b = clicheScore(vecs[i]!, cloud.vectors);
@@ -188,14 +198,22 @@ export async function score(prompt: string, ideas: string[], opts: { critic?: bo
     const nearest = j && j.closest >= 1 && j.closest <= cloud.cliches.length ? j.closest - 1 : b.nearestIndex;
     return {
       idea,
-      cliche: combineScores(b.cliche, j?.overlap),
+      cliche: combineScores(b.cliche, j?.overlap, undefined, web[i]?.prevalence),
       embedding: b.cliche,
       nearest: cloud.cliches[nearest]!.text,
       breakdown: b,
       judge: j,
       usefulness: critic[i],
+      web: web[i],
     };
   });
+}
+
+/** Attach web checks to already scored ideas (diverge checks only its survivors). */
+async function withWeb<T extends Scored>(prompt: string, items: T[]): Promise<T[]> {
+  if (!items.length) return items;
+  const web = await webCheck(prompt, items.map((s) => s.idea), CACHE_DIR).catch(() => []);
+  return items.map((s, i) => ({ ...s, web: web[i], cliche: combineScores(s.embedding, s.judge?.overlap, undefined, web[i]?.prevalence) }));
 }
 
 function cloudBrief(cloud: Cloud, max = 30) {
@@ -214,6 +232,8 @@ export interface DivergeOpts {
   minUseful?: number;
   /** Generation rounds per technique; later rounds see what was rejected and why. */
   rounds?: number;
+  /** Web-check the survivors (default true; no-op without a web mode). */
+  web?: boolean;
 }
 
 /** An idea escapes when it is far enough from the cloud and still useful. No critic verdict = not rejected for usefulness. */
@@ -264,7 +284,7 @@ async function divergeOne(prompt: string, techniqueId: string, cloud: Cloud, o: 
  * and regenerate with the rejection reasons when too few survive.
  */
 export async function diverge(prompt: string, techniqueId: string, opts: DivergeOpts = {}) {
-  const o: Required<DivergeOpts> = { count: 4, maxCliche: 50, minUseful: 6, rounds: 2, ...opts };
+  const o: Required<DivergeOpts> = { count: 4, maxCliche: 50, minUseful: 6, rounds: 2, web: true, ...opts };
   const ids = techniqueId === "all" ? TECHNIQUES.map((t) => t.id) : techniqueId.split(",").map((s) => s.trim());
   ids.forEach((id) => technique(id));
   const cloud = await baseline(prompt);
@@ -272,13 +292,18 @@ export async function diverge(prompt: string, techniqueId: string, opts: Diverge
   const ok = runs.flatMap((r) => (r.status === "fulfilled" ? [r.value] : []));
   if (ok.length === 0) throw new Error(`diverge failed:\n${runs.map((r) => (r.status === "rejected" ? String(r.reason) : "")).join("\n")}`);
   const byScore = (a: DivergeIdea, b: DivergeIdea) => a.cliche - b.cliche || (b.usefulness?.score ?? 0) - (a.usefulness?.score ?? 0);
+  const kept = ok.flatMap((r) => r.kept);
+  const ideas = o.web ? await withWeb(prompt, kept) : kept;
   return {
     technique: ok.map((r) => r.technique).join(", "),
     model: [...new Set(ok.map((r) => r.model))].join(", "),
     thresholds: { maxCliche: o.maxCliche, minUseful: o.minUseful },
     techniques: ok.map((r) => ({ technique: r.technique, rounds: r.rounds, kept: r.kept.length, rejected: r.rejected.length })),
     errors: runs.flatMap((r, i) => (r.status === "rejected" ? [`${ids[i]}: ${(r.reason as Error).message}`] : [])),
-    ideas: ok.flatMap((r) => r.kept).sort(byScore),
+    // Survivors that already exist online sink to the bottom: escaping the AI cloud is not enough if it is a known product.
+    ideas: ideas
+      .map((s) => ({ ...s, existsOnline: (s.web?.prevalence ?? 0) >= WEB_EXISTS }))
+      .sort((a, b) => Number(a.existsOnline) - Number(b.existsOnline) || byScore(a, b)),
     /** Closest misses, so the user sees what was filtered out and why. */
     rejected: ok
       .flatMap((r) => r.rejected)
@@ -332,16 +357,16 @@ export async function remix(prompt: string, a: string, b: string, opts: RemixOpt
  * one concrete move to push it further, and the idea rewritten with that move, re-scored as proof.
  */
 export async function explain(prompt: string, idea: string) {
-  const [s] = await score(prompt, [idea]);
+  const [s] = await score(prompt, [idea], { web: true });
   const cloud = await baseline(prompt);
-  const ask = `Task: ${prompt}\nIdea: ${idea}\n\nMeasurements:\n- Cliché Score ${s!.cliche}/100 (0 = original, 100 = what every AI says)\n- Embedding distance part: ${s!.embedding}/100 (how close the wording is to the cloud)\n- Mechanism judge: ${s!.judge ? `overlap ${s!.judge.overlap}/10, ${s!.judge.why}` : "not available"}\n- Closest cliché: "${s!.nearest}"\n- Usefulness: ${s!.usefulness ? `${s!.usefulness.score}/10, ${s!.usefulness.why}` : "not rated"}\n\nOther clichés:\n${cloudBrief(cloud, 12)}\n\nExplain the score in plain words and propose ONE move that pushes the idea away from the cloud without losing usefulness. Return JSON {"cliched": string (what in the idea is shared with the clichés, max 30 words), "different": string (what is genuinely new, max 30 words), "technique": one of ${TECHNIQUES.map((t) => `"${t.id}"`).join(", ")}, "move": string (the concrete change, max 25 words), "rewrite": string (the idea after the move, max 40 words)}.`;
+  const ask = `Task: ${prompt}\nIdea: ${idea}\n\nMeasurements:\n- Cliché Score ${s!.cliche}/100 (0 = original, 100 = what every AI says)\n- Embedding distance part: ${s!.embedding}/100 (how close the wording is to the cloud)\n- Mechanism judge: ${s!.judge ? `overlap ${s!.judge.overlap}/10, ${s!.judge.why}` : "not available"}\n- Closest cliché: "${s!.nearest}"\n- Usefulness: ${s!.usefulness ? `${s!.usefulness.score}/10, ${s!.usefulness.why}` : "not rated"}\n- Already on the web: ${s!.web ? `prevalence ${s!.web.prevalence}/10, ${s!.web.why}` : "not checked"}\n\nOther clichés:\n${cloudBrief(cloud, 12)}\n\nExplain the score in plain words and propose ONE move that pushes the idea away from the cloud (and from what already exists online) without losing usefulness. Return JSON {"cliched": string (what in the idea is shared with the clichés, max 30 words), "different": string (what is genuinely new, max 30 words), "technique": one of ${TECHNIQUES.map((t) => `"${t.id}"`).join(", ")}, "move": string (the concrete change, max 25 words), "rewrite": string (the idea after the move, max 40 words)}.`;
   const { text, model } = await complete(ask, { tier: "smart", json: true, schema: ExplainSchema });
   const e = ExplainSchema.parse(parseJson<unknown>(text));
-  const [r] = await score(prompt, [e.rewrite]);
+  const [r] = await score(prompt, [e.rewrite], { web: true });
   return {
     ...s!,
     model,
     explanation: { cliched: e.cliched, different: e.different, technique: e.technique, move: e.move },
-    rewrite: { idea: e.rewrite, cliche: r!.cliche, delta: r!.cliche - s!.cliche, usefulness: r!.usefulness },
+    rewrite: { idea: e.rewrite, cliche: r!.cliche, delta: r!.cliche - s!.cliche, usefulness: r!.usefulness, web: r!.web },
   };
 }

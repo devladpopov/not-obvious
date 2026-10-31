@@ -5,19 +5,34 @@ Set: 10 prompts x 7 hand-written anchors (3 cliché, 2 mid, 2 far), see bench/pr
 
 Labels: cloud-checked (anchors the cloud already contains count as clichés, see "relabel" in prompts.json); the last three rows use the labels as originally written.
 
-| params (k = spread, w = nearest weight, j = judge weight) | band accuracy | pair order | mean cliché | mean mid | mean far |
+Web check: claude, 70 of 70 anchors rated.
+
+| params (k = spread, w = nearest weight, j = judge weight, web = web prevalence weight) | band accuracy | pair order | mean cliché | mean mid | mean far |
 |---|---|---|---|---|---|
-| embedding only k=0.8 w=0.7 j=0 | 68% | 84% | 82 | 64 | 37 |
-| judge only k=0.8 w=0.7 j=1 | 62% | 85% | 74 | 50 | 27 |
-| current default k=0.8 w=0.7 j=0.6 | 70% | 90% | 77 | 56 | 31 |
-| best k=0.8 w=0.7 j=0.6 | 70% | 90% | 77 | 56 | 31 |
-| #2 k=0.8 w=0.8 j=0.6 | 70% | 90% | 78 | 56 | 31 |
-| #3 k=0.9 w=0.5 j=0.5 | 70% | 90% | 79 | 58 | 37 |
-| #4 k=0.9 w=0.6 j=0.5 | 70% | 90% | 79 | 59 | 36 |
-| #5 k=0.9 w=1 j=0.6 | 70% | 90% | 79 | 57 | 32 |
-| original labels, embedding only k=0.8 w=0.7 j=0 | 53% | 74% | 82 | 70 | 50 |
-| original labels, current default k=0.8 w=0.7 j=0.6 | 51% | 77% | 75 | 66 | 45 |
-| original labels, judge only k=0.8 w=0.7 j=1 | 47% | 70% | 69 | 64 | 42 |
+| embedding only k=0.8 w=0.7 j=0 web=0 | 68% | 84% | 82 | 64 | 37 |
+| judge only k=0.8 w=0.7 j=1 web=0 | 62% | 85% | 74 | 50 | 27 |
+| web only k=0.8 w=0.7 j=0 web=1 | 68% | 88% | 87 | 62 | 58 |
+| current default k=0.8 w=0.7 j=0.6 web=0 | 70% | 90% | 77 | 56 | 31 |
+| current + web 0.1 k=0.8 w=0.7 j=0.6 web=0.1 | 67% | 89% | 78 | 56 | 34 |
+| current + web 0.2 k=0.8 w=0.7 j=0.6 web=0.2 | 64% | 89% | 79 | 57 | 37 |
+| current + web 0.3 k=0.8 w=0.7 j=0.6 web=0.3 | 67% | 89% | 80 | 57 | 39 |
+| current + web 0.5 k=0.8 w=0.7 j=0.6 web=0.5 | 65% | 92% | 82 | 59 | 45 |
+| best k=0.5 w=1 j=0.25 web=0.4 | 74% | 93% | 81 | 54 | 34 |
+| #2 k=0.6 w=1 j=0 web=0.3 | 75% | 91% | 82 | 57 | 32 |
+| #3 k=0.5 w=0.6 j=0.25 web=0.4 | 74% | 92% | 78 | 53 | 36 |
+| #4 k=0.5 w=0.8 j=0.25 web=0.4 | 72% | 93% | 79 | 53 | 35 |
+| #5 k=0.6 w=0.8 j=0.25 web=0.4 | 72% | 93% | 81 | 57 | 38 |
+| original labels, embedding only k=0.8 w=0.7 j=0 web=0 | 53% | 74% | 82 | 70 | 50 |
+| original labels, current default k=0.8 w=0.7 j=0.6 web=0 | 51% | 77% | 75 | 66 | 45 |
+| original labels, judge only k=0.8 w=0.7 j=1 web=0 | 47% | 70% | 69 | 64 | 42 |
+
+Leave-one-prompt-out cross-validation (parameters picked on 9 prompts, scored on the 10th):
+
+| components | band accuracy | pair order |
+|---|---|---|
+| embedding | 64% | 85% |
+| embedding + judge | 67% | 89% |
+| embedding + judge + web | 65% | 89% |
 
 ## Per prompt (current default)
 
@@ -35,6 +50,13 @@ Labels: cloud-checked (anchors the cloud already contains count as clichés, see
 | Suggest a new feature for a note-taking app | 0.875 | 94 / 90 / 93 / 75 | 38 / 60 | 9 |
 
 ## Findings (written by hand, not regenerated)
+
+Day 5 (2026-10-31), web check added (src/web.ts):
+
+- Each anchor is searched with Claude web search (claude-haiku-5-5, web_search_20250305, up to 2 queries) and rated 0-10 for prevalence: how much of the mechanism already exists as products, services or common advice. 70 of 70 anchors rated, about $0.01 each, cached in research/clouds/web.json.
+- Mean prevalence: clichés 8.7, mid 6.2, far 5.8. Web prevalence alone orders pairs well (88%), but it squeezes "mid" and "far" together: the web finds a partial match for almost anything (rare-shrimp auctions exist on AquaBid, 8/10), and names collide with existing products ("Mudroom" 8/10) even when no model would suggest them.
+- On the full set the grid prefers web weight 0.4 (93% pair order, 74% band accuracy) but with spread and judge weight moved far from the day-3 values. Leave-one-prompt-out cross-validation shows it does not generalise: embedding 64% / 85%, + judge 67% / 89%, + judge + web 65% / 89% (band / pair). So WEB_WEIGHT stays 0: the Cliché Score keeps meaning "distance from what models say", and web prevalence is reported next to it as a second axis ("already exists online", flagged at 8+).
+- Product use: `score` with web: true, `explain` (always), `diverge` checks survivors only (one search per kept idea, not per candidate) and sorts ideas that already exist online last.
 
 Day 3 (2026-10-31), mechanism judge added:
 

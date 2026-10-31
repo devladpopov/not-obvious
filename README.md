@@ -17,9 +17,9 @@ LLMs converge. Ask five models for a side business and you get five versions of 
 | Tool | What it does |
 |---|---|
 | `baseline` | Asks every configured model the plain question and returns the cliché cloud (cached per prompt). |
-| `diverge` | Generates ideas away from the cloud with a named technique (`scamper`, `triz`, `morphological`, `far-analogy`, `constraint-flip`) or `all` five in parallel. Keeps only ideas with Cliché Score below 50 and usefulness 6+; if too few survive, it regenerates with the rejection reasons. Returns the survivors and the closest misses. |
+| `diverge` | Generates ideas away from the cloud with a named technique (`scamper`, `triz`, `morphological`, `far-analogy`, `constraint-flip`) or `all` five in parallel. Keeps only ideas with Cliché Score below 50 and usefulness 6+; if too few survive, it regenerates with the rejection reasons. Survivors are then searched on the web; ones that already exist as a common product or practice are flagged `existsOnline` and sorted last. Returns the survivors and the closest misses. |
 | `remix` | Crosses idea A and idea B into hybrids that neither parent nor the cloud contains. Scores the parents first, takes at least one component (mechanism, audience, channel, constraint) from each and flags which hybrids escaped the cloud. |
-| `score` | Cliché Score 0-100 for any list of ideas (0 = far from the AI consensus), with the embedding part and the mechanism judge verdict, plus a usefulness critic 1-10. |
+| `score` | Cliché Score 0-100 for any list of ideas (0 = far from the AI consensus), with the embedding part and the mechanism judge verdict, plus a usefulness critic 1-10. With `web: true` each idea is also searched on the web: prevalence 0-10 (does it already exist?) with sources. |
 | `explain` | Why an idea scored the way it did, one concrete move to push it further, and the idea rewritten with that move and re-scored (e.g. "programming course for beginners" 88% -> "coding escape-room kits for libraries and team events" 45%). |
 
 ## Cliché Score (v0.2)
@@ -29,8 +29,9 @@ LLMs converge. Ask five models for a side business and you get five versions of 
 3. Normalise against the cloud's own density: an idea as close to the cloud as clichés are to each other scores about 100; the scale adapts to how tight the cloud is (spread = 0.8 x (1 - density)). Blend: 70% nearest cliché, 30% centroid.
 4. Embeddings see wording, not ideas. A mechanism judge (a fast LLM) rates 0-10 whether the idea does the same thing, for the same people, in the same way as some cliché. Final score: 40% embedding distance + 60% judge.
 5. A separate critic rates usefulness so that "far away" never means "nonsense".
+6. Web check, a separate axis: the idea is searched on the web (Claude web search, or Brave Search with `BRAVE_API_KEY`) and rated 0-10 for how much of it already exists, with sources. An idea can escape every model and still be a known product; the two are reported side by side, not blended (blending did not improve held-out calibration).
 
-Calibration on 10 prompts x 7 hand-labelled anchors ([`docs/calibration.md`](docs/calibration.md)): a cliché outranks a mid idea and a mid idea outranks a far one in 90% of pairs (84% with embeddings alone). Distance from what the web already has (search-based novelty) and human ratings are on the roadmap. The formula lives in [`src/math.ts`](src/math.ts).
+Calibration on 10 prompts x 7 hand-labelled anchors ([`docs/calibration.md`](docs/calibration.md)): a cliché outranks a mid idea and a mid idea outranks a far one in 90% of pairs (84% with embeddings alone). Human ratings are on the roadmap. The formula lives in [`src/math.ts`](src/math.ts).
 
 ## Quick start
 
@@ -46,7 +47,7 @@ Calibration on 10 prompts x 7 hand-labelled anchors ([`docs/calibration.md`](doc
 }
 ```
 
-One key is enough; two model families give a better cloud. With Claude every model reply is constrained by a JSON schema (structured outputs); Gemini gets the same schema as `responseJsonSchema`. Without a Gemini key, embeddings fall back to an offline lexical mode (works, but less semantic).
+One key is enough; two model families give a better cloud. With Claude every model reply is constrained by a JSON schema (structured outputs); Gemini gets the same schema as `responseJsonSchema`. Web checks use Claude web search when `ANTHROPIC_API_KEY` is set (about $0.01 per idea), otherwise Brave Search with `BRAVE_API_KEY`; `NOT_OBVIOUS_WEB=off` disables them. Without a Gemini key, embeddings fall back to an offline lexical mode (works, but less semantic).
 
 CLI for quick checks:
 
@@ -59,7 +60,7 @@ npx -p not-obvious-mcp not-obvious explain "Suggest a side business for a softwa
 
 ## Roadmap
 
-- [ ] Web novelty: distance from top search results, not just from models
+- [x] Web novelty: is the idea already out there (web search, prevalence 0-10 with sources)
 - [ ] More models in the cloud (OpenRouter), local embeddings
 - [ ] Public leaderboard: which model is the most banal
 - [ ] Calibration set with human originality ratings

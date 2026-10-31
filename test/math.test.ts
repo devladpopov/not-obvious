@@ -51,3 +51,14 @@ describe("combineScores", () => {
     expect(combineScores(50, -3, 1)).toBe(0);
   });
 });
+
+describe("combineScores with web prevalence", () => {
+  test("web is ignored at weight 0 and when missing", () => {
+    expect(combineScores(30, 10, 0.5, 10, 0)).toBe(65);
+    expect(combineScores(30, 10, 0.5, undefined, 0.5)).toBe(65);
+  });
+  test("web blends on top of embedding + judge", () => {
+    expect(combineScores(30, 10, 0.5, 0, 0.5)).toBe(33);
+    expect(combineScores(80, undefined, 0.6, 10, 0.25)).toBe(85);
+  });
+});
