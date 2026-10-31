@@ -6,7 +6,10 @@
   "type": "module",
   "author": "Vlad Popov",
   "homepage": "https://github.com/devladpopov/not-obvious#readme",
-  "repository": { "type": "git", "url": "git+https://github.com/devladpopov/not-obvious.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devladpopov/not-obvious.git"
+  },
   "bin": {
     "not-obvious-mcp": "./dist/server.js",
     "not-obvious": "./dist/cli.js"
@@ -14,10 +17,12 @@
   "files": ["dist"],
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc -p tsconfig.check.json",
     "test": "bun test",
     "dev": "bun run src/server.ts",
-    "cli": "bun run src/cli.ts"
+    "cli": "bun run src/cli.ts",
+    "smoke": "node scripts/smoke.mjs",
+    "prepublishOnly": "npm run build && node scripts/smoke.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.3.0",
@@ -25,9 +30,12 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@types/bun": "^1.4.4",
     "@types/node": "^26.6.5",
     "typescript": "^7.0.2"
   },
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "keywords": ["mcp", "model-context-protocol", "creativity", "brainstorming", "originality", "cliche", "scamper", "triz", "llm", "embeddings"]
 }
