@@ -171,3 +171,14 @@ export function parseJson<T>(text: string): T {
   const end = cleaned.lastIndexOf(open === "[" ? "]" : "}");
   return JSON.parse(cleaned.slice(start, end + 1)) as T;
 }
+
+/** Parse a JSON list from a model reply. Models often wrap it: {"ideas": [...]} -> [...]. */
+export function parseList<T>(text: string): T[] {
+  const v = parseJson<unknown>(text);
+  if (Array.isArray(v)) return v as T[];
+  if (v && typeof v === "object") {
+    const inner = Object.values(v).find(Array.isArray);
+    if (inner) return inner as T[];
+  }
+  throw new Error(`Expected a JSON list in model reply: ${text.slice(0, 200)}`);
+}

@@ -38,14 +38,18 @@ server.registerTool(
   "diverge",
   {
     title: "Go somewhere else",
-    description: `Generate ideas away from the cliché cloud with a creativity technique, each with a measured Cliché Score. Techniques: ${TECHNIQUES.map((t) => `${t.id} (${t.name})`).join(", ")}.`,
+    description: `Generate ideas away from the cliché cloud with a creativity technique (or "all" five in parallel). Keeps only ideas that measurably escaped: Cliché Score below max_cliche and usefulness at least min_usefulness; regenerates with the rejection reasons when too few survive. Techniques: ${TECHNIQUES.map((t) => `${t.id} (${t.name})`).join(", ")}.`,
     inputSchema: {
       prompt,
-      technique: z.enum(TECHNIQUES.map((t) => t.id) as [string, ...string[]]),
-      count: z.number().int().min(1).max(12).optional(),
+      technique: z.enum(["all", ...TECHNIQUES.map((t) => t.id)] as [string, ...string[]]),
+      count: z.number().int().min(1).max(12).optional().describe("Surviving ideas wanted per technique (default 4)."),
+      max_cliche: z.number().min(1).max(100).optional().describe("Keep ideas with Cliché Score below this (default 50)."),
+      min_usefulness: z.number().min(1).max(10).optional().describe("Keep ideas rated at least this useful, 1-10 (default 6)."),
+      rounds: z.number().int().min(1).max(4).optional().describe("Generation rounds per technique (default 2)."),
     },
   },
-  ({ prompt, technique, count }) => run(() => diverge(prompt, technique, { count })),
+  ({ prompt, technique, count, max_cliche, min_usefulness, rounds }) =>
+    run(() => diverge(prompt, technique, { count, maxCliche: max_cliche, minUseful: min_usefulness, rounds })),
 );
 
 server.registerTool(
@@ -63,10 +67,10 @@ server.registerTool(
   {
     title: "Cliché Score",
     description:
-      "Measure how clichéd ideas are: 0 = far from what every AI says, 100 = the typical AI answer. Semantic distance to the cliché cloud for this prompt, plus a usefulness critic (1-10).",
-    inputSchema: { prompt, ideas: z.array(z.string().min(3)).min(1).max(30), critic: z.boolean().optional() },
+      "Measure how clichéd ideas are: 0 = far from what every AI says, 100 = the typical AI answer. Blends semantic distance to the cliché cloud for this prompt with an LLM judge of mechanism overlap (same idea in other words?), plus a usefulness critic (1-10).",
+    inputSchema: { prompt, ideas: z.array(z.string().min(3)).min(1).max(30), critic: z.boolean().optional(), judge: z.boolean().optional() },
   },
-  ({ prompt, ideas, critic }) => run(() => score(prompt, ideas, { critic })),
+  ({ prompt, ideas, critic, judge }) => run(() => score(prompt, ideas, { critic, judge })),
 );
 
 server.registerTool(

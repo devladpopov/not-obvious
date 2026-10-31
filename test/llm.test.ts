@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { cloudKey } from "../src/engine.js";
-import { modelList, parseJson, retryAfterMs, withRetry } from "../src/llm.js";
+import { cloudKey, passes } from "../src/engine.js";
+import { modelList, parseJson, parseList, retryAfterMs, withRetry } from "../src/llm.js";
 
 const res = (status: number, headers: Record<string, string> = {}) => new Response("x", { status, headers });
 const noSleep = async () => {};
@@ -65,5 +65,23 @@ describe("helpers", () => {
   test("cloudKey normalises the prompt and separates embedders", () => {
     expect(cloudKey("Side  business ", "e1")).toBe(cloudKey("side business", "e1"));
     expect(cloudKey("side business", "e1")).not.toBe(cloudKey("side business", "e2"));
+  });
+});
+
+describe("diverge filter", () => {
+  test("keeps ideas below the cliché threshold that the critic finds useful", () => {
+    expect(passes({ cliche: 30, usefulness: { score: 7, why: "" } })).toBe(true);
+    expect(passes({ cliche: 50, usefulness: { score: 9, why: "" } })).toBe(false);
+    expect(passes({ cliche: 10, usefulness: { score: 5, why: "" } })).toBe(false);
+    expect(passes({ cliche: 10, usefulness: undefined })).toBe(true);
+    expect(passes({ cliche: 60, usefulness: undefined }, 70, 6)).toBe(true);
+  });
+});
+
+describe("parseList", () => {
+  test("accepts a bare array or one wrapped in an object", () => {
+    expect(parseList<number>("[1, 2]")).toEqual([1, 2]);
+    expect(parseList<{ idea: string }>('{"ideas": [{"idea": "x"}]}')).toEqual([{ idea: "x" }]);
+    expect(() => parseList('{"idea": "x"}')).toThrow();
   });
 });

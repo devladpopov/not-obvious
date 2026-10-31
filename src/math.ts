@@ -49,7 +49,7 @@ export interface ClicheBreakdown {
  * An idea that sits as close to the cloud as clichés sit to each other scores ~100.
  * Every `spread` of cosine below that density takes it linearly to 0.
  * Embedders compress cosine differently (gemini-embedding: on-topic texts sit in 0.75-0.95),
- * so by default spread adapts to the cloud: 0.6 * (1 - density).
+ * so by default spread adapts to the cloud: 0.8 * (1 - density).
  * Blend: 70% nearest cliché (you re-invented one specific answer) + 30% centroid
  * (you landed in the middle of the AI consensus), each against the cloud's own reference.
  */
@@ -62,8 +62,8 @@ export interface ScoreParams {
   spread?: number;
 }
 
-/** Calibrated on bench/prompts.json (docs/calibration.md): k 0.7 -> 0.6 lifts band accuracy 53% -> 60%. */
-export const DEFAULT_PARAMS: ScoreParams = { spreadK: 0.6, nearestWeight: 0.7 };
+/** Calibrated on bench/prompts.json with cloud-checked labels (docs/calibration.md). */
+export const DEFAULT_PARAMS: ScoreParams = { spreadK: 0.8, nearestWeight: 0.7 };
 
 export function clicheScore(idea: Vector, cloud: Vector[], params: Partial<ScoreParams> = {}): ClicheBreakdown {
   const p = { ...DEFAULT_PARAMS, ...params };
@@ -85,4 +85,17 @@ export function clicheScore(idea: Vector, cloud: Vector[], params: Partial<Score
   const norm = (s: number, ref: number) => Math.min(1, Math.max(0, 1 - (ref - s) / spread));
   const blended = p.nearestWeight * norm(nearestSim, density) + (1 - p.nearestWeight) * norm(centroidSim, centroidRef);
   return { cliche: Math.round(blended * 100), nearestSim, nearestIndex, centroidSim, density };
+}
+
+/** Weight of the mechanism judge in the final score (calibrated on bench/prompts.json, see docs/calibration.md). */
+export const JUDGE_WEIGHT = 0.6;
+
+/**
+ * Final Cliché Score: embedding distance blended with an LLM judge's verdict on mechanism overlap (0-10).
+ * Embeddings see wording, the judge sees "is this the same idea in other words". No judge = embedding only.
+ */
+export function combineScores(embedding: number, overlap: number | undefined, judgeWeight = JUDGE_WEIGHT): number {
+  if (overlap === undefined || !Number.isFinite(overlap)) return embedding;
+  const judged = Math.min(10, Math.max(0, overlap)) * 10;
+  return Math.round((1 - judgeWeight) * embedding + judgeWeight * judged);
 }

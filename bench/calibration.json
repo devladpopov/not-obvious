@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-31T03:01:15.299Z",
+  "date": "2026-10-31T03:28:15.739Z",
   "embedder": "gemini-embedding-001",
   "clouds": [
     {
@@ -83,17 +83,19 @@
       ]
     }
   ],
-  "v0": {
+  "embeddingOnly": {
     "params": {
-      "spreadK": 0.7,
-      "nearestWeight": 0.7
+      "spreadK": 0.8,
+      "nearestWeight": 0.7,
+      "judgeWeight": 0
     },
-    "bandAccuracy": 0.5285714285714286,
-    "pairOrder": 0.740625,
+    "labels": "checked",
+    "bandAccuracy": 0.6811594202898551,
+    "pairOrder": 0.8375,
     "means": {
-      "cliche": 80,
-      "mid": 66,
-      "far": 44
+      "cliche": 82,
+      "mid": 64,
+      "far": 37
     },
     "detail": [
       {
@@ -104,42 +106,56 @@
             "band": "cliche",
             "text": "Build a SaaS product for small businesses",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 8,
             "density": 0.8841711571196251
           },
           {
             "band": "cliche",
             "text": "Freelance web development on Upwork",
-            "cliche": 65,
+            "cliche": 69,
+            "embedding": 69,
+            "overlap": 5,
             "density": 0.8841711571196251
           },
           {
             "band": "cliche",
             "text": "Create and sell an online programming course",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
             "density": 0.8841711571196251
           },
           {
             "band": "mid",
             "text": "Offer fixed-price accessibility audits for local government websites",
-            "cliche": 51,
+            "cliche": 57,
+            "embedding": 57,
+            "overlap": 5,
             "density": 0.8841711571196251
           },
           {
             "band": "mid",
             "text": "Sell pre-configured home-lab kits for privacy-minded families",
-            "cliche": 57,
+            "cliche": 62,
+            "embedding": 62,
+            "overlap": 2,
             "density": 0.8841711571196251
           },
           {
-            "band": "far",
+            "band": "mid",
             "text": "Rent yourself out as a code archaeologist who documents abandoned legacy systems for insurance audits",
-            "cliche": 65,
+            "cliche": 69,
+            "embedding": 69,
+            "overlap": 4,
             "density": 0.8841711571196251
           },
           {
             "band": "far",
             "text": "Breed rare aquarium shrimp and sell them through a self-built auction bot",
-            "cliche": 39,
+            "cliche": 47,
+            "embedding": 47,
+            "overlap": 1,
             "density": 0.8841711571196251
           }
         ]
@@ -151,43 +167,57 @@
           {
             "band": "cliche",
             "text": "Start a loyalty card program",
-            "cliche": 98,
+            "cliche": 99,
+            "embedding": 99,
+            "overlap": 10,
             "density": 0.8932064966360758
           },
           {
             "band": "cliche",
             "text": "Post attractive photos on Instagram",
-            "cliche": 66,
+            "cliche": 70,
+            "embedding": 70,
+            "overlap": 8,
             "density": 0.8932064966360758
           },
           {
             "band": "cliche",
             "text": "Offer free Wi-Fi and comfortable seating",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
             "density": 0.8932064966360758
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Host a monthly cupping night where regulars vote on next month's bean",
-            "cliche": 63,
+            "cliche": 68,
+            "embedding": 68,
+            "overlap": 6,
             "density": 0.8932064966360758
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Partner with the nearest coworking space for a shared membership",
-            "cliche": 91,
+            "cliche": 93,
+            "embedding": 93,
+            "overlap": 6,
             "density": 0.8932064966360758
           },
           {
             "band": "far",
             "text": "Become the neighbourhood's lost-and-found and parcel drop, so people come in for errands",
-            "cliche": 52,
+            "cliche": 58,
+            "embedding": 58,
+            "overlap": 2,
             "density": 0.8932064966360758
           },
           {
             "band": "far",
             "text": "Let customers pay by fixing one item from the shop's broken-things shelf",
-            "cliche": 10,
+            "cliche": 13,
+            "embedding": 13,
+            "overlap": 0,
             "density": 0.8932064966360758
           }
         ]
@@ -199,43 +229,49 @@
           {
             "band": "cliche",
             "text": "Throw a superhero themed party",
-            "cliche": 75,
+            "cliche": 78,
+            "embedding": 78,
+            "overlap": 1,
             "density": 0.8707030785417171
           },
           {
             "band": "cliche",
             "text": "Have a pizza and movie night sleepover",
-            "cliche": 59,
+            "cliche": 64,
+            "embedding": 64,
+            "overlap": 2,
             "density": 0.8707030785417171
           },
           {
             "band": "cliche",
-            "text": "Book a trampoline park",
-            "cliche": 12,
-            "density": 0.8707030785417171
-          },
-          {
-            "band": "mid",
             "text": "Run a backyard escape room built around the child's favourite book",
-            "cliche": 97,
+            "cliche": 98,
+            "embedding": 98,
+            "overlap": 9,
             "density": 0.8707030785417171
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Host a mini bake-off judged by grandparents over video call",
-            "cliche": 52,
+            "cliche": 58,
+            "embedding": 58,
+            "overlap": 8,
             "density": 0.8707030785417171
           },
           {
             "band": "far",
             "text": "Turn the party into a one-day newspaper: kids interview neighbours and print an edition",
-            "cliche": 91,
+            "cliche": 92,
+            "embedding": 92,
+            "overlap": 4,
             "density": 0.8707030785417171
           },
           {
-            "band": "far",
+            "band": "cliche",
             "text": "Guests arrive as clients of a fake detective agency and must solve who ate the cake",
-            "cliche": 86,
+            "cliche": 88,
+            "embedding": 88,
+            "overlap": 9,
             "density": 0.8707030785417171
           }
         ]
@@ -247,43 +283,57 @@
           {
             "band": "cliche",
             "text": "FocusFlow",
-            "cliche": 96,
+            "cliche": 97,
+            "embedding": 97,
+            "overlap": 10,
             "density": 0.8417791382290684
           },
           {
             "band": "cliche",
             "text": "TaskMaster",
-            "cliche": 74,
+            "cliche": 77,
+            "embedding": 77,
+            "overlap": 3,
             "density": 0.8417791382290684
           },
           {
             "band": "cliche",
             "text": "DoneDeal",
-            "cliche": 40,
+            "cliche": 47,
+            "embedding": 47,
+            "overlap": 1,
             "density": 0.8417791382290684
           },
           {
             "band": "mid",
             "text": "Tomorrow Me",
-            "cliche": 48,
+            "cliche": 55,
+            "embedding": 55,
+            "overlap": 2,
             "density": 0.8417791382290684
           },
           {
             "band": "mid",
             "text": "Small Hours",
-            "cliche": 40,
+            "cliche": 47,
+            "embedding": 47,
+            "overlap": 1,
             "density": 0.8417791382290684
           },
           {
             "band": "far",
             "text": "Mudroom",
-            "cliche": 21,
+            "cliche": 31,
+            "embedding": 31,
+            "overlap": 2,
             "density": 0.8417791382290684
           },
           {
             "band": "far",
             "text": "Third Coffee",
-            "cliche": 4,
+            "cliche": 15,
+            "embedding": 15,
+            "overlap": 1,
             "density": 0.8417791382290684
           }
         ]
@@ -296,42 +346,56 @@
             "band": "cliche",
             "text": "Improve public transportation",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
             "density": 0.9098567385730055
           },
           {
             "band": "cliche",
             "text": "Introduce congestion pricing",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
             "density": 0.9098567385730055
           },
           {
             "band": "cliche",
             "text": "Build more bike lanes",
-            "cliche": 89,
+            "cliche": 90,
+            "embedding": 90,
+            "overlap": 9,
             "density": 0.9098567385730055
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Stagger school and office start times by district",
-            "cliche": 92,
+            "cliche": 93,
+            "embedding": 93,
+            "overlap": 10,
             "density": 0.9098567385730055
           },
           {
             "band": "mid",
             "text": "Pay employers per employee who switches to a four-day office week",
             "cliche": 0,
+            "embedding": 0,
+            "overlap": 8,
             "density": 0.9098567385730055
           },
           {
             "band": "far",
             "text": "Auction the right to deliver parcels in each district to one carrier per day",
             "cliche": 0,
+            "embedding": 0,
+            "overlap": 4,
             "density": 0.9098567385730055
           },
           {
             "band": "far",
             "text": "Turn traffic lights into a reward system: drivers who skip peak hours earn parking credits",
-            "cliche": 48,
+            "cliche": 54,
+            "embedding": 54,
+            "overlap": 4,
             "density": 0.9098567385730055
           }
         ]
@@ -343,43 +407,57 @@
           {
             "band": "cliche",
             "text": "Sponsor a famous marathon runner",
-            "cliche": 77,
+            "cliche": 80,
+            "embedding": 80,
+            "overlap": 3,
             "density": 0.8689931897272473
           },
           {
             "band": "cliche",
             "text": "Run an Instagram influencer campaign",
-            "cliche": 79,
+            "cliche": 82,
+            "embedding": 82,
+            "overlap": 4,
             "density": 0.8689931897272473
           },
           {
             "band": "cliche",
             "text": "Offer a discount for the first 100 buyers",
-            "cliche": 42,
+            "cliche": 49,
+            "embedding": 49,
+            "overlap": 1,
             "density": 0.8689931897272473
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Give the shoe to night-shift nurses and publish their step counts",
-            "cliche": 73,
+            "cliche": 76,
+            "embedding": 76,
+            "overlap": 7,
             "density": 0.8689931897272473
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Let runners trade in worn shoes for credit and show the wear map",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 8,
             "density": 0.8689931897272473
           },
           {
-            "band": "far",
+            "band": "mid",
             "text": "Release the shoe only to people who finish a route drawn as the brand logo on a city map",
-            "cliche": 90,
+            "cliche": 92,
+            "embedding": 92,
+            "overlap": 9,
             "density": 0.8689931897272473
           },
           {
             "band": "far",
             "text": "Sponsor the slowest finisher of every local race",
-            "cliche": 69,
+            "cliche": 73,
+            "embedding": 73,
+            "overlap": 3,
             "density": 0.8689931897272473
           }
         ]
@@ -392,42 +470,56 @@
             "band": "cliche",
             "text": "Hold regular virtual team-building activities",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 9,
             "density": 0.8698005290357347
           },
           {
             "band": "cliche",
             "text": "Recognize achievements publicly",
-            "cliche": 83,
+            "cliche": 85,
+            "embedding": 85,
+            "overlap": 10,
             "density": 0.8698005290357347
           },
           {
             "band": "cliche",
             "text": "Run anonymous engagement surveys",
-            "cliche": 95,
+            "cliche": 96,
+            "embedding": 96,
+            "overlap": 10,
             "density": 0.8698005290357347
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Rotate who sets the agenda of the weekly meeting, including juniors",
-            "cliche": 88,
+            "cliche": 90,
+            "embedding": 90,
+            "overlap": 9,
             "density": 0.8698005290357347
           },
           {
             "band": "mid",
             "text": "Give every employee a yearly budget to visit one colleague in person",
-            "cliche": 86,
+            "cliche": 88,
+            "embedding": 88,
+            "overlap": 7,
             "density": 0.8698005290357347
           },
           {
-            "band": "far",
+            "band": "mid",
             "text": "Pair each person with a colleague in another time zone to swap one task a week",
-            "cliche": 86,
+            "cliche": 88,
+            "embedding": 88,
+            "overlap": 8,
             "density": 0.8698005290357347
           },
           {
             "band": "far",
             "text": "Publish an internal podcast where teams interview the customers they never meet",
-            "cliche": 36,
+            "cliche": 44,
+            "embedding": 44,
+            "overlap": 0,
             "density": 0.8698005290357347
           }
         ]
@@ -440,42 +532,56 @@
             "band": "cliche",
             "text": "Create interactive exhibits",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 5,
             "density": 0.8914112204069252
           },
           {
             "band": "cliche",
             "text": "Host social media challenges",
-            "cliche": 56,
+            "cliche": 62,
+            "embedding": 62,
+            "overlap": 5,
             "density": 0.8914112204069252
           },
           {
             "band": "cliche",
             "text": "Offer free entry for students",
-            "cliche": 86,
+            "cliche": 88,
+            "embedding": 88,
+            "overlap": 10,
             "density": 0.8914112204069252
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Let teens curate one room each term and write the labels",
-            "cliche": 80,
+            "cliche": 83,
+            "embedding": 83,
+            "overlap": 8,
             "density": 0.8914112204069252
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Open late on Fridays with a DJ playing music from the exhibit's era",
-            "cliche": 3,
+            "cliche": 9,
+            "embedding": 9,
+            "overlap": 8,
             "density": 0.8914112204069252
           },
           {
             "band": "far",
             "text": "Hide unpublished objects in the storage vault and let teens bid for one to be shown",
-            "cliche": 8,
+            "cliche": 11,
+            "embedding": 11,
+            "overlap": 4,
             "density": 0.8914112204069252
           },
           {
             "band": "far",
             "text": "Hire teenagers as paid fact-checkers who mark mistakes on old labels",
-            "cliche": 35,
+            "cliche": 43,
+            "embedding": 43,
+            "overlap": 5,
             "density": 0.8914112204069252
           }
         ]
@@ -488,42 +594,56 @@
             "band": "cliche",
             "text": "Sell branded merchandise",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
             "density": 0.8883391500864029
           },
           {
             "band": "cliche",
             "text": "Organize a charity run",
-            "cliche": 19,
+            "cliche": 29,
+            "embedding": 29,
+            "overlap": 5,
             "density": 0.8883391500864029
           },
           {
             "band": "cliche",
             "text": "Apply for grants",
             "cliche": 93,
+            "embedding": 93,
+            "overlap": 10,
             "density": 0.8883391500864029
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "License the non-profit's training materials to companies",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 9,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "Run a paid consulting arm staffed by former beneficiaries",
+            "cliche": 76,
+            "embedding": 76,
+            "overlap": 7,
             "density": 0.8883391500864029
           },
           {
             "band": "mid",
-            "text": "Run a paid consulting arm staffed by former beneficiaries",
-            "cliche": 72,
-            "density": 0.8883391500864029
-          },
-          {
-            "band": "far",
             "text": "Rent out the volunteers' skills as a weekend agency and keep the margin",
-            "cliche": 59,
+            "cliche": 64,
+            "embedding": 64,
+            "overlap": 7,
             "density": 0.8883391500864029
           },
           {
             "band": "far",
             "text": "Auction naming rights to the problems it solves, like a pothole or a broken bench",
-            "cliche": 24,
+            "cliche": 34,
+            "embedding": 34,
+            "overlap": 7,
             "density": 0.8883391500864029
           }
         ]
@@ -536,59 +656,75 @@
             "band": "cliche",
             "text": "AI-powered summarization of notes",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 9,
             "density": 0.8754108991263053
           },
           {
             "band": "cliche",
             "text": "Real-time collaboration",
-            "cliche": 89,
+            "cliche": 90,
+            "embedding": 90,
+            "overlap": 9,
             "density": 0.8754108991263053
           },
           {
             "band": "cliche",
             "text": "Tags and smart folders",
             "cliche": 97,
+            "embedding": 97,
+            "overlap": 9,
             "density": 0.8754108991263053
           },
           {
             "band": "mid",
             "text": "Notes that expire unless you revisit them",
-            "cliche": 60,
+            "cliche": 65,
+            "embedding": 65,
+            "overlap": 2,
             "density": 0.8754108991263053
           },
           {
             "band": "mid",
             "text": "Show which old notes contradict the one you are writing",
-            "cliche": 72,
+            "cliche": 75,
+            "embedding": 75,
+            "overlap": 5,
             "density": 0.8754108991263053
           },
           {
-            "band": "far",
+            "band": "cliche",
             "text": "Let a note be sent to your future self only when you return to the same physical place",
-            "cliche": 62,
+            "cliche": 67,
+            "embedding": 67,
+            "overlap": 8,
             "density": 0.8754108991263053
           },
           {
             "band": "far",
             "text": "A trade mode where you swap one anonymous note a day with a stranger in your field",
-            "cliche": 3,
+            "cliche": 7,
+            "embedding": 7,
+            "overlap": 1,
             "density": 0.8754108991263053
           }
         ]
       }
     ]
   },
-  "best": {
+  "current": {
     "params": {
-      "spreadK": 0.6,
-      "nearestWeight": 0.6
+      "spreadK": 0.8,
+      "nearestWeight": 0.7,
+      "judgeWeight": 0.6
     },
-    "bandAccuracy": 0.6,
-    "pairOrder": 0.74375,
+    "labels": "checked",
+    "bandAccuracy": 0.6956521739130435,
+    "pairOrder": 0.9041666666666667,
     "means": {
-      "cliche": 76,
-      "mid": 62,
-      "far": 39
+      "cliche": 77,
+      "mid": 56,
+      "far": 31
     },
     "detail": [
       {
@@ -598,43 +734,57 @@
           {
             "band": "cliche",
             "text": "Build a SaaS product for small businesses",
-            "cliche": 100,
+            "cliche": 88,
+            "embedding": 100,
+            "overlap": 8,
             "density": 0.8841711571196251
           },
           {
             "band": "cliche",
             "text": "Freelance web development on Upwork",
-            "cliche": 60,
+            "cliche": 58,
+            "embedding": 69,
+            "overlap": 5,
             "density": 0.8841711571196251
           },
           {
             "band": "cliche",
             "text": "Create and sell an online programming course",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
             "density": 0.8841711571196251
           },
           {
             "band": "mid",
             "text": "Offer fixed-price accessibility audits for local government websites",
-            "cliche": 40,
+            "cliche": 53,
+            "embedding": 57,
+            "overlap": 5,
             "density": 0.8841711571196251
           },
           {
             "band": "mid",
             "text": "Sell pre-configured home-lab kits for privacy-minded families",
-            "cliche": 52,
+            "cliche": 37,
+            "embedding": 62,
+            "overlap": 2,
             "density": 0.8841711571196251
           },
           {
-            "band": "far",
+            "band": "mid",
             "text": "Rent yourself out as a code archaeologist who documents abandoned legacy systems for insurance audits",
-            "cliche": 55,
+            "cliche": 52,
+            "embedding": 69,
+            "overlap": 4,
             "density": 0.8841711571196251
           },
           {
             "band": "far",
             "text": "Breed rare aquarium shrimp and sell them through a self-built auction bot",
-            "cliche": 31,
+            "cliche": 25,
+            "embedding": 47,
+            "overlap": 1,
             "density": 0.8841711571196251
           }
         ]
@@ -646,43 +796,57 @@
           {
             "band": "cliche",
             "text": "Start a loyalty card program",
-            "cliche": 98,
+            "cliche": 100,
+            "embedding": 99,
+            "overlap": 10,
             "density": 0.8932064966360758
           },
           {
             "band": "cliche",
             "text": "Post attractive photos on Instagram",
-            "cliche": 59,
+            "cliche": 76,
+            "embedding": 70,
+            "overlap": 8,
             "density": 0.8932064966360758
           },
           {
             "band": "cliche",
             "text": "Offer free Wi-Fi and comfortable seating",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
             "density": 0.8932064966360758
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Host a monthly cupping night where regulars vote on next month's bean",
-            "cliche": 58,
+            "cliche": 63,
+            "embedding": 68,
+            "overlap": 6,
             "density": 0.8932064966360758
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Partner with the nearest coworking space for a shared membership",
-            "cliche": 87,
+            "cliche": 73,
+            "embedding": 93,
+            "overlap": 6,
             "density": 0.8932064966360758
           },
           {
             "band": "far",
             "text": "Become the neighbourhood's lost-and-found and parcel drop, so people come in for errands",
-            "cliche": 52,
+            "cliche": 35,
+            "embedding": 58,
+            "overlap": 2,
             "density": 0.8932064966360758
           },
           {
             "band": "far",
             "text": "Let customers pay by fixing one item from the shop's broken-things shelf",
-            "cliche": 9,
+            "cliche": 5,
+            "embedding": 13,
+            "overlap": 0,
             "density": 0.8932064966360758
           }
         ]
@@ -694,43 +858,49 @@
           {
             "band": "cliche",
             "text": "Throw a superhero themed party",
-            "cliche": 71,
+            "cliche": 37,
+            "embedding": 78,
+            "overlap": 1,
             "density": 0.8707030785417171
           },
           {
             "band": "cliche",
             "text": "Have a pizza and movie night sleepover",
-            "cliche": 52,
+            "cliche": 38,
+            "embedding": 64,
+            "overlap": 2,
             "density": 0.8707030785417171
           },
           {
             "band": "cliche",
-            "text": "Book a trampoline park",
-            "cliche": 6,
-            "density": 0.8707030785417171
-          },
-          {
-            "band": "mid",
             "text": "Run a backyard escape room built around the child's favourite book",
-            "cliche": 96,
+            "cliche": 93,
+            "embedding": 98,
+            "overlap": 9,
             "density": 0.8707030785417171
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Host a mini bake-off judged by grandparents over video call",
-            "cliche": 43,
+            "cliche": 71,
+            "embedding": 58,
+            "overlap": 8,
             "density": 0.8707030785417171
           },
           {
             "band": "far",
             "text": "Turn the party into a one-day newspaper: kids interview neighbours and print an edition",
-            "cliche": 89,
+            "cliche": 61,
+            "embedding": 92,
+            "overlap": 4,
             "density": 0.8707030785417171
           },
           {
-            "band": "far",
+            "band": "cliche",
             "text": "Guests arrive as clients of a fake detective agency and must solve who ate the cake",
-            "cliche": 79,
+            "cliche": 89,
+            "embedding": 88,
+            "overlap": 9,
             "density": 0.8707030785417171
           }
         ]
@@ -742,43 +912,57 @@
           {
             "band": "cliche",
             "text": "FocusFlow",
-            "cliche": 94,
+            "cliche": 99,
+            "embedding": 97,
+            "overlap": 10,
             "density": 0.8417791382290684
           },
           {
             "band": "cliche",
             "text": "TaskMaster",
-            "cliche": 71,
+            "cliche": 49,
+            "embedding": 77,
+            "overlap": 3,
             "density": 0.8417791382290684
           },
           {
             "band": "cliche",
             "text": "DoneDeal",
-            "cliche": 30,
+            "cliche": 25,
+            "embedding": 47,
+            "overlap": 1,
             "density": 0.8417791382290684
           },
           {
             "band": "mid",
             "text": "Tomorrow Me",
-            "cliche": 39,
+            "cliche": 34,
+            "embedding": 55,
+            "overlap": 2,
             "density": 0.8417791382290684
           },
           {
             "band": "mid",
             "text": "Small Hours",
-            "cliche": 30,
+            "cliche": 25,
+            "embedding": 47,
+            "overlap": 1,
             "density": 0.8417791382290684
           },
           {
             "band": "far",
             "text": "Mudroom",
-            "cliche": 9,
+            "cliche": 24,
+            "embedding": 31,
+            "overlap": 2,
             "density": 0.8417791382290684
           },
           {
             "band": "far",
             "text": "Third Coffee",
-            "cliche": 0,
+            "cliche": 12,
+            "embedding": 15,
+            "overlap": 1,
             "density": 0.8417791382290684
           }
         ]
@@ -791,42 +975,56 @@
             "band": "cliche",
             "text": "Improve public transportation",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
             "density": 0.9098567385730055
           },
           {
             "band": "cliche",
             "text": "Introduce congestion pricing",
             "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
             "density": 0.9098567385730055
           },
           {
             "band": "cliche",
             "text": "Build more bike lanes",
-            "cliche": 83,
+            "cliche": 90,
+            "embedding": 90,
+            "overlap": 9,
             "density": 0.9098567385730055
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Stagger school and office start times by district",
-            "cliche": 88,
+            "cliche": 97,
+            "embedding": 93,
+            "overlap": 10,
             "density": 0.9098567385730055
           },
           {
             "band": "mid",
             "text": "Pay employers per employee who switches to a four-day office week",
-            "cliche": 0,
+            "cliche": 48,
+            "embedding": 0,
+            "overlap": 8,
             "density": 0.9098567385730055
           },
           {
             "band": "far",
             "text": "Auction the right to deliver parcels in each district to one carrier per day",
-            "cliche": 0,
+            "cliche": 24,
+            "embedding": 0,
+            "overlap": 4,
             "density": 0.9098567385730055
           },
           {
             "band": "far",
             "text": "Turn traffic lights into a reward system: drivers who skip peak hours earn parking credits",
-            "cliche": 43,
+            "cliche": 46,
+            "embedding": 54,
+            "overlap": 4,
             "density": 0.9098567385730055
           }
         ]
@@ -838,43 +1036,57 @@
           {
             "band": "cliche",
             "text": "Sponsor a famous marathon runner",
-            "cliche": 71,
+            "cliche": 50,
+            "embedding": 80,
+            "overlap": 3,
             "density": 0.8689931897272473
           },
           {
             "band": "cliche",
             "text": "Run an Instagram influencer campaign",
-            "cliche": 74,
+            "cliche": 57,
+            "embedding": 82,
+            "overlap": 4,
             "density": 0.8689931897272473
           },
           {
             "band": "cliche",
             "text": "Offer a discount for the first 100 buyers",
-            "cliche": 28,
+            "cliche": 26,
+            "embedding": 49,
+            "overlap": 1,
             "density": 0.8689931897272473
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Give the shoe to night-shift nurses and publish their step counts",
-            "cliche": 68,
+            "cliche": 72,
+            "embedding": 76,
+            "overlap": 7,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Let runners trade in worn shoes for credit and show the wear map",
+            "cliche": 88,
+            "embedding": 100,
+            "overlap": 8,
             "density": 0.8689931897272473
           },
           {
             "band": "mid",
-            "text": "Let runners trade in worn shoes for credit and show the wear map",
-            "cliche": 100,
-            "density": 0.8689931897272473
-          },
-          {
-            "band": "far",
             "text": "Release the shoe only to people who finish a route drawn as the brand logo on a city map",
-            "cliche": 85,
+            "cliche": 91,
+            "embedding": 92,
+            "overlap": 9,
             "density": 0.8689931897272473
           },
           {
             "band": "far",
             "text": "Sponsor the slowest finisher of every local race",
-            "cliche": 59,
+            "cliche": 47,
+            "embedding": 73,
+            "overlap": 3,
             "density": 0.8689931897272473
           }
         ]
@@ -886,43 +1098,57 @@
           {
             "band": "cliche",
             "text": "Hold regular virtual team-building activities",
-            "cliche": 100,
+            "cliche": 94,
+            "embedding": 100,
+            "overlap": 9,
             "density": 0.8698005290357347
           },
           {
             "band": "cliche",
             "text": "Recognize achievements publicly",
-            "cliche": 74,
+            "cliche": 94,
+            "embedding": 85,
+            "overlap": 10,
             "density": 0.8698005290357347
           },
           {
             "band": "cliche",
             "text": "Run anonymous engagement surveys",
-            "cliche": 92,
+            "cliche": 98,
+            "embedding": 96,
+            "overlap": 10,
             "density": 0.8698005290357347
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Rotate who sets the agenda of the weekly meeting, including juniors",
-            "cliche": 82,
+            "cliche": 90,
+            "embedding": 90,
+            "overlap": 9,
             "density": 0.8698005290357347
           },
           {
             "band": "mid",
             "text": "Give every employee a yearly budget to visit one colleague in person",
-            "cliche": 86,
+            "cliche": 77,
+            "embedding": 88,
+            "overlap": 7,
             "density": 0.8698005290357347
           },
           {
-            "band": "far",
+            "band": "mid",
             "text": "Pair each person with a colleague in another time zone to swap one task a week",
-            "cliche": 84,
+            "cliche": 83,
+            "embedding": 88,
+            "overlap": 8,
             "density": 0.8698005290357347
           },
           {
             "band": "far",
             "text": "Publish an internal podcast where teams interview the customers they never meet",
-            "cliche": 29,
+            "cliche": 18,
+            "embedding": 44,
+            "overlap": 0,
             "density": 0.8698005290357347
           }
         ]
@@ -934,43 +1160,57 @@
           {
             "band": "cliche",
             "text": "Create interactive exhibits",
-            "cliche": 100,
+            "cliche": 70,
+            "embedding": 100,
+            "overlap": 5,
             "density": 0.8914112204069252
           },
           {
             "band": "cliche",
             "text": "Host social media challenges",
-            "cliche": 50,
+            "cliche": 55,
+            "embedding": 62,
+            "overlap": 5,
             "density": 0.8914112204069252
           },
           {
             "band": "cliche",
             "text": "Offer free entry for students",
-            "cliche": 79,
+            "cliche": 95,
+            "embedding": 88,
+            "overlap": 10,
             "density": 0.8914112204069252
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Let teens curate one room each term and write the labels",
-            "cliche": 78,
+            "cliche": 81,
+            "embedding": 83,
+            "overlap": 8,
             "density": 0.8914112204069252
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "Open late on Fridays with a DJ playing music from the exhibit's era",
-            "cliche": 0,
+            "cliche": 52,
+            "embedding": 9,
+            "overlap": 8,
             "density": 0.8914112204069252
           },
           {
             "band": "far",
             "text": "Hide unpublished objects in the storage vault and let teens bid for one to be shown",
-            "cliche": 6,
+            "cliche": 28,
+            "embedding": 11,
+            "overlap": 4,
             "density": 0.8914112204069252
           },
           {
             "band": "far",
             "text": "Hire teenagers as paid fact-checkers who mark mistakes on old labels",
-            "cliche": 23,
+            "cliche": 47,
+            "embedding": 43,
+            "overlap": 5,
             "density": 0.8914112204069252
           }
         ]
@@ -982,43 +1222,57 @@
           {
             "band": "cliche",
             "text": "Sell branded merchandise",
-            "cliche": 99,
+            "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
             "density": 0.8883391500864029
           },
           {
             "band": "cliche",
             "text": "Organize a charity run",
-            "cliche": 13,
+            "cliche": 42,
+            "embedding": 29,
+            "overlap": 5,
             "density": 0.8883391500864029
           },
           {
             "band": "cliche",
             "text": "Apply for grants",
-            "cliche": 88,
+            "cliche": 97,
+            "embedding": 93,
+            "overlap": 10,
             "density": 0.8883391500864029
           },
           {
-            "band": "mid",
+            "band": "cliche",
             "text": "License the non-profit's training materials to companies",
-            "cliche": 100,
+            "cliche": 94,
+            "embedding": 100,
+            "overlap": 9,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "Run a paid consulting arm staffed by former beneficiaries",
+            "cliche": 72,
+            "embedding": 76,
+            "overlap": 7,
             "density": 0.8883391500864029
           },
           {
             "band": "mid",
-            "text": "Run a paid consulting arm staffed by former beneficiaries",
-            "cliche": 66,
-            "density": 0.8883391500864029
-          },
-          {
-            "band": "far",
             "text": "Rent out the volunteers' skills as a weekend agency and keep the margin",
-            "cliche": 54,
+            "cliche": 68,
+            "embedding": 64,
+            "overlap": 7,
             "density": 0.8883391500864029
           },
           {
             "band": "far",
             "text": "Auction naming rights to the problems it solves, like a pothole or a broken bench",
-            "cliche": 22,
+            "cliche": 56,
+            "embedding": 34,
+            "overlap": 7,
             "density": 0.8883391500864029
           }
         ]
@@ -1030,43 +1284,1362 @@
           {
             "band": "cliche",
             "text": "AI-powered summarization of notes",
-            "cliche": 100,
+            "cliche": 94,
+            "embedding": 100,
+            "overlap": 9,
             "density": 0.8754108991263053
           },
           {
             "band": "cliche",
             "text": "Real-time collaboration",
-            "cliche": 83,
+            "cliche": 90,
+            "embedding": 90,
+            "overlap": 9,
             "density": 0.8754108991263053
           },
           {
             "band": "cliche",
             "text": "Tags and smart folders",
-            "cliche": 95,
+            "cliche": 93,
+            "embedding": 97,
+            "overlap": 9,
             "density": 0.8754108991263053
           },
           {
             "band": "mid",
             "text": "Notes that expire unless you revisit them",
-            "cliche": 54,
+            "cliche": 38,
+            "embedding": 65,
+            "overlap": 2,
             "density": 0.8754108991263053
           },
           {
             "band": "mid",
             "text": "Show which old notes contradict the one you are writing",
-            "cliche": 65,
+            "cliche": 60,
+            "embedding": 75,
+            "overlap": 5,
             "density": 0.8754108991263053
           },
           {
-            "band": "far",
+            "band": "cliche",
             "text": "Let a note be sent to your future self only when you return to the same physical place",
-            "cliche": 52,
+            "cliche": 75,
+            "embedding": 67,
+            "overlap": 8,
             "density": 0.8754108991263053
           },
           {
             "band": "far",
             "text": "A trade mode where you swap one anonymous note a day with a stranger in your field",
+            "cliche": 9,
+            "embedding": 7,
+            "overlap": 1,
+            "density": 0.8754108991263053
+          }
+        ]
+      }
+    ]
+  },
+  "judgeOnly": {
+    "params": {
+      "spreadK": 0.8,
+      "nearestWeight": 0.7,
+      "judgeWeight": 1
+    },
+    "labels": "checked",
+    "bandAccuracy": 0.6231884057971014,
+    "pairOrder": 0.8458333333333333,
+    "means": {
+      "cliche": 74,
+      "mid": 50,
+      "far": 27
+    },
+    "detail": [
+      {
+        "prompt": "Suggest a side business for a software developer",
+        "density": 0.8841711571196251,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Build a SaaS product for small businesses",
+            "cliche": 80,
+            "embedding": 100,
+            "overlap": 8,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "cliche",
+            "text": "Freelance web development on Upwork",
+            "cliche": 50,
+            "embedding": 69,
+            "overlap": 5,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "cliche",
+            "text": "Create and sell an online programming course",
+            "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "mid",
+            "text": "Offer fixed-price accessibility audits for local government websites",
+            "cliche": 50,
+            "embedding": 57,
+            "overlap": 5,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "mid",
+            "text": "Sell pre-configured home-lab kits for privacy-minded families",
+            "cliche": 20,
+            "embedding": 62,
+            "overlap": 2,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "mid",
+            "text": "Rent yourself out as a code archaeologist who documents abandoned legacy systems for insurance audits",
+            "cliche": 40,
+            "embedding": 69,
+            "overlap": 4,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "far",
+            "text": "Breed rare aquarium shrimp and sell them through a self-built auction bot",
+            "cliche": 10,
+            "embedding": 47,
+            "overlap": 1,
+            "density": 0.8841711571196251
+          }
+        ]
+      },
+      {
+        "prompt": "How can a small coffee shop attract more customers?",
+        "density": 0.8932064966360758,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Start a loyalty card program",
+            "cliche": 100,
+            "embedding": 99,
+            "overlap": 10,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "cliche",
+            "text": "Post attractive photos on Instagram",
+            "cliche": 80,
+            "embedding": 70,
+            "overlap": 8,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "cliche",
+            "text": "Offer free Wi-Fi and comfortable seating",
+            "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "cliche",
+            "text": "Host a monthly cupping night where regulars vote on next month's bean",
+            "cliche": 60,
+            "embedding": 68,
+            "overlap": 6,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "cliche",
+            "text": "Partner with the nearest coworking space for a shared membership",
+            "cliche": 60,
+            "embedding": 93,
+            "overlap": 6,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "far",
+            "text": "Become the neighbourhood's lost-and-found and parcel drop, so people come in for errands",
+            "cliche": 20,
+            "embedding": 58,
+            "overlap": 2,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "far",
+            "text": "Let customers pay by fixing one item from the shop's broken-things shelf",
             "cliche": 0,
+            "embedding": 13,
+            "overlap": 0,
+            "density": 0.8932064966360758
+          }
+        ]
+      },
+      {
+        "prompt": "Give me a fresh idea for a birthday party for a 10-year-old",
+        "density": 0.8707030785417171,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Throw a superhero themed party",
+            "cliche": 10,
+            "embedding": 78,
+            "overlap": 1,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "cliche",
+            "text": "Have a pizza and movie night sleepover",
+            "cliche": 20,
+            "embedding": 64,
+            "overlap": 2,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "cliche",
+            "text": "Run a backyard escape room built around the child's favourite book",
+            "cliche": 90,
+            "embedding": 98,
+            "overlap": 9,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "cliche",
+            "text": "Host a mini bake-off judged by grandparents over video call",
+            "cliche": 80,
+            "embedding": 58,
+            "overlap": 8,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "far",
+            "text": "Turn the party into a one-day newspaper: kids interview neighbours and print an edition",
+            "cliche": 40,
+            "embedding": 92,
+            "overlap": 4,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "cliche",
+            "text": "Guests arrive as clients of a fake detective agency and must solve who ate the cake",
+            "cliche": 90,
+            "embedding": 88,
+            "overlap": 9,
+            "density": 0.8707030785417171
+          }
+        ]
+      },
+      {
+        "prompt": "Name ideas for a new productivity app",
+        "density": 0.8417791382290684,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "FocusFlow",
+            "cliche": 100,
+            "embedding": 97,
+            "overlap": 10,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "cliche",
+            "text": "TaskMaster",
+            "cliche": 30,
+            "embedding": 77,
+            "overlap": 3,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "cliche",
+            "text": "DoneDeal",
+            "cliche": 10,
+            "embedding": 47,
+            "overlap": 1,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "mid",
+            "text": "Tomorrow Me",
+            "cliche": 20,
+            "embedding": 55,
+            "overlap": 2,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "mid",
+            "text": "Small Hours",
+            "cliche": 10,
+            "embedding": 47,
+            "overlap": 1,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "far",
+            "text": "Mudroom",
+            "cliche": 20,
+            "embedding": 31,
+            "overlap": 2,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "far",
+            "text": "Third Coffee",
+            "cliche": 10,
+            "embedding": 15,
+            "overlap": 1,
+            "density": 0.8417791382290684
+          }
+        ]
+      },
+      {
+        "prompt": "How can a city reduce traffic congestion?",
+        "density": 0.9098567385730055,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Improve public transportation",
+            "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "cliche",
+            "text": "Introduce congestion pricing",
+            "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "cliche",
+            "text": "Build more bike lanes",
+            "cliche": 90,
+            "embedding": 90,
+            "overlap": 9,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "cliche",
+            "text": "Stagger school and office start times by district",
+            "cliche": 100,
+            "embedding": 93,
+            "overlap": 10,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "mid",
+            "text": "Pay employers per employee who switches to a four-day office week",
+            "cliche": 80,
+            "embedding": 0,
+            "overlap": 8,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "far",
+            "text": "Auction the right to deliver parcels in each district to one carrier per day",
+            "cliche": 40,
+            "embedding": 0,
+            "overlap": 4,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "far",
+            "text": "Turn traffic lights into a reward system: drivers who skip peak hours earn parking credits",
+            "cliche": 40,
+            "embedding": 54,
+            "overlap": 4,
+            "density": 0.9098567385730055
+          }
+        ]
+      },
+      {
+        "prompt": "Suggest a marketing campaign for a new running shoe",
+        "density": 0.8689931897272473,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Sponsor a famous marathon runner",
+            "cliche": 30,
+            "embedding": 80,
+            "overlap": 3,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Run an Instagram influencer campaign",
+            "cliche": 40,
+            "embedding": 82,
+            "overlap": 4,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Offer a discount for the first 100 buyers",
+            "cliche": 10,
+            "embedding": 49,
+            "overlap": 1,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Give the shoe to night-shift nurses and publish their step counts",
+            "cliche": 70,
+            "embedding": 76,
+            "overlap": 7,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Let runners trade in worn shoes for credit and show the wear map",
+            "cliche": 80,
+            "embedding": 100,
+            "overlap": 8,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "mid",
+            "text": "Release the shoe only to people who finish a route drawn as the brand logo on a city map",
+            "cliche": 90,
+            "embedding": 92,
+            "overlap": 9,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "far",
+            "text": "Sponsor the slowest finisher of every local race",
+            "cliche": 30,
+            "embedding": 73,
+            "overlap": 3,
+            "density": 0.8689931897272473
+          }
+        ]
+      },
+      {
+        "prompt": "Ideas to improve employee engagement in a remote team",
+        "density": 0.8698005290357347,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Hold regular virtual team-building activities",
+            "cliche": 90,
+            "embedding": 100,
+            "overlap": 9,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "cliche",
+            "text": "Recognize achievements publicly",
+            "cliche": 100,
+            "embedding": 85,
+            "overlap": 10,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "cliche",
+            "text": "Run anonymous engagement surveys",
+            "cliche": 100,
+            "embedding": 96,
+            "overlap": 10,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "cliche",
+            "text": "Rotate who sets the agenda of the weekly meeting, including juniors",
+            "cliche": 90,
+            "embedding": 90,
+            "overlap": 9,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "mid",
+            "text": "Give every employee a yearly budget to visit one colleague in person",
+            "cliche": 70,
+            "embedding": 88,
+            "overlap": 7,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "mid",
+            "text": "Pair each person with a colleague in another time zone to swap one task a week",
+            "cliche": 80,
+            "embedding": 88,
+            "overlap": 8,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "far",
+            "text": "Publish an internal podcast where teams interview the customers they never meet",
+            "cliche": 0,
+            "embedding": 44,
+            "overlap": 0,
+            "density": 0.8698005290357347
+          }
+        ]
+      },
+      {
+        "prompt": "What could a museum do to attract teenagers?",
+        "density": 0.8914112204069252,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Create interactive exhibits",
+            "cliche": 50,
+            "embedding": 100,
+            "overlap": 5,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "cliche",
+            "text": "Host social media challenges",
+            "cliche": 50,
+            "embedding": 62,
+            "overlap": 5,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "cliche",
+            "text": "Offer free entry for students",
+            "cliche": 100,
+            "embedding": 88,
+            "overlap": 10,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "cliche",
+            "text": "Let teens curate one room each term and write the labels",
+            "cliche": 80,
+            "embedding": 83,
+            "overlap": 8,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "cliche",
+            "text": "Open late on Fridays with a DJ playing music from the exhibit's era",
+            "cliche": 80,
+            "embedding": 9,
+            "overlap": 8,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "far",
+            "text": "Hide unpublished objects in the storage vault and let teens bid for one to be shown",
+            "cliche": 40,
+            "embedding": 11,
+            "overlap": 4,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "far",
+            "text": "Hire teenagers as paid fact-checkers who mark mistakes on old labels",
+            "cliche": 50,
+            "embedding": 43,
+            "overlap": 5,
+            "density": 0.8914112204069252
+          }
+        ]
+      },
+      {
+        "prompt": "How can a non-profit raise money without asking for donations?",
+        "density": 0.8883391500864029,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Sell branded merchandise",
+            "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "Organize a charity run",
+            "cliche": 50,
+            "embedding": 29,
+            "overlap": 5,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "Apply for grants",
+            "cliche": 100,
+            "embedding": 93,
+            "overlap": 10,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "License the non-profit's training materials to companies",
+            "cliche": 90,
+            "embedding": 100,
+            "overlap": 9,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "Run a paid consulting arm staffed by former beneficiaries",
+            "cliche": 70,
+            "embedding": 76,
+            "overlap": 7,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "mid",
+            "text": "Rent out the volunteers' skills as a weekend agency and keep the margin",
+            "cliche": 70,
+            "embedding": 64,
+            "overlap": 7,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "far",
+            "text": "Auction naming rights to the problems it solves, like a pothole or a broken bench",
+            "cliche": 70,
+            "embedding": 34,
+            "overlap": 7,
+            "density": 0.8883391500864029
+          }
+        ]
+      },
+      {
+        "prompt": "Suggest a new feature for a note-taking app",
+        "density": 0.8754108991263053,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "AI-powered summarization of notes",
+            "cliche": 90,
+            "embedding": 100,
+            "overlap": 9,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "cliche",
+            "text": "Real-time collaboration",
+            "cliche": 90,
+            "embedding": 90,
+            "overlap": 9,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "cliche",
+            "text": "Tags and smart folders",
+            "cliche": 90,
+            "embedding": 97,
+            "overlap": 9,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "mid",
+            "text": "Notes that expire unless you revisit them",
+            "cliche": 20,
+            "embedding": 65,
+            "overlap": 2,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "mid",
+            "text": "Show which old notes contradict the one you are writing",
+            "cliche": 50,
+            "embedding": 75,
+            "overlap": 5,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "cliche",
+            "text": "Let a note be sent to your future self only when you return to the same physical place",
+            "cliche": 80,
+            "embedding": 67,
+            "overlap": 8,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "far",
+            "text": "A trade mode where you swap one anonymous note a day with a stranger in your field",
+            "cliche": 10,
+            "embedding": 7,
+            "overlap": 1,
+            "density": 0.8754108991263053
+          }
+        ]
+      }
+    ]
+  },
+  "originalLabels": [
+    {
+      "params": {
+        "spreadK": 0.8,
+        "nearestWeight": 0.7,
+        "judgeWeight": 0
+      },
+      "labels": "original",
+      "bandAccuracy": 0.5285714285714286,
+      "pairOrder": 0.740625,
+      "means": {
+        "cliche": 82,
+        "mid": 70,
+        "far": 50
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.8,
+        "nearestWeight": 0.7,
+        "judgeWeight": 0.6
+      },
+      "labels": "original",
+      "bandAccuracy": 0.5142857142857142,
+      "pairOrder": 0.765625,
+      "means": {
+        "cliche": 75,
+        "mid": 66,
+        "far": 45
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.8,
+        "nearestWeight": 0.7,
+        "judgeWeight": 1
+      },
+      "labels": "original",
+      "bandAccuracy": 0.4714285714285714,
+      "pairOrder": 0.7,
+      "means": {
+        "cliche": 69,
+        "mid": 64,
+        "far": 42
+      }
+    }
+  ],
+  "best": {
+    "params": {
+      "spreadK": 0.8,
+      "nearestWeight": 0.7,
+      "judgeWeight": 0.6
+    },
+    "labels": "checked",
+    "bandAccuracy": 0.6956521739130435,
+    "pairOrder": 0.9041666666666667,
+    "means": {
+      "cliche": 77,
+      "mid": 56,
+      "far": 31
+    },
+    "detail": [
+      {
+        "prompt": "Suggest a side business for a software developer",
+        "density": 0.8841711571196251,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Build a SaaS product for small businesses",
+            "cliche": 88,
+            "embedding": 100,
+            "overlap": 8,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "cliche",
+            "text": "Freelance web development on Upwork",
+            "cliche": 58,
+            "embedding": 69,
+            "overlap": 5,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "cliche",
+            "text": "Create and sell an online programming course",
+            "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "mid",
+            "text": "Offer fixed-price accessibility audits for local government websites",
+            "cliche": 53,
+            "embedding": 57,
+            "overlap": 5,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "mid",
+            "text": "Sell pre-configured home-lab kits for privacy-minded families",
+            "cliche": 37,
+            "embedding": 62,
+            "overlap": 2,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "mid",
+            "text": "Rent yourself out as a code archaeologist who documents abandoned legacy systems for insurance audits",
+            "cliche": 52,
+            "embedding": 69,
+            "overlap": 4,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "far",
+            "text": "Breed rare aquarium shrimp and sell them through a self-built auction bot",
+            "cliche": 25,
+            "embedding": 47,
+            "overlap": 1,
+            "density": 0.8841711571196251
+          }
+        ]
+      },
+      {
+        "prompt": "How can a small coffee shop attract more customers?",
+        "density": 0.8932064966360758,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Start a loyalty card program",
+            "cliche": 100,
+            "embedding": 99,
+            "overlap": 10,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "cliche",
+            "text": "Post attractive photos on Instagram",
+            "cliche": 76,
+            "embedding": 70,
+            "overlap": 8,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "cliche",
+            "text": "Offer free Wi-Fi and comfortable seating",
+            "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "cliche",
+            "text": "Host a monthly cupping night where regulars vote on next month's bean",
+            "cliche": 63,
+            "embedding": 68,
+            "overlap": 6,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "cliche",
+            "text": "Partner with the nearest coworking space for a shared membership",
+            "cliche": 73,
+            "embedding": 93,
+            "overlap": 6,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "far",
+            "text": "Become the neighbourhood's lost-and-found and parcel drop, so people come in for errands",
+            "cliche": 35,
+            "embedding": 58,
+            "overlap": 2,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "far",
+            "text": "Let customers pay by fixing one item from the shop's broken-things shelf",
+            "cliche": 5,
+            "embedding": 13,
+            "overlap": 0,
+            "density": 0.8932064966360758
+          }
+        ]
+      },
+      {
+        "prompt": "Give me a fresh idea for a birthday party for a 10-year-old",
+        "density": 0.8707030785417171,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Throw a superhero themed party",
+            "cliche": 37,
+            "embedding": 78,
+            "overlap": 1,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "cliche",
+            "text": "Have a pizza and movie night sleepover",
+            "cliche": 38,
+            "embedding": 64,
+            "overlap": 2,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "cliche",
+            "text": "Run a backyard escape room built around the child's favourite book",
+            "cliche": 93,
+            "embedding": 98,
+            "overlap": 9,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "cliche",
+            "text": "Host a mini bake-off judged by grandparents over video call",
+            "cliche": 71,
+            "embedding": 58,
+            "overlap": 8,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "far",
+            "text": "Turn the party into a one-day newspaper: kids interview neighbours and print an edition",
+            "cliche": 61,
+            "embedding": 92,
+            "overlap": 4,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "cliche",
+            "text": "Guests arrive as clients of a fake detective agency and must solve who ate the cake",
+            "cliche": 89,
+            "embedding": 88,
+            "overlap": 9,
+            "density": 0.8707030785417171
+          }
+        ]
+      },
+      {
+        "prompt": "Name ideas for a new productivity app",
+        "density": 0.8417791382290684,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "FocusFlow",
+            "cliche": 99,
+            "embedding": 97,
+            "overlap": 10,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "cliche",
+            "text": "TaskMaster",
+            "cliche": 49,
+            "embedding": 77,
+            "overlap": 3,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "cliche",
+            "text": "DoneDeal",
+            "cliche": 25,
+            "embedding": 47,
+            "overlap": 1,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "mid",
+            "text": "Tomorrow Me",
+            "cliche": 34,
+            "embedding": 55,
+            "overlap": 2,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "mid",
+            "text": "Small Hours",
+            "cliche": 25,
+            "embedding": 47,
+            "overlap": 1,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "far",
+            "text": "Mudroom",
+            "cliche": 24,
+            "embedding": 31,
+            "overlap": 2,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "far",
+            "text": "Third Coffee",
+            "cliche": 12,
+            "embedding": 15,
+            "overlap": 1,
+            "density": 0.8417791382290684
+          }
+        ]
+      },
+      {
+        "prompt": "How can a city reduce traffic congestion?",
+        "density": 0.9098567385730055,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Improve public transportation",
+            "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "cliche",
+            "text": "Introduce congestion pricing",
+            "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "cliche",
+            "text": "Build more bike lanes",
+            "cliche": 90,
+            "embedding": 90,
+            "overlap": 9,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "cliche",
+            "text": "Stagger school and office start times by district",
+            "cliche": 97,
+            "embedding": 93,
+            "overlap": 10,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "mid",
+            "text": "Pay employers per employee who switches to a four-day office week",
+            "cliche": 48,
+            "embedding": 0,
+            "overlap": 8,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "far",
+            "text": "Auction the right to deliver parcels in each district to one carrier per day",
+            "cliche": 24,
+            "embedding": 0,
+            "overlap": 4,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "far",
+            "text": "Turn traffic lights into a reward system: drivers who skip peak hours earn parking credits",
+            "cliche": 46,
+            "embedding": 54,
+            "overlap": 4,
+            "density": 0.9098567385730055
+          }
+        ]
+      },
+      {
+        "prompt": "Suggest a marketing campaign for a new running shoe",
+        "density": 0.8689931897272473,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Sponsor a famous marathon runner",
+            "cliche": 50,
+            "embedding": 80,
+            "overlap": 3,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Run an Instagram influencer campaign",
+            "cliche": 57,
+            "embedding": 82,
+            "overlap": 4,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Offer a discount for the first 100 buyers",
+            "cliche": 26,
+            "embedding": 49,
+            "overlap": 1,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Give the shoe to night-shift nurses and publish their step counts",
+            "cliche": 72,
+            "embedding": 76,
+            "overlap": 7,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Let runners trade in worn shoes for credit and show the wear map",
+            "cliche": 88,
+            "embedding": 100,
+            "overlap": 8,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "mid",
+            "text": "Release the shoe only to people who finish a route drawn as the brand logo on a city map",
+            "cliche": 91,
+            "embedding": 92,
+            "overlap": 9,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "far",
+            "text": "Sponsor the slowest finisher of every local race",
+            "cliche": 47,
+            "embedding": 73,
+            "overlap": 3,
+            "density": 0.8689931897272473
+          }
+        ]
+      },
+      {
+        "prompt": "Ideas to improve employee engagement in a remote team",
+        "density": 0.8698005290357347,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Hold regular virtual team-building activities",
+            "cliche": 94,
+            "embedding": 100,
+            "overlap": 9,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "cliche",
+            "text": "Recognize achievements publicly",
+            "cliche": 94,
+            "embedding": 85,
+            "overlap": 10,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "cliche",
+            "text": "Run anonymous engagement surveys",
+            "cliche": 98,
+            "embedding": 96,
+            "overlap": 10,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "cliche",
+            "text": "Rotate who sets the agenda of the weekly meeting, including juniors",
+            "cliche": 90,
+            "embedding": 90,
+            "overlap": 9,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "mid",
+            "text": "Give every employee a yearly budget to visit one colleague in person",
+            "cliche": 77,
+            "embedding": 88,
+            "overlap": 7,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "mid",
+            "text": "Pair each person with a colleague in another time zone to swap one task a week",
+            "cliche": 83,
+            "embedding": 88,
+            "overlap": 8,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "far",
+            "text": "Publish an internal podcast where teams interview the customers they never meet",
+            "cliche": 18,
+            "embedding": 44,
+            "overlap": 0,
+            "density": 0.8698005290357347
+          }
+        ]
+      },
+      {
+        "prompt": "What could a museum do to attract teenagers?",
+        "density": 0.8914112204069252,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Create interactive exhibits",
+            "cliche": 70,
+            "embedding": 100,
+            "overlap": 5,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "cliche",
+            "text": "Host social media challenges",
+            "cliche": 55,
+            "embedding": 62,
+            "overlap": 5,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "cliche",
+            "text": "Offer free entry for students",
+            "cliche": 95,
+            "embedding": 88,
+            "overlap": 10,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "cliche",
+            "text": "Let teens curate one room each term and write the labels",
+            "cliche": 81,
+            "embedding": 83,
+            "overlap": 8,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "cliche",
+            "text": "Open late on Fridays with a DJ playing music from the exhibit's era",
+            "cliche": 52,
+            "embedding": 9,
+            "overlap": 8,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "far",
+            "text": "Hide unpublished objects in the storage vault and let teens bid for one to be shown",
+            "cliche": 28,
+            "embedding": 11,
+            "overlap": 4,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "far",
+            "text": "Hire teenagers as paid fact-checkers who mark mistakes on old labels",
+            "cliche": 47,
+            "embedding": 43,
+            "overlap": 5,
+            "density": 0.8914112204069252
+          }
+        ]
+      },
+      {
+        "prompt": "How can a non-profit raise money without asking for donations?",
+        "density": 0.8883391500864029,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Sell branded merchandise",
+            "cliche": 100,
+            "embedding": 100,
+            "overlap": 10,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "Organize a charity run",
+            "cliche": 42,
+            "embedding": 29,
+            "overlap": 5,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "Apply for grants",
+            "cliche": 97,
+            "embedding": 93,
+            "overlap": 10,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "License the non-profit's training materials to companies",
+            "cliche": 94,
+            "embedding": 100,
+            "overlap": 9,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "Run a paid consulting arm staffed by former beneficiaries",
+            "cliche": 72,
+            "embedding": 76,
+            "overlap": 7,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "mid",
+            "text": "Rent out the volunteers' skills as a weekend agency and keep the margin",
+            "cliche": 68,
+            "embedding": 64,
+            "overlap": 7,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "far",
+            "text": "Auction naming rights to the problems it solves, like a pothole or a broken bench",
+            "cliche": 56,
+            "embedding": 34,
+            "overlap": 7,
+            "density": 0.8883391500864029
+          }
+        ]
+      },
+      {
+        "prompt": "Suggest a new feature for a note-taking app",
+        "density": 0.8754108991263053,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "AI-powered summarization of notes",
+            "cliche": 94,
+            "embedding": 100,
+            "overlap": 9,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "cliche",
+            "text": "Real-time collaboration",
+            "cliche": 90,
+            "embedding": 90,
+            "overlap": 9,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "cliche",
+            "text": "Tags and smart folders",
+            "cliche": 93,
+            "embedding": 97,
+            "overlap": 9,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "mid",
+            "text": "Notes that expire unless you revisit them",
+            "cliche": 38,
+            "embedding": 65,
+            "overlap": 2,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "mid",
+            "text": "Show which old notes contradict the one you are writing",
+            "cliche": 60,
+            "embedding": 75,
+            "overlap": 5,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "cliche",
+            "text": "Let a note be sent to your future self only when you return to the same physical place",
+            "cliche": 75,
+            "embedding": 67,
+            "overlap": 8,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "far",
+            "text": "A trade mode where you swap one anonymous note a day with a stranger in your field",
+            "cliche": 9,
+            "embedding": 7,
+            "overlap": 1,
             "density": 0.8754108991263053
           }
         ]
@@ -1076,132 +2649,152 @@
   "top10": [
     {
       "params": {
-        "spreadK": 0.6,
-        "nearestWeight": 0.6
+        "spreadK": 0.8,
+        "nearestWeight": 0.7,
+        "judgeWeight": 0.6
       },
-      "bandAccuracy": 0.6,
-      "pairOrder": 0.74375,
-      "means": {
-        "cliche": 76,
-        "mid": 62,
-        "far": 39
-      }
-    },
-    {
-      "params": {
-        "spreadK": 0.6,
-        "nearestWeight": 0.7
-      },
-      "bandAccuracy": 0.6,
-      "pairOrder": 0.74375,
+      "labels": "checked",
+      "bandAccuracy": 0.6956521739130435,
+      "pairOrder": 0.9041666666666667,
       "means": {
         "cliche": 77,
-        "mid": 62,
-        "far": 39
+        "mid": 56,
+        "far": 31
       }
     },
     {
       "params": {
-        "spreadK": 0.5,
-        "nearestWeight": 0.9
+        "spreadK": 0.8,
+        "nearestWeight": 0.8,
+        "judgeWeight": 0.6
       },
-      "bandAccuracy": 0.6,
-      "pairOrder": 0.740625,
-      "means": {
-        "cliche": 76,
-        "mid": 58,
-        "far": 32
-      }
-    },
-    {
-      "params": {
-        "spreadK": 0.6,
-        "nearestWeight": 0.8
-      },
-      "bandAccuracy": 0.6,
-      "pairOrder": 0.7375,
+      "labels": "checked",
+      "bandAccuracy": 0.6956521739130435,
+      "pairOrder": 0.9041666666666667,
       "means": {
         "cliche": 78,
-        "mid": 63,
-        "far": 38
+        "mid": 56,
+        "far": 31
       }
     },
     {
       "params": {
-        "spreadK": 0.5,
-        "nearestWeight": 1
+        "spreadK": 0.9,
+        "nearestWeight": 0.5,
+        "judgeWeight": 0.5
       },
-      "bandAccuracy": 0.6,
-      "pairOrder": 0.725,
-      "means": {
-        "cliche": 77,
-        "mid": 59,
-        "far": 32
-      }
-    },
-    {
-      "params": {
-        "spreadK": 0.6,
-        "nearestWeight": 0.9
-      },
-      "bandAccuracy": 0.5857142857142857,
-      "pairOrder": 0.740625,
+      "labels": "checked",
+      "bandAccuracy": 0.6956521739130435,
+      "pairOrder": 0.9041666666666667,
       "means": {
         "cliche": 79,
-        "mid": 63,
-        "far": 38
-      }
-    },
-    {
-      "params": {
-        "spreadK": 0.6,
-        "nearestWeight": 0.5
-      },
-      "bandAccuracy": 0.5857142857142857,
-      "pairOrder": 0.728125,
-      "means": {
-        "cliche": 75,
-        "mid": 61,
-        "far": 40
-      }
-    },
-    {
-      "params": {
-        "spreadK": 0.5,
-        "nearestWeight": 0.8
-      },
-      "bandAccuracy": 0.5714285714285714,
-      "pairOrder": 0.74375,
-      "means": {
-        "cliche": 74,
         "mid": 58,
-        "far": 32
-      }
-    },
-    {
-      "params": {
-        "spreadK": 0.6,
-        "nearestWeight": 1
-      },
-      "bandAccuracy": 0.5714285714285714,
-      "pairOrder": 0.725,
-      "means": {
-        "cliche": 80,
-        "mid": 64,
         "far": 37
       }
     },
     {
       "params": {
-        "spreadK": 0.5,
-        "nearestWeight": 0.7
+        "spreadK": 0.9,
+        "nearestWeight": 0.6,
+        "judgeWeight": 0.5
       },
-      "bandAccuracy": 0.5571428571428572,
-      "pairOrder": 0.740625,
+      "labels": "checked",
+      "bandAccuracy": 0.6956521739130435,
+      "pairOrder": 0.9,
       "means": {
-        "cliche": 73,
+        "cliche": 79,
+        "mid": 59,
+        "far": 36
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.9,
+        "nearestWeight": 1,
+        "judgeWeight": 0.6
+      },
+      "labels": "checked",
+      "bandAccuracy": 0.6956521739130435,
+      "pairOrder": 0.9,
+      "means": {
+        "cliche": 79,
         "mid": 57,
         "far": 32
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.8,
+        "nearestWeight": 0.9,
+        "judgeWeight": 0.6
+      },
+      "labels": "checked",
+      "bandAccuracy": 0.6956521739130435,
+      "pairOrder": 0.8958333333333334,
+      "means": {
+        "cliche": 78,
+        "mid": 56,
+        "far": 30
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.9,
+        "nearestWeight": 0.8,
+        "judgeWeight": 0.6
+      },
+      "labels": "checked",
+      "bandAccuracy": 0.6956521739130435,
+      "pairOrder": 0.8958333333333334,
+      "means": {
+        "cliche": 78,
+        "mid": 57,
+        "far": 33
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.9,
+        "nearestWeight": 0.9,
+        "judgeWeight": 0.6
+      },
+      "labels": "checked",
+      "bandAccuracy": 0.6956521739130435,
+      "pairOrder": 0.8958333333333334,
+      "means": {
+        "cliche": 79,
+        "mid": 57,
+        "far": 32
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.9,
+        "nearestWeight": 1,
+        "judgeWeight": 0.5
+      },
+      "labels": "checked",
+      "bandAccuracy": 0.7101449275362319,
+      "pairOrder": 0.8791666666666667,
+      "means": {
+        "cliche": 80,
+        "mid": 59,
+        "far": 33
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.7,
+        "nearestWeight": 1,
+        "judgeWeight": 0.6
+      },
+      "labels": "checked",
+      "bandAccuracy": 0.6956521739130435,
+      "pairOrder": 0.8916666666666667,
+      "means": {
+        "cliche": 78,
+        "mid": 54,
+        "far": 27
       }
     }
   ]

@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { lexicalEmbedder } from "../src/embed.js";
-import { clicheScore, cosine } from "../src/math.js";
+import { clicheScore, combineScores, cosine } from "../src/math.js";
 
 describe("cosine", () => {
   test("identical and orthogonal", () => {
@@ -34,5 +34,20 @@ describe("clicheScore", () => {
 
   test("empty cloud throws", () => {
     expect(() => clicheScore([1, 0], [])).toThrow();
+  });
+});
+
+describe("combineScores", () => {
+  test("no judge = embedding only", () => {
+    expect(combineScores(80, undefined)).toBe(80);
+  });
+  test("judge pulls a same-mechanism idea up and a new mechanism down", () => {
+    expect(combineScores(30, 10, 0.5)).toBe(65);
+    expect(combineScores(85, 1, 0.5)).toBe(48);
+    expect(combineScores(85, 1, 0)).toBe(85);
+  });
+  test("clamps the overlap to 0-10", () => {
+    expect(combineScores(50, 42, 1)).toBe(100);
+    expect(combineScores(50, -3, 1)).toBe(0);
   });
 });

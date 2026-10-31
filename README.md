@@ -17,19 +17,20 @@ LLMs converge. Ask five models for a side business and you get five versions of 
 | Tool | What it does |
 |---|---|
 | `baseline` | Asks every configured model the plain question and returns the cliché cloud (cached per prompt). |
-| `diverge` | Generates ideas away from the cloud with a named technique: `scamper`, `triz`, `morphological`, `far-analogy`, `constraint-flip`. Every idea comes back scored. |
+| `diverge` | Generates ideas away from the cloud with a named technique (`scamper`, `triz`, `morphological`, `far-analogy`, `constraint-flip`) or `all` five in parallel. Keeps only ideas with Cliché Score below 50 and usefulness 6+; if too few survive, it regenerates with the rejection reasons. Returns the survivors and the closest misses. |
 | `remix` | Crosses idea A and idea B into hybrids that neither parent nor the cloud contains. |
-| `score` | Cliché Score 0-100 for any list of ideas (0 = far from the AI consensus), plus a usefulness critic 1-10. |
+| `score` | Cliché Score 0-100 for any list of ideas (0 = far from the AI consensus), with the embedding part and the mechanism judge verdict, plus a usefulness critic 1-10. |
 | `explain` | Why an idea scored the way it did and one concrete move to push it further. |
 
-## Cliché Score (v0)
+## Cliché Score (v0.2)
 
 1. Build the cloud: each model answers the plain prompt; answers are embedded and near-duplicates merged.
 2. Embed the idea and find its nearest cliché and its similarity to the cloud centroid ("the average AI answer").
-3. Normalise against the cloud's own density: an idea as close to the cloud as clichés are to each other scores about 100; each 0.25 of cosine further away takes it linearly towards 0. Blend: 70% nearest cliché, 30% centroid.
-4. A separate critic rates usefulness so that "far away" never means "nonsense".
+3. Normalise against the cloud's own density: an idea as close to the cloud as clichés are to each other scores about 100; the scale adapts to how tight the cloud is (spread = 0.8 x (1 - density)). Blend: 70% nearest cliché, 30% centroid.
+4. Embeddings see wording, not ideas. A mechanism judge (a fast LLM) rates 0-10 whether the idea does the same thing, for the same people, in the same way as some cliché. Final score: 40% embedding distance + 60% judge.
+5. A separate critic rates usefulness so that "far away" never means "nonsense".
 
-Distance from what the web already has (search-based novelty) and calibration against human ratings are on the roadmap. The formula lives in [`src/math.ts`](src/math.ts).
+Calibration on 10 prompts x 7 hand-labelled anchors ([`docs/calibration.md`](docs/calibration.md)): a cliché outranks a mid idea and a mid idea outranks a far one in 90% of pairs (84% with embeddings alone). Distance from what the web already has (search-based novelty) and human ratings are on the roadmap. The formula lives in [`src/math.ts`](src/math.ts).
 
 ## Quick start
 
@@ -52,6 +53,7 @@ CLI for quick checks:
 ```bash
 npx -p not-obvious-mcp not-obvious baseline "Suggest a side business for a software developer"
 npx -p not-obvious-mcp not-obvious score "Suggest a side business for a software developer" "Build a SaaS for small businesses"
+npx -p not-obvious-mcp not-obvious diverge "Suggest a side business for a software developer" all
 ```
 
 ## Roadmap
