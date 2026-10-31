@@ -111,3 +111,31 @@ export function combineScores(
   const total = web === undefined || !Number.isFinite(web) ? base : (1 - webWeight) * base + webWeight * to100(web);
   return Math.round(total);
 }
+
+/** Ranks with ties averaged (0-based). */
+export function ranks(xs: number[]): number[] {
+  const idx = xs.map((x, i) => [x, i] as const).sort((a, b) => a[0] - b[0]);
+  const r = new Array<number>(xs.length);
+  for (let i = 0; i < idx.length; ) {
+    let j = i;
+    while (j + 1 < idx.length && idx[j + 1]![0] === idx[i]![0]) j++;
+    for (let k = i; k <= j; k++) r[idx[k]![1]] = (i + j) / 2;
+    i = j + 1;
+  }
+  return r;
+}
+
+/** Spearman rank correlation, -1..1 (0 when either side is constant). */
+export function spearman(a: number[], b: number[]): number {
+  const ra = ranks(a);
+  const rb = ranks(b);
+  const ma = ra.reduce((s, x) => s + x, 0) / ra.length;
+  const mb = rb.reduce((s, x) => s + x, 0) / rb.length;
+  let num = 0, da = 0, db = 0;
+  for (let i = 0; i < ra.length; i++) {
+    num += (ra[i]! - ma) * (rb[i]! - mb);
+    da += (ra[i]! - ma) ** 2;
+    db += (rb[i]! - mb) ** 2;
+  }
+  return da && db ? num / Math.sqrt(da * db) : 0;
+}

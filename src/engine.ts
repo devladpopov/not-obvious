@@ -46,7 +46,7 @@ async function saveCloud(cloud: Cloud): Promise<void> {
  * re-scoring the same idea is free and survives free-tier rate limits.
  */
 const embMemo = new Map<string, Map<string, Vector>>();
-async function embedCached(texts: string[]): Promise<{ name: string; vectors: Vector[] }> {
+export async function embedCached(texts: string[]): Promise<{ name: string; vectors: Vector[] }> {
   const emb = embedder();
   const file = join(CACHE_DIR, `emb-${emb.name.replace(/[^\w.-]/g, "_")}.json`);
   let memo = embMemo.get(file);

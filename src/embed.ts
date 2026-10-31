@@ -57,7 +57,7 @@ export function geminiEmbedder(key: string): Embedder {
             }),
             signal,
           },
-        ));
+        ), { attempts: 5, baseMs: 4000 }); // the free tier limits per minute: back off up to ~2 min
         if (!r.ok) throw new Error(`embed ${r.status}: ${(await r.text()).slice(0, 300)}`);
         const data = (await r.json()) as { embeddings: { values: number[] }[] };
         out.push(...data.embeddings.map((e) => e.values));

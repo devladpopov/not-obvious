@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { lexicalEmbedder } from "../src/embed.js";
-import { clicheScore, combineScores, cosine } from "../src/math.js";
+import { clicheScore, combineScores, cosine, spearman } from "../src/math.js";
 
 describe("cosine", () => {
   test("identical and orthogonal", () => {
@@ -60,5 +60,14 @@ describe("combineScores with web prevalence", () => {
   test("web blends on top of embedding + judge", () => {
     expect(combineScores(30, 10, 0.5, 0, 0.5)).toBe(33);
     expect(combineScores(80, undefined, 0.6, 10, 0.25)).toBe(85);
+  });
+});
+
+describe("spearman", () => {
+  test("perfect, inverse and tied rankings", () => {
+    expect(spearman([1, 2, 3, 4], [10, 20, 30, 40])).toBeCloseTo(1);
+    expect(spearman([1, 2, 3, 4], [4, 3, 2, 1])).toBeCloseTo(-1);
+    expect(spearman([1, 1, 1], [1, 2, 3])).toBe(0);
+    expect(spearman([1, 2, 2, 3], [1, 2, 3, 4])).toBeCloseTo(0.949, 2);
   });
 });

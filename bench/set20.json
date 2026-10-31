@@ -1,0 +1,2993 @@
+{
+  "note": "Day-6 blind calibration set. ideas[].author = kind the generator was asked for (never shown to judges); judges = originality 1-7 per judge; mean = judge average. prompts[] = same shape as prompts.json, bands from mean: <= 2.5 cliche, >= 4.5 far, mid in between.",
+  "judges": [
+    "claude-opus-5-5",
+    "claude-sonnet-5-5",
+    "gemini"
+  ],
+  "generator": "claude-sonnet-5-5",
+  "entries": [
+    {
+      "prompt": "Suggest a side business for a software developer",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Freelance web development for small businesses, building and maintaining websites for local shops, restaurants, and service providers on a per-project basis.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Create and sell an online course teaching programming skills, hosted on a platform like Udemy or Teachable.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1.33
+        },
+        {
+          "text": "Build a small SaaS product that solves a specific problem and charge a monthly subscription.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Offer fixed-price website speed audits for e-commerce stores, delivering a prioritized fix list, with an optional paid implementation of the changes afterward.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 2
+          },
+          "mean": 2.67
+        },
+        {
+          "text": "Run a paid code review service for self-taught developers and bootcamp graduates, giving written feedback on their portfolio projects before job applications.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 4
+          },
+          "mean": 3.33
+        },
+        {
+          "text": "Sell spreadsheet-to-app conversions: take a small company's tangled Excel workflow and rebuild it as a simple internal web tool, charging a flat fee plus hosting.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.33
+        },
+        {
+          "text": "Publish a paid weekly newsletter tracking breaking API changes and deprecations for a specific platform, such as payment processors, aimed at agencies maintaining client integrations.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Write custom scripts that convert wedding photographers' messy client galleries and contracts into automated delivery workflows, then sell the configured setup to photographers one at a time.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Monitor municipal permit and zoning meeting agendas with a scraper, and sell local alerts about nearby construction or rezoning to roofers, contractors, and real estate investors.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 6
+          },
+          "mean": 5.33
+        },
+        {
+          "text": "Digitize obsolete file formats for hobbyists and small labs, such as old CAD, tracker music, or lab instrument data, by writing converters and charging per file batch.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 6,
+            "gemini": 5
+          },
+          "mean": 5.67
+        }
+      ],
+      "order": [
+        9,
+        6,
+        2,
+        7,
+        1,
+        8,
+        3,
+        5,
+        4,
+        0
+      ]
+    },
+    {
+      "prompt": "How can a small coffee shop attract more customers?",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Start a loyalty card program where customers get a free drink after buying ten, to encourage repeat visits.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Post regularly on Instagram and TikTok with photos of drinks, baristas, and the shop interior, and tag the neighborhood.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Offer a morning discount on coffee and pastry combos to draw commuters and early-shift workers.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 2,
+            "gemini": 1
+          },
+          "mean": 1.67
+        },
+        {
+          "text": "Run a loyalty program that rewards visits to neighboring businesses too: a shared stamp card with the bakery, bookstore, and florist, redeemable at any of them.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 4
+          },
+          "mean": 3.33
+        },
+        {
+          "text": "Host open-mic or live music nights, but limit them to a single quiet acoustic set on slow weekday evenings, so the shop fills during its emptiest hours.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Offer a 'pay it forward' board where customers prepay drinks for strangers, and let local nonprofits claim them for volunteers, bringing in new groups regularly.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 5
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "Hold free weekly cupping sessions where regulars taste two coffees and vote; the winner goes on the menu next month, giving people a stake in the shop.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Contact local landlords and property managers to give each new tenant in nearby apartments a welcome card with a free first drink, reaching people the week they're choosing new habits.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "Offer to be the pickup point for neighborhood online-order packages and hold them for a few hours, so recipients walk in and often buy something while they're there.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Ask nearby remote workers to name the hour they'd come, then sell a limited number of reserved 'desk-and-refill' passes for quiet seats at the shop's emptiest times of day.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 6
+          },
+          "mean": 5.33
+        }
+      ],
+      "order": [
+        8,
+        6,
+        2,
+        7,
+        0,
+        5,
+        3,
+        4,
+        9,
+        1
+      ]
+    },
+    {
+      "prompt": "Give me a fresh idea for a birthday party for a 10-year-old",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Host a backyard sleepover with a movie marathon, sleeping bags, popcorn, and pizza. Kids pick the films by vote beforehand.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 2,
+            "gemini": 1
+          },
+          "mean": 1.67
+        },
+        {
+          "text": "Rent a trampoline park or bowling alley for two hours, then serve pizza and cake in the party room.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Throw a themed party around the child's favorite thing, such as Minecraft or soccer, with matching decorations, games, and a cake.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Run a scavenger hunt where clues are hidden around the neighborhood park, and the final clue leads to the birthday cake picnic.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 2,
+            "gemini": 2
+          },
+          "mean": 2
+        },
+        {
+          "text": "Hold a baking competition where kids split into teams, decorate plain cupcakes with set ingredients, and a parent panel judges. Everyone eats their own entries.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Do a mystery party in which guests receive character cards and questions to solve a fake theft of the birthday cake. The cake is found at the end.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Make a camp-out in the living room where each guest builds a blanket fort, then a cardboard-box 'fort inspector' awards categories like tallest and coziest.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4
+        },
+        {
+          "text": "Have kids design and run a one-day pop-up shop selling lemonade and crafts to neighbors, then use the earnings to pick a charity donation and ice cream.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 6
+          },
+          "mean": 5.33
+        },
+        {
+          "text": "Borrow a few old broken appliances or electronics from a thrift store, give kids safety glasses and screwdrivers, and let them take apart and sort the parts.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 6,
+            "gemini": 5
+          },
+          "mean": 5.67
+        },
+        {
+          "text": "Record a 10-minute radio drama as a group: kids write a script, make sound effects with kitchen items, and each guest goes home with the audio file.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 6,
+            "gemini": 6
+          },
+          "mean": 6
+        }
+      ],
+      "order": [
+        2,
+        4,
+        1,
+        6,
+        8,
+        9,
+        5,
+        7,
+        3,
+        0
+      ]
+    },
+    {
+      "prompt": "Name ideas for a new productivity app",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "A to-do list app with due dates, reminders, priority tags, and project folders that syncs across phone and computer.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "A Pomodoro timer app that alternates focused work sessions with short breaks and shows daily statistics on completed sessions.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "A habit tracker that records daily routines, shows streak counts, and sends reminders to keep users consistent.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "A to-do list that deletes tasks you have rescheduled three times, asking you to either do them now or drop them, so the list stays honest.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 4,
+            "gemini": 5
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "A Pomodoro timer that lengthens or shortens your work blocks based on when your typing speed and error rate show your focus fading.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5
+        },
+        {
+          "text": "A habit tracker for pairs: two people each log a habit, and a streak only continues if both complete it that day.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4
+        },
+        {
+          "text": "A calendar app that blocks time for tasks using your past actual durations rather than your estimates, and shows how far your guesses were off.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 3,
+            "gemini": 4
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "An app that records a ten-second voice note when you stop working, then plays it back as the first thing you hear next session so you restart mid-thought.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 6,
+            "claude-sonnet-5-5": 6,
+            "gemini": 6
+          },
+          "mean": 6
+        },
+        {
+          "text": "A tool that reads your sent emails and meeting notes to find promises you made, such as 'I'll send that Friday,' and turns them into a commitments list.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 4,
+            "gemini": 5
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "A phone app that tracks the cost of switching tasks by logging each app change on your computer, then reports which specific interruptions cost you the most recovery time.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 6
+          },
+          "mean": 5.33
+        }
+      ],
+      "order": [
+        5,
+        8,
+        2,
+        1,
+        4,
+        3,
+        9,
+        7,
+        6,
+        0
+      ]
+    },
+    {
+      "prompt": "How can a city reduce traffic congestion?",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Expand and improve public transit with more frequent buses and trains, so more people choose them over driving.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Build more bike lanes and pedestrian infrastructure so short trips can be made without a car.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Charge congestion pricing for driving into the busiest central areas during peak hours.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 2,
+            "gemini": 1
+          },
+          "mean": 1.67
+        },
+        {
+          "text": "Use congestion pricing, but return the revenue as monthly cash or transit credits to residents, making the policy visibly beneficial and politically easier to keep.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4
+        },
+        {
+          "text": "Adjust traffic signals with real-time sensors, but give priority to buses and full cars rather than treating all vehicles equally.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Encourage remote work by paying employers to stagger start times by neighborhood, so each district's rush hour peaks at a different time.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4
+        },
+        {
+          "text": "Convert some parking spaces to loading bays with time limits and booking, since double-parked delivery vehicles block lanes and cause many slowdowns.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Time school bell schedules across districts so they don't coincide with commuter peaks, and have schools in the same area start at different times to spread drop-off traffic.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 4
+        },
+        {
+          "text": "Require large event venues to bundle transit fares into tickets and release attendees in timed waves by section, preventing sudden surges on nearby roads.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Publish a public map of recurring crash and breakdown hotspots and contract tow trucks to stand by there at rush hour, since clearing minor incidents within minutes prevents most secondary jams.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.67
+        }
+      ],
+      "order": [
+        4,
+        6,
+        3,
+        0,
+        2,
+        5,
+        9,
+        1,
+        8,
+        7
+      ]
+    },
+    {
+      "prompt": "Suggest a marketing campaign for a new running shoe",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Hire well-known athletes and fitness influencers to wear and review the shoe on Instagram, TikTok, and YouTube, with discount codes for their followers.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Run a social media campaign with a branded hashtag where customers post their runs in the new shoe, with a prize for the best entries.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 2
+          },
+          "mean": 1.33
+        },
+        {
+          "text": "Host a launch event, such as a 5K fun run, where attendees can try the shoe for free and buy it at a launch discount.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 2,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1.33
+        },
+        {
+          "text": "Sponsor local running clubs, but instead of giving them gear, give each club a shared pair to rotate among members for a month and publish their combined mileage and feedback.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 4,
+            "gemini": 5
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Use influencers, but pick ordinary runners who have logged the most verified miles on Strava, and pay them to publish honest wear reports at 100, 300, and 500 miles.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 4
+        },
+        {
+          "text": "Run a hashtag challenge where the prize is tied to distance: the brand donates a set amount per mile logged in the shoe, with totals shown on a public live map.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 3,
+            "claude-sonnet-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Offer a trade-in program: customers send in worn-out shoes of any brand, get credit toward the new pair, and the old shoes are shredded into material for the next track surface the brand donates.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4
+        },
+        {
+          "text": "Place QR-coded stickers on mile markers along popular local running routes. Scanning shows the route's elevation, surface type, and which shoe model suits it best, with a link to the new shoe.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Partner with physical therapists and podiatry clinics to loan the shoe to patients returning from running injuries, then publish anonymized recovery data on how many resumed training comfortably.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 6,
+            "claude-sonnet-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 5
+        },
+        {
+          "text": "Sell the shoe with a wear-based guarantee: sensors in the insole count steps, and when it reaches a published mileage threshold, the buyer gets a replacement pair at half price automatically.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 6,
+            "claude-sonnet-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5.33
+        }
+      ],
+      "order": [
+        8,
+        5,
+        0,
+        6,
+        9,
+        7,
+        3,
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "prompt": "Ideas to improve employee engagement in a remote team",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Hold regular one-on-one meetings between each employee and their manager to discuss goals, concerns, and feedback.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Organize virtual team-building activities such as online games, trivia, or coffee chats to help colleagues bond.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Recognize good work publicly through shout-outs in team channels, awards, or small bonuses so people feel their contributions are noticed.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Replace status meetings with a shared written update thread, then use the freed meeting time for optional sessions where people demo unfinished work and get early feedback.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3.33
+        },
+        {
+          "text": "Run virtual coffee pairings, but match people by a shared problem they are currently stuck on rather than randomly, so the chat produces something useful.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4
+        },
+        {
+          "text": "Let team members rotate the role of meeting owner each week, choosing the agenda, format, and length, including cancelling the meeting if it is unnecessary.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Give each person a yearly learning budget, but require them to teach one thing they learned to the team in a short recorded session.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 3,
+            "claude-sonnet-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Mail each new hire a handwritten note from every teammate's own city, with a local postcard, then map the postcards on a shared wall that stays updated as people join.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5
+        },
+        {
+          "text": "Keep a public 'decisions I regret' log where leaders post choices that went wrong and what changed, so staff see that disagreement and correction are safe and acted upon.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Hold a quarterly 'job swap shadow hour' where two people from unrelated functions screen-share their normal workday for sixty minutes, then each proposes one small fix to the other's process.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5
+        }
+      ],
+      "order": [
+        6,
+        3,
+        9,
+        8,
+        1,
+        2,
+        5,
+        4,
+        7,
+        0
+      ]
+    },
+    {
+      "prompt": "What could a museum do to attract teenagers?",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Offer interactive and digital exhibits, such as VR tours and touchscreen games, so teens can engage with collections through technology they already use.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 2,
+            "gemini": 1
+          },
+          "mean": 1.33
+        },
+        {
+          "text": "Run a strong social media presence on TikTok and Instagram, posting short videos of objects, behind-the-scenes clips, and challenges that link back to visiting.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Provide discounted or free admission for teens, and host special evening events with music, food, and activities aimed at their age group.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Hire teens as paid curators for one gallery per year. They choose objects, write labels in their own voice, and the museum publishes their rationale beside each piece.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 3,
+            "claude-sonnet-5-5": 3,
+            "gemini": 5
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Host a late-night event where teens bring a friend and each pair solves a mystery using clues hidden in the exhibits, with the solving app built by a local school coding club.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3.33
+        },
+        {
+          "text": "Create a photo spot program where teens judge which gallery corners work best for photos, then the museum adds lighting and seating there and credits the teen photographers on a wall.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "Partner with school exam boards to offer a quiet study room inside the museum with free wifi, where relevant objects are placed nearby for revision of history and science topics.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "Let teens borrow objects from the education collection for a week, like a library, to photograph, sketch, or build stories around, and then return them with a written note that goes in the object's file.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 6,
+            "claude-sonnet-5-5": 6,
+            "gemini": 5
+          },
+          "mean": 5.67
+        },
+        {
+          "text": "Invite teens to audit the museum's wall labels by marking which words they did not understand with sticky dots, then rewrite the most-dotted labels together with curators and test again.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Offer a repair bench where teens learn to conserve real damaged items, such as old radios or clothing, with a conservator, and the finished pieces go on display with the repairer's name.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 6
+          },
+          "mean": 5.33
+        }
+      ],
+      "order": [
+        7,
+        4,
+        8,
+        5,
+        2,
+        0,
+        9,
+        3,
+        1,
+        6
+      ]
+    },
+    {
+      "prompt": "How can a non-profit raise money without asking for donations?",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Sell merchandise such as shirts, mugs, and tote bags with the organization's logo or mission message through an online store.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Host ticketed fundraising events like galas, charity runs, auctions, or concerts where revenue comes from tickets and sponsorships.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1.33
+        },
+        {
+          "text": "Apply for grants from foundations, corporations, and government agencies that fund work matching the nonprofit's mission.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Offer paid workshops and trainings built from the nonprofit's expertise, sold to companies at commercial rates, with the same course offered free or discounted to the communities it serves.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Run a social enterprise that employs the people it serves, such as a bakery staffed by job trainees, and reinvest profits into programs.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 2,
+            "gemini": 2
+          },
+          "mean": 2.33
+        },
+        {
+          "text": "Create a corporate partnership where a business pays to include a service of the nonprofit in its product, like a per-purchase fee, instead of a gift or sponsorship.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Rent out underused space, such as a hall, kitchen, or parking lot, on weekday evenings to local businesses, film crews, and event planners, with a booking calendar online.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 2
+          },
+          "mean": 2.67
+        },
+        {
+          "text": "License the nonprofit's field data, such as trail conditions, bird counts, or neighborhood surveys, to researchers and companies that need it, with privacy rules and community consent.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 5
+        },
+        {
+          "text": "Sell a service to local government by bidding on contracts, such as running a recycling pickup route or a municipal translation line, priced to cover costs plus a margin.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "Buy a small commercial property or a share of a local building, rent most of it at market price, and use the rental income as a permanent funding stream.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.67
+        }
+      ],
+      "order": [
+        8,
+        3,
+        5,
+        7,
+        4,
+        0,
+        1,
+        9,
+        6,
+        2
+      ]
+    },
+    {
+      "prompt": "Suggest a new feature for a note-taking app",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Add AI-generated summaries of long notes so users can quickly review the main points without rereading everything.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Offer real-time collaboration so multiple people can edit the same note at once, with comments and shared folders.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Include a voice-to-text option that transcribes spoken audio into a note, with the original recording saved alongside it.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Spaced-repetition review: the app resurfaces old notes on a forgetting-curve schedule, but only notes the user tagged as worth remembering, sent as a short daily digest.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Note linking that shows a graph, but each link is labeled with the reason for the connection, such as 'contradicts' or 'example of', so the graph can be filtered by relationship type.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 5
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "Templates that adapt over time: the app notices which headings you always add to meeting notes and gradually changes the default template to match your habits.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "Location-triggered reminders where a note reappears when you arrive somewhere, like a shopping list at the store, and silences itself once you've checked off its items.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 2
+          },
+          "mean": 2.67
+        },
+        {
+          "text": "Staleness marker: each factual claim or number in a note can be given an expiry date, and the app flags it for rechecking when that date passes, such as prices or phone numbers.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 6,
+            "gemini": 5
+          },
+          "mean": 5.67
+        },
+        {
+          "text": "Handwriting-style diff view that shows how a note changed over months as a timeline of edits, letting you see what you deleted and when you changed your mind about a decision.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4
+        },
+        {
+          "text": "Reading-order export: select any set of scattered notes and the app proposes a sequence based on their shared terms and dependencies, then compiles them into a single draft with gaps marked as empty placeholders.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 6,
+            "gemini": 6
+          },
+          "mean": 6
+        }
+      ],
+      "order": [
+        1,
+        6,
+        8,
+        3,
+        2,
+        4,
+        9,
+        7,
+        0,
+        5
+      ]
+    },
+    {
+      "prompt": "Suggest a weekend project to teach kids about money",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Set up a lemonade stand. Kids buy supplies, set prices, sell to neighbors, and calculate profit at the end of the day.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Make three jars labeled Save, Spend, and Give. Kids split a week's allowance among them and decide what to do with each jar's contents.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 2,
+            "gemini": 1
+          },
+          "mean": 1.33
+        },
+        {
+          "text": "Take kids grocery shopping with a fixed budget and a list. They compare prices, pick items, and track the total as they go.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 2,
+            "claude-sonnet-5-5": 2,
+            "gemini": 2
+          },
+          "mean": 2
+        },
+        {
+          "text": "Run a lemonade stand where costs change midway, such as ice doubling in price or a rainy hour, so kids must adjust prices and see how margins shift.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 3,
+            "claude-sonnet-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Create a family bank where parents pay weekly interest on savings. Kids watch deposits grow and compare against spending right away, with a ledger book kept by the kids.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 2,
+            "claude-sonnet-5-5": 3,
+            "gemini": 4
+          },
+          "mean": 3
+        },
+        {
+          "text": "Hold a living-room store from their old toys. Kids price items, and parents shop with play money and haggle, so kids experience both setting prices and being the buyer.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 3,
+            "claude-sonnet-5-5": 3,
+            "gemini": 2
+          },
+          "mean": 2.67
+        },
+        {
+          "text": "Plan a family dinner out with a set budget. Kids research menus, pick the restaurant, calculate tax and tip, and keep the family under budget to earn a dessert fund.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 3,
+            "claude-sonnet-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Give kids a dollar-store item and a few dollars of materials to improve it, then sell it at a price they choose. Afterward they work out whether the upgrade was worth the cost.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "Dig out the family's old receipts or a month of utility bills. Kids find the biggest costs, then try a weekend experiment, like fewer lights or shorter showers, to cut the next bill.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 5,
+            "gemini": 3
+          },
+          "mean": 4
+        },
+        {
+          "text": "Hold a mock auction with the kids' own chores as the lots. Each child gets the same play-money budget and bids for chores or privileges, learning scarcity and opportunity cost.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5
+        }
+      ],
+      "order": [
+        7,
+        0,
+        9,
+        8,
+        3,
+        1,
+        6,
+        5,
+        4,
+        2
+      ]
+    },
+    {
+      "prompt": "How can a public library stay relevant?",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Expand digital offerings such as e-books, audiobooks, streaming media, and online databases so patrons can access the collection from home.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Host community events like author talks, children's story hours, workshops, and classes to make the library a gathering place.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Offer free technology access, including computers, Wi-Fi, printing, and digital literacy training for people who lack them at home.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Run a library of things, but let patrons vote on and donate items, and track which tools get used so the stock reflects actual neighborhood needs.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Turn story hours into intergenerational sessions where seniors read to children and children teach seniors phone skills, giving both groups a reason to come regularly.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Offer makerspaces staffed by local tradespeople paid as part-time instructors, so patrons learn practical skills like plumbing repair, sewing, and basic electrical work.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.33
+        },
+        {
+          "text": "Create a human library where neighbors can be borrowed for a conversation, such as a retired nurse or a refugee, with topics searchable in the catalog.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 4
+          },
+          "mean": 3.33
+        },
+        {
+          "text": "Digitize and index local records like church bulletins, school yearbooks, and shop receipts, then let residents tag faces and places, so the library becomes the neighborhood's searchable memory.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Lend out quiet, bookable rooms by the hour as legal-aid and telehealth booths, with soundproofing, a private network, and a staff member who troubleshoots the video setup.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Partner with the local weather service, utility, and emergency office to stock the library with outlets, cooling or heating, and water, and run drills so residents know it is the neighborhood shelter during outages.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 4,
+            "gemini": 5
+          },
+          "mean": 4.67
+        }
+      ],
+      "order": [
+        1,
+        3,
+        4,
+        2,
+        0,
+        7,
+        8,
+        6,
+        5,
+        9
+      ]
+    },
+    {
+      "prompt": "Ideas for a team-building activity for software engineers",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Host an escape room where the team has to solve puzzles together within an hour, then debrief over lunch.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Run a one-day internal hackathon where mixed groups build any small project they choose and demo it to the company at the end.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 2,
+            "gemini": 2
+          },
+          "mean": 2
+        },
+        {
+          "text": "Organize a team outing with games like bowling, mini golf, or board games, followed by dinner at a nearby restaurant.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Hold a hackathon where each team must build something using a tool or language none of its members has used, and pair each senior engineer with a newest hire.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Run an escape room, but afterward the team writes a postmortem of how they solved it: who blocked, who communicated well, what process failed.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4
+        },
+        {
+          "text": "Do a cooking session where the team follows one recipe split into roles, with only written tickets for communication and no talking allowed during the first half.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5.33
+        },
+        {
+          "text": "Play a board game session where each person designs one rule change, and the group must agree on a final ruleset using a lightweight RFC process.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5.33
+        },
+        {
+          "text": "Swap bug backlogs: each engineer spends an afternoon fixing a small, annoying issue that another team has listed as a low-priority pain point, then presents the fix to its owners.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "Have everyone bring a broken household item or old gadget, then pair up to diagnose and repair it with only shared tools and online manuals, no one working on their own item.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 6,
+            "gemini": 5
+          },
+          "mean": 5.33
+        },
+        {
+          "text": "Run a reverse onboarding day: veterans are given a fake new-hire laptop and the current setup docs, follow them from scratch, and collectively fix every broken step they hit.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 6,
+            "gemini": 4
+          },
+          "mean": 5.33
+        }
+      ],
+      "order": [
+        9,
+        0,
+        3,
+        2,
+        1,
+        6,
+        5,
+        4,
+        7,
+        8
+      ]
+    },
+    {
+      "prompt": "How can a restaurant reduce food waste?",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Track what gets thrown away by weighing waste daily and logging reasons, then adjust purchasing and prep quantities based on the data.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 2,
+            "gemini": 2
+          },
+          "mean": 2
+        },
+        {
+          "text": "Train staff on portion control and proper storage, using first-in-first-out labeling so older ingredients are used before they spoil.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Donate surplus edible food to local food banks or shelters, and send inedible scraps to composting or animal feed programs.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Offer a daily special built only from ingredients nearing expiry, with the chef setting the menu each afternoon from a walk-in cooler inventory check.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 2
+          },
+          "mean": 2.67
+        },
+        {
+          "text": "Let guests choose small, regular, or large portions at set prices, and ask at ordering whether they want sides that often go uneaten, like bread or fries.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 2,
+            "gemini": 2
+          },
+          "mean": 2.33
+        },
+        {
+          "text": "Redesign the menu so many dishes share the same ingredients across cuisines, and cross-use trimmings such as turning stems into pesto and bones into stock.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 2,
+            "gemini": 2
+          },
+          "mean": 2.33
+        },
+        {
+          "text": "Sell end-of-night surplus as discounted sealed meal boxes through an app, with pickup after closing, so unsold prepared food earns revenue instead of being binned.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 3,
+            "gemini": 2
+          },
+          "mean": 2.33
+        },
+        {
+          "text": "Photograph the plate return tray at dishwashing for two weeks, then review the images with cooks to see which dishes or garnishes come back untouched and cut them.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5
+        },
+        {
+          "text": "Ask regular suppliers to deliver on a staggered schedule based on your weekly reservation pattern, and agree to take misshapen produce at lower prices in exchange for flexible order sizes.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Install a cheap temperature logger in each fridge and review the data monthly; units that run warm or have frequent door-open spikes are spoiling food, so repair or relocate stock accordingly.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.67
+        }
+      ],
+      "order": [
+        4,
+        1,
+        6,
+        9,
+        0,
+        2,
+        8,
+        3,
+        7,
+        5
+      ]
+    },
+    {
+      "prompt": "Suggest a gift for a grandmother who has everything",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "A custom photo album or framed collage of family pictures from across the years, with handwritten captions identifying people, places and dates.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 2,
+            "gemini": 2
+          },
+          "mean": 2
+        },
+        {
+          "text": "A bouquet of fresh flowers or a long-lasting plant delivered to her door, ideally arranged around her favorite colors.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "A day out together, such as lunch at her favorite restaurant followed by a walk or a visit to a garden.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "A photo book of family pictures where each page has a short voice recording attached via QR code, so she can hear grandchildren explain the photo.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 6
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "A subscription to a monthly flower or fruit delivery, but timed so each box arrives with a handwritten note from a different family member.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 5
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "A cookbook of her own recipes, tested and photographed by the grandchildren, with her stories in the margins and a blank page for each cook to add changes.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "A spend-the-day gift: you come over and do a chore she dislikes, such as sorting the garage or cleaning gutters, then she picks dinner.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 3,
+            "gemini": 4
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Hire a local genealogist or use archive access to trace her mother's side to the original village, then give her a bound folder with copies of the actual documents.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 4,
+            "gemini": 6
+          },
+          "mean": 5
+        },
+        {
+          "text": "Pay to digitize her old home videos and cassette tapes, then load the clips onto a simple tablet pre-set to play them with one button.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Commission a local sign painter or woodworker to make a bench plaque or a small birdhouse replica of her childhood home from old photographs.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 6,
+            "gemini": 6
+          },
+          "mean": 6
+        }
+      ],
+      "order": [
+        5,
+        7,
+        6,
+        2,
+        1,
+        0,
+        4,
+        3,
+        8,
+        9
+      ]
+    },
+    {
+      "prompt": "How can a university improve student retention?",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Expand academic support such as tutoring, writing centers, and supplemental instruction so struggling students get help early in their courses.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Increase financial aid, scholarships, and emergency grants so cost pressures do not force students to drop out.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Assign each student an academic advisor and mentor who checks in regularly and helps build a sense of belonging on campus.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Use early-alert analytics on attendance and grades, but route alerts to a peer who texts the student casually, not to an administrator who sends a formal warning.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Offer emergency grants under $500 with a one-day approval and no paperwork, since small unpaid fees like parking fines or a laptop repair often trigger dropouts.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 3,
+            "claude-sonnet-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Pay students in their first year to join a small cohort course taught by a staff member from outside their major, creating one durable adult relationship early.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5
+        },
+        {
+          "text": "Redesign gateway courses like calculus and chemistry so the first graded assessment comes in week two and is low-stakes, letting students learn the standards before failing.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 3,
+            "claude-sonnet-5-5": 3,
+            "gemini": 2
+          },
+          "mean": 2.67
+        },
+        {
+          "text": "Interview students who have already withdrawn, plus the ones who nearly did, then give a monthly list of the actual triggers to the registrar and housing so they fix specific procedures.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4
+        },
+        {
+          "text": "Offer a guaranteed re-entry pass: a student who leaves in good standing keeps their housing priority, credits, and aid estimate for three years, making a pause less likely to become permanent.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Place a short, voluntary 'dropout rehearsal' step in the withdrawal form: students must meet someone who maps a leave-of-absence, a reduced load, or a transfer, often revealing options they never knew existed.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 4.67
+        }
+      ],
+      "order": [
+        8,
+        5,
+        7,
+        3,
+        1,
+        2,
+        0,
+        4,
+        9,
+        6
+      ]
+    },
+    {
+      "prompt": "Ideas for a podcast about history",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "A chronological tour of major world events, with each episode covering one era from ancient civilizations through the modern age.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Biographical episodes on famous historical figures such as Cleopatra, Napoleon, and Lincoln, covering their lives, decisions, and legacies.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Deep dives into a single war per season, such as World War II, covering causes, key battles, and consequences, with interviews from historians.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 2,
+            "gemini": 1
+          },
+          "mean": 1.67
+        },
+        {
+          "text": "Each episode retells a famous historical event from the viewpoint of an ordinary bystander, like a baker in Pompeii or a clerk at Versailles, using surviving records.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "A show on history's biggest mistakes in forecasting, where each episode examines a confident prediction that failed, such as the 1900 predictions for the year 2000, and why experts missed.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "Two hosts argue opposing interpretations of one historical question per episode, like why Rome fell, then a guest historian scores the arguments against the evidence.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 3
+          },
+          "mean": 3.67
+        },
+        {
+          "text": "Episodes built around one local object in a listener's town, such as a statue or street name, tracing who chose it and what the choice says about its time.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "Each episode reconstructs a historical year through its surviving grocery prices, wage records, and tax receipts, telling the era's story only through what things cost.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5.33
+        },
+        {
+          "text": "A podcast that reads the marginal notes, doodles, and corrections in a single medieval or early modern manuscript or ledger, one page per episode, with a paleographer explaining them.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 6,
+            "gemini": 6
+          },
+          "mean": 6
+        },
+        {
+          "text": "Episodes follow the paper trail of failed bureaucratic requests, like rejected petitions and denied permits across centuries, to show what ordinary people wanted from governments and were refused.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 6,
+            "gemini": 5
+          },
+          "mean": 5.67
+        }
+      ],
+      "order": [
+        0,
+        1,
+        5,
+        6,
+        3,
+        4,
+        7,
+        8,
+        2,
+        9
+      ]
+    },
+    {
+      "prompt": "How can a small town attract young residents?",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Create more affordable housing, including starter homes and rentals, so young people can afford to live there instead of in nearby cities.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Invest in high-speed internet so remote workers and young entrepreneurs can live in town while keeping jobs elsewhere.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Support local jobs by offering small business grants and recruiting employers, plus hold events like markets and festivals that make the town lively.",
+          "author": "obvious",
+          "judges": {
+            "claude-opus-5-5": 1,
+            "claude-sonnet-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Offer remote worker relocation grants, but pay them in installments tied to local participation, such as joining a volunteer fire crew or teaching a monthly class, so newcomers build ties.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Turn empty main street storefronts into low-rent trial shops with six-month leases, letting young people test business ideas with little risk and keeping the street filled.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 3,
+            "claude-sonnet-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Start a coworking space inside the library or an old bank, with a free childcare corner, so young parents can work remotely without leaving town.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 3,
+            "claude-sonnet-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Run a paid apprenticeship program with retiring tradespeople, such as electricians and mechanics, where the apprentice gets the business at a discount after several years of work.",
+          "author": "twist",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "Let the town sell vacant lots and condemned houses for one dollar to buyers who post a renovation bond and finish within two years, with the bond refunded on completion.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 3,
+            "claude-sonnet-5-5": 3,
+            "gemini": 2
+          },
+          "mean": 2.67
+        },
+        {
+          "text": "Hire a part-time town concierge who contacts people who recently searched for or visited the town, arranges home tours, job introductions, and dinners with residents, and tracks who moves.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 5,
+            "claude-sonnet-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5
+        },
+        {
+          "text": "Offer former residents who left for college a lifelong alumni-style list, then invite them annually to a paid-for weekend with job leads, listed houses, and mentors who stayed, aiming for returns.",
+          "author": "rare",
+          "judges": {
+            "claude-opus-5-5": 4,
+            "claude-sonnet-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4
+        }
+      ],
+      "order": [
+        4,
+        5,
+        7,
+        8,
+        9,
+        0,
+        6,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "prompt": "How can a city get more people to commute by bike?",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "Build a connected network of protected bike lanes physically separated from car traffic, so riders feel safe on the whole route rather than only on isolated segments.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "Provide secure bike parking at transit stations, workplaces, and apartment buildings so people don't worry about theft.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1.33
+        },
+        {
+          "text": "Run public awareness campaigns and offer subsidies or tax incentives for buying bikes and e-bikes, including for lower-income residents.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 2,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1.33
+        },
+        {
+          "text": "Let people trade in a car registration for a multi-year e-bike and cargo bike credit, so the subsidy goes to those who actually give up a car.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 6
+          },
+          "mean": 4.67
+        },
+        {
+          "text": "Time traffic signals to bike speed on main bike corridors, with a green wave at about 18 km/h, so riders rarely stop and trips get faster than driving.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3.33
+        },
+        {
+          "text": "Pay employers a per-employee rebate for converting parking spaces into showers, lockers, and bike storage, rather than just mandating facilities.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 4
+          },
+          "mean": 4
+        },
+        {
+          "text": "Plow and sweep bike lanes before roads after snow or debris, with a public tracker showing clearing status, so winter and fall riding stays viable.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 3,
+            "claude-opus-5-5": 3,
+            "gemini": 3
+          },
+          "mean": 3
+        },
+        {
+          "text": "Hire retired bike mechanics to staff free repair stands at the busiest intersections during rush hour, fixing flats and adjusting brakes in two minutes while people commute.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 6
+          },
+          "mean": 5.33
+        },
+        {
+          "text": "Require delivery companies and ride-hailing drivers to report daily near-miss data on an app, then use the map to rebuild the specific intersections where bike conflicts cluster.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5
+        },
+        {
+          "text": "Give schools a free fleet of bikes for teachers to borrow on a monthly rotation, so that adults try a commute without buying anything and then bring habits home.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5
+        }
+      ],
+      "order": [
+        5,
+        4,
+        8,
+        9,
+        2,
+        3,
+        1,
+        7,
+        6,
+        0
+      ]
+    },
+    {
+      "prompt": "Ideas for a mobile game to play during a commute",
+      "generator": "claude-sonnet-5-5",
+      "ideas": [
+        {
+          "text": "A match-three puzzle game with short levels that take two to three minutes, so you can stop at any station and save progress automatically.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 2,
+            "gemini": 1
+          },
+          "mean": 1.33
+        },
+        {
+          "text": "A trivia quiz app with daily question sets across categories like history, science, and pop culture, played in quick rounds of ten questions.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "An endless runner played with one thumb, with simple tap-to-jump controls and a local high score list to beat each day.",
+          "author": "obvious",
+          "judges": {
+            "claude-sonnet-5-5": 1,
+            "claude-opus-5-5": 1,
+            "gemini": 1
+          },
+          "mean": 1
+        },
+        {
+          "text": "A word puzzle where the letters and clues come from your actual route: station names, street signs you photograph, and landmarks, so every commute produces a different board.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 5
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "A city-building game that grows only while you are moving, using phone motion sensors, so a smooth ride builds faster and stopping at red lights lets citizens vote on changes.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 6,
+            "gemini": 5
+          },
+          "mean": 5.33
+        },
+        {
+          "text": "A cooperative trivia game that matches you with other commuters on the same transit line, with questions about places you both pass, and play pauses when you lose signal in tunnels.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 5,
+            "claude-opus-5-5": 5,
+            "gemini": 6
+          },
+          "mean": 5.33
+        },
+        {
+          "text": "A solitaire card game that adapts to ride length: you enter your stops remaining, and it deals a hand solvable within that time, then ends cleanly before you arrive.",
+          "author": "twist",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 5,
+            "gemini": 4
+          },
+          "mean": 4.33
+        },
+        {
+          "text": "A listening game for audio-only play: the phone reads out a short sequence of bus-stop announcements and ambient sounds, and you tap when you hear a hidden pattern, so you can play standing with your phone in a pocket.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 6,
+            "gemini": 6
+          },
+          "mean": 6
+        },
+        {
+          "text": "A drawing-guess game where you sketch with your finger the people-watching scenes you imagine, such as a stranger's job, and a classmate-style AI offers three guesses, scoring humor rather than accuracy.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 6,
+            "claude-opus-5-5": 5,
+            "gemini": 5
+          },
+          "mean": 5.33
+        },
+        {
+          "text": "A tiny typing-and-translation game using signs and ads you photograph, which turns them into flashcards in a language you are learning, and the deck rebuilds weekly from your own repeated route.",
+          "author": "rare",
+          "judges": {
+            "claude-sonnet-5-5": 4,
+            "claude-opus-5-5": 4,
+            "gemini": 6
+          },
+          "mean": 4.67
+        }
+      ],
+      "order": [
+        8,
+        5,
+        9,
+        4,
+        0,
+        1,
+        6,
+        7,
+        2,
+        3
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "prompt": "Suggest a side business for a software developer",
+      "cliche": [
+        "Freelance web development for small businesses, building and maintaining websites for local shops, restaurants, and service providers on a per-project basis.",
+        "Create and sell an online course teaching programming skills, hosted on a platform like Udemy or Teachable.",
+        "Build a small SaaS product that solves a specific problem and charge a monthly subscription."
+      ],
+      "mid": [
+        "Offer fixed-price website speed audits for e-commerce stores, delivering a prioritized fix list, with an optional paid implementation of the changes afterward.",
+        "Run a paid code review service for self-taught developers and bootcamp graduates, giving written feedback on their portfolio projects before job applications.",
+        "Sell spreadsheet-to-app conversions: take a small company's tangled Excel workflow and rebuild it as a simple internal web tool, charging a flat fee plus hosting."
+      ],
+      "far": [
+        "Publish a paid weekly newsletter tracking breaking API changes and deprecations for a specific platform, such as payment processors, aimed at agencies maintaining client integrations.",
+        "Write custom scripts that convert wedding photographers' messy client galleries and contracts into automated delivery workflows, then sell the configured setup to photographers one at a time.",
+        "Monitor municipal permit and zoning meeting agendas with a scraper, and sell local alerts about nearby construction or rezoning to roofers, contractors, and real estate investors.",
+        "Digitize obsolete file formats for hobbyists and small labs, such as old CAD, tracker music, or lab instrument data, by writing converters and charging per file batch."
+      ],
+      "labels": {
+        "Freelance web development for small businesses, building and maintaining websites for local shops, restaurants, and service providers on a per-project basis.": 1,
+        "Create and sell an online course teaching programming skills, hosted on a platform like Udemy or Teachable.": 1.33,
+        "Build a small SaaS product that solves a specific problem and charge a monthly subscription.": 1,
+        "Offer fixed-price website speed audits for e-commerce stores, delivering a prioritized fix list, with an optional paid implementation of the changes afterward.": 2.67,
+        "Run a paid code review service for self-taught developers and bootcamp graduates, giving written feedback on their portfolio projects before job applications.": 3.33,
+        "Sell spreadsheet-to-app conversions: take a small company's tangled Excel workflow and rebuild it as a simple internal web tool, charging a flat fee plus hosting.": 3.33,
+        "Publish a paid weekly newsletter tracking breaking API changes and deprecations for a specific platform, such as payment processors, aimed at agencies maintaining client integrations.": 4.67,
+        "Write custom scripts that convert wedding photographers' messy client galleries and contracts into automated delivery workflows, then sell the configured setup to photographers one at a time.": 4.67,
+        "Monitor municipal permit and zoning meeting agendas with a scraper, and sell local alerts about nearby construction or rezoning to roofers, contractors, and real estate investors.": 5.33,
+        "Digitize obsolete file formats for hobbyists and small labs, such as old CAD, tracker music, or lab instrument data, by writing converters and charging per file batch.": 5.67
+      }
+    },
+    {
+      "prompt": "How can a small coffee shop attract more customers?",
+      "cliche": [
+        "Start a loyalty card program where customers get a free drink after buying ten, to encourage repeat visits.",
+        "Post regularly on Instagram and TikTok with photos of drinks, baristas, and the shop interior, and tag the neighborhood.",
+        "Offer a morning discount on coffee and pastry combos to draw commuters and early-shift workers."
+      ],
+      "mid": [
+        "Run a loyalty program that rewards visits to neighboring businesses too: a shared stamp card with the bakery, bookstore, and florist, redeemable at any of them.",
+        "Host open-mic or live music nights, but limit them to a single quiet acoustic set on slow weekday evenings, so the shop fills during its emptiest hours.",
+        "Offer a 'pay it forward' board where customers prepay drinks for strangers, and let local nonprofits claim them for volunteers, bringing in new groups regularly.",
+        "Hold free weekly cupping sessions where regulars taste two coffees and vote; the winner goes on the menu next month, giving people a stake in the shop.",
+        "Contact local landlords and property managers to give each new tenant in nearby apartments a welcome card with a free first drink, reaching people the week they're choosing new habits."
+      ],
+      "far": [
+        "Offer to be the pickup point for neighborhood online-order packages and hold them for a few hours, so recipients walk in and often buy something while they're there.",
+        "Ask nearby remote workers to name the hour they'd come, then sell a limited number of reserved 'desk-and-refill' passes for quiet seats at the shop's emptiest times of day."
+      ],
+      "labels": {
+        "Start a loyalty card program where customers get a free drink after buying ten, to encourage repeat visits.": 1,
+        "Post regularly on Instagram and TikTok with photos of drinks, baristas, and the shop interior, and tag the neighborhood.": 1,
+        "Offer a morning discount on coffee and pastry combos to draw commuters and early-shift workers.": 1.67,
+        "Run a loyalty program that rewards visits to neighboring businesses too: a shared stamp card with the bakery, bookstore, and florist, redeemable at any of them.": 3.33,
+        "Host open-mic or live music nights, but limit them to a single quiet acoustic set on slow weekday evenings, so the shop fills during its emptiest hours.": 3,
+        "Offer a 'pay it forward' board where customers prepay drinks for strangers, and let local nonprofits claim them for volunteers, bringing in new groups regularly.": 4.33,
+        "Hold free weekly cupping sessions where regulars taste two coffees and vote; the winner goes on the menu next month, giving people a stake in the shop.": 3.67,
+        "Contact local landlords and property managers to give each new tenant in nearby apartments a welcome card with a free first drink, reaching people the week they're choosing new habits.": 4.33,
+        "Offer to be the pickup point for neighborhood online-order packages and hold them for a few hours, so recipients walk in and often buy something while they're there.": 4.67,
+        "Ask nearby remote workers to name the hour they'd come, then sell a limited number of reserved 'desk-and-refill' passes for quiet seats at the shop's emptiest times of day.": 5.33
+      }
+    },
+    {
+      "prompt": "Give me a fresh idea for a birthday party for a 10-year-old",
+      "cliche": [
+        "Host a backyard sleepover with a movie marathon, sleeping bags, popcorn, and pizza. Kids pick the films by vote beforehand.",
+        "Rent a trampoline park or bowling alley for two hours, then serve pizza and cake in the party room.",
+        "Throw a themed party around the child's favorite thing, such as Minecraft or soccer, with matching decorations, games, and a cake.",
+        "Run a scavenger hunt where clues are hidden around the neighborhood park, and the final clue leads to the birthday cake picnic."
+      ],
+      "mid": [
+        "Hold a baking competition where kids split into teams, decorate plain cupcakes with set ingredients, and a parent panel judges. Everyone eats their own entries.",
+        "Do a mystery party in which guests receive character cards and questions to solve a fake theft of the birthday cake. The cake is found at the end.",
+        "Make a camp-out in the living room where each guest builds a blanket fort, then a cardboard-box 'fort inspector' awards categories like tallest and coziest."
+      ],
+      "far": [
+        "Have kids design and run a one-day pop-up shop selling lemonade and crafts to neighbors, then use the earnings to pick a charity donation and ice cream.",
+        "Borrow a few old broken appliances or electronics from a thrift store, give kids safety glasses and screwdrivers, and let them take apart and sort the parts.",
+        "Record a 10-minute radio drama as a group: kids write a script, make sound effects with kitchen items, and each guest goes home with the audio file."
+      ],
+      "labels": {
+        "Host a backyard sleepover with a movie marathon, sleeping bags, popcorn, and pizza. Kids pick the films by vote beforehand.": 1.67,
+        "Rent a trampoline park or bowling alley for two hours, then serve pizza and cake in the party room.": 1,
+        "Throw a themed party around the child's favorite thing, such as Minecraft or soccer, with matching decorations, games, and a cake.": 1,
+        "Run a scavenger hunt where clues are hidden around the neighborhood park, and the final clue leads to the birthday cake picnic.": 2,
+        "Hold a baking competition where kids split into teams, decorate plain cupcakes with set ingredients, and a parent panel judges. Everyone eats their own entries.": 3,
+        "Do a mystery party in which guests receive character cards and questions to solve a fake theft of the birthday cake. The cake is found at the end.": 3,
+        "Make a camp-out in the living room where each guest builds a blanket fort, then a cardboard-box 'fort inspector' awards categories like tallest and coziest.": 4,
+        "Have kids design and run a one-day pop-up shop selling lemonade and crafts to neighbors, then use the earnings to pick a charity donation and ice cream.": 5.33,
+        "Borrow a few old broken appliances or electronics from a thrift store, give kids safety glasses and screwdrivers, and let them take apart and sort the parts.": 5.67,
+        "Record a 10-minute radio drama as a group: kids write a script, make sound effects with kitchen items, and each guest goes home with the audio file.": 6
+      }
+    },
+    {
+      "prompt": "Name ideas for a new productivity app",
+      "cliche": [
+        "A to-do list app with due dates, reminders, priority tags, and project folders that syncs across phone and computer.",
+        "A Pomodoro timer app that alternates focused work sessions with short breaks and shows daily statistics on completed sessions.",
+        "A habit tracker that records daily routines, shows streak counts, and sends reminders to keep users consistent."
+      ],
+      "mid": [
+        "A habit tracker for pairs: two people each log a habit, and a streak only continues if both complete it that day.",
+        "A calendar app that blocks time for tasks using your past actual durations rather than your estimates, and shows how far your guesses were off."
+      ],
+      "far": [
+        "A to-do list that deletes tasks you have rescheduled three times, asking you to either do them now or drop them, so the list stays honest.",
+        "A Pomodoro timer that lengthens or shortens your work blocks based on when your typing speed and error rate show your focus fading.",
+        "An app that records a ten-second voice note when you stop working, then plays it back as the first thing you hear next session so you restart mid-thought.",
+        "A tool that reads your sent emails and meeting notes to find promises you made, such as 'I'll send that Friday,' and turns them into a commitments list.",
+        "A phone app that tracks the cost of switching tasks by logging each app change on your computer, then reports which specific interruptions cost you the most recovery time."
+      ],
+      "labels": {
+        "A to-do list app with due dates, reminders, priority tags, and project folders that syncs across phone and computer.": 1,
+        "A Pomodoro timer app that alternates focused work sessions with short breaks and shows daily statistics on completed sessions.": 1,
+        "A habit tracker that records daily routines, shows streak counts, and sends reminders to keep users consistent.": 1,
+        "A to-do list that deletes tasks you have rescheduled three times, asking you to either do them now or drop them, so the list stays honest.": 4.67,
+        "A Pomodoro timer that lengthens or shortens your work blocks based on when your typing speed and error rate show your focus fading.": 5,
+        "A habit tracker for pairs: two people each log a habit, and a streak only continues if both complete it that day.": 4,
+        "A calendar app that blocks time for tasks using your past actual durations rather than your estimates, and shows how far your guesses were off.": 3.67,
+        "An app that records a ten-second voice note when you stop working, then plays it back as the first thing you hear next session so you restart mid-thought.": 6,
+        "A tool that reads your sent emails and meeting notes to find promises you made, such as 'I'll send that Friday,' and turns them into a commitments list.": 4.67,
+        "A phone app that tracks the cost of switching tasks by logging each app change on your computer, then reports which specific interruptions cost you the most recovery time.": 5.33
+      }
+    },
+    {
+      "prompt": "How can a city reduce traffic congestion?",
+      "cliche": [
+        "Expand and improve public transit with more frequent buses and trains, so more people choose them over driving.",
+        "Build more bike lanes and pedestrian infrastructure so short trips can be made without a car.",
+        "Charge congestion pricing for driving into the busiest central areas during peak hours."
+      ],
+      "mid": [
+        "Use congestion pricing, but return the revenue as monthly cash or transit credits to residents, making the policy visibly beneficial and politically easier to keep.",
+        "Adjust traffic signals with real-time sensors, but give priority to buses and full cars rather than treating all vehicles equally.",
+        "Encourage remote work by paying employers to stagger start times by neighborhood, so each district's rush hour peaks at a different time.",
+        "Convert some parking spaces to loading bays with time limits and booking, since double-parked delivery vehicles block lanes and cause many slowdowns.",
+        "Time school bell schedules across districts so they don't coincide with commuter peaks, and have schools in the same area start at different times to spread drop-off traffic."
+      ],
+      "far": [
+        "Require large event venues to bundle transit fares into tickets and release attendees in timed waves by section, preventing sudden surges on nearby roads.",
+        "Publish a public map of recurring crash and breakdown hotspots and contract tow trucks to stand by there at rush hour, since clearing minor incidents within minutes prevents most secondary jams."
+      ],
+      "labels": {
+        "Expand and improve public transit with more frequent buses and trains, so more people choose them over driving.": 1,
+        "Build more bike lanes and pedestrian infrastructure so short trips can be made without a car.": 1,
+        "Charge congestion pricing for driving into the busiest central areas during peak hours.": 1.67,
+        "Use congestion pricing, but return the revenue as monthly cash or transit credits to residents, making the policy visibly beneficial and politically easier to keep.": 4,
+        "Adjust traffic signals with real-time sensors, but give priority to buses and full cars rather than treating all vehicles equally.": 3,
+        "Encourage remote work by paying employers to stagger start times by neighborhood, so each district's rush hour peaks at a different time.": 4,
+        "Convert some parking spaces to loading bays with time limits and booking, since double-parked delivery vehicles block lanes and cause many slowdowns.": 3.67,
+        "Time school bell schedules across districts so they don't coincide with commuter peaks, and have schools in the same area start at different times to spread drop-off traffic.": 4,
+        "Require large event venues to bundle transit fares into tickets and release attendees in timed waves by section, preventing sudden surges on nearby roads.": 4.67,
+        "Publish a public map of recurring crash and breakdown hotspots and contract tow trucks to stand by there at rush hour, since clearing minor incidents within minutes prevents most secondary jams.": 4.67
+      }
+    },
+    {
+      "prompt": "Suggest a marketing campaign for a new running shoe",
+      "cliche": [
+        "Hire well-known athletes and fitness influencers to wear and review the shoe on Instagram, TikTok, and YouTube, with discount codes for their followers.",
+        "Run a social media campaign with a branded hashtag where customers post their runs in the new shoe, with a prize for the best entries.",
+        "Host a launch event, such as a 5K fun run, where attendees can try the shoe for free and buy it at a launch discount."
+      ],
+      "mid": [
+        "Use influencers, but pick ordinary runners who have logged the most verified miles on Strava, and pay them to publish honest wear reports at 100, 300, and 500 miles.",
+        "Run a hashtag challenge where the prize is tied to distance: the brand donates a set amount per mile logged in the shoe, with totals shown on a public live map.",
+        "Offer a trade-in program: customers send in worn-out shoes of any brand, get credit toward the new pair, and the old shoes are shredded into material for the next track surface the brand donates."
+      ],
+      "far": [
+        "Sponsor local running clubs, but instead of giving them gear, give each club a shared pair to rotate among members for a month and publish their combined mileage and feedback.",
+        "Place QR-coded stickers on mile markers along popular local running routes. Scanning shows the route's elevation, surface type, and which shoe model suits it best, with a link to the new shoe.",
+        "Partner with physical therapists and podiatry clinics to loan the shoe to patients returning from running injuries, then publish anonymized recovery data on how many resumed training comfortably.",
+        "Sell the shoe with a wear-based guarantee: sensors in the insole count steps, and when it reaches a published mileage threshold, the buyer gets a replacement pair at half price automatically."
+      ],
+      "labels": {
+        "Hire well-known athletes and fitness influencers to wear and review the shoe on Instagram, TikTok, and YouTube, with discount codes for their followers.": 1,
+        "Run a social media campaign with a branded hashtag where customers post their runs in the new shoe, with a prize for the best entries.": 1.33,
+        "Host a launch event, such as a 5K fun run, where attendees can try the shoe for free and buy it at a launch discount.": 1.33,
+        "Sponsor local running clubs, but instead of giving them gear, give each club a shared pair to rotate among members for a month and publish their combined mileage and feedback.": 4.67,
+        "Use influencers, but pick ordinary runners who have logged the most verified miles on Strava, and pay them to publish honest wear reports at 100, 300, and 500 miles.": 4,
+        "Run a hashtag challenge where the prize is tied to distance: the brand donates a set amount per mile logged in the shoe, with totals shown on a public live map.": 3,
+        "Offer a trade-in program: customers send in worn-out shoes of any brand, get credit toward the new pair, and the old shoes are shredded into material for the next track surface the brand donates.": 4,
+        "Place QR-coded stickers on mile markers along popular local running routes. Scanning shows the route's elevation, surface type, and which shoe model suits it best, with a link to the new shoe.": 4.67,
+        "Partner with physical therapists and podiatry clinics to loan the shoe to patients returning from running injuries, then publish anonymized recovery data on how many resumed training comfortably.": 5,
+        "Sell the shoe with a wear-based guarantee: sensors in the insole count steps, and when it reaches a published mileage threshold, the buyer gets a replacement pair at half price automatically.": 5.33
+      }
+    },
+    {
+      "prompt": "Ideas to improve employee engagement in a remote team",
+      "cliche": [
+        "Hold regular one-on-one meetings between each employee and their manager to discuss goals, concerns, and feedback.",
+        "Organize virtual team-building activities such as online games, trivia, or coffee chats to help colleagues bond.",
+        "Recognize good work publicly through shout-outs in team channels, awards, or small bonuses so people feel their contributions are noticed."
+      ],
+      "mid": [
+        "Replace status meetings with a shared written update thread, then use the freed meeting time for optional sessions where people demo unfinished work and get early feedback.",
+        "Run virtual coffee pairings, but match people by a shared problem they are currently stuck on rather than randomly, so the chat produces something useful.",
+        "Let team members rotate the role of meeting owner each week, choosing the agenda, format, and length, including cancelling the meeting if it is unnecessary.",
+        "Give each person a yearly learning budget, but require them to teach one thing they learned to the team in a short recorded session."
+      ],
+      "far": [
+        "Mail each new hire a handwritten note from every teammate's own city, with a local postcard, then map the postcards on a shared wall that stays updated as people join.",
+        "Keep a public 'decisions I regret' log where leaders post choices that went wrong and what changed, so staff see that disagreement and correction are safe and acted upon.",
+        "Hold a quarterly 'job swap shadow hour' where two people from unrelated functions screen-share their normal workday for sixty minutes, then each proposes one small fix to the other's process."
+      ],
+      "labels": {
+        "Hold regular one-on-one meetings between each employee and their manager to discuss goals, concerns, and feedback.": 1,
+        "Organize virtual team-building activities such as online games, trivia, or coffee chats to help colleagues bond.": 1,
+        "Recognize good work publicly through shout-outs in team channels, awards, or small bonuses so people feel their contributions are noticed.": 1,
+        "Replace status meetings with a shared written update thread, then use the freed meeting time for optional sessions where people demo unfinished work and get early feedback.": 3.33,
+        "Run virtual coffee pairings, but match people by a shared problem they are currently stuck on rather than randomly, so the chat produces something useful.": 4,
+        "Let team members rotate the role of meeting owner each week, choosing the agenda, format, and length, including cancelling the meeting if it is unnecessary.": 3.67,
+        "Give each person a yearly learning budget, but require them to teach one thing they learned to the team in a short recorded session.": 3,
+        "Mail each new hire a handwritten note from every teammate's own city, with a local postcard, then map the postcards on a shared wall that stays updated as people join.": 5,
+        "Keep a public 'decisions I regret' log where leaders post choices that went wrong and what changed, so staff see that disagreement and correction are safe and acted upon.": 4.67,
+        "Hold a quarterly 'job swap shadow hour' where two people from unrelated functions screen-share their normal workday for sixty minutes, then each proposes one small fix to the other's process.": 5
+      }
+    },
+    {
+      "prompt": "What could a museum do to attract teenagers?",
+      "cliche": [
+        "Offer interactive and digital exhibits, such as VR tours and touchscreen games, so teens can engage with collections through technology they already use.",
+        "Run a strong social media presence on TikTok and Instagram, posting short videos of objects, behind-the-scenes clips, and challenges that link back to visiting.",
+        "Provide discounted or free admission for teens, and host special evening events with music, food, and activities aimed at their age group."
+      ],
+      "mid": [
+        "Hire teens as paid curators for one gallery per year. They choose objects, write labels in their own voice, and the museum publishes their rationale beside each piece.",
+        "Host a late-night event where teens bring a friend and each pair solves a mystery using clues hidden in the exhibits, with the solving app built by a local school coding club.",
+        "Create a photo spot program where teens judge which gallery corners work best for photos, then the museum adds lighting and seating there and credits the teen photographers on a wall.",
+        "Partner with school exam boards to offer a quiet study room inside the museum with free wifi, where relevant objects are placed nearby for revision of history and science topics."
+      ],
+      "far": [
+        "Let teens borrow objects from the education collection for a week, like a library, to photograph, sketch, or build stories around, and then return them with a written note that goes in the object's file.",
+        "Invite teens to audit the museum's wall labels by marking which words they did not understand with sticky dots, then rewrite the most-dotted labels together with curators and test again.",
+        "Offer a repair bench where teens learn to conserve real damaged items, such as old radios or clothing, with a conservator, and the finished pieces go on display with the repairer's name."
+      ],
+      "labels": {
+        "Offer interactive and digital exhibits, such as VR tours and touchscreen games, so teens can engage with collections through technology they already use.": 1.33,
+        "Run a strong social media presence on TikTok and Instagram, posting short videos of objects, behind-the-scenes clips, and challenges that link back to visiting.": 1,
+        "Provide discounted or free admission for teens, and host special evening events with music, food, and activities aimed at their age group.": 1,
+        "Hire teens as paid curators for one gallery per year. They choose objects, write labels in their own voice, and the museum publishes their rationale beside each piece.": 3.67,
+        "Host a late-night event where teens bring a friend and each pair solves a mystery using clues hidden in the exhibits, with the solving app built by a local school coding club.": 3.33,
+        "Create a photo spot program where teens judge which gallery corners work best for photos, then the museum adds lighting and seating there and credits the teen photographers on a wall.": 4.33,
+        "Partner with school exam boards to offer a quiet study room inside the museum with free wifi, where relevant objects are placed nearby for revision of history and science topics.": 4.33,
+        "Let teens borrow objects from the education collection for a week, like a library, to photograph, sketch, or build stories around, and then return them with a written note that goes in the object's file.": 5.67,
+        "Invite teens to audit the museum's wall labels by marking which words they did not understand with sticky dots, then rewrite the most-dotted labels together with curators and test again.": 4.67,
+        "Offer a repair bench where teens learn to conserve real damaged items, such as old radios or clothing, with a conservator, and the finished pieces go on display with the repairer's name.": 5.33
+      }
+    },
+    {
+      "prompt": "How can a non-profit raise money without asking for donations?",
+      "cliche": [
+        "Sell merchandise such as shirts, mugs, and tote bags with the organization's logo or mission message through an online store.",
+        "Host ticketed fundraising events like galas, charity runs, auctions, or concerts where revenue comes from tickets and sponsorships.",
+        "Apply for grants from foundations, corporations, and government agencies that fund work matching the nonprofit's mission.",
+        "Run a social enterprise that employs the people it serves, such as a bakery staffed by job trainees, and reinvest profits into programs."
+      ],
+      "mid": [
+        "Offer paid workshops and trainings built from the nonprofit's expertise, sold to companies at commercial rates, with the same course offered free or discounted to the communities it serves.",
+        "Create a corporate partnership where a business pays to include a service of the nonprofit in its product, like a per-purchase fee, instead of a gift or sponsorship.",
+        "Rent out underused space, such as a hall, kitchen, or parking lot, on weekday evenings to local businesses, film crews, and event planners, with a booking calendar online.",
+        "Sell a service to local government by bidding on contracts, such as running a recycling pickup route or a municipal translation line, priced to cover costs plus a margin.",
+        "Buy a small commercial property or a share of a local building, rent most of it at market price, and use the rental income as a permanent funding stream."
+      ],
+      "far": [
+        "License the nonprofit's field data, such as trail conditions, bird counts, or neighborhood surveys, to researchers and companies that need it, with privacy rules and community consent."
+      ],
+      "labels": {
+        "Sell merchandise such as shirts, mugs, and tote bags with the organization's logo or mission message through an online store.": 1,
+        "Host ticketed fundraising events like galas, charity runs, auctions, or concerts where revenue comes from tickets and sponsorships.": 1.33,
+        "Apply for grants from foundations, corporations, and government agencies that fund work matching the nonprofit's mission.": 1,
+        "Offer paid workshops and trainings built from the nonprofit's expertise, sold to companies at commercial rates, with the same course offered free or discounted to the communities it serves.": 3,
+        "Run a social enterprise that employs the people it serves, such as a bakery staffed by job trainees, and reinvest profits into programs.": 2.33,
+        "Create a corporate partnership where a business pays to include a service of the nonprofit in its product, like a per-purchase fee, instead of a gift or sponsorship.": 3.67,
+        "Rent out underused space, such as a hall, kitchen, or parking lot, on weekday evenings to local businesses, film crews, and event planners, with a booking calendar online.": 2.67,
+        "License the nonprofit's field data, such as trail conditions, bird counts, or neighborhood surveys, to researchers and companies that need it, with privacy rules and community consent.": 5,
+        "Sell a service to local government by bidding on contracts, such as running a recycling pickup route or a municipal translation line, priced to cover costs plus a margin.": 4.33,
+        "Buy a small commercial property or a share of a local building, rent most of it at market price, and use the rental income as a permanent funding stream.": 3.67
+      }
+    },
+    {
+      "prompt": "Suggest a new feature for a note-taking app",
+      "cliche": [
+        "Add AI-generated summaries of long notes so users can quickly review the main points without rereading everything.",
+        "Offer real-time collaboration so multiple people can edit the same note at once, with comments and shared folders.",
+        "Include a voice-to-text option that transcribes spoken audio into a note, with the original recording saved alongside it."
+      ],
+      "mid": [
+        "Spaced-repetition review: the app resurfaces old notes on a forgetting-curve schedule, but only notes the user tagged as worth remembering, sent as a short daily digest.",
+        "Note linking that shows a graph, but each link is labeled with the reason for the connection, such as 'contradicts' or 'example of', so the graph can be filtered by relationship type.",
+        "Templates that adapt over time: the app notices which headings you always add to meeting notes and gradually changes the default template to match your habits.",
+        "Location-triggered reminders where a note reappears when you arrive somewhere, like a shopping list at the store, and silences itself once you've checked off its items.",
+        "Handwriting-style diff view that shows how a note changed over months as a timeline of edits, letting you see what you deleted and when you changed your mind about a decision."
+      ],
+      "far": [
+        "Staleness marker: each factual claim or number in a note can be given an expiry date, and the app flags it for rechecking when that date passes, such as prices or phone numbers.",
+        "Reading-order export: select any set of scattered notes and the app proposes a sequence based on their shared terms and dependencies, then compiles them into a single draft with gaps marked as empty placeholders."
+      ],
+      "labels": {
+        "Add AI-generated summaries of long notes so users can quickly review the main points without rereading everything.": 1,
+        "Offer real-time collaboration so multiple people can edit the same note at once, with comments and shared folders.": 1,
+        "Include a voice-to-text option that transcribes spoken audio into a note, with the original recording saved alongside it.": 1,
+        "Spaced-repetition review: the app resurfaces old notes on a forgetting-curve schedule, but only notes the user tagged as worth remembering, sent as a short daily digest.": 3,
+        "Note linking that shows a graph, but each link is labeled with the reason for the connection, such as 'contradicts' or 'example of', so the graph can be filtered by relationship type.": 4.33,
+        "Templates that adapt over time: the app notices which headings you always add to meeting notes and gradually changes the default template to match your habits.": 4.33,
+        "Location-triggered reminders where a note reappears when you arrive somewhere, like a shopping list at the store, and silences itself once you've checked off its items.": 2.67,
+        "Staleness marker: each factual claim or number in a note can be given an expiry date, and the app flags it for rechecking when that date passes, such as prices or phone numbers.": 5.67,
+        "Handwriting-style diff view that shows how a note changed over months as a timeline of edits, letting you see what you deleted and when you changed your mind about a decision.": 4,
+        "Reading-order export: select any set of scattered notes and the app proposes a sequence based on their shared terms and dependencies, then compiles them into a single draft with gaps marked as empty placeholders.": 6
+      }
+    },
+    {
+      "prompt": "Suggest a weekend project to teach kids about money",
+      "cliche": [
+        "Set up a lemonade stand. Kids buy supplies, set prices, sell to neighbors, and calculate profit at the end of the day.",
+        "Make three jars labeled Save, Spend, and Give. Kids split a week's allowance among them and decide what to do with each jar's contents.",
+        "Take kids grocery shopping with a fixed budget and a list. They compare prices, pick items, and track the total as they go."
+      ],
+      "mid": [
+        "Run a lemonade stand where costs change midway, such as ice doubling in price or a rainy hour, so kids must adjust prices and see how margins shift.",
+        "Create a family bank where parents pay weekly interest on savings. Kids watch deposits grow and compare against spending right away, with a ledger book kept by the kids.",
+        "Hold a living-room store from their old toys. Kids price items, and parents shop with play money and haggle, so kids experience both setting prices and being the buyer.",
+        "Plan a family dinner out with a set budget. Kids research menus, pick the restaurant, calculate tax and tip, and keep the family under budget to earn a dessert fund.",
+        "Give kids a dollar-store item and a few dollars of materials to improve it, then sell it at a price they choose. Afterward they work out whether the upgrade was worth the cost.",
+        "Dig out the family's old receipts or a month of utility bills. Kids find the biggest costs, then try a weekend experiment, like fewer lights or shorter showers, to cut the next bill."
+      ],
+      "far": [
+        "Hold a mock auction with the kids' own chores as the lots. Each child gets the same play-money budget and bids for chores or privileges, learning scarcity and opportunity cost."
+      ],
+      "labels": {
+        "Set up a lemonade stand. Kids buy supplies, set prices, sell to neighbors, and calculate profit at the end of the day.": 1,
+        "Make three jars labeled Save, Spend, and Give. Kids split a week's allowance among them and decide what to do with each jar's contents.": 1.33,
+        "Take kids grocery shopping with a fixed budget and a list. They compare prices, pick items, and track the total as they go.": 2,
+        "Run a lemonade stand where costs change midway, such as ice doubling in price or a rainy hour, so kids must adjust prices and see how margins shift.": 3,
+        "Create a family bank where parents pay weekly interest on savings. Kids watch deposits grow and compare against spending right away, with a ledger book kept by the kids.": 3,
+        "Hold a living-room store from their old toys. Kids price items, and parents shop with play money and haggle, so kids experience both setting prices and being the buyer.": 2.67,
+        "Plan a family dinner out with a set budget. Kids research menus, pick the restaurant, calculate tax and tip, and keep the family under budget to earn a dessert fund.": 3,
+        "Give kids a dollar-store item and a few dollars of materials to improve it, then sell it at a price they choose. Afterward they work out whether the upgrade was worth the cost.": 4.33,
+        "Dig out the family's old receipts or a month of utility bills. Kids find the biggest costs, then try a weekend experiment, like fewer lights or shorter showers, to cut the next bill.": 4,
+        "Hold a mock auction with the kids' own chores as the lots. Each child gets the same play-money budget and bids for chores or privileges, learning scarcity and opportunity cost.": 5
+      }
+    },
+    {
+      "prompt": "How can a public library stay relevant?",
+      "cliche": [
+        "Expand digital offerings such as e-books, audiobooks, streaming media, and online databases so patrons can access the collection from home.",
+        "Host community events like author talks, children's story hours, workshops, and classes to make the library a gathering place.",
+        "Offer free technology access, including computers, Wi-Fi, printing, and digital literacy training for people who lack them at home."
+      ],
+      "mid": [
+        "Run a library of things, but let patrons vote on and donate items, and track which tools get used so the stock reflects actual neighborhood needs.",
+        "Turn story hours into intergenerational sessions where seniors read to children and children teach seniors phone skills, giving both groups a reason to come regularly.",
+        "Offer makerspaces staffed by local tradespeople paid as part-time instructors, so patrons learn practical skills like plumbing repair, sewing, and basic electrical work.",
+        "Create a human library where neighbors can be borrowed for a conversation, such as a retired nurse or a refugee, with topics searchable in the catalog."
+      ],
+      "far": [
+        "Digitize and index local records like church bulletins, school yearbooks, and shop receipts, then let residents tag faces and places, so the library becomes the neighborhood's searchable memory.",
+        "Lend out quiet, bookable rooms by the hour as legal-aid and telehealth booths, with soundproofing, a private network, and a staff member who troubleshoots the video setup.",
+        "Partner with the local weather service, utility, and emergency office to stock the library with outlets, cooling or heating, and water, and run drills so residents know it is the neighborhood shelter during outages."
+      ],
+      "labels": {
+        "Expand digital offerings such as e-books, audiobooks, streaming media, and online databases so patrons can access the collection from home.": 1,
+        "Host community events like author talks, children's story hours, workshops, and classes to make the library a gathering place.": 1,
+        "Offer free technology access, including computers, Wi-Fi, printing, and digital literacy training for people who lack them at home.": 1,
+        "Run a library of things, but let patrons vote on and donate items, and track which tools get used so the stock reflects actual neighborhood needs.": 3.67,
+        "Turn story hours into intergenerational sessions where seniors read to children and children teach seniors phone skills, giving both groups a reason to come regularly.": 3.67,
+        "Offer makerspaces staffed by local tradespeople paid as part-time instructors, so patrons learn practical skills like plumbing repair, sewing, and basic electrical work.": 3.33,
+        "Create a human library where neighbors can be borrowed for a conversation, such as a retired nurse or a refugee, with topics searchable in the catalog.": 3.33,
+        "Digitize and index local records like church bulletins, school yearbooks, and shop receipts, then let residents tag faces and places, so the library becomes the neighborhood's searchable memory.": 4.67,
+        "Lend out quiet, bookable rooms by the hour as legal-aid and telehealth booths, with soundproofing, a private network, and a staff member who troubleshoots the video setup.": 4.67,
+        "Partner with the local weather service, utility, and emergency office to stock the library with outlets, cooling or heating, and water, and run drills so residents know it is the neighborhood shelter during outages.": 4.67
+      }
+    },
+    {
+      "prompt": "Ideas for a team-building activity for software engineers",
+      "cliche": [
+        "Host an escape room where the team has to solve puzzles together within an hour, then debrief over lunch.",
+        "Run a one-day internal hackathon where mixed groups build any small project they choose and demo it to the company at the end.",
+        "Organize a team outing with games like bowling, mini golf, or board games, followed by dinner at a nearby restaurant."
+      ],
+      "mid": [
+        "Hold a hackathon where each team must build something using a tool or language none of its members has used, and pair each senior engineer with a newest hire.",
+        "Run an escape room, but afterward the team writes a postmortem of how they solved it: who blocked, who communicated well, what process failed.",
+        "Swap bug backlogs: each engineer spends an afternoon fixing a small, annoying issue that another team has listed as a low-priority pain point, then presents the fix to its owners."
+      ],
+      "far": [
+        "Do a cooking session where the team follows one recipe split into roles, with only written tickets for communication and no talking allowed during the first half.",
+        "Play a board game session where each person designs one rule change, and the group must agree on a final ruleset using a lightweight RFC process.",
+        "Have everyone bring a broken household item or old gadget, then pair up to diagnose and repair it with only shared tools and online manuals, no one working on their own item.",
+        "Run a reverse onboarding day: veterans are given a fake new-hire laptop and the current setup docs, follow them from scratch, and collectively fix every broken step they hit."
+      ],
+      "labels": {
+        "Host an escape room where the team has to solve puzzles together within an hour, then debrief over lunch.": 1,
+        "Run a one-day internal hackathon where mixed groups build any small project they choose and demo it to the company at the end.": 2,
+        "Organize a team outing with games like bowling, mini golf, or board games, followed by dinner at a nearby restaurant.": 1,
+        "Hold a hackathon where each team must build something using a tool or language none of its members has used, and pair each senior engineer with a newest hire.": 3.67,
+        "Run an escape room, but afterward the team writes a postmortem of how they solved it: who blocked, who communicated well, what process failed.": 4,
+        "Do a cooking session where the team follows one recipe split into roles, with only written tickets for communication and no talking allowed during the first half.": 5.33,
+        "Play a board game session where each person designs one rule change, and the group must agree on a final ruleset using a lightweight RFC process.": 5.33,
+        "Swap bug backlogs: each engineer spends an afternoon fixing a small, annoying issue that another team has listed as a low-priority pain point, then presents the fix to its owners.": 4.33,
+        "Have everyone bring a broken household item or old gadget, then pair up to diagnose and repair it with only shared tools and online manuals, no one working on their own item.": 5.33,
+        "Run a reverse onboarding day: veterans are given a fake new-hire laptop and the current setup docs, follow them from scratch, and collectively fix every broken step they hit.": 5.33
+      }
+    },
+    {
+      "prompt": "How can a restaurant reduce food waste?",
+      "cliche": [
+        "Track what gets thrown away by weighing waste daily and logging reasons, then adjust purchasing and prep quantities based on the data.",
+        "Train staff on portion control and proper storage, using first-in-first-out labeling so older ingredients are used before they spoil.",
+        "Donate surplus edible food to local food banks or shelters, and send inedible scraps to composting or animal feed programs.",
+        "Let guests choose small, regular, or large portions at set prices, and ask at ordering whether they want sides that often go uneaten, like bread or fries.",
+        "Redesign the menu so many dishes share the same ingredients across cuisines, and cross-use trimmings such as turning stems into pesto and bones into stock.",
+        "Sell end-of-night surplus as discounted sealed meal boxes through an app, with pickup after closing, so unsold prepared food earns revenue instead of being binned."
+      ],
+      "mid": [
+        "Offer a daily special built only from ingredients nearing expiry, with the chef setting the menu each afternoon from a walk-in cooler inventory check.",
+        "Ask regular suppliers to deliver on a staggered schedule based on your weekly reservation pattern, and agree to take misshapen produce at lower prices in exchange for flexible order sizes."
+      ],
+      "far": [
+        "Photograph the plate return tray at dishwashing for two weeks, then review the images with cooks to see which dishes or garnishes come back untouched and cut them.",
+        "Install a cheap temperature logger in each fridge and review the data monthly; units that run warm or have frequent door-open spikes are spoiling food, so repair or relocate stock accordingly."
+      ],
+      "labels": {
+        "Track what gets thrown away by weighing waste daily and logging reasons, then adjust purchasing and prep quantities based on the data.": 2,
+        "Train staff on portion control and proper storage, using first-in-first-out labeling so older ingredients are used before they spoil.": 1,
+        "Donate surplus edible food to local food banks or shelters, and send inedible scraps to composting or animal feed programs.": 1,
+        "Offer a daily special built only from ingredients nearing expiry, with the chef setting the menu each afternoon from a walk-in cooler inventory check.": 2.67,
+        "Let guests choose small, regular, or large portions at set prices, and ask at ordering whether they want sides that often go uneaten, like bread or fries.": 2.33,
+        "Redesign the menu so many dishes share the same ingredients across cuisines, and cross-use trimmings such as turning stems into pesto and bones into stock.": 2.33,
+        "Sell end-of-night surplus as discounted sealed meal boxes through an app, with pickup after closing, so unsold prepared food earns revenue instead of being binned.": 2.33,
+        "Photograph the plate return tray at dishwashing for two weeks, then review the images with cooks to see which dishes or garnishes come back untouched and cut them.": 5,
+        "Ask regular suppliers to deliver on a staggered schedule based on your weekly reservation pattern, and agree to take misshapen produce at lower prices in exchange for flexible order sizes.": 3.67,
+        "Install a cheap temperature logger in each fridge and review the data monthly; units that run warm or have frequent door-open spikes are spoiling food, so repair or relocate stock accordingly.": 4.67
+      }
+    },
+    {
+      "prompt": "Suggest a gift for a grandmother who has everything",
+      "cliche": [
+        "A custom photo album or framed collage of family pictures from across the years, with handwritten captions identifying people, places and dates.",
+        "A bouquet of fresh flowers or a long-lasting plant delivered to her door, ideally arranged around her favorite colors.",
+        "A day out together, such as lunch at her favorite restaurant followed by a walk or a visit to a garden."
+      ],
+      "mid": [
+        "A subscription to a monthly flower or fruit delivery, but timed so each box arrives with a handwritten note from a different family member.",
+        "A cookbook of her own recipes, tested and photographed by the grandchildren, with her stories in the margins and a blank page for each cook to add changes.",
+        "A spend-the-day gift: you come over and do a chore she dislikes, such as sorting the garage or cleaning gutters, then she picks dinner.",
+        "Pay to digitize her old home videos and cassette tapes, then load the clips onto a simple tablet pre-set to play them with one button."
+      ],
+      "far": [
+        "A photo book of family pictures where each page has a short voice recording attached via QR code, so she can hear grandchildren explain the photo.",
+        "Hire a local genealogist or use archive access to trace her mother's side to the original village, then give her a bound folder with copies of the actual documents.",
+        "Commission a local sign painter or woodworker to make a bench plaque or a small birdhouse replica of her childhood home from old photographs."
+      ],
+      "labels": {
+        "A custom photo album or framed collage of family pictures from across the years, with handwritten captions identifying people, places and dates.": 2,
+        "A bouquet of fresh flowers or a long-lasting plant delivered to her door, ideally arranged around her favorite colors.": 1,
+        "A day out together, such as lunch at her favorite restaurant followed by a walk or a visit to a garden.": 1,
+        "A photo book of family pictures where each page has a short voice recording attached via QR code, so she can hear grandchildren explain the photo.": 4.67,
+        "A subscription to a monthly flower or fruit delivery, but timed so each box arrives with a handwritten note from a different family member.": 3.67,
+        "A cookbook of her own recipes, tested and photographed by the grandchildren, with her stories in the margins and a blank page for each cook to add changes.": 3.67,
+        "A spend-the-day gift: you come over and do a chore she dislikes, such as sorting the garage or cleaning gutters, then she picks dinner.": 3.67,
+        "Hire a local genealogist or use archive access to trace her mother's side to the original village, then give her a bound folder with copies of the actual documents.": 5,
+        "Pay to digitize her old home videos and cassette tapes, then load the clips onto a simple tablet pre-set to play them with one button.": 3.67,
+        "Commission a local sign painter or woodworker to make a bench plaque or a small birdhouse replica of her childhood home from old photographs.": 6
+      }
+    },
+    {
+      "prompt": "How can a university improve student retention?",
+      "cliche": [
+        "Expand academic support such as tutoring, writing centers, and supplemental instruction so struggling students get help early in their courses.",
+        "Increase financial aid, scholarships, and emergency grants so cost pressures do not force students to drop out.",
+        "Assign each student an academic advisor and mentor who checks in regularly and helps build a sense of belonging on campus."
+      ],
+      "mid": [
+        "Use early-alert analytics on attendance and grades, but route alerts to a peer who texts the student casually, not to an administrator who sends a formal warning.",
+        "Offer emergency grants under $500 with a one-day approval and no paperwork, since small unpaid fees like parking fines or a laptop repair often trigger dropouts.",
+        "Redesign gateway courses like calculus and chemistry so the first graded assessment comes in week two and is low-stakes, letting students learn the standards before failing.",
+        "Interview students who have already withdrawn, plus the ones who nearly did, then give a monthly list of the actual triggers to the registrar and housing so they fix specific procedures."
+      ],
+      "far": [
+        "Pay students in their first year to join a small cohort course taught by a staff member from outside their major, creating one durable adult relationship early.",
+        "Offer a guaranteed re-entry pass: a student who leaves in good standing keeps their housing priority, credits, and aid estimate for three years, making a pause less likely to become permanent.",
+        "Place a short, voluntary 'dropout rehearsal' step in the withdrawal form: students must meet someone who maps a leave-of-absence, a reduced load, or a transfer, often revealing options they never knew existed."
+      ],
+      "labels": {
+        "Expand academic support such as tutoring, writing centers, and supplemental instruction so struggling students get help early in their courses.": 1,
+        "Increase financial aid, scholarships, and emergency grants so cost pressures do not force students to drop out.": 1,
+        "Assign each student an academic advisor and mentor who checks in regularly and helps build a sense of belonging on campus.": 1,
+        "Use early-alert analytics on attendance and grades, but route alerts to a peer who texts the student casually, not to an administrator who sends a formal warning.": 3.67,
+        "Offer emergency grants under $500 with a one-day approval and no paperwork, since small unpaid fees like parking fines or a laptop repair often trigger dropouts.": 3,
+        "Pay students in their first year to join a small cohort course taught by a staff member from outside their major, creating one durable adult relationship early.": 5,
+        "Redesign gateway courses like calculus and chemistry so the first graded assessment comes in week two and is low-stakes, letting students learn the standards before failing.": 2.67,
+        "Interview students who have already withdrawn, plus the ones who nearly did, then give a monthly list of the actual triggers to the registrar and housing so they fix specific procedures.": 4,
+        "Offer a guaranteed re-entry pass: a student who leaves in good standing keeps their housing priority, credits, and aid estimate for three years, making a pause less likely to become permanent.": 4.67,
+        "Place a short, voluntary 'dropout rehearsal' step in the withdrawal form: students must meet someone who maps a leave-of-absence, a reduced load, or a transfer, often revealing options they never knew existed.": 4.67
+      }
+    },
+    {
+      "prompt": "Ideas for a podcast about history",
+      "cliche": [
+        "A chronological tour of major world events, with each episode covering one era from ancient civilizations through the modern age.",
+        "Biographical episodes on famous historical figures such as Cleopatra, Napoleon, and Lincoln, covering their lives, decisions, and legacies.",
+        "Deep dives into a single war per season, such as World War II, covering causes, key battles, and consequences, with interviews from historians."
+      ],
+      "mid": [
+        "Each episode retells a famous historical event from the viewpoint of an ordinary bystander, like a baker in Pompeii or a clerk at Versailles, using surviving records.",
+        "A show on history's biggest mistakes in forecasting, where each episode examines a confident prediction that failed, such as the 1900 predictions for the year 2000, and why experts missed.",
+        "Two hosts argue opposing interpretations of one historical question per episode, like why Rome fell, then a guest historian scores the arguments against the evidence.",
+        "Episodes built around one local object in a listener's town, such as a statue or street name, tracing who chose it and what the choice says about its time."
+      ],
+      "far": [
+        "Each episode reconstructs a historical year through its surviving grocery prices, wage records, and tax receipts, telling the era's story only through what things cost.",
+        "A podcast that reads the marginal notes, doodles, and corrections in a single medieval or early modern manuscript or ledger, one page per episode, with a paleographer explaining them.",
+        "Episodes follow the paper trail of failed bureaucratic requests, like rejected petitions and denied permits across centuries, to show what ordinary people wanted from governments and were refused."
+      ],
+      "labels": {
+        "A chronological tour of major world events, with each episode covering one era from ancient civilizations through the modern age.": 1,
+        "Biographical episodes on famous historical figures such as Cleopatra, Napoleon, and Lincoln, covering their lives, decisions, and legacies.": 1,
+        "Deep dives into a single war per season, such as World War II, covering causes, key battles, and consequences, with interviews from historians.": 1.67,
+        "Each episode retells a famous historical event from the viewpoint of an ordinary bystander, like a baker in Pompeii or a clerk at Versailles, using surviving records.": 3,
+        "A show on history's biggest mistakes in forecasting, where each episode examines a confident prediction that failed, such as the 1900 predictions for the year 2000, and why experts missed.": 4.33,
+        "Two hosts argue opposing interpretations of one historical question per episode, like why Rome fell, then a guest historian scores the arguments against the evidence.": 3.67,
+        "Episodes built around one local object in a listener's town, such as a statue or street name, tracing who chose it and what the choice says about its time.": 4.33,
+        "Each episode reconstructs a historical year through its surviving grocery prices, wage records, and tax receipts, telling the era's story only through what things cost.": 5.33,
+        "A podcast that reads the marginal notes, doodles, and corrections in a single medieval or early modern manuscript or ledger, one page per episode, with a paleographer explaining them.": 6,
+        "Episodes follow the paper trail of failed bureaucratic requests, like rejected petitions and denied permits across centuries, to show what ordinary people wanted from governments and were refused.": 5.67
+      }
+    },
+    {
+      "prompt": "How can a small town attract young residents?",
+      "cliche": [
+        "Create more affordable housing, including starter homes and rentals, so young people can afford to live there instead of in nearby cities.",
+        "Invest in high-speed internet so remote workers and young entrepreneurs can live in town while keeping jobs elsewhere.",
+        "Support local jobs by offering small business grants and recruiting employers, plus hold events like markets and festivals that make the town lively."
+      ],
+      "mid": [
+        "Turn empty main street storefronts into low-rent trial shops with six-month leases, letting young people test business ideas with little risk and keeping the street filled.",
+        "Start a coworking space inside the library or an old bank, with a free childcare corner, so young parents can work remotely without leaving town.",
+        "Run a paid apprenticeship program with retiring tradespeople, such as electricians and mechanics, where the apprentice gets the business at a discount after several years of work.",
+        "Let the town sell vacant lots and condemned houses for one dollar to buyers who post a renovation bond and finish within two years, with the bond refunded on completion.",
+        "Offer former residents who left for college a lifelong alumni-style list, then invite them annually to a paid-for weekend with job leads, listed houses, and mentors who stayed, aiming for returns."
+      ],
+      "far": [
+        "Offer remote worker relocation grants, but pay them in installments tied to local participation, such as joining a volunteer fire crew or teaching a monthly class, so newcomers build ties.",
+        "Hire a part-time town concierge who contacts people who recently searched for or visited the town, arranges home tours, job introductions, and dinners with residents, and tracks who moves."
+      ],
+      "labels": {
+        "Create more affordable housing, including starter homes and rentals, so young people can afford to live there instead of in nearby cities.": 1,
+        "Invest in high-speed internet so remote workers and young entrepreneurs can live in town while keeping jobs elsewhere.": 1,
+        "Support local jobs by offering small business grants and recruiting employers, plus hold events like markets and festivals that make the town lively.": 1,
+        "Offer remote worker relocation grants, but pay them in installments tied to local participation, such as joining a volunteer fire crew or teaching a monthly class, so newcomers build ties.": 4.67,
+        "Turn empty main street storefronts into low-rent trial shops with six-month leases, letting young people test business ideas with little risk and keeping the street filled.": 3,
+        "Start a coworking space inside the library or an old bank, with a free childcare corner, so young parents can work remotely without leaving town.": 3,
+        "Run a paid apprenticeship program with retiring tradespeople, such as electricians and mechanics, where the apprentice gets the business at a discount after several years of work.": 4.33,
+        "Let the town sell vacant lots and condemned houses for one dollar to buyers who post a renovation bond and finish within two years, with the bond refunded on completion.": 2.67,
+        "Hire a part-time town concierge who contacts people who recently searched for or visited the town, arranges home tours, job introductions, and dinners with residents, and tracks who moves.": 5,
+        "Offer former residents who left for college a lifelong alumni-style list, then invite them annually to a paid-for weekend with job leads, listed houses, and mentors who stayed, aiming for returns.": 4
+      }
+    },
+    {
+      "prompt": "How can a city get more people to commute by bike?",
+      "cliche": [
+        "Build a connected network of protected bike lanes physically separated from car traffic, so riders feel safe on the whole route rather than only on isolated segments.",
+        "Provide secure bike parking at transit stations, workplaces, and apartment buildings so people don't worry about theft.",
+        "Run public awareness campaigns and offer subsidies or tax incentives for buying bikes and e-bikes, including for lower-income residents."
+      ],
+      "mid": [
+        "Time traffic signals to bike speed on main bike corridors, with a green wave at about 18 km/h, so riders rarely stop and trips get faster than driving.",
+        "Pay employers a per-employee rebate for converting parking spaces into showers, lockers, and bike storage, rather than just mandating facilities.",
+        "Plow and sweep bike lanes before roads after snow or debris, with a public tracker showing clearing status, so winter and fall riding stays viable."
+      ],
+      "far": [
+        "Let people trade in a car registration for a multi-year e-bike and cargo bike credit, so the subsidy goes to those who actually give up a car.",
+        "Hire retired bike mechanics to staff free repair stands at the busiest intersections during rush hour, fixing flats and adjusting brakes in two minutes while people commute.",
+        "Require delivery companies and ride-hailing drivers to report daily near-miss data on an app, then use the map to rebuild the specific intersections where bike conflicts cluster.",
+        "Give schools a free fleet of bikes for teachers to borrow on a monthly rotation, so that adults try a commute without buying anything and then bring habits home."
+      ],
+      "labels": {
+        "Build a connected network of protected bike lanes physically separated from car traffic, so riders feel safe on the whole route rather than only on isolated segments.": 1,
+        "Provide secure bike parking at transit stations, workplaces, and apartment buildings so people don't worry about theft.": 1.33,
+        "Run public awareness campaigns and offer subsidies or tax incentives for buying bikes and e-bikes, including for lower-income residents.": 1.33,
+        "Let people trade in a car registration for a multi-year e-bike and cargo bike credit, so the subsidy goes to those who actually give up a car.": 4.67,
+        "Time traffic signals to bike speed on main bike corridors, with a green wave at about 18 km/h, so riders rarely stop and trips get faster than driving.": 3.33,
+        "Pay employers a per-employee rebate for converting parking spaces into showers, lockers, and bike storage, rather than just mandating facilities.": 4,
+        "Plow and sweep bike lanes before roads after snow or debris, with a public tracker showing clearing status, so winter and fall riding stays viable.": 3,
+        "Hire retired bike mechanics to staff free repair stands at the busiest intersections during rush hour, fixing flats and adjusting brakes in two minutes while people commute.": 5.33,
+        "Require delivery companies and ride-hailing drivers to report daily near-miss data on an app, then use the map to rebuild the specific intersections where bike conflicts cluster.": 5,
+        "Give schools a free fleet of bikes for teachers to borrow on a monthly rotation, so that adults try a commute without buying anything and then bring habits home.": 5
+      }
+    },
+    {
+      "prompt": "Ideas for a mobile game to play during a commute",
+      "cliche": [
+        "A match-three puzzle game with short levels that take two to three minutes, so you can stop at any station and save progress automatically.",
+        "A trivia quiz app with daily question sets across categories like history, science, and pop culture, played in quick rounds of ten questions.",
+        "An endless runner played with one thumb, with simple tap-to-jump controls and a local high score list to beat each day."
+      ],
+      "mid": [
+        "A word puzzle where the letters and clues come from your actual route: station names, street signs you photograph, and landmarks, so every commute produces a different board.",
+        "A solitaire card game that adapts to ride length: you enter your stops remaining, and it deals a hand solvable within that time, then ends cleanly before you arrive."
+      ],
+      "far": [
+        "A city-building game that grows only while you are moving, using phone motion sensors, so a smooth ride builds faster and stopping at red lights lets citizens vote on changes.",
+        "A cooperative trivia game that matches you with other commuters on the same transit line, with questions about places you both pass, and play pauses when you lose signal in tunnels.",
+        "A listening game for audio-only play: the phone reads out a short sequence of bus-stop announcements and ambient sounds, and you tap when you hear a hidden pattern, so you can play standing with your phone in a pocket.",
+        "A drawing-guess game where you sketch with your finger the people-watching scenes you imagine, such as a stranger's job, and a classmate-style AI offers three guesses, scoring humor rather than accuracy.",
+        "A tiny typing-and-translation game using signs and ads you photograph, which turns them into flashcards in a language you are learning, and the deck rebuilds weekly from your own repeated route."
+      ],
+      "labels": {
+        "A match-three puzzle game with short levels that take two to three minutes, so you can stop at any station and save progress automatically.": 1.33,
+        "A trivia quiz app with daily question sets across categories like history, science, and pop culture, played in quick rounds of ten questions.": 1,
+        "An endless runner played with one thumb, with simple tap-to-jump controls and a local high score list to beat each day.": 1,
+        "A word puzzle where the letters and clues come from your actual route: station names, street signs you photograph, and landmarks, so every commute produces a different board.": 4.33,
+        "A city-building game that grows only while you are moving, using phone motion sensors, so a smooth ride builds faster and stopping at red lights lets citizens vote on changes.": 5.33,
+        "A cooperative trivia game that matches you with other commuters on the same transit line, with questions about places you both pass, and play pauses when you lose signal in tunnels.": 5.33,
+        "A solitaire card game that adapts to ride length: you enter your stops remaining, and it deals a hand solvable within that time, then ends cleanly before you arrive.": 4.33,
+        "A listening game for audio-only play: the phone reads out a short sequence of bus-stop announcements and ambient sounds, and you tap when you hear a hidden pattern, so you can play standing with your phone in a pocket.": 6,
+        "A drawing-guess game where you sketch with your finger the people-watching scenes you imagine, such as a stranger's job, and a classmate-style AI offers three guesses, scoring humor rather than accuracy.": 5.33,
+        "A tiny typing-and-translation game using signs and ads you photograph, which turns them into flashcards in a language you are learning, and the deck rebuilds weekly from your own repeated route.": 4.67
+      }
+    }
+  ]
+}
