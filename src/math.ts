@@ -49,11 +49,24 @@ export interface ClicheBreakdown {
  * An idea that sits as close to the cloud as clichés sit to each other scores ~100.
  * Every `spread` of cosine below that density takes it linearly to 0.
  * Embedders compress cosine differently (gemini-embedding: on-topic texts sit in 0.75-0.95),
- * so by default spread adapts to the cloud: 0.7 * (1 - density).
+ * so by default spread adapts to the cloud: 0.6 * (1 - density).
  * Blend: 70% nearest cliché (you re-invented one specific answer) + 30% centroid
  * (you landed in the middle of the AI consensus), each against the cloud's own reference.
  */
-export function clicheScore(idea: Vector, cloud: Vector[], spreadOverride?: number): ClicheBreakdown {
+export interface ScoreParams {
+  /** spread = spreadK * (1 - density). */
+  spreadK: number;
+  /** Weight of the nearest-cliché term; the centroid term gets the rest. */
+  nearestWeight: number;
+  /** Fixed spread, bypasses spreadK (useful for embedders with a known cosine range). */
+  spread?: number;
+}
+
+/** Calibrated on bench/prompts.json (docs/calibration.md): k 0.7 -> 0.6 lifts band accuracy 53% -> 60%. */
+export const DEFAULT_PARAMS: ScoreParams = { spreadK: 0.6, nearestWeight: 0.7 };
+
+export function clicheScore(idea: Vector, cloud: Vector[], params: Partial<ScoreParams> = {}): ClicheBreakdown {
+  const p = { ...DEFAULT_PARAMS, ...params };
   if (cloud.length === 0) throw new Error("Empty cliché cloud");
   let nearestSim = -1;
   let nearestIndex = 0;
@@ -65,11 +78,11 @@ export function clicheScore(idea: Vector, cloud: Vector[], spreadOverride?: numb
     }
   });
   const density = cloudDensity(cloud);
-  const spread = spreadOverride ?? Math.max(0.05, 0.7 * (1 - density));
+  const spread = p.spread ?? Math.max(0.05, p.spreadK * (1 - density));
   const center = centroid(cloud);
   const centroidSim = cosine(idea, center);
   const centroidRef = cloud.reduce((s, c) => s + cosine(c, center), 0) / cloud.length;
   const norm = (s: number, ref: number) => Math.min(1, Math.max(0, 1 - (ref - s) / spread));
-  const blended = 0.7 * norm(nearestSim, density) + 0.3 * norm(centroidSim, centroidRef);
+  const blended = p.nearestWeight * norm(nearestSim, density) + (1 - p.nearestWeight) * norm(centroidSim, centroidRef);
   return { cliche: Math.round(blended * 100), nearestSim, nearestIndex, centroidSim, density };
 }

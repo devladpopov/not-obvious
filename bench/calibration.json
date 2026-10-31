@@ -1,0 +1,1208 @@
+{
+  "date": "2026-10-31T03:01:15.299Z",
+  "embedder": "gemini-embedding-001",
+  "clouds": [
+    {
+      "prompt": "Suggest a side business for a software developer",
+      "size": 20,
+      "models": [
+        "claude-haiku-5-5",
+        "gemini-flash-lite-latest"
+      ]
+    },
+    {
+      "prompt": "How can a small coffee shop attract more customers?",
+      "size": 19,
+      "models": [
+        "claude-haiku-5-5",
+        "gemini-flash-lite-latest"
+      ]
+    },
+    {
+      "prompt": "Give me a fresh idea for a birthday party for a 10-year-old",
+      "size": 20,
+      "models": [
+        "claude-haiku-5-5",
+        "gemini-flash-lite-latest"
+      ]
+    },
+    {
+      "prompt": "Name ideas for a new productivity app",
+      "size": 20,
+      "models": [
+        "claude-haiku-5-5",
+        "gemini-flash-lite-latest"
+      ]
+    },
+    {
+      "prompt": "How can a city reduce traffic congestion?",
+      "size": 20,
+      "models": [
+        "claude-haiku-5-5",
+        "gemini-flash-latest"
+      ]
+    },
+    {
+      "prompt": "Suggest a marketing campaign for a new running shoe",
+      "size": 20,
+      "models": [
+        "claude-haiku-5-5",
+        "gemini-flash-latest"
+      ]
+    },
+    {
+      "prompt": "Ideas to improve employee engagement in a remote team",
+      "size": 20,
+      "models": [
+        "claude-haiku-5-5",
+        "gemini-flash-lite-latest"
+      ]
+    },
+    {
+      "prompt": "What could a museum do to attract teenagers?",
+      "size": 18,
+      "models": [
+        "claude-haiku-5-5",
+        "gemini-flash-lite-latest"
+      ]
+    },
+    {
+      "prompt": "How can a non-profit raise money without asking for donations?",
+      "size": 20,
+      "models": [
+        "claude-haiku-5-5",
+        "gemini-flash-lite-latest"
+      ]
+    },
+    {
+      "prompt": "Suggest a new feature for a note-taking app",
+      "size": 19,
+      "models": [
+        "claude-haiku-5-5",
+        "gemini-flash-lite-latest"
+      ]
+    }
+  ],
+  "v0": {
+    "params": {
+      "spreadK": 0.7,
+      "nearestWeight": 0.7
+    },
+    "bandAccuracy": 0.5285714285714286,
+    "pairOrder": 0.740625,
+    "means": {
+      "cliche": 80,
+      "mid": 66,
+      "far": 44
+    },
+    "detail": [
+      {
+        "prompt": "Suggest a side business for a software developer",
+        "density": 0.8841711571196251,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Build a SaaS product for small businesses",
+            "cliche": 100,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "cliche",
+            "text": "Freelance web development on Upwork",
+            "cliche": 65,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "cliche",
+            "text": "Create and sell an online programming course",
+            "cliche": 100,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "mid",
+            "text": "Offer fixed-price accessibility audits for local government websites",
+            "cliche": 51,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "mid",
+            "text": "Sell pre-configured home-lab kits for privacy-minded families",
+            "cliche": 57,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "far",
+            "text": "Rent yourself out as a code archaeologist who documents abandoned legacy systems for insurance audits",
+            "cliche": 65,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "far",
+            "text": "Breed rare aquarium shrimp and sell them through a self-built auction bot",
+            "cliche": 39,
+            "density": 0.8841711571196251
+          }
+        ]
+      },
+      {
+        "prompt": "How can a small coffee shop attract more customers?",
+        "density": 0.8932064966360758,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Start a loyalty card program",
+            "cliche": 98,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "cliche",
+            "text": "Post attractive photos on Instagram",
+            "cliche": 66,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "cliche",
+            "text": "Offer free Wi-Fi and comfortable seating",
+            "cliche": 100,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "mid",
+            "text": "Host a monthly cupping night where regulars vote on next month's bean",
+            "cliche": 63,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "mid",
+            "text": "Partner with the nearest coworking space for a shared membership",
+            "cliche": 91,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "far",
+            "text": "Become the neighbourhood's lost-and-found and parcel drop, so people come in for errands",
+            "cliche": 52,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "far",
+            "text": "Let customers pay by fixing one item from the shop's broken-things shelf",
+            "cliche": 10,
+            "density": 0.8932064966360758
+          }
+        ]
+      },
+      {
+        "prompt": "Give me a fresh idea for a birthday party for a 10-year-old",
+        "density": 0.8707030785417171,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Throw a superhero themed party",
+            "cliche": 75,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "cliche",
+            "text": "Have a pizza and movie night sleepover",
+            "cliche": 59,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "cliche",
+            "text": "Book a trampoline park",
+            "cliche": 12,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "mid",
+            "text": "Run a backyard escape room built around the child's favourite book",
+            "cliche": 97,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "mid",
+            "text": "Host a mini bake-off judged by grandparents over video call",
+            "cliche": 52,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "far",
+            "text": "Turn the party into a one-day newspaper: kids interview neighbours and print an edition",
+            "cliche": 91,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "far",
+            "text": "Guests arrive as clients of a fake detective agency and must solve who ate the cake",
+            "cliche": 86,
+            "density": 0.8707030785417171
+          }
+        ]
+      },
+      {
+        "prompt": "Name ideas for a new productivity app",
+        "density": 0.8417791382290684,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "FocusFlow",
+            "cliche": 96,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "cliche",
+            "text": "TaskMaster",
+            "cliche": 74,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "cliche",
+            "text": "DoneDeal",
+            "cliche": 40,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "mid",
+            "text": "Tomorrow Me",
+            "cliche": 48,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "mid",
+            "text": "Small Hours",
+            "cliche": 40,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "far",
+            "text": "Mudroom",
+            "cliche": 21,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "far",
+            "text": "Third Coffee",
+            "cliche": 4,
+            "density": 0.8417791382290684
+          }
+        ]
+      },
+      {
+        "prompt": "How can a city reduce traffic congestion?",
+        "density": 0.9098567385730055,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Improve public transportation",
+            "cliche": 100,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "cliche",
+            "text": "Introduce congestion pricing",
+            "cliche": 100,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "cliche",
+            "text": "Build more bike lanes",
+            "cliche": 89,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "mid",
+            "text": "Stagger school and office start times by district",
+            "cliche": 92,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "mid",
+            "text": "Pay employers per employee who switches to a four-day office week",
+            "cliche": 0,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "far",
+            "text": "Auction the right to deliver parcels in each district to one carrier per day",
+            "cliche": 0,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "far",
+            "text": "Turn traffic lights into a reward system: drivers who skip peak hours earn parking credits",
+            "cliche": 48,
+            "density": 0.9098567385730055
+          }
+        ]
+      },
+      {
+        "prompt": "Suggest a marketing campaign for a new running shoe",
+        "density": 0.8689931897272473,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Sponsor a famous marathon runner",
+            "cliche": 77,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Run an Instagram influencer campaign",
+            "cliche": 79,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Offer a discount for the first 100 buyers",
+            "cliche": 42,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "mid",
+            "text": "Give the shoe to night-shift nurses and publish their step counts",
+            "cliche": 73,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "mid",
+            "text": "Let runners trade in worn shoes for credit and show the wear map",
+            "cliche": 100,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "far",
+            "text": "Release the shoe only to people who finish a route drawn as the brand logo on a city map",
+            "cliche": 90,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "far",
+            "text": "Sponsor the slowest finisher of every local race",
+            "cliche": 69,
+            "density": 0.8689931897272473
+          }
+        ]
+      },
+      {
+        "prompt": "Ideas to improve employee engagement in a remote team",
+        "density": 0.8698005290357347,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Hold regular virtual team-building activities",
+            "cliche": 100,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "cliche",
+            "text": "Recognize achievements publicly",
+            "cliche": 83,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "cliche",
+            "text": "Run anonymous engagement surveys",
+            "cliche": 95,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "mid",
+            "text": "Rotate who sets the agenda of the weekly meeting, including juniors",
+            "cliche": 88,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "mid",
+            "text": "Give every employee a yearly budget to visit one colleague in person",
+            "cliche": 86,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "far",
+            "text": "Pair each person with a colleague in another time zone to swap one task a week",
+            "cliche": 86,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "far",
+            "text": "Publish an internal podcast where teams interview the customers they never meet",
+            "cliche": 36,
+            "density": 0.8698005290357347
+          }
+        ]
+      },
+      {
+        "prompt": "What could a museum do to attract teenagers?",
+        "density": 0.8914112204069252,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Create interactive exhibits",
+            "cliche": 100,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "cliche",
+            "text": "Host social media challenges",
+            "cliche": 56,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "cliche",
+            "text": "Offer free entry for students",
+            "cliche": 86,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "mid",
+            "text": "Let teens curate one room each term and write the labels",
+            "cliche": 80,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "mid",
+            "text": "Open late on Fridays with a DJ playing music from the exhibit's era",
+            "cliche": 3,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "far",
+            "text": "Hide unpublished objects in the storage vault and let teens bid for one to be shown",
+            "cliche": 8,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "far",
+            "text": "Hire teenagers as paid fact-checkers who mark mistakes on old labels",
+            "cliche": 35,
+            "density": 0.8914112204069252
+          }
+        ]
+      },
+      {
+        "prompt": "How can a non-profit raise money without asking for donations?",
+        "density": 0.8883391500864029,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Sell branded merchandise",
+            "cliche": 100,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "Organize a charity run",
+            "cliche": 19,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "Apply for grants",
+            "cliche": 93,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "mid",
+            "text": "License the non-profit's training materials to companies",
+            "cliche": 100,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "mid",
+            "text": "Run a paid consulting arm staffed by former beneficiaries",
+            "cliche": 72,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "far",
+            "text": "Rent out the volunteers' skills as a weekend agency and keep the margin",
+            "cliche": 59,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "far",
+            "text": "Auction naming rights to the problems it solves, like a pothole or a broken bench",
+            "cliche": 24,
+            "density": 0.8883391500864029
+          }
+        ]
+      },
+      {
+        "prompt": "Suggest a new feature for a note-taking app",
+        "density": 0.8754108991263053,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "AI-powered summarization of notes",
+            "cliche": 100,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "cliche",
+            "text": "Real-time collaboration",
+            "cliche": 89,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "cliche",
+            "text": "Tags and smart folders",
+            "cliche": 97,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "mid",
+            "text": "Notes that expire unless you revisit them",
+            "cliche": 60,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "mid",
+            "text": "Show which old notes contradict the one you are writing",
+            "cliche": 72,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "far",
+            "text": "Let a note be sent to your future self only when you return to the same physical place",
+            "cliche": 62,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "far",
+            "text": "A trade mode where you swap one anonymous note a day with a stranger in your field",
+            "cliche": 3,
+            "density": 0.8754108991263053
+          }
+        ]
+      }
+    ]
+  },
+  "best": {
+    "params": {
+      "spreadK": 0.6,
+      "nearestWeight": 0.6
+    },
+    "bandAccuracy": 0.6,
+    "pairOrder": 0.74375,
+    "means": {
+      "cliche": 76,
+      "mid": 62,
+      "far": 39
+    },
+    "detail": [
+      {
+        "prompt": "Suggest a side business for a software developer",
+        "density": 0.8841711571196251,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Build a SaaS product for small businesses",
+            "cliche": 100,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "cliche",
+            "text": "Freelance web development on Upwork",
+            "cliche": 60,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "cliche",
+            "text": "Create and sell an online programming course",
+            "cliche": 100,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "mid",
+            "text": "Offer fixed-price accessibility audits for local government websites",
+            "cliche": 40,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "mid",
+            "text": "Sell pre-configured home-lab kits for privacy-minded families",
+            "cliche": 52,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "far",
+            "text": "Rent yourself out as a code archaeologist who documents abandoned legacy systems for insurance audits",
+            "cliche": 55,
+            "density": 0.8841711571196251
+          },
+          {
+            "band": "far",
+            "text": "Breed rare aquarium shrimp and sell them through a self-built auction bot",
+            "cliche": 31,
+            "density": 0.8841711571196251
+          }
+        ]
+      },
+      {
+        "prompt": "How can a small coffee shop attract more customers?",
+        "density": 0.8932064966360758,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Start a loyalty card program",
+            "cliche": 98,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "cliche",
+            "text": "Post attractive photos on Instagram",
+            "cliche": 59,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "cliche",
+            "text": "Offer free Wi-Fi and comfortable seating",
+            "cliche": 100,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "mid",
+            "text": "Host a monthly cupping night where regulars vote on next month's bean",
+            "cliche": 58,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "mid",
+            "text": "Partner with the nearest coworking space for a shared membership",
+            "cliche": 87,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "far",
+            "text": "Become the neighbourhood's lost-and-found and parcel drop, so people come in for errands",
+            "cliche": 52,
+            "density": 0.8932064966360758
+          },
+          {
+            "band": "far",
+            "text": "Let customers pay by fixing one item from the shop's broken-things shelf",
+            "cliche": 9,
+            "density": 0.8932064966360758
+          }
+        ]
+      },
+      {
+        "prompt": "Give me a fresh idea for a birthday party for a 10-year-old",
+        "density": 0.8707030785417171,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Throw a superhero themed party",
+            "cliche": 71,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "cliche",
+            "text": "Have a pizza and movie night sleepover",
+            "cliche": 52,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "cliche",
+            "text": "Book a trampoline park",
+            "cliche": 6,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "mid",
+            "text": "Run a backyard escape room built around the child's favourite book",
+            "cliche": 96,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "mid",
+            "text": "Host a mini bake-off judged by grandparents over video call",
+            "cliche": 43,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "far",
+            "text": "Turn the party into a one-day newspaper: kids interview neighbours and print an edition",
+            "cliche": 89,
+            "density": 0.8707030785417171
+          },
+          {
+            "band": "far",
+            "text": "Guests arrive as clients of a fake detective agency and must solve who ate the cake",
+            "cliche": 79,
+            "density": 0.8707030785417171
+          }
+        ]
+      },
+      {
+        "prompt": "Name ideas for a new productivity app",
+        "density": 0.8417791382290684,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "FocusFlow",
+            "cliche": 94,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "cliche",
+            "text": "TaskMaster",
+            "cliche": 71,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "cliche",
+            "text": "DoneDeal",
+            "cliche": 30,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "mid",
+            "text": "Tomorrow Me",
+            "cliche": 39,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "mid",
+            "text": "Small Hours",
+            "cliche": 30,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "far",
+            "text": "Mudroom",
+            "cliche": 9,
+            "density": 0.8417791382290684
+          },
+          {
+            "band": "far",
+            "text": "Third Coffee",
+            "cliche": 0,
+            "density": 0.8417791382290684
+          }
+        ]
+      },
+      {
+        "prompt": "How can a city reduce traffic congestion?",
+        "density": 0.9098567385730055,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Improve public transportation",
+            "cliche": 100,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "cliche",
+            "text": "Introduce congestion pricing",
+            "cliche": 100,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "cliche",
+            "text": "Build more bike lanes",
+            "cliche": 83,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "mid",
+            "text": "Stagger school and office start times by district",
+            "cliche": 88,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "mid",
+            "text": "Pay employers per employee who switches to a four-day office week",
+            "cliche": 0,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "far",
+            "text": "Auction the right to deliver parcels in each district to one carrier per day",
+            "cliche": 0,
+            "density": 0.9098567385730055
+          },
+          {
+            "band": "far",
+            "text": "Turn traffic lights into a reward system: drivers who skip peak hours earn parking credits",
+            "cliche": 43,
+            "density": 0.9098567385730055
+          }
+        ]
+      },
+      {
+        "prompt": "Suggest a marketing campaign for a new running shoe",
+        "density": 0.8689931897272473,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Sponsor a famous marathon runner",
+            "cliche": 71,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Run an Instagram influencer campaign",
+            "cliche": 74,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "cliche",
+            "text": "Offer a discount for the first 100 buyers",
+            "cliche": 28,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "mid",
+            "text": "Give the shoe to night-shift nurses and publish their step counts",
+            "cliche": 68,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "mid",
+            "text": "Let runners trade in worn shoes for credit and show the wear map",
+            "cliche": 100,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "far",
+            "text": "Release the shoe only to people who finish a route drawn as the brand logo on a city map",
+            "cliche": 85,
+            "density": 0.8689931897272473
+          },
+          {
+            "band": "far",
+            "text": "Sponsor the slowest finisher of every local race",
+            "cliche": 59,
+            "density": 0.8689931897272473
+          }
+        ]
+      },
+      {
+        "prompt": "Ideas to improve employee engagement in a remote team",
+        "density": 0.8698005290357347,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Hold regular virtual team-building activities",
+            "cliche": 100,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "cliche",
+            "text": "Recognize achievements publicly",
+            "cliche": 74,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "cliche",
+            "text": "Run anonymous engagement surveys",
+            "cliche": 92,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "mid",
+            "text": "Rotate who sets the agenda of the weekly meeting, including juniors",
+            "cliche": 82,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "mid",
+            "text": "Give every employee a yearly budget to visit one colleague in person",
+            "cliche": 86,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "far",
+            "text": "Pair each person with a colleague in another time zone to swap one task a week",
+            "cliche": 84,
+            "density": 0.8698005290357347
+          },
+          {
+            "band": "far",
+            "text": "Publish an internal podcast where teams interview the customers they never meet",
+            "cliche": 29,
+            "density": 0.8698005290357347
+          }
+        ]
+      },
+      {
+        "prompt": "What could a museum do to attract teenagers?",
+        "density": 0.8914112204069252,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Create interactive exhibits",
+            "cliche": 100,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "cliche",
+            "text": "Host social media challenges",
+            "cliche": 50,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "cliche",
+            "text": "Offer free entry for students",
+            "cliche": 79,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "mid",
+            "text": "Let teens curate one room each term and write the labels",
+            "cliche": 78,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "mid",
+            "text": "Open late on Fridays with a DJ playing music from the exhibit's era",
+            "cliche": 0,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "far",
+            "text": "Hide unpublished objects in the storage vault and let teens bid for one to be shown",
+            "cliche": 6,
+            "density": 0.8914112204069252
+          },
+          {
+            "band": "far",
+            "text": "Hire teenagers as paid fact-checkers who mark mistakes on old labels",
+            "cliche": 23,
+            "density": 0.8914112204069252
+          }
+        ]
+      },
+      {
+        "prompt": "How can a non-profit raise money without asking for donations?",
+        "density": 0.8883391500864029,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "Sell branded merchandise",
+            "cliche": 99,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "Organize a charity run",
+            "cliche": 13,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "cliche",
+            "text": "Apply for grants",
+            "cliche": 88,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "mid",
+            "text": "License the non-profit's training materials to companies",
+            "cliche": 100,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "mid",
+            "text": "Run a paid consulting arm staffed by former beneficiaries",
+            "cliche": 66,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "far",
+            "text": "Rent out the volunteers' skills as a weekend agency and keep the margin",
+            "cliche": 54,
+            "density": 0.8883391500864029
+          },
+          {
+            "band": "far",
+            "text": "Auction naming rights to the problems it solves, like a pothole or a broken bench",
+            "cliche": 22,
+            "density": 0.8883391500864029
+          }
+        ]
+      },
+      {
+        "prompt": "Suggest a new feature for a note-taking app",
+        "density": 0.8754108991263053,
+        "scored": [
+          {
+            "band": "cliche",
+            "text": "AI-powered summarization of notes",
+            "cliche": 100,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "cliche",
+            "text": "Real-time collaboration",
+            "cliche": 83,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "cliche",
+            "text": "Tags and smart folders",
+            "cliche": 95,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "mid",
+            "text": "Notes that expire unless you revisit them",
+            "cliche": 54,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "mid",
+            "text": "Show which old notes contradict the one you are writing",
+            "cliche": 65,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "far",
+            "text": "Let a note be sent to your future self only when you return to the same physical place",
+            "cliche": 52,
+            "density": 0.8754108991263053
+          },
+          {
+            "band": "far",
+            "text": "A trade mode where you swap one anonymous note a day with a stranger in your field",
+            "cliche": 0,
+            "density": 0.8754108991263053
+          }
+        ]
+      }
+    ]
+  },
+  "top10": [
+    {
+      "params": {
+        "spreadK": 0.6,
+        "nearestWeight": 0.6
+      },
+      "bandAccuracy": 0.6,
+      "pairOrder": 0.74375,
+      "means": {
+        "cliche": 76,
+        "mid": 62,
+        "far": 39
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.6,
+        "nearestWeight": 0.7
+      },
+      "bandAccuracy": 0.6,
+      "pairOrder": 0.74375,
+      "means": {
+        "cliche": 77,
+        "mid": 62,
+        "far": 39
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.5,
+        "nearestWeight": 0.9
+      },
+      "bandAccuracy": 0.6,
+      "pairOrder": 0.740625,
+      "means": {
+        "cliche": 76,
+        "mid": 58,
+        "far": 32
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.6,
+        "nearestWeight": 0.8
+      },
+      "bandAccuracy": 0.6,
+      "pairOrder": 0.7375,
+      "means": {
+        "cliche": 78,
+        "mid": 63,
+        "far": 38
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.5,
+        "nearestWeight": 1
+      },
+      "bandAccuracy": 0.6,
+      "pairOrder": 0.725,
+      "means": {
+        "cliche": 77,
+        "mid": 59,
+        "far": 32
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.6,
+        "nearestWeight": 0.9
+      },
+      "bandAccuracy": 0.5857142857142857,
+      "pairOrder": 0.740625,
+      "means": {
+        "cliche": 79,
+        "mid": 63,
+        "far": 38
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.6,
+        "nearestWeight": 0.5
+      },
+      "bandAccuracy": 0.5857142857142857,
+      "pairOrder": 0.728125,
+      "means": {
+        "cliche": 75,
+        "mid": 61,
+        "far": 40
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.5,
+        "nearestWeight": 0.8
+      },
+      "bandAccuracy": 0.5714285714285714,
+      "pairOrder": 0.74375,
+      "means": {
+        "cliche": 74,
+        "mid": 58,
+        "far": 32
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.6,
+        "nearestWeight": 1
+      },
+      "bandAccuracy": 0.5714285714285714,
+      "pairOrder": 0.725,
+      "means": {
+        "cliche": 80,
+        "mid": 64,
+        "far": 37
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.5,
+        "nearestWeight": 0.7
+      },
+      "bandAccuracy": 0.5571428571428572,
+      "pairOrder": 0.740625,
+      "means": {
+        "cliche": 73,
+        "mid": 57,
+        "far": 32
+      }
+    }
+  ]
+}

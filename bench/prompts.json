@@ -1,0 +1,65 @@
+{
+  "note": "Day-2 calibration set. Anchors are hand-written: cliche = what a chatbot says first, mid = a known idea with a real twist, far = workable but well outside the usual answer space. Targets: cliche >= 70, mid 30-70, far <= 35.",
+  "prompts": [
+    {
+      "prompt": "Suggest a side business for a software developer",
+      "cliche": ["Build a SaaS product for small businesses", "Freelance web development on Upwork", "Create and sell an online programming course"],
+      "mid": ["Offer fixed-price accessibility audits for local government websites", "Sell pre-configured home-lab kits for privacy-minded families"],
+      "far": ["Rent yourself out as a code archaeologist who documents abandoned legacy systems for insurance audits", "Breed rare aquarium shrimp and sell them through a self-built auction bot"]
+    },
+    {
+      "prompt": "How can a small coffee shop attract more customers?",
+      "cliche": ["Start a loyalty card program", "Post attractive photos on Instagram", "Offer free Wi-Fi and comfortable seating"],
+      "mid": ["Host a monthly cupping night where regulars vote on next month's bean", "Partner with the nearest coworking space for a shared membership"],
+      "far": ["Become the neighbourhood's lost-and-found and parcel drop, so people come in for errands", "Let customers pay by fixing one item from the shop's broken-things shelf"]
+    },
+    {
+      "prompt": "Give me a fresh idea for a birthday party for a 10-year-old",
+      "cliche": ["Throw a superhero themed party", "Have a pizza and movie night sleepover", "Book a trampoline park"],
+      "mid": ["Run a backyard escape room built around the child's favourite book", "Host a mini bake-off judged by grandparents over video call"],
+      "far": ["Turn the party into a one-day newspaper: kids interview neighbours and print an edition", "Guests arrive as clients of a fake detective agency and must solve who ate the cake"]
+    },
+    {
+      "prompt": "Name ideas for a new productivity app",
+      "cliche": ["FocusFlow", "TaskMaster", "DoneDeal"],
+      "mid": ["Tomorrow Me", "Small Hours"],
+      "far": ["Mudroom", "Third Coffee"]
+    },
+    {
+      "prompt": "How can a city reduce traffic congestion?",
+      "cliche": ["Improve public transportation", "Introduce congestion pricing", "Build more bike lanes"],
+      "mid": ["Stagger school and office start times by district", "Pay employers per employee who switches to a four-day office week"],
+      "far": ["Auction the right to deliver parcels in each district to one carrier per day", "Turn traffic lights into a reward system: drivers who skip peak hours earn parking credits"]
+    },
+    {
+      "prompt": "Suggest a marketing campaign for a new running shoe",
+      "cliche": ["Sponsor a famous marathon runner", "Run an Instagram influencer campaign", "Offer a discount for the first 100 buyers"],
+      "mid": ["Give the shoe to night-shift nurses and publish their step counts", "Let runners trade in worn shoes for credit and show the wear map"],
+      "far": ["Release the shoe only to people who finish a route drawn as the brand logo on a city map", "Sponsor the slowest finisher of every local race"]
+    },
+    {
+      "prompt": "Ideas to improve employee engagement in a remote team",
+      "cliche": ["Hold regular virtual team-building activities", "Recognize achievements publicly", "Run anonymous engagement surveys"],
+      "mid": ["Rotate who sets the agenda of the weekly meeting, including juniors", "Give every employee a yearly budget to visit one colleague in person"],
+      "far": ["Pair each person with a colleague in another time zone to swap one task a week", "Publish an internal podcast where teams interview the customers they never meet"]
+    },
+    {
+      "prompt": "What could a museum do to attract teenagers?",
+      "cliche": ["Create interactive exhibits", "Host social media challenges", "Offer free entry for students"],
+      "mid": ["Let teens curate one room each term and write the labels", "Open late on Fridays with a DJ playing music from the exhibit's era"],
+      "far": ["Hide unpublished objects in the storage vault and let teens bid for one to be shown", "Hire teenagers as paid fact-checkers who mark mistakes on old labels"]
+    },
+    {
+      "prompt": "How can a non-profit raise money without asking for donations?",
+      "cliche": ["Sell branded merchandise", "Organize a charity run", "Apply for grants"],
+      "mid": ["License the non-profit's training materials to companies", "Run a paid consulting arm staffed by former beneficiaries"],
+      "far": ["Rent out the volunteers' skills as a weekend agency and keep the margin", "Auction naming rights to the problems it solves, like a pothole or a broken bench"]
+    },
+    {
+      "prompt": "Suggest a new feature for a note-taking app",
+      "cliche": ["AI-powered summarization of notes", "Real-time collaboration", "Tags and smart folders"],
+      "mid": ["Notes that expire unless you revisit them", "Show which old notes contradict the one you are writing"],
+      "far": ["Let a note be sent to your future self only when you return to the same physical place", "A trade mode where you swap one anonymous note a day with a stranger in your field"]
+    }
+  ]
+}

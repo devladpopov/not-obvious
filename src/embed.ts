@@ -42,7 +42,7 @@ export function geminiEmbedder(key: string): Embedder {
       const out: Vector[] = [];
       for (let i = 0; i < texts.length; i += 100) {
         const chunk = texts.slice(i, i + 100);
-        const r = await withRetry(() => fetch(
+        const r = await withRetry((signal) => fetch(
           `https://generativelanguage.googleapis.com/v1beta/models/${model}:batchEmbedContents`,
           {
             method: "POST",
@@ -55,6 +55,7 @@ export function geminiEmbedder(key: string): Embedder {
                 outputDimensionality: DIM,
               })),
             }),
+            signal,
           },
         ));
         if (!r.ok) throw new Error(`embed ${r.status}: ${(await r.text()).slice(0, 300)}`);

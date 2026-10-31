@@ -20,11 +20,15 @@ export interface Cloud {
 }
 
 const CACHE_DIR = process.env.NOT_OBVIOUS_CACHE?.trim() || join(homedir(), ".not-obvious", "clouds");
-const key = (prompt: string) => createHash("sha256").update(prompt.trim().toLowerCase()).digest("hex").slice(0, 16);
+const hash = (s: string) => createHash("sha256").update(s).digest("hex").slice(0, 16);
+/** Cache key: normalised prompt + embedder, so switching embedders never mixes vector spaces. */
+export const cloudKey = (prompt: string, embedderName: string) =>
+  hash(`${embedderName}\n${prompt.trim().toLowerCase().replace(/\s+/g, " ")}`);
 
-async function loadCloud(prompt: string): Promise<Cloud | null> {
+async function loadCloud(prompt: string, embedderName: string): Promise<Cloud | null> {
   try {
-    return JSON.parse(await readFile(join(CACHE_DIR, `${key(prompt)}.json`), "utf8")) as Cloud;
+    const c = JSON.parse(await readFile(join(CACHE_DIR, `${cloudKey(prompt, embedderName)}.json`), "utf8")) as Cloud;
+    return c.embedder === embedderName && c.vectors.length === c.cliches.length && c.cliches.length > 0 ? c : null;
   } catch {
     return null;
   }
@@ -32,7 +36,32 @@ async function loadCloud(prompt: string): Promise<Cloud | null> {
 
 async function saveCloud(cloud: Cloud): Promise<void> {
   await mkdir(CACHE_DIR, { recursive: true });
-  await writeFile(join(CACHE_DIR, `${key(cloud.prompt)}.json`), JSON.stringify(cloud));
+  await writeFile(join(CACHE_DIR, `${cloudKey(cloud.prompt, cloud.embedder)}.json`), JSON.stringify(cloud));
+}
+
+/**
+ * Embeddings of scored ideas are cached on disk too (one file per embedder):
+ * re-scoring the same idea is free and survives free-tier rate limits.
+ */
+const embMemo = new Map<string, Map<string, Vector>>();
+async function embedCached(texts: string[]): Promise<{ name: string; vectors: Vector[] }> {
+  const emb = embedder();
+  const file = join(CACHE_DIR, `emb-${emb.name.replace(/[^\w.-]/g, "_")}.json`);
+  let memo = embMemo.get(file);
+  if (!memo) {
+    memo = new Map(Object.entries(await readFile(file, "utf8").then((t) => JSON.parse(t) as Record<string, Vector>).catch(() => ({}))));
+    embMemo.set(file, memo);
+  }
+  const missing = [...new Set(texts.filter((t) => !memo!.has(hash(t))))];
+  if (missing.length) {
+    const vs = await emb.embed(missing);
+    missing.forEach((t, i) => memo!.set(hash(t), vs[i]!));
+    if (emb.name !== "lexical-trigram") {
+      await mkdir(CACHE_DIR, { recursive: true });
+      await writeFile(file, JSON.stringify(Object.fromEntries(memo)));
+    }
+  }
+  return { name: emb.name, vectors: texts.map((t) => memo!.get(hash(t))!) };
 }
 
 /** Drop near-duplicates so one phrasing repeated by every model counts once in the cloud view. */
@@ -49,16 +78,28 @@ function dedupe(items: Cliche[], vectors: Vector[], threshold = 0.95) {
  * exactly as a user would, and collects the answers into a cliché cloud.
  */
 export async function baseline(prompt: string, opts: { perModel?: number; refresh?: boolean } = {}): Promise<Cloud> {
+  const embName = embedder().name;
   if (!opts.refresh) {
-    const cached = await loadCloud(prompt);
+    const cached = await loadCloud(prompt, embName);
     if (cached) return cached;
   }
   const n = opts.perModel ?? 10;
   const ask = `${prompt}\n\nGive ${n} distinct answers. Return a JSON array of ${n} strings, one short answer (max 25 words) each.`;
   const batches = await Promise.allSettled(
     providers().map(async (p) => {
-      const text = await p.complete(ask, { tier: "fast", json: true });
-      return parseJson<string[]>(text).map((t) => ({ text: String(t), model: p.model("fast") }));
+      // One retry on malformed or short output: flash-lite sometimes returns 2 items or broken JSON.
+      let lastErr: unknown;
+      for (let attempt = 0; attempt < 2; attempt++) {
+        try {
+          const text = await p.complete(ask, { tier: "fast", json: true });
+          const list = parseJson<unknown[]>(text).map((t) => String(typeof t === "object" && t ? Object.values(t)[0] : t).trim()).filter(Boolean);
+          if (list.length >= Math.ceil(n / 2)) return list.map((t) => ({ text: t, model: p.model("fast") }));
+          lastErr = new Error(`${p.name} returned ${list.length}/${n} answers`);
+        } catch (e) {
+          lastErr = e;
+        }
+      }
+      throw lastErr;
     }),
   );
   const items = batches.flatMap((b) => (b.status === "fulfilled" ? b.value : []));
@@ -66,9 +107,9 @@ export async function baseline(prompt: string, opts: { perModel?: number; refres
     const reasons = batches.map((b) => (b.status === "rejected" ? String(b.reason) : "")).join("\n");
     throw new Error(`Could not build a cliché cloud:\n${reasons}`);
   }
-  const emb = embedder();
-  const { cliches, vectors } = dedupe(items, await emb.embed(items.map((i) => i.text)));
-  const cloud: Cloud = { prompt, cliches, embedder: emb.name, vectors };
+  const { name, vectors: raw } = await embedCached(items.map((i) => i.text));
+  const { cliches, vectors } = dedupe(items, raw);
+  const cloud: Cloud = { prompt, cliches, embedder: name, vectors };
   await saveCloud(cloud);
   return cloud;
 }
@@ -92,9 +133,7 @@ async function usefulness(prompt: string, ideas: string[]): Promise<{ score: num
 /** score: how clichéd are these ideas relative to the cloud for this prompt (0 = original, 100 = what every AI says). */
 export async function score(prompt: string, ideas: string[], opts: { critic?: boolean } = {}): Promise<Scored[]> {
   const cloud = await baseline(prompt);
-  const emb = embedder();
-  if (emb.name !== cloud.embedder) throw new Error(`Cloud was embedded with ${cloud.embedder}, current embedder is ${emb.name}. Re-run baseline with refresh.`);
-  const vecs = await emb.embed(ideas);
+  const { vectors: vecs } = await embedCached(ideas);
   const critic = opts.critic === false ? [] : await usefulness(prompt, ideas).catch(() => []);
   return ideas.map((idea, i) => {
     const b = clicheScore(vecs[i]!, cloud.vectors);

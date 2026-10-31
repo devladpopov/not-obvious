@@ -9,30 +9,76 @@ export type Tier = "fast" | "smart";
 
 export interface Provider {
   name: string;
-  /** Model label used in the cliché cloud / leaderboard, e.g. "claude-haiku-4-5". */
+  /** Model label used in the cliché cloud / leaderboard, e.g. "claude-haiku-5-5". */
   model(tier: Tier): string;
   complete(prompt: string, opts: { tier: Tier; system?: string; json?: boolean }): Promise<string>;
 }
 
 const env = (k: string) => process.env[k]?.trim() || undefined;
 
-/** Retry raw HTTP calls on 429/5xx with exponential backoff (the Anthropic SDK retries on its own). */
-export async function withRetry(call: () => Promise<Response>, attempts = 4): Promise<Response> {
-  let r = await call();
-  for (let i = 1; i < attempts && (r.status === 429 || r.status >= 500); i++) {
-    await new Promise((res) => setTimeout(res, 1000 * 2 ** i));
-    r = await call();
-  }
-  return r;
+const TIMEOUT_MS = Number(env("NOT_OBVIOUS_TIMEOUT_MS") ?? 60_000);
+
+export interface RetryOpts {
+  attempts?: number;
+  /** Base backoff in ms; attempt i waits base * 2^i unless the server sent Retry-After. */
+  baseMs?: number;
+  timeoutMs?: number;
+  sleep?: (ms: number) => Promise<void>;
 }
+
+const retryable = (status: number) => status === 408 || status === 429 || status >= 500;
+
+/** Seconds from a Retry-After header (number or HTTP date), capped at 60s. */
+export function retryAfterMs(r: Response): number | undefined {
+  const h = r.headers.get("retry-after");
+  if (!h) return undefined;
+  const secs = Number(h);
+  const ms = Number.isFinite(secs) ? secs * 1000 : Date.parse(h) - Date.now();
+  return Number.isFinite(ms) && ms >= 0 ? Math.min(ms, 60_000) : undefined;
+}
+
+/**
+ * Retry raw HTTP calls on 408/429/5xx, timeouts and network errors with exponential backoff.
+ * Every attempt gets its own AbortSignal: the free Gemini tier sometimes accepts a request and never answers.
+ * (The Anthropic SDK retries on its own.)
+ */
+export async function withRetry(call: (signal: AbortSignal) => Promise<Response>, opts: RetryOpts = {}): Promise<Response> {
+  const attempts = opts.attempts ?? 4;
+  const baseMs = opts.baseMs ?? 1000;
+  const sleep = opts.sleep ?? ((ms: number) => new Promise<void>((res) => setTimeout(res, ms)));
+  let last: Response | undefined;
+  let lastErr: unknown;
+  for (let i = 0; i < attempts; i++) {
+    if (i > 0) await sleep((last && retryAfterMs(last)) ?? baseMs * 2 ** i);
+    // Own controller + timer instead of AbortSignal.timeout: Bun does not fire the latter reliably.
+    const ctl = new AbortController();
+    const timer = setTimeout(() => ctl.abort(Object.assign(new Error("timed out"), { name: "TimeoutError" })), opts.timeoutMs ?? TIMEOUT_MS);
+    try {
+      last = await call(ctl.signal);
+      lastErr = undefined;
+      if (!retryable(last.status)) return last;
+    } catch (e) {
+      last = undefined;
+      lastErr = e;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+  if (last) return last;
+  throw lastErr instanceof Error && lastErr.name === "TimeoutError" ? new Error(`request timed out after ${attempts} attempts`) : lastErr;
+}
+
+/** "a, b" -> ["a", "b"]: a tier may list several models, tried in order (free tiers rate-limit per model). */
+export const modelList = (v: string | undefined, fallback: string) =>
+  (v ?? fallback).split(",").map((m) => m.trim()).filter(Boolean);
 
 export function anthropicProvider(): Provider | null {
   const key = env("ANTHROPIC_API_KEY");
   if (!key) return null;
-  const client = new Anthropic({ apiKey: key });
+  const client = new Anthropic({ apiKey: key, timeout: TIMEOUT_MS, maxRetries: 3 });
   const models: Record<Tier, string> = {
-    fast: env("NOT_OBVIOUS_CLAUDE_FAST") ?? "claude-haiku-4-5",
-    smart: env("NOT_OBVIOUS_CLAUDE_SMART") ?? "claude-sonnet-5",
+    fast: env("NOT_OBVIOUS_CLAUDE_FAST") ?? "claude-haiku-5-5",
+    smart: env("NOT_OBVIOUS_CLAUDE_SMART") ?? "claude-sonnet-5-5",
   };
   return {
     name: "anthropic",
@@ -54,30 +100,40 @@ export function anthropicProvider(): Provider | null {
 export function geminiProvider(): Provider | null {
   const key = env("GEMINI_API_KEY") ?? env("GOOGLE_API_KEY");
   if (!key) return null;
-  const models: Record<Tier, string> = {
-    fast: env("NOT_OBVIOUS_GEMINI_FAST") ?? "gemini-flash-latest",
-    smart: env("NOT_OBVIOUS_GEMINI_SMART") ?? "gemini-pro-latest",
+  const models: Record<Tier, string[]> = {
+    fast: modelList(env("NOT_OBVIOUS_GEMINI_FAST"), "gemini-flash-latest,gemini-flash-lite-latest"),
+    smart: modelList(env("NOT_OBVIOUS_GEMINI_SMART"), "gemini-pro-latest,gemini-flash-latest"),
   };
+  /** Last model that answered per tier, so labels in the cloud match who actually spoke. */
+  const used: Partial<Record<Tier, string>> = {};
   return {
     name: "gemini",
-    model: (t) => models[t],
+    model: (t) => used[t] ?? models[t][0]!,
     async complete(prompt, { tier, system, json }) {
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/${models[tier]}:generateContent`;
-      const body = {
+      const body = JSON.stringify({
         ...(system ? { systemInstruction: { parts: [{ text: system }] } } : {}),
         contents: [{ role: "user", parts: [{ text: prompt }] }],
         generationConfig: json ? { responseMimeType: "application/json" } : {},
-      };
-      const r = await withRetry(() =>
-        fetch(url, {
-          method: "POST",
-          headers: { "content-type": "application/json", "x-goog-api-key": key },
-          body: JSON.stringify(body),
-        }),
-      );
-      if (!r.ok) throw new Error(`gemini ${r.status}: ${(await r.text()).slice(0, 300)}`);
-      const data = (await r.json()) as { candidates?: { content?: { parts?: { text?: string }[] } }[] };
-      return data.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("") ?? "";
+      });
+      const errors: string[] = [];
+      for (const m of models[tier]) {
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent`;
+        try {
+          const r = await withRetry(
+            (signal) => fetch(url, { method: "POST", headers: { "content-type": "application/json", "x-goog-api-key": key }, body, signal }),
+            { attempts: models[tier].length > 1 ? 2 : 4 },
+          );
+          if (!r.ok) throw new Error(`${r.status}: ${(await r.text()).slice(0, 200)}`);
+          const data = (await r.json()) as { candidates?: { content?: { parts?: { text?: string }[] } }[] };
+          const text = data.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("") ?? "";
+          if (!text) throw new Error("empty reply");
+          used[tier] = m;
+          return text;
+        } catch (e) {
+          errors.push(`${m} ${(e as Error).message}`);
+        }
+      }
+      throw new Error(`gemini: ${errors.join("; ")}`);
     },
   };
 }
