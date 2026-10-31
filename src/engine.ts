@@ -3,8 +3,9 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { homedir } from "node:os";
 import { join } from "node:path";
 import { embedder, type Vector } from "./embed.js";
-import { complete, parseList, providers } from "./llm.js";
+import { complete, parseJson, parseList, providers } from "./llm.js";
 import { clicheScore, combineScores, cosine, type ClicheBreakdown } from "./math.js";
+import { AnswersSchema, ExplainSchema, HybridsSchema, IdeasSchema, JudgeSchema, UsefulnessSchema } from "./schemas.js";
 import { technique, TECHNIQUES } from "./techniques.js";
 
 export interface Cliche {
@@ -84,14 +85,14 @@ export async function baseline(prompt: string, opts: { perModel?: number; refres
     if (cached) return cached;
   }
   const n = opts.perModel ?? 10;
-  const ask = `${prompt}\n\nGive ${n} distinct answers. Return a JSON array of ${n} strings, one short answer (max 25 words) each.`;
+  const ask = `${prompt}\n\nGive ${n} distinct answers. Return JSON {"items": [${n} strings]}, one short answer (max 25 words) each.`;
   const batches = await Promise.allSettled(
     providers().map(async (p) => {
       // One retry on malformed or short output: flash-lite sometimes returns 2 items or broken JSON.
       let lastErr: unknown;
       for (let attempt = 0; attempt < 2; attempt++) {
         try {
-          const text = await p.complete(ask, { tier: "fast", json: true });
+          const text = await p.complete(ask, { tier: "fast", json: true, schema: AnswersSchema });
           const list = parseList<unknown>(text).map((t) => String(typeof t === "object" && t ? Object.values(t)[0] : t).trim()).filter(Boolean);
           if (list.length >= Math.ceil(n / 2)) return list.map((t) => ({ text: t, model: p.model("fast") }));
           lastErr = new Error(`${p.name} returned ${list.length}/${n} answers`);
@@ -137,8 +138,8 @@ export interface Scored {
 async function usefulness(prompt: string, ideas: string[]): Promise<{ score: number; why: string }[]> {
   const ask = `Task: ${prompt}\n\nRate how useful and feasible each idea is for the task (1 = nonsense or impossible, 10 = clearly workable and valuable). Originality is NOT the criterion here. Ideas:\n${ideas
     .map((t, i) => `${i + 1}. ${t}`)
-    .join("\n")}\n\nReturn a JSON array of {"score": number, "why": string (max 15 words)} in the same order.`;
-  const { text } = await complete(ask, { tier: "fast", json: true });
+    .join("\n")}\n\nReturn JSON {"items": [{"score": number, "why": string (max 15 words)}]} in the same order.`;
+  const { text } = await complete(ask, { tier: "fast", json: true, schema: UsefulnessSchema });
   return parseList<{ score: number; why: string }>(text);
 }
 
@@ -161,8 +162,8 @@ export async function judgeMechanism(prompt: string, ideas: string[], cloud: Clo
       .map((c, i) => `${i + 1}. ${c.text}`)
       .join("\n")}\n\nFor each idea below judge whether its underlying MECHANISM matches a cliché: the same action, for the same audience, creating value the same way. Ignore wording, tone and small details; a cliché with a cosmetic twist is still the cliché. Score overlap 0-10 (0 = a mechanism no cliché uses, 5 = shares a core part with one, 10 = the same idea in other words).\n\nIdeas:\n${missing
       .map((t, i) => `${i + 1}. ${t}`)
-      .join("\n")}\n\nReturn a JSON array in the same order of {"overlap": number, "closest": number (cliché number, 0 if none), "why": string (max 15 words)}.`;
-    const { text } = await complete(ask, { tier: "fast", json: true });
+      .join("\n")}\n\nReturn JSON {"items": [{"overlap": number, "closest": number (cliché number, 0 if none), "why": string (max 15 words)}]} in the same order.`;
+    const { text } = await complete(ask, { tier: "fast", json: true, schema: JudgeSchema });
     const out = parseList<Judgement>(text);
     if (out.length !== missing.length) throw new Error(`judge returned ${out.length}/${missing.length} verdicts`);
     missing.forEach((t, i) => memo.set(k(t), { overlap: Number(out[i]!.overlap), closest: Number(out[i]!.closest) || 0, why: String(out[i]!.why ?? "") }));
@@ -238,9 +239,9 @@ async function divergeOne(prompt: string, techniqueId: string, cloud: Cloud, o: 
       ? `\n\nAlready tried and rejected (do not retry these directions):\n${rejected.map((r) => `- ${r.idea} -> ${rejectionReason(r, o.maxCliche)}`).join("\n")}`
       : "";
     const want = Math.max(o.count - kept.length + 2, 3);
-    const ask = `Task: ${prompt}\n\nThese are the answers every AI model gives (the cliché cloud). Do NOT repeat, rephrase or slightly vary any of them, and do not reuse their mechanism with a cosmetic twist:\n${cloudBrief(cloud)}${feedback}\n\nTechnique: ${t.name}. ${t.instruction}\n\nProduce ${want} ideas that are concrete, workable and far from the cloud. Return a JSON array of {"idea": string (max 40 words), "move": string (which step of the technique produced it, max 15 words)}.`;
+    const ask = `Task: ${prompt}\n\nThese are the answers every AI model gives (the cliché cloud). Do NOT repeat, rephrase or slightly vary any of them, and do not reuse their mechanism with a cosmetic twist:\n${cloudBrief(cloud)}${feedback}\n\nTechnique: ${t.name}. ${t.instruction}\n\nProduce ${want} ideas that are concrete, workable and far from the cloud. Return JSON {"items": [{"idea": string (max 40 words), "move": string (which step of the technique produced it, max 15 words)}]}.`;
     try {
-      const r = await complete(ask, { tier: "smart", json: true });
+      const r = await complete(ask, { tier: "smart", json: true, schema: IdeasSchema });
       model = r.model;
       const raw = parseList<{ idea: string; move: string }>(r.text).filter((x) => x?.idea);
       const scored = await score(prompt, raw.map((x) => String(x.idea)));
@@ -287,22 +288,60 @@ export async function diverge(prompt: string, techniqueId: string, opts: Diverge
   };
 }
 
-/** remix: cross two ideas (A x B) into hybrids that neither parent nor the cloud contains. */
-export async function remix(prompt: string, a: string, b: string, opts: { count?: number } = {}) {
-  const cloud = await baseline(prompt);
-  const n = opts.count ?? 4;
-  const ask = `Task: ${prompt}\n\nIdea A: ${a}\nIdea B: ${b}\n\nCliché cloud to avoid:\n${cloudBrief(cloud, 15)}\n\nCross A and B: take the mechanism of one and the audience, channel or constraint of the other. Produce ${n} hybrids that are not just "A plus B" and not in the cloud. Return a JSON array of {"idea": string (max 40 words), "from_a": string, "from_b": string}.`;
-  const { text, model } = await complete(ask, { tier: "smart", json: true });
-  const raw = parseList<{ idea: string; from_a: string; from_b: string }>(text);
-  const scored = await score(prompt, raw.map((r) => r.idea));
-  return { model, hybrids: scored.map((s, i) => ({ ...s, from_a: raw[i]?.from_a, from_b: raw[i]?.from_b })) };
+export interface RemixOpts {
+  count?: number;
+  maxCliche?: number;
+  minUseful?: number;
 }
 
-/** explain: why an idea scored the way it did, and the single best move to push it further from the cloud. */
+/**
+ * remix: cross two ideas (A x B) into hybrids that neither parent nor the cloud contains.
+ * Parents are scored first, so the model knows which parent is the clichéd one and what to take from each.
+ */
+export async function remix(prompt: string, a: string, b: string, opts: RemixOpts = {}) {
+  const o = { count: 4, maxCliche: 50, minUseful: 6, ...opts };
+  const cloud = await baseline(prompt);
+  const parents = await score(prompt, [a, b], { critic: false });
+  const describe = (s: Scored, label: string) =>
+    `Idea ${label}: ${s.idea}\n  Cliché Score ${s.cliche}/100, closest cliché: "${s.nearest}"${s.judge ? ` (mechanism overlap ${s.judge.overlap}/10)` : ""}`;
+  const ask = `Task: ${prompt}\n\n${describe(parents[0]!, "A")}\n${describe(parents[1]!, "B")}\n\nCliché cloud to avoid:\n${cloudBrief(cloud, 15)}\n\nFirst, silently split each parent into mechanism (how value is created), audience, channel and constraint. Then build ${o.count} hybrids: each takes at least one component from A and one from B, and its mechanism must differ from both parents and from every cliché. Take more from the less clichéd parent. No "A plus B" bundles, no "A, but for B's audience" when that is already a cliché.\n\nReturn JSON {"items": [{"idea": string (max 40 words), "from_a": string (component taken from A), "from_b": string (component taken from B)}]}.`;
+  const { text, model } = await complete(ask, { tier: "smart", json: true, schema: HybridsSchema });
+  const raw = parseList<{ idea: string; from_a: string; from_b: string }>(text).filter((x) => x?.idea);
+  const scored = await score(prompt, raw.map((r) => String(r.idea)));
+  // A hybrid that is a near-copy of a parent is not a remix.
+  const { vectors } = await embedCached([a, b, ...scored.map((s) => s.idea)]);
+  const hybrids = scored.map((s, i) => {
+    const parentSim = Math.max(cosine(vectors[i + 2]!, vectors[0]!), cosine(vectors[i + 2]!, vectors[1]!));
+    return {
+      ...s,
+      from_a: raw[i]?.from_a ?? "",
+      from_b: raw[i]?.from_b ?? "",
+      parentSim: Math.round(parentSim * 1000) / 1000,
+      escaped: passes(s, o.maxCliche, o.minUseful) && parentSim < 0.95,
+    };
+  });
+  return {
+    model,
+    parents: parents.map((p) => ({ idea: p.idea, cliche: p.cliche, nearest: p.nearest })),
+    hybrids: hybrids.sort((x, y) => Number(y.escaped) - Number(x.escaped) || x.cliche - y.cliche),
+  };
+}
+
+/**
+ * explain: why an idea scored the way it did (embedding distance, judge verdict, nearest cliché),
+ * one concrete move to push it further, and the idea rewritten with that move, re-scored as proof.
+ */
 export async function explain(prompt: string, idea: string) {
   const [s] = await score(prompt, [idea]);
   const cloud = await baseline(prompt);
-  const ask = `Task: ${prompt}\nIdea: ${idea}\nIts closest cliché (what every AI says): ${s!.nearest}\nCliché Score: ${s!.cliche}/100 (embedding distance ${s!.embedding}${s!.judge ? `, mechanism overlap ${s!.judge.overlap}/10: ${s!.judge.why}` : ""}).\nOther clichés:\n${cloudBrief(cloud, 12)}\n\nIn 3 short bullet points: what in the idea is clichéd, what is genuinely different, and one concrete move (pick from: ${TECHNIQUES.map((t) => t.id).join(", ")}) that would push it further away without losing usefulness.`;
-  const { text } = await complete(ask, { tier: "fast" });
-  return { ...s!, explanation: text.trim() };
+  const ask = `Task: ${prompt}\nIdea: ${idea}\n\nMeasurements:\n- Cliché Score ${s!.cliche}/100 (0 = original, 100 = what every AI says)\n- Embedding distance part: ${s!.embedding}/100 (how close the wording is to the cloud)\n- Mechanism judge: ${s!.judge ? `overlap ${s!.judge.overlap}/10, ${s!.judge.why}` : "not available"}\n- Closest cliché: "${s!.nearest}"\n- Usefulness: ${s!.usefulness ? `${s!.usefulness.score}/10, ${s!.usefulness.why}` : "not rated"}\n\nOther clichés:\n${cloudBrief(cloud, 12)}\n\nExplain the score in plain words and propose ONE move that pushes the idea away from the cloud without losing usefulness. Return JSON {"cliched": string (what in the idea is shared with the clichés, max 30 words), "different": string (what is genuinely new, max 30 words), "technique": one of ${TECHNIQUES.map((t) => `"${t.id}"`).join(", ")}, "move": string (the concrete change, max 25 words), "rewrite": string (the idea after the move, max 40 words)}.`;
+  const { text, model } = await complete(ask, { tier: "smart", json: true, schema: ExplainSchema });
+  const e = ExplainSchema.parse(parseJson<unknown>(text));
+  const [r] = await score(prompt, [e.rewrite]);
+  return {
+    ...s!,
+    model,
+    explanation: { cliched: e.cliched, different: e.different, technique: e.technique, move: e.move },
+    rewrite: { idea: e.rewrite, cliche: r!.cliche, delta: r!.cliche - s!.cliche, usefulness: r!.usefulness },
+  };
 }

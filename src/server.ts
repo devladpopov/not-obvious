@@ -56,10 +56,19 @@ server.registerTool(
   "remix",
   {
     title: "Remix A x B",
-    description: "Cross two ideas into hybrids that neither parent nor the cliché cloud contains. Returns scored hybrids.",
-    inputSchema: { prompt, idea_a: z.string().min(3), idea_b: z.string().min(3), count: z.number().int().min(1).max(8).optional() },
+    description:
+      "Cross two ideas into hybrids that neither parent nor the cliché cloud contains. Scores both parents first, takes at least one component (mechanism, audience, channel, constraint) from each, and marks hybrids that escaped: Cliché Score below max_cliche, usefulness at least min_usefulness, not a near-copy of a parent.",
+    inputSchema: {
+      prompt,
+      idea_a: z.string().min(3),
+      idea_b: z.string().min(3),
+      count: z.number().int().min(1).max(8).optional(),
+      max_cliche: z.number().min(1).max(100).optional(),
+      min_usefulness: z.number().min(1).max(10).optional(),
+    },
   },
-  ({ prompt, idea_a, idea_b, count }) => run(() => remix(prompt, idea_a, idea_b, { count })),
+  ({ prompt, idea_a, idea_b, count, max_cliche, min_usefulness }) =>
+    run(() => remix(prompt, idea_a, idea_b, { count, maxCliche: max_cliche, minUseful: min_usefulness })),
 );
 
 server.registerTool(
@@ -77,7 +86,8 @@ server.registerTool(
   "explain",
   {
     title: "Explain the score",
-    description: "Why an idea got its Cliché Score: what is clichéd, what is new, and one concrete move to push it further.",
+    description:
+      "Why an idea got its Cliché Score (embedding distance, mechanism judge, closest cliché): what is clichéd, what is new, one concrete move to push it further, and the idea rewritten with that move and re-scored.",
     inputSchema: { prompt, idea: z.string().min(3) },
   },
   ({ prompt, idea }) => run(() => explain(prompt, idea)),

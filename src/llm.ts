@@ -1,4 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
+import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
+import { z } from "zod";
 
 /**
  * Minimal text-generation layer. Each provider returns plain text.
@@ -7,11 +9,22 @@ import Anthropic from "@anthropic-ai/sdk";
 
 export type Tier = "fast" | "smart";
 
+export interface CompleteOpts {
+  tier: Tier;
+  system?: string;
+  json?: boolean;
+  /**
+   * Expected reply shape (root must be an object). Claude enforces it with structured outputs,
+   * Gemini gets it as responseJsonSchema. Implies json.
+   */
+  schema?: z.ZodObject;
+}
+
 export interface Provider {
   name: string;
   /** Model label used in the cliché cloud / leaderboard, e.g. "claude-haiku-5-5". */
   model(tier: Tier): string;
-  complete(prompt: string, opts: { tier: Tier; system?: string; json?: boolean }): Promise<string>;
+  complete(prompt: string, opts: CompleteOpts): Promise<string>;
 }
 
 const env = (k: string) => process.env[k]?.trim() || undefined;
@@ -83,15 +96,19 @@ export function anthropicProvider(): Provider | null {
   return {
     name: "anthropic",
     model: (t) => models[t],
-    async complete(prompt, { tier, system, json }) {
+    async complete(prompt, { tier, system, json, schema }) {
+      // With a schema the API guarantees valid JSON, so no "reply with JSON" instruction is needed.
+      const jsonHint = json && !schema ? "Reply with valid JSON only, no prose, no code fences." : "";
+      const sys = [system, jsonHint].filter(Boolean).join("\n\n");
       const res = await client.messages.create({
         model: models[tier],
         max_tokens: 8000,
-        ...(system || json
-          ? { system: [system, json ? "Reply with valid JSON only, no prose, no code fences." : ""].filter(Boolean).join("\n\n") }
-          : {}),
+        ...(sys ? { system: sys } : {}),
+        ...(schema ? { output_config: { format: zodOutputFormat(schema) } } : {}),
         messages: [{ role: "user", content: prompt }],
       });
+      if (res.stop_reason === "refusal") throw new Error(`anthropic refused: ${res.stop_details?.category ?? "unknown"}`);
+      if (res.stop_reason === "max_tokens") throw new Error("anthropic reply truncated at max_tokens");
       return res.content.flatMap((b) => (b.type === "text" ? [b.text] : [])).join("");
     },
   };
@@ -109,11 +126,15 @@ export function geminiProvider(): Provider | null {
   return {
     name: "gemini",
     model: (t) => used[t] ?? models[t][0]!,
-    async complete(prompt, { tier, system, json }) {
+    async complete(prompt, { tier, system, json, schema }) {
       const body = JSON.stringify({
         ...(system ? { systemInstruction: { parts: [{ text: system }] } } : {}),
         contents: [{ role: "user", parts: [{ text: prompt }] }],
-        generationConfig: json ? { responseMimeType: "application/json" } : {},
+        generationConfig: schema
+          ? { responseMimeType: "application/json", responseJsonSchema: z.toJSONSchema(schema) }
+          : json
+            ? { responseMimeType: "application/json" }
+            : {},
       });
       const errors: string[] = [];
       for (const m of models[tier]) {
@@ -149,7 +170,7 @@ export function providers(): Provider[] {
 /** Run on the first provider that answers; fall back to the next one on error. */
 export async function complete(
   prompt: string,
-  opts: { tier: Tier; system?: string; json?: boolean },
+  opts: CompleteOpts,
 ): Promise<{ text: string; model: string }> {
   const errors: string[] = [];
   for (const p of providers()) {

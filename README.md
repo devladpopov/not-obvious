@@ -18,9 +18,9 @@ LLMs converge. Ask five models for a side business and you get five versions of 
 |---|---|
 | `baseline` | Asks every configured model the plain question and returns the cliché cloud (cached per prompt). |
 | `diverge` | Generates ideas away from the cloud with a named technique (`scamper`, `triz`, `morphological`, `far-analogy`, `constraint-flip`) or `all` five in parallel. Keeps only ideas with Cliché Score below 50 and usefulness 6+; if too few survive, it regenerates with the rejection reasons. Returns the survivors and the closest misses. |
-| `remix` | Crosses idea A and idea B into hybrids that neither parent nor the cloud contains. |
+| `remix` | Crosses idea A and idea B into hybrids that neither parent nor the cloud contains. Scores the parents first, takes at least one component (mechanism, audience, channel, constraint) from each and flags which hybrids escaped the cloud. |
 | `score` | Cliché Score 0-100 for any list of ideas (0 = far from the AI consensus), with the embedding part and the mechanism judge verdict, plus a usefulness critic 1-10. |
-| `explain` | Why an idea scored the way it did and one concrete move to push it further. |
+| `explain` | Why an idea scored the way it did, one concrete move to push it further, and the idea rewritten with that move and re-scored (e.g. "programming course for beginners" 88% -> "coding escape-room kits for libraries and team events" 45%). |
 
 ## Cliché Score (v0.2)
 
@@ -46,7 +46,7 @@ Calibration on 10 prompts x 7 hand-labelled anchors ([`docs/calibration.md`](doc
 }
 ```
 
-One key is enough; two model families give a better cloud. Without a Gemini key, embeddings fall back to an offline lexical mode (works, but less semantic).
+One key is enough; two model families give a better cloud. With Claude every model reply is constrained by a JSON schema (structured outputs); Gemini gets the same schema as `responseJsonSchema`. Without a Gemini key, embeddings fall back to an offline lexical mode (works, but less semantic).
 
 CLI for quick checks:
 
@@ -54,6 +54,7 @@ CLI for quick checks:
 npx -p not-obvious-mcp not-obvious baseline "Suggest a side business for a software developer"
 npx -p not-obvious-mcp not-obvious score "Suggest a side business for a software developer" "Build a SaaS for small businesses"
 npx -p not-obvious-mcp not-obvious diverge "Suggest a side business for a software developer" all
+npx -p not-obvious-mcp not-obvious explain "Suggest a side business for a software developer" "Write a programming course for beginners"
 ```
 
 ## Roadmap
