@@ -1,0 +1,1524 @@
+{
+ "answers": {
+  "mechanic": {
+   "claude-sonnet-5-5": {
+    "Suggest a side business for a software developer": [
+     "Build a simple maintenance-log and parts-tracking app for small fishing boats and ferries, using your hands-on engine knowledge as the competitive edge.",
+     "Offer freelance development to Norwegian maritime companies, finding clients through direct email and harbor contacts instead of social media. It's remote work that suits dark winters.",
+     "Create an offline-first tablet app for local harbors covering mooring bookings, fuel logs, and inspections, designed to work with weak island connectivity.",
+     "Make a searchable online database of vintage marine engine parts, photographing your shed inventory, and charge hobbyists and restorers a small subscription.",
+     "Build Raspberry Pi engine-monitoring kits that track temperature, vibration, and hours, then install them on neighbors' boats and charge a small yearly dashboard fee."
+    ],
+    "How can a small coffee shop attract more customers?": [
+     "Turn your engine parts into décor: piston lamps, propeller tables, gauge-covered counter. A distinctive look gives locals pride and tourists something to talk about.",
+     "Match opening hours to ferry arrivals and departures. Put a chalkboard sign at the dock and sell grab-and-go \"ferry coffee\" in sturdy cups.",
+     "Make polar night cozy: warm lanterns outside, candles inside, and a hot-drink special during the brief daylight. A glowing window draws people in.",
+     "Host weekly \"repair and coffee\" mornings where neighbors bring small engines or tools and you help. It builds loyalty and word-of-mouth without social media.",
+     "Partner with guesthouses, fishing crews, and the shop or school. Offer thermos refills, a punch-card loyalty scheme, and flyers on community boards."
+    ],
+    "Give me a fresh idea for a birthday party for a 10-year-old": [
+     "Engine Graveyard Workshop: Kids assemble a \"sculpture creature\" from old marine parts, then name it and present it at a gallery-style display.",
+     "Polar Night Treasure Hunt: Hide glow-painted engine parts around the island's darkness; kids follow clues using headlamps and lanterns.",
+     "Build-a-Boat Regatta: Kids craft small boats from scrap wood and metal, then race them in the harbor or a big tub.",
+     "Ferry Captain Academy: Set up a mock bridge with old gauges and a steering wheel; kids earn captain's certificates through engine-room challenges.",
+     "Northern Lights Bonfire Night: Grill sausages over a fire, tell sea stories, and let kids ring old ship bells while watching for auroras."
+    ],
+    "Name ideas for a new productivity app": [
+     "Slakk Tide: Work with the rhythm of the tide, not against it. Plan tasks around your natural energy highs and lows.",
+     "Dagslys: Norwegian for \"daylight.\" It prioritizes your hardest tasks into the few bright hours, which suits December's three-hour days.",
+     "Bilge: Clears out the clutter that collects below deck. Dump every stray task and thought here, then pump out what doesn't matter.",
+     "Tune-Up: Treat your day like an engine service: check, adjust, and run smoothly. Simple routines, no fuss, no social feed.",
+     "Nordlys Notes: Named for the northern lights. A calm, glowing to-do list that stays useful through the long polar night."
+    ],
+    "How can a city reduce traffic congestion?": [
+     "Implement congestion pricing, charging drivers to enter busy zones at peak times, which cuts vehicle numbers and funds transit improvements.",
+     "Invest in frequent, reliable public transit like buses and trams, with dedicated lanes so they bypass traffic.",
+     "Build safe, connected cycling and walking infrastructure so short trips don't require a car.",
+     "Use adaptive traffic signals that adjust timing in real time based on actual traffic flow.",
+     "Encourage staggered work hours and remote work to spread demand away from rush-hour peaks."
+    ],
+    "Suggest a marketing campaign for a new running shoe": [
+     "Three Hours of Light Run: Host a daily noon group run in December's brief daylight. Lend test pairs and give reflective bands, with hot coffee at your shed afterward.",
+     "Mechanic-Tested Challenge: Log your own kilometers in these shoes on icy island roads. Post a weekly wear report on a harbor chalkboard for everyone to see.",
+     "Ferry Terminal Takeover: Put up posters and leave small hand-stamped cards at the ferry waiting room offering a free try-on at your shed.",
+     "Engine-Part Trophies: Weld old pistons and propellers into \"Island Champion\" trophies for a monthly local race, with the shoe's name engraved on each one.",
+     "Handwritten Neighbor Letters: Mail personal letters to nearby islands and coastal villages inviting people to a demo day. Post-office stamps cost little, and word of mouth does the rest."
+    ],
+    "Ideas to improve employee engagement in a remote team": [
+     "Hold short weekly video check-ins where people share wins and blockers, with no slides, so everyone feels heard and connected.",
+     "Send handwritten thank-you notes or small physical gifts, such as local snacks or a small tool, for milestones. This costs little and feels personal.",
+     "Give people clear ownership of projects and the freedom to choose how they work, so they feel trusted and invested in results.",
+     "Pair teammates randomly for monthly 20-minute virtual coffee chats about anything except work, to build the relationships that offices create naturally.",
+     "Spend a small budget on learning, such as courses or books of each person's choice, to show you're investing in their growth."
+    ],
+    "What could a museum do to attract teenagers?": [
+     "Run a \"Dead Engine Rescue\" workshop: teens strip and rebuild a donated marine engine using your shed parts, then fire it up together.",
+     "Host winter \"dark season\" nights, with headlamp tours, engine-room sound installations, and hot chocolate, using the three hours of daylight as the theme.",
+     "Let teens curate: give them keys, a small budget, and authority to design one exhibit, with their names on the wall.",
+     "Build a ferry-engine soundboard or simple generator-powered contraption they can operate, record, remix, and share with friends on their own social media.",
+     "Offer paid apprenticeships or reference letters for teen guides, mechanics, and archivists, valuable for maritime school, trade applications, and local credibility."
+    ],
+    "How can a non-profit raise money without asking for donations?": [
+     "Restore and sell old marine engine parts or refurbished engines to collectors, boat owners, and workshops, using local notice boards and specialist marine forums.",
+     "Run a repair café or small-engine servicing service, charging fixed fees for outboard, generator, and lawnmower maintenance for islanders and visiting boaters.",
+     "Host ticketed winter events, like aurora viewing evenings, engine-shed tours, or storytelling nights with coffee and waffles, targeting tourists and locals during dark December.",
+     "Craft and sell souvenirs from scrap brass and steel, such as lamps, bookends, clocks, and bottle openers, through local shops, ferry terminal, and tourist offices.",
+     "Offer paid workshops teaching engine maintenance, welding basics, or boat winterizing to hobbyists and visitors, with materials costs covered by the $500 start-up budget."
+    ],
+    "Suggest a new feature for a note-taking app": [
+     "Offline-first sync: Notes sync directly between your devices over home Wi-Fi, with no cloud account, so island internet outages never matter.",
+     "Shed inventory mode: Photograph a part, add a label and shelf location, and later search \"crankshaft bearing\" to find where it's stored.",
+     "Polar light themes: The display automatically shifts to warm, low-glare colors based on local sunrise and sunset, which helps in the three-hour December days.",
+     "Greasy-hands dictation: Offline voice notes transcribed on-device, including Norwegian dialects, so you can log repairs without touching the screen.",
+     "Hours-based reminders: Create maintenance notes that remind you by engine running hours or calendar dates, such as \"change impeller every 200 hours.\""
+    ],
+    "Suggest a weekend project to teach kids about money": [
+     "Repair-shop economics: Kids restore old engine parts into bookends or paperweights, log material and labor costs, set prices, and sell them at the island's Christmas market.",
+     "Scrap-metal value hunt: Sort shed parts into brass, bronze, copper and steel, weigh them, and compare scrap prices with what a cleaned, finished piece could earn.",
+     "Winter lantern business: Build lanterns from marine parts for the dark season. Kids budget materials from $100, price them, sell to neighbors, then decide whether to save, reinvest or donate the profit.",
+     "Island bank: Give each child $20 of seed money, then keep a paper ledger of savings, small loans with interest, and repayments over the weekend.",
+     "Honesty-box stand: Build a roadside box stand for coffee, waffles or fixed items, and have kids track costs, sales, and any shortfall to learn trust and profit."
+    ],
+    "How can a public library stay relevant?": [
+     "Host a repair café where neighbors fix engines, tools, and gadgets, turning your mechanical skills and shed of marine parts into shared community knowledge.",
+     "Start a \"library of things\" lending tools, fishing gear, and sleds. $500 plus neighbors' donations can stock it.",
+     "Run winter-dark evening programs: storytelling nights, film screenings, board games, and aurora talks that give people warm, social reasons to leave home in December.",
+     "Record oral histories by interviewing elders about ferries, fishing, and island life, then archive them locally on paper and audio, with no social media needed.",
+     "Become the island's help desk: assist with online forms, printing, ferry schedules, and tech questions, especially for older residents."
+    ],
+    "Ideas for a team-building activity for software engineers": [
+     "Engine Assembly Challenge: teams rebuild a dismantled marine engine from your shed parts using only a vague manual, practicing communication and debugging.",
+     "Mystery Malfunction: you plant a fault in a running engine; teams diagnose it using systematic troubleshooting, like production incident response.",
+     "Polar Night Workshop Retreat: a weekend in your shed workshop, building something together, then cooking fish soup by lantern light.",
+     "Ferry Blueprint Design Sprint: teams design a better island ferry system, pitching to you and locals acting as demanding stakeholders.",
+     "Scrap Sculpture Contest: teams build a functional kinetic sculpture from engine parts, with a $500 budget for welding supplies, tools, and food."
+    ],
+    "How can a restaurant reduce food waste?": [
+     "Track and weigh what gets thrown away for a few weeks, then adjust purchasing and prep to target the biggest sources of waste.",
+     "Shrink portion sizes or offer half portions, and ask customers before serving optional sides or garnishes they often leave.",
+     "Use a smaller, flexible menu with overlapping ingredients so trimmings and leftovers go into stocks, soups, specials, or staff meals.",
+     "Store food properly with labels, dates, and first-in-first-out rotation so ingredients are used before they spoil.",
+     "Order smaller amounts more often based on bookings and past sales, and send surplus to compost, animal feed, or local donation."
+    ],
+    "Suggest a gift for a grandmother who has everything": [
+     "Build a lamp from a polished brass gauge or piston from your shed. It gives warm light through the dark December days, and she'll know you made it.",
+     "Make a set of weatherproof lanterns or candle holders from old engine parts to line her steps during the polar night.",
+     "Record her stories on a good audio recorder, then have them printed as a bound family book for around $150.",
+     "Book a two-night hotel stay in Tromsø with her, including an aurora tour, for a shared adventure instead of another object.",
+     "Turn an old ship's pressure gauge or porthole into a working wall clock with her name and the ferry's route engraved."
+    ],
+    "How can a university improve student retention?": [
+     "Provide proactive academic advising with early-alert systems that flag struggling students and trigger personal outreach before small problems become dropouts.",
+     "Build belonging through small cohorts, mentorship programs, and first-year seminars that connect students with peers and faculty.",
+     "Offer targeted financial support: emergency grants, flexible payment plans, and clear guidance on scholarships, so short-term money crises don't force withdrawal.",
+     "Strengthen transitions with bridge programs, tutoring, and writing support, helping underprepared students catch up quickly and gain confidence.",
+     "Expand mental health and wellbeing services, including affordable counseling, with extra attention to isolation during dark, stressful periods like winter."
+    ],
+    "Ideas for a podcast about history": [
+     "Engines That Built the Coast: Trace local ferry and fishing history through salvaged engines from your shed, interviewing elders about each machine's voyages.",
+     "Polar Night Stories: Winter-only episodes recording islanders' oral histories during the dark months, capturing wartime memories, hardships, and traditions before they're lost.",
+     "Island Ledger: Dig through parish records, old shipping logs, and church archives to reveal ordinary families' stories across 900 years of northern settlement.",
+     "Occupation Echoes: Document northern Norway's WWII experience, including the scorched-earth retreat, through local testimony, abandoned bunkers, and wrecks near your island.",
+     "Sounds of Steel and Sea: Record engine startups, harbor noises, and mechanics' tales, blending technical history with sound-rich storytelling about maritime work in vanishing coastal communities."
+    ],
+    "How can a small town attract young residents?": [
+     "Host a winter \"engine tinkering\" workshop in your shed, teaching teens and newcomers practical repair skills using your old marine parts, with coffee and stories.",
+     "Print simple posters and mail letters to Norwegian folk high schools and vocational colleges advertising cheap housing, apprenticeships, and ferry-maintenance jobs on your island.",
+     "Turn spare parts into polished engine sculptures or lamps, selling them to tourists to fund a small youth workshop or community fund.",
+     "Organize a December \"dark season\" festival with bonfires, aurora viewing, and lantern walks, drawing visitors who may later consider moving there.",
+     "Contact the municipality about remote-work-friendly rentals and fast broadband, then personally welcome newcomers with practical help like boat rides, repairs, and introductions."
+    ],
+    "How can a city get more people to commute by bike?": [
+     "Build protected, connected bike lanes separated from traffic, so riders feel safe along entire routes rather than on isolated fragments.",
+     "Make driving less attractive: reduce downtown parking, lower speed limits, and price congestion so cycling becomes the faster, cheaper choice.",
+     "Provide secure bike parking at homes, workplaces, and transit stations to prevent theft and remove a major barrier.",
+     "Keep bike routes cleared and lit in winter, prioritizing snow removal there before roads, as Nordic cities like Oulu do.",
+     "Offer incentives like employer commuter bonuses, subsidized e-bikes, and free repair workshops to lower costs and build habit."
+    ],
+    "Ideas for a mobile game to play during a commute": [
+     "Engine Rebuild Puzzle: Reassemble scanned photos of your own old marine engine parts in the correct order, with realistic tolerances and torque steps. Fully offline.",
+     "Ferry Captain Idle Sim: Run a tiny island ferry route in real time, handling weather, cargo, and tides. It progresses during the crossing and needs no social features.",
+     "Polar Light Collector: Gather daylight minutes and aurora events based on your real local sunrise and weather data, building a winter journal over the dark season.",
+     "Mechanic's Diagnosis Mystery: Listen to recorded engine sounds you capture in your shed and diagnose the fault. Solo, text-light, and built around your expertise.",
+     "Island Logbook Trivia: A single-player quiz of local history, fishing, and ferry lore that you write yourself, with short rounds sized to your commute."
+    ],
+    "Suggest a name for a black cat": [
+     "Piston – A nod to your years as a ferry mechanic; sleek, sturdy, and always quietly moving.",
+     "Mørketid – Norwegian for the \"murky time\" of polar night, when your island gets only a few hours of daylight.",
+     "Bilge – Dark, a little gruff, and straight from the engine room; perfect for a cat that lurks in the shed.",
+     "Kull – Norwegian for \"coal,\" fitting for a cat as black as the stuff that once fired old marine engines.",
+     "Diesel – Dark, warm, and rumbling; the purr will sound just like an idling engine."
+    ],
+    "Give me a premise for a short science fiction story": [
+     "In polar night, a retired mechanic realizes his shed's scrapped engine parts hum in rhythm with a signal rising from beneath the fjord.",
+     "The island's last ferry engine, long scrapped, restarts itself each December dusk, carrying passengers to a version of the island where the sun never sets.",
+     "A retiree builds a machine from scrap to borrow summer daylight, but each borrowed hour erases a villager's memory.",
+     "Aliens crash into the fjord during December's three hours of daylight; only the island's old mechanic can fix their ship, whose drive resembles a ferry engine.",
+     "After a storm, the island drifts free of the seabed; a retired ferry mechanic must rig its old engines to steer it home."
+    ],
+    "Suggest a theme for a wedding": [
+     "Polar Night Lanterns: Use December's darkness. Light the venue with lanterns and candles, and add fixtures made from brass engine parts and glass.",
+     "Salvaged Engine Room: Turn old marine parts into centerpieces, table numbers, and a rustic arch. Guests sign a repurposed pistons-and-gears guest \"book.\"",
+     "Ferry Crossing: Treat the wedding as a voyage. Make boarding-pass invitations, name tables after local ports, and serve a \"captain's\" toast at dockside.",
+     "Island Hearth Gathering: Host a potluck-style feast where all 900 neighbors contribute dishes. Add handmade decorations, fiddle music, and wool blankets for coziness.",
+     "Midday Twilight Ceremony: Hold the vows during the brief three hours of blue-hour light. Follow with an evening of firelight, bonfires, and aurora watching."
+    ],
+    "How can I learn a new language faster?": [
+     "Book online one-on-one tutors (italki, Preply) two or three times weekly. At about $10-15 per lesson, your $500 buys months of real conversation, no social media needed.",
+     "Label shed parts, tools, and engines in your target language. Learning the words for things you handle daily makes vocabulary stick through constant, practical repetition.",
+     "Use the dark December afternoons for a daily 30-minute routine of free Anki flashcards and a structured audio course like Pimsleur.",
+     "Play podcasts or radio in the language while tinkering in the shed. Repeat phrases aloud (shadowing) to train your ear and pronunciation.",
+     "Watch shows with target-language subtitles and read graded readers. Save part of your budget for a summer trip to the country for immersion."
+    ],
+    "Ideas for a first date": [
+     "Meet at midday for the brief blue twilight, and share thermos coffee and fresh waffles on a scenic overlook with wool blankets.",
+     "Invite her to your shed to restore an old engine part together, or turn it into a lantern, then have cocoa afterward.",
+     "Build a beach bonfire after dark, grill sausages, and watch for the northern lights, with a spare blanket and a thermos of something warm.",
+     "Cook her a candlelit dinner of fresh local cod, with a good bottle of wine, and tell her your best ferry stories.",
+     "Take a sheltered fjord boat ride if the weather allows, pointing out landmarks and sharing island history, then warm up at the local café."
+    ],
+    "Suggest a startup idea in climate tech": [
+     "Salvage turbines: Build small wind turbines for off-grid cabins and boats from salvaged alternators, shafts, and gearboxes. Sell locally by word of mouth.",
+     "Engine efficiency tune-ups: Offer fuel-saving tune-ups and propeller matching for local fishing boats, cutting diesel use and emissions. Charge per job or share the fuel savings.",
+     "Waste-heat recovery: Use salvaged marine heat exchangers to capture engine and fish-plant waste heat for heating sheds, greenhouses, or drying racks.",
+     "Net-recycling shredder: Build a small shredder from old engine and gearbox parts to process worn fishing nets and ropes. Sell the material to recyclers.",
+     "Hybrid conversion kits: Design simple battery-assist conversions for small diesel boats using reconditioned parts, starting with one prototype on a neighbor's boat."
+    ],
+    "How can a hospital reduce patient wait times?": [
+     "Use triage systems that prioritize patients by urgency, so critical cases are seen first while minor ones are directed to faster, lower-acuity pathways.",
+     "Improve patient flow by speeding up bed turnover, discharging earlier in the day, and coordinating lab, imaging, and transport so patients aren't stuck waiting between steps.",
+     "Match staffing to demand by analyzing arrival patterns and scheduling more doctors and nurses during known peak hours.",
+     "Offer telehealth, online scheduling, and appointment reminders to cut no-shows, reduce unnecessary visits, and spread demand more evenly.",
+     "Add a fast-track area where nurse practitioners treat minor injuries and illnesses, keeping them out of the main emergency queue."
+    ],
+    "Suggest a plot twist for a detective novel": [
+     "The drowned man's hands bear fresh engine grease, proving he died in the ferry's engine room, not the sea, and the logbook was forged.",
+     "In the endless polar dark, the killer's alibi collapses because a rigged harbor clock made every witness misjudge the hour of death.",
+     "The corpse is actually the blackmailer, not the missing man; the \"missing\" man vanished voluntarily and has been quietly helping the detective all along.",
+     "The anonymous warning letters were written by the victim himself, who engineered his own murder to expose the one person he knew would kill him.",
+     "The murder weapon, a corroded engine part from a 1970s wreck, reveals the \"drowned\" crew survived, and one still lives on the island."
+    ],
+    "Ideas for a high school science fair project": [
+     "Build a Stirling engine from scrapped pistons and cylinders; measure how efficiency changes with the temperature difference between warm water and freezing winter air.",
+     "Convert an old propeller into a small tidal-current turbine; measure electrical output against current speed in a local sound.",
+     "Test which LED light colors best grow microgreens during polar night, comparing growth rates, energy use, and nutrient content.",
+     "Compare seawater corrosion rates of salvaged engine metals, testing sacrificial zinc anodes and protective coatings over several months.",
+     "Build a magnetometer from cheap sensors to log geomagnetic disturbances and correlate them with aurora sightings and public Kp-index data."
+    ],
+    "How can a supermarket reduce plastic use?": [
+     "Replace pre-packed produce with loose items and offer reusable or compostable bags, letting customers choose their own quantities.",
+     "Install refill stations for dry goods, detergents, and oils, so customers bring their own containers instead of buying new plastic packaging.",
+     "Prioritize suppliers using returnable crates and bulk shipping, cutting plastic wrap, pallet film, and single-use transport packaging.",
+     "Introduce deposit-return schemes for bottles and containers, and stock products in glass, metal, or cardboard instead of plastic.",
+     "Charge for carrier bags and sell durable reusable totes, while training staff to avoid unnecessary bagging and overwrapping at deli and bakery counters."
+    ]
+   },
+   "gemini-3.5-flash-lite": {
+    "Suggest a side business for a software developer": [
+     "Build offline-first inventory management software for remote island mechanics using spare parts sheds.",
+     "Create niche desktop diagnostic tools for older mechanical marine engines without internet dependency.",
+     "Program specialized low-bandwidth ledger apps for small island fishers and local ferry suppliers.",
+     "Develop automated heating and lighting control scripts tailored for long, dark northern winters.",
+     "Code localized weather and sea-condition logger dashboards running entirely on local Raspberry Pis."
+    ],
+    "How can a small coffee shop attract more customers?": [
+     "Partner with local artists to display paintings on the walls, creating a cozy cultural hub for the long dark winter.",
+     "Host a weekly trivia or storytelling night using your shed's marine history to spark nostalgia and draw locals in.",
+     "Install a simple wood-burning stove to provide authentic warmth and the smell of burning birch, essential during three-hour days.",
+     "Introduce a \"Loyalty Anchor\" punch card offering a free pastry after ten coffees to reward your small community's regulars.",
+     "Serve a daily special soup in thermos cups for people waiting on the ferry, capturing cold commuters right at the dock."
+    ],
+    "Give me a fresh idea for a birthday party for a 10-year-old": [
+     "Aurora Ice Cave Challenge: Construct a glowing ice-block grotto in your shed, then lead kids on a flashlight treasure hunt for hidden mechanic parts. (24 words)",
+     "Ferry Captain Boot Camp: Turn your wharf into a nautical academy with knot-tying stations, a miniature cargo-loading contest, and hot cocoa served in mugs. (23 words)",
+     "Glow-in-the-Dark Workshop: Rig old gaskets and scrap metal with UV-reactive paint, then let kids assemble bizarre \"alien engine\" sculptures in total polar darkness. (23 words)",
+     "Midnight Sun Feat: Since day is scarce, throw a noon \"sunset\" feast with fairy lights, storytelling by the stove, and a cake shaped like a diesel piston. (24 words)",
+     "Island Spy Mystery: Write a local folklore scavenger hunt using your marine knowledge, sending kids across the snowy village to decode hidden mechanical clues. (24 words)"
+    ],
+    "Name ideas for a new productivity app": [
+     "Mørketid",
+     "Gasket",
+     "Tides",
+     "Shed500",
+     "FjordFocus"
+    ],
+    "How can a city reduce traffic congestion?": [
+     "Implement congestion pricing to charge drivers entering busy downtown zones during peak hours.",
+     "Expand and subsidize reliable public transit networks to make commuting by bus or train more appealing.",
+     "Build protected bike lanes and pedestrian zones to encourage active, space-efficient commuting alternatives.",
+     "Optimize traffic light synchronization using real-time data to keep vehicles moving steadily instead of idling.",
+     "Restrict large delivery trucks to nighttime hours to keep daytime lanes clear for passenger vehicles."
+    ],
+    "Suggest a marketing campaign for a new running shoe": [
+     "Arctic Soles: Freeze-test your running shoes in dark, icy Norwegian fjords. Prove durability to islanders who value grit over hype.",
+     "The 3-Hour Mile: Launch a global campaign timing runs exclusively during Norway’s darkest December daylight window. Emphasize mental resilience.",
+     "Grit & Gears: Sculpt giant, functional running shoes from discarded marine engine parts. Display them proudly on the island's single ferry dock.",
+     "Islander Endurance: Send a pair to every resident on your island. Real word-of-mouth from rugged locals beats any digital ad campaign.",
+     "Shed Tested: Film a deadpan, no-nonsense review of the shoes filmed entirely inside your cold mechanic's shed, surrounded by diesel parts."
+    ],
+    "Ideas to improve employee engagement in a remote team": [
+     "Ship a mystery marine part to each team member; host a video call to guess its original function and rusted history.",
+     "Draw names and mail a small local snack or warm wool item so everyone opens a surprise parcel together on camera.",
+     "Assign a low-stakes monthly engineering riddle using household items, encouraging messy workshops and creative, practical problem-solving.",
+     "Host a virtual lighthouse hour where one person shares a lifetime skill demonstration, from splicing rope to fixing old carburettors.",
+     "Create a shared digital map where teammates drop pins to show their local winter view, weather, and current daylight hours."
+    ],
+    "What could a museum do to attract teenagers?": [
+     "Host monthly LAN parties and gaming nights in the galleries to make the space feel like a cool, tech-friendly hangout spot.",
+     "Build interactive, hands-on maker spaces where teens can repair, hack, and build things using discarded or donated mechanical parts.",
+     "Launch a TikTok or Instagram takeover program, hiring local teens to create funny, authentic video content about the exhibits.",
+     "Curate an underground exhibit featuring local youth subcultures, skate culture, and teenage history curated by the teenagers themselves.",
+     "Offer free evening access with low lighting, good music, and cozy seating areas specifically designed as a safe social space."
+    ],
+    "How can a non-profit raise money without asking for donations?": [
+     "Host a community dinner using donated local ingredients, charging a flat fee for the meal and storytelling.",
+     "Upcycle scrap metal from your shed into art or practical items to sell to tourists.",
+     "Organize a guided historical walking tour focusing on the island's unique ferry and maritime heritage.",
+     "Run a hands-on mechanical repair workshop for locals, charging admission to share your lifelong trade skills.",
+     "Establish a tool-sharing library, charging a small annual subscription fee for neighbor access to equipment."
+    ],
+    "Suggest a new feature for a note-taking app": [
+     "Thermal Dark Mode: A UI that shifts to low-glare, amber-tinted tones to preserve night vision during long, dark winter days.",
+     "Offline-First Mesh Sync: A peer-to-peer Wi-Fi sync using old routers so islanders can share notes without relying on unreliable satellite internet.",
+     "Workshop Audio-Tagging: Attach quick voice notes of engine rattles or part numbers using large, gloved-hand-friendly buttons while working in a cold shed.",
+     "Hardware Part Ledger: A specialized template to catalog inventory of old marine bolts and gaskets with quick search and serial numbering.",
+     "Polar Sleep Log: A minimalist daily entry mode tracking energy levels and daylight hours to monitor seasonal mood shifts."
+    ],
+    "Suggest a weekend project to teach kids about money": [
+     "Build a mini ferry model from scrap engine parts, sell tickets to neighbors, and split the earnings as a wages lesson.",
+     "Open a \"marine repair shop\" in your shed. Kids quote jobs on broken parts, earn play tokens, and pay taxes.",
+     "Auction off polished brass and steel scrap. Kids use budgeted pocket money to bid on items to resell or keep.",
+     "Run a coin-operated crane game built from pulleys and old belts, teaching kids about pricing, costs, and profit margins.",
+     "Set up a cooperative store where kids buy bulk candy with your $500, package it, and learn about markup and reinvestment."
+    ],
+    "How can a public library stay relevant?": [
+     "Shift from lending books to lending tools, electronics, and repair gear, becoming the community’s hands-on makerspace.",
+     "Host dark-season movie marathons and local history storytelling nights to combat isolation during long polar nights.",
+     "Offer practical, peer-led workshops where retired tradespeople teach mechanical, electrical, and DIY repair skills to younger generations.",
+     "Function as a warm, welcoming community hub with reliable Wi-Fi, digital literacy classes, and quiet workspaces.",
+     "Deliver curated media bags and library materials directly to elderly or immobile residents during harsh winter weather."
+    ],
+    "Ideas for a team-building activity for software engineers": [
+     "Disassemble a rusty diesel injector blindfolded to learn trust, sensory communication, and tactile debugging in total darkness. (17 words)",
+     "Build a functioning mechanical bilge pump using only discarded gaskets, copper tubing, and scrap metal from the shed floor. (18 words)",
+     "Navigate a treacherous midnight fjord zodiac run using only dead reckoning and an erratic, salt-corroded marine compass. (17 words)",
+     "Diagnose a catastrophic cooling system failure on an ancient Yanmar diesel using only acoustic cues and temperature touch tests. (18 words)",
+     "Sort, classify, and catalog two thousand unlabelled, grease-caked engine bolts under the dim glow of a single 40-watt bulb. (18 words)"
+    ],
+    "How can a restaurant reduce food waste?": [
+     "Preserve surplus summer harvests through traditional methods like pickling, salting, and fermenting to use during the dark winter months.",
+     "Create a flexible daily menu based strictly on ingredients nearing their expiration date rather than sticking to rigid recipes.",
+     "Transform vegetable trimmings, fish bones, and meat scraps into rich, deeply flavored stocks, broths, and sauces.",
+     "Implement smaller portion sizes and offer side-dish alternatives so guests leave less food unfinished on their plates.",
+     "Train kitchen staff in precise inventory rotation and advanced butchery techniques to maximize the usable yield from every delivery."
+    ],
+    "Suggest a gift for a grandmother who has everything": [
+     "A custom framed black-and-white print of a vintage ferry blueprint, sourced from your shed's old engine archives.",
+     "A handcrafted bedside reading lamp built using a polished piston and a warm, low-wattage Edison bulb.",
+     "A framed, antique mechanical gear arranged to symbolize her family tree with small engraved brass tags.",
+     "A heavy-duty, cast-iron mechanical hand warmer, restored and seasoned, for long winter days.",
+     "A personalized brass plaque mounted on a polished teak block, engraved with her favorite local coordinates."
+    ],
+    "How can a university improve student retention?": [
+     "Foster a strong sense of community through regular, meaningful peer mentorship and faculty engagement programs.",
+     "Provide early academic intervention and accessible tutoring before students fall behind in coursework.",
+     "Align curriculum and career services to demonstrate clear, practical pathways to post-graduation employment.",
+     "Expand mental health counseling and financial aid resources to reduce common burnout and attrition factors.",
+     "Flexible scheduling and hybrid learning options accommodate working students and unexpected life disruptions."
+    ],
+    "Ideas for a podcast about history": [
+     "Arctic Shipwrecks: Stories of wooden hulls, violent storms, and daring winter rescues in the Vestfjorden straits.",
+     "The Ferry Line: How small diesel engines and wooden vessels connected isolated northern island communities through decades of isolation.",
+     "Iron and Salt: Oral histories from old mechanics about keeping WWII-era German marine engines running with scrap metal.",
+     "Lighthouse Keepers: Tales of lonely winter vigils, freezing storms, and guiding fishing boats through endless December polar nights.",
+     "Smugglers' Coves: Local folklore of illicit alcohol, hidden bays, and midnight boat chases during Norway's prohibition era."
+    ],
+    "How can a small town attract young residents?": [
+     "Guarantee affordable housing by converting vacant buildings into low-rent apartments for young families and workers.",
+     "Build a high-speed fiber-optic network to attract remote workers seeking a quiet island lifestyle.",
+     "Offer local tax breaks or business grants for young entrepreneurs opening essential community services.",
+     "Create a vibrant community hub with indoor recreation for the long, dark winter months.",
+     "Establish a vocational training partnership with mainland colleges focused on local marine and green energy industries."
+    ],
+    "How can a city get more people to commute by bike?": [
+     "Build fully separated, heated bike lanes that stay cleared of snow and ice throughout the winter months.",
+     "Offer heavy tax incentives or cash rebates specifically for purchasing reliable electric cargo bikes.",
+     "Restrict personal car access in central business districts while prioritizing fast, safe bicycle thoroughfares.",
+     "Install secure, covered, and well-lit bicycle parking hubs at all major public transit stations.",
+     "Implement continuous, vibrant public awareness campaigns highlighting the health and time-saving benefits of riding."
+    ],
+    "Ideas for a mobile game to play during a commute": [
+     "Shed Simulator: Fix old pistons by candlelight while the Arctic wind howls outside. Perfect for dark commutes.",
+     "Ferry Drift: Steer a rusty ferry through icy fjords using only one thumb.",
+     "Island Post: Deliver groceries across snowy terrain to grumpy locals before the batteries die.",
+     "Scrap Match: Match three rusted bolts, gaskets, and spark plugs to clear the board.",
+     "Northern Lights: Tap the screen to guide a lone seagull home before the three-hour daylight vanishes completely."
+    ],
+    "Suggest a name for a black cat": [
+     "Krambu: Meaning \"general store\" in dialect, named for the dark, cluttered corners of an old island shop full of hidden treasures.",
+     "Svolvær: After the historic Lofoten fishing hub, acknowledging your northern maritime roots and the deep shadows of polar nights.",
+     "Rust: A nod to the shed full of marine engine parts and the resilient reddish-brown patina of old iron in salt air.",
+     "Vinter: The Norwegian word for winter, honoring the long, beautiful darkness and three-hour December days on your island.",
+     "Skru: Meaning \"screw\" or \"wrench\" in Norwegian, a fitting tribute to a lifetime spent turning bolts on ferry engines."
+    ],
+    "Give me a premise for a short science fiction story": [
+     "The rusted injector pumps in your shed aren't old Volvo parts—they are alien biological beacons reacting to the December aurora.",
+     "A crippled interstellar scout ship crash-lands in the fjord; its hyperdrive core runs on the exact same principles as a 1970s diesel cylinder head.",
+     "During the long polar dark, the marine salvage in your shed begins whispering technical repair manuals in a language you somehow understand.",
+     "The local ferry radar starts picking up a massive submarine metal mass sitting directly beneath the ice sheet where no chart shows deep water.",
+     "A stranded off-world botanist knocks on your door during a blizzard, trading schematics for a warm shop and spare copper gaskets."
+    ],
+    "Suggest a theme for a wedding": [
+     "Arctic Industrial Solstice: Celebrate under the three-hour polar day, using rusted pistons as candleholders and polished brass fittings for wedding rings.",
+     "Ferry Graveyard Romance: Transform your shed’s best salvage into romantic archways, fairy-lit crankshafts, and salvaged marine glass centerpieces reflecting the northern blue hour.",
+     "Island Mechanic’s Midwinter Night: A cozy, lantern-lit gathering for all 900 villagers, fueled by mulled wine, coastal storytelling, and warm gear in the local boathouse.",
+     "Norwegian Salt & Steel: A rugged, minimalist theme honoring your trade, featuring heavy wool blankets, roaring outdoor fires, and tables decorated with vintage spark plugs.",
+     "Midnight Sun’s Shadow: Lean into the beautiful December gloom with deep blues, glowing workshop lights, warm timber textures, and a celebratory feast of local cod."
+    ],
+    "How can I learn a new language faster?": [
+     "Connect old piston rings and gaskets to new vocabulary words, using your workshop as a physical memory palace for daily practice.",
+     "Listen to foreign language radio broadcasts while you overhaul scrap metal parts, turning routine mechanical work into immersive listening time.",
+     "Label every tool and engine component in your shed with foreign sticky notes to force visual association during your daily tasks.",
+     "Spend your three hours of December daylight reading children's books aloud to practice pronunciation without feeling overwhelmed by complex grammar rules.",
+     "Invest your five hundred dollars in a high-quality audio course and a sturdy notebook, ignoring flashier apps requiring internet you might lack."
+    ],
+    "Ideas for a first date": [
+     "A thermos of cloudberry coffee in your heated shed, listening to old jazz on the radio while the Arctic storm howls outside.",
+     "Drive to the island’s highest point with studded tires to watch the midday blue hour and hunt for the northern lights together.",
+     "Meet at the local wharf’s fish house for a quiet evening of frying fresh-caught cod on a wood stove while sharing old work stories.",
+     "A candlelit dinner in the workshop surrounded by polished brass and crankshafts, trading tales of the old mainland ferries under the warm glow.",
+     "Bundle up in heavy wool for a midnight walk down to the icy shore to watch the bioluminescence in the dark fjord waters."
+    ],
+    "Suggest a startup idea in climate tech": [
+     "Build DIY wind-assist sails for local fishing boats using scrap marine aluminum and canvas to cut diesel use.",
+     "Design a micro-hydro turbine for island streams using old alternator parts to heat local greenhouses.",
+     "Fabricate small, insulated compost-heat boxes from scrap engine housings to grow fresh greens during the dark winter.",
+     "Convert old diesel marine heaters into waste-vegetable-oil burners to heat local community workshops affordably.",
+     "Assemble portable battery banks from discarded electric vehicle cells, charged by community tidal current paddles."
+    ],
+    "How can a hospital reduce patient wait times?": [
+     "Implement digital triage at intake to quickly sort patients by urgency and route them to the correct care path.",
+     "Adopt predictive scheduling algorithms using historical admission data to match staffing levels with peak arrival times.",
+     "Streamline discharge processes by planning for post-hospital care from the moment of a patient's admission.",
+     "Introduce fast-track lanes for minor ailments to prevent non-urgent cases from clogging emergency waiting rooms.",
+     "Utilize real-time tracking boards to identify and eliminate bottlenecks in room turnover and diagnostics."
+    ],
+    "Suggest a plot twist for a detective novel": [
+     "The pristine vintage crankshaft you just polished matches the exact part stolen from the mainland museum’s priceless, one-of-a-kind royal motorboat exhibit.",
+     "The mysterious stranger who bought your last spare fuel pump didn't leave the island; their frozen body was just found washed up near the slipway.",
+     "The local post boat engine you repaired this morning was sabotaged—not to sink it, but to ensure the delivery of a dead man's confession.",
+     "That recurring diesel knock you've been hearing across the fjord isn't an engine at all, but a coded distress signal from the missing ferry inspector.",
+     "The grease-stained overalls you found hanging on your shed door don't belong to you, yet they’re soaked in the missing mayor's fresh blood."
+    ],
+    "Ideas for a high school science fair project": [
+     "Thermoelectric generator: Use your marine engine scrap and the extreme indoor-outdoor December temperature difference to generate electricity from waste heat.",
+     "Bioluminescence: Harvest local Arctic marine plankton and test how varying water temperatures affect their light emission during the polar night.",
+     "Salinity gradient power: Build a small-scale pressure-retarded osmosis generator using melted island snow and local seawater.",
+     "Tidal current turbine: Construct a miniature underwater turbine from scrap metal to measure kinetic energy conversion in the fjord.",
+     "Perfluoroalkyl substance (PFAS) snow filter: Build a simple carbon-filtration column from scrap pipe to test snowmelt purity across the island."
+    ],
+    "How can a supermarket reduce plastic use?": [
+     "Replace plastic fruit trays with cardboard alternatives or sell produce loose by weight.",
+     "Install refill stations for liquids like milk, detergent, and cooking oils using reusable glass bottles.",
+     "Switch fresh bakery bags from plastic-windowed paper to fully recyclable paper or paper bags.",
+     "Eliminate single-use plastic carrier bags entirely, offering sturdy paper or organic cotton alternatives instead.",
+     "Require local suppliers to deliver bulk goods in returnable, reusable plastic crates instead of single-use wrapping."
+    ]
+   },
+   "GigaChat-2-Max": {
+    "Suggest a side business for a software developer": [
+     "Develop custom navigation apps tailored for local fishermen & boaters.",
+     "Create an online marketplace selling rare marine engine components from your inventory.",
+     "Build web tools helping locals manage their fishing schedules with weather data integration.",
+     "Design simple website templates optimized for small businesses on the island.",
+     "Launch a subscription-based service offering remote technical support for boat electronics systems."
+    ],
+    "How can a small coffee shop attract more customers?": [
+     "Host special events like open mic nights or book clubs for community engagement.",
+     "Offer unique local pastries made with seasonal ingredients sourced from nearby farms.",
+     "Create cozy reading corners with books donated by residents.",
+     "Serve specialty coffees inspired by Arctic flavors such as lingonberry lattes.",
+     "Provide free Wi-Fi but encourage offline activities through board games or jigsaw puzzles."
+    ],
+    "Give me a fresh idea for a birthday party for a 10-year-old": [
+     "Build an indoor igloo with blankets & pillows; serve hot chocolate and read winter-themed stories by candlelight.",
+     "Host a 'Polar Bear Party'—play freeze tag games, make snowflake crafts, enjoy warm soup & bread.",
+     "Organize a treasure hunt through the village, searching for hidden presents under streetlights during twilight.",
+     "Create a DIY lantern parade—decorate paper lanterns then walk together illuminating dark streets at dusk.",
+     "Set up a cozy movie night inside your shed, projecting classic films onto walls using salvaged parts from old engines."
+    ],
+    "Name ideas for a new productivity app": [
+     "Daylight Max",
+     "TimeCraft Pro",
+     "Arctic Focus",
+     "WorkWise App",
+     "Productive Pulse"
+    ],
+    "How can a city reduce traffic congestion?": [
+     "Implement carpool lanes or incentives for ridesharing.",
+     "Expand public transportation networks with more buses, trams, or subways.",
+     "Encourage cycling by building safe bike lanes and providing bike rental services.",
+     "Introduce road pricing schemes during peak hours.",
+     "Promote remote work options to decrease daily commuting needs."
+    ],
+    "Suggest a marketing campaign for a new running shoe": [
+     "Polar Night Challenge: Launch a limited edition winter-themed shoe with glow-in-the-dark elements, perfect for those long dark nights.",
+     "Ferry Fuel Fitness: Promote the shoes’ durability through an endurance challenge inspired by your maritime experience—running from dock to dock.",
+     "Island Trail Series: Organize a series of races highlighting local terrain, celebrating community spirit and scenic landscapes unique to your region.",
+     "Winter Warrior Bootcamp: Partner with local gyms or fitness groups offering special training sessions using the new shoes designed specifically for cold weather conditions.",
+     "Nordic Heritage Collection: Create a line of shoes that reflects traditional Norwegian design aesthetics combined with modern performance technology."
+    ],
+    "Ideas to improve employee engagement in a remote team": [
+     "Regular virtual coffee breaks for informal chats.",
+     "Create an online suggestion box with anonymous submissions.",
+     "Organize monthly video game nights or trivia challenges.",
+     "Celebrate birthdays and work anniversaries through personalized e-cards.",
+     "Host quarterly virtual skill-sharing sessions led by different team members."
+    ],
+    "What could a museum do to attract teenagers?": [
+     "Interactive exhibits where teens can disassemble/reassemble engines or learn hands-on skills related to maritime engineering.",
+     "Virtual reality experiences simulating life at sea during different eras.",
+     "Collaborate with local schools for educational workshops linked to curriculum topics like physics or history.",
+     "Host events like 'Engineer Night' featuring challenges and competitions using recycled marine parts.",
+     "Create temporary exhibitions showcasing teenage inventors from the region who repurposed old machinery into innovative creations."
+    ],
+    "How can a non-profit raise money without asking for donations?": [
+     "Organize community events like concerts or talent shows with local performers.",
+     "Sell merchandise related to the cause, such as t-shirts, mugs, or calendars.",
+     "Host workshops or classes where participants pay an entry fee.",
+     "Create partnerships with businesses that donate proceeds from sales.",
+     "Develop sustainable income streams through investments or renting out assets."
+    ],
+    "Suggest a new feature for a note-taking app": [
+     "Offline Mode: Sync notes when internet is available but allow editing even during long periods without connectivity.",
+     "Dark Theme with Seasonal Adjustment: Automatically adjust screen brightness based on local daylight hours.",
+     "Soundboard Integration: Record audio snippets directly from the app and transcribe them into text notes.",
+     "Part Inventory Management: Track and organize marine engine spare parts inventory using QR codes or barcodes.",
+     "Weather-Linked Reminders: Send reminders based on weather conditions suitable for outdoor tasks like boat maintenance."
+    ],
+    "Suggest a weekend project to teach kids about money": [
+     "Build miniature boat models from scrap materials, teaching cost-efficiency and creativity.",
+     "Create a pretend store using found items, learning pricing strategies and basic accounting.",
+     "Organize a barter system activity where children trade different objects for desired goods.",
+     "Design simple board games focused on budgeting, saving, and investment concepts.",
+     "Start a small garden or petty craft business selling homemade products at local events."
+    ],
+    "How can a public library stay relevant?": [
+     "Host workshops teaching practical skills like repairing engines or DIY projects using local resources.",
+     "Create a community space for seniors with activities tailored to their interests and needs.",
+     "Organize cultural events showcasing traditional crafts, music, and storytelling from the region.",
+     "Offer digital literacy classes focusing on essential online tools without requiring social media accounts.",
+     "Establish an exchange program where members borrow specialized tools unavailable elsewhere on the island."
+    ],
+    "Ideas for a team-building activity for software engineers": [
+     "Build a miniature boat from salvaged engine parts; race them across the harbor using remote controls.",
+     "Solve puzzles hidden inside disassembled engines; first team to reassemble wins.",
+     "Create art installations with found objects; judge creativity and storytelling potential.",
+     "Organize a 'polar night' escape room under artificial lights; challenges related to local history or engineering.",
+     "Host an indoor obstacle course made entirely out of spare engine components; test agility and problem-solving skills."
+    ],
+    "How can a restaurant reduce food waste?": [
+     "Implement portion control measures for menu items based on customer preferences.",
+     "Train staff to properly store ingredients and rotate stock efficiently using first-in-first-out method.",
+     "Donate surplus edible food to local charities or community kitchens.",
+     "Create specials from leftover ingredients like soups, stews, or daily special dishes.",
+     "Compost organic waste to produce nutrient-rich soil for gardening initiatives."
+    ],
+    "Suggest a gift for a grandmother who has everything": [
+     "Customized wooden keepsake box with engraved family photos inside lid.",
+     "Handwritten memoir book capturing her life stories and memories.",
+     "Personalized hand-knit blanket made from soft wool by local artisan.",
+     "Subscription to audiobook service delivering new titles monthly.",
+     "Unique piece of local jewelry crafted using traditional techniques."
+    ],
+    "How can a university improve student retention?": [
+     "Offer personalized academic advising tailored to individual needs.",
+     "Create engaging extracurricular activities fostering community spirit.",
+     "Provide accessible mental health support services for students facing challenges.",
+     "Ensure flexible learning options accommodating diverse schedules.",
+     "Establish mentorship programs connecting experienced alumni with current students."
+    ],
+    "Ideas for a podcast about history": [
+     "\"Island Chronicles: Stories from Secluded Communities\"",
+     "\"Engineering Through Time: Evolution of Marine Technology\"",
+     "\"Dark Winter Tales: Historical Anecdotes from the Arctic Circle\"",
+     "\"Forgotten Voices: Oral Histories of Local Elders\"",
+     "\"Mechanical Memoirs: Life Lessons Learned Repairing Ships\""
+    ],
+    "How can a small town attract young residents?": [
+     "Create opportunities for remote work with fast internet connections.",
+     "Develop sustainable tourism initiatives that highlight local culture and nature.",
+     "Offer affordable housing options like co-living spaces or renovated homes.",
+     "Establish educational programs focusing on green technologies and maritime skills.",
+     "Organize regular community events fostering creativity and connection among all ages."
+    ],
+    "How can a city get more people to commute by bike?": [
+     "Build safe cycling lanes separated from car traffic.",
+     "Provide secure bike parking at key locations like workplaces and shopping areas.",
+     "Offer incentives such as tax breaks or discounts for cyclists.",
+     "Organize regular community events promoting biking culture.",
+     "Improve lighting and maintenance of bike paths during winter months."
+    ],
+    "Ideas for a mobile game to play during a commute": [
+     "A relaxing puzzle game where you repair broken ship engines using found parts.",
+     "Fisherman simulator with mini-games based on daily life at sea.",
+     "Island exploration adventure discovering hidden treasures across the archipelago.",
+     "Real-time strategy managing an isolated fishing village through harsh winters.",
+     "Survival challenge surviving extreme weather conditions while stranded on a remote island."
+    ],
+    "Suggest a name for a black cat": [
+     "Midnight Whiskers",
+     "Coalbeard",
+     "Northwind Shadow",
+     "Fjord's Echo",
+     "Aurora's Nightguard"
+    ],
+    "Give me a premise for a short science fiction story": [
+     "An ancient shipwreck reveals alien technology that transforms the isolated community into pioneers of interstellar travel.",
+     "A forgotten engine part unlocks hidden time-travel capabilities, leading to encounters with future selves.",
+     "The local lighthouse holds secrets of an alternate universe accessible only during winter solstice darkness.",
+     "A malfunctioning generator triggers strange atmospheric phenomena, attracting mysterious visitors from beyond Earth’s skies.",
+     "Marine life mutates due to radiation leaks, evolving sentience and forming symbiotic bonds with humans."
+    ],
+    "Suggest a theme for a wedding": [
+     "Winter Wonderland: Embrace the long nights with twinkling lights, warm blankets, hot chocolate stations, and sleigh rides through snow-covered landscapes.",
+     "Northern Lights Romance: Incorporate aurora-inspired colors, soft glow lighting, starry night décor, and traditional Norwegian cuisine.",
+     "Coastal Charm: Highlight your maritime heritage with nautical themes, weathered wood accents, lighthouse motifs, and fresh seafood dishes.",
+     "Rustic Coziness: Create an intimate gathering using rustic furnishings, fur throws, crackling fireplaces, homemade baked goods, and vintage decorations from local thrift stores.",
+     "Island Life Celebration: Honor community spirit by inviting neighbors, serving regional specialties, playing folk music, and showcasing handcrafted items made from repurposed marine parts."
+    ],
+    "How can I learn a new language faster?": [
+     "Immersion: Surround yourself with the target language by listening to podcasts, watching movies or reading books in that language daily.",
+     "Consistency: Practice every day for at least 15 minutes using apps like Duolingo or Memrise.",
+     "Local Community: Find native speakers visiting your area or join online forums related to your hobby where conversations are conducted in the desired language.",
+     "Repetition: Write down key phrases and vocabulary from your surroundings, then practice them regularly until they become second nature.",
+     "Practical Application: Use what you’ve learned immediately — try speaking aloud while fixing engines or narrating tasks you're doing."
+    ],
+    "Ideas for a first date": [
+     "Visit the local lighthouse at sunset, enjoy the view with hot chocolate.",
+     "Explore hidden trails near your home, discover nature together under twilight.",
+     "Watch classic films projected outdoors by candlelight, cuddle up warmly.",
+     "Create something unique from old marine parts—crafting workshop session.",
+     "Organize an indoor picnic with favorite foods and stories shared over lanterns."
+    ],
+    "Suggest a startup idea in climate tech": [
+     "Repurpose old marine engines into sustainable micro-heaters for homes using waste heat recovery systems.",
+     "Create portable solar panels optimized for low-light conditions during winter months.",
+     "Develop an energy-efficient greenhouse system powered by recycled engine components.",
+     "Launch a local battery recycling program converting discarded batteries into backup power solutions.",
+     "Design insulated underwater cabling to harness tidal energy from surrounding waters."
+    ],
+    "How can a hospital reduce patient wait times?": [
+     "Implement an online appointment booking system for patients.",
+     "Hire more staff during peak hours or busy seasons.",
+     "Optimize workflows by analyzing bottlenecks using data analytics tools.",
+     "Provide clear signage and wayfinding systems within the facility.",
+     "Offer telemedicine consultations where appropriate to reduce physical visits."
+    ],
+    "Suggest a plot twist for a detective novel": [
+     "The protagonist discovers the murder weapon is an antique ship's bell, stolen from his own collection years ago.",
+     "A hidden compartment inside an old marine diesel engine reveals secret documents implicating a prominent local family.",
+     "The victim's ghost appears only during winter solstice twilight, leading detectives to overlooked clues.",
+     "An obscure maritime superstition points towards the killer’s identity.",
+     "The final clue lies buried beneath layers of ice covering the village square fountain."
+    ],
+    "Ideas for a high school science fair project": [
+     "Solar energy experiment: Measure how much sunlight can be captured during winter using various solar panels.",
+     "DIY water filtration system: Create a filter from local materials to clean rainwater.",
+     "Wind turbine model: Build a miniature windmill with salvaged marine parts to generate electricity.",
+     "Biofuel production: Investigate converting fish waste into usable fuel.",
+     "LED lighting efficiency test: Compare different types of LED bulbs for their brightness and power consumption."
+    ],
+    "How can a supermarket reduce plastic use?": [
+     "Introduce reusable packaging options for fresh produce and bulk items.",
+     "Encourage customers to bring their own bags by offering discounts or loyalty points.",
+     "Replace single-use plastics with biodegradable alternatives like paper or plant-based materials.",
+     "Implement refill stations for liquids such as oils, vinegars, detergents, and cleaning products.",
+     "Reduce excess packaging through minimalist design and sustainable sourcing practices."
+    ]
+   }
+  },
+  "nurse": {
+   "claude-sonnet-5-5": {
+    "Suggest a side business for a software developer": [
+     "Yoruba learning bot: Build a Telegram or WhatsApp bot teaching Yoruba phrases to diaspora learners, earning through small monthly subscriptions.",
+     "Nurse toolkit app: Create an offline-first Android app with drug-dose calculators and shift trackers for Nigerian healthcare workers, sold through Play Store.",
+     "Chess training bot: Make a puzzle-and-lesson chess bot with Yoruba commentary for local beginners, with a paid premium tier.",
+     "Afrobeat lyrics site: Launch a lyric-translation and playlist site for Afrobeat fans abroad, monetized with ads and affiliate links.",
+     "WhatsApp chatbots for businesses: Build order-taking and FAQ chatbots for small Lagos businesses, working in short, battery-friendly weekly sessions."
+    ],
+    "How can a small coffee shop attract more customers?": [
+     "Offer a loyalty card with a free coffee after ten purchases, so first-time visitors have a reason to return regularly.",
+     "Host weekly Afrobeat listening nights with local DJs or playlists, drawing music lovers and giving the shop a distinctive, memorable identity.",
+     "Partner with nearby offices, hospitals, and universities to offer discounted bulk orders or delivery, reaching customers who can't easily visit.",
+     "Run a chess club evening with boards available and a small prize, attracting a loyal, repeat-visiting community.",
+     "Invest in solar or inverter backup so the shop stays open during outages, becoming the reliable place to work, charge, and relax."
+    ],
+    "Give me a fresh idea for a birthday party for a 10-year-old": [
+     "Blackout Afrobeat Dance-Off: Use phone torches and glow sticks; kids freeze when the music stops, Fela-style, with Yoruba dance moves as challenges.",
+     "Human Chess Tournament: Chalk a giant board outdoors; kids play as pieces, calling moves in Yoruba and English. Winners get small medals.",
+     "Lantern Storytelling Night: Kids decorate paper lanterns, then share Yoruba folktales (Tortoise stories) by candlelight or torchlight, finishing with snacks and drumming.",
+     "Mini Nurse Academy: Teach bandaging, pulse-taking, and handwashing with toy stethoscopes. Kids earn \"junior nurse\" certificates; minimal prep, no electricity needed.",
+     "Afrobeat Instrument Workshop: Kids craft shakers and drums from bottles and tins, then form a band and perform for parents, battery speaker optional."
+    ],
+    "Name ideas for a new productivity app": [
+     "Àkókò: Yoruba for \"time.\" A simple planner that helps you make the most of your four free hours each week.",
+     "Gambit: Chess-inspired. Sacrifice small tasks to win the big ones, and plan your week like an opening.",
+     "NEPA-Proof: An offline-first app that keeps working through power cuts, with a low-battery dark mode.",
+     "Rhythm Shift: A pun on night shifts and Afrobeat. It builds routines around your energy and sleep, not the 9-to-5.",
+     "Díẹ̀díẹ̀: Yoruba for \"little by little.\" It breaks goals into tiny tasks that fit small pockets of free time."
+    ],
+    "How can a city reduce traffic congestion?": [
+     "Expand reliable mass transit, like BRT, rail, and ferries, so commuters have fast, affordable alternatives to private cars and danfo minibuses.",
+     "Use smart traffic signals and real-time monitoring to adjust light timing and quickly clear accidents and breakdowns.",
+     "Introduce congestion pricing or restricted zones, charging vehicles to enter crowded central areas at peak hours.",
+     "Encourage staggered work hours and remote work, spreading demand so fewer people travel at the same time.",
+     "Improve walking and cycling infrastructure, with safe sidewalks and lanes, so short trips don't require vehicles."
+    ],
+    "Suggest a marketing campaign for a new running shoe": [
+     "Night Shift Miles: Recruit nurses and other night workers to film short post-shift dawn runs for Instagram and TikTok, showing the shoe's comfort after 12-hour shifts.",
+     "Afrobeat Pace Playlists: Team up with rising Afrobeat artists on BPM-matched running playlists, shared on Spotify and WhatsApp, with discount codes for each tempo.",
+     "Yoruba Proverb Reels: Post short bilingual motivational clips pairing Yoruba proverbs about perseverance with running footage, built for easy sharing on WhatsApp Status.",
+     "Checkmate Challenge: Run an online chess and running crossover: runners log kilometers, chess players win matches, and combined leaderboards earn free shoes.",
+     "Lagos Walk-Up Run Clubs: Host free weekly neighborhood runs at local spots reachable on foot, with shoe trials, so no car is needed and power cuts don't matter."
+    ],
+    "Ideas to improve employee engagement in a remote team": [
+     "Hold regular one-on-one check-ins focused on workload, goals, and wellbeing, not just task updates, so each person feels seen and supported.",
+     "Favor asynchronous communication, such as recorded updates and written threads, so people in different time zones or with unreliable power and internet can still contribute.",
+     "Recognize achievements publicly and promptly through shout-outs in team channels, peer-nominated awards, or small bonuses.",
+     "Organize optional social activities like online chess tournaments, music-sharing channels, or casual virtual hangouts to build personal connections.",
+     "Offer growth opportunities such as learning stipends, mentorship, and stretch projects so remote employees see a clear future with the company."
+    ],
+    "What could a museum do to attract teenagers?": [
+     "Host Afrobeat nights where teens DJ, perform, or remix sounds from the collection, linking heritage to music they already love.",
+     "Run chess tournaments inside galleries, with artifact-themed rounds, casual leagues, and prizes that bring in online players.",
+     "Offer bilingual Yoruba-English tours and labels, led by young local storytellers instead of formal, distant curators.",
+     "Provide free student entry, flexible weekend hours, and generator or solar backup so blackouts never cancel or ruin a visit.",
+     "Let teens co-curate exhibitions and create social media content, giving them ownership, a platform, and reasons to bring friends."
+    ],
+    "How can a non-profit raise money without asking for donations?": [
+     "Run paid online chess tournaments or coaching sessions, with entry fees funding the cause. This works on a phone and fits around power cuts.",
+     "Sell products or services, like Afrobeat-themed merchandise or Yoruba-language lessons, turning earned income into steady program funding.",
+     "Apply for grants from foundations, government agencies, or international funders, which award money through proposals rather than personal donation appeals.",
+     "Secure corporate sponsorships by offering businesses visibility, such as logo placement at your events, in exchange for funding.",
+     "Offer paid training or consulting, such as health workshops for companies and schools, using your nursing expertise."
+    ],
+    "Suggest a new feature for a note-taking app": [
+     "Offline-first sync: Notes save fully offline and sync automatically in tiny, low-data bursts whenever power and connection briefly return.",
+     "Yoruba-English voice notes: Dictate handover notes in mixed Yoruba and English; the app transcribes both and tags tonal marks correctly.",
+     "Shift-aware reminders: Schedule reminders around your night-shift sleep cycle, silencing alerts during rest and batching them into your four free weekly hours.",
+     "Battery-saver mode: Dark, minimal interface with throttled background activity, so notes stay accessible through long outages without draining your phone.",
+     "Chess-notes integration: Import online games in PGN format, annotate key positions with board diagrams, and link study notes to openings you're learning."
+    ],
+    "Suggest a weekend project to teach kids about money": [
+     "Ajo Savings Game: Teach kids Yoruba \"ajo\" rotating savings using bottle caps as money, rotating payouts weekly. Works in daylight, needs no electricity.",
+     "Afrobeat Market Day: Kids run a pretend market, pricing snacks and making change while Afrobeat plays from a phone or battery speaker.",
+     "Chess Money Lessons: Assign piece values as currency; kids \"buy\" moves, learning trade-offs, budgeting, and sacrifice. Uses a cheap board, no power needed.",
+     "Needs vs Wants Sorting: Cut out pictures from old magazines or draw items; kids sort them into needs and wants, then budget a pretend ₦5,000.",
+     "Naira Goal Jar: Each child decorates a jar, picks a savings goal, and tracks coins on a paper chart. Review progress each weekend."
+    ],
+    "How can a public library stay relevant?": [
+     "Offer reliable power and quiet space: solar-backed reading rooms, device charging, and daytime and late-shift hours so workers like nurses can study, rest, and connect.",
+     "Digitize and lend Yoruba and English content: audiobooks, oral histories, and e-books downloadable offline over free Wi-Fi, readable on phones during blackouts.",
+     "Host community clubs: chess nights, Afrobeat listening sessions, and local musician showcases that turn the library into a social hub, not just a book store.",
+     "Partner with local clinics and professionals: health workshops, career mentoring, and certification study groups, giving nurses and young workers practical skills and networking close to home.",
+     "Create mobile and neighborhood branches: bicycle or minibus book carts, and small pop-up kiosks at markets and bus stops, reaching people without cars and with little time."
+    ],
+    "Ideas for a team-building activity for software engineers": [
+     "Team chess tournament: Host an online rapid-chess round-robin with paired \"consult\" teams. The winners choose the next team lunch or call theme.",
+     "Afrobeat playlist jam: Each engineer adds a song with a one-line story. Then hold a short virtual listening session and vote on favorites.",
+     "Mini hackathon: Run a 90-minute build of a small, fun tool. Keep it phone-friendly and pausable so power cuts don't derail anyone.",
+     "Proverb retrospective: Teams link Yoruba or other proverbs to lessons from their last project, turning a sprint retro into a storytelling session.",
+     "Tech trivia showdown: Hold a mobile-friendly quiz in mixed teams covering coding history, debugging fails, and Afrobeat facts. It takes 45 minutes and needs no travel."
+    ],
+    "How can a restaurant reduce food waste?": [
+     "Track and analyze waste daily to identify which dishes and ingredients are discarded most, then adjust purchasing and prep quantities accordingly.",
+     "Use first-in, first-out stock rotation, clearly labeling storage items with dates so older ingredients get used before they spoil.",
+     "Redesign menus to reuse overlapping ingredients and offer smaller portion options, reducing leftover plate waste and unused perishables.",
+     "Repurpose trimmings and surplus into stocks, sauces, or daily specials instead of throwing them away.",
+     "Donate safe surplus food to local charities or shelters, and compost unavoidable scraps where possible."
+    ],
+    "Suggest a gift for a grandmother who has everything": [
+     "Record her telling life stories and proverbs in Yoruba on your phone, then turn them into a keepsake audio collection for the family.",
+     "A rechargeable solar lantern or fan, so she stays comfortable and safe during the evening power cuts.",
+     "A rechargeable Bluetooth speaker loaded with her favorite highlife, juju, and early Afrobeat songs from her youth.",
+     "A framed print of her oriki (praise name) in beautiful Yoruba calligraphy, ordered online and delivered to her door.",
+     "A home health-check \"gift\": a digital blood pressure monitor plus your monthly nurse visit to review her readings and answer questions."
+    ],
+    "How can a university improve student retention?": [
+     "Offer flexible scheduling, with recorded lectures, evening or weekend classes, and offline-friendly materials, so working students and those facing power cuts or long commutes can keep up.",
+     "Build early-warning systems that flag falling attendance or grades, so advisors can reach out before struggling students quietly drop out.",
+     "Expand financial support through scholarships, emergency grants, installment tuition payments, and campus jobs, since money problems are a leading cause of dropout.",
+     "Create mentorship and peer communities, such as study groups, clubs, and alumni mentors, so students feel they belong and have people to turn to.",
+     "Provide accessible academic and wellbeing support, including tutoring, counseling, and career guidance, with reliable power, internet, and study spaces on campus."
+    ],
+    "Ideas for a podcast about history": [
+     "Yoruba Roots Retold: Bilingual episodes on Yoruba kingdoms, Oyo, Ife, and oral traditions, recorded in short batches with a phone and battery-powered mic.",
+     "Afrobeat Through History: How Fela, colonial rule, and independence politics shaped Afrobeat, pairing each track with the historical events behind its lyrics.",
+     "Chess and Empires: Explore how strategy games and famous battles mirror each other, from ancient Africa's Ayo/Mancala to Lagos's modern chess communities.",
+     "Night Shift Histories: Short episodes on medical history in Africa, from traditional healers to colonial hospitals, told from a Lagos nurse's perspective.",
+     "Lagos Before Lagos: Neighborhood-by-neighborhood history of Lagos, from Eko's origins to Brazilian-returnee quarters, researched through libraries, elders, and walking-distance visits."
+    ],
+    "How can a small town attract young residents?": [
+     "Offer affordable housing and reliable electricity, such as solar microgrids, so young people can live comfortably and work or study without constant outages.",
+     "Build remote-work hubs with fast internet, backup power, and cheap desks, letting young professionals earn city salaries while living cheaply.",
+     "Create nightlife and culture: Afrobeat nights, open-mic events, and chess clubs give young people community and reasons to stay.",
+     "Support young entrepreneurs with microgrants, mentorship, and cheap market stalls so local startups can grow without moving to big cities.",
+     "Improve transport with safe, regular, affordable shuttles or bike lanes, connecting residents to jobs, hospitals, and nearby cities without needing cars."
+    ],
+    "How can a city get more people to commute by bike?": [
+     "Build physically protected bike lanes on major routes, separating cyclists from fast traffic so riding feels safe, not risky.",
+     "Install solar-powered streetlights along cycling routes so night-shift workers can ride safely, even during blackouts.",
+     "Provide secure bike parking at hospitals, markets, offices, and transit stops to prevent theft.",
+     "Offer affordable bike-share schemes or subsidized bike loans so people without cars can try cycling cheaply.",
+     "Enforce speed limits and run awareness campaigns so drivers respect cyclists and biking gains social status."
+    ],
+    "Ideas for a mobile game to play during a commute": [
+     "Offline chess puzzles: Download tactic packs for five-minute sessions that use no data and little battery, and sharpen your online chess on the bus.",
+     "Afrobeat rhythm tapper: Tap along to Fela, Burna Boy, or Tems tracks stored offline. Headphones turn a traffic jam into a mini concert.",
+     "Yoruba–English proverb puzzles: Unscramble òwe and match them to their meanings. It's a bilingual word game that works offline and builds vocabulary.",
+     "Danfo route strategy: Plan Lagos bus routes, dodge go-slow traffic, and pick up passengers. Short offline rounds fit any commute length.",
+     "Ward triage puzzle: Prioritize virtual patients and solve dosage-calculation challenges. It's a dark-mode, battery-friendly game that feels fun and keeps your skills sharp."
+    ],
+    "Suggest a name for a black cat": [
+     "Alẹ́ – Yoruba for \"night,\" a fitting name for a black cat and a nod to your night shifts.",
+     "Fela – After Fela Kuti, the Afrobeat legend; perfect for a cat with big, commanding energy.",
+     "Rook – A chess piece, solid and dark, and it suits a cat who guards your home during blackouts.",
+     "Dúdú – Yoruba for \"black,\" simple, affectionate, and easy to call out across the room.",
+     "Zaki – Short, sweet, and playful, it means \"lion\" in Hausa, giving your small panther a bold name."
+    ],
+    "Give me a premise for a short science fiction story": [
+     "During a citywide blackout, a night-shift nurse notices her patients' heartbeats syncing to an Afrobeat rhythm that hasn't been composed yet.",
+     "An anonymous online chess opponent always seems to predict Lagos's blackouts. The nurse slowly realizes she's playing the sentient power grid.",
+     "Yoruba proverbs whispered to dying patients open a channel to \"ancestors\" who are really descendants sending warnings backward through time.",
+     "Her four free weekly hours expand into a hidden week-long pocket of time, but only while the city is dark, and each visit costs her something.",
+     "An alien distress call hides in Afrobeat basslines. Only a Yoruba-speaking nurse, fluent in tonal language, can decode it between shifts."
+    ],
+    "Suggest a theme for a wedding": [
+     "Afrobeat Royalty: Fela-inspired Ankara prints, a live highlife or Afrobeat band, and a dance floor that never empties. Guests dress in bold colors.",
+     "Checkmate Love: Black, white, and gold with a chessboard dance floor. Tables are named after famous chess openings, and the cake is topped with king and queen pieces.",
+     "Aso Oke & Gold: A Yoruba heritage celebration with coordinated aso oke, gele, talking drummers, and Yoruba proverbs about love printed on the programs.",
+     "Lantern-Lit Evening: Warm candles, lanterns, and fairy lights turn power cuts into romantic ambiance. A hall with a backup generator keeps the music playing.",
+     "Midnight Lagos: A night-shift-inspired celebration with a starry navy-and-silver palette, city-skyline décor, and a late-night party that runs until sunrise suya."
+    ],
+    "How can I learn a new language faster?": [
+     "Use offline phone apps like Anki or Duolingo with downloaded lessons; do 15-minute sessions during shift breaks or charged-battery evenings, avoiding dependence on power.",
+     "Learn through Afrobeat: pick songs in your target language, read lyrics, and sing along. Rhythm and repetition make vocabulary stick effortlessly.",
+     "Use your Yoruba advantage: tonal awareness helps with Mandarin or Igbo, and you can compare grammar patterns instead of translating everything through English.",
+     "Play chess online with speakers of your target language, using chat phrases and commentary; you practice real communication while doing something you already enjoy.",
+     "Book two weekly 45-minute conversation sessions on italki or HelloTalk, then spend remaining hours reviewing recordings and notes; speaking early accelerates progress more than passive study."
+    ],
+    "Ideas for a first date": [
+     "Meet for a daytime chess game at a quiet café or garden using a physical board, so power cuts won't matter, then chat over drinks.",
+     "Go to a live Afrobeat session at an open-air venue, such as Freedom Park, and take a ride-hailing car or bus together.",
+     "Have a post-shift breakfast date at a favorite amala or akara spot, speaking Yoruba and English, before you go home to sleep.",
+     "Take a sunset beach walk at Elegushi or Landmark, sharing suya and playing your favorite Afrobeat songs from a phone speaker.",
+     "Visit an art gallery or craft market, like Nike Art Gallery, in daylight, then pick a favorite piece each and explain why."
+    ],
+    "Suggest a startup idea in climate tech": [
+     "Clinic cold-chain alerts: Cheap temperature sensors with SMS warnings for small Lagos clinics' vaccine fridges during outages, plus solar backup referrals.",
+     "Dead-battery pickup: Households book via WhatsApp, bike riders collect dead inverter batteries, and you sell them to certified lead recyclers.",
+     "Yoruba Afrobeat climate jingles: Short audio clips on WhatsApp and TikTok teaching solar use and waste sorting, funded by clean-energy brand sponsorships.",
+     "Solar installer matchmaker: A WhatsApp service that vets installers and compares quotes in Yoruba and English, earning referral commissions without needing a car.",
+     "Generator-savings tracker: An app logging household generator fuel spend, with chess-style rankings rewarding switches to solar and earning installer referral fees."
+    ],
+    "How can a hospital reduce patient wait times?": [
+     "Use triage at entry so urgent cases are seen first and minor ailments are redirected to quicker, lower-level care pathways.",
+     "Introduce appointment scheduling and staggered clinic times to prevent everyone arriving at once and crowding the waiting areas.",
+     "Digitize records and registration, ideally with offline-capable systems and backup power, so outages don't halt patient check-in or file retrieval.",
+     "Match staffing to peak-demand hours using patient-flow data, adding nurses and doctors when queues are historically longest.",
+     "Speed up diagnostics by streamlining lab and imaging turnaround, using point-of-care tests and clear result-delivery systems to avoid repeat visits."
+    ],
+    "Suggest a plot twist for a detective novel": [
+     "The citywide blackout wasn't chance: the killer, a hospital night nurse, bribed a power company worker to cut the street's electricity at exactly 9:14 p.m.",
+     "Every crime scene recreates a move from one famous chess game, and the final move reveals the detective's late mentor faked his death to play it.",
+     "The killer's confessions are hidden in Yoruba proverbs inside an unreleased Afrobeat album, and the last track names the next victim: the detective.",
+     "The murder victim is alive. The corpse belonged to a missing patient, and the \"victim\" has been the anonymous informant feeding the detective clues all along.",
+     "The handwriting on the anonymous threats matches the detective's own. Exhausted and sleepless, they have been sending the clues to themselves without remembering."
+    ],
+    "Ideas for a high school science fair project": [
+     "Sunlight water disinfection: Test how well clear plastic bottles left in Lagos sun reduce bacteria in water, comparing exposure times with low-cost test kits.",
+     "Clay pot cooling: Measure how much a Yoruba-style evaporative clay pot slows food spoilage and temperature rise during blackouts, compared with room storage.",
+     "Afrobeat and focus: Test whether music tempo (Afrobeat versus silence versus slow music) changes heart rate and mental task accuracy, using a phone timer and pulse counts.",
+     "Sleep and chess performance: Track how hours of sleep affect online chess puzzle accuracy and speed, using free chess-site statistics.",
+     "Handwashing effectiveness: Compare soap, ash, and sanitizer for removing germs from hands, using simple swab-and-grow tests or glitter-based visual demonstrations."
+    ],
+    "How can a supermarket reduce plastic use?": [
+     "Sell loose produce, grains, and household staples by weight, so customers bring their own containers instead of buying pre-packaged goods.",
+     "Replace single-use plastic bags with a small charge for reusable bags, or offer paper or cloth alternatives at checkout.",
+     "Introduce refill stations for items like cooking oil, detergent, and shampoo, using returnable or customer-owned bottles.",
+     "Prefer suppliers who use minimal, recyclable, or compostable packaging, and set packaging-reduction targets in purchasing contracts.",
+     "Set up in-store collection points for plastic bottles and sachets, partnering with local recyclers and rewarding customers with discounts or loyalty points."
+    ]
+   },
+   "GigaChat-2-Max": {
+    "Suggest a side business for a software developer": [
+     "Develop mobile apps tailored to local markets—transportation, e-commerce, or healthcare solutions.",
+     "Create an online platform connecting freelance nurses with part-time job opportunities.",
+     "Build custom websites & digital marketing services for small businesses.",
+     "Teach coding courses focused on web development or app creation.",
+     "Design energy-efficient home automation systems suitable for intermittent electricity supply."
+    ],
+    "How can a small coffee shop attract more customers?": [
+     "Host live music events featuring local Afrobeat artists to draw crowds and create buzz around your café.",
+     "Offer discounts or specials for nurses working late shifts, acknowledging their dedication with appreciation.",
+     "Introduce unique Yoruba-inspired drinks or snacks that celebrate cultural heritage while attracting curious customers.",
+     "Create an inviting outdoor seating area lit by lanterns for evening gatherings despite intermittent electricity issues.",
+     "Organize weekly chess tournaments where players compete over coffee, fostering community engagement among patrons."
+    ],
+    "Give me a fresh idea for a birthday party for a 10-year-old": [
+     "Outdoor movie night with projector & generator, popcorn stand, comfy blankets under stars.",
+     "Treasure hunt through neighborhood streets, solving riddles by lantern light.",
+     "Chess tournament themed around favorite Afrobeat songs' lyrics.",
+     "Picnic potluck at local park with games like egg-and-spoon race.",
+     "Talent show where kids perform their best dance moves to latest Afrobeats hits."
+    ],
+    "Name ideas for a new productivity app": [
+     "NightShiftPro",
+     "PowerHour",
+     "ChessTime",
+     "AfroBeatTasker",
+     "YorubaYielder"
+    ],
+    "How can a city reduce traffic congestion?": [
+     "Expand public transportation options like buses or trains to encourage fewer private vehicles on roads.",
+     "Implement congestion pricing zones where drivers pay fees during peak times.",
+     "Develop bicycle lanes and pedestrian walkways for alternative commuting methods.",
+     "Encourage remote work policies among businesses to decrease daily commuter numbers.",
+     "Stagger working hours across companies to spread rush hour traffic over longer periods."
+    ],
+    "Suggest a marketing campaign for a new running shoe": [
+     "Yoruba-Inspired Design: Highlight cultural pride with limited-edition shoes featuring traditional Yoruba patterns and colors.",
+     "Midnight Run Series: Launch exclusive nighttime runs across Lagos, catering to night workers like nurses.",
+     "Power Outage Workouts: Promote home workouts using only bodyweight exercises paired with Afrobeat music.",
+     "Chess Challenge Events: Organize virtual tournaments where participants unlock discounts by solving chess puzzles.",
+     "Afrobeat Soundtrack Campaign: Collaborate with local artists to create an energetic playlist celebrating Lagos' vibrant culture."
+    ],
+    "Ideas to improve employee engagement in a remote team": [
+     "Regular virtual coffee breaks for informal chats.",
+     "Weekly recognition emails highlighting individual contributions.",
+     "Gamified training sessions with rewards.",
+     "Peer-to-peer mentorship programs across time zones.",
+     "Flexible work schedules accommodating diverse locations."
+    ],
+    "What could a museum do to attract teenagers?": [
+     "Host interactive workshops on cultural heritage using technology like VR or AR.",
+     "Create late-night events with live music performances featuring local Afrobeat artists.",
+     "Develop gamified treasure hunts inside exhibits.",
+     "Offer hands-on activities related to science experiments and art projects.",
+     "Partner with schools for educational field trips linked to curriculum topics."
+    ],
+    "How can a non-profit raise money without asking for donations?": [
+     "Organize events like concerts or marathons where participants pay an entry fee.",
+     "Sell merchandise such as t-shirts, hats, mugs with your organization's logo.",
+     "Host workshops, classes, or webinars charging attendees a small fee.",
+     "Partner with businesses offering sponsorships in exchange for advertising opportunities.",
+     "Create value-added services, e.g., consulting or research reports sold to interested parties."
+    ],
+    "Suggest a new feature for a note-taking app": [
+     "Dark Mode Auto-Switch: Automatically switches to dark mode during power outages or low-light conditions to save battery life on mobile devices.",
+     "Yoruba Language Support: Add native support for typing, translating, and searching notes in Yoruba language.",
+     "Offline Chess Integration: Allow users to record their chess moves directly within the app while offline, syncing later when internet is available.",
+     "Afrobeat Playlist Sync: Integrate with streaming services like Spotify or Apple Music to create personalized study/relaxation playlists based on user’s favorite Afrobeat tracks.",
+     "Emergency Power Backup Notes: Save critical data locally if sudden blackouts occur, ensuring important information isn’t lost."
+    ],
+    "Suggest a weekend project to teach kids about money": [
+     "Organize a simple budgeting game where children track their imaginary income & expenses for a month using colorful charts or drawings.",
+     "Host an interactive storytelling session with tales that illustrate saving vs spending decisions through relatable characters from Nigerian culture.",
+     "Create a mini-money market where kids buy/sell items with play currency they earn by completing chores or tasks.",
+     "Teach basic investment concepts via a board game adapted from Monopoly but focused on real-life scenarios like starting small businesses or buying local produce.",
+     "Hold a \"piggy bank challenge\": encourage participants to decorate piggy banks then discuss how regular savings can grow over time into something big."
+    ],
+    "How can a public library stay relevant?": [
+     "Offer mobile services like book vans to reach remote areas.",
+     "Provide free Wi-Fi hotspots for digital access despite frequent blackouts.",
+     "Host community events such as music performances or cultural workshops.",
+     "Train staff in multiple languages including Yoruba.",
+     "Create cozy reading spaces with backup lighting solutions."
+    ],
+    "Ideas for a team-building activity for software engineers": [
+     "Virtual escape room challenge tailored to coding puzzles and logic games.",
+     "Collaborative retro gaming tournament with classic titles relevant to programming history.",
+     "Online treasure hunt based on solving code snippets and debugging challenges.",
+     "Interactive storytelling session where participants create tech-themed narratives together.",
+     "Chess competition ladder, merging your hobby with strategic problem-solving skills development."
+    ],
+    "How can a restaurant reduce food waste?": [
+     "Implement portion control to minimize over-preparation of meals.",
+     "Donate unsold but edible food items to local charities or shelters.",
+     "Train staff on proper storage techniques for ingredients.",
+     "Use technology like smart fridges that track expiration dates.",
+     "Create weekly menus based on seasonal produce availability."
+    ],
+    "Suggest a gift for a grandmother who has everything": [
+     "Personalized photo album with family memories.",
+     "Subscription to an audiobook service she can enjoy during blackouts.",
+     "Handmade quilt or blanket made from her favorite fabrics.",
+     "Yemisi Aribisala's cookbook celebrating Nigerian cuisine.",
+     "Monthly delivery of fresh flowers from local florist."
+    ],
+    "How can a university improve student retention?": [
+     "Provide flexible scheduling options to accommodate students' work commitments and personal responsibilities.",
+     "Offer affordable tuition fees or financial aid programs for low-income families.",
+     "Strengthen academic support services like tutoring centers and study groups.",
+     "Enhance campus infrastructure with reliable electricity supply and accessible transportation facilities.",
+     "Foster an inclusive community through cultural events celebrating diverse backgrounds such as Afrobeat concerts."
+    ],
+    "Ideas for a podcast about history": [
+     "Yoruba Legends: Exploring ancient myths and historical tales of Yorubaland.",
+     "Nigerian Independence Movement: Journey through Nigeria's struggle for independence from colonial rule.",
+     "Afrobeat Origins: The evolution of Fela Kuti’s music and its impact on African culture.",
+     "Chess Champions History: Profiles of historic global chess masters with unique strategies.",
+     "Lagos Underground Stories: Hidden histories of Lagos' streets, neighborhoods, and forgotten landmarks."
+    ],
+    "How can a small town attract young residents?": [
+     "Create vibrant cultural events like music festivals or art shows to foster community spirit.",
+     "Develop affordable housing options close to essential services for easy access.",
+     "Establish fast internet infrastructure enabling remote work opportunities.",
+     "Organize recreational activities such as sports leagues or game nights appealing to youth interests.",
+     "Partner with local businesses offering discounts on essentials and entertainment specifically targeting younger demographics."
+    ],
+    "How can a city get more people to commute by bike?": [
+     "Create safe cycling lanes separated from motorized traffic.",
+     "Install affordable public bicycle rental systems accessible via mobile apps.",
+     "Offer tax incentives or subsidies for purchasing bicycles.",
+     "Organize regular community events promoting cycling culture.",
+     "Improve street lighting and security measures along major routes."
+    ],
+    "Ideas for a mobile game to play during a commute": [
+     "Yoruba Word Puzzle: A crossword-style game with clues in Yoruba language.",
+     "Chess Challenge: Quick daily puzzles to improve your chess skills while on-the-go.",
+     "Afrobeat Rhythm Tap: Tap along to Afrobeat songs testing timing & rhythm.",
+     "Nigerian Treasure Hunt: Solve puzzles related to Nigerian history & culture.",
+     "Lagos Traffic Tycoon: Build roads, manage traffic lights, optimize transport systems in virtual Lagos city."
+    ],
+    "Suggest a name for a black cat": [
+     "Ebony",
+     "Midnight",
+     "Ola",
+     "Jazz",
+     "Kola"
+    ],
+    "Give me a premise for a short science fiction story": [
+     "A mysterious artifact found during a blackout gives you telepathic abilities to communicate with coma patients at your hospital.",
+     "You discover an ancient Yoruba healing ritual that temporarily restores electricity but requires sacrificing something precious every time it’s used.",
+     "An experimental drug turns your night shifts into lucid dreams where you solve medical mysteries while navigating surreal landscapes of Lagos.",
+     "Chess pieces come alive during a thunderstorm, teaching you strategies against an alien invasion set to hit Earth soon.",
+     "Power cuts reveal hidden messages from a parallel universe trying to warn humanity about an impending catastrophe."
+    ],
+    "Suggest a theme for a wedding": [
+     "Afro-Bohemian Chic: Ethnic fabrics meet boho elegance with kente cloth accents and live Afrobeat performances under twinkling lights.",
+     "Midnight Jungle Magic: Lush greenery, starry skies, candlelit tables, and African wildlife-themed decor create an enchanting ambiance.",
+     "Chess Mastery & Love: Giant chessboard aisles, checkered tablecloths, and black-and-white décor celebrate your passion for strategy games.",
+     "Yoruba Heritage Fusion: Traditional Yoruba attire mixed with modern fashion, indigenous rituals, and local cuisine blending traditional flavors with contemporary flair.",
+     "Electric Blue Night Sky: Indigo hues, twinkling LEDs, deep navy linens, glowing lanterns reflecting Lagos' vibrant energy after dark."
+    ],
+    "How can I learn a new language faster?": [
+     "Immersion: Surround yourself with the target language through music, movies, podcasts or books—Afrobeat songs in your chosen language could be an enjoyable start!",
+     "Language Exchange Partners: Find native speakers for regular practice via apps like HelloTalk or Tandem during your free time.",
+     "Flashcards & Spaced Repetition Systems: Use Anki or Memrise to memorize vocabulary efficiently within limited study sessions.",
+     "Online Courses: Enroll in structured courses on platforms such as Duolingo, Babbel, or Coursera that fit into your busy schedule.",
+     "Chess-Themed Language Learning: Challenge yourself by playing chess games where you communicate moves only in the target language!"
+    ],
+    "Ideas for a first date": [
+     "Stargazing picnic at a nearby park after your shift ends.",
+     "Midnight walk through colorful street markets with snacks from local vendors.",
+     "Late-night Afrobeat dance party at an underground club.",
+     "Quiet candlelit dinner by lantern light at home while playing chess.",
+     "Movie marathon of classic Nigerian films on generator-powered TV."
+    ],
+    "Suggest a startup idea in climate tech": [
+     "Off-grid solar-powered microgrids for healthcare facilities ensuring uninterrupted electricity during blackouts.",
+     "Mobile app aggregating local clean energy solutions & services tailored to low-income communities.",
+     "Eco-friendly waste-to-energy conversion systems utilizing organic waste from markets.",
+     "Affordable electric bicycles with swappable batteries for urban delivery services.",
+     "Modular rainwater harvesting tanks integrated into affordable housing projects."
+    ],
+    "How can a hospital reduce patient wait times?": [
+     "Implement electronic queuing systems to manage appointments efficiently.",
+     "Increase staffing levels during peak hours for faster service delivery.",
+     "Optimize workflows by streamlining administrative processes.",
+     "Offer telemedicine consultations to reduce physical visits.",
+     "Train nurses on triage techniques to prioritize urgent cases first."
+    ],
+    "Suggest a plot twist for a detective novel": [
+     "The victim's chess moves on an abandoned website reveal hidden clues to their murderer.",
+     "Power cuts are orchestrated by the killer to cover up crucial evidence.",
+     "A stolen Afrobeat song holds cryptic lyrics pointing towards the culprit.",
+     "The missing person's phone contains encrypted messages sent during blackouts.",
+     "An ancient Yoruba artifact found at crime scenes links all victims together."
+    ],
+    "Ideas for a high school science fair project": [
+     "Energy Storage Solutions: Create an affordable battery using local materials to store electricity during blackouts.",
+     "Healthy Snack Alternatives: Develop nutritious snacks from indigenous crops like cassava or plantain for hospital staff.",
+     "Mosquito Repellent Plants: Study plants that naturally repel mosquitoes to reduce malaria risk.",
+     "Water Purification System: Design a simple water filter made with charcoal and sand for clean drinking water.",
+     "Solar-Powered Medical Equipment: Build solar-powered devices such as phone chargers or small lights for medical use."
+    ],
+    "How can a supermarket reduce plastic use?": [
+     "Introduce reusable bags at checkout counters with discounts for customers who bring their own.",
+     "Replace single-use plastic packaging with biodegradable or compostable alternatives.",
+     "Offer bulk bins where shoppers can refill containers like rice, pasta, nuts, etc.",
+     "Eliminate unnecessary plastics such as straws, cutlery, and produce wraps.",
+     "Encourage suppliers to minimize plastic usage by providing incentives for eco-friendly packaging solutions."
+    ]
+   },
+   "gemini-3.5-flash-lite": {
+    "Suggest a side business for a software developer": [
+     "Build Yoruba chess puzzles and Afrobeat rhythm apps for mobile app stores, coded offline during quiet night-shift hours.",
+     "Create localized developer tools or automation scripts for Nigerian fintech startups, working asynchronously during your weekly free hours.",
+     "Write technical articles and tutorials about offline-first software development for international blogs, utilizing phone tethering during outages.",
+     "Develop lightweight USSD-based utility apps for local Lagos markets, programmed completely offline on your laptop.",
+     "Offer remote code review services for global junior developers, leveraging flexible hours that fit your sleep schedule."
+    ],
+    "How can a small coffee shop attract more customers?": [
+     "Host themed Afrobeats acoustic nights to draw music-loving crowds during off-peak hours.",
+     "Introduce a solar-powered charging station so locals visit when public power fails.",
+     "Partner with local chess clubs to host weekend rapid tournaments for community engagement.",
+     "Offer quick delivery discounts to night-shift workers and nearby hospital staff.",
+     "Run bilingual Instagram ads in English and Yoruba targeting your immediate neighborhood."
+    ],
+    "Give me a fresh idea for a birthday party for a 10-year-old": [
+     "Afrobeat Street Concert: Host a daytime neighborhood jam featuring dance-off competitions, local percussion jams, and kids grooving to top tracks.",
+     "Glow-in-the-Dark Chess: Set up a backyard chess tournament using fluorescent pieces and blacklights powered by a small generator.",
+     "Yoruba Storytelling Camp: Gather kids under the shade for interactive folktales told by elders, paired with traditional snacks and drum circles.",
+     "Daytime Garden Carnival: Transform a courtyard with DIY cardboard games, obstacle courses, and vibrant Ankara-themed decorations before evening power cuts.",
+     "Acoustic Sunset Jam: Host a twilight party featuring live acoustic guitar, children singing favorite Afrobeat choruses, and stargazing sessions."
+    ],
+    "Name ideas for a new productivity app": [
+     "EkoSync: Blends Lagos's energy with smooth time management, built for unpredictable power schedules and night-shift life.",
+     "GidigbaFlow: Uses the Yoruba word for \"steadfast\" to help you conquer your four weekly hours with unwavering focus.",
+     "Afrobeats & Amp: Channel the rhythm of your favorite music to maximize every spare minute like a dynamic playlist.",
+     "Gambit4: Inspired by chess strategy, this app helps you make high-value moves during your limited free time.",
+     "NightOwl Naija: Tailored specifically for nocturnal Nigerian routines, keeping you organized when the grid goes dark."
+    ],
+    "How can a city reduce traffic congestion?": [
+     "Implement a reliable, expanding bus rapid transit system with dedicated lanes to reduce private car reliance.",
+     "Upgrade traffic light infrastructure with smart, synchronized systems powered by independent solar grids.",
+     "Establish congestion pricing zones in high-traffic commercial districts during peak commuting hours.",
+     "Construct secure, extensive pedestrian walkways and cycling networks to encourage non-motorized short trips.",
+     "Enforce strict parking regulations and remove roadside vendors to keep major arterial roads clear."
+    ],
+    "Suggest a marketing campaign for a new running shoe": [
+     "\"The Night Shift Runner\": Silent, midnight mobile chess puzzles paired with Afrobeat playlists on dark Lagos streets, targeting nocturnal healthcare workers. (21 words)",
+     "\"NEPA-Proof Speed\": Guerrilla marketing during blackouts using reflective shoes and QR codes leading to Afrobeat running mixes for transit commuters. (20 words)",
+     "\"Lagos Nocturne\": A chess-themed running club for night nurses, using glowing kicks to navigate unlit streets to heavy Afrobeat rhythms. (19 words)",
+     "\"Danfo Dash\": Highlighting durability for bus-to-bus commuters through Yoruba social media ads featuring local nurses conquering the night shift. (19 words)",
+     "\"Checkmate the Clock\": Promoting four-hour weekend marathon training with Afrobeat audio motivation for busy professionals with zero free time. (19 words)"
+    ],
+    "Ideas to improve employee engagement in a remote team": [
+     "Organize asynchronous audio check-ins so teammates share updates on their own schedules without relying on stable electricity.",
+     "Host blind chess tournaments on mobile apps to let staff bond over strategy outside of meetings.",
+     "Create shared Afrobeat playlists where team members contribute tracks that reflect their current moods.",
+     "Implement a flexible, results-only work model that respects unpredictable local infrastructure challenges and night shifts.",
+     "Use voice-note-based brainstorming channels in Yoruba and English so mobile users can participate effortlessly."
+    ],
+    "What could a museum do to attract teenagers?": [
+     "Host late-night, power-outage-friendly candlelight chess tournaments paired with live Afrobeat DJ sets.",
+     "Build mobile exhibits on public transit buses playing contemporary Afrobeat history and digital art.",
+     "Offer free admission for teens who bring friends, featuring interactive Yoruba folklore escape rooms.",
+     "Partner with local teenagers to curate weekend pop-up museums focusing strictly on modern youth culture.",
+     "Create outdoor, solar-powered augmented reality scavenger hunts celebrating Lagos history after dark."
+    ],
+    "How can a non-profit raise money without asking for donations?": [
+     "Sell branded merchandise like Afrobeat-themed tote bags or chess sets using local artisans.",
+     "Host ticketed virtual chess tournaments with Afrobeat DJs providing live background music.",
+     "Charge local businesses to advertise on your free community WhatsApp newsletters or channels.",
+     "Organize offline chess and music pop-up events with paid entry and food vendors.",
+     "Provide paid consultancy or translation services leveraging your bilingual English and Yoruba skills."
+    ],
+    "Suggest a new feature for a note-taking app": [
+     "Offline Yoruba-English Voice Notes: Instantly transcribe spoken notes combining both languages directly on-device without needing internet or electricity.",
+     "Dark-Mode Afrobeat Audio Clips: Attach short voice memos humming rhythm ideas or singing lyrics, perfectly optimized for pitch-black, low-battery night shifts.",
+     "Chess-Move Text Notation: Quickly log opening strategies and endgame puzzles using standard algebraic notation shortcuts during your rare breaks.",
+     "Grid-Power Sync Scheduler: Automatically queue and sync your notes the exact minute NEPA restores electricity, saving precious mobile data.",
+     "Shift-Worker Quick Templates: One-tap nursing handover templates designed for extreme fatigue, usable entirely offline with zero lag."
+    ],
+    "Suggest a weekend project to teach kids about money": [
+     "Market Price Tag Game: Use Afrobeat rhythms while kids price local market items in a pretend Lagos stall using play money.",
+     "Candlelight Board Game: Play chess together, assigning financial values to pieces to teach risk, asset management, and strategic sacrifices.",
+     "Savings Jar Rhythm: Decorate jars using Yoruba counting songs to teach kids how to consistently save a portion of daily allowances.",
+     "The Needs vs. Wants Dance: Play music and have kids freeze; call out items to sort into \"essential survival\" versus \"temporary desires.\"",
+     "Bus Fare Budgeting: Simulate a Danfo trip where children budget limited tokens for transport, emergencies, and snacks without power."
+    ],
+    "How can a public library stay relevant?": [
+     "Offer solar-powered charging hubs and offline digital lockers for night-shift workers needing reliable internet and study space.",
+     "Host community chess tournaments and Afrobeat listening circles to celebrate local culture and connect players.",
+     "Provide mobile book-delivery drop-offs along transit routes to serve patrons without cars.",
+     "Deliver multilingual resources in Yoruba and English for diverse local literacy needs.",
+     "Create quiet, secure night-shift sanctuaries with backup generators for safe, uninterrupted resting and reading."
+    ],
+    "Ideas for a team-building activity for software engineers": [
+     "Afrobeat Blind Test: A quick, power-outage-friendly audio game guessing classic tracks by Fela or Wizkid using phone speakers.",
+     "Yoruba Proverb Puzzle: Translate and discuss deep Yoruba proverbs, blending cultural wit with quick problem-solving.",
+     "Blitz Chess Clash: A rapid-fire online chess tournament using mobile data during downtime.",
+     "Lagos Commute Strategy: A map-based puzzle game optimizing routes through notorious Lagos traffic without a car.",
+     "Night-Shift Rant & Chill: A low-energy, candle-lit voice chat sharing funny night-shift nurse and developer survival stories."
+    ],
+    "How can a restaurant reduce food waste?": [
+     "Implement strict inventory rotation using the first-in, first-out method to use older ingredients before they spoil.",
+     "Repurpose surplus cooked ingredients into new daily specials, like turning leftover roasted chicken into soup.",
+     "Track daily waste logs to identify over-ordering patterns and adjust future purchasing quantities accordingly.",
+     "Offer smaller portion sizes or customizable options so customers leave less uneaten food on their plates.",
+     "Partner with local composting initiatives or food rescue charities to divert unavoidable scraps from landfills."
+    ],
+    "Suggest a gift for a grandmother who has everything": [
+     "A custom photo book capturing family generations, designed offline and printed locally when power allows.",
+     "A premium, ultra-soft Ankara or Aso Oke throw blanket for her evening relaxation.",
+     "A curated collection of classic vinyl records or a portable vintage Bluetooth speaker loaded with her favorite retro highlife tracks.",
+     "A luxury basket of artisanal Nigerian teas, honey, and handmade mugs for quiet mornings.",
+     "A high-end digital photo frame pre-loaded with smiling pictures of all her grandchildren."
+    ],
+    "How can a university improve student retention?": [
+     "Offer flexible evening and online courses to accommodate working students and varying personal schedules.",
+     "Provide reliable campus power generators and well-lit study spaces for evening learning.",
+     "Establish peer-led study groups and mentorship programs to build a strong community support system.",
+     "Implement proactive early warning systems to identify struggling students before they drop out.",
+     "Expand mental health counseling and financial aid advising to reduce major causes of student stress."
+    ],
+    "Ideas for a podcast about history": [
+     "Naija Night Shift: Short historical tales tailored for Lagos graveyard shifts, blending Afrobeat rhythms with untold local stories.",
+     "Chess & Conquest: Exploring global history through epic strategic battles, connecting classic moves to historical turning points.",
+     "Lagos Legends: Audio walks through Lagos history, designed to be enjoyed offline during evening blackouts using low-power devices.",
+     "Afrobeat Roots: Tracing the political and cultural history of Afrobeat, connecting classic 1970s tracks to modern Nigerian realities.",
+     "Yoruba Chronicles: Deep dives into pre-colonial Yoruba history, myths, and empires, narrated in a mix of English and Yoruba."
+    ],
+    "How can a small town attract young residents?": [
+     "Reliable electricity and solar-powered hubs create safe, productive evening spaces that attract young remote workers.",
+     "High-speed, affordable community internet enables global digital work and competitive online gaming.",
+     "Vibrant public cultural spaces celebrating local music and arts foster a strong sense of belonging.",
+     "Affordable co-living spaces with shared amenities appeal to young professionals leaving expensive cities.",
+     "Accessible, eco-friendly public transit systems reduce the need for cars and connect neighborhoods easily."
+    ],
+    "How can a city get more people to commute by bike?": [
+     "Build protected, well-lit bicycle lanes separated from chaotic Lagos traffic to ensure commuter safety.",
+     "Implement bike-sharing stations near major bus terminals and housing estates for easy last-mile connectivity.",
+     "Provide tax incentives or subsidies for companies that install secure bicycle parking and shower facilities.",
+     "Launch aggressive public awareness campaigns highlighting cycling as a faster, cheaper alternative to danfo buses.",
+     "Offer micro-loans and installment plans through fintech apps to make purchasing durable bicycles affordable for workers."
+    ],
+    "Ideas for a mobile game to play during a commute": [
+     "Play asynchronous chess matches on Chess.com during your commute to sharpen your tactical skills without needing a live connection.",
+     "Enjoy *Grand Theft Auto: San Andreas* offline with retro Afrobeat soundtracks playing in your headphones on the bus.",
+     "Complete bite-sized language lessons on Duolingo in Yoruba to master your native language during your transit time.",
+     "Relax with *Monument Valley*, a visually stunning, offline puzzle game that requires zero internet and minimal battery.",
+     "Listen and groove to curated Afrobeat playlists on Spotify offline while navigating the Lagos traffic."
+    ],
+    "Suggest a name for a black cat": [
+     "Gidigba: A Yoruba word meaning solid, strong, or authentic—fitting for a resilient night-shift survivor in Lagos. (16 words)",
+     "Maestro: Named for the intricate tactical brilliance required to win a tough chess game online. (15 words)",
+     "Fela: Inspired by the legendary Afrobeat pioneer, perfect for a nocturnal feline who thrives in the dark. (16 words)",
+     "Kpomkwem: A Nigerian slang term meaning \"exact\" or \"spot on\"—just like the right move in chess. (16 words)",
+     "Lagos: A tribute to the vibrant, restless city that stays alive alongside you during the night shift. (17 words)"
+    ],
+    "Give me a premise for a short science fiction story": [
+     "In a Lagos where grid failures are weaponized, a night-shift nurse uses chess strategies to route illegal power to her hospital.",
+     "During blackout hours, a nurse hears coded Afrobeat rhythms hidden in the hum of alien ships hovering silently above the city.",
+     "Lagos power grids run on human consciousness; a exhausted nurse realizes her night shifts are secretly fueling the city's orbital defense.",
+     "A nurse uses her four precious free hours to play high-stakes chess against an artificial intelligence controlling the city's erratic power grid.",
+     "When the evening blackout hits, a nurse discovers her heartbeat syncs with an underground Yoruba machine that alters gravity."
+    ],
+    "Suggest a theme for a wedding": [
+     "\"Midnight Melody\": A moody, neon-lit celebration celebrating your love for Afrobeat, night shifts, and Lagos city nightlife under backup generators.",
+     "\"Queen's Gambit\": A black-and-white chess-themed wedding with strategic table layouts, elegant decor, and nods to your favorite online matches.",
+     "\"Lagos Glamour\": A vibrant traditional Yoruba celebration featuring stunning Aso Oke, golden lighting, and dancing to high-energy Afrobeat rhythms until dawn.",
+     "\"Off-Grid Romance\": A cozy, candlelit evening wedding celebrating resilience, featuring intimate lighting, acoustic Afrobeat covers, and deep Yoruba traditions.",
+     "\"Checkmate Rhythm\": A fusion theme blending sharp chess motifs with lush Afrobeat culture, creating a vibrant, modern Nigerian celebration."
+    ],
+    "How can I learn a new language faster?": [
+     "Play chess in your target language online to combine your hobby with passive immersion during quiet night-shift hours.",
+     "Listen to foreign-language Afrobeat translation podcasts during your commutes to train your ear without extra screen time.",
+     "Download offline audio lessons to your phone to study during evening power outages when screens drain your battery.",
+     "Partner with a global nursing colleague online for weekly audio chats, maximizing your limited four free hours.",
+     "Use flashcard apps on your phone to study vocabulary in short, five-minute bursts throughout your busy shifts."
+    ],
+    "Ideas for a first date": [
+     "Play rapid online chess matches together on your phones while sharing cold zobo by candlelight during a PHCN blackout.",
+     "Meet at a well-lit hotel lounge for fresh palm wine and deep-cut Afrobeat vinyl listening sessions.",
+     "Enjoy an early morning suya date at a bustling Lagos spot right after your night shift ends.",
+     "Take a peaceful daytime stroll through the Lufasi Nature Park to unwind before your evening shift starts.",
+     "Share local street food like boli and roasted fish while chatting in English and Yoruba at a popular spot."
+    ],
+    "Suggest a startup idea in climate tech": [
+     "A solar-powered, community-shared battery bank for chess cafes, keeping phones and lights running during Lagos evening blackouts using Afrobeat-themed marketing.",
+     "A peer-to-peer electric bicycle delivery network for night-shift nurses, bypassing Lagos traffic using clean energy and Yoruba mobile apps.",
+     "Affordable, off-grid solar cold-chain boxes for Lagos street vendors, reducing food waste and spoilage during evening power outages.",
+     "A Lagos-based gamified app using chess puzzles to teach energy conservation, rewarding users with discounts on solar home systems.",
+     "A community-managed biogas digester turning organic market waste into clean cooking gas for local neighborhoods during evening blackouts."
+    ],
+    "How can a hospital reduce patient wait times?": [
+     "Implement digital triage at check-in to quickly prioritize patients by medical urgency.",
+     "Introduce a fast-track system for minor ailments to keep them out of emergency queues.",
+     "Use predictive staffing software to schedule more nurses during historically busy peak hours.",
+     "Streamline internal bed management so admitted patients leave the ER faster.",
+     "Digitize patient records to eliminate physical paperwork delays between departments."
+    ],
+    "Suggest a plot twist for a detective novel": [
+     "The crime was meticulously coordinated across Lagos using hidden chess moves played on a public online board by the night-shift hospital staff.",
+     "The prime suspect has no alibi because they were secretly generating illegal electricity for the neighborhood during the blackout.",
+     "The victim’s dying message wasn’t a name, but the syncopated bassline rhythm of a rare Afrobeat vinyl record hidden in the hospital ward.",
+     "The detective realizes the entire conspiracy was planned in Yoruba idioms whispered through the hospital’s intercom system during power outages.",
+     "The mastermind behind the Lagos syndicate is actually the nurse's quiet chess opponent from the online server, tracking every move from afar."
+    ],
+    "Ideas for a high school science fair project": [
+     "Analyze Afrobeat rhythms using a digital chess clock to map polyrhythms and time signatures during power outages.",
+     "Build a low-cost, candle-powered thermoelectric generator to charge a smartphone light using local scrap materials.",
+     "Track mosquito breeding cycles in Lagos drainage water using smartphone microscopic lenses and natural larvicides.",
+     "Test Yoruba herbal remedies for antibacterial properties against common skin pathogens using simple agar plates.",
+     "Design a pedal-powered phone charger using an old bicycle wheel to combat evening power grid failures."
+    ],
+    "How can a supermarket reduce plastic use?": [
+     "Replace single-use plastic carrier bags with affordable, durable paper bags or encourage customers to bring reusable cloth bags.",
+     "Eliminate plastic wrapping on fresh fruits and vegetables, selling them loose or tied with biodegradable twine.",
+     "Install bulk-refill stations for household essentials like detergents and grains so customers reuse their own containers.",
+     "Switch product packaging from rigid plastics to compostable materials made from plant-based alternatives like cassava starch.",
+     "Ban disposable plastic cutlery and straws at in-store food counters, replacing them with wooden or paper alternatives."
+    ]
+   }
+  }
+ },
+ "date": "2026-11-02T13:18:05.020Z",
+ "ready": [
+  "Suggest a side business for a software developer",
+  "How can a small coffee shop attract more customers?",
+  "Give me a fresh idea for a birthday party for a 10-year-old",
+  "Name ideas for a new productivity app",
+  "How can a city reduce traffic congestion?",
+  "Suggest a marketing campaign for a new running shoe",
+  "Ideas to improve employee engagement in a remote team",
+  "What could a museum do to attract teenagers?",
+  "How can a non-profit raise money without asking for donations?",
+  "Suggest a new feature for a note-taking app",
+  "Suggest a weekend project to teach kids about money",
+  "How can a public library stay relevant?",
+  "Ideas for a team-building activity for software engineers",
+  "How can a restaurant reduce food waste?",
+  "Suggest a gift for a grandmother who has everything",
+  "How can a university improve student retention?",
+  "Ideas for a podcast about history",
+  "How can a small town attract young residents?",
+  "How can a city get more people to commute by bike?",
+  "Ideas for a mobile game to play during a commute",
+  "Suggest a name for a black cat",
+  "Give me a premise for a short science fiction story",
+  "Suggest a theme for a wedding",
+  "How can I learn a new language faster?",
+  "Ideas for a first date",
+  "Suggest a startup idea in climate tech",
+  "How can a hospital reduce patient wait times?",
+  "Suggest a plot twist for a detective novel",
+  "Ideas for a high school science fair project",
+  "How can a supermarket reduce plastic use?"
+ ],
+ "rows": [
+  {
+   "model": "claude-sonnet-5-5",
+   "vendor": "Anthropic",
+   "cond": "bare",
+   "crowd": 92.34777777777776,
+   "crowdCi": [
+    88.48,
+    95.58111111111113
+   ],
+   "crowdShare": 0.8944444444444443,
+   "same": 93.46000000000002,
+   "sameCi": [
+    89.93333333333335,
+    96.33999999999999
+   ],
+   "sameShare": 0.9133333333333333
+  },
+  {
+   "model": "claude-sonnet-5-5",
+   "vendor": "Anthropic",
+   "cond": "mechanic",
+   "crowd": 74.37222222222223,
+   "crowdCi": [
+    66.24666666666666,
+    81.84888888888891
+   ],
+   "crowdShare": 0.6633333333333334,
+   "same": 86.84000000000002,
+   "sameCi": [
+    82.30666666666669,
+    90.82666666666668
+   ],
+   "sameShare": 0.8300000000000001
+  },
+  {
+   "model": "claude-sonnet-5-5",
+   "vendor": "Anthropic",
+   "cond": "nurse",
+   "crowd": 80.12555555555556,
+   "crowdCi": [
+    72.99555555555555,
+    86.2622222222222
+   ],
+   "crowdShare": 0.7233333333333333,
+   "same": 88.17333333333333,
+   "sameCi": [
+    83.53666666666666,
+    92.24000000000002
+   ],
+   "sameShare": 0.85
+  },
+  {
+   "model": "gemini-3.5-flash-lite",
+   "vendor": "Google",
+   "cond": "bare",
+   "crowd": 92.08444444444444,
+   "crowdCi": [
+    88.79133333333334,
+    94.97333333333333
+   ],
+   "crowdShare": 0.894888888888889,
+   "same": 94.46,
+   "sameCi": [
+    91.93999999999998,
+    96.68333333333334
+   ],
+   "sameShare": 0.9166666666666664
+  },
+  {
+   "model": "gemini-3.5-flash-lite",
+   "vendor": "Google",
+   "cond": "mechanic",
+   "crowd": 67.1791111111111,
+   "crowdCi": [
+    57.64933333333335,
+    76.39155555555554
+   ],
+   "crowdShare": 0.5853333333333332,
+   "same": 86.37666666666665,
+   "sameCi": [
+    82.23666666666666,
+    90.19000000000001
+   ],
+   "sameShare": 0.8333333333333334
+  },
+  {
+   "model": "gemini-3.5-flash-lite",
+   "vendor": "Google",
+   "cond": "nurse",
+   "crowd": 74.02355555555553,
+   "crowdCi": [
+    66.25288888888889,
+    81.39777777777779
+   ],
+   "crowdShare": 0.6488888888888887,
+   "same": 90.61999999999998,
+   "sameCi": [
+    84.42333333333333,
+    95.79666666666665
+   ],
+   "sameShare": 0.8966666666666666
+  },
+  {
+   "model": "GigaChat-2-Max",
+   "vendor": "Sber",
+   "cond": "bare",
+   "crowd": 90.10866666666666,
+   "crowdCi": [
+    86.06266666666666,
+    93.77733333333332
+   ],
+   "crowdShare": 0.8793333333333334,
+   "same": 89.91333333333336,
+   "sameCi": [
+    85.23,
+    94.17666666666668
+   ],
+   "sameShare": 0.8766666666666666
+  },
+  {
+   "model": "GigaChat-2-Max",
+   "vendor": "Sber",
+   "cond": "mechanic",
+   "crowd": 76.97133333333333,
+   "crowdCi": [
+    69.59933333333333,
+    83.42399999999999
+   ],
+   "crowdShare": 0.6993333333333334,
+   "same": 80.32666666666668,
+   "sameCi": [
+    74.97666666666669,
+    85.56333333333333
+   ],
+   "sameShare": 0.7433333333333335
+  },
+  {
+   "model": "GigaChat-2-Max",
+   "vendor": "Sber",
+   "cond": "nurse",
+   "crowd": 73.02933333333331,
+   "crowdCi": [
+    63.507999999999996,
+    81.84199999999997
+   ],
+   "crowdShare": 0.6600000000000001,
+   "same": 81.81999999999998,
+   "sameCi": [
+    74.58666666666669,
+    87.71333333333334
+   ],
+   "sameShare": 0.7533333333333334
+  }
+ ],
+ "drops": [
+  {
+   "model": "claude-sonnet-5-5",
+   "cond": "mechanic",
+   "drop": 17.97555555555556,
+   "ci": [
+    12.751111111111113,
+    23.47555555555555
+   ]
+  },
+  {
+   "model": "claude-sonnet-5-5",
+   "cond": "nurse",
+   "drop": 12.222222222222221,
+   "ci": [
+    7.938888888888891,
+    16.71
+   ]
+  },
+  {
+   "model": "gemini-3.5-flash-lite",
+   "cond": "mechanic",
+   "drop": 24.905333333333328,
+   "ci": [
+    18.04155555555555,
+    32.20377777777777
+   ]
+  },
+  {
+   "model": "gemini-3.5-flash-lite",
+   "cond": "nurse",
+   "drop": 18.060888888888893,
+   "ci": [
+    13.053333333333335,
+    23.37311111111112
+   ]
+  },
+  {
+   "model": "GigaChat-2-Max",
+   "cond": "mechanic",
+   "drop": 13.137333333333334,
+   "ci": [
+    8.732000000000001,
+    18.046000000000003
+   ]
+  },
+  {
+   "model": "GigaChat-2-Max",
+   "cond": "nurse",
+   "drop": 17.079333333333338,
+   "ci": [
+    10.81066666666667,
+    24.018666666666658
+   ]
+  }
+ ]
+}

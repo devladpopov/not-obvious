@@ -60,16 +60,18 @@ npx -p not-obvious-mcp not-obvious explain "Suggest a side business for a softwa
 
 ## Which model is the most banal?
 
-We asked 9 models from Anthropic, Google and Sber the same 30 open prompts (5 answers each) and scored every model against the answers of the other vendors. Full table, method and caveats: [docs/leaderboard.md](docs/leaderboard.md).
+We asked 11 models from Anthropic, Google and Sber the same 30 open prompts (5 answers each) and scored every model against the answers of the other vendors. Full table, method and caveats: [docs/leaderboard.md](docs/leaderboard.md).
 
 | model | banality, 0-100 | ideas another vendor also gave |
 |---|---|---|
-| claude-haiku-4-5 | 93.3 | 66% |
-| claude-opus-5-5 | 91.8 | 64% |
-| gemini-3.5-flash-lite | 92.1 | 71% |
-| GigaChat-2 | 87.0 | 51% |
+| claude-haiku-4-5 | 93.5 | 70% |
+| gemini-3.8-flash | 93.2 | 73% |
+| claude-opus-5-5 | 91.8 | 76% |
+| GigaChat-2 | 86.0 | 55% |
 
-They all say the same thing: 82-92% of each model's answers are practically an answer some other vendor gave, and the intervals overlap. Asked to name a black cat, all 9 models say Midnight. Small fast models come out a little more banal than large ones, but the difference is inside the noise.
+They all say the same thing: 81-92% of each model's answers are practically an answer some other vendor gave, and the intervals overlap. Asked to name a black cat, 9 of 11 models say Midnight. Bigger and newer models are not less banal.
+
+What does help is context about the person asking. With two sentences about who they are, banality drops by 12-25 points for every model we tried. But give the same person to three models and they agree with each other again (80-91): the crowd moves to a new spot instead of disappearing. Details: [docs/context.md](docs/context.md).
 
 ## Roadmap
 
