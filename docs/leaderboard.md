@@ -17,6 +17,25 @@ Each model got the same open prompts ("How can a public library stay relevant?",
 | 9 | GigaChat-2 | Sber | 83.3 (65.9-94.6) | 79% | 0.861 | 0.801 |
 
 Nearest similarity: mean cosine between an answer and the closest answer of another vendor's model. Self-repetition: mean cosine between a model's own 5 answers to one prompt (higher = the answers are variations of one idea). Intervals: bootstrap over prompts.
+
+## Second view: shared ideas, judged by LLMs
+
+No embeddings here. For each of 30 prompts all 45 answers were anonymised, shuffled and grouped into ideas by two judges (claude-opus-5-5 and gemini-3.5-flash-lite). **Shared** = share of a model's answers whose idea at least one model from another vendor also gave. Mean of both judges, 95% bootstrap interval over prompts.
+
+| # | model | vendor | shared (95% CI) | claude-opus-5-5 | gemini-3.5-flash-lite |
+|---|---|---|---|---|---|
+| 1 | gemini-3.5-flash-lite | Google | 71% (61%-81%) | 69% | 73% |
+| 2 | claude-haiku-4-5 | Anthropic | 66% (55%-77%) | 65% | 68% |
+| 3 | claude-haiku-5-5 | Anthropic | 64% (51%-76%) | 63% | 65% |
+| 4 | claude-opus-5-5 | Anthropic | 64% (51%-76%) | 61% | 66% |
+| 5 | claude-fable-5-1 | Anthropic | 63% (51%-74%) | 59% | 66% |
+| 6 | claude-sonnet-5-5 | Anthropic | 62% (50%-74%) | 59% | 66% |
+| 7 | GigaChat-2-Max | Sber | 59% (49%-69%) | 56% | 62% |
+| 8 | GigaChat-2-Pro | Sber | 52% (42%-62%) | 50% | 53% |
+| 9 | GigaChat-2 | Sber | 51% (41%-61%) | 49% | 54% |
+
+The two judges agree on the model order at Spearman 0.82.
+
 ## Notes (written by hand, not regenerated)
 
 Day 7 (2026-10-31), interim run: 9 of 11 models, 11 of 30 prompts (the free embedding quota ran out; gemini-3.8-flash and gemini-3.6-flash have 20 free requests a day and are still collecting answers).

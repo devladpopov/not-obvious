@@ -1,0 +1,456 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="872" height="626" viewBox="0 0 872 626" role="img" aria-label="Terminal demo: the cliché cloud for a prompt, the Cliché Score of the usual answer, and explain rewriting it away from the cloud">
+<style>
+text{font:14px ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;fill:#c9d1d9;white-space:pre}
+tspan{opacity:0;animation-duration:21.31s;animation-iteration-count:infinite;animation-timing-function:linear}
+.cap{fill:#e3b341;font-weight:bold}.ps{fill:#3fb950;font-weight:bold}.dim{fill:#8b949e}
+.hi{fill:#f85149;font-weight:bold}.mid{fill:#e3b341;font-weight:bold}.lo{fill:#3fb950;font-weight:bold}
+@keyframes k0{0%,3.754%{opacity:0}3.755%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k1{0%,5.631%{opacity:0}5.632%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k2{0%,5.772%{opacity:0}5.773%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k3{0%,5.913%{opacity:0}5.914%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k4{0%,6.053%{opacity:0}6.054%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k5{0%,6.194%{opacity:0}6.195%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k6{0%,6.335%{opacity:0}6.336%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k7{0%,6.476%{opacity:0}6.477%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k8{0%,6.617%{opacity:0}6.618%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k9{0%,6.757%{opacity:0}6.758%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k10{0%,6.898%{opacity:0}6.899%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k11{0%,7.039%{opacity:0}7.040%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k12{0%,7.180%{opacity:0}7.181%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k13{0%,7.321%{opacity:0}7.322%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k14{0%,7.461%{opacity:0}7.462%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k15{0%,7.602%{opacity:0}7.603%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k16{0%,7.743%{opacity:0}7.744%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k17{0%,7.884%{opacity:0}7.885%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k18{0%,8.024%{opacity:0}8.025%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k19{0%,8.165%{opacity:0}8.166%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k20{0%,8.306%{opacity:0}8.307%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k21{0%,8.447%{opacity:0}8.448%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k22{0%,8.588%{opacity:0}8.589%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k23{0%,8.728%{opacity:0}8.729%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k24{0%,8.869%{opacity:0}8.870%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k25{0%,9.010%{opacity:0}9.011%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k26{0%,9.151%{opacity:0}9.152%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k27{0%,9.291%{opacity:0}9.292%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k28{0%,9.432%{opacity:0}9.433%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k29{0%,9.573%{opacity:0}9.574%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k30{0%,9.714%{opacity:0}9.715%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k31{0%,9.855%{opacity:0}9.856%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k32{0%,9.995%{opacity:0}9.996%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k33{0%,10.136%{opacity:0}10.137%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k34{0%,10.277%{opacity:0}10.278%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k35{0%,10.418%{opacity:0}10.419%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k36{0%,10.558%{opacity:0}10.559%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k37{0%,10.699%{opacity:0}10.700%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k38{0%,10.840%{opacity:0}10.841%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k39{0%,10.981%{opacity:0}10.982%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k40{0%,11.122%{opacity:0}11.123%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k41{0%,11.262%{opacity:0}11.263%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k42{0%,11.403%{opacity:0}11.404%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k43{0%,11.544%{opacity:0}11.545%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k44{0%,11.685%{opacity:0}11.686%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k45{0%,11.825%{opacity:0}11.826%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k46{0%,11.966%{opacity:0}11.967%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k47{0%,12.107%{opacity:0}12.108%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k48{0%,12.248%{opacity:0}12.249%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k49{0%,12.389%{opacity:0}12.390%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k50{0%,12.529%{opacity:0}12.530%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k51{0%,12.670%{opacity:0}12.671%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k52{0%,12.811%{opacity:0}12.812%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k53{0%,12.952%{opacity:0}12.953%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k54{0%,13.092%{opacity:0}13.093%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k55{0%,13.233%{opacity:0}13.234%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k56{0%,13.374%{opacity:0}13.375%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k57{0%,13.515%{opacity:0}13.516%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k58{0%,13.656%{opacity:0}13.657%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k59{0%,13.796%{opacity:0}13.797%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k60{0%,13.937%{opacity:0}13.938%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k61{0%,14.078%{opacity:0}14.079%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k62{0%,14.219%{opacity:0}14.220%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k63{0%,14.359%{opacity:0}14.360%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k64{0%,14.500%{opacity:0}14.501%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k65{0%,14.641%{opacity:0}14.642%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k66{0%,14.782%{opacity:0}14.783%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k67{0%,14.923%{opacity:0}14.924%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k68{0%,15.063%{opacity:0}15.064%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k69{0%,15.204%{opacity:0}15.205%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k70{0%,15.345%{opacity:0}15.346%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k71{0%,15.486%{opacity:0}15.487%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k72{0%,15.626%{opacity:0}15.627%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k73{0%,23.041%{opacity:0}23.042%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k74{0%,23.416%{opacity:0}23.417%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k75{0%,23.792%{opacity:0}23.793%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k76{0%,24.167%{opacity:0}24.168%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k77{0%,24.542%{opacity:0}24.543%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k78{0%,24.918%{opacity:0}24.919%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k79{0%,25.293%{opacity:0}25.294%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k80{0%,25.669%{opacity:0}25.670%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k81{0%,26.044%{opacity:0}26.045%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k82{0%,26.420%{opacity:0}26.421%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k83{0%,26.795%{opacity:0}26.796%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k84{0%,27.170%{opacity:0}27.171%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k85{0%,27.546%{opacity:0}27.547%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k86{0%,27.921%{opacity:0}27.922%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k87{0%,28.297%{opacity:0}28.298%{opacity:1}49.459%{opacity:1}49.460%,100%{opacity:0}}
+@keyframes k88{0%,50.868%{opacity:0}50.869%{opacity:1}100%{opacity:1}}
+@keyframes k89{0%,52.745%{opacity:0}52.746%{opacity:1}100%{opacity:1}}
+@keyframes k90{0%,52.886%{opacity:0}52.887%{opacity:1}100%{opacity:1}}
+@keyframes k91{0%,53.027%{opacity:0}53.028%{opacity:1}100%{opacity:1}}
+@keyframes k92{0%,53.168%{opacity:0}53.169%{opacity:1}100%{opacity:1}}
+@keyframes k93{0%,53.308%{opacity:0}53.309%{opacity:1}100%{opacity:1}}
+@keyframes k94{0%,53.449%{opacity:0}53.450%{opacity:1}100%{opacity:1}}
+@keyframes k95{0%,53.590%{opacity:0}53.591%{opacity:1}100%{opacity:1}}
+@keyframes k96{0%,53.731%{opacity:0}53.732%{opacity:1}100%{opacity:1}}
+@keyframes k97{0%,53.871%{opacity:0}53.872%{opacity:1}100%{opacity:1}}
+@keyframes k98{0%,54.012%{opacity:0}54.013%{opacity:1}100%{opacity:1}}
+@keyframes k99{0%,54.153%{opacity:0}54.154%{opacity:1}100%{opacity:1}}
+@keyframes k100{0%,54.294%{opacity:0}54.295%{opacity:1}100%{opacity:1}}
+@keyframes k101{0%,54.435%{opacity:0}54.436%{opacity:1}100%{opacity:1}}
+@keyframes k102{0%,54.575%{opacity:0}54.576%{opacity:1}100%{opacity:1}}
+@keyframes k103{0%,54.716%{opacity:0}54.717%{opacity:1}100%{opacity:1}}
+@keyframes k104{0%,54.857%{opacity:0}54.858%{opacity:1}100%{opacity:1}}
+@keyframes k105{0%,54.998%{opacity:0}54.999%{opacity:1}100%{opacity:1}}
+@keyframes k106{0%,55.138%{opacity:0}55.139%{opacity:1}100%{opacity:1}}
+@keyframes k107{0%,55.279%{opacity:0}55.280%{opacity:1}100%{opacity:1}}
+@keyframes k108{0%,55.420%{opacity:0}55.421%{opacity:1}100%{opacity:1}}
+@keyframes k109{0%,55.561%{opacity:0}55.562%{opacity:1}100%{opacity:1}}
+@keyframes k110{0%,55.702%{opacity:0}55.703%{opacity:1}100%{opacity:1}}
+@keyframes k111{0%,55.842%{opacity:0}55.843%{opacity:1}100%{opacity:1}}
+@keyframes k112{0%,55.983%{opacity:0}55.984%{opacity:1}100%{opacity:1}}
+@keyframes k113{0%,56.124%{opacity:0}56.125%{opacity:1}100%{opacity:1}}
+@keyframes k114{0%,56.265%{opacity:0}56.266%{opacity:1}100%{opacity:1}}
+@keyframes k115{0%,56.405%{opacity:0}56.406%{opacity:1}100%{opacity:1}}
+@keyframes k116{0%,56.546%{opacity:0}56.547%{opacity:1}100%{opacity:1}}
+@keyframes k117{0%,56.687%{opacity:0}56.688%{opacity:1}100%{opacity:1}}
+@keyframes k118{0%,56.828%{opacity:0}56.829%{opacity:1}100%{opacity:1}}
+@keyframes k119{0%,56.969%{opacity:0}56.970%{opacity:1}100%{opacity:1}}
+@keyframes k120{0%,57.109%{opacity:0}57.110%{opacity:1}100%{opacity:1}}
+@keyframes k121{0%,57.250%{opacity:0}57.251%{opacity:1}100%{opacity:1}}
+@keyframes k122{0%,57.391%{opacity:0}57.392%{opacity:1}100%{opacity:1}}
+@keyframes k123{0%,57.532%{opacity:0}57.533%{opacity:1}100%{opacity:1}}
+@keyframes k124{0%,57.672%{opacity:0}57.673%{opacity:1}100%{opacity:1}}
+@keyframes k125{0%,57.813%{opacity:0}57.814%{opacity:1}100%{opacity:1}}
+@keyframes k126{0%,57.954%{opacity:0}57.955%{opacity:1}100%{opacity:1}}
+@keyframes k127{0%,58.095%{opacity:0}58.096%{opacity:1}100%{opacity:1}}
+@keyframes k128{0%,58.236%{opacity:0}58.237%{opacity:1}100%{opacity:1}}
+@keyframes k129{0%,58.376%{opacity:0}58.377%{opacity:1}100%{opacity:1}}
+@keyframes k130{0%,58.517%{opacity:0}58.518%{opacity:1}100%{opacity:1}}
+@keyframes k131{0%,58.658%{opacity:0}58.659%{opacity:1}100%{opacity:1}}
+@keyframes k132{0%,58.799%{opacity:0}58.800%{opacity:1}100%{opacity:1}}
+@keyframes k133{0%,58.939%{opacity:0}58.940%{opacity:1}100%{opacity:1}}
+@keyframes k134{0%,59.080%{opacity:0}59.081%{opacity:1}100%{opacity:1}}
+@keyframes k135{0%,59.221%{opacity:0}59.222%{opacity:1}100%{opacity:1}}
+@keyframes k136{0%,59.362%{opacity:0}59.363%{opacity:1}100%{opacity:1}}
+@keyframes k137{0%,59.503%{opacity:0}59.504%{opacity:1}100%{opacity:1}}
+@keyframes k138{0%,59.643%{opacity:0}59.644%{opacity:1}100%{opacity:1}}
+@keyframes k139{0%,59.784%{opacity:0}59.785%{opacity:1}100%{opacity:1}}
+@keyframes k140{0%,59.925%{opacity:0}59.926%{opacity:1}100%{opacity:1}}
+@keyframes k141{0%,60.066%{opacity:0}60.067%{opacity:1}100%{opacity:1}}
+@keyframes k142{0%,60.206%{opacity:0}60.207%{opacity:1}100%{opacity:1}}
+@keyframes k143{0%,60.347%{opacity:0}60.348%{opacity:1}100%{opacity:1}}
+@keyframes k144{0%,60.488%{opacity:0}60.489%{opacity:1}100%{opacity:1}}
+@keyframes k145{0%,60.629%{opacity:0}60.630%{opacity:1}100%{opacity:1}}
+@keyframes k146{0%,60.770%{opacity:0}60.771%{opacity:1}100%{opacity:1}}
+@keyframes k147{0%,60.910%{opacity:0}60.911%{opacity:1}100%{opacity:1}}
+@keyframes k148{0%,61.051%{opacity:0}61.052%{opacity:1}100%{opacity:1}}
+@keyframes k149{0%,61.192%{opacity:0}61.193%{opacity:1}100%{opacity:1}}
+@keyframes k150{0%,61.333%{opacity:0}61.334%{opacity:1}100%{opacity:1}}
+@keyframes k151{0%,61.473%{opacity:0}61.474%{opacity:1}100%{opacity:1}}
+@keyframes k152{0%,61.614%{opacity:0}61.615%{opacity:1}100%{opacity:1}}
+@keyframes k153{0%,61.755%{opacity:0}61.756%{opacity:1}100%{opacity:1}}
+@keyframes k154{0%,61.896%{opacity:0}61.897%{opacity:1}100%{opacity:1}}
+@keyframes k155{0%,62.037%{opacity:0}62.038%{opacity:1}100%{opacity:1}}
+@keyframes k156{0%,62.177%{opacity:0}62.178%{opacity:1}100%{opacity:1}}
+@keyframes k157{0%,62.318%{opacity:0}62.319%{opacity:1}100%{opacity:1}}
+@keyframes k158{0%,62.459%{opacity:0}62.460%{opacity:1}100%{opacity:1}}
+@keyframes k159{0%,62.600%{opacity:0}62.601%{opacity:1}100%{opacity:1}}
+@keyframes k160{0%,62.740%{opacity:0}62.741%{opacity:1}100%{opacity:1}}
+@keyframes k161{0%,62.881%{opacity:0}62.882%{opacity:1}100%{opacity:1}}
+@keyframes k162{0%,63.022%{opacity:0}63.023%{opacity:1}100%{opacity:1}}
+@keyframes k163{0%,63.163%{opacity:0}63.164%{opacity:1}100%{opacity:1}}
+@keyframes k164{0%,63.304%{opacity:0}63.305%{opacity:1}100%{opacity:1}}
+@keyframes k165{0%,63.444%{opacity:0}63.445%{opacity:1}100%{opacity:1}}
+@keyframes k166{0%,63.585%{opacity:0}63.586%{opacity:1}100%{opacity:1}}
+@keyframes k167{0%,63.726%{opacity:0}63.727%{opacity:1}100%{opacity:1}}
+@keyframes k168{0%,63.867%{opacity:0}63.868%{opacity:1}100%{opacity:1}}
+@keyframes k169{0%,64.008%{opacity:0}64.009%{opacity:1}100%{opacity:1}}
+@keyframes k170{0%,64.148%{opacity:0}64.149%{opacity:1}100%{opacity:1}}
+@keyframes k171{0%,64.289%{opacity:0}64.290%{opacity:1}100%{opacity:1}}
+@keyframes k172{0%,64.430%{opacity:0}64.431%{opacity:1}100%{opacity:1}}
+@keyframes k173{0%,64.571%{opacity:0}64.572%{opacity:1}100%{opacity:1}}
+@keyframes k174{0%,64.711%{opacity:0}64.712%{opacity:1}100%{opacity:1}}
+@keyframes k175{0%,64.852%{opacity:0}64.853%{opacity:1}100%{opacity:1}}
+@keyframes k176{0%,64.993%{opacity:0}64.994%{opacity:1}100%{opacity:1}}
+@keyframes k177{0%,65.134%{opacity:0}65.135%{opacity:1}100%{opacity:1}}
+@keyframes k178{0%,65.275%{opacity:0}65.276%{opacity:1}100%{opacity:1}}
+@keyframes k179{0%,65.415%{opacity:0}65.416%{opacity:1}100%{opacity:1}}
+@keyframes k180{0%,65.556%{opacity:0}65.557%{opacity:1}100%{opacity:1}}
+@keyframes k181{0%,65.697%{opacity:0}65.698%{opacity:1}100%{opacity:1}}
+@keyframes k182{0%,65.838%{opacity:0}65.839%{opacity:1}100%{opacity:1}}
+@keyframes k183{0%,65.978%{opacity:0}65.979%{opacity:1}100%{opacity:1}}
+@keyframes k184{0%,66.119%{opacity:0}66.120%{opacity:1}100%{opacity:1}}
+@keyframes k185{0%,66.260%{opacity:0}66.261%{opacity:1}100%{opacity:1}}
+@keyframes k186{0%,66.401%{opacity:0}66.402%{opacity:1}100%{opacity:1}}
+@keyframes k187{0%,66.542%{opacity:0}66.543%{opacity:1}100%{opacity:1}}
+@keyframes k188{0%,66.682%{opacity:0}66.683%{opacity:1}100%{opacity:1}}
+@keyframes k189{0%,66.823%{opacity:0}66.824%{opacity:1}100%{opacity:1}}
+@keyframes k190{0%,66.964%{opacity:0}66.965%{opacity:1}100%{opacity:1}}
+@keyframes k191{0%,67.105%{opacity:0}67.106%{opacity:1}100%{opacity:1}}
+@keyframes k192{0%,67.245%{opacity:0}67.246%{opacity:1}100%{opacity:1}}
+@keyframes k193{0%,67.386%{opacity:0}67.387%{opacity:1}100%{opacity:1}}
+@keyframes k194{0%,67.527%{opacity:0}67.528%{opacity:1}100%{opacity:1}}
+@keyframes k195{0%,67.668%{opacity:0}67.669%{opacity:1}100%{opacity:1}}
+@keyframes k196{0%,67.809%{opacity:0}67.810%{opacity:1}100%{opacity:1}}
+@keyframes k197{0%,67.949%{opacity:0}67.950%{opacity:1}100%{opacity:1}}
+@keyframes k198{0%,68.090%{opacity:0}68.091%{opacity:1}100%{opacity:1}}
+@keyframes k199{0%,68.231%{opacity:0}68.232%{opacity:1}100%{opacity:1}}
+@keyframes k200{0%,68.372%{opacity:0}68.373%{opacity:1}100%{opacity:1}}
+@keyframes k201{0%,75.786%{opacity:0}75.787%{opacity:1}100%{opacity:1}}
+@keyframes k202{0%,76.161%{opacity:0}76.162%{opacity:1}100%{opacity:1}}
+@keyframes k203{0%,76.537%{opacity:0}76.538%{opacity:1}100%{opacity:1}}
+.k0{animation-name:k0}
+.k1{animation-name:k1}
+.k2{animation-name:k2}
+.k3{animation-name:k3}
+.k4{animation-name:k4}
+.k5{animation-name:k5}
+.k6{animation-name:k6}
+.k7{animation-name:k7}
+.k8{animation-name:k8}
+.k9{animation-name:k9}
+.k10{animation-name:k10}
+.k11{animation-name:k11}
+.k12{animation-name:k12}
+.k13{animation-name:k13}
+.k14{animation-name:k14}
+.k15{animation-name:k15}
+.k16{animation-name:k16}
+.k17{animation-name:k17}
+.k18{animation-name:k18}
+.k19{animation-name:k19}
+.k20{animation-name:k20}
+.k21{animation-name:k21}
+.k22{animation-name:k22}
+.k23{animation-name:k23}
+.k24{animation-name:k24}
+.k25{animation-name:k25}
+.k26{animation-name:k26}
+.k27{animation-name:k27}
+.k28{animation-name:k28}
+.k29{animation-name:k29}
+.k30{animation-name:k30}
+.k31{animation-name:k31}
+.k32{animation-name:k32}
+.k33{animation-name:k33}
+.k34{animation-name:k34}
+.k35{animation-name:k35}
+.k36{animation-name:k36}
+.k37{animation-name:k37}
+.k38{animation-name:k38}
+.k39{animation-name:k39}
+.k40{animation-name:k40}
+.k41{animation-name:k41}
+.k42{animation-name:k42}
+.k43{animation-name:k43}
+.k44{animation-name:k44}
+.k45{animation-name:k45}
+.k46{animation-name:k46}
+.k47{animation-name:k47}
+.k48{animation-name:k48}
+.k49{animation-name:k49}
+.k50{animation-name:k50}
+.k51{animation-name:k51}
+.k52{animation-name:k52}
+.k53{animation-name:k53}
+.k54{animation-name:k54}
+.k55{animation-name:k55}
+.k56{animation-name:k56}
+.k57{animation-name:k57}
+.k58{animation-name:k58}
+.k59{animation-name:k59}
+.k60{animation-name:k60}
+.k61{animation-name:k61}
+.k62{animation-name:k62}
+.k63{animation-name:k63}
+.k64{animation-name:k64}
+.k65{animation-name:k65}
+.k66{animation-name:k66}
+.k67{animation-name:k67}
+.k68{animation-name:k68}
+.k69{animation-name:k69}
+.k70{animation-name:k70}
+.k71{animation-name:k71}
+.k72{animation-name:k72}
+.k73{animation-name:k73}
+.k74{animation-name:k74}
+.k75{animation-name:k75}
+.k76{animation-name:k76}
+.k77{animation-name:k77}
+.k78{animation-name:k78}
+.k79{animation-name:k79}
+.k80{animation-name:k80}
+.k81{animation-name:k81}
+.k82{animation-name:k82}
+.k83{animation-name:k83}
+.k84{animation-name:k84}
+.k85{animation-name:k85}
+.k86{animation-name:k86}
+.k87{animation-name:k87}
+.k88{animation-name:k88}
+.k89{animation-name:k89}
+.k90{animation-name:k90}
+.k91{animation-name:k91}
+.k92{animation-name:k92}
+.k93{animation-name:k93}
+.k94{animation-name:k94}
+.k95{animation-name:k95}
+.k96{animation-name:k96}
+.k97{animation-name:k97}
+.k98{animation-name:k98}
+.k99{animation-name:k99}
+.k100{animation-name:k100}
+.k101{animation-name:k101}
+.k102{animation-name:k102}
+.k103{animation-name:k103}
+.k104{animation-name:k104}
+.k105{animation-name:k105}
+.k106{animation-name:k106}
+.k107{animation-name:k107}
+.k108{animation-name:k108}
+.k109{animation-name:k109}
+.k110{animation-name:k110}
+.k111{animation-name:k111}
+.k112{animation-name:k112}
+.k113{animation-name:k113}
+.k114{animation-name:k114}
+.k115{animation-name:k115}
+.k116{animation-name:k116}
+.k117{animation-name:k117}
+.k118{animation-name:k118}
+.k119{animation-name:k119}
+.k120{animation-name:k120}
+.k121{animation-name:k121}
+.k122{animation-name:k122}
+.k123{animation-name:k123}
+.k124{animation-name:k124}
+.k125{animation-name:k125}
+.k126{animation-name:k126}
+.k127{animation-name:k127}
+.k128{animation-name:k128}
+.k129{animation-name:k129}
+.k130{animation-name:k130}
+.k131{animation-name:k131}
+.k132{animation-name:k132}
+.k133{animation-name:k133}
+.k134{animation-name:k134}
+.k135{animation-name:k135}
+.k136{animation-name:k136}
+.k137{animation-name:k137}
+.k138{animation-name:k138}
+.k139{animation-name:k139}
+.k140{animation-name:k140}
+.k141{animation-name:k141}
+.k142{animation-name:k142}
+.k143{animation-name:k143}
+.k144{animation-name:k144}
+.k145{animation-name:k145}
+.k146{animation-name:k146}
+.k147{animation-name:k147}
+.k148{animation-name:k148}
+.k149{animation-name:k149}
+.k150{animation-name:k150}
+.k151{animation-name:k151}
+.k152{animation-name:k152}
+.k153{animation-name:k153}
+.k154{animation-name:k154}
+.k155{animation-name:k155}
+.k156{animation-name:k156}
+.k157{animation-name:k157}
+.k158{animation-name:k158}
+.k159{animation-name:k159}
+.k160{animation-name:k160}
+.k161{animation-name:k161}
+.k162{animation-name:k162}
+.k163{animation-name:k163}
+.k164{animation-name:k164}
+.k165{animation-name:k165}
+.k166{animation-name:k166}
+.k167{animation-name:k167}
+.k168{animation-name:k168}
+.k169{animation-name:k169}
+.k170{animation-name:k170}
+.k171{animation-name:k171}
+.k172{animation-name:k172}
+.k173{animation-name:k173}
+.k174{animation-name:k174}
+.k175{animation-name:k175}
+.k176{animation-name:k176}
+.k177{animation-name:k177}
+.k178{animation-name:k178}
+.k179{animation-name:k179}
+.k180{animation-name:k180}
+.k181{animation-name:k181}
+.k182{animation-name:k182}
+.k183{animation-name:k183}
+.k184{animation-name:k184}
+.k185{animation-name:k185}
+.k186{animation-name:k186}
+.k187{animation-name:k187}
+.k188{animation-name:k188}
+.k189{animation-name:k189}
+.k190{animation-name:k190}
+.k191{animation-name:k191}
+.k192{animation-name:k192}
+.k193{animation-name:k193}
+.k194{animation-name:k194}
+.k195{animation-name:k195}
+.k196{animation-name:k196}
+.k197{animation-name:k197}
+.k198{animation-name:k198}
+.k199{animation-name:k199}
+.k200{animation-name:k200}
+.k201{animation-name:k201}
+.k202{animation-name:k202}
+.k203{animation-name:k203}
+</style>
+<rect width="872" height="626" rx="10" fill="#0d1117"/>
+<circle cx="20" cy="18" r="6" fill="#ff5f56"/><circle cx="40" cy="18" r="6" fill="#ffbd2e"/><circle cx="60" cy="18" r="6" fill="#27c93f"/>
+<text x="436" y="22" text-anchor="middle" style="fill:#8b949e;font-size:12px">not-obvious</text>
+<text x="16" y="54"><tspan class="cap k0"># What would every AI say? The cliché cloud: 2 models x 10 answers</tspan></text>
+<text x="16" y="73"><tspan class="ps k1">$ </tspan><tspan class="k2">n</tspan><tspan class="k3">o</tspan><tspan class="k4">t</tspan><tspan class="k5">-</tspan><tspan class="k6">o</tspan><tspan class="k7">b</tspan><tspan class="k8">v</tspan><tspan class="k9">i</tspan><tspan class="k10">o</tspan><tspan class="k11">u</tspan><tspan class="k12">s</tspan><tspan class="k13"> </tspan><tspan class="k14">b</tspan><tspan class="k15">a</tspan><tspan class="k16">s</tspan><tspan class="k17">e</tspan><tspan class="k18">l</tspan><tspan class="k19">i</tspan><tspan class="k20">n</tspan><tspan class="k21">e</tspan><tspan class="k22"> </tspan><tspan class="k23">"</tspan><tspan class="k24">S</tspan><tspan class="k25">u</tspan><tspan class="k26">g</tspan><tspan class="k27">g</tspan><tspan class="k28">e</tspan><tspan class="k29">s</tspan><tspan class="k30">t</tspan><tspan class="k31"> </tspan><tspan class="k32">a</tspan><tspan class="k33"> </tspan><tspan class="k34">s</tspan><tspan class="k35">i</tspan><tspan class="k36">d</tspan><tspan class="k37">e</tspan><tspan class="k38"> </tspan><tspan class="k39">b</tspan><tspan class="k40">u</tspan><tspan class="k41">s</tspan><tspan class="k42">i</tspan><tspan class="k43">n</tspan><tspan class="k44">e</tspan><tspan class="k45">s</tspan><tspan class="k46">s</tspan><tspan class="k47"> </tspan><tspan class="k48">f</tspan><tspan class="k49">o</tspan><tspan class="k50">r</tspan><tspan class="k51"> </tspan><tspan class="k52">a</tspan><tspan class="k53"> </tspan><tspan class="k54">s</tspan><tspan class="k55">o</tspan><tspan class="k56">f</tspan><tspan class="k57">t</tspan><tspan class="k58">w</tspan><tspan class="k59">a</tspan><tspan class="k60">r</tspan><tspan class="k61">e</tspan><tspan class="k62"> </tspan><tspan class="k63">d</tspan><tspan class="k64">e</tspan><tspan class="k65">v</tspan><tspan class="k66">e</tspan><tspan class="k67">l</tspan><tspan class="k68">o</tspan><tspan class="k69">p</tspan><tspan class="k70">e</tspan><tspan class="k71">r</tspan><tspan class="k72">"</tspan></text>
+<text x="16" y="92"><tspan class="k73">Cliché cloud (20, embedder gemini-embedding-001):</tspan></text>
+<text x="16" y="111"><tspan class="k74">  </tspan><tspan class="dim k74">[claude-haiku-5-5]</tspan><tspan class="k74"> Build and sell niche WordPress or Shopify plugins for small businesses.</tspan></text>
+<text x="16" y="130"><tspan class="k75">  </tspan><tspan class="dim k75">[claude-haiku-5-5]</tspan><tspan class="k75"> Offer freelance website maintenance and security monitoring retainers to local </tspan></text>
+<text x="16" y="149"><tspan class="k75">companies.</tspan></text>
+<text x="16" y="168"><tspan class="k76">  </tspan><tspan class="dim k76">[claude-haiku-5-5]</tspan><tspan class="k76"> Create and sell online courses teaching a specific programming language or fram</tspan></text>
+<text x="16" y="187"><tspan class="k76">ework.</tspan></text>
+<text x="16" y="206"><tspan class="k77">  </tspan><tspan class="dim k77">[claude-haiku-5-5]</tspan><tspan class="k77"> Develop custom Chrome extensions or Notion templates and sell them on marketpla</tspan></text>
+<text x="16" y="225"><tspan class="k77">ces.</tspan></text>
+<text x="16" y="244"><tspan class="k78">  </tspan><tspan class="dim k78">[claude-haiku-5-5]</tspan><tspan class="k78"> Provide automation consulting that connects clients' tools using Zapier, Make, </tspan></text>
+<text x="16" y="263"><tspan class="k78">or custom scripts.</tspan></text>
+<text x="16" y="282"><tspan class="k79">  </tspan><tspan class="dim k79">[claude-haiku-5-5]</tspan><tspan class="k79"> Launch a micro-SaaS tool solving one narrow problem for a specific professional</tspan></text>
+<text x="16" y="301"><tspan class="k79"> niche.</tspan></text>
+<text x="16" y="320"><tspan class="k80">  </tspan><tspan class="dim k80">[claude-haiku-5-5]</tspan><tspan class="k80"> Build no-code app prototypes for startups and non-technical founders on a proje</tspan></text>
+<text x="16" y="339"><tspan class="k80">ct basis.</tspan></text>
+<text x="16" y="358"><tspan class="k81">  </tspan><tspan class="dim k81">[claude-haiku-5-5]</tspan><tspan class="k81"> Sell mobile app templates or UI kits on marketplaces like Envato or Gumroad.</tspan></text>
+<text x="16" y="377"><tspan class="k82">  </tspan><tspan class="dim k82">[claude-haiku-5-5]</tspan><tspan class="k82"> Offer technical tutoring or coding bootcamp mentorship for career changers via </tspan></text>
+<text x="16" y="396"><tspan class="k82">video sessions.</tspan></text>
+<text x="16" y="415"><tspan class="k83">  </tspan><tspan class="dim k83">[claude-haiku-5-5]</tspan><tspan class="k83"> Create and monetize open-source tools with paid hosting, support, or enterprise</tspan></text>
+<text x="16" y="434"><tspan class="k83"> add-ons.</tspan></text>
+<text x="16" y="453"><tspan class="k84">  </tspan><tspan class="dim k84">[gemini-flash-lite-latest]</tspan><tspan class="k84"> Build and sell micro-SaaS products targeting niche markets with recurri</tspan></text>
+<text x="16" y="472"><tspan class="k84">ng subscription models.</tspan></text>
+<text x="16" y="491"><tspan class="k85">  </tspan><tspan class="dim k85">[gemini-flash-lite-latest]</tspan><tspan class="k85"> Develop and publish mobile apps or indie games on app stores with in-ap</tspan></text>
+<text x="16" y="510"><tspan class="k85">p purchases.</tspan></text>
+<text x="16" y="529"><tspan class="k86">  </tspan><tspan class="dim k86">[gemini-flash-lite-latest]</tspan><tspan class="k86"> Create and sell paid developer tools, CLI utilities, or browser extensi</tspan></text>
+<text x="16" y="548"><tspan class="k86">ons to boost productivity.</tspan></text>
+<text x="16" y="567"><tspan class="dim k87">  ... 7 more lines</tspan></text>
+<text x="16" y="54"><tspan class="cap k88"># The answer you would get anyway, measured</tspan></text>
+<text x="16" y="73"><tspan class="ps k89">$ </tspan><tspan class="k90">n</tspan><tspan class="k91">o</tspan><tspan class="k92">t</tspan><tspan class="k93">-</tspan><tspan class="k94">o</tspan><tspan class="k95">b</tspan><tspan class="k96">v</tspan><tspan class="k97">i</tspan><tspan class="k98">o</tspan><tspan class="k99">u</tspan><tspan class="k100">s</tspan><tspan class="k101"> </tspan><tspan class="k102">s</tspan><tspan class="k103">c</tspan><tspan class="k104">o</tspan><tspan class="k105">r</tspan><tspan class="k106">e</tspan><tspan class="k107"> </tspan><tspan class="k108">"</tspan><tspan class="k109">S</tspan><tspan class="k110">u</tspan><tspan class="k111">g</tspan><tspan class="k112">g</tspan><tspan class="k113">e</tspan><tspan class="k114">s</tspan><tspan class="k115">t</tspan><tspan class="k116"> </tspan><tspan class="k117">a</tspan><tspan class="k118"> </tspan><tspan class="k119">s</tspan><tspan class="k120">i</tspan><tspan class="k121">d</tspan><tspan class="k122">e</tspan><tspan class="k123"> </tspan><tspan class="k124">b</tspan><tspan class="k125">u</tspan><tspan class="k126">s</tspan><tspan class="k127">i</tspan><tspan class="k128">n</tspan><tspan class="k129">e</tspan><tspan class="k130">s</tspan><tspan class="k131">s</tspan><tspan class="k132"> </tspan><tspan class="k133">f</tspan><tspan class="k134">o</tspan><tspan class="k135">r</tspan><tspan class="k136"> </tspan><tspan class="k137">a</tspan><tspan class="k138"> </tspan><tspan class="k139">s</tspan><tspan class="k140">o</tspan><tspan class="k141">f</tspan><tspan class="k142">t</tspan><tspan class="k143">w</tspan><tspan class="k144">a</tspan><tspan class="k145">r</tspan><tspan class="k146">e</tspan><tspan class="k147"> </tspan><tspan class="k148">d</tspan><tspan class="k149">e</tspan><tspan class="k150">v</tspan><tspan class="k151">e</tspan><tspan class="k152">l</tspan><tspan class="k153">o</tspan><tspan class="k154">p</tspan><tspan class="k155">e</tspan><tspan class="k156">r</tspan><tspan class="k157">"</tspan><tspan class="k158"> </tspan><tspan class="k159">"</tspan><tspan class="k160">W</tspan><tspan class="k161">r</tspan><tspan class="k162">i</tspan><tspan class="k163">t</tspan><tspan class="k164">e</tspan><tspan class="k165"> </tspan><tspan class="k166">a</tspan><tspan class="k167"> </tspan><tspan class="k168">p</tspan><tspan class="k169">r</tspan><tspan class="k170">o</tspan><tspan class="k171">g</tspan><tspan class="k172">r</tspan><tspan class="k173">a</tspan><tspan class="k174">m</tspan><tspan class="k175">m</tspan><tspan class="k176">i</tspan><tspan class="k177">n</tspan><tspan class="k178">g</tspan><tspan class="k179"> </tspan><tspan class="k180">c</tspan><tspan class="k181">o</tspan><tspan class="k182">u</tspan><tspan class="k183">r</tspan><tspan class="k184">s</tspan><tspan class="k185">e</tspan><tspan class="k186"> </tspan><tspan class="k187">f</tspan></text>
+<text x="16" y="92"><tspan class="k188">o</tspan><tspan class="k189">r</tspan><tspan class="k190"> </tspan><tspan class="k191">b</tspan><tspan class="k192">e</tspan><tspan class="k193">g</tspan><tspan class="k194">i</tspan><tspan class="k195">n</tspan><tspan class="k196">n</tspan><tspan class="k197">e</tspan><tspan class="k198">r</tspan><tspan class="k199">s</tspan><tspan class="k200">"</tspan></text>
+<text x="16" y="111"><tspan class="hi k201">100% cliché</tspan><tspan class="k201">  Write a programming course for beginners</tspan></text>
+<text x="16" y="130"><tspan class="k202">       nearest: Create and sell online courses teaching a specific programming language or framework</tspan></text>
+<text x="16" y="149"><tspan class="k202">.  | embedding 100%, overlap 9/10  | useful 8/10</tspan></text>
+<text x="16" y="168"><tspan class="k203">       web 10/10: Coursera, Udemy, Codecademy, Sololearn and Class Central list many paid and free b</tspan></text>
+<text x="16" y="187"><tspan class="k203">eginner programming courses, including independent instructors like Dr. Chuck's Python course, so th</tspan></text>
+<text x="16" y="206"><tspan class="k203">is is standard practice.  (https://www.coursera.org/courses?query=programming)</tspan></text>
+</svg>

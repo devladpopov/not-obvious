@@ -21,7 +21,8 @@ export interface Cloud {
   vectors: Vector[];
 }
 
-const CACHE_DIR = process.env.NOT_OBVIOUS_CACHE?.trim() || join(homedir(), ".not-obvious", "clouds");
+/** Read on every call, not at import: tests and long-lived hosts can point it elsewhere. */
+const cacheDir = () => process.env.NOT_OBVIOUS_CACHE?.trim() || join(homedir(), ".not-obvious", "clouds");
 const hash = (s: string) => createHash("sha256").update(s).digest("hex").slice(0, 16);
 /** Cache key: normalised prompt + embedder, so switching embedders never mixes vector spaces. */
 export const cloudKey = (prompt: string, embedderName: string) =>
@@ -29,7 +30,7 @@ export const cloudKey = (prompt: string, embedderName: string) =>
 
 async function loadCloud(prompt: string, embedderName: string): Promise<Cloud | null> {
   try {
-    const c = JSON.parse(await readFile(join(CACHE_DIR, `${cloudKey(prompt, embedderName)}.json`), "utf8")) as Cloud;
+    const c = JSON.parse(await readFile(join(cacheDir(), `${cloudKey(prompt, embedderName)}.json`), "utf8")) as Cloud;
     return c.embedder === embedderName && c.vectors.length === c.cliches.length && c.cliches.length > 0 ? c : null;
   } catch {
     return null;
@@ -37,8 +38,8 @@ async function loadCloud(prompt: string, embedderName: string): Promise<Cloud | 
 }
 
 async function saveCloud(cloud: Cloud): Promise<void> {
-  await mkdir(CACHE_DIR, { recursive: true });
-  await writeFile(join(CACHE_DIR, `${cloudKey(cloud.prompt, cloud.embedder)}.json`), JSON.stringify(cloud));
+  await mkdir(cacheDir(), { recursive: true });
+  await writeFile(join(cacheDir(), `${cloudKey(cloud.prompt, cloud.embedder)}.json`), JSON.stringify(cloud));
 }
 
 /**
@@ -48,7 +49,7 @@ async function saveCloud(cloud: Cloud): Promise<void> {
 const embMemo = new Map<string, Map<string, Vector>>();
 export async function embedCached(texts: string[]): Promise<{ name: string; vectors: Vector[] }> {
   const emb = embedder();
-  const file = join(CACHE_DIR, `emb-${emb.name.replace(/[^\w.-]/g, "_")}.json`);
+  const file = join(cacheDir(), `emb-${emb.name.replace(/[^\w.-]/g, "_")}.json`);
   let memo = embMemo.get(file);
   if (!memo) {
     memo = new Map(Object.entries(await readFile(file, "utf8").then((t) => JSON.parse(t) as Record<string, Vector>).catch(() => ({}))));
@@ -59,7 +60,7 @@ export async function embedCached(texts: string[]): Promise<{ name: string; vect
     const vs = await emb.embed(missing);
     missing.forEach((t, i) => memo!.set(hash(t), vs[i]!));
     if (emb.name !== "lexical-trigram") {
-      await mkdir(CACHE_DIR, { recursive: true });
+      await mkdir(cacheDir(), { recursive: true });
       await writeFile(file, JSON.stringify(Object.fromEntries(memo)));
     }
   }
@@ -150,16 +151,18 @@ async function usefulness(prompt: string, ideas: string[]): Promise<{ score: num
 }
 
 /** Judge verdicts are cached per (cloud, idea): calibration re-runs and repeated scoring cost nothing. */
-let judgeMemo: Map<string, Judgement> | undefined;
-const judgeFile = () => join(CACHE_DIR, "judge.json");
+const judgeMemos = new Map<string, Map<string, Judgement>>();
 
 /**
  * Mechanism judge: does the idea do the same thing, for the same people, in the same way as some cliché,
  * whatever the wording? Fixes the main embedding failure from day-2 calibration (far ideas in cloud vocabulary).
  */
 export async function judgeMechanism(prompt: string, ideas: string[], cloud: Cloud): Promise<Judgement[]> {
-  judgeMemo ??= new Map(Object.entries(await readFile(judgeFile(), "utf8").then((t) => JSON.parse(t) as Record<string, Judgement>).catch(() => ({}))));
-  const memo = judgeMemo;
+  const file = join(cacheDir(), "judge.json");
+  const memo =
+    judgeMemos.get(file) ??
+    new Map(Object.entries(await readFile(file, "utf8").then((t) => JSON.parse(t) as Record<string, Judgement>).catch(() => ({}))));
+  judgeMemos.set(file, memo);
   const ck = cloudKey(prompt, cloud.embedder);
   const k = (idea: string) => hash(`${ck}\n${cloud.cliches.length}\n${idea}`);
   const missing = [...new Set(ideas.filter((i) => !memo.has(k(i))))];
@@ -173,8 +176,8 @@ export async function judgeMechanism(prompt: string, ideas: string[], cloud: Clo
     const out = parseList<Judgement>(text);
     if (out.length !== missing.length) throw new Error(`judge returned ${out.length}/${missing.length} verdicts`);
     missing.forEach((t, i) => memo.set(k(t), { overlap: Number(out[i]!.overlap), closest: Number(out[i]!.closest) || 0, why: String(out[i]!.why ?? "") }));
-    await mkdir(CACHE_DIR, { recursive: true });
-    await writeFile(judgeFile(), JSON.stringify(Object.fromEntries(memo)));
+    await mkdir(cacheDir(), { recursive: true });
+    await writeFile(file, JSON.stringify(Object.fromEntries(memo)));
   }
   return ideas.map((i) => memo.get(k(i))!);
 }
@@ -191,7 +194,7 @@ export async function score(prompt: string, ideas: string[], opts: { critic?: bo
     opts.critic === false ? [] : usefulness(prompt, ideas).catch(() => []),
     // A failed judge degrades to embedding-only scoring instead of failing the call.
     opts.judge === false ? [] : judgeMechanism(prompt, ideas, cloud).catch(() => []),
-    opts.web === false ? [] : webCheck(prompt, ideas, CACHE_DIR).catch(() => []),
+    opts.web === false ? [] : webCheck(prompt, ideas, cacheDir()).catch(() => []),
   ]);
   return ideas.map((idea, i) => {
     const b = clicheScore(vecs[i]!, cloud.vectors);
@@ -213,7 +216,7 @@ export async function score(prompt: string, ideas: string[], opts: { critic?: bo
 /** Attach web checks to already scored ideas (diverge checks only its survivors). */
 async function withWeb<T extends Scored>(prompt: string, items: T[]): Promise<T[]> {
   if (!items.length) return items;
-  const web = await webCheck(prompt, items.map((s) => s.idea), CACHE_DIR).catch(() => []);
+  const web = await webCheck(prompt, items.map((s) => s.idea), cacheDir()).catch(() => []);
   return items.map((s, i) => ({ ...s, web: web[i], cliche: combineScores(s.embedding, s.judge?.overlap, undefined, web[i]?.prevalence) }));
 }
 
