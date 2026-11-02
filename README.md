@@ -6,7 +6,7 @@ Not Obvious is an open-source MCP server against banality. Before it gives you i
 
 > "Your idea is 82% cliché. Here's the AI answer it's closest to."
 
-<!-- demo.gif: plain AI vs Not Obvious (coming in v0.1) -->
+![Not Obvious in a terminal: the cliché cloud, a score, an explanation](docs/demo.svg)
 
 ## Why
 
@@ -58,11 +58,24 @@ npx -p not-obvious-mcp not-obvious diverge "Suggest a side business for a softwa
 npx -p not-obvious-mcp not-obvious explain "Suggest a side business for a software developer" "Write a programming course for beginners"
 ```
 
+## Which model is the most banal?
+
+We asked 9 models from Anthropic, Google and Sber the same 30 open prompts (5 answers each) and scored every model against the answers of the other vendors. Full table, method and caveats: [docs/leaderboard.md](docs/leaderboard.md).
+
+| model | banality, 0-100 | ideas another vendor also gave |
+|---|---|---|
+| claude-haiku-4-5 | 93.3 | 66% |
+| claude-opus-5-5 | 91.8 | 64% |
+| gemini-3.5-flash-lite | 92.1 | 71% |
+| GigaChat-2 | 87.0 | 51% |
+
+They all say the same thing: 82-92% of each model's answers are practically an answer some other vendor gave, and the intervals overlap. Asked to name a black cat, all 9 models say Midnight. Small fast models come out a little more banal than large ones, but the difference is inside the noise.
+
 ## Roadmap
 
 - [x] Web novelty: is the idea already out there (web search, prevalence 0-10 with sources)
 - [ ] More models in the cloud (OpenRouter), local embeddings
-- [ ] Public leaderboard: which model is the most banal
+- [x] Public leaderboard: which model is the most banal ([docs/leaderboard.md](docs/leaderboard.md))
 - [ ] Calibration set with human originality ratings
 
 ## Prior work
