@@ -12,6 +12,10 @@ Not Obvious is an open-source MCP server against banality. Before it gives you i
 
 LLMs converge. Ask five models for a side business and you get five versions of "start a SaaS, freelance, make a course". Research calls this the [Artificial Hivemind](https://arxiv.org/abs/2510.22954). Existing creativity MCP servers wrap techniques in prompts and let the model grade itself. Not Obvious builds the cloud of typical answers per prompt and scores ideas by semantic distance from it, so originality is measured, not self-reported.
 
+## When to use it
+
+When the first answer is not enough: naming, positioning, a side project, a talk topic, a campaign, a research angle. Anywhere the obvious answer is the one your competitors, classmates or colleagues already got from the same chatbot. Ask your assistant to run `baseline` first and you see the answers to avoid; `diverge` gives you ideas that are measurably outside them; `score` and `explain` tell you whether your own idea is one of the clichés and how to move it. Put a few sentences about yourself into the prompt (where you live, what you have, what you can't do): our [context experiment](docs/context.md) shows that alone moves answers 12-25 points away from the crowd, and Not Obvious then builds the cloud for *that* prompt and pushes further.
+
 ## Tools
 
 | Tool | What it does |

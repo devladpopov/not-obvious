@@ -5,7 +5,7 @@ import { z } from "zod";
 import { baseline, diverge, explain, remix, score } from "./engine.js";
 import { TECHNIQUES } from "./techniques.js";
 
-const server = new McpServer({ name: "not-obvious", version: "0.0.1" });
+const server = new McpServer({ name: "not-obvious", version: "0.1.0" });
 
 const json = (data: unknown) => ({ content: [{ type: "text" as const, text: JSON.stringify(data, null, 2) }] });
 const fail = (e: unknown) => ({ isError: true, content: [{ type: "text" as const, text: (e as Error).message }] });
