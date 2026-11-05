@@ -77,6 +77,17 @@ function dedupe(items: Cliche[], vectors: Vector[], threshold = 0.95) {
 }
 
 /**
+ * Put a few sentences about the person asking in front of the prompt, the way they would type it.
+ * Every tool then works on the combined prompt, so the cloud is the one built with that context
+ * (docs/context.md: context alone moves answers 12-25 points from the crowd, then models converge again).
+ */
+export function withContext(prompt: string, context?: string): string {
+  const c = context?.trim();
+  if (!c) return prompt;
+  return `${/^about me\b/i.test(c) ? c : `About me: ${c}`}\n\n${prompt}`;
+}
+
+/**
  * baseline: what would any AI say? Asks every configured model the plain question,
  * exactly as a user would, and collects the answers into a cliché cloud.
  */

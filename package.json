@@ -1,6 +1,6 @@
 {
   "name": "not-obvious-mcp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "See what every AI would say. Then go somewhere else. MCP server that maps the cliché cloud of typical LLM answers, diverges with SCAMPER/TRIZ/far analogies, and measures originality with a Cliché Score.",
   "license": "MIT",
   "type": "module",

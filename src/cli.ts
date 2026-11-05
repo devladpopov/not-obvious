@@ -1,12 +1,17 @@
 #!/usr/bin/env node
 /** Tiny CLI for demos and debugging: not-obvious <baseline|score|diverge|remix|explain> "prompt" [...] */
-import { baseline, diverge, explain, remix, score } from "./engine.js";
+import { baseline, diverge, explain, remix, score, withContext } from "./engine.js";
 
-const [cmd, prompt, ...rest] = process.argv.slice(2);
+const argv = process.argv.slice(2);
+// --context "about me" anywhere in the arguments is put in front of the prompt.
+const ci = argv.indexOf("--context");
+const context = ci >= 0 ? argv.splice(ci, 2)[1] : undefined;
+const [cmd, rawPrompt, ...rest] = argv;
+const prompt = rawPrompt && withContext(rawPrompt, context);
 
 async function main() {
   if (!cmd || !prompt) {
-    console.log('Usage:\n  not-obvious baseline "prompt"\n  not-obvious score "prompt" "idea" ["idea" ...] [--no-web]\n  not-obvious diverge "prompt" [all|scamper|triz|morphological|far-analogy|constraint-flip]\n  not-obvious remix "prompt" "idea A" "idea B"\n  not-obvious explain "prompt" "idea"');
+    console.log('Usage:\n  not-obvious baseline "prompt"\n  not-obvious score "prompt" "idea" ["idea" ...] [--no-web]\n  not-obvious diverge "prompt" [all|scamper|triz|morphological|far-analogy|constraint-flip]\n  not-obvious remix "prompt" "idea A" "idea B"\n  not-obvious explain "prompt" "idea"\n\nAny command: --context "a few sentences about you" builds the cloud for the prompt with that context.');
     process.exit(1);
   }
   if (cmd === "baseline") {

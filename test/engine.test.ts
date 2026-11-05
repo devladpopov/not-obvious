@@ -136,3 +136,21 @@ describe("engine (fake provider, lexical embeddings)", () => {
     expect(r.rewrite.cliche).toBeLessThan(100);
   });
 });
+
+describe("withContext", () => {
+  const { withContext } = require("../src/engine.js") as typeof import("../src/engine.js");
+  test("no context keeps the prompt as is", () => {
+    expect(withContext(PROMPT)).toBe(PROMPT);
+    expect(withContext(PROMPT, "  ")).toBe(PROMPT);
+  });
+  test("context goes in front, labelled once", () => {
+    expect(withContext(PROMPT, "I'm a nurse in Lagos.")).toBe(`About me: I'm a nurse in Lagos.\n\n${PROMPT}`);
+    expect(withContext(PROMPT, "About me: I'm a nurse.")).toBe(`About me: I'm a nurse.\n\n${PROMPT}`);
+  });
+  test("a different context gives a different cloud", async () => {
+    const plain = await baseline(PROMPT);
+    const mine = await baseline(withContext(PROMPT, "I'm a retired ferry mechanic in northern Norway."));
+    expect(mine.prompt).not.toBe(plain.prompt);
+    expect(mine.prompt.startsWith("About me:")).toBe(true);
+  });
+});

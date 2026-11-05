@@ -12,6 +12,8 @@ const { tools } = await client.listTools();
 const names = tools.map((t) => t.name).sort();
 const want = ["baseline", "diverge", "explain", "remix", "score"];
 if (JSON.stringify(names) !== JSON.stringify(want)) throw new Error(`tools: ${names.join(", ")}`);
+const noContext = tools.filter((t) => !t.inputSchema?.properties?.context).map((t) => t.name);
+if (noContext.length) throw new Error(`no context field: ${noContext.join(", ")}`);
 
 const r = await client.callTool({ name: "baseline", arguments: { prompt: "Suggest a side business for a software developer" } });
 const text = r.content?.[0]?.text ?? "";

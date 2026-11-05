@@ -14,7 +14,7 @@ LLMs converge. Ask five models for a side business and you get five versions of 
 
 ## When to use it
 
-When the first answer is not enough: naming, positioning, a side project, a talk topic, a campaign, a research angle. Anywhere the obvious answer is the one your competitors, classmates or colleagues already got from the same chatbot. Ask your assistant to run `baseline` first and you see the answers to avoid; `diverge` gives you ideas that are measurably outside them; `score` and `explain` tell you whether your own idea is one of the clichés and how to move it. Put a few sentences about yourself into the prompt (where you live, what you have, what you can't do): our [context experiment](docs/context.md) shows that alone moves answers 12-25 points away from the crowd, and Not Obvious then builds the cloud for *that* prompt and pushes further.
+When the first answer is not enough: naming, positioning, a side project, a talk topic, a campaign, a research angle. Anywhere the obvious answer is the one your competitors, classmates or colleagues already got from the same chatbot. Ask your assistant to run `baseline` first and you see the answers to avoid; `diverge` gives you ideas that are measurably outside them; `score` and `explain` tell you whether your own idea is one of the clichés and how to move it. Pass a few sentences about yourself as `context` (where you live, what you have, what you can't do): our [context experiment](docs/context.md) shows that alone moves answers 12-25 points away from the crowd, and Not Obvious then builds the cloud for the prompt *with* that context and pushes further.
 
 ## Tools
 
@@ -53,6 +53,8 @@ Calibrated on 270 labelled ideas for 20 prompts: 70 hand-written anchors and 200
 
 One key is enough; two model families give a better cloud. With Claude every model reply is constrained by a JSON schema (structured outputs); Gemini gets the same schema as `responseJsonSchema`. Web checks use Claude web search when `ANTHROPIC_API_KEY` is set (about $0.01 per idea), otherwise Brave Search with `BRAVE_API_KEY`; `NOT_OBVIOUS_WEB=off` disables them. Without a Gemini key, embeddings fall back to an offline lexical mode (works, but less semantic).
 
+Every tool takes an optional `context`: a few sentences about the person asking, put in front of the prompt ("About me: ..."). Use the same context across tools for one prompt, so they share one cloud.
+
 CLI for quick checks:
 
 ```bash
@@ -60,6 +62,7 @@ npx -p not-obvious-mcp not-obvious baseline "Suggest a side business for a softw
 npx -p not-obvious-mcp not-obvious score "Suggest a side business for a software developer" "Build a SaaS for small businesses"
 npx -p not-obvious-mcp not-obvious diverge "Suggest a side business for a software developer" all
 npx -p not-obvious-mcp not-obvious explain "Suggest a side business for a software developer" "Write a programming course for beginners"
+npx -p not-obvious-mcp not-obvious diverge "Suggest a side business" all --context "I'm a night-shift nurse in Lagos with four free hours a week"
 ```
 
 ## Which model is the most banal?
