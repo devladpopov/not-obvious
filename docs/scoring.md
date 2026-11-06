@@ -49,11 +49,39 @@ That is why `score` checks the web by default: without it the new formula is no 
 
 Full tables: `docs/calibration.md`, `docs/calibration-set20.md`, `docs/calibration-all.md`. Regenerate with `bun run bench/calibrate.ts [set20|all]`; clouds, judge verdicts and web checks are cached in `research/clouds`, so a re-run costs nothing.
 
+## Embedders
+
+The embedding part works with any sentence-embedding model; the score only needs cosine similarity. `src/embed.ts` picks gemini-embedding-001 when `GEMINI_API_KEY` is set, otherwise a local model through transformers.js (if `@huggingface/transformers` is installed), otherwise hashed character trigrams. Clouds cached under one embedder are re-embedded for another, without asking the models again, so every row below scores the same clouds and the same 270 ideas (`NOT_OBVIOUS_EMBEDDER=local NOT_OBVIOUS_LOCAL_MODEL=... bun run bench/calibrate.ts all`).
+
+Cross-validated band / pair order / rho, same protocol as above:
+
+| embedder | size | embedding only | embedding + judge + web |
+|---|---|---|---|
+| gemini-embedding-001 (API) | - | 53% / 82% / 0.63 | 61% / 86% / 0.73 |
+| **multilingual-e5-small** (local default) | 118 MB | 61% / 80% / 0.65 | 61% / 86% / 0.73 |
+| bge-small-en-v1.5 (English only) | 34 MB | 57% / 80% / 0.62 | 61% / 84% / 0.68 |
+| all-MiniLM-L6-v2 (English only) | 23 MB | 47% / 80% / 0.61 | 61% / 86% / 0.73 |
+| paraphrase-multilingual-MiniLM-L12-v2 | 118 MB | 48% / 76% / 0.56 | 63% / 85% / 0.70 |
+| lexical trigrams (no model) | - | 40% / 64% / 0.30 | 52% / 80% / 0.61 |
+
+With the current defaults, unchanged, multilingual-e5-small scores 64% / 86% / 0.74 in-sample against 61% / 86% / 0.73 for Gemini, so the local model shares the same parameters. Its cosines are compressed (on-topic texts sit at 0.80-0.92), which the adaptive spread absorbs.
+
+**Russian.** The calibration set is English, so `bench/translate-ru.ts` translated both sets, their clouds included, into Russian with gemini-flash-lite, keeping the labels (`bench/prompts-ru.json`, `bench/set20-ru.json`; `bun run bench/calibrate.ts all-ru`, web check off). Embedding only, then with the mechanism judge (gemini-flash-lite here):
+
+| embedder | embedding only | embedding + judge |
+|---|---|---|
+| gemini-embedding-001 | 48% / 70% / 0.37 | 61% / 79% / 0.55 |
+| multilingual-e5-small | 46% / 67% / 0.37 | 62% / 79% / 0.57 |
+| paraphrase-multilingual-MiniLM-L12-v2 | 42% / 65% / 0.31 | 58% / 77% / 0.51 |
+| lexical trigrams | 40% / 55% / 0.14 | 62% / 79% / 0.56 |
+
+Every embedder is weaker in Russian than in English (part of it is translation noise: labels were given to the English wording), and e5 stays level with Gemini. Unlike in English, the judge adds a lot here (rho +0.2): for non-English prompts the mechanism judge carries more of the signal than the embeddings. A native Russian set would tell more.
+
 ## Limitations
 
 - **Labels come from models.** The blind set was written by claude-sonnet-5-5 and rated by three models, sonnet among them; web prevalence is rated by claude-haiku-5-5. Part of the web component's gain may be shared model taste rather than ground truth. On the hand-written set, the only one not labelled by models, adding web was neutral in cross-validation (65% / 89% against 67% / 89%). A human-rated set (`bench/set20-blind.csv`) is the next step.
 - **Band accuracy is low on the blind set** (57%): ideas the judges call original still sit near the cloud in embedding space (far ideas average 46 on the embedding part) and often exist online (web prevalence 6.3 of 10). The thresholds were set for the hand-written anchors; the ordering (pair order, rho) is the more reliable signal.
-- **20 prompts, all English, all "give me ideas for X" business and everyday tasks.** Not tested on technical, artistic or non-English prompts.
+- **20 prompts, all English, all "give me ideas for X" business and everyday tasks.** Not tested on technical or artistic prompts; non-English only through a machine-translated copy (see Embedders).
 - **Clouds depend on the models used.** These were built from claude-haiku-5-5, gemini-flash-lite-latest and gemini-flash-latest. A different model mix gives a different cloud and different scores.
 - **The web part costs about $0.01 per idea** with Claude web search (cached per idea). `web: false` or `NOT_OBVIOUS_WEB=off` turns it off.
 

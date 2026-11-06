@@ -4,7 +4,9 @@
  *   bun run bench/calibrate.ts            -> bench/calibration.json + docs/calibration.md
  *   bun run bench/calibrate.ts set20      -> bench/calibration-set20.json + docs/calibration-set20.md (blind-labelled set, see build-set20.ts)
  *   bun run bench/calibrate.ts all        -> both sets pooled (cross-validation holds out a prompt from both), used to pick the defaults
+ *   bun run bench/calibrate.ts all-ru     -> the same in Russian (bench/translate-ru.ts)
  * Needs ANTHROPIC_API_KEY and/or GEMINI_API_KEY (embeddings: gemini-embedding-001).
+ *   NOT_OBVIOUS_EMBEDDER=local [NOT_OBVIOUS_LOCAL_MODEL=...] -> same with a local model; clouds cached for gemini are re-embedded, no model calls.
  */
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { baseline, embedCached, judgeMechanism } from "../src/engine.js";
@@ -19,18 +21,19 @@ const BANDS: Band[] = ["cliche", "mid", "far"];
 const inBand = (b: Band, s: number) => (b === "cliche" ? s >= 70 : b === "mid" ? s >= 30 && s <= 70 : s <= 35);
 
 const SET = process.argv[2] ?? "prompts";
-const suffix = SET === "prompts" ? "" : `-${SET}`;
+const emb = embedder();
+// Runs with another embedder (NOT_OBVIOUS_EMBEDDER=local) write next to the default ones instead of over them.
+const suffix = (SET === "prompts" ? "" : `-${SET}`) + (emb.name === "gemini-embedding-001" ? "" : `-${emb.name}`);
 type SetFile = {
   /** labels: continuous originality per idea (1-7, higher = more original), when the set has them. */
   prompts: ({ prompt: string; relabel?: Record<string, Band | "drop">; labels?: Record<string, number> } & Record<Band, string[]>)[];
 };
-const SOURCES = SET === "all" ? ["prompts", "set20"] : [SET];
+const SOURCES = SET === "all" ? ["prompts", "set20"] : SET === "all-ru" ? ["prompts-ru", "set20-ru"] : [SET];
 const set: SetFile = { prompts: [] };
 for (const name of SOURCES) set.prompts.push(...(JSON.parse(await readFile(new URL(`./${name}.json`, import.meta.url), "utf8")) as SetFile).prompts);
 const hasRelabel = set.prompts.some((p) => p.relabel);
 const hasLabels = set.prompts.some((p) => p.labels);
 
-const emb = embedder();
 const rows: { prompt: string; cloudSize: number; models: string[]; density?: number; anchors: { band: Band | "drop"; orig: Band; text: string; label?: number; v: number[]; overlap?: number; web?: number }[] }[] = [];
 for (const p of set.prompts) {
   const t0 = Date.now();
@@ -148,7 +151,7 @@ const md = [
   ...(SET === "prompts"
     ? [`Set: ${rows.length} prompts x 7 hand-written anchors (3 cliché, 2 mid, 2 far), see bench/prompts.json. Targets: cliché >= 70, mid 30-70, far <= 35.`, ``,
        `Labels: cloud-checked (anchors the cloud already contains count as clichés, see "relabel" in prompts.json); the last three rows use the labels as originally written.`, ``]
-    : [`Set: ${rows.length} prompt rows, ${rows.reduce((s, r) => s + r.anchors.length, 0)} ideas, see ${SOURCES.map((n) => `bench/${n}.json`).join(" + ")}.${SET === "all" ? " Bands: cloud-checked hand labels (prompts.json) and" : ""} Bands from blind judge ratings (originality 1-7: <= 2.5 cliché, >= 4.5 far). Targets: cliché >= 70, mid 30-70, far <= 35.`, ``,
+    : [`Set: ${rows.length} prompt rows, ${rows.reduce((s, r) => s + r.anchors.length, 0)} ideas, see ${SOURCES.map((n) => `bench/${n}.json`).join(" + ")}.${SET === "all" || SET === "all-ru" ? " Bands: cloud-checked hand labels (prompts.json) and" : ""} Bands from blind judge ratings (originality 1-7: <= 2.5 cliché, >= 4.5 far). Targets: cliché >= 70, mid 30-70, far <= 35.`, ``,
        `rho = mean per-prompt Spearman between the Cliché Score and the judges' originality (sign flipped, 1 = same order).`, ``]),
   `Web check: ${webMode()}, ${webCoverage} of ${rows.reduce((s, r) => s + r.anchors.length, 0)} anchors rated.`, ``,
   `| params (k = spread, w = nearest weight, j = judge weight, web = web prevalence weight) | band accuracy | pair order | rho | mean cliché | mean mid | mean far |`, `|---|---|---|---|---|---|---|`,

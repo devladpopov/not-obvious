@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { homedir } from "node:os";
 import { join } from "node:path";
-import { embedder, type Vector } from "./embed.js";
+import { embedder, knownEmbedders, type Vector } from "./embed.js";
 import { complete, parseJson, parseList, providers } from "./llm.js";
 import { clicheScore, combineScores, cosine, type ClicheBreakdown } from "./math.js";
 import { AnswersSchema, ExplainSchema, HybridsSchema, IdeasSchema, JudgeSchema, UsefulnessSchema } from "./schemas.js";
@@ -58,6 +58,7 @@ export async function embedCached(texts: string[]): Promise<{ name: string; vect
   const missing = [...new Set(texts.filter((t) => !memo!.has(hash(t))))];
   if (missing.length) {
     const vs = await emb.embed(missing);
+    if (vs.length !== missing.length || vs.some((v) => !v?.length)) throw new Error(`${emb.name} returned ${vs.length} vectors for ${missing.length} texts`);
     missing.forEach((t, i) => memo!.set(hash(t), vs[i]!));
     if (emb.name !== "lexical-trigram") {
       await mkdir(cacheDir(), { recursive: true });
@@ -96,6 +97,15 @@ export async function baseline(prompt: string, opts: { perModel?: number; refres
   if (!opts.refresh) {
     const cached = await loadCloud(prompt, embName);
     if (cached) return cached;
+    // Same prompt cached under another embedder: re-embed its clichés, no model calls.
+    for (const other of knownEmbedders().filter((n) => n !== embName)) {
+      const c = await loadCloud(prompt, other);
+      if (!c) continue;
+      const { name, vectors } = await embedCached(c.cliches.map((x) => x.text));
+      const cloud: Cloud = { prompt, cliches: c.cliches, embedder: name, vectors };
+      await saveCloud(cloud);
+      return cloud;
+    }
   }
   const n = opts.perModel ?? 10;
   const ask = `${prompt}\n\nGive ${n} distinct answers. Return JSON {"items": [${n} strings]}, one short answer (max 25 words) each.`;

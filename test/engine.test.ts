@@ -154,3 +154,19 @@ describe("withContext", () => {
     expect(mine.prompt.startsWith("About me:")).toBe(true);
   });
 });
+
+describe("switching embedders", () => {
+  test("a cloud cached under another embedder is re-embedded without asking the models", async () => {
+    const { cloudKey } = await import("../src/engine.js");
+    const { writeFile } = await import("node:fs/promises");
+    const prompt = "How can a lighthouse keeper earn extra money?";
+    const cliches = ["Give paid tours", "Rent rooms to tourists"].map((text) => ({ text, model: "gemini-x" }));
+    await writeFile(join(dir, `${cloudKey(prompt, "gemini-embedding-001")}.json`), JSON.stringify({ prompt, cliches, embedder: "gemini-embedding-001", vectors: [[1, 0], [0, 1]] }));
+    const n = asks.length;
+    const c = await baseline(prompt);
+    expect(asks.length).toBe(n);
+    expect(c.embedder).toBe("lexical-trigram");
+    expect(c.cliches).toEqual(cliches);
+    expect(c.vectors[0]!.length).toBe(512);
+  });
+});

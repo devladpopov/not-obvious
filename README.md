@@ -51,7 +51,11 @@ Calibrated on 270 labelled ideas for 20 prompts: 70 hand-written anchors and 200
 }
 ```
 
-One key is enough; two model families give a better cloud. With Claude every model reply is constrained by a JSON schema (structured outputs); Gemini gets the same schema as `responseJsonSchema`. Web checks use Claude web search when `ANTHROPIC_API_KEY` is set (about $0.01 per idea), otherwise Brave Search with `BRAVE_API_KEY`; `NOT_OBVIOUS_WEB=off` disables them. Without a Gemini key, embeddings fall back to an offline lexical mode (works, but less semantic).
+One key is enough; two model families give a better cloud. With Claude every model reply is constrained by a JSON schema (structured outputs); Gemini gets the same schema as `responseJsonSchema`. Web checks use Claude web search when `ANTHROPIC_API_KEY` is set (about $0.01 per idea), otherwise Brave Search with `BRAVE_API_KEY`; `NOT_OBVIOUS_WEB=off` disables them. Embeddings use gemini-embedding-001 when `GEMINI_API_KEY` is set. Without it they run locally: install the optional `@huggingface/transformers` next to the server and a small multilingual model (multilingual-e5-small, 118 MB, downloaded once to `~/.not-obvious/models`) runs on the CPU, no key and no quota. In calibration it ranks ideas as well as Gemini embeddings ([docs/scoring.md](docs/scoring.md#embedders)). With neither, embeddings fall back to an offline lexical mode (works, but much less semantic). `NOT_OBVIOUS_EMBEDDER=gemini|local|lexical` forces one, `NOT_OBVIOUS_LOCAL_MODEL` picks another transformers.js model.
+
+```bash
+npx -y -p not-obvious-mcp -p @huggingface/transformers not-obvious-mcp   # Claude key only, local embeddings
+```
 
 Every tool takes an optional `context`: a few sentences about the person asking, put in front of the prompt ("About me: ..."). Use the same context across tools for one prompt, so they share one cloud.
 
@@ -83,7 +87,8 @@ What does help is context about the person asking. With two sentences about who 
 ## Roadmap
 
 - [x] Web novelty: is the idea already out there (web search, prevalence 0-10 with sources)
-- [ ] More models in the cloud (OpenRouter), local embeddings
+- [x] Local embeddings (transformers.js, no Gemini key needed)
+- [ ] More models in the cloud (OpenRouter)
 - [x] Public leaderboard: which model is the most banal ([docs/leaderboard.md](docs/leaderboard.md))
 - [ ] Calibration set with human originality ratings
 

@@ -1,6 +1,6 @@
 {
   "name": "not-obvious-mcp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "See what every AI would say. Then go somewhere else. MCP server that maps the cliché cloud of typical LLM answers, diverges with SCAMPER/TRIZ/far analogies, and measures originality with a Cliché Score.",
   "license": "MIT",
   "type": "module",
@@ -32,10 +32,19 @@
   "devDependencies": {
     "@types/bun": "^1.4.4",
     "@types/node": "^26.6.5",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "@huggingface/transformers": "^4.3.2"
   },
   "engines": {
     "node": ">=20"
   },
-  "keywords": ["mcp", "model-context-protocol", "creativity", "brainstorming", "originality", "cliche", "scamper", "triz", "llm", "embeddings"]
+  "keywords": ["mcp", "model-context-protocol", "creativity", "brainstorming", "originality", "cliche", "scamper", "triz", "llm", "embeddings"],
+  "peerDependencies": {
+    "@huggingface/transformers": "^4.3.2"
+  },
+  "peerDependenciesMeta": {
+    "@huggingface/transformers": {
+      "optional": true
+    }
+  }
 }
