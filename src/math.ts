@@ -142,3 +142,47 @@ export function spearman(a: number[], b: number[]): number {
   }
   return da && db ? num / Math.sqrt(da * db) : 0;
 }
+
+/**
+ * Average-linkage agglomerative clustering down to k groups (deterministic, O(n^3), fine for clouds of <100).
+ * Returns member indices per cluster, biggest first. Fixed k instead of a similarity threshold:
+ * embedders compress cosine very differently, a threshold tuned for one is wrong for another.
+ */
+export function agglomerate(vs: Vector[], k: number): number[][] {
+  let clusters = vs.map((_, i) => [i]);
+  const target = Math.max(1, Math.min(k, vs.length));
+  const sim = vs.map((a) => vs.map((b) => cosine(a, b)));
+  const link = (a: number[], b: number[]) => {
+    let s = 0;
+    for (const i of a) for (const j of b) s += sim[i]![j]!;
+    return s / (a.length * b.length);
+  };
+  while (clusters.length > target) {
+    let best = -Infinity;
+    let bi = 0;
+    let bj = 1;
+    for (let i = 0; i < clusters.length; i++)
+      for (let j = i + 1; j < clusters.length; j++) {
+        const s = link(clusters[i]!, clusters[j]!);
+        if (s > best) [best, bi, bj] = [s, i, j];
+      }
+    clusters[bi] = [...clusters[bi]!, ...clusters[bj]!].sort((x, y) => x - y);
+    clusters.splice(bj, 1);
+  }
+  return clusters.sort((a, b) => b.length - a.length || a[0]! - b[0]!);
+}
+
+/** Member closest on average to the rest of its cluster: the answer that best stands for the theme. */
+export function medoid(vs: Vector[], members: number[]): number {
+  let best = members[0]!;
+  let bestSum = -Infinity;
+  for (const i of members) {
+    let s = 0;
+    for (const j of members) if (i !== j) s += cosine(vs[i]!, vs[j]!);
+    if (s > bestSum) [bestSum, best] = [s, i];
+  }
+  return best;
+}
+
+/** Default number of themes for a cloud of n answers: ~sqrt(n/2), between 2 and 8. */
+export const defaultThemes = (n: number) => Math.max(2, Math.min(8, Math.round(Math.sqrt(n / 2))));

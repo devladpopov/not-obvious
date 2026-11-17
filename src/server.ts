@@ -2,10 +2,10 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { baseline, diverge, explain, remix, score, withContext } from "./engine.js";
+import { baseline, diverge, explain, map, remix, score, withContext } from "./engine.js";
 import { TECHNIQUES } from "./techniques.js";
 
-const server = new McpServer({ name: "not-obvious", version: "0.3.0" });
+const server = new McpServer({ name: "not-obvious", version: "0.4.0" });
 
 const json = (data: unknown) => ({ content: [{ type: "text" as const, text: JSON.stringify(data, null, 2) }] });
 const fail = (e: unknown) => ({ isError: true, content: [{ type: "text" as const, text: (e as Error).message }] });
@@ -39,6 +39,22 @@ server.registerTool(
       const c = await baseline(withContext(prompt, context), { perModel: per_model, refresh });
       return { prompt: c.prompt, embedder: c.embedder, size: c.cliches.length, cliches: c.cliches };
     }),
+);
+
+server.registerTool(
+  "map",
+  {
+    title: "Map the cliché cloud",
+    description:
+      "The cliché cloud as a few themes: clusters the typical answers by meaning, names each theme and the assumption behind it, and shows how many models land in each (consensus 100 = every AI says this). Use the assumptions with diverge constraint-flip, or to see in one glance what to avoid. Reuses the cached cloud; one fast model call for the labels.",
+    inputSchema: {
+      prompt,
+      context,
+      themes: z.number().int().min(2).max(12).optional().describe("Number of themes (default about sqrt(cloud size / 2), 2-8)."),
+      label: z.boolean().optional().describe("Name themes and their assumptions with a model call (default true). false = representatives only, no model call."),
+    },
+  },
+  ({ prompt, context, themes, label }) => run(() => map(withContext(prompt, context), { themes, label })),
 );
 
 server.registerTool(
@@ -108,6 +124,38 @@ server.registerTool(
     inputSchema: { prompt, context, idea: z.string().min(3) },
   },
   ({ prompt, context, idea }) => run(() => explain(withContext(prompt, context), idea)),
+);
+
+server.registerPrompt(
+  "not-obvious",
+  {
+    title: "Brainstorm away from the cliché",
+    description: "Full Not Obvious workflow for one task: cliché map, divergent ideas, scores and one improved idea.",
+    argsSchema: {
+      task: z.string().describe("The task or question."),
+      about_me: z.string().optional().describe("A few sentences about you (optional)."),
+    },
+  },
+  ({ task, about_me }) => ({
+    messages: [
+      {
+        role: "user" as const,
+        content: {
+          type: "text" as const,
+          text: `Help me with this task without giving me what every AI would say.
+
+Task: ${task}${about_me ? `
+About me: ${about_me}` : ""}
+
+Use the not-obvious tools in this order, passing the same prompt${about_me ? " and context" : ""} to each:
+1. map: show me the themes every AI answers with and the assumptions behind them, in a short table.
+2. diverge with technique "all": keep the surviving ideas, drop the ones that already exist online.
+3. Pick the 3 best ideas (lowest Cliché Score with usefulness 7+), and for the best one call explain and show the rewrite.
+End with the 3 ideas, their Cliché Scores, and one line each on why they are not the obvious answer.`,
+        },
+      },
+    ],
+  }),
 );
 
 await server.connect(new StdioServerTransport());

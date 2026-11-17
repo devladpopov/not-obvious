@@ -71,3 +71,22 @@ describe("spearman", () => {
     expect(spearman([1, 2, 2, 3], [1, 2, 3, 4])).toBeCloseTo(0.949, 2);
   });
 });
+
+describe("clustering", () => {
+  const { agglomerate, medoid, defaultThemes } = require("../src/math.js") as typeof import("../src/math.js");
+  const vs = [[1, 0, 0], [0.95, 0.1, 0], [0.9, 0.2, 0], [0, 1, 0], [0.1, 0.95, 0], [0, 0, 1]];
+  test("agglomerate groups near vectors, biggest cluster first, every index once", () => {
+    expect(agglomerate(vs, 3)).toEqual([[0, 1, 2], [3, 4], [5]]);
+    expect(agglomerate(vs, 1)).toEqual([[0, 1, 2, 3, 4, 5]]);
+    expect(agglomerate(vs, 99).length).toBe(6);
+  });
+  test("medoid picks the most central member", () => {
+    expect(medoid(vs, [0, 1, 2])).toBe(1);
+    expect(medoid(vs, [5])).toBe(5);
+  });
+  test("defaultThemes stays within 2-8", () => {
+    expect(defaultThemes(2)).toBe(2);
+    expect(defaultThemes(40)).toBe(4);
+    expect(defaultThemes(500)).toBe(8);
+  });
+});

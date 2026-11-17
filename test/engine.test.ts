@@ -6,7 +6,7 @@ import { afterAll, beforeAll, describe, expect, test } from "bun:test";
 import { mkdtemp, readdir, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { baseline, diverge, explain, remix, score } from "../src/engine.js";
+import { baseline, diverge, explain, map, remix, score } from "../src/engine.js";
 
 const PROMPT = "Suggest a side business for a software developer";
 // A tight cloud, as real ones are: variations of a few answers, so the lexical embedder can tell far ideas apart.
@@ -42,6 +42,10 @@ function reply(ask: string): unknown {
   if (ask.includes("MECHANISM")) return { items: ideasIn("Ideas:").map((i) => ({ overlap: /SaaS/.test(i) ? 9 : 1, closest: /SaaS/.test(i) ? 1 : 0, why: "test" })) };
   if (ask.includes("Technique:")) return { items: [{ idea: CLOUD[0], move: "none" }, ...FAR.map((idea) => ({ idea, move: "far" }))] };
   if (ask.includes("hybrids")) return { items: [{ idea: FAR[1], from_a: "contracts", from_b: "neutral" }, { idea: CLOUD[0], from_a: "SaaS", from_b: "-" }] };
+  if (ask.includes("Name each theme")) {
+    const n = (ask.match(/^Theme \d+:/gm) ?? []).length;
+    return { items: Array.from({ length: n }, (_, i) => ({ theme: i, label: `theme ${i}`, assumption: `assumption ${i}` })) };
+  }
   if (ask.includes("Explain the score"))
     return { cliched: "a course", different: "nothing", technique: "far-analogy", move: "escape room", rewrite: "A coding escape room kit for libraries" };
   throw new Error(`unexpected prompt: ${ask.slice(0, 80)}`);
@@ -49,7 +53,7 @@ function reply(ask: string): unknown {
 
 beforeAll(async () => {
   dir = await mkdtemp(join(tmpdir(), "not-obvious-test-"));
-  for (const k of Object.keys(process.env)) if (/^(ANTHROPIC|GEMINI|GOOGLE|BRAVE)_/.test(k)) delete process.env[k];
+  for (const k of Object.keys(process.env)) if (/^(ANTHROPIC|GEMINI|GOOGLE|BRAVE|OPENROUTER)_|^NOT_OBVIOUS_OPENAI_/.test(k)) delete process.env[k];
   Object.assign(process.env, {
     GEMINI_API_KEY: "test",
     NOT_OBVIOUS_GEMINI_FAST: "fake-fast",
@@ -125,6 +129,35 @@ describe("engine (fake provider, lexical embeddings)", () => {
     expect(r.hybrids[0]!.escaped).toBe(true);
     expect(r.hybrids.at(-1)!.idea).toBe(CLOUD[0]!);
     expect(r.hybrids.at(-1)!.escaped).toBe(false);
+  });
+
+  test("map clusters the cached cloud into themes, biggest first, with labels from one model call", async () => {
+    const n = asks.length;
+    const m = await map(PROMPT, { themes: 3 });
+    expect(asks.length).toBe(n + 1);
+    expect(m.size).toBe(CLOUD.length);
+    expect(m.themes.length).toBe(3);
+    expect(m.themes.reduce((s, t) => s + t.answers.length, 0)).toBe(CLOUD.length);
+    for (let i = 1; i < m.themes.length; i++) expect(m.themes[i - 1]!.answers.length).toBeGreaterThanOrEqual(m.themes[i]!.answers.length);
+    expect(m.themes[0]!.label).toBe("theme 0");
+    expect(m.themes[0]!.assumption).toBe("assumption 0");
+    expect(m.themes[0]!.answers.map((a) => a.text)).toContain(m.themes[0]!.representative);
+    // One fake model: it is in every theme, so every theme is "what every AI says".
+    expect(m.models).toEqual(["fake-fast"]);
+    expect(m.everyAiSays.length).toBe(3);
+    // The three SaaS answers belong together.
+    const saas = m.themes.find((t) => t.answers.some((a) => a.text === CLOUD[0]))!;
+    expect(saas.answers.map((a) => a.text)).toEqual(expect.arrayContaining([CLOUD[1]!, CLOUD[2]!]));
+  });
+
+  test("map with label: false makes no model calls and names themes by their representative", async () => {
+    const n = asks.length;
+    const m = await map(PROMPT, { label: false });
+    expect(asks.length).toBe(n);
+    for (const t of m.themes) {
+      expect(t.label).toBe(t.representative);
+      expect(t.assumption).toBe("");
+    }
   });
 
   test("explain returns the move and the re-scored rewrite", async () => {

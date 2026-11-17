@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "not-obvious": {
+      "command": "npx",
+      "args": ["-y", "-p", "not-obvious-mcp", "-p", "@huggingface/transformers", "not-obvious-mcp"],
+      "env": {
+        "ANTHROPIC_API_KEY": "...",
+        "OPENROUTER_API_KEY": "...",
+        "NOT_OBVIOUS_OPENROUTER_MODELS": "meta-llama/llama-4-maverick,deepseek/deepseek-chat,mistralai/mistral-medium-3"
+      }
+    }
+  }
+}

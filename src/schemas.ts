@@ -24,3 +24,5 @@ export const ExplainSchema = z.object({
   move: z.string(),
   rewrite: z.string(),
 });
+
+export const ThemesSchema = list(z.object({ theme: z.number(), label: z.string(), assumption: z.string() }));

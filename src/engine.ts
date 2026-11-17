@@ -4,8 +4,8 @@ import { homedir } from "node:os";
 import { join } from "node:path";
 import { embedder, knownEmbedders, type Vector } from "./embed.js";
 import { complete, parseJson, parseList, providers } from "./llm.js";
-import { clicheScore, combineScores, cosine, type ClicheBreakdown } from "./math.js";
-import { AnswersSchema, ExplainSchema, HybridsSchema, IdeasSchema, JudgeSchema, UsefulnessSchema } from "./schemas.js";
+import { agglomerate, clicheScore, combineScores, cosine, defaultThemes, medoid, type ClicheBreakdown } from "./math.js";
+import { AnswersSchema, ExplainSchema, HybridsSchema, IdeasSchema, JudgeSchema, ThemesSchema, UsefulnessSchema } from "./schemas.js";
 import { technique, TECHNIQUES } from "./techniques.js";
 import { webCheck, type WebCheck } from "./web.js";
 
@@ -393,5 +393,76 @@ export async function explain(prompt: string, idea: string) {
     model,
     explanation: { cliched: e.cliched, different: e.different, technique: e.technique, move: e.move },
     rewrite: { idea: e.rewrite, cliche: r!.cliche, delta: r!.cliche - s!.cliche, usefulness: r!.usefulness, web: r!.web },
+  };
+}
+
+export interface Theme {
+  /** Short name of the theme (LLM label, or the representative answer when labelling is off or fails). */
+  label: string;
+  /** The assumption every answer in this theme silently makes, ready for constraint-flip. Empty without labels. */
+  assumption: string;
+  /** The answer that best stands for the theme (medoid). */
+  representative: string;
+  /** Share of the cloud, percent. */
+  share: number;
+  /** Models that gave at least one answer in this theme. */
+  models: string[];
+  /** Share of all models in the cloud that landed here, percent: 100 = every AI says this. */
+  consensus: number;
+  answers: Cliche[];
+}
+
+/**
+ * map: the cliché cloud as a handful of themes. Clusters the cached cloud (no model calls for that),
+ * names each theme and the assumption behind it with one fast model call, and shows which themes
+ * every model hits: those are the answers to steer away from first.
+ */
+export async function map(prompt: string, opts: { themes?: number; label?: boolean } = {}) {
+  const cloud = await baseline(prompt);
+  const k = opts.themes ?? defaultThemes(cloud.cliches.length);
+  const groups = agglomerate(cloud.vectors, k);
+  const allModels = [...new Set(cloud.cliches.map((c) => c.model))];
+  const themes: Theme[] = groups.map((g) => {
+    const models = [...new Set(g.map((i) => cloud.cliches[i]!.model))];
+    const rep = cloud.cliches[medoid(cloud.vectors, g)]!.text;
+    return {
+      label: rep,
+      assumption: "",
+      representative: rep,
+      share: Math.round((g.length / cloud.cliches.length) * 100),
+      models,
+      consensus: Math.round((models.length / allModels.length) * 100),
+      answers: g.map((i) => cloud.cliches[i]!),
+    };
+  });
+  let labelModel: string | undefined;
+  let labelError: string | undefined;
+  if (opts.label !== false) {
+    const list = themes
+      .map((t, i) => `Theme ${i}:\n${t.answers.slice(0, 8).map((a) => `- ${a.text}`).join("\n")}`)
+      .join("\n\n");
+    const ask = `Task: ${prompt}\n\nThese groups of typical AI answers to the task were clustered by meaning.\n\n${list}\n\nName each theme and the assumption behind it. Return JSON {"items": [{"theme": number (the theme index), "label": string (2-6 words), "assumption": string (what every answer in the theme silently takes for granted, max 20 words)}]}, one item per theme.`;
+    try {
+      const r = await complete(ask, { tier: "fast", json: true, schema: ThemesSchema });
+      labelModel = r.model;
+      for (const x of parseList<{ theme: number; label: string; assumption: string }>(r.text)) {
+        const t = themes[Number(x?.theme)];
+        if (t && x.label) [t.label, t.assumption] = [String(x.label), String(x.assumption ?? "")];
+      }
+    } catch (e) {
+      // Labels are a nicety: the clusters are already computed, keep the representatives as names.
+      labelError = (e as Error).message;
+    }
+  }
+  return {
+    prompt: cloud.prompt,
+    embedder: cloud.embedder,
+    size: cloud.cliches.length,
+    models: allModels,
+    ...(labelModel ? { labelModel } : {}),
+    ...(labelError ? { labelError } : {}),
+    themes,
+    /** Themes every model hits: the core of "what every AI would say". */
+    everyAiSays: themes.filter((t) => t.consensus === 100).map((t) => t.label),
   };
 }

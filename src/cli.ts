@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-/** Tiny CLI for demos and debugging: not-obvious <baseline|score|diverge|remix|explain> "prompt" [...] */
-import { baseline, diverge, explain, remix, score, withContext } from "./engine.js";
+/** Tiny CLI for demos and debugging: not-obvious <baseline|map|score|diverge|remix|explain> "prompt" [...] */
+import { baseline, diverge, explain, map, remix, score, withContext } from "./engine.js";
 
 const argv = process.argv.slice(2);
 // --context "about me" anywhere in the arguments is put in front of the prompt.
@@ -11,13 +11,23 @@ const prompt = rawPrompt && withContext(rawPrompt, context);
 
 async function main() {
   if (!cmd || !prompt) {
-    console.log('Usage:\n  not-obvious baseline "prompt"\n  not-obvious score "prompt" "idea" ["idea" ...] [--no-web]\n  not-obvious diverge "prompt" [all|scamper|triz|morphological|far-analogy|constraint-flip]\n  not-obvious remix "prompt" "idea A" "idea B"\n  not-obvious explain "prompt" "idea"\n\nAny command: --context "a few sentences about you" builds the cloud for the prompt with that context.');
+    console.log('Usage:\n  not-obvious baseline "prompt"\n  not-obvious map "prompt" [themes] [--no-label]\n  not-obvious score "prompt" "idea" ["idea" ...] [--no-web]\n  not-obvious diverge "prompt" [all|scamper|triz|morphological|far-analogy|constraint-flip]\n  not-obvious remix "prompt" "idea A" "idea B"\n  not-obvious explain "prompt" "idea"\n\nAny command: --context "a few sentences about you" builds the cloud for the prompt with that context.');
     process.exit(1);
   }
   if (cmd === "baseline") {
     const c = await baseline(prompt, { refresh: rest.includes("--refresh") });
     console.log(`Cliché cloud (${c.cliches.length}, embedder ${c.embedder}):`);
     for (const x of c.cliches) console.log(`  [${x.model}] ${x.text}`);
+  } else if (cmd === "map") {
+    const n = Number(rest.find((x) => /^\d+$/.test(x)));
+    const m = await map(prompt, { themes: Number.isFinite(n) && n > 1 ? n : undefined, label: !rest.includes("--no-label") });
+    console.log(`Cliché map: ${m.size} answers from ${m.models.length} model(s), ${m.themes.length} themes (embedder ${m.embedder})`);
+    for (const t of m.themes) {
+      console.log(`${String(t.share).padStart(3)}%  ${t.label}  [${t.models.length}/${m.models.length} models]`);
+      if (t.assumption) console.log(`       assumes: ${t.assumption}`);
+      console.log(`       e.g. ${t.representative}`);
+    }
+    if (m.labelError) console.log(`  (labels failed: ${m.labelError.slice(0, 120)})`);
   } else if (cmd === "score") {
     const web = !rest.includes("--no-web");
     for (const s of await score(prompt, rest.filter((x) => x !== "--web" && x !== "--no-web"), { web })) {

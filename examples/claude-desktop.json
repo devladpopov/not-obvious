@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "not-obvious": {
+      "command": "npx",
+      "args": ["-y", "not-obvious-mcp"],
+      "env": {
+        "ANTHROPIC_API_KEY": "...",
+        "GEMINI_API_KEY": "..."
+      }
+    }
+  }
+}

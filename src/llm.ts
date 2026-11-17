@@ -159,10 +159,98 @@ export function geminiProvider(): Provider | null {
   };
 }
 
+interface ChatReply {
+  choices?: { message?: { content?: string | null; refusal?: string | null }; finish_reason?: string }[];
+  error?: { message?: string };
+}
+
+/**
+ * One model behind an OpenAI-compatible /chat/completions endpoint (OpenRouter, Ollama, LM Studio, vLLM, ...).
+ * Each model is its own provider, so every model adds its own batch to the cliché cloud.
+ * Structured output goes as response_format json_schema; servers that reject it (400) get a plain JSON request.
+ */
+export function compatProvider(o: { name: string; baseUrl: string; model: string; apiKey?: string; headers?: Record<string, string> }): Provider {
+  const url = `${o.baseUrl.replace(/\/+$/, "")}/chat/completions`;
+  let schemaOk = true;
+  return {
+    name: o.name,
+    model: () => o.model,
+    async complete(prompt, { system, json, schema }) {
+      const call = async (useSchema: boolean) => {
+        const hint = json && !useSchema ? "Reply with valid JSON only, no prose, no code fences." : "";
+        const sys = [system, hint].filter(Boolean).join("\n\n");
+        const body = JSON.stringify({
+          model: o.model,
+          messages: [...(sys ? [{ role: "system", content: sys }] : []), { role: "user", content: prompt }],
+          ...(useSchema && schema
+            ? { response_format: { type: "json_schema", json_schema: { name: "reply", strict: true, schema: z.toJSONSchema(schema) } } }
+            : json
+              ? { response_format: { type: "json_object" } }
+              : {}),
+        });
+        const headers: Record<string, string> = { "content-type": "application/json", ...o.headers };
+        if (o.apiKey) headers.authorization = `Bearer ${o.apiKey}`;
+        return withRetry((signal) => fetch(url, { method: "POST", headers, body, signal }));
+      };
+      let r = await call(schemaOk && !!schema);
+      if (r.status === 400 && schemaOk && schema) {
+        // Model or server without json_schema support: remember and fall back to a JSON hint.
+        schemaOk = false;
+        r = await call(false);
+      }
+      if (!r.ok) throw new Error(`${o.model} ${r.status}: ${(await r.text()).slice(0, 200)}`);
+      const data = (await r.json()) as ChatReply;
+      if (data.error) throw new Error(`${o.model}: ${data.error.message ?? "error"}`);
+      const c = data.choices?.[0];
+      if (c?.message?.refusal) throw new Error(`${o.model} refused: ${c.message.refusal.slice(0, 200)}`);
+      if (c?.finish_reason === "length") throw new Error(`${o.model} reply truncated`);
+      const text = c?.message?.content ?? "";
+      if (!text.trim()) throw new Error(`${o.model}: empty reply`);
+      // Reasoning models served through compat endpoints sometimes leak <think> blocks into content.
+      return text.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+    },
+  };
+}
+
+/**
+ * OpenRouter: OPENROUTER_API_KEY + NOT_OBVIOUS_OPENROUTER_MODELS (comma list of OpenRouter model ids).
+ * Generic endpoint: NOT_OBVIOUS_OPENAI_BASE_URL (e.g. http://localhost:11434/v1 for Ollama)
+ * + NOT_OBVIOUS_OPENAI_MODELS, NOT_OBVIOUS_OPENAI_API_KEY optional (local servers need none).
+ */
+export function compatProviders(): Provider[] {
+  const out: Provider[] = [];
+  const orKey = env("OPENROUTER_API_KEY");
+  if (orKey) {
+    const models = modelList(env("NOT_OBVIOUS_OPENROUTER_MODELS"), DEFAULT_OPENROUTER_MODELS);
+    for (const model of models)
+      out.push(
+        compatProvider({
+          name: `openrouter:${model}`,
+          baseUrl: env("NOT_OBVIOUS_OPENROUTER_BASE_URL") ?? "https://openrouter.ai/api/v1",
+          model,
+          apiKey: orKey,
+          headers: { "HTTP-Referer": "https://github.com/devladpopov/not-obvious", "X-Title": "Not Obvious" },
+        }),
+      );
+  }
+  const base = env("NOT_OBVIOUS_OPENAI_BASE_URL");
+  if (base) {
+    const models = modelList(env("NOT_OBVIOUS_OPENAI_MODELS"), "");
+    if (models.length === 0) throw new Error("NOT_OBVIOUS_OPENAI_BASE_URL is set but NOT_OBVIOUS_OPENAI_MODELS is empty: list at least one model.");
+    for (const model of models) out.push(compatProvider({ name: `compat:${model}`, baseUrl: base, model, apiKey: env("NOT_OBVIOUS_OPENAI_API_KEY") }));
+  }
+  return out;
+}
+
+/** Open-weight families the Claude/Gemini cloud lacks. Override with NOT_OBVIOUS_OPENROUTER_MODELS. */
+export const DEFAULT_OPENROUTER_MODELS = "meta-llama/llama-4-maverick,deepseek/deepseek-chat,mistralai/mistral-medium-3";
+
 export function providers(): Provider[] {
-  const all = [anthropicProvider(), geminiProvider()].filter((p): p is Provider => p !== null);
+  const all = [anthropicProvider(), geminiProvider(), ...compatProviders()].filter((p): p is Provider => p !== null);
   if (all.length === 0) {
-    throw new Error("No LLM provider configured. Set ANTHROPIC_API_KEY and/or GEMINI_API_KEY.");
+    throw new Error(
+      "No LLM provider configured. Set ANTHROPIC_API_KEY, GEMINI_API_KEY or OPENROUTER_API_KEY, or point NOT_OBVIOUS_OPENAI_BASE_URL at a local server (Ollama, LM Studio) with NOT_OBVIOUS_OPENAI_MODELS.",
+    );
   }
   return all;
 }

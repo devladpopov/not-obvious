@@ -14,17 +14,20 @@ LLMs converge. Ask five models for a side business and you get five versions of 
 
 ## When to use it
 
-When the first answer is not enough: naming, positioning, a side project, a talk topic, a campaign, a research angle. Anywhere the obvious answer is the one your competitors, classmates or colleagues already got from the same chatbot. Ask your assistant to run `baseline` first and you see the answers to avoid; `diverge` gives you ideas that are measurably outside them; `score` and `explain` tell you whether your own idea is one of the clichés and how to move it. Pass a few sentences about yourself as `context` (where you live, what you have, what you can't do): our [context experiment](docs/context.md) shows that alone moves answers 12-25 points away from the crowd, and Not Obvious then builds the cloud for the prompt *with* that context and pushes further.
+When the first answer is not enough: naming, positioning, a side project, a talk topic, a campaign, a research angle. Anywhere the obvious answer is the one your competitors, classmates or colleagues already got from the same chatbot. Ask your assistant to run `map` first and you see the answers to avoid, grouped into themes with the assumption behind each; `diverge` gives you ideas that are measurably outside them; `score` and `explain` tell you whether your own idea is one of the clichés and how to move it. Pass a few sentences about yourself as `context` (where you live, what you have, what you can't do): our [context experiment](docs/context.md) shows that alone moves answers 12-25 points away from the crowd, and Not Obvious then builds the cloud for the prompt *with* that context and pushes further.
 
 ## Tools
 
 | Tool | What it does |
 |---|---|
 | `baseline` | Asks every configured model the plain question and returns the cliché cloud (cached per prompt). |
+| `map` | The cloud as a few themes: clusters the answers by meaning, names each theme and the assumption behind it, and shows how many models land in each (`consensus` 100 = every AI says this; `everyAiSays` lists those themes). The assumptions are ready-made input for `constraint-flip`. One fast model call for the labels, `label: false` for none. |
 | `diverge` | Generates ideas away from the cloud with a named technique (`scamper`, `triz`, `morphological`, `far-analogy`, `constraint-flip`) or `all` five in parallel. Keeps only ideas with an embedding Cliché Score below 50 and usefulness 6+; if too few survive, it regenerates with the rejection reasons. Survivors are then searched on the web, their score gets the web part, and ones that already exist as a common product or practice are flagged `existsOnline` and sorted last. Returns the survivors and the closest misses. |
 | `remix` | Crosses idea A and idea B into hybrids that neither parent nor the cloud contains. Scores the parents first, takes at least one component (mechanism, audience, channel, constraint) from each and flags which hybrids escaped the cloud. |
 | `score` | Cliché Score 0-100 for any list of ideas (0 = far from the AI consensus and from what already exists), with its parts: embedding distance, web prevalence 0-10 with sources, the mechanism judge verdict (closest cliché and why), plus a usefulness critic 1-10. `web: false` skips the search and returns the embedding part alone. |
 | `explain` | Why an idea scored the way it did, one concrete move to push it further, and the idea rewritten with that move and re-scored (e.g. "programming course for beginners" 88% -> "coding escape-room kits for libraries and team events" 45%). |
+
+The server also ships an MCP prompt, `not-obvious` (task, optional `about_me`): it runs map, diverge all, picks the three best ideas and explains the best one. In Claude Code it shows up as `/not-obvious:not-obvious`.
 
 ## Cliché Score (v0.3)
 
@@ -51,7 +54,7 @@ Calibrated on 270 labelled ideas for 20 prompts: 70 hand-written anchors and 200
 }
 ```
 
-One key is enough; two model families give a better cloud. With Claude every model reply is constrained by a JSON schema (structured outputs); Gemini gets the same schema as `responseJsonSchema`. Web checks use Claude web search when `ANTHROPIC_API_KEY` is set (about $0.01 per idea), otherwise Brave Search with `BRAVE_API_KEY`; `NOT_OBVIOUS_WEB=off` disables them. Embeddings use gemini-embedding-001 when `GEMINI_API_KEY` is set. Without it they run locally: install the optional `@huggingface/transformers` next to the server and a small multilingual model (multilingual-e5-small, 118 MB, downloaded once to `~/.not-obvious/models`) runs on the CPU, no key and no quota. In calibration it ranks ideas as well as Gemini embeddings ([docs/scoring.md](docs/scoring.md#embedders)). With neither, embeddings fall back to an offline lexical mode (works, but much less semantic). `NOT_OBVIOUS_EMBEDDER=gemini|local|lexical` forces one, `NOT_OBVIOUS_LOCAL_MODEL` picks another transformers.js model.
+One key is enough; two model families give a better cloud. More families through OpenRouter (`OPENROUTER_API_KEY`, `NOT_OBVIOUS_OPENROUTER_MODELS`), or no keys at all with a local Ollama or LM Studio server (`NOT_OBVIOUS_OPENAI_BASE_URL`, `NOT_OBVIOUS_OPENAI_MODELS`): [docs/providers.md](docs/providers.md), ready configs in [examples/](examples/). With Claude every model reply is constrained by a JSON schema (structured outputs); Gemini gets the same schema as `responseJsonSchema`. Web checks use Claude web search when `ANTHROPIC_API_KEY` is set (about $0.01 per idea), otherwise Brave Search with `BRAVE_API_KEY`; `NOT_OBVIOUS_WEB=off` disables them. Embeddings use gemini-embedding-001 when `GEMINI_API_KEY` is set. Without it they run locally: install the optional `@huggingface/transformers` next to the server and a small multilingual model (multilingual-e5-small, 118 MB, downloaded once to `~/.not-obvious/models`) runs on the CPU, no key and no quota. In calibration it ranks ideas as well as Gemini embeddings ([docs/scoring.md](docs/scoring.md#embedders)). With neither, embeddings fall back to an offline lexical mode (works, but much less semantic). `NOT_OBVIOUS_EMBEDDER=gemini|local|lexical` forces one, `NOT_OBVIOUS_LOCAL_MODEL` picks another transformers.js model.
 
 ```bash
 npx -y -p not-obvious-mcp -p @huggingface/transformers not-obvious-mcp   # Claude key only, local embeddings
@@ -63,6 +66,7 @@ CLI for quick checks:
 
 ```bash
 npx -p not-obvious-mcp not-obvious baseline "Suggest a side business for a software developer"
+npx -p not-obvious-mcp not-obvious map "Suggest a side business for a software developer"
 npx -p not-obvious-mcp not-obvious score "Suggest a side business for a software developer" "Build a SaaS for small businesses"
 npx -p not-obvious-mcp not-obvious diverge "Suggest a side business for a software developer" all
 npx -p not-obvious-mcp not-obvious explain "Suggest a side business for a software developer" "Write a programming course for beginners"
@@ -88,7 +92,9 @@ What does help is context about the person asking. With two sentences about who 
 
 - [x] Web novelty: is the idea already out there (web search, prevalence 0-10 with sources)
 - [x] Local embeddings (transformers.js, no Gemini key needed)
-- [ ] More models in the cloud (OpenRouter)
+- [x] More models in the cloud: OpenRouter and any OpenAI-compatible server, incl. fully local Ollama ([docs/providers.md](docs/providers.md))
+- [x] Cliché map: themes of the cloud and the assumptions behind them (`map`)
+- [ ] Leaderboard with open-weight models (Llama, DeepSeek, Qwen, Mistral) via OpenRouter
 - [x] Public leaderboard: which model is the most banal ([docs/leaderboard.md](docs/leaderboard.md))
 - [ ] Calibration set with human originality ratings
 

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "not-obvious": {
+      "command": "npx",
+      "args": ["-y", "-p", "not-obvious-mcp", "-p", "@huggingface/transformers", "not-obvious-mcp"],
+      "env": {
+        "NOT_OBVIOUS_OPENAI_BASE_URL": "http://localhost:11434/v1",
+        "NOT_OBVIOUS_OPENAI_MODELS": "llama3.3,qwen3",
+        "NOT_OBVIOUS_WEB": "off"
+      }
+    }
+  }
+}
