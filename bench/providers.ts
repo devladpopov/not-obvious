@@ -1,7 +1,7 @@
 /** Plain-text callers for the bench scripts (leaderboard.ts, context.ts): one user turn in, raw text out. */
 import Anthropic from "@anthropic-ai/sdk";
 import { randomUUID } from "node:crypto";
-import { withRetry } from "../src/llm.js";
+import { compatProvider, withRetry } from "../src/llm.js";
 
 export type Call = (ask: string) => Promise<string>;
 export interface Model { id: string; vendor: string; call: Call }
@@ -27,6 +27,30 @@ export const gemini = (model: string): Call => async (ask) => {
   }
   const d = (await r.json()) as { candidates?: { content?: { parts?: { text?: string; thought?: boolean }[] } }[] };
   return d.candidates?.[0]?.content?.parts?.filter((p) => !p.thought).map((p) => p.text ?? "").join("") ?? "";
+};
+// Any OpenAI-compatible /chat/completions endpoint (OpenRouter, Ollama, Gemini's OpenAI endpoint for Gemma), plain text.
+export const compat = (baseUrl: string, model: string, apiKey?: string): Call => {
+  const p = compatProvider({ name: model, baseUrl, model, apiKey });
+  return (ask) => p.complete(ask, { tier: "fast" });
+};
+// A CLI that reads the prompt on stdin and prints the reply (e.g. "claude -p --model claude-opus-5-5").
+// At most LB_CLI_CONCURRENCY (default 2) at a time: CLI sessions are heavy and share one subscription limit.
+// On Windows a shell script needs its interpreter in front: "bash path/to/script.sh --model opus".
+let cliRunning = 0;
+const cliWaiting: (() => void)[] = [];
+export const claudeCli = (cmd: string): Call => async (ask) => {
+  const max = Number(env("LB_CLI_CONCURRENCY") ?? 2);
+  if (cliRunning >= max) await new Promise<void>((res) => cliWaiting.push(res));
+  cliRunning++;
+  try {
+    const proc = Bun.spawn(cmd.split(" ").filter(Boolean), { stdin: new Blob([ask]), stdout: "pipe", stderr: "pipe" });
+    const [out, err, code] = await Promise.all([new Response(proc.stdout).text(), new Response(proc.stderr).text(), proc.exited]);
+    if (code !== 0) throw new Error(`${cmd} exited ${code}: ${err.slice(0, 200)}`);
+    return out;
+  } finally {
+    cliRunning--;
+    cliWaiting.shift()?.();
+  }
 };
 // GigaChat (Sber): OAuth token for 30 min; Russian CA, hence TLS verification off for these two hosts only.
 let giga: { token: string; until: number } | undefined;

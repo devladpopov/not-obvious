@@ -75,16 +75,17 @@ npx -p not-obvious-mcp not-obvious diverge "Suggest a side business" all --conte
 
 ## Which model is the most banal?
 
-We asked 11 models from Anthropic, Google and Sber the same 30 open prompts (5 answers each) and scored every model against the answers of the other vendors. Full table, method and caveats: [docs/leaderboard.md](docs/leaderboard.md).
+We asked 13 models from Anthropic, Google (including open-weight Gemma 4) and Sber the same 30 open prompts (5 answers each) and scored every model against the answers of the other vendors. Full table, method and caveats: [docs/leaderboard.md](docs/leaderboard.md).
 
 | model | banality, 0-100 | ideas another vendor also gave |
 |---|---|---|
-| claude-haiku-4-5 | 93.5 | 70% |
-| gemini-3.8-flash | 93.2 | 73% |
-| claude-opus-5-5 | 91.8 | 76% |
-| GigaChat-2 | 86.0 | 55% |
+| claude-haiku-4-5 | 93.4 | 76% |
+| gemini-3.8-flash | 93.2 | 71% |
+| claude-opus-5-5 | 91.7 | 79% |
+| gemma-4-31b-it (open weights) | 90.8 | 76% |
+| GigaChat-2 | 86.7 | 55% |
 
-They all say the same thing: 81-92% of each model's answers are practically an answer some other vendor gave, and the intervals overlap. Asked to name a black cat, 9 of 11 models say Midnight. Bigger and newer models are not less banal.
+They all say the same thing: 82-92% of each model's answers are practically an answer some other vendor gave, and the intervals overlap. Asked to name a black cat, 11 of 13 models say Midnight. Bigger and newer models are not less banal, and neither are open-weight ones.
 
 What does help is context about the person asking. With two sentences about who they are, banality drops by 12-25 points for every model we tried. But give the same person to three models and they agree with each other again (80-91): the crowd moves to a new spot instead of disappearing. Details: [docs/context.md](docs/context.md).
 
@@ -94,7 +95,8 @@ What does help is context about the person asking. With two sentences about who 
 - [x] Local embeddings (transformers.js, no Gemini key needed)
 - [x] More models in the cloud: OpenRouter and any OpenAI-compatible server, incl. fully local Ollama ([docs/providers.md](docs/providers.md))
 - [x] Cliché map: themes of the cloud and the assumptions behind them (`map`)
-- [ ] Leaderboard with open-weight models (Llama, DeepSeek, Qwen, Mistral) via OpenRouter
+- [x] Open-weight models on the leaderboard: Gemma 4 (31b, 26b-a4b)
+- [ ] Llama, DeepSeek, Qwen, Mistral on the leaderboard via OpenRouter
 - [x] Public leaderboard: which model is the most banal ([docs/leaderboard.md](docs/leaderboard.md))
 - [ ] Calibration set with human originality ratings
 

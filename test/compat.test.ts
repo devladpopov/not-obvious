@@ -1,7 +1,7 @@
 /** OpenAI-compatible providers (OpenRouter, Ollama, LM Studio) against a fake /chat/completions endpoint. */
 import { afterEach, describe, expect, test } from "bun:test";
 import { AnswersSchema } from "../src/schemas.js";
-import { compatProvider, compatProviders, DEFAULT_OPENROUTER_MODELS, providers } from "../src/llm.js";
+import { compatProvider, compatProviders, DEFAULT_OPENROUTER_MODELS, providers, stripThinking } from "../src/llm.js";
 
 const realFetch = globalThis.fetch;
 const saved = { ...process.env };
@@ -65,6 +65,12 @@ describe("compatProvider", () => {
     fake(() => ok('<think>\nlet me think\n</think>\n{"items": ["x"]}'));
     const text = await compatProvider({ name: "t", baseUrl: "http://x/v1", model: "m" }).complete("hi", { tier: "fast" });
     expect(text).toBe('{"items": ["x"]}');
+  });
+
+  test("strips Gemma <thought> drafts, unclosed blocks too", () => {
+    expect(stripThinking("<thought>\n* Draft 1: x (20 words) - Good.\n</thought>1. Loyalty cards\n2. Events")).toBe("1. Loyalty cards\n2. Events");
+    expect(stripThinking("answer <think>a</think> and <thought>b")).toBe("answer  and");
+    expect(stripThinking("plain")).toBe("plain");
   });
 
   test("errors: HTTP status, truncation, refusal, empty reply", async () => {

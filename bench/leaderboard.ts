@@ -18,7 +18,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { embedCached } from "../src/engine.js";
 import { parseJson, withRetry } from "../src/llm.js";
 import { clicheScore, cosine, spearman } from "../src/math.js";
-import { anthropic, ci, claude, env, gemini, gigachat, parseAnswers, rng, type Model } from "./providers.js";
+import { anthropic, ci, claude, claudeCli, compat, env, gemini, gigachat, parseAnswers, rng, type Model } from "./providers.js";
 import { z } from "zod";
 
 const N = 5;
@@ -42,10 +42,23 @@ const ASK = (prompt: string) => `${prompt}\n\nGive ${N} distinct answers as a nu
 
 // LB_SKIP="model,model": leave models out of this run (e.g. while a free-tier quota refills).
 const SKIP = new Set((env("LB_SKIP") ?? "").split(",").map((x) => x.trim()).filter(Boolean));
+// Every model stays on the board: answers are cached, a missing key only matters for prompts not answered yet.
+const needs = (key: string, call: Model["call"]): Model["call"] => (ask) => (env(key) ? call(ask) : Promise.reject(new Error(`${key} not set`)));
+const GEMINI_COMPAT = "https://generativelanguage.googleapis.com/v1beta/openai";
 const MODELS: Model[] = [
-  ...(anthropic ? ["claude-fable-5-1", "claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5", "claude-haiku-4-5"].map((id) => ({ id, vendor: "Anthropic", call: claude(id) })) : []),
-  ...(env("GEMINI_API_KEY") ? ["gemini-3.8-flash", "gemini-3.6-flash", "gemini-3.5-flash-lite"].map((id) => ({ id, vendor: "Google", call: gemini(id) })) : []),
-  ...(env("GIGACHAT_AUTH_KEY") ? ["GigaChat-2-Max", "GigaChat-2-Pro", "GigaChat-2"].map((id) => ({ id, vendor: "Sber", call: gigachat(id) })) : []),
+  ...["claude-fable-5-1", "claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5", "claude-haiku-4-5"].map((id) => ({ id, vendor: "Anthropic", call: needs("ANTHROPIC_API_KEY", (a) => claude(id)(a)) })),
+  ...["gemini-3.8-flash", "gemini-3.6-flash", "gemini-3.5-flash-lite"].map((id) => ({ id, vendor: "Google", call: needs("GEMINI_API_KEY", gemini(id)) })),
+  // Open-weight Gemma through the OpenAI-compatible endpoint (src/llm.ts compatProvider), same free key.
+  // Vendor Google: Gemma is built from Gemini research, so it is not scored against its siblings.
+  ...["gemma-4-31b-it", "gemma-4-26b-a4b-it"].map((id) => ({ id, vendor: "Google", call: needs("GEMINI_API_KEY", (a) => compat(GEMINI_COMPAT, id, env("GEMINI_API_KEY"))(a)) })),
+  ...["GigaChat-2-Max", "GigaChat-2-Pro", "GigaChat-2"].map((id) => ({ id, vendor: "Sber", call: needs("GIGACHAT_AUTH_KEY", gigachat(id)) })),
+  // Any OpenAI-compatible server: LB_COMPAT_URL + LB_COMPAT_MODELS ("id=Vendor,id=Vendor"), LB_COMPAT_KEY optional.
+  ...(env("LB_COMPAT_URL")
+    ? (env("LB_COMPAT_MODELS") ?? "").split(",").map((s) => s.trim()).filter(Boolean).map((s) => {
+        const [id, vendor] = s.split("=");
+        return { id: id!, vendor: vendor ?? id!.split("/")[0]!, call: compat(env("LB_COMPAT_URL")!, id!, env("LB_COMPAT_KEY")) };
+      })
+    : []),
 ].filter((m) => !SKIP.has(m.id));
 
 /** clusters[judge][prompt] = groups of answer ids ("model#i"), one group per idea. */
@@ -114,7 +127,10 @@ const board = ready.length ? MODELS.map((m) => {
 const ClustersSchema = z.object({ items: z.array(z.object({ idea: z.string(), members: z.array(z.string()) })) });
 type Judge = { id: string; call: (ask: string) => Promise<string> };
 const JUDGES: Judge[] = [
-  ...(anthropic ? [{ id: "claude-opus-5-5", call: async (ask: string) => {
+  // LB_CLAUDE_CMD (e.g. "claude -p --model claude-opus-5-5"): judge through a CLI instead of the API; JSON is parsed leniently.
+  ...(env("LB_CLAUDE_CMD")
+    ? [{ id: "claude-opus-5-5", call: (ask: string) => claudeCli(env("LB_CLAUDE_CMD")!)(`${ask}\n\nReply with the JSON only, no prose, no code fences.`) }]
+    : anthropic ? [{ id: "claude-opus-5-5", call: async (ask: string) => {
     const r = await anthropic!.messages.create({ model: "claude-opus-5-5", max_tokens: 8000, output_config: { format: zodOutputFormat(ClustersSchema) }, messages: [{ role: "user", content: ask }] });
     return r.content.flatMap((b) => (b.type === "text" ? [b.text] : [])).join("");
   } }] : []),

@@ -165,6 +165,15 @@ interface ChatReply {
 }
 
 /**
+ * Reasoning models served through compat endpoints leak their drafts into content:
+ * DeepSeek/Qwen as <think>...</think>, Gemma 4 on Gemini's OpenAI endpoint as <thought>...</thought>.
+ * An unclosed block (reply cut mid-thought) leaves nothing usable, so it is dropped to the end.
+ */
+export function stripThinking(text: string): string {
+  return text.replace(/<(think|thought)>[\s\S]*?(<\/\1>|$)/g, "").trim();
+}
+
+/**
  * One model behind an OpenAI-compatible /chat/completions endpoint (OpenRouter, Ollama, LM Studio, vLLM, ...).
  * Each model is its own provider, so every model adds its own batch to the cliché cloud.
  * Structured output goes as response_format json_schema; servers that reject it (400) get a plain JSON request.
@@ -206,8 +215,7 @@ export function compatProvider(o: { name: string; baseUrl: string; model: string
       if (c?.finish_reason === "length") throw new Error(`${o.model} reply truncated`);
       const text = c?.message?.content ?? "";
       if (!text.trim()) throw new Error(`${o.model}: empty reply`);
-      // Reasoning models served through compat endpoints sometimes leak <think> blocks into content.
-      return text.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+      return stripThinking(text);
     },
   };
 }
