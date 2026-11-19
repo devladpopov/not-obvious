@@ -93,6 +93,30 @@ export function clicheScore(idea: Vector, cloud: Vector[], params: Partial<Score
  */
 export const JUDGE_WEIGHT = 0;
 
+/**
+ * Judge weight for prompts in a non-Latin script (Cyrillic, CJK, Arabic...). On the Russian copy of the calibration
+ * set the judge alone beats every blend (61% / 79% / 0.55 against 50% / 70% / 0.37 for embeddings only, leave-one-prompt-out
+ * picks j = 1), because multilingual embeddings are much weaker there. docs/scoring.md#language.
+ */
+export const JUDGE_WEIGHT_NON_LATIN = 1;
+
+/**
+ * True when most words in the text are outside the Latin script (Cyrillic, Greek, CJK, Arabic, Devanagari...).
+ * Counted by words, not letters, so a Russian prompt with a few long English terms ("MVP на TypeScript") stays Russian.
+ * A run of CJK characters counts as one word.
+ */
+export function isNonLatin(text: string): boolean {
+  const words = text.match(/\p{L}+/gu) ?? [];
+  if (!words.length) return false;
+  const latin = words.filter((w) => /\p{Script=Latin}/u.test(w)).length;
+  return latin / words.length < 0.5;
+}
+
+/** Judge weight to use for a prompt: JUDGE_WEIGHT for Latin-script (English-calibrated) text, JUDGE_WEIGHT_NON_LATIN otherwise. */
+export function judgeWeightFor(text: string): number {
+  return isNonLatin(text) ? JUDGE_WEIGHT_NON_LATIN : JUDGE_WEIGHT;
+}
+
 /** Weight of web prevalence in the final score, when a web check ran (pooled calibration, docs/scoring.md). */
 export const WEB_WEIGHT = 0.4;
 

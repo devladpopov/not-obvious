@@ -125,6 +125,33 @@ const cv = {
   embeddingJudgeWeb: crossValidate(() => true),
 };
 console.error("cross-validation:", JSON.stringify(Object.fromEntries(Object.entries(cv).map(([k, v]) => [k, { band: v.bandAccuracy.toFixed(3), pair: v.pairOrder.toFixed(3), rho: v.spearman?.toFixed(3) }]))));
+/**
+ * Judge weight sweep at the default spread and nearest weight, web off (what `score` gives with web: false,
+ * and what non-English prompts were calibrated with). Plus leave-one-prompt-out over the judge weight alone:
+ * the only free parameter, so it says honestly whether a language needs its own weight (src/math.ts judgeWeightFor).
+ */
+const JUDGE_SWEEP = [0, 0.25, 0.4, 0.5, 0.6, 0.75, 1];
+const judgeSweep = JUDGE_SWEEP.map((jw) => (({ detail, ...g }) => g)(evaluate(DEFAULT_PARAMS, jw)));
+const judgeCv = (() => {
+  const sum = { hits: 0, total: 0, pairs: 0, ordered: 0 };
+  const rhos: number[] = [];
+  const picks: number[] = [];
+  for (const held of new Set(rows.map((r) => r.prompt))) {
+    const isHeld = (ri: number) => rows[ri]!.prompt === held;
+    let top = 0, topV = -1;
+    for (const jw of JUDGE_SWEEP) {
+      const e = evaluate(DEFAULT_PARAMS, jw, "checked", 0, (ri) => !isHeld(ri));
+      if (e.bandAccuracy + e.pairOrder > topV) (topV = e.bandAccuracy + e.pairOrder), (top = jw);
+    }
+    const e = evaluate(DEFAULT_PARAMS, top, "checked", 0, isHeld);
+    for (const k of Object.keys(sum) as (keyof typeof sum)[]) sum[k] += e.counts[k];
+    if (e.spearman !== undefined) rhos.push(e.spearman);
+    picks.push(top);
+  }
+  return { bandAccuracy: sum.hits / sum.total, pairOrder: sum.ordered / sum.pairs, spearman: rhos.length ? rhos.reduce((s, x) => s + x, 0) / rhos.length : undefined, picks };
+})();
+console.error("judge sweep:", judgeSweep.map((g) => `j=${g.params.judgeWeight}: ${(g.bandAccuracy * 100).toFixed(0)}/${(g.pairOrder * 100).toFixed(0)}/${g.spearman?.toFixed(2)}`).join("  "));
+console.error("judge-only CV:", JSON.stringify({ band: judgeCv.bandAccuracy.toFixed(3), pair: judgeCv.pairOrder.toFixed(3), rho: judgeCv.spearman?.toFixed(3), picks: judgeCv.picks.join(",") }));
 const base = evaluate(DEFAULT_PARAMS);
 const current = evaluate(DEFAULT_PARAMS, JUDGE_WEIGHT, "checked", WEB_WEIGHT);
 // Web prevalence on top of the current embedding + judge blend, and alone.
@@ -139,7 +166,7 @@ const original = !hasRelabel ? [] : [evaluate(DEFAULT_PARAMS, 0, "original"), ev
 await writeFile(new URL(`./calibration${suffix}.json`, import.meta.url), JSON.stringify({
   date: new Date().toISOString(), embedder: emb.name,
   clouds: rows.map((r) => ({ prompt: r.prompt, size: r.cloudSize, models: r.models })),
-  crossValidation: cv,
+  crossValidation: cv, judgeSweep, judgeCv,
   web: { mode: webMode(), coverage: webCoverage, sweep: webSweep.map(({ detail, ...g }) => g), webOnly: (({ detail, ...g }) => g)(webOnly) },
   embeddingOnly: base, current, judgeOnly, originalLabels: original.map(({ detail, ...g }) => g), best: { ...best }, bestNoWeb: (({ detail, ...g }) => g)(bestNoWeb), top10: grid.slice(0, 10).map(({ detail, ...g }) => g),
 }, null, 2));
@@ -161,6 +188,9 @@ const md = [
   ``, `Leave-one-prompt-out cross-validation (parameters picked on the other prompts, scored on the held-out one):`, ``,
   `| components | band accuracy | pair order | rho |`, `|---|---|---|---|`,
   ...([["embedding", cv.embeddingOnly], ["embedding + judge", cv.embeddingJudge], ["embedding + judge + web", cv.embeddingJudgeWeb]] as const).map(([n, c]) => `| ${n} | ${pct(c.bandAccuracy)} | ${pct(c.pairOrder)} | ${c.spearman?.toFixed(2) ?? "-"} |`),
+  ``, `Judge weight at the default spread and nearest weight, web off (band accuracy / pair order / rho):`, ``,
+  `| ${JUDGE_SWEEP.map((j) => `j=${j}`).join(" | ")} | j picked by leave-one-prompt-out |`, `|${JUDGE_SWEEP.map(() => "---|").join("")}---|`,
+  `| ${judgeSweep.map((g) => `${pct(g.bandAccuracy)} / ${pct(g.pairOrder)} / ${g.spearman?.toFixed(2) ?? "-"}`).join(" | ")} | ${pct(judgeCv.bandAccuracy)} / ${pct(judgeCv.pairOrder)} / ${judgeCv.spearman?.toFixed(2) ?? "-"} (median j ${[...judgeCv.picks].sort((a, b) => a - b)[Math.floor(judgeCv.picks.length / 2)]}) |`,
   ``, `## Per prompt (current default)`, ``,
   `| prompt | density | cliché | mid | far |`, `|---|---|---|---|---|`,
   ...current.detail.map((d) => `| ${d.prompt} | ${d.density?.toFixed(3)} | ${BANDS.map((b) => d.scored.filter((s) => s.band === b).map((s) => s.cliche).join(" / ")).slice(0, 3).join(" | ")} |`),

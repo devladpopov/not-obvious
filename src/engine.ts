@@ -4,7 +4,7 @@ import { homedir } from "node:os";
 import { join } from "node:path";
 import { embedder, knownEmbedders, type Vector } from "./embed.js";
 import { complete, parseJson, parseList, providers } from "./llm.js";
-import { agglomerate, clicheScore, combineScores, cosine, defaultThemes, medoid, type ClicheBreakdown } from "./math.js";
+import { agglomerate, clicheScore, combineScores, cosine, defaultThemes, judgeWeightFor, medoid, type ClicheBreakdown } from "./math.js";
 import { AnswersSchema, ExplainSchema, HybridsSchema, IdeasSchema, JudgeSchema, ThemesSchema, UsefulnessSchema } from "./schemas.js";
 import { technique, TECHNIQUES } from "./techniques.js";
 import { webCheck, type WebCheck } from "./web.js";
@@ -217,13 +217,15 @@ export async function score(prompt: string, ideas: string[], opts: { critic?: bo
     opts.judge === false ? [] : judgeMechanism(prompt, ideas, cloud).catch(() => []),
     opts.web === false ? [] : webCheck(prompt, ideas, cacheDir()).catch(() => []),
   ]);
+  // Non-Latin prompts lean on the judge: embeddings are calibrated on English and much weaker elsewhere.
+  const jw = judgeWeightFor(prompt);
   return ideas.map((idea, i) => {
     const b = clicheScore(vecs[i]!, cloud.vectors);
     const j = verdicts[i];
     const nearest = j && j.closest >= 1 && j.closest <= cloud.cliches.length ? j.closest - 1 : b.nearestIndex;
     return {
       idea,
-      cliche: combineScores(b.cliche, j?.overlap, undefined, web[i]?.prevalence),
+      cliche: combineScores(b.cliche, j?.overlap, jw, web[i]?.prevalence),
       embedding: b.cliche,
       nearest: cloud.cliches[nearest]!.text,
       breakdown: b,
@@ -238,7 +240,7 @@ export async function score(prompt: string, ideas: string[], opts: { critic?: bo
 async function withWeb<T extends Scored>(prompt: string, items: T[]): Promise<T[]> {
   if (!items.length) return items;
   const web = await webCheck(prompt, items.map((s) => s.idea), cacheDir()).catch(() => []);
-  return items.map((s, i) => ({ ...s, web: web[i], cliche: combineScores(s.embedding, s.judge?.overlap, undefined, web[i]?.prevalence) }));
+  return items.map((s, i) => ({ ...s, web: web[i], cliche: combineScores(s.embedding, s.judge?.overlap, judgeWeightFor(prompt), web[i]?.prevalence) }));
 }
 
 function cloudBrief(cloud: Cloud, max = 30) {

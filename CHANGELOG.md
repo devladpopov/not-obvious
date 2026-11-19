@@ -4,7 +4,8 @@
 
 - `stripThinking`: the OpenAI-compatible provider drops `<think>` and `<thought>` blocks; Gemma 4 on Gemini's OpenAI endpoint puts its reasoning drafts into the reply.
 - Leaderboard: 13 models, open-weight Gemma 4 31b and 26b-a4b added through the compat provider; any OpenAI-compatible server via `LB_COMPAT_URL` / `LB_COMPAT_MODELS`; Claude judge through a CLI via `LB_CLAUDE_CMD`.
-- Tests: 56.
+- Judge weight by script: `judgeWeightFor(prompt)` gives the mechanism judge weight 1 for prompts written mostly outside the Latin script (Cyrillic, CJK, Arabic...), 0 otherwise. On the Russian calibration set the judge alone scores 61% / 79% / 0.55 against 50% / 70% / 0.37 for embeddings, in English the difference is noise (docs/scoring.md#language). `bench/calibrate.ts` sweeps the judge weight and picks it by leave-one-prompt-out CV.
+- Tests: 60.
 
 ## 0.4.0 (2026-11-17, staged on npm, awaiting approval)
 

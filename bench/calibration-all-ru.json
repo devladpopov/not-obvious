@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-06T15:04:41.303Z",
+  "date": "2026-11-17T23:19:52.654Z",
   "embedder": "gemini-embedding-001",
   "clouds": [
     {
@@ -326,8 +326,198 @@
       ]
     }
   },
+  "judgeSweep": [
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 0,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 134,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 529.5
+      },
+      "spearman": 0.36575407466491433,
+      "bandAccuracy": 0.49814126394052044,
+      "pairOrder": 0.703187250996016,
+      "means": {
+        "cliche": 74,
+        "mid": 57,
+        "far": 35
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 0.25,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 136,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 575.5
+      },
+      "spearman": 0.4700474901851125,
+      "bandAccuracy": 0.5055762081784386,
+      "pairOrder": 0.7642762284196547,
+      "means": {
+        "cliche": 75,
+        "mid": 56,
+        "far": 34
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 0.4,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 144,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 578.5
+      },
+      "spearman": 0.48081368492000676,
+      "bandAccuracy": 0.5353159851301115,
+      "pairOrder": 0.7682602921646746,
+      "means": {
+        "cliche": 75,
+        "mid": 55,
+        "far": 33
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 0.5,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 150,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 585
+      },
+      "spearman": 0.4906514342292335,
+      "bandAccuracy": 0.5576208178438662,
+      "pairOrder": 0.7768924302788844,
+      "means": {
+        "cliche": 75,
+        "mid": 55,
+        "far": 33
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 0.6,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 149,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 589
+      },
+      "spearman": 0.5038665060499057,
+      "bandAccuracy": 0.5539033457249071,
+      "pairOrder": 0.7822045152722443,
+      "means": {
+        "cliche": 75,
+        "mid": 55,
+        "far": 32
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 0.75,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 152,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 593
+      },
+      "spearman": 0.5137597017422896,
+      "bandAccuracy": 0.5650557620817844,
+      "pairOrder": 0.7875166002656042,
+      "means": {
+        "cliche": 75,
+        "mid": 54,
+        "far": 32
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 1,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 165,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 594
+      },
+      "spearman": 0.5498084549517591,
+      "bandAccuracy": 0.6133828996282528,
+      "pairOrder": 0.7888446215139442,
+      "means": {
+        "cliche": 76,
+        "mid": 53,
+        "far": 31
+      }
+    }
+  ],
+  "judgeCv": {
+    "bandAccuracy": 0.6133828996282528,
+    "pairOrder": 0.7888446215139442,
+    "spearman": 0.5498084549517591,
+    "picks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
   "web": {
-    "mode": "off",
+    "mode": "claude",
     "coverage": 0,
     "sweep": [
       {

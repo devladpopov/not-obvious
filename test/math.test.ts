@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { lexicalEmbedder } from "../src/embed.js";
-import { clicheScore, combineScores, cosine, spearman } from "../src/math.js";
+import { clicheScore, combineScores, cosine, isNonLatin, JUDGE_WEIGHT, judgeWeightFor, spearman } from "../src/math.js";
 
 describe("cosine", () => {
   test("identical and orthogonal", () => {
@@ -88,5 +88,26 @@ describe("clustering", () => {
     expect(defaultThemes(2)).toBe(2);
     expect(defaultThemes(40)).toBe(4);
     expect(defaultThemes(500)).toBe(8);
+  });
+});
+
+describe("judgeWeightFor", () => {
+  test("Latin-script prompts keep the English-calibrated weight", () => {
+    expect(judgeWeightFor("How can a small coffee shop attract more customers?")).toBe(JUDGE_WEIGHT);
+    expect(judgeWeightFor("¿Cómo puede una cafetería atraer más clientes?")).toBe(JUDGE_WEIGHT);
+    expect(judgeWeightFor("")).toBe(JUDGE_WEIGHT);
+    expect(judgeWeightFor("123 !!!")).toBe(JUDGE_WEIGHT);
+  });
+  test("non-Latin prompts use the judge only", () => {
+    expect(judgeWeightFor("Как небольшой кофейне привлечь больше клиентов?")).toBe(1);
+    expect(judgeWeightFor("如何让小咖啡店吸引更多顾客")).toBe(1);
+    expect(judgeWeightFor("Идеи для MVP на TypeScript и Bun")).toBe(1);
+  });
+  test("mixed text goes by the majority of letters", () => {
+    expect(isNonLatin("Suggest a podcast idea, тема история")).toBe(false);
+    expect(isNonLatin("Предложи идею подкаста про history")).toBe(true);
+  });
+  test("with j = 1 the score follows the judge", () => {
+    expect(combineScores(20, 9, judgeWeightFor("Идея для кофейни"))).toBe(90);
   });
 });

@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-31T07:28:26.254Z",
+  "date": "2026-11-17T23:17:43.801Z",
   "embedder": "gemini-embedding-001",
   "clouds": [
     {
@@ -325,6 +325,196 @@
         "k=0.4 w=1 j=0 web=0.4"
       ]
     }
+  },
+  "judgeSweep": [
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 0,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 146,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 590.5
+      },
+      "spearman": 0.598932129429801,
+      "bandAccuracy": 0.5427509293680297,
+      "pairOrder": 0.7841965471447543,
+      "means": {
+        "cliche": 84,
+        "mid": 60,
+        "far": 39
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 0.25,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 149,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 602
+      },
+      "spearman": 0.6019244654587101,
+      "bandAccuracy": 0.5539033457249071,
+      "pairOrder": 0.799468791500664,
+      "means": {
+        "cliche": 82,
+        "mid": 61,
+        "far": 40
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 0.4,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 147,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 599
+      },
+      "spearman": 0.5873257406894414,
+      "bandAccuracy": 0.5464684014869888,
+      "pairOrder": 0.795484727755644,
+      "means": {
+        "cliche": 81,
+        "mid": 61,
+        "far": 41
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 0.5,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 150,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 597.5
+      },
+      "spearman": 0.5806388626140851,
+      "bandAccuracy": 0.5576208178438662,
+      "pairOrder": 0.7934926958831341,
+      "means": {
+        "cliche": 80,
+        "mid": 61,
+        "far": 41
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 0.6,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 149,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 594.5
+      },
+      "spearman": 0.5700680148783656,
+      "bandAccuracy": 0.5539033457249071,
+      "pairOrder": 0.7895086321381142,
+      "means": {
+        "cliche": 79,
+        "mid": 61,
+        "far": 42
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 0.75,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 152,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 589
+      },
+      "spearman": 0.5407788926759862,
+      "bandAccuracy": 0.5650557620817844,
+      "pairOrder": 0.7822045152722443,
+      "means": {
+        "cliche": 78,
+        "mid": 61,
+        "far": 42
+      }
+    },
+    {
+      "params": {
+        "spreadK": 0.4,
+        "nearestWeight": 1,
+        "judgeWeight": 1,
+        "webWeight": 0
+      },
+      "labels": "checked",
+      "counts": {
+        "hits": 158,
+        "total": 269,
+        "pairs": 753,
+        "ordered": 570
+      },
+      "spearman": 0.5095708842550405,
+      "bandAccuracy": 0.587360594795539,
+      "pairOrder": 0.7569721115537849,
+      "means": {
+        "cliche": 76,
+        "mid": 61,
+        "far": 43
+      }
+    }
+  ],
+  "judgeCv": {
+    "bandAccuracy": 0.5130111524163569,
+    "pairOrder": 0.7861885790172642,
+    "spearman": 0.5747783385723795,
+    "picks": [
+      1,
+      0.25,
+      0.25,
+      0.25,
+      0.25,
+      0.25,
+      0.25,
+      0.25,
+      0.75,
+      0.25,
+      0.25,
+      0.25,
+      0.5,
+      0.25,
+      0.25,
+      1,
+      0.5,
+      0.25,
+      0.5,
+      0.25
+    ]
   },
   "web": {
     "mode": "claude",

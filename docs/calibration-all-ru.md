@@ -1,11 +1,11 @@
 # Cliché Score calibration
 
-Date: 2026-11-06. Embedder: gemini-embedding-001. Cloud models: claude-haiku-5-5, gemini-flash-lite-latest, gemini-flash-latest.
+Date: 2026-11-17. Embedder: gemini-embedding-001. Cloud models: claude-haiku-5-5, gemini-flash-lite-latest, gemini-flash-latest.
 Set: 30 prompt rows, 270 ideas, see bench/prompts-ru.json + bench/set20-ru.json. Bands: cloud-checked hand labels (prompts.json) and Bands from blind judge ratings (originality 1-7: <= 2.5 cliché, >= 4.5 far). Targets: cliché >= 70, mid 30-70, far <= 35.
 
 rho = mean per-prompt Spearman between the Cliché Score and the judges' originality (sign flipped, 1 = same order).
 
-Web check: off, 0 of 270 anchors rated.
+Web check: claude, 0 of 270 anchors rated.
 
 | params (k = spread, w = nearest weight, j = judge weight, web = web prevalence weight) | band accuracy | pair order | rho | mean cliché | mean mid | mean far |
 |---|---|---|---|---|---|---|
@@ -34,6 +34,12 @@ Leave-one-prompt-out cross-validation (parameters picked on the other prompts, s
 | embedding | 48% | 70% | 0.37 |
 | embedding + judge | 61% | 79% | 0.55 |
 | embedding + judge + web | 61% | 79% | 0.55 |
+
+Judge weight at the default spread and nearest weight, web off (band accuracy / pair order / rho):
+
+| j=0 | j=0.25 | j=0.4 | j=0.5 | j=0.6 | j=0.75 | j=1 | j picked by leave-one-prompt-out |
+|---|---|---|---|---|---|---|---|
+| 50% / 70% / 0.37 | 51% / 76% / 0.47 | 54% / 77% / 0.48 | 56% / 78% / 0.49 | 55% / 78% / 0.50 | 57% / 79% / 0.51 | 61% / 79% / 0.55 | 61% / 79% / 0.55 (median j 1) |
 
 ## Per prompt (current default)
 

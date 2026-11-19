@@ -10,9 +10,9 @@ The Cliché Score (0-100) answers one question: how close is this idea to what e
    An idea as close to its nearest cliché as clichés are to each other scores 100; one `spread` further away it scores 0. The scale adapts to the prompt: tight clouds ("reduce traffic congestion") get a narrow scale, loose ones ("podcast about history") a wide one. The centroid term from v0.2 is still in the code (`nearestWeight`), calibration puts its weight at 0.
 3. **Web part.** The idea is searched on the web (Claude web search with up to 2 queries, or Brave Search) and rated 0-10 for prevalence: how much of the mechanism already exists as a product, service or common advice, with sources.
 4. **Final score.** `cliche = 0.6 * embedding + 0.4 * 10 * web`. Without a web check (`web: false`, no web mode, or a failed search) the score is the embedding part alone.
-5. **Explanations, not blended.** A mechanism judge (claude-haiku-5-5) names the closest cliché and rates mechanism overlap 0-10 with a reason; a critic rates usefulness 1-10. Both are returned next to the score. `diverge` filters candidates on the embedding part (< 50) and usefulness (>= 6), then web-checks only the survivors.
+5. **Explanations, blended only outside the Latin script.** A mechanism judge (claude-haiku-5-5) names the closest cliché and rates mechanism overlap 0-10 with a reason; a critic rates usefulness 1-10. Both are returned next to the score. For English (Latin-script) prompts the judge has weight 0; for prompts whose words are mostly in another script (Cyrillic, CJK, Arabic...) the embedding part is replaced by the judge's overlap, `10 * overlap`, see [Language](#language). `diverge` filters candidates on the embedding part (< 50) and usefulness (>= 6), then web-checks only the survivors.
 
-Constants in `src/math.ts`: `DEFAULT_PARAMS = { spreadK: 0.4, nearestWeight: 1 }`, `JUDGE_WEIGHT = 0`, `WEB_WEIGHT = 0.4`.
+Constants in `src/math.ts`: `DEFAULT_PARAMS = { spreadK: 0.4, nearestWeight: 1 }`, `JUDGE_WEIGHT = 0`, `JUDGE_WEIGHT_NON_LATIN = 1`, `WEB_WEIGHT = 0.4`; `judgeWeightFor(prompt)` picks the judge weight.
 
 ## Calibration data
 
@@ -76,6 +76,17 @@ With the current defaults, unchanged, multilingual-e5-small scores 64% / 86% / 0
 | lexical trigrams | 40% / 55% / 0.14 | 62% / 79% / 0.56 |
 
 Every embedder is weaker in Russian than in English (part of it is translation noise: labels were given to the English wording), and e5 stays level with Gemini. Unlike in English, the judge adds a lot here (rho +0.2): for non-English prompts the mechanism judge carries more of the signal than the embeddings. A native Russian set would tell more.
+
+## Language
+
+The judge weight now depends on the script of the prompt (`judgeWeightFor` in `src/math.ts`, since 0.4.1). `bun run bench/calibrate.ts all` and `all-ru` sweep the judge weight at the default spread and nearest weight, web off, and pick it by leave-one-prompt-out cross-validation (band accuracy / pair order / rho):
+
+| set | j=0 | j=0.25 | j=0.5 | j=1 | j picked by CV |
+|---|---|---|---|---|---|
+| English | 54% / 78% / 0.60 | 55% / 80% / 0.60 | 56% / 79% / 0.58 | 59% / 76% / 0.51 | 51% / 79% / 0.57 (median 0.25) |
+| Russian | 50% / 70% / 0.37 | 51% / 76% / 0.47 | 56% / 78% / 0.49 | 61% / 79% / 0.55 | 61% / 79% / 0.55 (median 1) |
+
+In English the differences are within noise and j=0 keeps the best rho, so the default stays 0 there. In Russian the judge alone wins on every metric and every fold picks it, so a prompt whose words are mostly outside the Latin script (counted by words, so "MVP на TypeScript" stays Russian) gets j=1: the score is the judge's mechanism overlap (blended with web prevalence when a web check ran). Latin-script languages other than English (Spanish, German...) keep j=0: there is no calibration set for them yet. The rule is a script check, not language detection: cheap, deterministic and offline. Full tables: `docs/calibration-all.md`, `docs/calibration-all-ru.md`.
 
 ## Limitations
 
