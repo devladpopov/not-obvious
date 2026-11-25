@@ -98,7 +98,8 @@ What does help is context about the person asking. With two sentences about who 
 - [x] Open-weight models on the leaderboard: Gemma 4 (31b, 26b-a4b)
 - [ ] Llama, DeepSeek, Qwen, Mistral on the leaderboard via OpenRouter
 - [x] Public leaderboard: which model is the most banal ([docs/leaderboard.md](docs/leaderboard.md))
-- [ ] Calibration set with human originality ratings
+- [x] External check against human originality ratings (3030 AUT answers): weak agreement, honest write-up in [docs/human-calibration.md](docs/human-calibration.md)
+- [ ] Length-normalised Cliché Score (lessons from the human check)
 
 ## Prior work
 

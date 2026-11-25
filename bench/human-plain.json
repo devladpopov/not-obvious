@@ -1,0 +1,342 @@
+{
+ "variant": "plain",
+ "cloudPrompt": "List alternative uses for a <object>, a few words each.",
+ "source": "github.com/massivetexts/llm_aut_study gt_main2 (MIT)",
+ "embedder": "local-multilingual-e5-small",
+ "n": 3030,
+ "pooled": {
+  "cliche": 0.06432773555662831,
+  "semdis": 0.07209729555222986,
+  "ocsai": 0.8149788055758656,
+  "length": 0.2167186483711394,
+  "clicheVsLength": 0.3092518993009778
+ },
+ "within": {
+  "cliche": 0.13043162323335888,
+  "semdis": 0.09336903586820171,
+  "ocsai": 0.7230867609760893,
+  "length": 0.16626431657223903
+ },
+ "bands": {
+  "lowest20": 0.23432343234323433,
+  "highest20": 0.17986798679867988,
+  "all": 0.23003300330033002
+ },
+ "perPrompt": [
+  {
+   "object": "brick",
+   "n": 771,
+   "cloud": 38,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.0926752097142891,
+    "semdis": 0.06965788133677595,
+    "ocsai": 0.6123389988510404,
+    "length": 0.14780393511164727
+   }
+  },
+  {
+   "object": "box",
+   "n": 431,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.23553349303998264,
+    "semdis": 0.051429891267651774,
+    "ocsai": 0.7359533596517043,
+    "length": 0.19786312866406786
+   }
+  },
+  {
+   "object": "knife",
+   "n": 347,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.20818170217207202,
+    "semdis": -0.014276455790965035,
+    "ocsai": 0.8306708371037098,
+    "length": 0.20953581348395062
+   }
+  },
+  {
+   "object": "rope",
+   "n": 295,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.16626213535524,
+    "semdis": 0.11855174339074402,
+    "ocsai": 0.5963154495033484,
+    "length": 0.1036139229892351
+   }
+  },
+  {
+   "object": "paperclip",
+   "n": 232,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.1300796597606177,
+    "semdis": 0.18856660501075748,
+    "ocsai": 0.7500969090412469,
+    "length": 0.2129619072927178
+   }
+  },
+  {
+   "object": "bottle",
+   "n": 115,
+   "cloud": 39,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.09940599944581084,
+    "semdis": -0.030744054853469777,
+    "ocsai": 0.8227720495807965,
+    "length": 0.08687287389170016
+   }
+  },
+  {
+   "object": "book",
+   "n": 81,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.10231939720543334,
+    "semdis": 0.06234107761021229,
+    "ocsai": 0.6121259798151721,
+    "length": 0.064528062003116
+   }
+  },
+  {
+   "object": "pants",
+   "n": 67,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.08456835204375412,
+    "semdis": 0.23715676465117155,
+    "ocsai": 0.8724072290345104,
+    "length": 0.10735015882593761
+   }
+  },
+  {
+   "object": "tire",
+   "n": 66,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": -0.04821643857865545,
+    "semdis": 0.14338711635022508,
+    "ocsai": 0.9086437008180765,
+    "length": -0.14659420538817033
+   }
+  },
+  {
+   "object": "sock",
+   "n": 65,
+   "cloud": 39,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.21566604536120065,
+    "semdis": -0.03647936867442528,
+    "ocsai": 0.709167277529597,
+    "length": 0.12577482848218216
+   }
+  },
+  {
+   "object": "spoon",
+   "n": 64,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.1998933759552055,
+    "semdis": 0.3172153865723539,
+    "ocsai": 0.7533386554303803,
+    "length": 0.19496160603962953
+   }
+  },
+  {
+   "object": "lightbulb",
+   "n": 60,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.10376028932395788,
+    "semdis": 0.33260017360645233,
+    "ocsai": 0.8030364025874605,
+    "length": 0.207305253816236
+   }
+  },
+  {
+   "object": "table",
+   "n": 57,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.03977670551326136,
+    "semdis": 0.3547526907962451,
+    "ocsai": 0.9043646449893993,
+    "length": 0.1342050370735004
+   }
+  },
+  {
+   "object": "ball",
+   "n": 57,
+   "cloud": 39,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.002003953235213353,
+    "semdis": 0.08351933594791282,
+    "ocsai": 0.8331817166627555,
+    "length": 0.3902677128601456
+   }
+  },
+  {
+   "object": "fork",
+   "n": 56,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.20401581820637227,
+    "semdis": 0.24039374706872108,
+    "ocsai": 0.8245064419067827,
+    "length": 0.11660362069010136
+   }
+  },
+  {
+   "object": "pencil",
+   "n": 54,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": -0.13119416877136325,
+    "semdis": 0.10031738859288467,
+    "ocsai": 0.7745447660289655,
+    "length": 0.30315722893745023
+   }
+  },
+  {
+   "object": "shoe",
+   "n": 53,
+   "cloud": 37,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": -0.40588228927048037,
+    "semdis": 0.1455159202643749,
+    "ocsai": 0.8991959486897554,
+    "length": 0.36096016633961264
+   }
+  },
+  {
+   "object": "shovel",
+   "n": 52,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.29691456903628477,
+    "semdis": 0.074188188591572,
+    "ocsai": 0.7547838364555589,
+    "length": -0.03755183497920672
+   }
+  },
+  {
+   "object": "toothbrush",
+   "n": 50,
+   "cloud": 38,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.2821291765545652,
+    "semdis": -0.01575650399216219,
+    "ocsai": 0.7896850277347056,
+    "length": 0.34777822149398135
+   }
+  },
+  {
+   "object": "hat",
+   "n": 50,
+   "cloud": 40,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": -0.03965490024483718,
+    "semdis": 0.3001562985137355,
+    "ocsai": 0.7751418974984435,
+    "length": 0.3835880380680051
+   }
+  },
+  {
+   "object": "backpack",
+   "n": 7,
+   "cloud": 39,
+   "models": [
+    "claude-haiku-5-5",
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.3945120158369459,
+    "semdis": -0.16216874328520062,
+    "ocsai": 0.8807710121010884,
+    "length": -0.07207499701564471
+   }
+  }
+ ]
+}
