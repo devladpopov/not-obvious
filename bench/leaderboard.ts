@@ -82,6 +82,8 @@ await Promise.all(MODELS.map(async (m) => {
   console.error(`${m.id}: ${Object.keys(mine).length}/${PROMPTS.length} prompts answered`);
 }));
 await save();
+// LB_ANSWERS_ONLY=1: collect answers and stop (e.g. a local model while the embedding quota is spent), board files untouched.
+if (env("LB_ANSWERS_ONLY")) process.exit(0);
 
 // 2. Embeddings, prompt by prompt, until the daily quota runs out.
 const vec = new Map<string, number[]>();

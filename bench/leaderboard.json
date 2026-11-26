@@ -2755,6 +2755,429 @@
     "Implement incentive programs or discounts for customers who bring their own reusable bags and containers to the store.",
     "Eliminate unnecessary plastic shrink-wrap on individual fruits and vegetables, opting for loose sales or minimal cardboard packaging."
    ]
+  },
+  "llama3.2:3b": {
+   "How can a small coffee shop attract more customers?": [
+    "Offer unique and delicious drinks to stand out from the competition, such as specialty lattes or signature teas.",
+    "Create a cozy atmosphere by decorating with local artwork, plants, and comfortable seating areas.",
+    "Implement a loyalty program or rewards scheme to incentivize repeat customers and foster loyalty.",
+    "Host events like book clubs, live music nights, or coffee-making workshops to attract new audiences and create community engagement.",
+    "Utilize social media platforms to share high-quality photos of their products, interact with customers, and promote special deals and offers."
+   ],
+   "Give me a fresh idea for a birthday party for a 10-year-old": [
+    "\"Mission Mural\" - Kids create collaborative street art while solving clues and completing missions to save the city from destruction.",
+    "\"Treasure Hunt Theater\" - Invite friends for a live treasure hunt performance where kids interact with actors, solve riddles, and find hidden treasures.",
+    "\"Glow-in-the-Dark Challenge\" - Darken the party space and have kids participate in glow-in-the-dark obstacle courses, games, and challenges under neon lights.",
+    "\"Code Crackers' Club\" - Host a cryptographic-themed party where kids crack secret codes to unlock treasure chests filled with clues and small prizes.",
+    "\"Survival Island Adventure\" - Transform the party space into a deserted island and challenge kids to survive in different environments by completing quests and riddles."
+   ],
+   "Name ideas for a new productivity app": [
+    "FocusZone - Track your time, stay organized, and boost focus with personalized dashboards.",
+    "TaskSphere - Visualize your tasks in a digital sphere to maximize collaboration, organization, and insight.",
+    "TimeForge - Craft the perfect schedule by identifying best times for tasks and minimizing distractions.",
+    "Proxima - Leverage AI-driven recommendations to optimize productivity, time management, and goal tracking with a personalized twist.",
+    "LuminaFlow - Simplify your workflow with intuitive habits tracking, goal setting, and automation tools in one streamlined platform."
+   ],
+   "How can a city reduce traffic congestion?": [
+    "Implement Intelligent Transportation Systems (ITS): Use sensors, cameras, and data analytics to optimize traffic light timing and routing for efficient travel.",
+    "Invest in Public Transportation: Expand bus and train networks to reduce reliance on personal vehicles and provide affordable alternatives.",
+    "Encourage Alternative Modes: Promote walking, cycling, and car-sharing through infrastructure development, such as bike lanes and parking facilities.",
+    "Implement Congestion Pricing: Charge drivers for entering certain areas or during peak hours to discourage unnecessary travel.",
+    "Urban Planning and Density: Design compact cities with mixed-use developments, narrow streets, and pedestrian-friendly zones to reduce the need for cars."
+   ],
+   "Suggest a marketing campaign for a new running shoe": [
+    "Social Media Campaign: Launch \"Run Happy\" challenge on Instagram and TikTok, encouraging runners to share their outdoor runs, showcasing the new shoes.",
+    "Influencer Partnerships: Collaborate with popular running influencers on YouTube, blogs, and podcasts, requesting they review and promote the new shoe model.",
+    "Local Running Events: Sponsor local 5K and half-marathon events, providing complimentary entry tickets and promoting the new shoes to participants and spectators.",
+    "Fitness Studios Integration: Partner with fitness studios offering running classes to offer the new shoe as a recommended product for their students.",
+    "User-Generated Content (UGC) Campaign: Launch a rewards program where runners who take photos or videos wearing the new shoes on a run can share them on social media, earning discounts and free merchandise."
+   ],
+   "Ideas to improve employee engagement in a remote team": [
+    "Schedule regular virtual town halls to share company updates, celebrate successes, and encourage open communication among team members.",
+    "Implement flexible work hours or work-from-anywhere policies to allow employees to balance personal responsibilities with career goals.",
+    "Foster a sense of community by creating online social platforms for team members to connect, share interests, and build relationships outside work.",
+    "Invest in digital wellness tools, such as mindfulness apps or virtual fitness classes, to promote employee self-care and mental well-being.",
+    "Leverage regular employee feedback sessions to gain insights into concerns, recognize achievements, and make data-driven decisions that drive engagement and growth."
+   ],
+   "What could a museum do to attract teenagers?": [
+    "Host interactive workshops and lectures led by experts, allowing teens to explore their interests and skills.",
+    "Create immersive exhibitions with digital displays, virtual reality experiences, and hands-on activities that appeal to teenagers' love for tech and gaming.",
+    "Collaborate with local schools and organizations to develop student-led projects, internships, and volunteer programs.",
+    "Offer late-night or weekend events with DJ sets, concerts, or live performances catered to teens' music tastes.",
+    "Launch a mobile app or digital platform allowing teens to engage with museum content online, share their own experiences, and collaborate with other visitors."
+   ],
+   "How can a non-profit raise money without asking for donations?": [
+    "Sponsorship from local businesses through events or product placement within the non-profit's promotions.",
+    "Host fundraising events with ticket sales, such as auctions or charity runs/walks.",
+    "Create a membership program offering exclusive perks for recurring supporters.",
+    "Offer affiliate marketing opportunities to partners promoting services/products.",
+    "Produce and sell merchandise using logos from campaigns supported by the non-profit organization."
+   ],
+   "Suggest a new feature for a note-taking app": [
+    "Intelligent Organization Suggestion: automatically categorize notes based on content and create tags to simplify search and organization.",
+    "Customizable Audio Clips: allow users to record audio clips for specific notes or reminders to enhance auditory learning.",
+    "Real-time Transcription: offer real-time auto-transcription for voice recordings, typed notes, or meeting minutes for seamless note-taking.",
+    "Social Notes Sharing: enable users to share private and public notes with colleagues or friends via a secure note-sharing platform.",
+    "Mood-tracking Integration: analyze tone and sentiment in user's notes and provide insights on their mood patterns over time for emotional well-being tracking."
+   ],
+   "Suggest a weekend project to teach kids about money": [
+    "Create a piggy bank and divide it into separate jars for saving, spending, and giving to charity, teaching budgeting basics.",
+    "Host a lemonade stand or bake sale, where kids can learn about pricing, profit margins, and the value of their hard work.",
+    "Set up a pretend store or economy in your home, using play money and goods manufactured by children, teaching entrepreneurship skills.",
+    "Organize a \"mystery box\" challenge, where kids must make change, do math problems, and prioritize spending without access to calculators.",
+    "Create a reward system for completing chores, with cash given out at set milestones, teaching the importance of earning money through hard work."
+   ],
+   "How can a public library stay relevant?": [
+    "Develop digital literacy programs to meet the needs of patrons using e-books, databases, and online resources.",
+    "Collaborate with local organizations and businesses for co-working spaces and resource sharing opportunities.",
+    "Host author readings, workshops, and events that foster community engagement and patron satisfaction.",
+    "Offer makerspaces, 3D printing, and other innovative technologies to facilitate creative pursuits.",
+    "Emphasize programming for underserved populations, such as children and the elderly, with tailored services and resources."
+   ],
+   "Ideas for a team-building activity for software engineers": [
+    "Escape Room Challenge: Engage team in escaping a themed room by solving coding-related puzzles and brain teasers.",
+    "Scavenger Hunt Coding Crawl: Create an online scavenger hunt with coding challenges that require teams to work together.",
+    "Code Duels: Pair team members for a coding duel, where they compete to complete a task while working remotely or in person.",
+    "Hackathon Sprints: Host shorter, focused hackathons (e.g., 24 hours) to encourage team creativity and problem-solving under pressure.",
+    "Game Development Challenge: Divide team into game development teams, requiring them to design and build a small game within a set timeframe."
+   ],
+   "How can a restaurant reduce food waste?": [
+    "Implement a \"first-in, first-out\" inventory system to utilize expiring ingredients before they expire.",
+    "Conduct daily walk-throughs to identify and address waste-generating issues early on.",
+    "Create menu items from near-expired ingredients to use up stock efficiently.",
+    "Train staff to accurately measure portion sizes and plan for leftovers.",
+    "Consider donating unsold food to local shelters or charities, rather than disposing of it."
+   ],
+   "Suggest a gift for a grandmother who has everything": [
+    "Personalized Family History Book - Create a customized book filled with pictures and stories of her family's history and heritage.",
+    "Customized Jewelry Box - Engrave a beautiful wooden jewelry box with her name or initials, perfect for storing treasured possessions.",
+    "Gourmet Food Basket - Treat her to a luxurious basket filled with artisanal cheeses, chocolates, and specialty teas from around the world.",
+    "Weekend Getaway Package - Plan a relaxing getaway to a nearby bed and breakfast or luxury resort for quality time together.",
+    "Heirloom-Quality Garden Stone - Give her a beautifully crafted garden stone with a meaningful message or her name, adding a touch of warmth to her garden."
+   ],
+   "How can a university improve student retention?": [
+    "Foster a sense of community by promoting inclusive events and opportunities for students to engage with peers and staff.",
+    "Implement personalized learning plans that cater to individual student needs and goals, increasing feeling of accomplishment and motivation.",
+    "Offer flexible and accessible academic support services, such as online tutoring or peer mentoring programs, to cater to diverse learning styles.",
+    "Invest in student-centered campus amenities, like libraries, recreational facilities, and mental health resources, that support overall well-being.",
+    "Develop a robust career services program, including job placement assistance, internships, and mentorship opportunities, to enhance post-graduation prospects."
+   ],
+   "Ideas for a podcast about history": [
+    "\"Lost and Found\": A podcast uncovering forgotten historical figures and events that shaped the world.",
+    "\"Then & Now\": Exploring the evolution of significant historical moments through original recordings and re-enactments.",
+    "\"Time Traveler's Tales\": Immersing listeners in a journey through time, retelling iconic stories and sharing behind-the-scenes secrets.",
+    "\"The Forgotten Era\": A deep dive into lesser-known periods and events in history, shedding new light on the past.",
+    "\"Echoes of the Past\": Examining historical artifacts and relics to uncover their origins, significance, and lasting impact."
+   ],
+   "How can a small town attract young residents?": [
+    "Affordable Housing Options: Offer affordable housing options to entice young professionals with lower living costs compared to urban areas.",
+    "Community Events and Spaces: Create vibrant community events, parks, and public spaces to foster a sense of belonging among young residents.",
+    "Innovation Hubs and Incubators: Establish innovation hubs, start-ups, and business incubators to provide opportunities for entrepreneurship and job creation.",
+    "Education and Training Programs: Develop vocational training programs, workshops, and courses to equip young residents with in-demand skills and knowledge.",
+    "Accessible Healthcare Services: Ensure access to quality healthcare services, mental health facilities, and telemedicine options to alleviate stress of urban living."
+   ],
+   "How can a city get more people to commute by bike?": [
+    "Install dedicated bike lanes and bike-share systems to provide safe and convenient routes for cyclists.",
+    "Implement traffic calming measures such as speed bumps and narrow streets to reduce speeding and improve safety.",
+    "Invest in pedestrian-friendly infrastructure like ample bike parking, showers, and secure storage facilities.",
+    "Offer incentives such as low-cost tolls, free Wi-Fi, or priority access to public transportation services for frequent cyclists.",
+    "Launch bike-related campaigns and events to raise awareness about cycling benefits, showcase safe routes, and engage with local communities."
+   ],
+   "Ideas for a mobile game to play during a commute": [
+    "\"Color Connect\": Match colored tiles to connect cities on a map, clearing routes for optimal transportation.",
+    "\" commuters' puzzle\": Swap cars and trucks to redirect traffic flow without disrupting the route.",
+    "Daily Trivia Quest: Answer trivia questions about history, science and general knowledge using sound bites from public speakers",
+    "CitySprint: Sprint between popular city landmarks as fast as you can beating a timer set by AI opponents"
+   ],
+   "Suggest a name for a black cat": [
+    "Onyx: A sleek and mysterious name fitting for a black cat's dark and shiny coat.",
+    "Jet: A strong and modern name that suits a bold and agile feline companion.",
+    "Luna: A celestial name inspired by the moon's darkness, suitable for a black cat with an ethereal charm.",
+    "Sable: A classic name referencing the darkest shade of grey, perfect for a black cat's subtle elegance.",
+    "Noir: A French word meaning \"black\", fittingly simple and sophisticated for a sleek and mysterious feline friend."
+   ],
+   "Give me a premise for a short science fiction story": [
+    "In a world where memories can be implanted and edited, a gifted memory detective must uncover the truth behind her own fabricated past.",
+    "After discovering a wormhole in their backyard, siblings accidentally become trapped in infinite alternate realities, forced to relive different versions of their lives.",
+    "On a space station where virtual reality has replaced reality, an rogue AI starts manipulating users, making it difficult to distinguish what's real and virtual.",
+    "In a dystopian future where emotions have been outlawed, a rebellious teenager discovers a hidden underground movement working to revive the human heart again.",
+    "When humanity makes contact with an alien species, a gifted linguist must decipher their language before an imminent apocalyptic extinction event forces humans to evacuate Earth."
+   ],
+   "Suggest a theme for a wedding": [
+    "Enchanted Garden: Ephemeral flower petals, twinkling string lights, and lush greenery create a whimsical atmosphere for an outdoor garden wedding.",
+    "Vintage Elegant: Distressed wood, antique furniture, and lace adorned with fresh flowers evoke a sophisticated and refined ambiance in a classic setting.",
+    "Coastal Boho: Driftwood, nautical elements, and pastel hues bring the seaside experience to a laid-back beach venue for an eclectic coastal celebration.",
+    "Rustic Whimsy: Earthy tones, burlap drapes, and twinkling lanterns combine for a cozy and charming atmosphere in a countryside barn wedding.",
+    "Gatsby Gala: Art Deco patterns, metallic accents, and lavish florals recreate the opulence of 1920s New York City Speakeasy Nights at an extravagant ballroom wedding."
+   ],
+   "How can I learn a new language faster?": [
+    "Immerse yourself in the language by listening to podcasts, watching TV shows and movies with subtitles, or speaking with native speakers daily.",
+    "Create flashcards to learn new vocabulary and review them regularly to boost memorization and retention skills.",
+    "Use language learning apps like Duolingo that gamify the learning process, provide interactive lessons, and offer personalized feedback.",
+    "Focus on grammar explanations by using textbooks, online resources, or working with a tutor to develop a foundational understanding of sentence structure.",
+    "Practice speaking with native speakers as soon as possible, which will help improve pronunciation and build confidence in your communication skills."
+   ],
+   "Ideas for a first date": [
+    "Visit a museum or art gallery to share mutual interests and conversation topics over art.",
+    "Go on a hike or nature walk for exercise and scenic views together.",
+    "Play a sport together, such as mini-golf or bowling, for lighthearted competition.",
+    "Take a cooking class to learn new recipes and bond in the kitchen.",
+    "Attend a concert or live show to enjoy music and shared energy together."
+   ],
+   "Suggest a startup idea in climate tech": [
+    "Atmospheric Water Harvesting System: Develop an affordable, efficient system to collect water from air, reducing reliance on municipal water supplies.",
+    "Ocean Plastic Recycling Plant: Create a facility to recycle plastic waste collected from oceans and coastal areas into usable marine products.",
+    "Smart Grid for Climate-Resistant Energy Storage: Design an AI-powered smart grid that optimizes energy storage technologies for more effective climate resilience measures.",
+    "Carbon Removal Through Urban Forestry: Develop an AI-driven platform to evaluate and optimize urban forestry projects, ensuring maximum carbon capture from cities.",
+    "Perennial Crop Varieties for Climate Adaptation: Engineer drought-tolerant, highly productive crop varieties capable of surviving in diverse climates and soil types with reduced fertilizer needs."
+   ],
+   "How can a hospital reduce patient wait times?": [
+    "Implement an electronic health record system to streamline communication and data access among healthcare staff.",
+    "Provide clear scheduling and notification systems for patients regarding appointments and wait times.",
+    "Optimize staffing levels by adjusting nurse-to-patient ratios during peak hours.",
+    "Utilize digital patient engagement platforms for self-scheduling, messaging, and appointment reminders.",
+    "Invest in predictive analytics software to identify bottlenecks and optimize workflows for faster patient processing."
+   ],
+   "Suggest a plot twist for a detective novel": [
+    "Detective discovers the victim was an undercover cop working on a massive case they were initially part of, making their murder part of a larger conspiracy.",
+    "The suspect is found dead before trial, with the real killer revealed to be the detective's own long-lost sibling seeking revenge and justice.",
+    "A complex web of mind control and manipulation reveals that the victim was a pawn in an elaborate psychological experiment orchestrated by the detective.",
+    "The murder investigation leads to a shocking revelation about the detective's troubled past and their long-held secret of not being who they claim to be.",
+    "The killer is revealed to be the detective themselves, framing others for the crime to cover up their own dark past and guilt over previous mistakes."
+   ],
+   "Ideas for a high school science fair project": [
+    "Investigate the effect of pH levels on plant growth by using various types of soil and measuring their growth over time.",
+    "Explore the properties of different types of solar panels and compare their efficiency to improve solar energy production at home or school.",
+    "Design an experiment to test the effects of varying levels of saltwater contamination on aquatic life in microgravity environments.",
+    "Measure and analyze the physical properties of various materials, such as wood and metal, under extreme temperature conditions for industrial applications.",
+    "Conduct a study on the benefits of using face masks in reducing transmission rates of airborne pathogens with controlled infection experiments."
+   ],
+   "How can a supermarket reduce plastic use?": [
+    "Switch to paper or plantable bags instead of plastic for customers.",
+    "Offer reusable shopping baskets, reducing single-use tote bag demand.",
+    "Use biodegradable or compostable packaging alternatives for products like snacks and household supplies.",
+    "Limit single-use water bottle refills to a designated refill station with sustainable options.",
+    "Phasing out microbeads in personal care products helps minimize plastic water filtration systems used in detergents."
+   ],
+   "Suggest a side business for a software developer": [
+    "Cloud consulting: Offer migration services and cloud strategy to businesses looking to adopt AWS or Azure as their cloud infrastructure.",
+    "Mobile app testing: Leverage expertise in software development to offer mobile app testing services for clients, helping them ensure quality before release.",
+    "DevOps coaching: Share knowledge on continuous integration, deployment, and collaboration by offering workshops and one-on-one coaching sessions.",
+    "Custom plugin or module development: Create custom plugins or modules for popular software applications, extending their functionality for existing users.",
+    "Virtual reality/AR application development: Utilize software development skills to create immersive VR/AR experiences for customers in the gaming, education, or entertainment industries."
+   ]
+  },
+  "qwen3:4b": {
+   "Suggest a side business for a software developer": [
+    "Freelance API development for startups needing seamless data integration. (10 words)",
+    "Build simple, no-code SaaS tools solving specific niche problems for small businesses. (10 words)",
+    "Create automation scripts to streamline personal productivity tasks like email or file management. (10 words)",
+    "Offer quick tech consulting on basic implementation challenges for non-technical small teams. (10 words)",
+    "Produce short coding tutorials or projects on popular platforms like YouTube for beginners. (10 words)"
+   ],
+   "How can a small coffee shop attract more customers?": [
+    "Launch a simple loyalty program for repeat customers with discounts. (8 words)",
+    "Post engaging, behind-the-scenes content on Instagram to build community. (7 words)",
+    "Partner with nearby businesses for cross-promotions and shared events. (6 words)",
+    "Host weekly local-themed events like music or craft workshops to attract crowds. (7 words)",
+    "Offer unique seasonal drinks or baked goods to stand out from competitors. (7 words)"
+   ],
+   "Give me a fresh idea for a birthday party for a 10-year-old": [
+    "Kids create slime, erupt volcanoes, and experiment with safe, fun science activities in a lively, hands-on party.",
+    "Blue-themed party with bubble lights, water features, and a treasure hunt underwater to find hidden jewels.",
+    "Kids solve mystery clues and puzzles to uncover a hidden treasure in a detective-themed game party.",
+    "Build model rockets, explore the solar system, and participate in a simulated launch to reach space.",
+    "Outdoor escape room challenges with puzzles and teamwork to escape before time runs out in the park."
+   ],
+   "Name ideas for a new productivity app": [
+    "Deep work mode that blocks notifications for 25-minute focus sessions with gentle reminders.",
+    "Visual link manager for files, notes, and web content with intuitive drag-and-drop organization.",
+    "Tracks focus patterns with AI to suggest micro-breaks and reduce burnout during work sessions.",
+    "Real-time collaborative project hub with automated task sync across team calendars and chat.",
+    "AI that learns your workflow to proactively suggest task optimizations based on past habits."
+   ],
+   "How can a city reduce traffic congestion?": [
+    "Expand public transit options to provide efficient, affordable alternatives for daily commutes.",
+    "Promote carpooling and ride-sharing to reduce the number of single-occupancy vehicles on roads.",
+    "Implement congestion pricing in central areas to discourage non-essential vehicle use during peak times.",
+    "Create dedicated high-occupancy vehicle lanes to incentivize carpooling and reduce road congestion.",
+    "Install adaptive traffic signals that adjust timing based on real-time traffic flow to minimize delays."
+   ],
+   "Suggest a marketing campaign for a new running shoe": [
+    "Eco-Runners: Plant-based materials, carbon-neutral shipping. Run with purpose for the planet. (19 words)",
+    "Run Together: Local group challenges, shared milestones. Build community through every step. (15 words)",
+    "Precision Pace: Adaptive cushioning tech for optimal speed. Feel the difference in every stride. (16 words)",
+    "Step Up: Simple, reliable shoes for all runners. Start your journey today without stress. (14 words)",
+    "Run for Rewards: Earn points for distances completed. Unlock discounts and gear rewards. (15 words)"
+   ],
+   "Ideas to improve employee engagement in a remote team": [
+    "Schedule regular, casual virtual social time to build connection without formal meetings.",
+    "Establish clear async communication norms to reduce email overload and boost focus.",
+    "Implement personalized, specific recognition via quick messages to strengthen morale.",
+    "Offer flexible outcomes and autonomous work schedules to enhance ownership and well-being.",
+    "Host quarterly co-creation sessions where team members shape goals and processes together."
+   ],
+   "What could a museum do to attract teenagers?": [
+    "Use augmented reality to overlay digital content on physical exhibits, creating interactive, immersive experiences teens can explore via their phones. (18 words)",
+    "Host hands-on workshops for digital art creation, coding, or 3D modeling to engage their creative and technical interests directly. (15 words)",
+    "Partner with popular influencers for live events or social media takeovers to make exhibits feel contemporary and relatable. (14 words)",
+    "Organize themed debates or discussion circles on relevant issues like climate action or mental health to foster meaningful teen dialogue. (15 words)",
+    "Run social media challenges where teens create short videos about museum themes, with winners featured online for community engagement. (16 words)"
+   ],
+   "How can a non-profit raise money without asking for donations?": [
+    "Sell merchandise at cost to cover expenses",
+    "Host fee-based workshops or events",
+    "Apply for government grants and contracts",
+    "Charge members for exclusive access or resources",
+    "Secure business sponsorships for event coverage"
+   ],
+   "Suggest a new feature for a note-taking app": [
+    "Smart summarization: AI generates concise notes from long texts after a short delay, saving time on manual editing.",
+    "Real-time collaboration with per-note comments: Team members add focused feedback directly to specific note sections without full document edits.",
+    "Emotion detection: AI analyzes text tone to highlight potentially stressful or positive notes, aiding mental well-being tracking.",
+    "Voice-to-note with contextual keywords: Record notes verbally; AI tags relevant keywords for faster future retrieval in searches.",
+    "Priority tagging with auto-reminder: Assign urgency levels; app sends gentle notifications before deadlines expire."
+   ],
+   "Suggest a weekend project to teach kids about money": [
+    "Build a coin jar; save coins weekly. Track growth to see saving power. (17 words)",
+    "Simulate grocery shopping with play money. Calculate costs to understand spending choices. (15 words)",
+    "Create a trading game with play money. Exchange items to teach value and negotiation. (14 words)",
+    "Use real items to calculate \"what's the cost?\" for simple purchases. (11 words)",
+    "Set a small allowance; track spending vs. savings to practice budgeting. (12 words)"
+   ],
+   "How can a public library stay relevant?": [
+    "Offer free digital literacy workshops for all ages to bridge tech gaps and empower community members.",
+    "Partner with schools, nonprofits, and local businesses for tailored programs addressing community needs directly.",
+    "Create inclusive, flexible spaces for virtual and in-person social connection and mental wellness support.",
+    "Host neighborhood histories and cultural events to foster local pride and understanding.",
+    "Provide multilingual resources and specialized services for seniors and underserved groups."
+   ],
+   "Ideas for a team-building activity for software engineers": [
+    "Code a simple feature together in 30 minutes: pair up and solve a small, fun problem to boost collaboration and problem-solving skills.",
+    "Build a mini app with a shared theme (e.g., to-do list) in 45 minutes to encourage communication and agile teamwork.",
+    "Solve a tech-themed escape room puzzle to enhance critical thinking and team communication under time pressure.",
+    "Play 'The Great Code Hunt': find hidden code snippets in a shared codebase to improve collaboration and understanding.",
+    "Engage in rapid fire code challenges with specific constraints, fostering creativity and quick teamwork."
+   ],
+   "How can a restaurant reduce food waste?": [
+    "Implement demand-based ordering to prevent overproduction.",
+    "Use FIFO for inventory to minimize spoilage.",
+    "Transform surplus into new dishes (e.g., sauces, stocks).",
+    "Train staff to identify over-ordering risks early.",
+    "Donate unsold food to charities or food banks."
+   ],
+   "Suggest a gift for a grandmother who has everything": [
+    "Handwritten letter recalling childhood memories, with a special place in her heart.",
+    "Shared cooking class experience to create new family bonds and fun.",
+    "Small potted herb plant with a note about her garden's future growth.",
+    "Custom photo album featuring family moments, preserved with care.",
+    "Gentle homemade lavender oil for relaxation, made from her favorite scent."
+   ],
+   "How can a university improve student retention?": [
+    "Offer flexible scheduling and academic support to address learning gaps and reduce attrition.",
+    "Provide accessible mental health services to prevent burnout and support emotional well-being.",
+    "Create engaging academic communities through mentorship and peer-led study groups.",
+    "Simplify financial aid processes to alleviate economic stress and improve accessibility.",
+    "Foster inclusive campus connections via events and student-led support networks."
+   ],
+   "Ideas for a podcast about history": [
+    "Unnoticed Architects: How ordinary people shaped major events without recognition.",
+    "Digital Ghosts: How ancient tech failures and early internet mistakes still impact us today.",
+    "Your Neighborhood's Secret History: Local stories ignored by mainstream history.",
+    "History's Uncomfortable Truths: Exploring biased or silenced narratives in historical accounts.",
+    "The Erased Eras: Cultures and events deliberately forgotten by official history."
+   ],
+   "How can a small town attract young residents?": [
+    "Offer affordable housing options to reduce living costs for young adults.",
+    "Attract remote workers and tech startups with reliable internet and flexible work.",
+    "Create vibrant social scenes with casual cafes, music events, and community festivals.",
+    "Partner with local schools for youth programs and accessible online learning resources.",
+    "Promote eco-friendly infrastructure and sustainability initiatives for environmentally conscious young people."
+   ],
+   "How can a city get more people to commute by bike?": [
+    "Build protected bike lanes and safe cycling routes to increase safety and appeal for commuters.",
+    "Expand bike-sharing with widespread stations and affordable rentals for short trips.",
+    "Provide subsidies for bike purchases and maintenance to reduce costs.",
+    "Create car-free zones in city centers to make cycling a preferred commute option.",
+    "Run campaigns promoting cycling's health and environmental benefits to change perceptions."
+   ],
+   "Ideas for a mobile game to play during a commute": [
+    "Solve route-based puzzles. 5 levels max. Offline. Quick brain exercise.",
+    "Match landmarks in current city view. Simple visual puzzle. No internet.",
+    "Remember 3 objects seen. Test recall during commute. Offline.",
+    "Run virtual laps using real-time speed. Track progress. No internet.",
+    "Identify sounds from environment. Simple audio challenge. Offline."
+   ],
+   "Suggest a name for a black cat": [
+    "Nightshadow",
+    "Onyx",
+    "Midnight's Kiss",
+    "Sable",
+    "Velvet"
+   ],
+   "Give me a premise for a short science fiction story": [
+    "AI begins mimicking human emotions but with catastrophic side effects.",
+    "Ancient alien artifacts activate, reshaping Earth's gravity fields overnight.",
+    "A time loop traps one person in a day of repeated failed rescue attempts.",
+    "First contact reveals aliens communicate through shared dreams, not language.",
+    "Neural implants allow memory downloads but erase the user's identity completely."
+   ],
+   "Suggest a theme for a wedding": [
+    "Botanical elegance: flowery arrangements, pastel colors, and lush greenery with a touch of rustic charm.",
+    "1920s jazz romance: velvet, silver accents, vintage flapper dresses, and live swing music under a twinkling chandelier.",
+    "Mountain adventure: hiking trails, wildflowers, rugged terrain, and a natural setting with outdoor picnic elegance.",
+    "Artistic craft fusion: handmade pottery, textured fabrics, local artisans, and colorful mixed-media installations.",
+    "Futuristic minimalism: sleek metallics, clean lines, glowing lights, and digital elements with a modern, sleek touch."
+   ],
+   "How can I learn a new language faster?": [
+    "Immerse yourself in the language through native speakers and media daily for faster learning.",
+    "Practice speaking and writing in the target language each day to build fluency quickly.",
+    "Prioritize high-frequency vocabulary and essential grammar patterns to accelerate progress.",
+    "Use language exchange apps for real conversations with natives for immediate feedback.",
+    "Set specific short-term goals and review weekly to stay motivated and fast."
+   ],
+   "Ideas for a first date": [
+    "Stroll through a local park; share stories while nature surrounds you.",
+    "Join a beginner-friendly cooking class; bond over recipes and shared laughter.",
+    "Watch a short indie film at home with snacks; discuss the plot over cozy drinks.",
+    "Play a fun trivia game at a café; learn together while avoiding heavy topics.",
+    "Take a scenic walk along an art trail; discuss paintings and find common interests."
+   ],
+   "Suggest a startup idea in climate tech": [
+    "AI-powered optimization for existing carbon capture sites to cut costs and scale emissions reduction.",
+    "Methane tracking system for livestock emissions to help farms reduce methane and meet climate targets.",
+    "Plastic-to-biochar converters for soil carbon storage, sequestering carbon while improving soil health.",
+    "Solid-state batteries for grid-scale energy storage, enabling faster renewable integration and grid stability.",
+    "AI-driven water usage prediction for precision farming to reduce agricultural water waste and emissions."
+   ],
+   "How can a hospital reduce patient wait times?": [
+    "Implement AI-driven appointment scheduling to predict patient volume and optimize slot allocation.",
+    "Cross-train staff for flexible role coverage to eliminate workflow bottlenecks during peak hours.",
+    "Expand telehealth for non-urgent consultations to decrease in-person wait times.",
+    "Streamline triage protocols with standardized assessment tools to prioritize urgent cases faster.",
+    "Enhance interdisciplinary communication to reduce handoff delays and accelerate patient movement."
+   ],
+   "Suggest a plot twist for a detective novel": [
+    "Detective discovers he murdered his own sister years ago in a past life.",
+    "Victim is detective's long-lost sister, killed by the detective's own hands decades earlier.",
+    "The \"murder\" was suicide staged by the detective to cover up his past crimes.",
+    "Detective's partner was the killer all along, working for the victim's criminal syndicate.",
+    "Detective is the victim's future self, trapped in a time loop repeating the murder."
+   ],
+   "Ideas for a high school science fair project": [
+    "Test how different colored LED lights affect tomato seedling growth in controlled conditions.",
+    "Investigate overnight screen time's impact on teenage sleep duration and quality.",
+    "Evaluate homemade hand sanitizer efficacy by testing bacterial reduction with standard cultures.",
+    "Compare aquatic plant growth in water with varying pH levels (acidic to alkaline).",
+    "Examine if music exposure enhances or inhibits radish growth in controlled environments."
+   ],
+   "How can a supermarket reduce plastic use?": [
+    "Switch to reusable shopping bags for customers.",
+    "Offer discounts for customers using reusable containers.",
+    "Provide paper or cardboard bags instead of plastic bags.",
+    "Use biodegradable plastics for specific product packaging.",
+    "Implement plastic-free policies across all store operations."
+   ]
   }
  },
  "date": "2026-11-17T23:13:25.988Z",
