@@ -58,8 +58,21 @@ Share of responses rated 3+ by people: 23% overall. Plain cloud: 23% among the 2
 2. **Length leaks in.** Human AUT answers are 2-4 words; embeddings of longer, more elaborated answers sit closer to any cloud of full sentences. Cliché Score correlates with response length at 0.50 (surprising) and 0.31 (plain), while people reward elaboration (length vs rating 0.22). Asking the models for short answers halved the leak but did not remove it.
 3. **Unsupervised distance is a weak proxy for human originality on AUT.** SemDis does no better here, which matches the paper. What works is supervision on human ratings (Ocsai). Cliché Score answers a narrower question, "would other AIs say this", and should not be read as a general originality rating.
 
+## Length experiment
+
+`bench/human-length.ts` tries to keep answer length out of the score (Spearman with the human rating, within prompt, weighted mean / pooled):
+
+| Variant | Plain cloud | Surprising cloud |
+|---|---|---|
+| Cliché Score as shipped (0-100, clipped) | 0.13 / 0.06 | -0.04 / -0.14 |
+| Nearest-cliché similarity, unclipped | 0.14 / 0.04 | 0.02 / -0.10 |
+| Minus a length trend fitted on the cloud itself (per idea) | 0.07 / 0.14 | -0.02 / 0.17 |
+| Minus the length trend across the scored ideas of one prompt (batch) | 0.19 / 0.06 | 0.13 / 0.02 |
+| Response length alone | 0.17 / 0.22 | 0.17 / 0.22 |
+
+Taking the length trend out across a batch of ideas helps most: within a prompt it takes the plain cloud from 0.13 to 0.19 and turns the surprising cloud positive. But it needs dozens of ideas for one prompt, and `score` usually gets a handful, so the shipped formula stays as it is: a correction fitted on the cloud alone, which would work per idea, does worse. Either way the gain is small next to Ocsai (0.72), and length alone predicts these ratings about as well, so the honest summary stands: on AUT, distance from the AI cloud is a weak proxy for what people call original.
+
 ## Next
 
-- Length-normalised score (compare against cloud answers of similar length, or regress length out) and recheck.
 - Run with the mechanism judge on a sample: the judge compares ideas, not wording, and may be less sensitive to length.
 - A second dataset outside AUT (product or research ideas with human ratings).

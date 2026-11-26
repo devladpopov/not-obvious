@@ -99,7 +99,6 @@ What does help is context about the person asking. With two sentences about who 
 - [ ] Llama, DeepSeek, Qwen, Mistral on the leaderboard via OpenRouter
 - [x] Public leaderboard: which model is the most banal ([docs/leaderboard.md](docs/leaderboard.md))
 - [x] External check against human originality ratings (3030 AUT answers): weak agreement, honest write-up in [docs/human-calibration.md](docs/human-calibration.md)
-- [ ] Length-normalised Cliché Score (lessons from the human check)
 
 ## Prior work
 
