@@ -1,0 +1,49 @@
+{
+ "n": 307,
+ "perObject": 15,
+ "judge": "claude-oauth.sh --model haiku",
+ "embedder": "local-multilingual-e5-small",
+ "judgeVsCliche": 0.4361789443001925,
+ "result": {
+  "cliche (embeddings)": {
+   "pooled": -0.08109561869824605,
+   "within": 0.06924554678043825,
+   "vsLength": -0.360639922967193
+  },
+  "judge overlap": {
+   "pooled": -0.04441423279559471,
+   "within": -0.00014623891156001183,
+   "vsLength": 0.07989947291331907
+  },
+  "blend j=0.25": {
+   "pooled": -0.084171156968017,
+   "within": 0.05551909116718131,
+   "vsLength": -0.3023511244050631
+  },
+  "blend j=0.5": {
+   "pooled": -0.07695987236377501,
+   "within": 0.03241384827011916,
+   "vsLength": -0.21223166593511825
+  },
+  "blend j=0.75": {
+   "pooled": -0.06414119684953312,
+   "within": 0.024445148204275787,
+   "vsLength": -0.06249065326128794
+  },
+  "semdis": {
+   "pooled": 0.035139272600866786,
+   "within": -0.01504074840842399,
+   "vsLength": 0.27502315903283303
+  },
+  "ocsai": {
+   "pooled": 0.8723070433425657,
+   "within": 0.7752435211825337,
+   "vsLength": 0.18117087450303096
+  },
+  "length": {
+   "pooled": 0.207748217827215,
+   "within": 0.12132638971161343,
+   "vsLength": 1
+  }
+ }
+}

@@ -172,7 +172,16 @@ async function usefulness(prompt: string, ideas: string[]): Promise<{ score: num
 }
 
 /** Judge verdicts are cached per (cloud, idea): calibration re-runs and repeated scoring cost nothing. */
-const judgeMemos = new Map<string, Map<string, Judgement>>();
+/** Prompt of the mechanism judge; exported for bench/human-judge.ts, which runs it through a CLI. */
+export function judgePrompt(prompt: string, cliches: string[], ideas: string[]): string {
+  return `Task: ${prompt}\n\nTypical answers every AI gives (clichés):\n${cliches
+    .map((c, i) => `${i + 1}. ${c}`)
+    .join("\n")}\n\nFor each idea below judge whether its underlying MECHANISM matches a cliché: the same action, for the same audience, creating value the same way. Ignore wording, tone and small details; a cliché with a cosmetic twist is still the cliché. Score overlap 0-10 (0 = a mechanism no cliché uses, 5 = shares a core part with one, 10 = the same idea in other words).\n\nIdeas:\n${ideas
+    .map((t, i) => `${i + 1}. ${t}`)
+    .join("\n")}\n\nReturn JSON {"items": [{"overlap": number, "closest": number (cliché number, 0 if none), "why": string (max 15 words)}]} in the same order.`;
+}
+
+const judgeMemos =new Map<string, Map<string, Judgement>>();
 
 /**
  * Mechanism judge: does the idea do the same thing, for the same people, in the same way as some cliché,
@@ -188,11 +197,7 @@ export async function judgeMechanism(prompt: string, ideas: string[], cloud: Clo
   const k = (idea: string) => hash(`${ck}\n${cloud.cliches.length}\n${idea}`);
   const missing = [...new Set(ideas.filter((i) => !memo.has(k(i))))];
   if (missing.length) {
-    const ask = `Task: ${prompt}\n\nTypical answers every AI gives (clichés):\n${cloud.cliches
-      .map((c, i) => `${i + 1}. ${c.text}`)
-      .join("\n")}\n\nFor each idea below judge whether its underlying MECHANISM matches a cliché: the same action, for the same audience, creating value the same way. Ignore wording, tone and small details; a cliché with a cosmetic twist is still the cliché. Score overlap 0-10 (0 = a mechanism no cliché uses, 5 = shares a core part with one, 10 = the same idea in other words).\n\nIdeas:\n${missing
-      .map((t, i) => `${i + 1}. ${t}`)
-      .join("\n")}\n\nReturn JSON {"items": [{"overlap": number, "closest": number (cliché number, 0 if none), "why": string (max 15 words)}]} in the same order.`;
+    const ask = judgePrompt(prompt, cloud.cliches.map((c) => c.text), missing);
     const { text } = await complete(ask, { tier: "fast", json: true, schema: JudgeSchema });
     const out = parseList<Judgement>(text);
     if (out.length !== missing.length) throw new Error(`judge returned ${out.length}/${missing.length} verdicts`);

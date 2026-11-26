@@ -72,7 +72,23 @@ Share of responses rated 3+ by people: 23% overall. Plain cloud: 23% among the 2
 
 Taking the length trend out across a batch of ideas helps most: within a prompt it takes the plain cloud from 0.13 to 0.19 and turns the surprising cloud positive. But it needs dozens of ideas for one prompt, and `score` usually gets a handful, so the shipped formula stays as it is: a correction fitted on the cloud alone, which would work per idea, does worse. Either way the gain is small next to Ocsai (0.72), and length alone predicts these ratings about as well, so the honest summary stands: on AUT, distance from the AI cloud is a weak proxy for what people call original.
 
+## Mechanism judge on a sample
+
+`bench/human-judge.ts` takes 15 evenly spaced responses per object (307 in total), plain cloud, and asks the mechanism judge (the prompt from `src/engine.ts`, Claude Haiku 5.5 through the CLI) how much each response overlaps a cliché, 0-10. Spearman with the human rating, higher = agrees with people:
+
+| Signal | Within prompt | Pooled | Correlation with length |
+|---|---|---|---|
+| Cliché Score (embeddings only) | 0.07 | -0.08 | -0.36 |
+| Judge overlap alone | 0.00 | -0.04 | 0.08 |
+| Blend, judge weight 0.25 | 0.06 | -0.08 | -0.30 |
+| Blend, judge weight 0.5 | 0.03 | -0.08 | -0.21 |
+| Blend, judge weight 0.75 | 0.02 | -0.06 | -0.06 |
+| SemDis | -0.02 | 0.04 | 0.28 |
+| Ocsai | 0.78 | 0.87 | 0.18 |
+| Response length | 0.12 | 0.21 | 1.00 |
+
+The judge is indeed almost free of length (0.08 against -0.36 for embeddings), and agrees with the embedding score at 0.44, but it does not track human AUT originality any better: zero within a prompt. Blending only dilutes the embedding signal. So the length leak is not what separates Cliché Score from human ratings on AUT: "a mechanism other AIs also use" and "what raters call original in two-word object uses" are different questions. The shipped weights stay (judge 0 for Latin-script prompts, 1 for non-Latin, docs/scoring.md). On a 307-row sample one rho step of 0.1 is within noise, so read the table as "no gain", not as a ranking.
+
 ## Next
 
-- Run with the mechanism judge on a sample: the judge compares ideas, not wording, and may be less sensitive to length.
 - A second dataset outside AUT (product or research ideas with human ratings).
