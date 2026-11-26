@@ -89,6 +89,26 @@ Taking the length trend out across a batch of ideas helps most: within a prompt 
 
 The judge is indeed almost free of length (0.08 against -0.36 for embeddings), and agrees with the embedding score at 0.44, but it does not track human AUT originality any better: zero within a prompt. Blending only dilutes the embedding signal. So the length leak is not what separates Cliché Score from human ratings on AUT: "a mechanism other AIs also use" and "what raters call original in two-word object uses" are different questions. The shipped weights stay (judge 0 for Latin-script prompts, 1 for non-Latin, docs/scoring.md). On a 307-row sample one rho step of 0.1 is within noise, so read the table as "no gain", not as a ranking.
 
+## Second dataset: research ideas rated by experts
+
+`bench/human-ideas.ts` uses the ideation study of Si, Yang and Hashimoto ([Can LLMs Generate Novel Research Ideas?](https://arxiv.org/abs/2409.04109), ICLR 2025, [repo](https://github.com/NoviScl/AI-Researcher), MIT): 49 prompting ideas written by NLP experts and 49 written by an LLM agent on 7 topics (bias, coding, safety, multilingual, factuality, math, uncertainty), each blind-reviewed by 2-4 NLP researchers for novelty on a 1-10 scale. The target is the mean novelty per idea. The cloud for each topic is the answer to "Propose a novel prompting-based research idea to <topic>" (20 answers, Gemini Flash Lite on the free tier, local e5-small embeddings); the mechanism judge is Claude Haiku 5.5. The idea is scored by its title, or by title plus the first two sentences of its problem statement.
+
+| Spearman with expert novelty | Title | Title + problem |
+|---|---|---|
+| Cliché Score, within topic | 0.13 | 0.09 |
+| Cliché Score, pooled | 0.06 | 0.10 |
+| Judge overlap, within topic | 0.05 | -0.12 |
+| Length, within topic | 0.14 | 0.17 |
+
+| By condition (title) | Expert novelty | Cliché Score | Judge overlap |
+|---|---|---|---|
+| Human experts (49) | 4.86 | 27 | 4.4 |
+| LLM agent (49) | 5.62 | 33 | 5.3 |
+
+Two readings. First, as on AUT, the correlation with human novelty is weak and noisy (per-topic rho ranges from -0.44 to 0.61 on 8-22 ideas), so the honest claim does not change: Cliché Score is not a stand-in for expert novelty ratings. Second, the direction on the two conditions is the interesting part: the experts rated the agent's ideas as more novel, as the paper reports, while both Cliché Score and the judge put them closer to what AI models say by default (pairwise within a topic, an AI idea scores higher in 52% of pairs, so the gap is small). That is the gap Not Obvious targets: an idea can look novel to a reviewer and still be the answer every model would give. With the problem statement added, scores jump (27 to 67) because longer text sits closer to a cloud of 25-word answers, the same length effect as on AUT.
+
+Caveats: 98 ideas, a single-model cloud of 20 answers (the free Gemini tier, no Claude credits), reviewers saw full proposals while the score sees a title. Reproduce: download the three zip files linked in the repo README into `research/si-ideas/ex/{human,ai}`, then `NOT_OBVIOUS_EMBEDDER=local HJ_JUDGE=1 bun run bench/human-ideas.ts title`.
+
 ## Next
 
-- A second dataset outside AUT (product or research ideas with human ratings).
+- Product ideas: short ideas rated for originality against a common question (product ideas), with a multi-model cloud.

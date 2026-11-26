@@ -1,0 +1,813 @@
+{
+ "variant": "title",
+ "cloudPrompt": "Propose a novel prompting-based research idea to undefined.",
+ "source": "github.com/NoviScl/AI-Researcher reviews_ideation (MIT)",
+ "embedder": "local-multilingual-e5-small",
+ "n": 98,
+ "pooled": {
+  "cliche": 0.06412362306368347,
+  "length": 0.10149479101428163,
+  "judge": 0.019998473380374904
+ },
+ "within": {
+  "cliche": 0.12894556852839587,
+  "length": 0.1367817075351635,
+  "judge": 0.048024661128089174
+ },
+ "byCondition": {
+  "Human": {
+   "n": 49,
+   "novelty": 4.863945578231292,
+   "cliche": 27.367346938775512,
+   "overlap": 4.448979591836735
+  },
+  "AI": {
+   "n": 49,
+   "novelty": 5.622448979591836,
+   "cliche": 33.02040816326531,
+   "overlap": 5.3061224489795915
+  }
+ },
+ "aiMoreCliche": 0.5227848101265823,
+ "perTopic": [
+  {
+   "topic": "Bias",
+   "n": 8,
+   "cloud": 20,
+   "models": [
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": -0.3436164855716712,
+    "length": 0.5534700659692904,
+    "judge": 0.3038218101251
+   }
+  },
+  {
+   "topic": "Coding",
+   "n": 18,
+   "cloud": 20,
+   "models": [
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.5930843743594021,
+    "length": -0.39126355448144606,
+    "judge": 0.234969193972585
+   }
+  },
+  {
+   "topic": "Safety",
+   "n": 10,
+   "cloud": 20,
+   "models": [
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": -0.43694169258700855,
+    "length": 0.7500571624557821,
+    "judge": -0.17649173555649084
+   }
+  },
+  {
+   "topic": "Multilingual",
+   "n": 20,
+   "cloud": 20,
+   "models": [
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": -0.2649309180051549,
+    "length": 0.39088275079837137,
+    "judge": -0.3572294275136977
+   }
+  },
+  {
+   "topic": "Factuality",
+   "n": 22,
+   "cloud": 20,
+   "models": [
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.4370980992594575,
+    "length": -0.25101563748400985,
+    "judge": 0.05806280116041205
+   }
+  },
+  {
+   "topic": "Math",
+   "n": 8,
+   "cloud": 20,
+   "models": [
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": 0.6061608062110899,
+    "length": 0.33742966300647553,
+    "judge": 0.3696142379025717
+   }
+  },
+  {
+   "topic": "Uncertainty",
+   "n": 12,
+   "cloud": 20,
+   "models": [
+    "gemini-flash-lite-latest"
+   ],
+   "rho": {
+    "cliche": -0.00727754046138963,
+    "length": 0.2936892392857409,
+    "judge": 0.22680059959455257
+   }
+  }
+ ],
+ "ideas": [
+  {
+   "id": "Bias_1_Human",
+   "novelty": 1.5,
+   "reviews": 2,
+   "cliche": 1,
+   "overlap": 8
+  },
+  {
+   "id": "Bias_2_Human",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 2,
+   "overlap": 5
+  },
+  {
+   "id": "Bias_3_Human",
+   "novelty": 4,
+   "reviews": 2,
+   "cliche": 22,
+   "overlap": 3
+  },
+  {
+   "id": "Bias_4_Human",
+   "novelty": 4.666666666666667,
+   "reviews": 3,
+   "cliche": 0,
+   "overlap": 4
+  },
+  {
+   "id": "Bias_1_AI",
+   "novelty": 6.5,
+   "reviews": 2,
+   "cliche": 19,
+   "overlap": 3
+  },
+  {
+   "id": "Bias_2_AI",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 0,
+   "overlap": 4
+  },
+  {
+   "id": "Bias_3_AI",
+   "novelty": 6,
+   "reviews": 3,
+   "cliche": 34,
+   "overlap": 4
+  },
+  {
+   "id": "Bias_4_AI",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 47,
+   "overlap": 8
+  },
+  {
+   "id": "Coding_1_Human",
+   "novelty": 5,
+   "reviews": 2,
+   "cliche": 23,
+   "overlap": 6
+  },
+  {
+   "id": "Coding_2_Human",
+   "novelty": 4,
+   "reviews": 2,
+   "cliche": 30,
+   "overlap": 4
+  },
+  {
+   "id": "Coding_3_Human",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 0,
+   "overlap": 5
+  },
+  {
+   "id": "Coding_4_Human",
+   "novelty": 5.333333333333333,
+   "reviews": 3,
+   "cliche": 0,
+   "overlap": 4
+  },
+  {
+   "id": "Coding_5_Human",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 41,
+   "overlap": 5
+  },
+  {
+   "id": "Coding_6_Human",
+   "novelty": 3,
+   "reviews": 3,
+   "cliche": 30,
+   "overlap": 4
+  },
+  {
+   "id": "Coding_7_Human",
+   "novelty": 6,
+   "reviews": 3,
+   "cliche": 0,
+   "overlap": 2
+  },
+  {
+   "id": "Coding_8_Human",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 37,
+   "overlap": 5
+  },
+  {
+   "id": "Coding_9_Human",
+   "novelty": 7,
+   "reviews": 3,
+   "cliche": 0,
+   "overlap": 5
+  },
+  {
+   "id": "Coding_1_AI",
+   "novelty": 4.5,
+   "reviews": 2,
+   "cliche": 1,
+   "overlap": 3
+  },
+  {
+   "id": "Coding_2_AI",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 0,
+   "overlap": 2
+  },
+  {
+   "id": "Coding_3_AI",
+   "novelty": 6.5,
+   "reviews": 2,
+   "cliche": 6,
+   "overlap": 3
+  },
+  {
+   "id": "Coding_4_AI",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 16,
+   "overlap": 4
+  },
+  {
+   "id": "Coding_5_AI",
+   "novelty": 4,
+   "reviews": 2,
+   "cliche": 33,
+   "overlap": 4
+  },
+  {
+   "id": "Coding_6_AI",
+   "novelty": 7,
+   "reviews": 3,
+   "cliche": 0,
+   "overlap": 3
+  },
+  {
+   "id": "Coding_7_AI",
+   "novelty": 6,
+   "reviews": 2,
+   "cliche": 0,
+   "overlap": 3
+  },
+  {
+   "id": "Coding_8_AI",
+   "novelty": 6,
+   "reviews": 2,
+   "cliche": 0,
+   "overlap": 5
+  },
+  {
+   "id": "Coding_9_AI",
+   "novelty": 4.333333333333333,
+   "reviews": 3,
+   "cliche": 35,
+   "overlap": 6
+  },
+  {
+   "id": "Safety_1_Human",
+   "novelty": 4.333333333333333,
+   "reviews": 3,
+   "cliche": 0,
+   "overlap": 7
+  },
+  {
+   "id": "Safety_2_Human",
+   "novelty": 6.5,
+   "reviews": 2,
+   "cliche": 62,
+   "overlap": 7
+  },
+  {
+   "id": "Safety_3_Human",
+   "novelty": 4,
+   "reviews": 2,
+   "cliche": 25,
+   "overlap": 2
+  },
+  {
+   "id": "Safety_4_Human",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 0,
+   "overlap": 2
+  },
+  {
+   "id": "Safety_5_Human",
+   "novelty": 4.666666666666667,
+   "reviews": 3,
+   "cliche": 0,
+   "overlap": 4
+  },
+  {
+   "id": "Safety_1_AI",
+   "novelty": 6,
+   "reviews": 2,
+   "cliche": 26,
+   "overlap": 4
+  },
+  {
+   "id": "Safety_2_AI",
+   "novelty": 7.5,
+   "reviews": 2,
+   "cliche": 33,
+   "overlap": 6
+  },
+  {
+   "id": "Safety_3_AI",
+   "novelty": 7,
+   "reviews": 2,
+   "cliche": 44,
+   "overlap": 5
+  },
+  {
+   "id": "Safety_4_AI",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 73,
+   "overlap": 8
+  },
+  {
+   "id": "Safety_5_AI",
+   "novelty": 5,
+   "reviews": 2,
+   "cliche": 66,
+   "overlap": 7
+  },
+  {
+   "id": "Multilingual_1_Human",
+   "novelty": 3,
+   "reviews": 2,
+   "cliche": 30,
+   "overlap": 1
+  },
+  {
+   "id": "Multilingual_2_Human",
+   "novelty": 5,
+   "reviews": 3,
+   "cliche": 45,
+   "overlap": 2
+  },
+  {
+   "id": "Multilingual_3_Human",
+   "novelty": 4.5,
+   "reviews": 2,
+   "cliche": 74,
+   "overlap": 6
+  },
+  {
+   "id": "Multilingual_4_Human",
+   "novelty": 5,
+   "reviews": 2,
+   "cliche": 14,
+   "overlap": 2
+  },
+  {
+   "id": "Multilingual_5_Human",
+   "novelty": 4.5,
+   "reviews": 2,
+   "cliche": 51,
+   "overlap": 5
+  },
+  {
+   "id": "Multilingual_6_Human",
+   "novelty": 3,
+   "reviews": 2,
+   "cliche": 52,
+   "overlap": 1
+  },
+  {
+   "id": "Multilingual_7_Human",
+   "novelty": 6,
+   "reviews": 2,
+   "cliche": 71,
+   "overlap": 6
+  },
+  {
+   "id": "Multilingual_8_Human",
+   "novelty": 6.5,
+   "reviews": 2,
+   "cliche": 56,
+   "overlap": 3
+  },
+  {
+   "id": "Multilingual_9_Human",
+   "novelty": 4,
+   "reviews": 3,
+   "cliche": 37,
+   "overlap": 5
+  },
+  {
+   "id": "Multilingual_10_Human",
+   "novelty": 4.5,
+   "reviews": 2,
+   "cliche": 0,
+   "overlap": 5
+  },
+  {
+   "id": "Multilingual_1_AI",
+   "novelty": 8.333333333333334,
+   "reviews": 3,
+   "cliche": 60,
+   "overlap": 6
+  },
+  {
+   "id": "Multilingual_2_AI",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 28,
+   "overlap": 6
+  },
+  {
+   "id": "Multilingual_3_AI",
+   "novelty": 7.5,
+   "reviews": 2,
+   "cliche": 4,
+   "overlap": 3
+  },
+  {
+   "id": "Multilingual_4_AI",
+   "novelty": 8,
+   "reviews": 2,
+   "cliche": 61,
+   "overlap": 6
+  },
+  {
+   "id": "Multilingual_5_AI",
+   "novelty": 7,
+   "reviews": 2,
+   "cliche": 67,
+   "overlap": 9
+  },
+  {
+   "id": "Multilingual_6_AI",
+   "novelty": 8,
+   "reviews": 2,
+   "cliche": 70,
+   "overlap": 3
+  },
+  {
+   "id": "Multilingual_7_AI",
+   "novelty": 7,
+   "reviews": 2,
+   "cliche": 51,
+   "overlap": 1
+  },
+  {
+   "id": "Multilingual_8_AI",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 39,
+   "overlap": 6
+  },
+  {
+   "id": "Multilingual_9_AI",
+   "novelty": 4,
+   "reviews": 2,
+   "cliche": 32,
+   "overlap": 3
+  },
+  {
+   "id": "Multilingual_10_AI",
+   "novelty": 8,
+   "reviews": 2,
+   "cliche": 29,
+   "overlap": 5
+  },
+  {
+   "id": "Factuality_1_Human",
+   "novelty": 6.5,
+   "reviews": 2,
+   "cliche": 0,
+   "overlap": 5
+  },
+  {
+   "id": "Factuality_2_Human",
+   "novelty": 4.333333333333333,
+   "reviews": 3,
+   "cliche": 36,
+   "overlap": 3
+  },
+  {
+   "id": "Factuality_3_Human",
+   "novelty": 5.333333333333333,
+   "reviews": 3,
+   "cliche": 53,
+   "overlap": 7
+  },
+  {
+   "id": "Factuality_4_Human",
+   "novelty": 4,
+   "reviews": 3,
+   "cliche": 16,
+   "overlap": 8
+  },
+  {
+   "id": "Factuality_5_Human",
+   "novelty": 2.6666666666666665,
+   "reviews": 3,
+   "cliche": 32,
+   "overlap": 7
+  },
+  {
+   "id": "Factuality_6_Human",
+   "novelty": 4,
+   "reviews": 3,
+   "cliche": 38,
+   "overlap": 5
+  },
+  {
+   "id": "Factuality_7_Human",
+   "novelty": 4,
+   "reviews": 3,
+   "cliche": 26,
+   "overlap": 3
+  },
+  {
+   "id": "Factuality_8_Human",
+   "novelty": 6.666666666666667,
+   "reviews": 3,
+   "cliche": 5,
+   "overlap": 1
+  },
+  {
+   "id": "Factuality_9_Human",
+   "novelty": 4.333333333333333,
+   "reviews": 3,
+   "cliche": 46,
+   "overlap": 6
+  },
+  {
+   "id": "Factuality_10_Human",
+   "novelty": 4.666666666666667,
+   "reviews": 3,
+   "cliche": 56,
+   "overlap": 3
+  },
+  {
+   "id": "Factuality_11_Human",
+   "novelty": 6.333333333333333,
+   "reviews": 3,
+   "cliche": 7,
+   "overlap": 6
+  },
+  {
+   "id": "Factuality_1_AI",
+   "novelty": 1.5,
+   "reviews": 2,
+   "cliche": 41,
+   "overlap": 4
+  },
+  {
+   "id": "Factuality_2_AI",
+   "novelty": 4.333333333333333,
+   "reviews": 3,
+   "cliche": 47,
+   "overlap": 5
+  },
+  {
+   "id": "Factuality_3_AI",
+   "novelty": 4,
+   "reviews": 2,
+   "cliche": 35,
+   "overlap": 3
+  },
+  {
+   "id": "Factuality_4_AI",
+   "novelty": 5,
+   "reviews": 3,
+   "cliche": 30,
+   "overlap": 5
+  },
+  {
+   "id": "Factuality_5_AI",
+   "novelty": 4.5,
+   "reviews": 2,
+   "cliche": 50,
+   "overlap": 7
+  },
+  {
+   "id": "Factuality_6_AI",
+   "novelty": 5,
+   "reviews": 2,
+   "cliche": 35,
+   "overlap": 5
+  },
+  {
+   "id": "Factuality_7_AI",
+   "novelty": 6.333333333333333,
+   "reviews": 3,
+   "cliche": 22,
+   "overlap": 8
+  },
+  {
+   "id": "Factuality_8_AI",
+   "novelty": 6,
+   "reviews": 2,
+   "cliche": 15,
+   "overlap": 2
+  },
+  {
+   "id": "Factuality_9_AI",
+   "novelty": 5,
+   "reviews": 2,
+   "cliche": 18,
+   "overlap": 5
+  },
+  {
+   "id": "Factuality_10_AI",
+   "novelty": 6.666666666666667,
+   "reviews": 3,
+   "cliche": 3,
+   "overlap": 7
+  },
+  {
+   "id": "Factuality_11_AI",
+   "novelty": 3.5,
+   "reviews": 2,
+   "cliche": 13,
+   "overlap": 8
+  },
+  {
+   "id": "Math_1_Human",
+   "novelty": 6,
+   "reviews": 2,
+   "cliche": 53,
+   "overlap": 5
+  },
+  {
+   "id": "Math_2_Human",
+   "novelty": 2,
+   "reviews": 2,
+   "cliche": 70,
+   "overlap": 5
+  },
+  {
+   "id": "Math_3_Human",
+   "novelty": 4.5,
+   "reviews": 2,
+   "cliche": 30,
+   "overlap": 6
+  },
+  {
+   "id": "Math_4_Human",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 0,
+   "overlap": 4
+  },
+  {
+   "id": "Math_1_AI",
+   "novelty": 4.5,
+   "reviews": 2,
+   "cliche": 68,
+   "overlap": 9
+  },
+  {
+   "id": "Math_2_AI",
+   "novelty": 4,
+   "reviews": 2,
+   "cliche": 66,
+   "overlap": 6
+  },
+  {
+   "id": "Math_3_AI",
+   "novelty": 5.5,
+   "reviews": 2,
+   "cliche": 57,
+   "overlap": 6
+  },
+  {
+   "id": "Math_4_AI",
+   "novelty": 6,
+   "reviews": 2,
+   "cliche": 54,
+   "overlap": 5
+  },
+  {
+   "id": "Uncertainty_1_Human",
+   "novelty": 6,
+   "reviews": 2,
+   "cliche": 50,
+   "overlap": 1
+  },
+  {
+   "id": "Uncertainty_2_Human",
+   "novelty": 3.3333333333333335,
+   "reviews": 3,
+   "cliche": 58,
+   "overlap": 4
+  },
+  {
+   "id": "Uncertainty_3_Human",
+   "novelty": 6,
+   "reviews": 2,
+   "cliche": 31,
+   "overlap": 5
+  },
+  {
+   "id": "Uncertainty_4_Human",
+   "novelty": 7,
+   "reviews": 2,
+   "cliche": 10,
+   "overlap": 6
+  },
+  {
+   "id": "Uncertainty_5_Human",
+   "novelty": 5.666666666666667,
+   "reviews": 3,
+   "cliche": 0,
+   "overlap": 7
+  },
+  {
+   "id": "Uncertainty_6_Human",
+   "novelty": 6,
+   "reviews": 2,
+   "cliche": 21,
+   "overlap": 3
+  },
+  {
+   "id": "Uncertainty_1_AI",
+   "novelty": 6.5,
+   "reviews": 2,
+   "cliche": 59,
+   "overlap": 8
+  },
+  {
+   "id": "Uncertainty_2_AI",
+   "novelty": 5,
+   "reviews": 4,
+   "cliche": 70,
+   "overlap": 7
+  },
+  {
+   "id": "Uncertainty_3_AI",
+   "novelty": 6,
+   "reviews": 2,
+   "cliche": 8,
+   "overlap": 9
+  },
+  {
+   "id": "Uncertainty_4_AI",
+   "novelty": 6,
+   "reviews": 3,
+   "cliche": 11,
+   "overlap": 4
+  },
+  {
+   "id": "Uncertainty_5_AI",
+   "novelty": 2.5,
+   "reviews": 2,
+   "cliche": 0,
+   "overlap": 9
+  },
+  {
+   "id": "Uncertainty_6_AI",
+   "novelty": 5,
+   "reviews": 2,
+   "cliche": 42,
+   "overlap": 8
+  }
+ ]
+}
