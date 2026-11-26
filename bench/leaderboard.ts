@@ -179,7 +179,12 @@ for (const j of JUDGES) {
     }));
   }
 }
-const judged = answered.filter((p) => JUDGES.length > 0 && JUDGES.every((j) => clusters[j.id]?.[p]));
+// Only prompts whose groups cover every current answer: a stale grouping from before a model joined does not count.
+const covers = (j: string, p: string) => {
+  const have = new Set((clusters[j]?.[p] ?? []).flat());
+  return MODELS.every((m) => store.answers[m.id]![p]!.every((_, i) => have.has(`${m.id}#${i}`)));
+};
+const judged = answered.filter((p) => JUDGES.length > 0 && JUDGES.every((j) => covers(j.id, p)));
 const vendorOf = new Map(MODELS.map((m) => [m.id, m.vendor]));
 /** Share of model m's answers to p whose idea some model of another vendor also gave, per judge. */
 const sharedShare = (j: string, m: Model, p: string) => {

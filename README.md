@@ -75,17 +75,18 @@ npx -p not-obvious-mcp not-obvious diverge "Suggest a side business" all --conte
 
 ## Which model is the most banal?
 
-We asked 13 models from Anthropic, Google (including open-weight Gemma 4) and Sber the same 30 open prompts (5 answers each) and scored every model against the answers of the other vendors. Full table, method and caveats: [docs/leaderboard.md](docs/leaderboard.md).
+We asked 16 models from Anthropic, Google (including open-weight Gemma 4), Sber, and three small local models (Llama 3.2 3b, Qwen3 4b, Mistral 7b via Ollama) the same 30 open prompts (5 answers each) and scored every model against the answers of the other vendors. Full table, method and caveats: [docs/leaderboard.md](docs/leaderboard.md).
 
 | model | banality, 0-100 | ideas another vendor also gave |
 |---|---|---|
-| claude-haiku-4-5 | 93.4 | 76% |
-| gemini-3.8-flash | 93.2 | 71% |
-| claude-opus-5-5 | 91.7 | 79% |
-| gemma-4-31b-it (open weights) | 90.8 | 76% |
-| GigaChat-2 | 86.7 | 55% |
+| claude-haiku-4-5 | 90.9 | 81% |
+| llama3.2:3b (local, Q4) | 89.8 | 68% |
+| gemini-3.8-flash | 88.6 | 77% |
+| claude-opus-5-5 | 87.1 | 81% |
+| gemma-4-31b-it (open weights) | 85.4 | 84% |
+| GigaChat-2 | 84.2 | 67% |
 
-They all say the same thing: 82-92% of each model's answers are practically an answer some other vendor gave, and the intervals overlap. Asked to name a black cat, 11 of 13 models say Midnight. Bigger and newer models are not less banal, and neither are open-weight ones.
+They all say the same thing: 79-88% of each model's answers are practically an answer some other vendor gave, and the intervals overlap. Asked to name a black cat, 11 of 13 large models say Midnight; the small ones say "Midnight's Kiss" and "Midnight Mews". Bigger and newer models are not less banal, and neither are open-weight or small local ones.
 
 What does help is context about the person asking. With two sentences about who they are, banality drops by 12-25 points for every model we tried. But give the same person to three models and they agree with each other again (80-91): the crowd moves to a new spot instead of disappearing. Details: [docs/context.md](docs/context.md).
 
@@ -96,7 +97,8 @@ What does help is context about the person asking. With two sentences about who 
 - [x] More models in the cloud: OpenRouter and any OpenAI-compatible server, incl. fully local Ollama ([docs/providers.md](docs/providers.md))
 - [x] Cliché map: themes of the cloud and the assumptions behind them (`map`)
 - [x] Open-weight models on the leaderboard: Gemma 4 (31b, 26b-a4b)
-- [ ] Llama, DeepSeek, Qwen, Mistral on the leaderboard via OpenRouter
+- [x] Small local models on the leaderboard: Llama 3.2 3b, Qwen3 4b, Mistral 7b (Ollama, Q4)
+- [ ] Full-size Llama, DeepSeek, Qwen, Mistral on the leaderboard via OpenRouter
 - [x] Public leaderboard: which model is the most banal ([docs/leaderboard.md](docs/leaderboard.md))
 - [x] External check against human originality ratings (3030 AUT answers): weak agreement, honest write-up in [docs/human-calibration.md](docs/human-calibration.md)
 

@@ -1,50 +1,64 @@
 # Which model is the most banal?
 
-Date: 2026-11-17. 13 models from 3 vendors, 30 of 30 prompts, 5 answers each (bench/leaderboard.ts, answers in bench/leaderboard.json).
+Date: 2026-11-26. 16 models from 6 vendors, 30 of 30 prompts, 5 answers each (bench/leaderboard.ts, answers in bench/leaderboard.json).
 
 Each model got the same open prompts ("How can a public library stay relevant?", "Suggest a name for a black cat") as plain text with provider defaults. **Banality** = mean Cliché Score (embedding part, gemini-embedding-001) of its answers against the answers of each model from another vendor, averaged per vendor. 100 = says what the other vendors say, 0 = far from all of them. Same-vendor models are not compared with each other.
 
 | # | model | vendor | banality (95% CI) | answers at 70+ | nearest similarity | self-repetition |
 |---|---|---|---|---|---|---|
-| 1 | claude-haiku-4-5 | Anthropic | 93.4 (90.3-96.0) | 92% | 0.874 | 0.817 |
-| 2 | gemini-3.8-flash | Google | 93.2 (89.3-96.3) | 92% | 0.868 | 0.813 |
-| 3 | claude-sonnet-5-5 | Anthropic | 92.6 (88.8-95.6) | 90% | 0.871 | 0.814 |
-| 4 | gemini-3.6-flash | Google | 92.4 (88.0-95.8) | 91% | 0.868 | 0.813 |
-| 5 | claude-fable-5-1 | Anthropic | 92.3 (88.5-95.6) | 89% | 0.873 | 0.809 |
-| 6 | claude-haiku-5-5 | Anthropic | 92.1 (88.5-95.1) | 89% | 0.870 | 0.808 |
-| 7 | gemini-3.5-flash-lite | Google | 92.1 (88.8-95.0) | 89% | 0.868 | 0.807 |
-| 8 | claude-opus-5-5 | Anthropic | 91.7 (87.6-95.0) | 89% | 0.870 | 0.805 |
-| 9 | gemma-4-26b-a4b-it | Google | 91.5 (87.0-95.0) | 89% | 0.871 | 0.806 |
-| 10 | gemma-4-31b-it | Google | 90.8 (86.4-94.4) | 88% | 0.872 | 0.807 |
-| 11 | GigaChat-2-Max | Sber | 89.8 (86.1-93.0) | 87% | 0.864 | 0.798 |
-| 12 | GigaChat-2-Pro | Sber | 89.2 (86.0-92.1) | 85% | 0.860 | 0.804 |
-| 13 | GigaChat-2 | Sber | 86.7 (80.5-91.3) | 82% | 0.857 | 0.802 |
+| 1 | claude-haiku-4-5 | Anthropic | 90.9 (87.3-93.9) | 88% | 0.870 | 0.817 |
+| 2 | llama3.2:3b | Meta | 89.8 (86.4-92.7) | 86% | 0.862 | 0.818 |
+| 3 | claude-sonnet-5-5 | Anthropic | 88.8 (84.6-92.6) | 84% | 0.864 | 0.814 |
+| 4 | gemini-3.8-flash | Google | 88.6 (84.1-92.6) | 86% | 0.861 | 0.813 |
+| 5 | gemini-3.6-flash | Google | 88.2 (83.5-92.1) | 84% | 0.861 | 0.813 |
+| 6 | claude-haiku-5-5 | Anthropic | 88.1 (83.9-92.1) | 85% | 0.864 | 0.808 |
+| 7 | qwen3:4b | Alibaba | 87.9 (83.6-91.7) | 84% | 0.858 | 0.812 |
+| 8 | claude-fable-5-1 | Anthropic | 87.5 (82.6-91.8) | 83% | 0.865 | 0.809 |
+| 9 | claude-opus-5-5 | Anthropic | 87.1 (82.5-91.2) | 83% | 0.862 | 0.805 |
+| 10 | gemini-3.5-flash-lite | Google | 86.9 (81.4-91.8) | 83% | 0.861 | 0.807 |
+| 11 | mistral:7b | Mistral | 86.4 (82.4-89.8) | 82% | 0.858 | 0.804 |
+| 12 | GigaChat-2-Max | Sber | 86.2 (81.9-89.9) | 82% | 0.862 | 0.798 |
+| 13 | gemma-4-26b-a4b-it | Google | 86.1 (80.9-90.7) | 82% | 0.863 | 0.806 |
+| 14 | GigaChat-2-Pro | Sber | 85.8 (81.1-90.2) | 82% | 0.858 | 0.804 |
+| 15 | gemma-4-31b-it | Google | 85.4 (79.6-90.5) | 81% | 0.863 | 0.807 |
+| 16 | GigaChat-2 | Sber | 84.2 (77.5-89.4) | 79% | 0.858 | 0.802 |
 
 Nearest similarity: mean cosine between an answer and the closest answer of another vendor's model. Self-repetition: mean cosine between a model's own 5 answers to one prompt (higher = the answers are variations of one idea). Intervals: bootstrap over prompts.
 
 ## Second view: shared ideas, judged by LLMs
 
-No embeddings here. For each of 30 prompts all 65 answers were anonymised, shuffled and grouped into ideas by two judges (claude-opus-5-5 and gemini-3.5-flash-lite). **Shared** = share of a model's answers whose idea at least one model from another vendor also gave. Mean of both judges, 95% bootstrap interval over prompts.
+No embeddings here. For each of 30 prompts all 80 answers were anonymised, shuffled and grouped into ideas by two judges (claude-opus-5-5 and gemini-3.5-flash-lite). **Shared** = share of a model's answers whose idea at least one model from another vendor also gave. Mean of both judges, 95% bootstrap interval over prompts.
 
 | # | model | vendor | shared (95% CI) | claude-opus-5-5 | gemini-3.5-flash-lite |
 |---|---|---|---|---|---|
-| 1 | gemma-4-26b-a4b-it | Google | 80% (70%-88%) | 83% | 76% |
-| 2 | claude-opus-5-5 | Anthropic | 79% (69%-88%) | 79% | 79% |
-| 3 | claude-fable-5-1 | Anthropic | 77% (66%-86%) | 77% | 77% |
-| 4 | claude-haiku-5-5 | Anthropic | 77% (65%-88%) | 77% | 77% |
-| 5 | gemma-4-31b-it | Google | 76% (68%-84%) | 78% | 74% |
-| 6 | claude-haiku-4-5 | Anthropic | 76% (66%-85%) | 75% | 77% |
-| 7 | claude-sonnet-5-5 | Anthropic | 74% (63%-84%) | 75% | 73% |
-| 8 | gemini-3.5-flash-lite | Google | 72% (61%-82%) | 71% | 73% |
-| 9 | gemini-3.8-flash | Google | 71% (61%-81%) | 70% | 72% |
-| 10 | gemini-3.6-flash | Google | 70% (60%-79%) | 67% | 72% |
-| 11 | GigaChat-2-Max | Sber | 65% (54%-75%) | 65% | 65% |
-| 12 | GigaChat-2-Pro | Sber | 62% (52%-72%) | 65% | 59% |
-| 13 | GigaChat-2 | Sber | 55% (44%-66%) | 57% | 53% |
+| 1 | gemma-4-26b-a4b-it | Google | 84% (75%-91%) | 83% | 85% |
+| 2 | gemma-4-31b-it | Google | 84% (75%-91%) | 83% | 84% |
+| 3 | claude-fable-5-1 | Anthropic | 83% (73%-92%) | 82% | 84% |
+| 4 | claude-haiku-5-5 | Anthropic | 83% (73%-91%) | 81% | 85% |
+| 5 | claude-sonnet-5-5 | Anthropic | 83% (73%-91%) | 81% | 84% |
+| 6 | claude-haiku-4-5 | Anthropic | 81% (72%-89%) | 81% | 82% |
+| 7 | claude-opus-5-5 | Anthropic | 81% (72%-89%) | 79% | 83% |
+| 8 | GigaChat-2-Max | Sber | 78% (68%-86%) | 75% | 80% |
+| 9 | gemini-3.8-flash | Google | 77% (68%-85%) | 75% | 79% |
+| 10 | gemini-3.6-flash | Google | 74% (65%-82%) | 68% | 79% |
+| 11 | gemini-3.5-flash-lite | Google | 74% (63%-83%) | 71% | 77% |
+| 12 | GigaChat-2-Pro | Sber | 70% (61%-79%) | 69% | 72% |
+| 13 | llama3.2:3b | Meta | 68% (58%-77%) | 63% | 73% |
+| 14 | GigaChat-2 | Sber | 67% (56%-77%) | 65% | 69% |
+| 15 | mistral:7b | Mistral | 65% (56%-74%) | 63% | 68% |
+| 16 | qwen3:4b | Alibaba | 64% (54%-73%) | 65% | 63% |
 
-The two judges agree on the model order at Spearman 0.87.
+The two judges agree on the model order at Spearman 0.90.
 
 ## Notes (written by hand, not regenerated)
+
+2026-11-26, small local models: llama3.2:3b (Meta), qwen3:4b (Alibaba) and mistral:7b (Mistral), run on a laptop through Ollama's OpenAI-compatible endpoint (`LB_COMPAT_URL=http://127.0.0.1:11434/v1`), default Ollama builds, Q4_K_M quantization. Small local, Q4: these are not the full-size Llama, Qwen or Mistral, which still need an OpenRouter key. 16 models from 6 vendors, 2400 answers, both judges re-ran on all 80 answers per prompt.
+
+- The two views disagree about small models, and that is the finding. By embeddings llama3.2:3b is the second most banal model on the board (89.8), qwen3:4b sits in the Claude/Gemini band (87.9), mistral:7b in the middle (86.4). By LLM judges they share the fewest ideas with other vendors (64-68%, with the smallest GigaChat). Small models say the same kind of thing in the same words, but less often the exact same idea: "Midnight's Kiss" and "Midnight Mews" instead of Midnight, "Stealthy Sable" instead of Sable. An embedder sees that as the cloud, a judge grouping ideas does not.
+- So "less shared" here is not "more creative". It is closer to noise around the cliché than to a step away from it, the same caveat as for GigaChat.
+- Everyone else moved by 1-3 points because every reference cloud now averages 5 other vendors instead of 2: banality 84.2-90.9, judged 74-84% for Claude, Gemini and Gemma. The order inside that band reshuffled, the intervals still overlap.
+- The judges agree at Spearman 0.88 on 16 models (0.87 on 13).
+- Fixed on the way: a judge grouping made before a model joined no longer counts for that prompt (`covers` in bench/leaderboard.ts); a failed judge run would otherwise have scored the new models as sharing nothing. On Windows `LB_CLAUDE_CMD` has to start with `bash` to run a .sh wrapper.
 
 2026-11-17, open weights: Gemma 4 (gemma-4-31b-it, gemma-4-26b-a4b-it) added through Gemini's OpenAI-compatible endpoint, i.e. through the same `compatProvider` that v0.4 uses for OpenRouter and Ollama. 13 models, 1950 answers, both judges re-ran on all 65 answers per prompt.
 

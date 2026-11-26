@@ -3392,7 +3392,7 @@
    ]
   }
  },
- "date": "2026-11-17T23:13:25.988Z",
+ "date": "2026-11-26T08:30:04.586Z",
  "prompts": [
   "Suggest a side business for a software developer",
   "How can a small coffee shop attract more customers?",
@@ -3461,157 +3461,193 @@
   {
    "model": "claude-haiku-4-5",
    "vendor": "Anthropic",
-   "banality": 93.4188888888889,
+   "banality": 90.88088888888889,
    "ci": [
-    90.28888888888892,
-    96.02377777777777
+    87.29377777777778,
+    93.92213333333335
    ],
-   "clicheShare": 0.9224444444444445,
-   "nearestSim": 0.8740001910995712,
+   "clicheShare": 0.8809777777777777,
+   "nearestSim": 0.8695533412665807,
    "selfSim": 0.8165114340393845
   },
   {
-   "model": "gemini-3.8-flash",
-   "vendor": "Google",
-   "banality": 93.16622222222217,
+   "model": "llama3.2:3b",
+   "vendor": "Meta",
+   "banality": 89.82846666666667,
    "ci": [
-    89.26177777777777,
-    96.27577777777779
+    86.41357777777777,
+    92.73015555555554
    ],
-   "clicheShare": 0.9182222222222225,
-   "nearestSim": 0.8681686047492413,
-   "selfSim": 0.8132649538818245
+   "clicheShare": 0.8639555555555557,
+   "nearestSim": 0.8617323382078789,
+   "selfSim": 0.8181320812382739
   },
   {
    "model": "claude-sonnet-5-5",
    "vendor": "Anthropic",
-   "banality": 92.61644444444443,
+   "banality": 88.79057777777777,
    "ci": [
-    88.8208888888889,
-    95.64644444444447
+    84.63804444444447,
+    92.57893333333332
    ],
-   "clicheShare": 0.901111111111111,
-   "nearestSim": 0.8708848657274778,
+   "clicheShare": 0.8417777777777778,
+   "nearestSim": 0.8642797335708937,
    "selfSim": 0.8138353467355647
+  },
+  {
+   "model": "gemini-3.8-flash",
+   "vendor": "Google",
+   "banality": 88.62648888888889,
+   "ci": [
+    84.06,
+    92.6391111111111
+   ],
+   "clicheShare": 0.8552888888888892,
+   "nearestSim": 0.8608099970924933,
+   "selfSim": 0.8132649538818245
   },
   {
    "model": "gemini-3.6-flash",
    "vendor": "Google",
-   "banality": 92.40777777777777,
+   "banality": 88.22444444444446,
    "ci": [
-    87.9568888888889,
-    95.82555555555555
+    83.5367111111111,
+    92.07226666666665
    ],
-   "clicheShare": 0.908888888888889,
-   "nearestSim": 0.8680961169537902,
+   "clicheShare": 0.8382222222222223,
+   "nearestSim": 0.8612963584537244,
    "selfSim": 0.8129079317102365
-  },
-  {
-   "model": "claude-fable-5-1",
-   "vendor": "Anthropic",
-   "banality": 92.34533333333336,
-   "ci": [
-    88.47111111111114,
-    95.62422222222224
-   ],
-   "clicheShare": 0.8946666666666666,
-   "nearestSim": 0.8725396072709085,
-   "selfSim": 0.808894587089601
   },
   {
    "model": "claude-haiku-5-5",
    "vendor": "Anthropic",
-   "banality": 92.11066666666667,
+   "banality": 88.13226666666668,
    "ci": [
-    88.53955555555555,
-    95.07822222222221
+    83.86284444444445,
+    92.05253333333329
    ],
-   "clicheShare": 0.894222222222222,
-   "nearestSim": 0.8695713560912303,
+   "clicheShare": 0.845688888888889,
+   "nearestSim": 0.8638388551905919,
    "selfSim": 0.808396772462849
   },
   {
-   "model": "gemini-3.5-flash-lite",
-   "vendor": "Google",
-   "banality": 92.08444444444444,
+   "model": "qwen3:4b",
+   "vendor": "Alibaba",
+   "banality": 87.86097777777776,
    "ci": [
-    88.79133333333334,
-    94.97333333333333
+    83.62497777777776,
+    91.70097777777778
    ],
-   "clicheShare": 0.894888888888889,
-   "nearestSim": 0.8679453563333186,
-   "selfSim": 0.8074780051455477
+   "clicheShare": 0.8360888888888887,
+   "nearestSim": 0.8575224693324647,
+   "selfSim": 0.811754563086451
+  },
+  {
+   "model": "claude-fable-5-1",
+   "vendor": "Anthropic",
+   "banality": 87.54213333333334,
+   "ci": [
+    82.5968888888889,
+    91.83973333333331
+   ],
+   "clicheShare": 0.8285333333333333,
+   "nearestSim": 0.8646932287042097,
+   "selfSim": 0.808894587089601
   },
   {
    "model": "claude-opus-5-5",
    "vendor": "Anthropic",
-   "banality": 91.6531111111111,
+   "banality": 87.1399111111111,
    "ci": [
-    87.58844444444443,
-    95.01866666666666
+    82.45235555555556,
+    91.17555555555556
    ],
-   "clicheShare": 0.89,
-   "nearestSim": 0.8701394272754926,
+   "clicheShare": 0.8346666666666667,
+   "nearestSim": 0.8623928875384894,
    "selfSim": 0.8049930189763528
   },
   {
-   "model": "gemma-4-26b-a4b-it",
+   "model": "gemini-3.5-flash-lite",
    "vendor": "Google",
-   "banality": 91.47533333333332,
+   "banality": 86.94177777777777,
    "ci": [
-    87.03644444444446,
-    94.95511111111114
+    81.42728888888888,
+    91.8256
    ],
-   "clicheShare": 0.8913333333333333,
-   "nearestSim": 0.8705588269736495,
-   "selfSim": 0.8057034541107538
+   "clicheShare": 0.8339555555555556,
+   "nearestSim": 0.8606543054139666,
+   "selfSim": 0.8074780051455477
   },
   {
-   "model": "gemma-4-31b-it",
-   "vendor": "Google",
-   "banality": 90.7826666666667,
+   "model": "mistral:7b",
+   "vendor": "Mistral",
+   "banality": 86.36177777777779,
    "ci": [
-    86.40688888888887,
-    94.40422222222222
+    82.3592,
+    89.8424
    ],
-   "clicheShare": 0.8815555555555556,
-   "nearestSim": 0.8717595171211322,
-   "selfSim": 0.8072175555100627
+   "clicheShare": 0.8163555555555556,
+   "nearestSim": 0.8579160641991064,
+   "selfSim": 0.8035489657766067
   },
   {
    "model": "GigaChat-2-Max",
    "vendor": "Sber",
-   "banality": 89.78333333333335,
+   "banality": 86.16666666666667,
    "ci": [
-    86.13666666666668,
-    92.95533333333333
+    81.88426666666669,
+    89.87573333333334
    ],
-   "clicheShare": 0.8686666666666667,
-   "nearestSim": 0.8639485565525616,
+   "clicheShare": 0.8221333333333334,
+   "nearestSim": 0.8619169350966496,
    "selfSim": 0.7982379299823724
+  },
+  {
+   "model": "gemma-4-26b-a4b-it",
+   "vendor": "Google",
+   "banality": 86.12213333333335,
+   "ci": [
+    80.88844444444447,
+    90.72764444444446
+   ],
+   "clicheShare": 0.8245333333333333,
+   "nearestSim": 0.8633746378999076,
+   "selfSim": 0.8057034541107538
   },
   {
    "model": "GigaChat-2-Pro",
    "vendor": "Sber",
-   "banality": 89.18533333333333,
+   "banality": 85.84213333333334,
    "ci": [
-    85.99933333333333,
-    92.08733333333333
+    81.09066666666666,
+    90.22213333333335
    ],
-   "clicheShare": 0.8519999999999999,
-   "nearestSim": 0.8599981570370608,
+   "clicheShare": 0.8168000000000001,
+   "nearestSim": 0.8584398064053886,
    "selfSim": 0.8035674764444318
+  },
+  {
+   "model": "gemma-4-31b-it",
+   "vendor": "Google",
+   "banality": 85.3824,
+   "ci": [
+    79.56186666666667,
+    90.48275555555553
+   ],
+   "clicheShare": 0.8126222222222224,
+   "nearestSim": 0.8632699891937728,
+   "selfSim": 0.8072175555100627
   },
   {
    "model": "GigaChat-2",
    "vendor": "Sber",
-   "banality": 86.69933333333334,
+   "banality": 84.22506666666668,
    "ci": [
-    80.49399999999997,
-    91.30266666666668
+    77.48026666666665,
+    89.41573333333335
    ],
-   "clicheShare": 0.8206666666666667,
-   "nearestSim": 0.8569025930754162,
+   "clicheShare": 0.792266666666667,
+   "nearestSim": 0.8581501876720287,
    "selfSim": 0.8015479051842702
   }
  ],
@@ -3622,6 +3658,7 @@
      "claude-sonnet-5-5#4",
      "GigaChat-2-Pro#4",
      "GigaChat-2#1",
+     "llama3.2:3b#1",
      "claude-haiku-4-5#0"
     ],
     [
@@ -3630,52 +3667,27 @@
      "GigaChat-2-Max#2"
     ],
     [
-     "gemma-4-31b-it#1",
-     "gemini-3.6-flash#2",
-     "gemini-3.5-flash-lite#4",
-     "gemini-3.8-flash#2"
-    ],
-    [
-     "claude-haiku-4-5#2",
-     "GigaChat-2-Max#4",
-     "claude-haiku-5-5#1",
-     "claude-sonnet-5-5#1",
-     "GigaChat-2#3",
-     "claude-opus-5-5#2",
-     "gemma-4-26b-a4b-it#0",
-     "claude-fable-5-1#3"
-    ],
-    [
-     "gemini-3.8-flash#3",
-     "claude-haiku-5-5#2",
-     "gemini-3.5-flash-lite#2",
-     "claude-sonnet-5-5#3",
-     "GigaChat-2-Pro#3",
-     "gemma-4-31b-it#4",
-     "claude-opus-5-5#3",
-     "GigaChat-2#4",
-     "GigaChat-2-Max#3",
-     "claude-fable-5-1#2",
-     "gemini-3.6-flash#4"
-    ],
-    [
      "gemini-3.6-flash#3",
      "gemini-3.8-flash#4"
     ],
     [
      "gemini-3.5-flash-lite#1",
      "gemma-4-31b-it#0",
+     "llama3.2:3b#2",
      "claude-sonnet-5-5#0",
      "claude-fable-5-1#0",
      "gemini-3.8-flash#0",
+     "mistral:7b#1",
      "claude-opus-5-5#0",
      "gemma-4-26b-a4b-it#1",
+     "qwen3:4b#0",
      "GigaChat-2-Pro#2",
      "claude-haiku-5-5#0",
      "claude-haiku-4-5#4",
      "gemini-3.6-flash#0"
     ],
     [
+     "qwen3:4b#3",
      "claude-fable-5-1#1",
      "GigaChat-2-Max#1",
      "GigaChat-2#2",
@@ -3687,7 +3699,45 @@
      "claude-haiku-4-5#3",
      "gemini-3.8-flash#1",
      "gemini-3.5-flash-lite#0",
+     "llama3.2:3b#3",
      "claude-haiku-5-5#3"
+    ],
+    [
+     "mistral:7b#3"
+    ],
+    [
+     "gemma-4-31b-it#1",
+     "gemini-3.6-flash#2",
+     "gemini-3.5-flash-lite#4",
+     "gemini-3.8-flash#2"
+    ],
+    [
+     "claude-haiku-4-5#2",
+     "llama3.2:3b#4",
+     "GigaChat-2-Max#4",
+     "claude-haiku-5-5#1",
+     "claude-sonnet-5-5#1",
+     "qwen3:4b#1",
+     "GigaChat-2#3",
+     "mistral:7b#0",
+     "claude-opus-5-5#2",
+     "gemma-4-26b-a4b-it#0",
+     "claude-fable-5-1#3"
+    ],
+    [
+     "gemini-3.8-flash#3",
+     "claude-haiku-5-5#2",
+     "qwen3:4b#2",
+     "gemini-3.5-flash-lite#2",
+     "claude-sonnet-5-5#3",
+     "mistral:7b#2",
+     "GigaChat-2-Pro#3",
+     "gemma-4-31b-it#4",
+     "claude-opus-5-5#3",
+     "GigaChat-2#4",
+     "GigaChat-2-Max#3",
+     "claude-fable-5-1#2",
+     "gemini-3.6-flash#4"
     ],
     [
      "GigaChat-2-Max#0",
@@ -3697,7 +3747,12 @@
      "claude-fable-5-1#4",
      "claude-haiku-4-5#1",
      "claude-sonnet-5-5#2",
+     "llama3.2:3b#0",
+     "qwen3:4b#4",
      "gemma-4-31b-it#3"
+    ],
+    [
+     "mistral:7b#4"
     ],
     [
      "claude-haiku-5-5#4",
@@ -3732,12 +3787,11 @@
      "GigaChat-2-Pro#4"
     ],
     [
-     "gemini-3.6-flash#3",
-     "gemini-3.5-flash-lite#3"
+     "mistral:7b#2"
     ],
     [
-     "claude-sonnet-5-5#0",
-     "claude-opus-5-5#0"
+     "gemini-3.6-flash#3",
+     "gemini-3.5-flash-lite#3"
     ],
     [
      "claude-opus-5-5#4",
@@ -3748,12 +3802,20 @@
      "claude-fable-5-1#3"
     ],
     [
-     "claude-haiku-4-5#3",
-     "gemma-4-26b-a4b-it#2"
+     "claude-sonnet-5-5#0",
+     "claude-opus-5-5#0"
     ],
     [
-     "gemini-3.8-flash#4",
-     "gemma-4-31b-it#2"
+     "GigaChat-2-Max#2",
+     "mistral:7b#0"
+    ],
+    [
+     "gemma-4-31b-it#2",
+     "gemini-3.8-flash#4"
+    ],
+    [
+     "gemma-4-26b-a4b-it#2",
+     "claude-haiku-4-5#3"
     ],
     [
      "gemma-4-26b-a4b-it#4"
@@ -3763,6 +3825,9 @@
     ],
     [
      "gemini-3.6-flash#2"
+    ],
+    [
+     "mistral:7b#3"
     ],
     [
      "claude-haiku-4-5#2"
@@ -3775,6 +3840,9 @@
     ],
     [
      "GigaChat-2-Pro#0"
+    ],
+    [
+     "llama3.2:3b#2"
     ],
     [
      "GigaChat-2#2"
@@ -3795,10 +3863,13 @@
      "claude-opus-5-5#1"
     ],
     [
-     "GigaChat-2-Max#2"
+     "qwen3:4b#1"
     ],
     [
      "claude-haiku-4-5#4"
+    ],
+    [
+     "qwen3:4b#2"
     ],
     [
      "GigaChat-2-Max#3"
@@ -3810,10 +3881,16 @@
      "gemma-4-31b-it#1"
     ],
     [
+     "mistral:7b#1"
+    ],
+    [
      "gemma-4-31b-it#4"
     ],
     [
      "gemini-3.8-flash#3"
+    ],
+    [
+     "qwen3:4b#3"
     ],
     [
      "gemini-3.6-flash#1"
@@ -3852,10 +3929,31 @@
      "gemini-3.8-flash#1"
     ],
     [
+     "qwen3:4b#4"
+    ],
+    [
      "gemini-3.5-flash-lite#0"
     ],
     [
+     "llama3.2:3b#1"
+    ],
+    [
      "claude-opus-5-5#3"
+    ],
+    [
+     "llama3.2:3b#4"
+    ],
+    [
+     "llama3.2:3b#3"
+    ],
+    [
+     "qwen3:4b#0"
+    ],
+    [
+     "mistral:7b#4"
+    ],
+    [
+     "llama3.2:3b#0"
     ],
     [
      "gemini-3.6-flash#4"
@@ -3866,14 +3964,16 @@
      "GigaChat-2-Max#0",
      "gemma-4-31b-it#1",
      "GigaChat-2#0",
-     "claude-haiku-4-5#4"
+     "mistral:7b#1",
+     "claude-haiku-4-5#4",
+     "qwen3:4b#3",
+     "gemini-3.5-flash-lite#4"
     ],
     [
      "claude-opus-5-5#2",
      "gemini-3.8-flash#3",
      "claude-sonnet-5-5#1",
      "gemini-3.6-flash#3",
-     "gemini-3.5-flash-lite#4",
      "claude-fable-5-1#3",
      "gemma-4-26b-a4b-it#4"
     ],
@@ -3882,9 +3982,11 @@
      "gemini-3.5-flash-lite#3",
      "claude-sonnet-5-5#2",
      "claude-haiku-5-5#4",
+     "mistral:7b#4",
      "gemini-3.8-flash#4",
      "claude-haiku-4-5#3",
      "GigaChat-2-Pro#0",
+     "qwen3:4b#4",
      "claude-opus-5-5#3",
      "gemma-4-31b-it#3",
      "GigaChat-2#1",
@@ -3897,9 +3999,6 @@
      "claude-fable-5-1#4"
     ],
     [
-     "GigaChat-2-Pro#2"
-    ],
-    [
      "claude-opus-5-5#0",
      "gemini-3.8-flash#0",
      "gemini-3.5-flash-lite#0",
@@ -3907,19 +4006,32 @@
      "claude-haiku-5-5#0",
      "gemma-4-31b-it#0",
      "gemini-3.6-flash#0",
+     "qwen3:4b#1",
      "claude-sonnet-5-5#0",
      "claude-fable-5-1#0",
      "GigaChat-2-Max#3"
     ],
     [
      "GigaChat-2#4",
-     "claude-sonnet-5-5#3",
+     "claude-haiku-4-5#1",
+     "mistral:7b#0",
+     "gemma-4-26b-a4b-it#0",
+     "claude-haiku-5-5#2",
      "GigaChat-2-Pro#3"
+    ],
+    [
+     "claude-sonnet-5-5#3"
+    ],
+    [
+     "qwen3:4b#2"
     ],
     [
      "gemma-4-31b-it#4",
      "gemini-3.6-flash#4",
      "gemini-3.8-flash#2"
+    ],
+    [
+     "qwen3:4b#0"
     ],
     [
      "gemini-3.5-flash-lite#1",
@@ -3929,30 +4041,45 @@
      "claude-opus-5-5#4"
     ],
     [
-     "claude-haiku-4-5#1",
-     "gemma-4-26b-a4b-it#0",
-     "claude-haiku-5-5#2"
-    ],
-    [
      "GigaChat-2-Max#1",
+     "llama3.2:3b#3",
      "claude-opus-5-5#1",
      "claude-haiku-5-5#1",
      "gemma-4-26b-a4b-it#2",
      "gemma-4-31b-it#2",
      "claude-sonnet-5-5#4",
-     "claude-fable-5-1#2"
-    ],
-    [
+     "claude-fable-5-1#2",
      "claude-haiku-4-5#0",
      "gemini-3.6-flash#1",
      "gemini-3.8-flash#1"
     ],
     [
+     "GigaChat-2-Pro#1",
+     "GigaChat-2#3"
+    ],
+    [
+     "llama3.2:3b#2"
+    ],
+    [
      "gemini-3.5-flash-lite#2"
     ],
     [
-     "GigaChat-2-Pro#1",
-     "GigaChat-2#3"
+     "llama3.2:3b#4"
+    ],
+    [
+     "mistral:7b#2"
+    ],
+    [
+     "mistral:7b#3"
+    ],
+    [
+     "GigaChat-2-Pro#2"
+    ],
+    [
+     "llama3.2:3b#0"
+    ],
+    [
+     "llama3.2:3b#1"
     ],
     [
      "GigaChat-2-Max#4"
@@ -3963,15 +4090,49 @@
      "GigaChat-2-Max#1",
      "claude-fable-5-1#2",
      "GigaChat-2-Pro#2",
-     "claude-haiku-5-5#1"
+     "claude-haiku-5-5#1",
+     "mistral:7b#3"
+    ],
+    [
+     "claude-sonnet-5-5#2",
+     "llama3.2:3b#2"
+    ],
+    [
+     "gemma-4-31b-it#1",
+     "gemma-4-26b-a4b-it#1",
+     "claude-fable-5-1#3"
+    ],
+    [
+     "gemini-3.6-flash#0"
+    ],
+    [
+     "gemini-3.8-flash#4"
+    ],
+    [
+     "gemini-3.5-flash-lite#1"
     ],
     [
      "GigaChat-2-Max#0",
      "claude-haiku-4-5#2",
-     "GigaChat-2-Pro#3"
+     "GigaChat-2-Pro#3",
+     "mistral:7b#0",
+     "GigaChat-2#0",
+     "qwen3:4b#2"
+    ],
+    [
+     "llama3.2:3b#1"
+    ],
+    [
+     "qwen3:4b#1"
     ],
     [
      "gemini-3.6-flash#4"
+    ],
+    [
+     "gemini-3.5-flash-lite#0"
+    ],
+    [
+     "llama3.2:3b#4"
     ],
     [
      "gemini-3.8-flash#0",
@@ -3980,12 +4141,29 @@
      "gemini-3.6-flash#1"
     ],
     [
+     "claude-haiku-5-5#4"
+    ],
+    [
      "gemma-4-31b-it#2",
      "claude-haiku-5-5#2",
      "gemini-3.6-flash#2",
      "gemini-3.8-flash#1",
      "claude-sonnet-5-5#1",
      "gemma-4-26b-a4b-it#2"
+    ],
+    [
+     "GigaChat-2-Max#2",
+     "mistral:7b#1",
+     "GigaChat-2-Pro#4"
+    ],
+    [
+     "claude-haiku-4-5#1"
+    ],
+    [
+     "claude-fable-5-1#4"
+    ],
+    [
+     "gemini-3.5-flash-lite#4"
     ],
     [
      "claude-opus-5-5#2",
@@ -3998,38 +4176,11 @@
      "gemma-4-26b-a4b-it#0",
      "gemma-4-31b-it#0",
      "claude-haiku-5-5#0",
+     "qwen3:4b#4",
      "gemini-3.5-flash-lite#2",
      "claude-fable-5-1#0",
      "claude-haiku-4-5#0",
      "GigaChat-2#3"
-    ],
-    [
-     "gemini-3.8-flash#4"
-    ],
-    [
-     "GigaChat-2#2",
-     "claude-haiku-4-5#4"
-    ],
-    [
-     "claude-sonnet-5-5#2"
-    ],
-    [
-     "GigaChat-2#4"
-    ],
-    [
-     "claude-haiku-5-5#4"
-    ],
-    [
-     "gemini-3.5-flash-lite#1"
-    ],
-    [
-     "gemma-4-26b-a4b-it#4",
-     "claude-sonnet-5-5#4",
-     "claude-fable-5-1#1",
-     "claude-opus-5-5#3"
-    ],
-    [
-     "claude-opus-5-5#1"
     ],
     [
      "claude-opus-5-5#0",
@@ -4037,56 +4188,59 @@
      "gemini-3.8-flash#2"
     ],
     [
-     "gemini-3.5-flash-lite#0"
+     "llama3.2:3b#3"
     ],
     [
-     "GigaChat-2-Max#3"
+     "GigaChat-2#2",
+     "claude-haiku-4-5#4"
     ],
     [
+     "gemma-4-26b-a4b-it#4",
+     "claude-sonnet-5-5#4",
+     "qwen3:4b#0",
+     "claude-fable-5-1#1",
+     "claude-opus-5-5#3"
+    ],
+    [
+     "claude-opus-5-5#1"
+    ],
+    [
+     "GigaChat-2#4"
+    ],
+    [
+     "mistral:7b#2",
      "gemma-4-26b-a4b-it#3",
      "GigaChat-2-Max#4"
-    ],
-    [
-     "claude-haiku-4-5#3"
-    ],
-    [
-     "GigaChat-2-Max#2",
-     "GigaChat-2-Pro#4"
-    ],
-    [
-     "gemma-4-31b-it#1",
-     "gemma-4-26b-a4b-it#1",
-     "claude-fable-5-1#3"
-    ],
-    [
-     "GigaChat-2#0"
-    ],
-    [
-     "gemini-3.5-flash-lite#4"
-    ],
-    [
-     "claude-haiku-4-5#1"
-    ],
-    [
-     "claude-fable-5-1#4"
-    ],
-    [
-     "gemini-3.8-flash#3"
-    ],
-    [
-     "gemma-4-31b-it#3"
-    ],
-    [
-     "claude-opus-5-5#4"
-    ],
-    [
-     "gemini-3.6-flash#0"
     ],
     [
      "GigaChat-2#1"
     ],
     [
+     "gemma-4-31b-it#3"
+    ],
+    [
+     "claude-haiku-4-5#3"
+    ],
+    [
+     "gemini-3.8-flash#3"
+    ],
+    [
+     "claude-opus-5-5#4"
+    ],
+    [
+     "mistral:7b#4"
+    ],
+    [
+     "llama3.2:3b#0"
+    ],
+    [
      "GigaChat-2-Pro#1"
+    ],
+    [
+     "qwen3:4b#3"
+    ],
+    [
+     "GigaChat-2-Max#3"
     ]
    ],
    "How can a city reduce traffic congestion?": [
@@ -4096,6 +4250,7 @@
      "gemini-3.5-flash-lite#3",
      "gemini-3.8-flash#4",
      "GigaChat-2-Pro#2",
+     "mistral:7b#2",
      "claude-haiku-4-5#3",
      "GigaChat-2-Max#4",
      "gemma-4-31b-it#4",
@@ -4104,10 +4259,12 @@
     ],
     [
      "gemini-3.6-flash#2",
+     "llama3.2:3b#2",
      "claude-opus-5-5#2",
      "GigaChat-2#2",
      "gemma-4-31b-it#1",
      "gemini-3.8-flash#2",
+     "mistral:7b#4",
      "claude-fable-5-1#2",
      "claude-haiku-4-5#2",
      "claude-sonnet-5-5#2",
@@ -4119,13 +4276,18 @@
     ],
     [
      "GigaChat-2-Max#0",
-     "GigaChat-2#4"
+     "qwen3:4b#1",
+     "GigaChat-2#4",
+     "qwen3:4b#3"
     ],
     [
      "gemma-4-31b-it#2",
      "claude-haiku-4-5#1",
      "gemini-3.8-flash#1",
+     "qwen3:4b#2",
      "claude-opus-5-5#1",
+     "llama3.2:3b#3",
+     "mistral:7b#3",
      "gemini-3.5-flash-lite#1",
      "claude-sonnet-5-5#1",
      "claude-haiku-5-5#1",
@@ -4144,23 +4306,22 @@
      "gemini-3.6-flash#3",
      "gemini-3.5-flash-lite#4",
      "claude-opus-5-5#3",
+     "mistral:7b#1",
      "claude-haiku-4-5#4",
+     "llama3.2:3b#0",
+     "qwen3:4b#4",
      "gemma-4-31b-it#3",
      "claude-fable-5-1#3",
      "GigaChat-2#3"
     ],
     [
-     "GigaChat-2-Pro#4"
-    ],
-    [
-     "gemma-4-26b-a4b-it#4",
-     "claude-opus-5-5#4"
-    ],
-    [
+     "llama3.2:3b#1",
      "claude-fable-5-1#0",
      "gemini-3.8-flash#0",
      "gemma-4-26b-a4b-it#0",
      "claude-haiku-4-5#0",
+     "mistral:7b#0",
+     "qwen3:4b#0",
      "GigaChat-2-Pro#0",
      "gemini-3.5-flash-lite#0",
      "GigaChat-2#0",
@@ -4171,12 +4332,21 @@
      "claude-sonnet-5-5#0"
     ],
     [
+     "GigaChat-2-Pro#4"
+    ],
+    [
+     "gemma-4-26b-a4b-it#4",
+     "claude-opus-5-5#4",
+     "llama3.2:3b#4"
+    ],
+    [
      "claude-haiku-5-5#3"
     ]
    ],
    "Ideas to improve employee engagement in a remote team": [
     [
      "GigaChat-2-Max#0",
+     "qwen3:4b#0",
      "gemini-3.6-flash#0",
      "claude-fable-5-1#0",
      "claude-sonnet-5-5#1",
@@ -4192,27 +4362,36 @@
     [
      "GigaChat-2-Pro#0",
      "GigaChat-2-Max#4",
+     "mistral:7b#2",
      "claude-fable-5-1#3"
+    ],
+    [
+     "llama3.2:3b#2"
     ],
     [
      "claude-haiku-5-5#2",
      "claude-opus-5-5#2",
+     "qwen3:4b#3",
      "claude-fable-5-1#2",
      "claude-sonnet-5-5#3",
      "GigaChat-2-Max#3",
+     "gemini-3.6-flash#4",
      "claude-haiku-4-5#3",
      "gemini-3.5-flash-lite#2",
+     "llama3.2:3b#1",
+     "mistral:7b#3",
      "GigaChat-2-Pro#2",
      "GigaChat-2#2"
     ],
     [
-     "gemini-3.6-flash#4",
      "gemma-4-31b-it#4",
+     "qwen3:4b#1",
      "gemini-3.8-flash#3",
      "gemma-4-26b-a4b-it#4"
     ],
     [
      "claude-sonnet-5-5#0",
+     "mistral:7b#0",
      "claude-haiku-4-5#4",
      "gemini-3.6-flash#3",
      "gemma-4-26b-a4b-it#2",
@@ -4220,6 +4399,7 @@
     ],
     [
      "GigaChat-2-Pro#3",
+     "qwen3:4b#2",
      "gemma-4-26b-a4b-it#1",
      "GigaChat-2-Max#2",
      "claude-sonnet-5-5#2",
@@ -4250,21 +4430,35 @@
      "gemma-4-26b-a4b-it#3"
     ],
     [
+     "llama3.2:3b#3"
+    ],
+    [
      "GigaChat-2-Max#1"
     ],
     [
      "gemini-3.8-flash#4",
+     "llama3.2:3b#0",
      "claude-fable-5-1#4",
      "GigaChat-2#3"
     ],
     [
      "gemini-3.5-flash-lite#4",
      "claude-opus-5-5#3",
-     "claude-haiku-5-5#4"
+     "claude-haiku-5-5#4",
+     "llama3.2:3b#4"
+    ],
+    [
+     "mistral:7b#1"
     ],
     [
      "GigaChat-2-Pro#1",
      "gemini-3.5-flash-lite#3"
+    ],
+    [
+     "mistral:7b#4"
+    ],
+    [
+     "qwen3:4b#4"
     ]
    ],
    "What could a museum do to attract teenagers?": [
@@ -4277,7 +4471,8 @@
      "claude-haiku-5-5#2",
      "gemma-4-26b-a4b-it#4",
      "gemini-3.5-flash-lite#4",
-     "claude-opus-5-5#2"
+     "claude-opus-5-5#2",
+     "mistral:7b#4"
     ],
     [
      "GigaChat-2-Pro#2",
@@ -4288,28 +4483,53 @@
      "claude-haiku-5-5#1",
      "claude-opus-5-5#0",
      "claude-haiku-4-5#4",
-     "GigaChat-2#1",
      "gemini-3.5-flash-lite#1",
      "gemini-3.6-flash#1",
+     "llama3.2:3b#3",
      "claude-fable-5-1#0"
+    ],
+    [
+     "GigaChat-2#1"
     ],
     [
      "GigaChat-2-Max#1"
     ],
     [
+     "llama3.2:3b#2",
+     "claude-haiku-5-5#4",
+     "GigaChat-2#4",
+     "mistral:7b#2",
+     "gemini-3.5-flash-lite#2",
+     "GigaChat-2-Max#4"
+    ],
+    [
+     "claude-fable-5-1#2",
+     "qwen3:4b#2"
+    ],
+    [
      "claude-haiku-4-5#1",
      "gemma-4-31b-it#2",
      "gemma-4-26b-a4b-it#1",
-     "gemini-3.6-flash#4",
      "claude-opus-5-5#4",
      "gemini-3.8-flash#1",
      "gemini-3.5-flash-lite#0"
     ],
     [
-     "claude-fable-5-1#2"
+     "GigaChat-2-Pro#4"
     ],
     [
-     "GigaChat-2-Max#3"
+     "gemini-3.6-flash#3",
+     "mistral:7b#3",
+     "gemini-3.8-flash#3",
+     "claude-haiku-4-5#3"
+    ],
+    [
+     "GigaChat-2#2",
+     "claude-fable-5-1#3",
+     "gemini-3.6-flash#4",
+     "claude-sonnet-5-5#4",
+     "gemma-4-31b-it#4",
+     "claude-opus-5-5#3"
     ],
     [
      "GigaChat-2-Max#2",
@@ -4318,16 +4538,22 @@
      "gemma-4-31b-it#0",
      "claude-haiku-5-5#3",
      "claude-sonnet-5-5#1",
-     "gemini-3.6-flash#0",
-     "gemini-3.5-flash-lite#3",
+     "mistral:7b#1",
+     "llama3.2:3b#1",
+     "qwen3:4b#0",
      "claude-fable-5-1#1",
      "gemini-3.8-flash#0",
-     "gemma-4-26b-a4b-it#0",
      "GigaChat-2-Pro#3"
+    ],
+    [
+     "gemini-3.6-flash#0",
+     "gemini-3.5-flash-lite#3",
+     "gemma-4-26b-a4b-it#0"
     ],
     [
      "GigaChat-2-Pro#0",
      "GigaChat-2#0",
+     "mistral:7b#0",
      "claude-haiku-5-5#0"
     ],
     [
@@ -4335,31 +4561,20 @@
      "GigaChat-2-Max#0",
      "gemma-4-26b-a4b-it#3",
      "GigaChat-2-Pro#1",
-     "claude-fable-5-1#4"
+     "qwen3:4b#1",
+     "claude-fable-5-1#4",
+     "llama3.2:3b#0"
     ],
     [
-     "gemini-3.6-flash#3",
-     "gemini-3.8-flash#3",
-     "claude-haiku-4-5#3"
+     "GigaChat-2-Max#3",
+     "qwen3:4b#4"
     ],
     [
-     "GigaChat-2-Pro#4"
+     "GigaChat-2#3",
+     "llama3.2:3b#4"
     ],
     [
-     "GigaChat-2#2",
-     "claude-fable-5-1#3",
-     "claude-sonnet-5-5#4",
-     "gemma-4-31b-it#4",
-     "claude-opus-5-5#3"
-    ],
-    [
-     "claude-haiku-5-5#4",
-     "GigaChat-2#4",
-     "gemini-3.5-flash-lite#2",
-     "GigaChat-2-Max#4"
-    ],
-    [
-     "GigaChat-2#3"
+     "qwen3:4b#3"
     ]
    ],
    "Suggest a marketing campaign for a new running shoe": [
@@ -4368,55 +4583,75 @@
      "gemma-4-31b-it#2",
      "gemini-3.6-flash#0",
      "claude-fable-5-1#4",
-     "claude-opus-5-5#3",
+     "claude-opus-5-5#3"
+    ],
+    [
      "gemini-3.8-flash#1",
      "claude-sonnet-5-5#4"
     ],
     [
      "claude-haiku-4-5#2",
-     "gemma-4-26b-a4b-it#1",
-     "claude-haiku-5-5#4"
+     "llama3.2:3b#2"
     ],
     [
      "gemini-3.8-flash#4"
     ],
     [
      "claude-opus-5-5#0",
-     "claude-fable-5-1#1",
-     "claude-sonnet-5-5#0"
+     "claude-sonnet-5-5#1",
+     "claude-fable-5-1#2"
     ],
     [
-     "gemini-3.6-flash#3",
-     "claude-opus-5-5#2",
-     "claude-haiku-5-5#3",
-     "gemma-4-26b-a4b-it#3",
-     "gemini-3.8-flash#3"
+     "gemini-3.6-flash#3"
+    ],
+    [
+     "llama3.2:3b#1",
+     "claude-haiku-4-5#0"
     ],
     [
      "gemma-4-31b-it#1"
     ],
     [
-     "claude-haiku-5-5#2",
-     "claude-sonnet-5-5#3"
+     "claude-haiku-5-5#2"
+    ],
+    [
+     "GigaChat-2#2",
+     "GigaChat-2#1",
+     "GigaChat-2#3",
+     "GigaChat-2#0",
+     "GigaChat-2#4"
     ],
     [
      "claude-fable-5-1#3",
      "gemini-3.8-flash#2"
     ],
     [
-     "gemma-4-31b-it#0",
-     "claude-haiku-5-5#0",
-     "gemma-4-26b-a4b-it#0"
+     "claude-fable-5-1#1"
+    ],
+    [
+     "gemma-4-31b-it#0"
     ],
     [
      "claude-opus-5-5#1",
-     "claude-haiku-5-5#1",
-     "claude-sonnet-5-5#1"
+     "claude-haiku-5-5#1"
+    ],
+    [
+     "gemma-4-26b-a4b-it#1",
+     "claude-haiku-5-5#4"
+    ],
+    [
+     "gemma-4-31b-it#4",
+     "qwen3:4b#2"
+    ],
+    [
+     "GigaChat-2-Max#0",
+     "GigaChat-2-Pro#1"
     ],
     [
      "gemma-4-26b-a4b-it#2",
      "gemini-3.8-flash#0",
      "gemini-3.6-flash#1",
+     "qwen3:4b#4",
      "GigaChat-2-Pro#4"
     ],
     [
@@ -4424,38 +4659,66 @@
      "gemma-4-31b-it#3"
     ],
     [
-     "gemma-4-31b-it#4",
-     "gemini-3.6-flash#2"
-    ],
-    [
-     "GigaChat-2-Max#0",
-     "GigaChat-2-Pro#1"
-    ],
-    [
      "GigaChat-2-Max#1",
      "claude-haiku-4-5#1",
-     "GigaChat-2-Pro#0"
+     "llama3.2:3b#4",
+     "llama3.2:3b#0",
+     "claude-haiku-5-5#0",
+     "gemma-4-26b-a4b-it#0"
     ],
     [
      "gemini-3.6-flash#4"
     ],
     [
+     "claude-sonnet-5-5#3",
+     "GigaChat-2-Pro#0",
+     "mistral:7b#0"
+    ],
+    [
+     "mistral:7b#3",
+     "mistral:7b#1"
+    ],
+    [
      "GigaChat-2-Max#3"
+    ],
+    [
+     "gemini-3.6-flash#2",
+     "GigaChat-2-Pro#3"
+    ],
+    [
+     "mistral:7b#4"
+    ],
+    [
+     "claude-sonnet-5-5#0"
+    ],
+    [
+     "qwen3:4b#0"
+    ],
+    [
+     "qwen3:4b#1"
     ],
     [
      "claude-opus-5-5#4"
     ],
     [
-     "gemini-3.5-flash-lite#3"
+     "qwen3:4b#3"
     ],
     [
-     "claude-haiku-4-5#0"
+     "gemini-3.5-flash-lite#3"
     ],
     [
      "GigaChat-2-Pro#2"
     ],
     [
+     "mistral:7b#2"
+    ],
+    [
      "gemini-3.5-flash-lite#4"
+    ],
+    [
+     "claude-opus-5-5#2",
+     "claude-haiku-5-5#3",
+     "gemini-3.8-flash#3"
     ],
     [
      "GigaChat-2-Max#2"
@@ -4467,6 +4730,12 @@
      "GigaChat-2-Max#4"
     ],
     [
+     "llama3.2:3b#3"
+    ],
+    [
+     "gemma-4-26b-a4b-it#3"
+    ],
+    [
      "gemini-3.5-flash-lite#2"
     ],
     [
@@ -4476,36 +4745,16 @@
      "gemini-3.5-flash-lite#0"
     ],
     [
-     "claude-fable-5-1#2"
-    ],
-    [
-     "GigaChat-2-Pro#3"
-    ],
-    [
      "claude-haiku-4-5#4"
     ],
     [
      "claude-sonnet-5-5#2"
-    ],
-    [
-     "GigaChat-2#2"
-    ],
-    [
-     "GigaChat-2#1"
-    ],
-    [
-     "GigaChat-2#3"
-    ],
-    [
-     "GigaChat-2#0"
-    ],
-    [
-     "GigaChat-2#4"
     ]
    ],
    "How can a non-profit raise money without asking for donations?": [
     [
      "GigaChat-2-Max#0",
+     "qwen3:4b#1",
      "gemini-3.8-flash#3",
      "claude-fable-5-1#3",
      "GigaChat-2#0",
@@ -4517,32 +4766,9 @@
      "GigaChat-2-Pro#0",
      "claude-haiku-4-5#4",
      "gemma-4-26b-a4b-it#4",
-     "gemma-4-31b-it#2"
-    ],
-    [
-     "gemini-3.6-flash#2",
-     "gemini-3.8-flash#4",
-     "gemini-3.5-flash-lite#3"
-    ],
-    [
-     "claude-sonnet-5-5#3",
-     "GigaChat-2-Max#3",
-     "claude-opus-5-5#2",
-     "gemma-4-26b-a4b-it#2",
-     "GigaChat-2#1"
-    ],
-    [
-     "GigaChat-2-Pro#3"
-    ],
-    [
-     "claude-haiku-5-5#4",
-     "claude-opus-5-5#1",
-     "claude-haiku-4-5#3",
-     "gemma-4-26b-a4b-it#1",
-     "claude-fable-5-1#2",
-     "claude-sonnet-5-5#1",
-     "GigaChat-2#3",
-     "gemini-3.6-flash#1"
+     "gemma-4-31b-it#2",
+     "llama3.2:3b#1",
+     "mistral:7b#0"
     ],
     [
      "gemma-4-26b-a4b-it#3",
@@ -4566,12 +4792,56 @@
      "gemini-3.8-flash#0"
     ],
     [
+     "qwen3:4b#0",
      "claude-fable-5-1#0",
      "gemini-3.5-flash-lite#0",
+     "mistral:7b#3",
      "gemma-4-26b-a4b-it#0",
      "gemma-4-31b-it#0",
      "GigaChat-2-Max#1",
+     "llama3.2:3b#4",
      "GigaChat-2-Pro#4"
+    ],
+    [
+     "claude-haiku-5-5#4",
+     "claude-opus-5-5#1",
+     "claude-haiku-4-5#3",
+     "gemma-4-26b-a4b-it#1",
+     "qwen3:4b#2",
+     "claude-fable-5-1#2",
+     "mistral:7b#2",
+     "claude-sonnet-5-5#1",
+     "GigaChat-2#3",
+     "gemini-3.6-flash#1"
+    ],
+    [
+     "claude-sonnet-5-5#3",
+     "GigaChat-2-Max#3",
+     "mistral:7b#1",
+     "llama3.2:3b#0",
+     "qwen3:4b#4",
+     "claude-opus-5-5#2",
+     "gemma-4-26b-a4b-it#2",
+     "GigaChat-2#1"
+    ],
+    [
+     "gemini-3.6-flash#2",
+     "gemini-3.8-flash#4",
+     "gemini-3.5-flash-lite#3"
+    ],
+    [
+     "GigaChat-2-Pro#3"
+    ],
+    [
+     "llama3.2:3b#2",
+     "qwen3:4b#3",
+     "gemma-4-31b-it#3"
+    ],
+    [
+     "GigaChat-2-Max#4",
+     "claude-opus-5-5#4",
+     "claude-fable-5-1#4",
+     "claude-sonnet-5-5#4"
     ],
     [
      "claude-haiku-4-5#2",
@@ -4582,16 +4852,11 @@
      "gemma-4-31b-it#4"
     ],
     [
-     "GigaChat-2-Max#4",
-     "claude-opus-5-5#4",
-     "claude-fable-5-1#4",
-     "claude-sonnet-5-5#4"
-    ],
-    [
+     "mistral:7b#4",
      "GigaChat-2#4"
     ],
     [
-     "gemma-4-31b-it#3"
+     "llama3.2:3b#3"
     ]
    ],
    "Suggest a weekend project to teach kids about money": [
@@ -4601,35 +4866,14 @@
      "gemini-3.8-flash#1",
      "gemini-3.6-flash#2",
      "gemini-3.5-flash-lite#2",
+     "mistral:7b#0",
      "claude-fable-5-1#1",
      "gemma-4-26b-a4b-it#2",
+     "llama3.2:3b#0",
      "claude-sonnet-5-5#2"
     ],
     [
-     "claude-haiku-5-5#2",
-     "claude-haiku-4-5#2",
-     "gemini-3.8-flash#4"
-    ],
-    [
-     "GigaChat-2-Max#0",
-     "gemma-4-31b-it#3",
-     "GigaChat-2#3"
-    ],
-    [
-     "claude-haiku-5-5#4",
-     "GigaChat-2-Max#1",
-     "claude-opus-5-5#4"
-    ],
-    [
-     "gemma-4-26b-a4b-it#4",
-     "claude-haiku-4-5#1"
-    ],
-    [
-     "GigaChat-2#0",
-     "claude-fable-5-1#4",
-     "GigaChat-2-Pro#1"
-    ],
-    [
+     "llama3.2:3b#1",
      "claude-sonnet-5-5#0",
      "claude-haiku-4-5#0",
      "GigaChat-2-Pro#0",
@@ -4643,25 +4887,50 @@
      "gemma-4-26b-a4b-it#3"
     ],
     [
-     "claude-haiku-4-5#4"
+     "llama3.2:3b#2",
+     "GigaChat-2#3"
     ],
     [
-     "gemini-3.5-flash-lite#0"
+     "GigaChat-2-Max#0",
+     "gemma-4-31b-it#3"
+    ],
+    [
+     "claude-haiku-5-5#2",
+     "claude-haiku-4-5#2",
+     "gemini-3.8-flash#4"
     ],
     [
      "gemma-4-31b-it#1",
      "gemma-4-26b-a4b-it#1",
      "claude-sonnet-5-5#1",
      "claude-haiku-5-5#1",
-     "GigaChat-2-Pro#3",
-     "gemini-3.6-flash#1"
-    ],
-    [
      "claude-opus-5-5#2",
      "claude-fable-5-1#2",
      "gemini-3.5-flash-lite#1",
      "gemini-3.8-flash#2",
-     "gemini-3.6-flash#4"
+     "mistral:7b#4",
+     "GigaChat-2-Pro#3",
+     "gemini-3.6-flash#4",
+     "qwen3:4b#1",
+     "gemini-3.6-flash#1"
+    ],
+    [
+     "qwen3:4b#3"
+    ],
+    [
+     "gemma-4-26b-a4b-it#4",
+     "claude-haiku-4-5#1"
+    ],
+    [
+     "claude-haiku-5-5#4",
+     "GigaChat-2-Max#1",
+     "mistral:7b#3",
+     "claude-opus-5-5#4"
+    ],
+    [
+     "GigaChat-2#0",
+     "claude-fable-5-1#4",
+     "GigaChat-2-Pro#1"
     ],
     [
      "GigaChat-2-Max#2"
@@ -4670,13 +4939,39 @@
      "GigaChat-2-Max#4"
     ],
     [
+     "qwen3:4b#0",
      "claude-haiku-4-5#3",
      "claude-haiku-5-5#3",
      "claude-sonnet-5-5#4",
+     "GigaChat-2#4",
+     "GigaChat-2-Max#3",
      "GigaChat-2#2"
     ],
     [
+     "GigaChat-2-Pro#2"
+    ],
+    [
      "GigaChat-2-Pro#4"
+    ],
+    [
+     "mistral:7b#2",
+     "gemini-3.5-flash-lite#4",
+     "llama3.2:3b#4"
+    ],
+    [
+     "GigaChat-2#1"
+    ],
+    [
+     "qwen3:4b#2"
+    ],
+    [
+     "claude-haiku-4-5#4"
+    ],
+    [
+     "llama3.2:3b#3"
+    ],
+    [
+     "gemini-3.5-flash-lite#0"
     ],
     [
      "claude-fable-5-1#3",
@@ -4687,64 +4982,14 @@
      "claude-sonnet-5-5#3"
     ],
     [
-     "gemini-3.5-flash-lite#4"
-    ],
-    [
+     "mistral:7b#1",
      "gemma-4-31b-it#4"
     ],
     [
-     "GigaChat-2-Pro#2"
-    ],
-    [
-     "GigaChat-2#4"
-    ],
-    [
-     "GigaChat-2-Max#3"
-    ],
-    [
-     "GigaChat-2#1"
+     "qwen3:4b#4"
     ]
    ],
    "How can a public library stay relevant?": [
-    [
-     "gemma-4-26b-a4b-it#4",
-     "claude-haiku-4-5#4",
-     "GigaChat-2-Pro#4"
-    ],
-    [
-     "claude-opus-5-5#1",
-     "GigaChat-2#4",
-     "claude-fable-5-1#0"
-    ],
-    [
-     "claude-sonnet-5-5#3",
-     "gemini-3.6-flash#3",
-     "claude-opus-5-5#4",
-     "gemini-3.8-flash#4",
-     "claude-fable-5-1#3"
-    ],
-    [
-     "GigaChat-2#2",
-     "claude-haiku-4-5#3",
-     "claude-haiku-5-5#3",
-     "GigaChat-2-Pro#3",
-     "GigaChat-2-Max#3"
-    ],
-    [
-     "claude-haiku-4-5#2",
-     "gemma-4-31b-it#1",
-     "gemma-4-26b-a4b-it#1",
-     "claude-haiku-5-5#1",
-     "claude-sonnet-5-5#2",
-     "gemini-3.6-flash#1",
-     "claude-opus-5-5#0",
-     "gemini-3.8-flash#1",
-     "gemini-3.5-flash-lite#0"
-    ],
-    [
-     "claude-fable-5-1#4",
-     "GigaChat-2-Max#4"
-    ],
     [
      "gemma-4-31b-it#3",
      "claude-opus-5-5#2",
@@ -4755,22 +5000,72 @@
      "gemini-3.8-flash#2"
     ],
     [
-     "gemma-4-26b-a4b-it#2",
-     "gemma-4-31b-it#2",
-     "gemini-3.6-flash#0"
-    ],
-    [
      "claude-sonnet-5-5#1",
      "GigaChat-2-Pro#0",
      "GigaChat-2-Max#0",
      "claude-haiku-5-5#0",
      "GigaChat-2#0",
      "claude-opus-5-5#3",
-     "gemini-3.5-flash-lite#2",
-     "gemini-3.8-flash#0",
      "gemma-4-31b-it#0",
      "claude-haiku-4-5#0",
-     "gemma-4-26b-a4b-it#0"
+     "gemma-4-26b-a4b-it#0",
+     "gemini-3.8-flash#0",
+     "mistral:7b#0",
+     "gemini-3.5-flash-lite#2"
+    ],
+    [
+     "claude-opus-5-5#1",
+     "qwen3:4b#0",
+     "llama3.2:3b#0",
+     "claude-fable-5-1#0",
+     "GigaChat-2#4"
+    ],
+    [
+     "gemma-4-26b-a4b-it#2",
+     "gemma-4-31b-it#2",
+     "gemini-3.6-flash#0",
+     "llama3.2:3b#3"
+    ],
+    [
+     "claude-haiku-4-5#2",
+     "gemma-4-31b-it#1",
+     "gemma-4-26b-a4b-it#1",
+     "claude-haiku-5-5#1",
+     "claude-sonnet-5-5#2",
+     "gemini-3.6-flash#1",
+     "mistral:7b#2",
+     "claude-opus-5-5#0",
+     "claude-fable-5-1#4",
+     "gemini-3.8-flash#1",
+     "gemini-3.5-flash-lite#0",
+     "GigaChat-2-Max#4"
+    ],
+    [
+     "llama3.2:3b#2",
+     "claude-haiku-4-5#1",
+     "GigaChat-2-Pro#1",
+     "mistral:7b#1",
+     "GigaChat-2#1",
+     "GigaChat-2-Max#1",
+     "claude-fable-5-1#2",
+     "gemini-3.5-flash-lite#3",
+     "qwen3:4b#3"
+    ],
+    [
+     "claude-sonnet-5-5#3",
+     "GigaChat-2#2",
+     "claude-haiku-4-5#3",
+     "qwen3:4b#1",
+     "claude-haiku-5-5#3",
+     "GigaChat-2-Pro#3",
+     "GigaChat-2-Max#3",
+     "claude-fable-5-1#3",
+     "claude-opus-5-5#4",
+     "llama3.2:3b#1"
+    ],
+    [
+     "gemini-3.6-flash#3",
+     "gemini-3.8-flash#4"
     ],
     [
      "claude-sonnet-5-5#0",
@@ -4780,21 +5075,16 @@
     ],
     [
      "gemma-4-31b-it#4",
-     "GigaChat-2-Max#2"
+     "GigaChat-2-Max#2",
+     "mistral:7b#4",
+     "llama3.2:3b#4"
     ],
     [
-     "claude-haiku-4-5#1",
-     "GigaChat-2-Pro#1",
-     "GigaChat-2#1",
-     "GigaChat-2-Max#1",
-     "claude-fable-5-1#2",
-     "gemini-3.5-flash-lite#3"
-    ],
-    [
-     "gemini-3.5-flash-lite#4"
-    ],
-    [
-     "claude-sonnet-5-5#4"
+     "gemma-4-26b-a4b-it#4",
+     "mistral:7b#3",
+     "claude-haiku-4-5#4",
+     "qwen3:4b#4",
+     "GigaChat-2-Pro#4"
     ],
     [
      "GigaChat-2#3"
@@ -4803,29 +5093,47 @@
      "GigaChat-2-Pro#2"
     ],
     [
+     "gemini-3.5-flash-lite#4"
+    ],
+    [
+     "claude-sonnet-5-5#4"
+    ],
+    [
      "gemini-3.6-flash#4"
+    ],
+    [
+     "qwen3:4b#2"
     ]
    ],
    "Suggest a new feature for a note-taking app": [
     [
      "claude-haiku-4-5#2",
      "claude-haiku-5-5#2",
+     "mistral:7b#1",
      "GigaChat-2#1",
      "GigaChat-2-Pro#3"
     ],
     [
      "claude-sonnet-5-5#4",
-     "gemini-3.8-flash#4"
+     "gemini-3.8-flash#4",
+     "qwen3:4b#1"
+    ],
+    [
+     "GigaChat-2-Max#2",
+     "gemini-3.5-flash-lite#4"
     ],
     [
      "GigaChat-2-Pro#2",
      "claude-haiku-4-5#0"
     ],
     [
+     "llama3.2:3b#2",
      "GigaChat-2#2",
+     "mistral:7b#0",
      "GigaChat-2-Max#0",
      "gemini-3.5-flash-lite#1",
-     "claude-haiku-5-5#0"
+     "claude-haiku-5-5#0",
+     "qwen3:4b#3"
     ],
     [
      "claude-sonnet-5-5#1",
@@ -4836,6 +5144,9 @@
     ],
     [
      "claude-opus-5-5#1"
+    ],
+    [
+     "llama3.2:3b#1"
     ],
     [
      "gemini-3.8-flash#3",
@@ -4862,10 +5173,17 @@
      "claude-fable-5-1#1"
     ],
     [
+     "claude-sonnet-5-5#0",
+     "gemma-4-31b-it#4",
+     "GigaChat-2-Pro#1",
+     "claude-opus-5-5#0"
+    ],
+    [
      "claude-sonnet-5-5#3"
     ],
     [
      "gemma-4-31b-it#0",
+     "llama3.2:3b#0",
      "GigaChat-2-Pro#0"
     ],
     [
@@ -4885,31 +5203,33 @@
      "claude-haiku-5-5#3",
      "GigaChat-2-Max#3",
      "claude-haiku-4-5#3",
+     "qwen3:4b#0",
      "gemma-4-26b-a4b-it#0"
     ],
     [
      "claude-opus-5-5#2"
     ],
     [
-     "claude-haiku-5-5#1"
+     "claude-haiku-5-5#1",
+     "GigaChat-2#0",
+     "qwen3:4b#4"
     ],
     [
-     "GigaChat-2#0"
+     "mistral:7b#3"
     ],
     [
      "GigaChat-2#4"
     ],
     [
-     "claude-sonnet-5-5#0",
-     "gemma-4-31b-it#4",
-     "GigaChat-2-Pro#1",
-     "claude-opus-5-5#0"
-    ],
-    [
      "gemma-4-26b-a4b-it#4"
     ],
     [
-     "gemini-3.5-flash-lite#2"
+     "qwen3:4b#2",
+     "gemini-3.5-flash-lite#2",
+     "llama3.2:3b#4"
+    ],
+    [
+     "mistral:7b#4"
     ],
     [
      "GigaChat-2#3"
@@ -4918,15 +5238,17 @@
      "claude-opus-5-5#4"
     ],
     [
-     "GigaChat-2-Max#2",
-     "gemini-3.5-flash-lite#4"
-    ],
-    [
      "claude-haiku-5-5#4",
      "claude-haiku-4-5#4"
     ],
     [
+     "mistral:7b#2"
+    ],
+    [
      "claude-fable-5-1#4"
+    ],
+    [
+     "llama3.2:3b#3"
     ]
    ],
    "How can a university improve student retention?": [
@@ -4943,35 +5265,11 @@
      "gemini-3.5-flash-lite#0"
     ],
     [
-     "claude-fable-5-1#3",
-     "GigaChat-2#0",
-     "claude-sonnet-5-5#3"
-    ],
-    [
-     "gemini-3.6-flash#0",
-     "GigaChat-2-Pro#0",
-     "GigaChat-2-Max#0",
-     "claude-haiku-4-5#0",
-     "claude-haiku-5-5#3",
-     "gemma-4-31b-it#0",
-     "gemma-4-26b-a4b-it#0"
-    ],
-    [
-     "gemini-3.5-flash-lite#3",
-     "claude-opus-5-5#4"
-    ],
-    [
-     "claude-haiku-4-5#2",
-     "gemini-3.6-flash#4",
-     "GigaChat-2-Max#2",
-     "GigaChat-2#4",
-     "gemini-3.8-flash#4"
-    ],
-    [
      "gemma-4-26b-a4b-it#2",
      "gemini-3.8-flash#2",
      "gemini-3.5-flash-lite#2",
      "claude-haiku-4-5#4",
+     "qwen3:4b#1",
      "gemma-4-31b-it#1",
      "GigaChat-2-Max#3"
     ],
@@ -4986,7 +5284,68 @@
      "claude-sonnet-5-5#4"
     ],
     [
+     "llama3.2:3b#3"
+    ],
+    [
      "GigaChat-2-Pro#1"
+    ],
+    [
+     "gemma-4-31b-it#2",
+     "claude-haiku-5-5#2",
+     "claude-sonnet-5-5#1",
+     "claude-fable-5-1#2",
+     "gemma-4-26b-a4b-it#1",
+     "GigaChat-2#2",
+     "gemini-3.5-flash-lite#4",
+     "gemini-3.6-flash#1",
+     "GigaChat-2-Max#4",
+     "gemini-3.8-flash#1",
+     "claude-opus-5-5#1"
+    ],
+    [
+     "qwen3:4b#3"
+    ],
+    [
+     "mistral:7b#1"
+    ],
+    [
+     "claude-haiku-4-5#2",
+     "gemini-3.6-flash#4",
+     "llama3.2:3b#4",
+     "GigaChat-2-Max#2",
+     "GigaChat-2#4",
+     "gemini-3.8-flash#4"
+    ],
+    [
+     "mistral:7b#0",
+     "claude-fable-5-1#3",
+     "GigaChat-2#0",
+     "claude-sonnet-5-5#3"
+    ],
+    [
+     "gemini-3.5-flash-lite#3",
+     "claude-opus-5-5#4"
+    ],
+    [
+     "mistral:7b#4"
+    ],
+    [
+     "gemini-3.6-flash#0",
+     "gemma-4-31b-it#0",
+     "gemma-4-26b-a4b-it#0"
+    ],
+    [
+     "llama3.2:3b#2",
+     "GigaChat-2-Max#0",
+     "claude-haiku-4-5#0"
+    ],
+    [
+     "qwen3:4b#0",
+     "claude-haiku-5-5#3",
+     "GigaChat-2#3"
+    ],
+    [
+     "GigaChat-2-Pro#4"
     ],
     [
      "claude-sonnet-5-5#2",
@@ -4997,9 +5356,12 @@
     ],
     [
      "GigaChat-2-Max#1",
+     "llama3.2:3b#0",
+     "mistral:7b#3",
      "claude-haiku-4-5#1",
      "claude-haiku-5-5#4",
      "GigaChat-2#1",
+     "qwen3:4b#4",
      "gemma-4-26b-a4b-it#3",
      "GigaChat-2-Pro#2",
      "gemini-3.5-flash-lite#1",
@@ -5007,23 +5369,14 @@
      "GigaChat-2-Pro#3"
     ],
     [
-     "gemma-4-31b-it#2",
-     "claude-haiku-5-5#2",
-     "claude-sonnet-5-5#1",
-     "claude-fable-5-1#2",
-     "gemma-4-26b-a4b-it#1",
-     "GigaChat-2#2",
-     "gemini-3.5-flash-lite#4",
-     "GigaChat-2-Max#4",
-     "claude-opus-5-5#1"
+     "GigaChat-2-Pro#0",
+     "qwen3:4b#2"
     ],
     [
-     "gemini-3.6-flash#1",
-     "gemini-3.8-flash#1"
+     "llama3.2:3b#1"
     ],
     [
-     "GigaChat-2#3",
-     "GigaChat-2-Pro#4"
+     "mistral:7b#2"
     ]
    ],
    "Ideas for a team-building activity for software engineers": [
@@ -5034,6 +5387,41 @@
      "gemma-4-26b-a4b-it#2",
      "claude-haiku-5-5#2",
      "gemini-3.5-flash-lite#3"
+    ],
+    [
+     "GigaChat-2-Pro#4",
+     "gemini-3.8-flash#3",
+     "claude-fable-5-1#0",
+     "gemma-4-31b-it#0",
+     "gemini-3.6-flash#0",
+     "llama3.2:3b#3",
+     "claude-opus-5-5#0",
+     "mistral:7b#1",
+     "gemma-4-26b-a4b-it#0",
+     "claude-haiku-5-5#1",
+     "claude-sonnet-5-5#1",
+     "GigaChat-2#3",
+     "claude-haiku-4-5#0"
+    ],
+    [
+     "qwen3:4b#1",
+     "GigaChat-2-Pro#2",
+     "qwen3:4b#0"
+    ],
+    [
+     "GigaChat-2-Max#0",
+     "GigaChat-2#0",
+     "qwen3:4b#4"
+    ],
+    [
+     "llama3.2:3b#2"
+    ],
+    [
+     "gemma-4-31b-it#3",
+     "GigaChat-2-Pro#0"
+    ],
+    [
+     "mistral:7b#0"
     ],
     [
      "claude-sonnet-5-5#2",
@@ -5049,37 +5437,31 @@
      "claude-haiku-5-5#3"
     ],
     [
-     "GigaChat-2-Pro#4",
-     "gemini-3.8-flash#3",
-     "claude-fable-5-1#0",
-     "gemma-4-31b-it#0",
-     "gemini-3.6-flash#0",
-     "claude-opus-5-5#0",
-     "gemma-4-26b-a4b-it#0",
-     "claude-haiku-5-5#1",
-     "claude-sonnet-5-5#1",
-     "GigaChat-2-Pro#2",
-     "GigaChat-2#3",
-     "claude-haiku-4-5#0"
+     "gemini-3.6-flash#2"
     ],
     [
-     "GigaChat-2-Max#0",
-     "GigaChat-2#0"
+     "GigaChat-2-Max#4",
+     "llama3.2:3b#1"
     ],
     [
-     "gemma-4-31b-it#3",
-     "GigaChat-2-Pro#0"
+     "qwen3:4b#3"
     ],
     [
-     "claude-haiku-4-5#2"
+     "gemini-3.8-flash#1"
+    ],
+    [
+     "claude-haiku-4-5#2",
+     "mistral:7b#2"
     ],
     [
      "claude-haiku-4-5#3",
      "gemma-4-26b-a4b-it#1",
      "gemini-3.8-flash#2",
      "claude-haiku-5-5#0",
+     "qwen3:4b#2",
      "GigaChat-2-Max#1",
      "gemini-3.5-flash-lite#0",
+     "llama3.2:3b#0",
      "gemma-4-31b-it#1",
      "GigaChat-2-Pro#3",
      "GigaChat-2#1",
@@ -5089,17 +5471,12 @@
      "claude-opus-5-5#1"
     ],
     [
-     "gemini-3.6-flash#2"
-    ],
-    [
-     "GigaChat-2-Max#4"
-    ],
-    [
-     "gemini-3.8-flash#1"
-    ],
-    [
      "gemma-4-26b-a4b-it#4",
      "claude-haiku-5-5#4"
+    ],
+    [
+     "mistral:7b#4",
+     "llama3.2:3b#4"
     ],
     [
      "gemma-4-31b-it#4"
@@ -5112,6 +5489,9 @@
      "GigaChat-2-Pro#1",
      "GigaChat-2-Max#3",
      "gemini-3.8-flash#4"
+    ],
+    [
+     "mistral:7b#3"
     ],
     [
      "gemma-4-26b-a4b-it#3"
@@ -5150,47 +5530,52 @@
    "How can a restaurant reduce food waste?": [
     [
      "gemma-4-26b-a4b-it#4",
+     "llama3.2:3b#1",
      "claude-haiku-5-5#4",
      "claude-sonnet-5-5#0",
      "claude-fable-5-1#0",
+     "gemini-3.8-flash#4",
      "gemini-3.5-flash-lite#1",
-     "claude-opus-5-5#0",
-     "gemini-3.8-flash#4"
+     "claude-opus-5-5#0"
     ],
     [
      "gemini-3.6-flash#0",
      "gemini-3.8-flash#0",
      "claude-fable-5-1#1",
      "claude-haiku-5-5#1",
-     "GigaChat-2-Max#1",
      "claude-sonnet-5-5#2",
      "gemma-4-31b-it#0",
+     "qwen3:4b#1",
+     "llama3.2:3b#0",
      "gemini-3.5-flash-lite#0",
      "claude-opus-5-5#1"
     ],
     [
-     "GigaChat-2-Max#2",
-     "GigaChat-2-Pro#1",
-     "claude-haiku-4-5#3"
+     "GigaChat-2-Max#1",
+     "mistral:7b#1",
+     "GigaChat-2#0",
+     "gemma-4-26b-a4b-it#0"
     ],
     [
+     "qwen3:4b#3",
+     "qwen3:4b#0",
      "claude-haiku-5-5#0",
-     "GigaChat-2#0",
-     "gemma-4-26b-a4b-it#0",
-     "claude-haiku-4-5#4",
-     "GigaChat-2-Pro#0"
+     "GigaChat-2-Pro#0",
+     "claude-haiku-4-5#4"
     ],
     [
      "claude-haiku-4-5#2",
+     "llama3.2:3b#2",
      "claude-haiku-5-5#2",
      "claude-fable-5-1#3",
      "claude-opus-5-5#2",
      "gemma-4-26b-a4b-it#2",
+     "GigaChat-2#2",
      "gemini-3.5-flash-lite#3",
+     "qwen3:4b#2",
      "GigaChat-2-Max#4",
      "claude-sonnet-5-5#3",
-     "GigaChat-2-Pro#2",
-     "GigaChat-2#2"
+     "GigaChat-2-Pro#2"
     ],
     [
      "gemini-3.6-flash#3",
@@ -5199,8 +5584,10 @@
     [
      "gemma-4-31b-it#2",
      "GigaChat-2-Max#0",
+     "mistral:7b#0",
      "GigaChat-2#3",
      "gemma-4-26b-a4b-it#1",
+     "llama3.2:3b#3",
      "claude-haiku-4-5#0"
     ],
     [
@@ -5209,6 +5596,7 @@
      "gemini-3.5-flash-lite#2",
      "gemini-3.6-flash#1",
      "claude-opus-5-5#3",
+     "mistral:7b#2",
      "claude-sonnet-5-5#4"
     ],
     [
@@ -5217,7 +5605,10 @@
     ],
     [
      "gemini-3.6-flash#4",
+     "llama3.2:3b#4",
+     "mistral:7b#4",
      "gemini-3.5-flash-lite#4",
+     "qwen3:4b#4",
      "GigaChat-2-Max#3",
      "gemma-4-31b-it#3",
      "claude-haiku-4-5#1",
@@ -5232,11 +5623,19 @@
      "gemma-4-31b-it#4"
     ],
     [
+     "GigaChat-2-Max#2",
+     "claude-haiku-4-5#3",
+     "GigaChat-2-Pro#1"
+    ],
+    [
      "GigaChat-2#1",
      "claude-sonnet-5-5#1",
      "gemini-3.6-flash#2",
      "gemma-4-31b-it#1",
      "gemini-3.8-flash#1"
+    ],
+    [
+     "mistral:7b#3"
     ],
     [
      "GigaChat-2-Pro#3"
@@ -5252,6 +5651,7 @@
      "gemini-3.6-flash#0"
     ],
     [
+     "qwen3:4b#3",
      "claude-fable-5-1#0",
      "claude-haiku-5-5#0",
      "gemma-4-26b-a4b-it#0",
@@ -5264,13 +5664,14 @@
      "GigaChat-2#0"
     ],
     [
+     "mistral:7b#3"
+    ],
+    [
+     "llama3.2:3b#2",
+     "gemma-4-31b-it#3"
+    ],
+    [
      "gemini-3.5-flash-lite#2"
-    ],
-    [
-     "GigaChat-2-Max#1"
-    ],
-    [
-     "GigaChat-2-Pro#3"
     ],
     [
      "claude-haiku-5-5#2",
@@ -5282,13 +5683,8 @@
      "claude-sonnet-5-5#1",
      "claude-fable-5-1#2",
      "claude-haiku-5-5#4",
+     "qwen3:4b#1",
      "claude-haiku-4-5#1"
-    ],
-    [
-     "claude-opus-5-5#1"
-    ],
-    [
-     "claude-fable-5-1#4"
     ],
     [
      "gemma-4-26b-a4b-it#3",
@@ -5297,16 +5693,22 @@
     ],
     [
      "claude-sonnet-5-5#0",
-     "claude-haiku-4-5#3"
+     "claude-haiku-4-5#3",
+     "mistral:7b#0"
+    ],
+    [
+     "GigaChat-2-Pro#3",
+     "mistral:7b#1"
+    ],
+    [
+     "GigaChat-2-Max#1"
     ],
     [
      "GigaChat-2-Max#0",
      "claude-fable-5-1#1",
-     "claude-opus-5-5#2"
-    ],
-    [
-     "gemini-3.8-flash#1",
+     "claude-opus-5-5#2",
      "claude-sonnet-5-5#3",
+     "gemini-3.8-flash#1",
      "gemini-3.6-flash#1",
      "gemini-3.5-flash-lite#1"
     ],
@@ -5315,18 +5717,40 @@
      "claude-haiku-5-5#3"
     ],
     [
-     "claude-sonnet-5-5#4"
-    ],
-    [
      "GigaChat-2-Max#4"
     ],
     [
+     "qwen3:4b#0"
+    ],
+    [
      "claude-haiku-4-5#2",
+     "gemini-3.6-flash#4",
      "gemma-4-26b-a4b-it#4",
      "claude-fable-5-1#3"
     ],
     [
-     "gemini-3.6-flash#4",
+     "claude-sonnet-5-5#4"
+    ],
+    [
+     "claude-haiku-4-5#4"
+    ],
+    [
+     "llama3.2:3b#3"
+    ],
+    [
+     "mistral:7b#2",
+     "GigaChat-2-Pro#2"
+    ],
+    [
+     "GigaChat-2#2"
+    ],
+    [
+     "qwen3:4b#2"
+    ],
+    [
+     "GigaChat-2#4"
+    ],
+    [
      "claude-opus-5-5#3"
     ],
     [
@@ -5335,35 +5759,41 @@
      "gemma-4-31b-it#2"
     ],
     [
-     "claude-haiku-4-5#4"
-    ],
-    [
-     "GigaChat-2#2"
-    ],
-    [
-     "GigaChat-2#4"
-    ],
-    [
-     "GigaChat-2-Pro#2"
-    ],
-    [
-     "GigaChat-2-Max#2"
-    ],
-    [
      "gemini-3.5-flash-lite#4"
     ],
     [
-     "gemma-4-31b-it#3"
+     "llama3.2:3b#4"
     ],
     [
-     "gemini-3.5-flash-lite#3"
+     "llama3.2:3b#1"
+    ],
+    [
+     "qwen3:4b#4"
     ],
     [
      "gemini-3.6-flash#3",
      "claude-opus-5-5#4"
     ],
     [
+     "mistral:7b#4"
+    ],
+    [
      "GigaChat-2#1"
+    ],
+    [
+     "claude-fable-5-1#4"
+    ],
+    [
+     "gemini-3.5-flash-lite#3"
+    ],
+    [
+     "llama3.2:3b#0"
+    ],
+    [
+     "GigaChat-2-Max#2"
+    ],
+    [
+     "claude-opus-5-5#1"
     ],
     [
      "GigaChat-2#3"
@@ -5372,10 +5802,12 @@
    "How can a city get more people to commute by bike?": [
     [
      "gemini-3.8-flash#0",
+     "llama3.2:3b#0",
      "GigaChat-2-Max#0",
      "gemma-4-26b-a4b-it#0",
      "claude-fable-5-1#0",
      "gemma-4-31b-it#0",
+     "qwen3:4b#0",
      "claude-opus-5-5#0",
      "GigaChat-2-Pro#0",
      "claude-haiku-5-5#0",
@@ -5383,34 +5815,22 @@
      "claude-haiku-4-5#0",
      "GigaChat-2#0",
      "claude-sonnet-5-5#0",
-     "gemini-3.6-flash#0"
+     "gemini-3.6-flash#0",
+     "mistral:7b#0"
     ],
     [
-     "gemini-3.8-flash#4",
-     "gemini-3.5-flash-lite#4",
-     "gemma-4-26b-a4b-it#4",
-     "gemma-4-31b-it#4",
-     "gemini-3.6-flash#4",
-     "claude-sonnet-5-5#2"
-    ],
-    [
-     "claude-haiku-5-5#2",
-     "claude-fable-5-1#4",
-     "GigaChat-2-Pro#3",
-     "claude-opus-5-5#4"
-    ],
-    [
+     "llama3.2:3b#2",
      "gemma-4-26b-a4b-it#3",
      "GigaChat-2-Max#3",
      "claude-haiku-4-5#2",
      "claude-fable-5-1#1",
-     "claude-sonnet-5-5#1"
+     "gemini-3.5-flash-lite#2",
+     "claude-sonnet-5-5#1",
+     "claude-haiku-5-5#1"
     ],
     [
-     "gemini-3.5-flash-lite#2",
      "claude-opus-5-5#3",
      "gemini-3.6-flash#2",
-     "claude-haiku-5-5#1",
      "gemma-4-31b-it#2",
      "gemini-3.8-flash#3"
     ],
@@ -5418,6 +5838,7 @@
      "claude-opus-5-5#2",
      "gemini-3.5-flash-lite#1",
      "claude-fable-5-1#3",
+     "qwen3:4b#2",
      "gemma-4-26b-a4b-it#1",
      "GigaChat-2-Max#1",
      "gemma-4-31b-it#3",
@@ -5427,9 +5848,32 @@
      "claude-haiku-4-5#3"
     ],
     [
+     "llama3.2:3b#3",
+     "mistral:7b#3"
+    ],
+    [
+     "claude-haiku-5-5#2",
+     "claude-fable-5-1#4",
+     "GigaChat-2-Pro#3",
+     "claude-opus-5-5#4"
+    ],
+    [
+     "gemini-3.8-flash#4",
+     "llama3.2:3b#1",
+     "gemini-3.5-flash-lite#4",
+     "gemma-4-26b-a4b-it#4",
+     "gemini-3.6-flash#4",
+     "claude-sonnet-5-5#2"
+    ],
+    [
+     "qwen3:4b#3",
+     "gemma-4-31b-it#4"
+    ],
+    [
      "claude-fable-5-1#2",
      "GigaChat-2#2",
      "claude-sonnet-5-5#3",
+     "qwen3:4b#1",
      "gemma-4-31b-it#1",
      "gemini-3.6-flash#3",
      "claude-opus-5-5#1",
@@ -5439,6 +5883,7 @@
     ],
     [
      "claude-haiku-5-5#4",
+     "llama3.2:3b#4",
      "GigaChat-2-Pro#4",
      "GigaChat-2#4",
      "GigaChat-2-Max#4",
@@ -5447,7 +5892,12 @@
     ],
     [
      "GigaChat-2-Pro#2",
-     "GigaChat-2-Max#2"
+     "GigaChat-2-Max#2",
+     "qwen3:4b#4",
+     "mistral:7b#4"
+    ],
+    [
+     "mistral:7b#2"
     ],
     [
      "gemma-4-26b-a4b-it#2",
@@ -5456,6 +5906,9 @@
     ],
     [
      "GigaChat-2#1"
+    ],
+    [
+     "mistral:7b#1"
     ]
    ],
    "How can a small town attract young residents?": [
@@ -5466,13 +5919,14 @@
      "claude-haiku-5-5#1",
      "claude-sonnet-5-5#1",
      "claude-opus-5-5#0",
+     "qwen3:4b#1",
+     "GigaChat-2#0",
      "gemma-4-31b-it#0",
      "gemini-3.5-flash-lite#0",
+     "GigaChat-2-Pro#3",
      "claude-fable-5-1#1",
      "claude-haiku-4-5#1",
-     "gemma-4-26b-a4b-it#0",
-     "GigaChat-2#0",
-     "GigaChat-2-Pro#3"
+     "gemma-4-26b-a4b-it#0"
     ],
     [
      "claude-sonnet-5-5#4",
@@ -5480,53 +5934,69 @@
      "gemini-3.6-flash#1"
     ],
     [
+     "llama3.2:3b#0",
+     "gemma-4-31b-it#1",
+     "gemma-4-26b-a4b-it#2",
+     "mistral:7b#3",
+     "GigaChat-2-Max#0",
+     "qwen3:4b#0",
+     "claude-haiku-4-5#0",
+     "claude-haiku-5-5#0",
+     "gemini-3.8-flash#2",
+     "GigaChat-2-Pro#0",
+     "claude-sonnet-5-5#0"
+    ],
+    [
+     "gemini-3.5-flash-lite#2",
+     "claude-fable-5-1#0",
+     "claude-opus-5-5#1"
+    ],
+    [
      "claude-haiku-4-5#2",
      "gemini-3.8-flash#3",
      "claude-haiku-5-5#2",
      "gemma-4-26b-a4b-it#1",
      "gemini-3.6-flash#2",
+     "qwen3:4b#2",
+     "claude-opus-5-5#3",
+     "claude-sonnet-5-5#3",
      "claude-fable-5-1#2",
      "gemini-3.5-flash-lite#1",
-     "gemma-4-31b-it#2",
-     "claude-sonnet-5-5#3",
-     "claude-opus-5-5#3"
+     "gemma-4-31b-it#2"
     ],
     [
-     "gemini-3.5-flash-lite#2",
-     "gemma-4-31b-it#1",
-     "gemma-4-26b-a4b-it#2",
-     "GigaChat-2-Max#0",
-     "claude-haiku-4-5#0",
-     "claude-haiku-5-5#0",
-     "claude-fable-5-1#0",
-     "gemini-3.8-flash#2",
-     "claude-opus-5-5#1",
-     "GigaChat-2-Pro#0",
-     "claude-sonnet-5-5#0"
+     "GigaChat-2#1",
+     "mistral:7b#2",
+     "GigaChat-2-Max#1",
+     "GigaChat-2-Pro#2",
+     "llama3.2:3b#1"
+    ],
+    [
+     "llama3.2:3b#2",
+     "gemma-4-26b-a4b-it#3",
+     "gemini-3.5-flash-lite#4",
+     "mistral:7b#1",
+     "GigaChat-2-Max#3"
     ],
     [
      "gemini-3.8-flash#4",
      "gemini-3.6-flash#4",
      "claude-opus-5-5#2",
      "claude-fable-5-1#3",
-     "gemma-4-31b-it#3",
-     "GigaChat-2#2",
-     "GigaChat-2-Pro#1"
-    ],
-    [
-     "gemma-4-26b-a4b-it#3",
-     "gemini-3.5-flash-lite#4",
-     "GigaChat-2-Max#3"
+     "gemma-4-31b-it#3"
     ],
     [
      "claude-sonnet-5-5#2",
      "claude-fable-5-1#4",
+     "mistral:7b#4",
      "claude-opus-5-5#4",
      "claude-haiku-5-5#3",
      "GigaChat-2#4"
     ],
     [
-     "claude-haiku-4-5#3"
+     "claude-haiku-4-5#3",
+     "llama3.2:3b#3",
+     "qwen3:4b#3"
     ],
     [
      "GigaChat-2-Pro#4",
@@ -5538,16 +6008,28 @@
      "claude-haiku-4-5#4"
     ],
     [
-     "GigaChat-2#1",
-     "GigaChat-2-Max#1",
-     "GigaChat-2-Pro#2"
-    ],
-    [
      "GigaChat-2#3",
      "claude-haiku-5-5#4"
+    ],
+    [
+     "llama3.2:3b#4"
+    ],
+    [
+     "qwen3:4b#4"
+    ],
+    [
+     "GigaChat-2#2",
+     "GigaChat-2-Pro#1"
+    ],
+    [
+     "mistral:7b#0"
     ]
    ],
    "Ideas for a podcast about history": [
+    [
+     "qwen3:4b#3",
+     "qwen3:4b#4"
+    ],
     [
      "claude-opus-5-5#4"
     ],
@@ -5559,7 +6041,14 @@
      "GigaChat-2-Max#1"
     ],
     [
-     "claude-opus-5-5#2"
+     "llama3.2:3b#2"
+    ],
+    [
+     "llama3.2:3b#3"
+    ],
+    [
+     "claude-opus-5-5#2",
+     "qwen3:4b#2"
     ],
     [
      "claude-haiku-5-5#4"
@@ -5575,7 +6064,12 @@
     ],
     [
      "claude-fable-5-1#0",
-     "claude-sonnet-5-5#0"
+     "claude-sonnet-5-5#0",
+     "llama3.2:3b#0"
+    ],
+    [
+     "GigaChat-2#4",
+     "GigaChat-2-Max#2"
     ],
     [
      "gemini-3.6-flash#2",
@@ -5586,18 +6080,12 @@
      "GigaChat-2#1"
     ],
     [
-     "GigaChat-2#4",
-     "GigaChat-2-Max#2"
-    ],
-    [
      "GigaChat-2-Max#4",
      "GigaChat-2#2"
     ],
     [
      "claude-haiku-4-5#2",
-     "gemini-3.5-flash-lite#4",
-     "gemma-4-31b-it#3",
-     "claude-sonnet-5-5#2"
+     "gemini-3.5-flash-lite#4"
     ],
     [
      "gemini-3.8-flash#3"
@@ -5609,7 +6097,13 @@
      "gemini-3.5-flash-lite#3"
     ],
     [
+     "mistral:7b#0"
+    ],
+    [
      "gemini-3.8-flash#4"
+    ],
+    [
+     "qwen3:4b#0"
     ],
     [
      "gemini-3.8-flash#1",
@@ -5620,8 +6114,7 @@
      "claude-opus-5-5#1"
     ],
     [
-     "claude-haiku-5-5#1",
-     "claude-sonnet-5-5#4"
+     "mistral:7b#4"
     ],
     [
      "gemini-3.8-flash#0",
@@ -5630,10 +6123,11 @@
      "claude-fable-5-1#2"
     ],
     [
-     "claude-opus-5-5#3"
+     "mistral:7b#3",
+     "GigaChat-2-Max#3"
     ],
     [
-     "claude-fable-5-1#1"
+     "claude-opus-5-5#3"
     ],
     [
      "claude-haiku-4-5#1",
@@ -5646,15 +6140,25 @@
      "gemma-4-31b-it#2"
     ],
     [
+     "claude-haiku-5-5#1",
+     "llama3.2:3b#4",
+     "claude-sonnet-5-5#4"
+    ],
+    [
+     "mistral:7b#2",
      "claude-fable-5-1#4",
      "claude-sonnet-5-5#3",
      "claude-haiku-4-5#3"
     ],
     [
+     "gemma-4-31b-it#3",
+     "claude-sonnet-5-5#2"
+    ],
+    [
      "claude-haiku-4-5#4"
     ],
     [
-     "GigaChat-2-Max#3"
+     "claude-fable-5-1#1"
     ],
     [
      "GigaChat-2-Pro#0"
@@ -5663,10 +6167,19 @@
      "claude-haiku-5-5#2"
     ],
     [
+     "qwen3:4b#1"
+    ],
+    [
      "GigaChat-2#3"
     ],
     [
      "gemini-3.5-flash-lite#2"
+    ],
+    [
+     "mistral:7b#1"
+    ],
+    [
+     "llama3.2:3b#1"
     ],
     [
      "claude-opus-5-5#0"
@@ -5679,73 +6192,109 @@
      "claude-haiku-4-5#1"
     ],
     [
-     "gemini-3.8-flash#0",
-     "claude-fable-5-1#4"
+     "qwen3:4b#4"
     ],
     [
-     "claude-opus-5-5#4"
+     "gemini-3.6-flash#0",
+     "gemini-3.5-flash-lite#3"
     ],
     [
      "claude-haiku-4-5#2",
      "claude-fable-5-1#3"
     ],
     [
-     "claude-sonnet-5-5#0"
+     "gemini-3.5-flash-lite#1"
     ],
     [
-     "claude-fable-5-1#1",
-     "gemini-3.5-flash-lite#3",
-     "gemma-4-26b-a4b-it#3"
+     "qwen3:4b#0"
+    ],
+    [
+     "llama3.2:3b#2",
+     "GigaChat-2-Max#4"
+    ],
+    [
+     "llama3.2:3b#1"
+    ],
+    [
+     "gemini-3.6-flash#2"
+    ],
+    [
+     "mistral:7b#4"
+    ],
+    [
+     "gemini-3.8-flash#0",
+     "claude-fable-5-1#4"
+    ],
+    [
+     "claude-haiku-4-5#0"
     ],
     [
      "GigaChat-2-Max#3",
-     "gemma-4-31b-it#1"
+     "claude-fable-5-1#1",
+     "gemma-4-31b-it#1",
+     "gemma-4-26b-a4b-it#3"
+    ],
+    [
+     "gemini-3.8-flash#1"
+    ],
+    [
+     "gemma-4-26b-a4b-it#2",
+     "claude-sonnet-5-5#4",
+     "gemma-4-31b-it#0"
     ],
     [
      "claude-haiku-4-5#3"
     ],
     [
-     "gemini-3.6-flash#0",
-     "claude-opus-5-5#2"
+     "llama3.2:3b#0"
     ],
     [
-     "claude-opus-5-5#1",
-     "gemini-3.8-flash#2"
+     "gemini-3.6-flash#3"
     ],
     [
-     "gemma-4-26b-a4b-it#2",
-     "gemma-4-31b-it#0",
-     "claude-sonnet-5-5#4"
+     "claude-haiku-5-5#3"
     ],
     [
-     "GigaChat-2-Max#0",
-     "GigaChat-2#0"
+     "mistral:7b#1",
+     "claude-haiku-5-5#1",
+     "GigaChat-2-Pro#0",
+     "GigaChat-2#3",
+     "gemma-4-31b-it#3"
     ],
     [
-     "claude-haiku-5-5#0"
+     "GigaChat-2-Pro#1"
     ],
     [
-     "claude-fable-5-1#2"
+     "qwen3:4b#2"
     ],
     [
-     "GigaChat-2-Pro#3"
-    ],
-    [
-     "claude-opus-5-5#0"
+     "claude-haiku-4-5#4",
+     "gemma-4-31b-it#2"
     ],
     [
      "gemini-3.5-flash-lite#4",
      "GigaChat-2#2"
     ],
     [
-     "GigaChat-2-Max#4"
+     "GigaChat-2-Max#0",
+     "GigaChat-2#0"
     ],
     [
-     "gemini-3.6-flash#2"
+     "claude-haiku-5-5#2"
     ],
     [
-     "claude-haiku-4-5#4",
-     "gemma-4-31b-it#2"
+     "claude-sonnet-5-5#1",
+     "GigaChat-2-Pro#4"
+    ],
+    [
+     "GigaChat-2-Max#1"
+    ],
+    [
+     "GigaChat-2#1",
+     "GigaChat-2-Max#2"
+    ],
+    [
+     "llama3.2:3b#3"
     ],
     [
      "gemini-3.8-flash#3",
@@ -5754,73 +6303,73 @@
      "gemini-3.5-flash-lite#0"
     ],
     [
-     "claude-opus-5-5#3",
-     "gemini-3.5-flash-lite#2"
-    ],
-    [
-     "gemini-3.6-flash#4"
-    ],
-    [
-     "GigaChat-2#1",
-     "GigaChat-2-Max#2"
-    ],
-    [
-     "claude-haiku-5-5#1",
-     "GigaChat-2-Pro#0",
-     "GigaChat-2#3",
-     "gemma-4-31b-it#3"
-    ],
-    [
-     "GigaChat-2-Max#1"
-    ],
-    [
-     "claude-sonnet-5-5#1",
-     "GigaChat-2-Pro#4"
-    ],
-    [
-     "claude-haiku-4-5#0"
-    ],
-    [
-     "claude-haiku-5-5#2"
-    ],
-    [
-     "gemini-3.6-flash#3"
-    ],
-    [
-     "claude-sonnet-5-5#2"
-    ],
-    [
      "gemma-4-26b-a4b-it#0"
-    ],
-    [
-     "gemini-3.5-flash-lite#1"
-    ],
-    [
-     "gemini-3.8-flash#1"
-    ],
-    [
-     "claude-haiku-5-5#3"
-    ],
-    [
-     "GigaChat-2-Pro#1"
     ],
     [
      "claude-sonnet-5-5#3"
     ],
     [
+     "claude-haiku-5-5#0"
+    ],
+    [
+     "qwen3:4b#3"
+    ],
+    [
      "claude-haiku-5-5#4"
+    ],
+    [
+     "claude-sonnet-5-5#2"
+    ],
+    [
+     "gemini-3.6-flash#4"
+    ],
+    [
+     "qwen3:4b#1",
+     "GigaChat-2#4"
+    ],
+    [
+     "claude-opus-5-5#3",
+     "gemini-3.5-flash-lite#2"
     ],
     [
      "GigaChat-2-Pro#2"
     ],
     [
-     "GigaChat-2#4"
+     "mistral:7b#3"
+    ],
+    [
+     "claude-opus-5-5#2"
+    ],
+    [
+     "claude-opus-5-5#4"
+    ],
+    [
+     "claude-opus-5-5#0"
+    ],
+    [
+     "mistral:7b#2"
+    ],
+    [
+     "mistral:7b#0"
+    ],
+    [
+     "claude-sonnet-5-5#0"
+    ],
+    [
+     "claude-opus-5-5#1",
+     "gemini-3.8-flash#2"
+    ],
+    [
+     "GigaChat-2-Pro#3"
     ],
     [
      "gemini-3.8-flash#4"
     ],
     [
      "claude-fable-5-1#0"
+    ],
+    [
+     "claude-fable-5-1#2"
     ]
    ],
    "Suggest a name for a black cat": [
@@ -5835,7 +6384,16 @@
      "claude-fable-5-1#4"
     ],
     [
+     "llama3.2:3b#2",
+     "gemma-4-31b-it#0"
+    ],
+    [
+     "llama3.2:3b#3",
+     "qwen3:4b#3"
+    ],
+    [
      "claude-opus-5-5#2",
+     "llama3.2:3b#0",
      "GigaChat-2-Max#2",
      "gemini-3.5-flash-lite#1",
      "claude-fable-5-1#0",
@@ -5844,6 +6402,7 @@
      "gemma-4-26b-a4b-it#1",
      "claude-haiku-4-5#4",
      "gemma-4-31b-it#3",
+     "qwen3:4b#1",
      "GigaChat-2#3"
     ],
     [
@@ -5886,6 +6445,10 @@
      "claude-opus-5-5#3"
     ],
     [
+     "llama3.2:3b#4",
+     "GigaChat-2#4"
+    ],
+    [
      "GigaChat-2-Max#4"
     ],
     [
@@ -5893,7 +6456,7 @@
      "gemini-3.8-flash#4"
     ],
     [
-     "gemma-4-31b-it#0"
+     "qwen3:4b#0"
     ],
     [
      "gemma-4-26b-a4b-it#4"
@@ -5903,7 +6466,13 @@
      "gemini-3.6-flash#0"
     ],
     [
+     "mistral:7b#4"
+    ],
+    [
      "GigaChat-2-Pro#2"
+    ],
+    [
+     "mistral:7b#2"
     ],
     [
      "gemini-3.8-flash#0",
@@ -5912,6 +6481,18 @@
     [
      "GigaChat-2#2",
      "claude-haiku-5-5#4"
+    ],
+    [
+     "mistral:7b#3"
+    ],
+    [
+     "qwen3:4b#2"
+    ],
+    [
+     "llama3.2:3b#1"
+    ],
+    [
+     "mistral:7b#0"
     ],
     [
      "GigaChat-2-Pro#1"
@@ -5926,10 +6507,13 @@
      "gemini-3.8-flash#1"
     ],
     [
-     "gemini-3.6-flash#3"
+     "qwen3:4b#4"
     ],
     [
-     "GigaChat-2#4"
+     "mistral:7b#1"
+    ],
+    [
+     "gemini-3.6-flash#3"
     ],
     [
      "GigaChat-2-Pro#3"
@@ -5940,9 +6524,34 @@
    ],
    "How can I learn a new language faster?": [
     [
+     "llama3.2:3b#4",
+     "gemma-4-31b-it#1",
+     "claude-opus-5-5#0",
+     "gemma-4-26b-a4b-it#1",
+     "gemini-3.8-flash#2",
+     "GigaChat-2-Pro#1",
+     "qwen3:4b#3",
+     "claude-haiku-5-5#0",
+     "gemini-3.5-flash-lite#3",
+     "gemini-3.6-flash#1",
+     "GigaChat-2#3",
+     "claude-sonnet-5-5#0",
+     "claude-fable-5-1#2"
+    ],
+    [
+     "claude-haiku-4-5#1"
+    ],
+    [
+     "gemini-3.6-flash#3"
+    ],
+    [
+     "llama3.2:3b#2",
+     "GigaChat-2#2",
+     "mistral:7b#2"
+    ],
+    [
      "gemma-4-31b-it#3",
      "gemini-3.6-flash#2",
-     "GigaChat-2-Pro#2",
      "claude-fable-5-1#3",
      "gemma-4-26b-a4b-it#2",
      "claude-haiku-4-5#3",
@@ -5954,8 +6563,29 @@
      "gemini-3.5-flash-lite#0"
     ],
     [
-     "GigaChat-2-Pro#3",
-     "GigaChat-2-Max#3"
+     "GigaChat-2-Pro#2",
+     "llama3.2:3b#1"
+    ],
+    [
+     "llama3.2:3b#0",
+     "mistral:7b#1",
+     "gemini-3.5-flash-lite#4",
+     "GigaChat-2-Max#0",
+     "claude-haiku-5-5#2",
+     "GigaChat-2-Pro#0",
+     "claude-fable-5-1#1",
+     "GigaChat-2#0",
+     "qwen3:4b#0",
+     "claude-sonnet-5-5#2",
+     "gemma-4-31b-it#0",
+     "claude-haiku-4-5#0"
+    ],
+    [
+     "gemini-3.5-flash-lite#1",
+     "gemini-3.8-flash#0",
+     "gemini-3.6-flash#0",
+     "gemma-4-26b-a4b-it#0",
+     "claude-opus-5-5#2"
     ],
     [
      "gemini-3.8-flash#3",
@@ -5963,56 +6593,30 @@
      "gemini-3.6-flash#4"
     ],
     [
-     "gemma-4-31b-it#1",
-     "claude-opus-5-5#0",
-     "gemma-4-26b-a4b-it#1",
-     "gemini-3.8-flash#2",
-     "GigaChat-2-Pro#1",
-     "claude-haiku-5-5#0",
-     "gemini-3.5-flash-lite#3",
-     "gemini-3.6-flash#1",
-     "GigaChat-2#3",
-     "claude-sonnet-5-5#0",
-     "claude-fable-5-1#2"
-    ],
-    [
-     "gemini-3.6-flash#3",
-     "claude-haiku-4-5#1"
+     "GigaChat-2-Pro#3",
+     "GigaChat-2-Max#3"
     ],
     [
      "GigaChat-2-Max#4",
      "claude-haiku-4-5#4"
     ],
     [
-     "gemini-3.8-flash#4"
-    ],
-    [
-     "gemini-3.5-flash-lite#1",
-     "gemini-3.8-flash#0",
-     "gemini-3.5-flash-lite#4",
-     "GigaChat-2-Max#0",
-     "claude-haiku-5-5#2",
-     "GigaChat-2-Pro#0",
-     "claude-fable-5-1#1",
-     "GigaChat-2#0",
-     "gemini-3.6-flash#0",
-     "gemma-4-26b-a4b-it#0",
-     "claude-sonnet-5-5#2",
-     "claude-opus-5-5#2",
-     "gemma-4-31b-it#0",
-     "claude-haiku-4-5#0"
+     "mistral:7b#3",
+     "GigaChat-2-Max#2"
     ],
     [
      "gemini-3.5-flash-lite#2",
      "claude-haiku-5-5#3",
      "claude-haiku-4-5#2",
      "claude-fable-5-1#4",
+     "qwen3:4b#2",
      "gemma-4-31b-it#2",
      "claude-opus-5-5#4"
     ],
     [
      "claude-haiku-5-5#4",
-     "GigaChat-2-Pro#4"
+     "GigaChat-2-Pro#4",
+     "qwen3:4b#4"
     ],
     [
      "claude-sonnet-5-5#3",
@@ -6023,20 +6627,28 @@
      "claude-fable-5-1#0"
     ],
     [
-     "GigaChat-2-Max#2"
+     "qwen3:4b#1",
+     "mistral:7b#0"
     ],
     [
-     "GigaChat-2#2"
+     "gemini-3.8-flash#4"
     ],
     [
      "GigaChat-2#4",
      "claude-sonnet-5-5#4"
+    ],
+    [
+     "llama3.2:3b#3"
+    ],
+    [
+     "mistral:7b#4"
     ]
    ],
    "Suggest a theme for a wedding": [
     [
      "GigaChat-2-Max#1",
      "gemma-4-26b-a4b-it#0",
+     "mistral:7b#0",
      "gemini-3.8-flash#0",
      "gemini-3.5-flash-lite#1",
      "claude-opus-5-5#0",
@@ -6047,45 +6659,73 @@
      "claude-haiku-4-5#0",
      "claude-fable-5-1#0",
      "claude-haiku-5-5#0",
-     "claude-sonnet-5-5#0"
+     "claude-sonnet-5-5#0",
+     "llama3.2:3b#0"
+    ],
+    [
+     "llama3.2:3b#2",
+     "claude-haiku-5-5#2",
+     "claude-sonnet-5-5#2",
+     "claude-fable-5-1#4",
+     "GigaChat-2-Max#4"
     ],
     [
      "gemini-3.5-flash-lite#2",
      "gemini-3.6-flash#4"
     ],
     [
-     "claude-haiku-5-5#2",
-     "claude-sonnet-5-5#2",
-     "GigaChat-2-Max#4",
-     "claude-fable-5-1#4"
-    ],
-    [
+     "llama3.2:3b#3",
      "claude-opus-5-5#2",
      "GigaChat-2-Max#0",
      "claude-fable-5-1#2",
      "gemma-4-31b-it#0",
      "claude-sonnet-5-5#3",
      "claude-haiku-4-5#2",
+     "claude-haiku-5-5#4",
      "GigaChat-2#0",
-     "claude-haiku-5-5#4"
+     "mistral:7b#1"
     ],
     [
      "gemma-4-26b-a4b-it#3",
      "GigaChat-2-Max#3",
-     "GigaChat-2#2",
+     "mistral:7b#4",
+     "GigaChat-2#2"
+    ],
+    [
      "gemini-3.5-flash-lite#0"
     ],
     [
      "gemma-4-31b-it#4",
      "GigaChat-2-Max#2",
      "gemma-4-26b-a4b-it#4",
-     "claude-haiku-4-5#3",
-     "GigaChat-2#4"
+     "claude-haiku-4-5#3"
+    ],
+    [
+     "qwen3:4b#4"
+    ],
+    [
+     "llama3.2:3b#4",
+     "gemini-3.6-flash#2",
+     "gemma-4-31b-it#2",
+     "qwen3:4b#1",
+     "gemini-3.8-flash#1",
+     "claude-fable-5-1#3",
+     "gemini-3.5-flash-lite#3",
+     "claude-haiku-4-5#1"
+    ],
+    [
+     "claude-sonnet-5-5#1",
+     "claude-haiku-5-5#1",
+     "gemma-4-26b-a4b-it#2",
+     "claude-opus-5-5#1"
     ],
     [
      "claude-opus-5-5#4",
      "gemini-3.5-flash-lite#4",
      "gemini-3.6-flash#3"
+    ],
+    [
+     "qwen3:4b#0"
     ],
     [
      "GigaChat-2-Pro#3"
@@ -6105,27 +6745,23 @@
      "GigaChat-2-Pro#0"
     ],
     [
-     "claude-haiku-4-5#4"
+     "claude-haiku-4-5#4",
+     "mistral:7b#3"
     ],
     [
-     "gemini-3.6-flash#2",
-     "gemma-4-31b-it#2",
-     "gemini-3.8-flash#1",
-     "claude-fable-5-1#3",
-     "gemini-3.5-flash-lite#3",
-     "claude-haiku-4-5#1"
+     "mistral:7b#2"
+    ],
+    [
+     "qwen3:4b#2"
     ],
     [
      "gemini-3.8-flash#4"
     ],
     [
-     "claude-sonnet-5-5#1",
-     "claude-haiku-5-5#1",
-     "gemma-4-26b-a4b-it#2",
-     "claude-opus-5-5#1"
+     "gemini-3.8-flash#3"
     ],
     [
-     "gemini-3.8-flash#3"
+     "llama3.2:3b#1"
     ],
     [
      "GigaChat-2-Pro#2"
@@ -6141,6 +6777,12 @@
      "GigaChat-2#1"
     ],
     [
+     "qwen3:4b#3"
+    ],
+    [
+     "GigaChat-2#4"
+    ],
+    [
      "GigaChat-2#3"
     ]
    ],
@@ -6149,8 +6791,8 @@
      "gemini-3.6-flash#3",
      "claude-sonnet-5-5#1",
      "gemma-4-26b-a4b-it#0",
-     "gemma-4-31b-it#0",
-     "claude-opus-5-5#2"
+     "claude-opus-5-5#2",
+     "gemma-4-31b-it#0"
     ],
     [
      "gemini-3.8-flash#1",
@@ -6161,15 +6803,40 @@
      "claude-opus-5-5#0"
     ],
     [
+     "GigaChat-2-Pro#4",
+     "mistral:7b#0"
+    ],
+    [
      "gemma-4-31b-it#1",
-     "gemma-4-26b-a4b-it#2",
-     "GigaChat-2-Pro#2"
+     "gemma-4-26b-a4b-it#2"
+    ],
+    [
+     "gemini-3.8-flash#4",
+     "qwen3:4b#2"
+    ],
+    [
+     "gemini-3.8-flash#2",
+     "llama3.2:3b#3"
+    ],
+    [
+     "llama3.2:3b#0",
+     "gemini-3.8-flash#0"
+    ],
+    [
+     "gemma-4-26b-a4b-it#3",
+     "gemini-3.5-flash-lite#2"
     ],
     [
      "gemma-4-26b-a4b-it#4"
     ],
     [
-     "gemini-3.8-flash#4"
+     "qwen3:4b#3"
+    ],
+    [
+     "llama3.2:3b#4"
+    ],
+    [
+     "llama3.2:3b#2"
     ],
     [
      "GigaChat-2-Pro#3"
@@ -6196,9 +6863,6 @@
      "GigaChat-2-Max#4"
     ],
     [
-     "gemma-4-26b-a4b-it#3"
-    ],
-    [
      "gemma-4-26b-a4b-it#1"
     ],
     [
@@ -6208,13 +6872,16 @@
      "claude-haiku-5-5#4"
     ],
     [
-     "gemini-3.8-flash#2"
-    ],
-    [
      "claude-haiku-5-5#1"
     ],
     [
      "GigaChat-2-Max#0"
+    ],
+    [
+     "mistral:7b#3"
+    ],
+    [
+     "llama3.2:3b#1"
     ],
     [
      "gemini-3.6-flash#2"
@@ -6229,13 +6896,16 @@
      "claude-haiku-4-5#2"
     ],
     [
-     "gemini-3.5-flash-lite#2"
-    ],
-    [
      "GigaChat-2#1"
     ],
     [
-     "gemini-3.8-flash#0"
+     "qwen3:4b#0"
+    ],
+    [
+     "mistral:7b#4"
+    ],
+    [
+     "qwen3:4b#1"
     ],
     [
      "GigaChat-2#3"
@@ -6265,16 +6935,28 @@
      "claude-opus-5-5#3"
     ],
     [
+     "GigaChat-2-Pro#2"
+    ],
+    [
      "GigaChat-2#0"
     ],
     [
      "GigaChat-2#4"
     ],
     [
+     "mistral:7b#2"
+    ],
+    [
+     "qwen3:4b#4"
+    ],
+    [
      "gemma-4-31b-it#2"
     ],
     [
      "claude-opus-5-5#1"
+    ],
+    [
+     "mistral:7b#1"
     ],
     [
      "claude-opus-5-5#4"
@@ -6304,15 +6986,6 @@
      "gemini-3.5-flash-lite#0"
     ],
     [
-     "GigaChat-2-Pro#4"
-    ],
-    [
-     "GigaChat-2-Max#2"
-    ],
-    [
-     "claude-haiku-4-5#4"
-    ],
-    [
      "claude-sonnet-5-5#0"
     ],
     [
@@ -6323,6 +6996,12 @@
     ],
     [
      "gemma-4-31b-it#3"
+    ],
+    [
+     "claude-haiku-4-5#4"
+    ],
+    [
+     "GigaChat-2-Max#2"
     ]
    ],
    "How can a hospital reduce patient wait times?": [
@@ -6331,6 +7010,7 @@
      "claude-opus-5-5#0",
      "gemma-4-31b-it#0",
      "claude-fable-5-1#0",
+     "qwen3:4b#3",
      "GigaChat-2#3",
      "gemini-3.5-flash-lite#1",
      "gemma-4-26b-a4b-it#2",
@@ -6343,51 +7023,34 @@
      "gemini-3.8-flash#1"
     ],
     [
-     "gemini-3.8-flash#3",
-     "gemma-4-26b-a4b-it#4",
-     "claude-sonnet-5-5#4",
-     "claude-opus-5-5#3",
-     "claude-fable-5-1#2",
-     "GigaChat-2-Max#4",
-     "gemini-3.6-flash#3",
-     "gemma-4-31b-it#3",
-     "gemini-3.5-flash-lite#3"
-    ],
-    [
-     "claude-sonnet-5-5#3",
-     "gemma-4-26b-a4b-it#0",
-     "gemini-3.8-flash#0",
-     "gemma-4-31b-it#1",
-     "gemini-3.6-flash#0",
-     "gemini-3.5-flash-lite#0",
-     "GigaChat-2-Pro#4",
-     "claude-opus-5-5#1",
-     "claude-haiku-4-5#3"
-    ],
-    [
-     "GigaChat-2-Pro#0",
-     "claude-sonnet-5-5#1",
-     "claude-haiku-4-5#2",
-     "claude-haiku-5-5#0",
-     "GigaChat-2#1"
-    ],
-    [
-     "GigaChat-2-Max#0"
-    ],
-    [
+     "llama3.2:3b#2",
      "claude-sonnet-5-5#2",
-     "gemini-3.5-flash-lite#4",
-     "gemma-4-26b-a4b-it#1",
-     "gemini-3.6-flash#1",
      "GigaChat-2-Max#1",
      "claude-fable-5-1#3",
      "claude-haiku-5-5#1",
      "gemma-4-31b-it#2",
      "claude-opus-5-5#2",
+     "claude-haiku-4-5#1"
+    ],
+    [
+     "gemini-3.5-flash-lite#4",
+     "gemma-4-26b-a4b-it#1",
+     "gemini-3.6-flash#1",
      "GigaChat-2-Max#3",
      "GigaChat-2-Pro#1",
-     "gemini-3.8-flash#2",
-     "claude-haiku-4-5#1"
+     "gemini-3.8-flash#2"
+    ],
+    [
+     "gemini-3.8-flash#3",
+     "gemma-4-26b-a4b-it#4",
+     "claude-sonnet-5-5#4",
+     "claude-opus-5-5#3",
+     "qwen3:4b#2",
+     "claude-fable-5-1#2",
+     "GigaChat-2-Max#4",
+     "gemini-3.6-flash#3",
+     "gemma-4-31b-it#3",
+     "gemini-3.5-flash-lite#3"
     ],
     [
      "claude-opus-5-5#4",
@@ -6398,20 +7061,59 @@
     ],
     [
      "claude-fable-5-1#1",
+     "claude-haiku-5-5#0",
      "gemini-3.5-flash-lite#2"
+    ],
+    [
+     "llama3.2:3b#0",
+     "GigaChat-2#0",
+     "mistral:7b#3"
+    ],
+    [
+     "claude-sonnet-5-5#3",
+     "gemma-4-26b-a4b-it#0",
+     "gemini-3.8-flash#0",
+     "gemma-4-31b-it#1",
+     "mistral:7b#1",
+     "gemini-3.6-flash#0",
+     "gemini-3.5-flash-lite#0",
+     "claude-opus-5-5#1",
+     "claude-haiku-4-5#3"
+    ],
+    [
+     "llama3.2:3b#3",
+     "qwen3:4b#0",
+     "GigaChat-2-Pro#0",
+     "claude-sonnet-5-5#1",
+     "mistral:7b#0",
+     "claude-haiku-4-5#2",
+     "GigaChat-2#1"
     ],
     [
      "claude-haiku-5-5#4",
      "gemma-4-26b-a4b-it#3",
      "claude-haiku-4-5#4",
-     "gemma-4-31b-it#4"
+     "mistral:7b#4",
+     "gemma-4-31b-it#4",
+     "llama3.2:3b#4"
     ],
     [
      "GigaChat-2-Max#2",
      "GigaChat-2-Pro#3"
     ],
     [
-     "GigaChat-2#0"
+     "GigaChat-2-Max#0"
+    ],
+    [
+     "llama3.2:3b#1",
+     "GigaChat-2-Pro#4"
+    ],
+    [
+     "qwen3:4b#1"
+    ],
+    [
+     "mistral:7b#2",
+     "qwen3:4b#4"
     ],
     [
      "GigaChat-2#2"
@@ -6427,6 +7129,7 @@
     ],
     [
      "gemini-3.6-flash#2",
+     "llama3.2:3b#2",
      "claude-sonnet-5-5#2",
      "claude-opus-5-5#4",
      "claude-fable-5-1#2",
@@ -6438,11 +7141,32 @@
      "gemma-4-31b-it#4"
     ],
     [
+     "qwen3:4b#1",
+     "llama3.2:3b#3",
+     "mistral:7b#3",
+     "claude-haiku-5-5#1",
+     "claude-opus-5-5#1",
+     "GigaChat-2-Max#1",
+     "GigaChat-2-Pro#2"
+    ],
+    [
      "gemini-3.6-flash#4"
+    ],
+    [
+     "mistral:7b#4",
+     "gemini-3.8-flash#4",
+     "gemini-3.6-flash#3",
+     "qwen3:4b#3"
+    ],
+    [
+     "llama3.2:3b#1",
+     "claude-fable-5-1#4",
+     "claude-haiku-4-5#3"
     ],
     [
      "GigaChat-2-Max#0",
      "GigaChat-2#3",
+     "mistral:7b#2",
      "claude-opus-5-5#3"
     ],
     [
@@ -6451,28 +7175,43 @@
     ],
     [
      "gemma-4-26b-a4b-it#0",
-     "gemma-4-31b-it#0"
+     "gemma-4-31b-it#0",
+     "mistral:7b#0"
     ],
     [
+     "gemini-3.6-flash#0",
+     "claude-fable-5-1#0",
+     "gemini-3.5-flash-lite#0",
+     "claude-sonnet-5-5#0",
+     "gemini-3.8-flash#0",
+     "claude-haiku-4-5#0"
+    ],
+    [
+     "llama3.2:3b#4",
      "GigaChat-2-Max#3",
      "GigaChat-2-Pro#4"
+    ],
+    [
+     "claude-haiku-4-5#4",
+     "GigaChat-2#4"
     ],
     [
      "gemini-3.5-flash-lite#4"
     ],
     [
-     "GigaChat-2-Pro#3",
-     "claude-fable-5-1#4"
+     "GigaChat-2-Pro#3"
+    ],
+    [
+     "gemma-4-26b-a4b-it#1",
+     "qwen3:4b#0",
+     "GigaChat-2-Pro#0",
+     "gemma-4-31b-it#3"
     ],
     [
      "GigaChat-2#2"
     ],
     [
-     "gemma-4-26b-a4b-it#1",
-     "GigaChat-2-Pro#0",
-     "gemma-4-31b-it#3"
-    ],
-    [
+     "mistral:7b#1",
      "gemini-3.6-flash#1",
      "gemma-4-31b-it#2",
      "claude-fable-5-1#3",
@@ -6484,15 +7223,11 @@
      "claude-haiku-5-5#2",
      "claude-sonnet-5-5#4",
      "gemini-3.5-flash-lite#2",
-     "GigaChat-2#1"
+     "GigaChat-2#1",
+     "llama3.2:3b#0"
     ],
     [
-     "gemini-3.6-flash#0",
-     "claude-fable-5-1#0",
-     "gemini-3.5-flash-lite#0",
-     "claude-sonnet-5-5#0",
-     "gemini-3.8-flash#0",
-     "claude-haiku-4-5#0"
+     "qwen3:4b#4"
     ],
     [
      "claude-sonnet-5-5#1",
@@ -6505,24 +7240,10 @@
      "claude-haiku-4-5#1"
     ],
     [
-     "claude-haiku-5-5#1",
-     "claude-opus-5-5#1",
-     "GigaChat-2-Max#1",
-     "GigaChat-2-Pro#2"
-    ],
-    [
-     "gemini-3.8-flash#4",
-     "gemini-3.6-flash#3"
+     "qwen3:4b#2"
     ],
     [
      "GigaChat-2-Max#4"
-    ],
-    [
-     "claude-haiku-4-5#4",
-     "GigaChat-2#4"
-    ],
-    [
-     "claude-haiku-4-5#3"
     ],
     [
      "gemini-3.5-flash-lite#3"
@@ -6536,26 +7257,37 @@
      "claude-sonnet-5-5#4"
     ],
     [
+     "llama3.2:3b#4"
+    ],
+    [
+     "llama3.2:3b#2",
+     "gemma-4-26b-a4b-it#4",
+     "gemma-4-31b-it#1"
+    ],
+    [
+     "llama3.2:3b#0"
+    ],
+    [
      "gemini-3.5-flash-lite#2"
     ],
     [
-     "GigaChat-2-Pro#2"
+     "GigaChat-2-Pro#2",
+     "mistral:7b#1"
     ],
     [
      "claude-haiku-5-5#2"
     ],
     [
      "gemma-4-31b-it#3",
+     "gemini-3.6-flash#4",
+     "gemini-3.5-flash-lite#4",
      "claude-opus-5-5#3",
-     "GigaChat-2-Pro#4",
-     "gemini-3.5-flash-lite#4"
-    ],
-    [
-     "gemini-3.6-flash#4"
+     "GigaChat-2-Pro#4"
     ],
     [
      "GigaChat-2-Max#3",
-     "gemma-4-31b-it#4"
+     "gemma-4-31b-it#4",
+     "qwen3:4b#4"
     ],
     [
      "gemini-3.8-flash#1",
@@ -6566,6 +7298,9 @@
      "claude-haiku-5-5#4"
     ],
     [
+     "mistral:7b#4"
+    ],
+    [
      "GigaChat-2-Max#4",
      "claude-opus-5-5#4"
     ],
@@ -6574,6 +7309,10 @@
     ],
     [
      "gemma-4-26b-a4b-it#1"
+    ],
+    [
+     "mistral:7b#0",
+     "GigaChat-2-Max#2"
     ],
     [
      "claude-haiku-5-5#3"
@@ -6602,15 +7341,21 @@
      "gemini-3.5-flash-lite#1"
     ],
     [
-     "GigaChat-2-Max#0"
+     "mistral:7b#3"
     ],
     [
-     "GigaChat-2#2"
+     "GigaChat-2-Max#0",
+     "qwen3:4b#0",
+     "gemma-4-26b-a4b-it#0"
+    ],
+    [
+     "GigaChat-2#2",
+     "mistral:7b#2"
     ],
     [
      "GigaChat-2#4",
-     "claude-haiku-4-5#3",
-     "GigaChat-2-Pro#0"
+     "GigaChat-2-Pro#0",
+     "claude-haiku-4-5#3"
     ],
     [
      "gemini-3.8-flash#4"
@@ -6621,20 +7366,19 @@
      "claude-haiku-4-5#4"
     ],
     [
-     "gemma-4-26b-a4b-it#4",
-     "gemma-4-31b-it#1"
-    ],
-    [
      "claude-haiku-4-5#2"
     ],
     [
      "GigaChat-2#1"
     ],
     [
-     "gemini-3.6-flash#0"
+     "qwen3:4b#3"
     ],
     [
-     "gemma-4-26b-a4b-it#0"
+     "llama3.2:3b#3"
+    ],
+    [
+     "gemini-3.6-flash#0"
     ],
     [
      "GigaChat-2#0"
@@ -6652,12 +7396,13 @@
      "claude-fable-5-1#4"
     ],
     [
-     "gemma-4-31b-it#0",
-     "gemini-3.6-flash#1"
-    ],
-    [
+     "qwen3:4b#2",
      "gemini-3.8-flash#0",
      "claude-fable-5-1#1"
+    ],
+    [
+     "gemma-4-31b-it#0",
+     "gemini-3.6-flash#1"
     ],
     [
      "gemini-3.5-flash-lite#0",
@@ -6667,7 +7412,7 @@
      "claude-fable-5-1#3"
     ],
     [
-     "GigaChat-2-Max#2"
+     "qwen3:4b#1"
     ],
     [
      "GigaChat-2-Pro#3"
@@ -6685,25 +7430,13 @@
      "claude-fable-5-1#0"
     ],
     [
+     "llama3.2:3b#1"
+    ],
+    [
      "GigaChat-2#3"
     ]
    ],
    "Suggest a plot twist for a detective novel": [
-    [
-     "gemma-4-26b-a4b-it#4",
-     "gemini-3.6-flash#2",
-     "claude-haiku-4-5#0",
-     "gemini-3.8-flash#2"
-    ],
-    [
-     "claude-opus-5-5#2",
-     "claude-fable-5-1#0",
-     "claude-haiku-5-5#0"
-    ],
-    [
-     "gemma-4-26b-a4b-it#2",
-     "claude-sonnet-5-5#4"
-    ],
     [
      "claude-sonnet-5-5#3",
      "gemma-4-31b-it#0",
@@ -6715,8 +7448,8 @@
      "claude-opus-5-5#0"
     ],
     [
-     "GigaChat-2-Max#2",
-     "gemini-3.5-flash-lite#4"
+     "llama3.2:3b#4",
+     "qwen3:4b#2"
     ],
     [
      "gemma-4-31b-it#1",
@@ -6725,46 +7458,76 @@
      "claude-haiku-4-5#1",
      "claude-haiku-5-5#1",
      "GigaChat-2-Pro#1",
+     "claude-haiku-4-5#4",
+     "gemini-3.8-flash#0",
      "claude-fable-5-1#1",
      "claude-opus-5-5#1",
+     "mistral:7b#2",
+     "claude-sonnet-5-5#0",
      "gemini-3.6-flash#1"
-    ],
-    [
-     "claude-sonnet-5-5#0"
-    ],
-    [
-     "claude-haiku-4-5#4"
-    ],
-    [
-     "gemini-3.8-flash#0"
     ],
     [
      "gemini-3.8-flash#3",
      "gemma-4-26b-a4b-it#3"
     ],
     [
-     "gemini-3.6-flash#4",
+     "gemini-3.6-flash#4"
+    ],
+    [
+     "gemma-4-31b-it#3",
+     "claude-fable-5-1#4",
+     "claude-sonnet-5-5#2"
+    ],
+    [
      "claude-opus-5-5#3",
      "gemini-3.8-flash#4"
     ],
     [
-     "gemma-4-31b-it#3",
-     "claude-fable-5-1#4"
+     "gemma-4-26b-a4b-it#4",
+     "claude-opus-5-5#2",
+     "gemini-3.6-flash#2",
+     "claude-haiku-4-5#0",
+     "claude-sonnet-5-5#4",
+     "claude-fable-5-1#0",
+     "gemini-3.8-flash#2",
+     "claude-haiku-5-5#0",
+     "qwen3:4b#3"
     ],
     [
-     "claude-sonnet-5-5#2"
+     "gemma-4-26b-a4b-it#2"
+    ],
+    [
+     "gemini-3.6-flash#3"
+    ],
+    [
+     "GigaChat-2-Max#2",
+     "gemini-3.5-flash-lite#4",
+     "qwen3:4b#4"
+    ],
+    [
+     "GigaChat-2-Max#4"
     ],
     [
      "gemini-3.8-flash#1",
      "gemma-4-31b-it#4"
     ],
     [
-     "GigaChat-2#1",
+     "llama3.2:3b#1",
      "GigaChat-2-Pro#0",
+     "mistral:7b#0",
      "claude-haiku-4-5#3"
     ],
     [
+     "GigaChat-2#1",
      "claude-fable-5-1#3"
+    ],
+    [
+     "qwen3:4b#1",
+     "qwen3:4b#0"
+    ],
+    [
+     "claude-sonnet-5-5#1",
+     "gemma-4-31b-it#2"
     ],
     [
      "gemini-3.5-flash-lite#1"
@@ -6773,19 +7536,26 @@
      "GigaChat-2-Pro#2"
     ],
     [
-     "gemma-4-31b-it#2"
+     "mistral:7b#1"
     ],
     [
-     "claude-sonnet-5-5#1"
-    ],
-    [
-     "GigaChat-2#2"
-    ],
-    [
+     "GigaChat-2#2",
      "claude-haiku-5-5#3"
     ],
     [
+     "llama3.2:3b#0"
+    ],
+    [
+     "claude-haiku-5-5#2"
+    ],
+    [
      "gemini-3.5-flash-lite#2"
+    ],
+    [
+     "llama3.2:3b#2"
+    ],
+    [
+     "mistral:7b#3"
     ],
     [
      "GigaChat-2#3"
@@ -6794,22 +7564,19 @@
      "GigaChat-2#4"
     ],
     [
-     "GigaChat-2-Max#4"
-    ],
-    [
-     "gemini-3.6-flash#3"
-    ],
-    [
      "GigaChat-2-Max#0"
     ],
     [
-     "claude-haiku-5-5#2"
+     "llama3.2:3b#3"
     ],
     [
      "gemini-3.5-flash-lite#3"
     ],
     [
      "GigaChat-2#0"
+    ],
+    [
+     "mistral:7b#4"
     ],
     [
      "GigaChat-2-Max#3"
@@ -6831,6 +7598,7 @@
     [
      "gemma-4-26b-a4b-it#4",
      "gemini-3.6-flash#0",
+     "claude-haiku-5-5#2",
      "GigaChat-2-Max#1",
      "gemini-3.5-flash-lite#4",
      "gemini-3.8-flash#1",
@@ -6842,45 +7610,6 @@
      "gemma-4-26b-a4b-it#1",
      "gemini-3.5-flash-lite#1",
      "gemma-4-31b-it#1"
-    ],
-    [
-     "claude-haiku-5-5#2",
-     "GigaChat-2#2",
-     "gemma-4-26b-a4b-it#2",
-     "claude-haiku-4-5#1",
-     "GigaChat-2-Pro#0"
-    ],
-    [
-     "gemini-3.6-flash#2",
-     "gemma-4-31b-it#3"
-    ],
-    [
-     "claude-fable-5-1#3",
-     "claude-sonnet-5-5#3"
-    ],
-    [
-     "gemma-4-31b-it#0",
-     "claude-opus-5-5#2",
-     "claude-haiku-5-5#1",
-     "claude-fable-5-1#2",
-     "GigaChat-2-Max#0",
-     "claude-haiku-4-5#0",
-     "gemini-3.5-flash-lite#3",
-     "GigaChat-2#0",
-     "GigaChat-2-Pro#2",
-     "claude-sonnet-5-5#2"
-    ],
-    [
-     "gemini-3.6-flash#3",
-     "gemini-3.8-flash#2"
-    ],
-    [
-     "claude-haiku-5-5#3",
-     "gemma-4-26b-a4b-it#3",
-     "GigaChat-2-Max#3"
-    ],
-    [
-     "claude-opus-5-5#4"
     ],
     [
      "GigaChat-2-Pro#3",
@@ -6901,6 +7630,25 @@
      "claude-sonnet-5-5#1"
     ],
     [
+     "llama3.2:3b#3"
+    ],
+    [
+     "mistral:7b#1",
+     "GigaChat-2-Max#4"
+    ],
+    [
+     "llama3.2:3b#2",
+     "claude-fable-5-1#3",
+     "GigaChat-2#2",
+     "gemma-4-26b-a4b-it#2",
+     "gemini-3.6-flash#2",
+     "gemma-4-31b-it#3",
+     "claude-haiku-4-5#1",
+     "qwen3:4b#3",
+     "claude-sonnet-5-5#3",
+     "GigaChat-2-Pro#0"
+    ],
+    [
      "gemma-4-31b-it#4",
      "claude-sonnet-5-5#4",
      "claude-haiku-5-5#4",
@@ -6918,10 +7666,50 @@
      "gemini-3.8-flash#4"
     ],
     [
-     "GigaChat-2-Max#4"
+     "mistral:7b#0",
+     "gemma-4-31b-it#0",
+     "llama3.2:3b#0",
+     "GigaChat-2-Max#0",
+     "mistral:7b#3",
+     "qwen3:4b#0",
+     "gemini-3.5-flash-lite#3",
+     "GigaChat-2#0",
+     "qwen3:4b#2",
+     "GigaChat-2-Pro#2"
+    ],
+    [
+     "claude-opus-5-5#2",
+     "claude-haiku-5-5#1",
+     "claude-fable-5-1#2",
+     "claude-haiku-4-5#0",
+     "claude-sonnet-5-5#2"
+    ],
+    [
+     "claude-haiku-5-5#3",
+     "gemini-3.6-flash#3",
+     "gemini-3.8-flash#2",
+     "gemma-4-26b-a4b-it#3",
+     "mistral:7b#2",
+     "GigaChat-2-Max#3",
+     "qwen3:4b#1"
+    ],
+    [
+     "claude-opus-5-5#4"
+    ],
+    [
+     "llama3.2:3b#1"
+    ],
+    [
+     "mistral:7b#4"
     ],
     [
      "GigaChat-2#3"
+    ],
+    [
+     "llama3.2:3b#4"
+    ],
+    [
+     "qwen3:4b#4"
     ]
    ],
    "Ideas for a high school science fair project": [
@@ -6929,9 +7717,30 @@
      "claude-sonnet-5-5#4"
     ],
     [
+     "qwen3:4b#1"
+    ],
+    [
+     "llama3.2:3b#2"
+    ],
+    [
+     "mistral:7b#4",
+     "claude-opus-5-5#4",
+     "gemini-3.6-flash#1",
+     "GigaChat-2-Max#4"
+    ],
+    [
+     "llama3.2:3b#3"
+    ],
+    [
      "claude-sonnet-5-5#1",
      "claude-opus-5-5#0",
-     "claude-haiku-5-5#0"
+     "claude-haiku-5-5#0",
+     "qwen3:4b#4"
+    ],
+    [
+     "llama3.2:3b#0",
+     "claude-fable-5-1#0",
+     "qwen3:4b#3"
     ],
     [
      "GigaChat-2-Max#0",
@@ -6940,9 +7749,6 @@
     [
      "gemma-4-26b-a4b-it#0",
      "gemini-3.6-flash#0"
-    ],
-    [
-     "claude-fable-5-1#0"
     ],
     [
      "gemini-3.6-flash#2",
@@ -6968,16 +7774,19 @@
      "claude-haiku-5-5#1"
     ],
     [
-     "claude-opus-5-5#4",
-     "gemini-3.6-flash#1",
-     "GigaChat-2-Max#4"
-    ],
-    [
      "GigaChat-2#2"
     ],
     [
      "gemma-4-26b-a4b-it#1",
      "GigaChat-2-Pro#0"
+    ],
+    [
+     "mistral:7b#1"
+    ],
+    [
+     "qwen3:4b#0",
+     "claude-haiku-4-5#2",
+     "mistral:7b#0"
     ],
     [
      "gemma-4-26b-a4b-it#4",
@@ -6990,7 +7799,7 @@
      "claude-sonnet-5-5#3"
     ],
     [
-     "claude-haiku-4-5#0"
+     "mistral:7b#2"
     ],
     [
      "gemini-3.8-flash#2",
@@ -6998,8 +7807,17 @@
      "claude-fable-5-1#2"
     ],
     [
+     "llama3.2:3b#1"
+    ],
+    [
+     "claude-haiku-4-5#0"
+    ],
+    [
      "GigaChat-2#4",
      "gemini-3.5-flash-lite#3"
+    ],
+    [
+     "mistral:7b#3"
     ],
     [
      "claude-sonnet-5-5#2",
@@ -7010,13 +7828,13 @@
      "claude-fable-5-1#4"
     ],
     [
+     "qwen3:4b#2"
+    ],
+    [
      "GigaChat-2#0"
     ],
     [
      "GigaChat-2-Pro#1"
-    ],
-    [
-     "claude-haiku-4-5#2"
     ],
     [
      "gemma-4-31b-it#2",
@@ -7047,6 +7865,9 @@
     ],
     [
      "gemma-4-26b-a4b-it#2"
+    ],
+    [
+     "llama3.2:3b#4"
     ],
     [
      "GigaChat-2#1"
@@ -7063,12 +7884,18 @@
      "GigaChat-2-Pro#4",
      "gemma-4-26b-a4b-it#2",
      "GigaChat-2#1",
+     "llama3.2:3b#1",
+     "GigaChat-2-Pro#0",
+     "GigaChat-2-Max#2",
      "claude-haiku-4-5#0"
     ],
     [
      "gemini-3.8-flash#3",
      "claude-haiku-5-5#2",
+     "qwen3:4b#2",
      "gemini-3.5-flash-lite#2",
+     "claude-sonnet-5-5#3",
+     "mistral:7b#2",
      "GigaChat-2-Pro#3",
      "gemma-4-31b-it#4",
      "claude-opus-5-5#3",
@@ -7084,44 +7911,52 @@
     [
      "gemini-3.5-flash-lite#1",
      "gemma-4-31b-it#0",
+     "llama3.2:3b#2",
      "claude-sonnet-5-5#0",
      "claude-fable-5-1#0",
      "gemini-3.8-flash#0",
+     "mistral:7b#1",
+     "GigaChat-2#3",
      "claude-opus-5-5#0",
      "gemma-4-26b-a4b-it#1",
+     "qwen3:4b#0",
      "GigaChat-2-Pro#2",
      "claude-haiku-5-5#0",
      "claude-haiku-4-5#4",
      "gemini-3.6-flash#0"
     ],
     [
-     "gemma-4-31b-it#1",
-     "claude-haiku-4-5#2",
-     "GigaChat-2-Max#4",
-     "gemini-3.6-flash#2",
-     "claude-haiku-5-5#1",
-     "claude-sonnet-5-5#1",
-     "GigaChat-2#3",
-     "gemini-3.5-flash-lite#4",
-     "claude-opus-5-5#2",
-     "gemini-3.8-flash#2",
-     "gemma-4-26b-a4b-it#0",
-     "claude-fable-5-1#3"
-    ],
-    [
+     "qwen3:4b#3",
      "claude-fable-5-1#1",
      "GigaChat-2-Max#1",
      "GigaChat-2#2",
+     "mistral:7b#3",
      "claude-opus-5-5#1",
      "gemma-4-31b-it#2",
      "gemma-4-26b-a4b-it#4",
      "GigaChat-2-Pro#1",
      "gemini-3.6-flash#1",
-     "claude-sonnet-5-5#3",
      "claude-haiku-4-5#3",
      "gemini-3.8-flash#1",
      "gemini-3.5-flash-lite#0",
+     "llama3.2:3b#3",
      "claude-haiku-5-5#3"
+    ],
+    [
+     "gemma-4-31b-it#1",
+     "claude-haiku-4-5#2",
+     "llama3.2:3b#4",
+     "GigaChat-2-Max#4",
+     "gemini-3.6-flash#2",
+     "claude-haiku-5-5#1",
+     "claude-sonnet-5-5#1",
+     "qwen3:4b#1",
+     "gemini-3.5-flash-lite#4",
+     "mistral:7b#0",
+     "claude-opus-5-5#2",
+     "gemini-3.8-flash#2",
+     "gemma-4-26b-a4b-it#0",
+     "claude-fable-5-1#3"
     ],
     [
      "GigaChat-2-Max#0",
@@ -7131,15 +7966,16 @@
      "claude-fable-5-1#4",
      "claude-haiku-4-5#1",
      "claude-sonnet-5-5#2",
+     "llama3.2:3b#0",
+     "qwen3:4b#4",
      "gemma-4-31b-it#3"
+    ],
+    [
+     "mistral:7b#4"
     ],
     [
      "claude-haiku-5-5#4",
      "gemini-3.5-flash-lite#3"
-    ],
-    [
-     "GigaChat-2-Pro#0",
-     "GigaChat-2-Max#2"
     ]
    ],
    "Suggest a side business for a software developer": [
@@ -7149,11 +7985,11 @@
      "gemma-4-31b-it#1",
      "gemini-3.8-flash#3",
      "GigaChat-2#0",
-     "gemma-4-26b-a4b-it#0",
      "claude-sonnet-5-5#1",
      "gemini-3.6-flash#3",
      "gemini-3.5-flash-lite#4",
      "claude-fable-5-1#3",
+     "mistral:7b#1",
      "gemma-4-26b-a4b-it#4"
     ],
     [
@@ -7162,9 +7998,11 @@
      "GigaChat-2#2",
      "claude-sonnet-5-5#2",
      "claude-haiku-5-5#4",
+     "llama3.2:3b#2",
      "gemini-3.8-flash#4",
      "claude-haiku-4-5#3",
      "GigaChat-2-Pro#0",
+     "qwen3:4b#4",
      "claude-opus-5-5#3",
      "gemma-4-31b-it#3",
      "claude-fable-5-1#4",
@@ -7181,19 +8019,23 @@
      "claude-haiku-5-5#0",
      "gemma-4-31b-it#0",
      "gemini-3.6-flash#0",
+     "qwen3:4b#1",
      "claude-sonnet-5-5#0",
      "claude-fable-5-1#0",
      "GigaChat-2-Max#3"
     ],
     [
      "GigaChat-2#4",
-     "claude-sonnet-5-5#3",
+     "claude-haiku-4-5#1",
+     "mistral:7b#0",
+     "gemma-4-26b-a4b-it#0",
      "claude-haiku-4-5#4",
      "claude-haiku-5-5#2",
      "GigaChat-2-Pro#3"
     ],
     [
      "gemma-4-31b-it#4",
+     "qwen3:4b#0",
      "gemini-3.6-flash#4",
      "gemini-3.8-flash#2"
     ],
@@ -7205,7 +8047,12 @@
      "claude-opus-5-5#4"
     ],
     [
+     "qwen3:4b#2",
+     "claude-sonnet-5-5#3"
+    ],
+    [
      "GigaChat-2-Max#1",
+     "llama3.2:3b#3",
      "claude-opus-5-5#1",
      "claude-haiku-5-5#1",
      "gemma-4-26b-a4b-it#2",
@@ -7217,20 +8064,38 @@
      "gemini-3.8-flash#1"
     ],
     [
-     "gemini-3.5-flash-lite#2"
+     "llama3.2:3b#4"
+    ],
+    [
+     "mistral:7b#2"
+    ],
+    [
+     "mistral:7b#3"
     ],
     [
      "GigaChat-2-Pro#2"
+    ],
+    [
+     "qwen3:4b#3"
+    ],
+    [
+     "llama3.2:3b#0"
     ],
     [
      "GigaChat-2-Pro#1",
      "GigaChat-2#3"
     ],
     [
+     "llama3.2:3b#1"
+    ],
+    [
      "GigaChat-2-Max#4"
     ],
     [
-     "claude-haiku-4-5#1"
+     "gemini-3.5-flash-lite#2"
+    ],
+    [
+     "mistral:7b#4"
     ]
    ],
    "Give me a fresh idea for a birthday party for a 10-year-old": [
@@ -7238,41 +8103,45 @@
      "GigaChat-2-Max#1",
      "claude-fable-5-1#2",
      "GigaChat-2-Pro#2",
-     "claude-haiku-5-5#1"
+     "claude-haiku-5-5#1",
+     "mistral:7b#3"
     ],
     [
      "GigaChat-2-Max#0",
      "claude-haiku-4-5#2",
      "GigaChat-2#0",
+     "qwen3:4b#1",
      "GigaChat-2-Pro#3"
     ],
     [
      "gemini-3.6-flash#4",
-     "gemini-3.5-flash-lite#0"
+     "gemini-3.5-flash-lite#0",
+     "llama3.2:3b#4"
     ],
     [
      "gemini-3.8-flash#0",
      "gemini-3.5-flash-lite#3",
-     "claude-haiku-5-5#4",
      "claude-sonnet-5-5#3",
      "gemini-3.6-flash#1"
     ],
     [
      "gemma-4-31b-it#2",
-     "claude-haiku-5-5#2",
      "gemini-3.6-flash#2",
      "gemini-3.8-flash#1",
-     "GigaChat-2-Max#2",
      "claude-sonnet-5-5#1",
-     "gemini-3.5-flash-lite#4",
+     "gemma-4-26b-a4b-it#2"
+    ],
+    [
+     "claude-haiku-5-5#2",
+     "GigaChat-2-Max#2",
      "claude-haiku-4-5#1",
-     "gemma-4-26b-a4b-it#2",
-     "gemini-3.8-flash#3",
+     "mistral:7b#1",
+     "claude-fable-5-1#4",
      "GigaChat-2-Pro#4"
     ],
     [
      "claude-opus-5-5#2",
-     "gemini-3.5-flash-lite#2",
+     "qwen3:4b#2",
      "gemma-4-31b-it#4",
      "claude-haiku-5-5#3"
     ],
@@ -7280,31 +8149,38 @@
      "GigaChat-2-Pro#0",
      "claude-sonnet-5-5#0",
      "gemma-4-26b-a4b-it#0",
+     "gemini-3.6-flash#3",
      "gemma-4-31b-it#0",
      "claude-haiku-5-5#0",
+     "qwen3:4b#4",
+     "gemini-3.5-flash-lite#2",
      "claude-fable-5-1#0",
      "claude-haiku-4-5#0",
      "GigaChat-2#3"
     ],
     [
-     "gemini-3.8-flash#4"
+     "gemini-3.8-flash#4",
+     "gemini-3.6-flash#0"
     ],
     [
      "GigaChat-2#2",
      "claude-haiku-4-5#4"
     ],
     [
-     "claude-sonnet-5-5#2"
+     "claude-sonnet-5-5#2",
+     "llama3.2:3b#2"
     ],
     [
      "GigaChat-2#4"
     ],
     [
+     "claude-haiku-5-5#4"
+    ],
+    [
      "gemini-3.5-flash-lite#1",
      "gemma-4-31b-it#1",
      "gemma-4-26b-a4b-it#1",
-     "claude-fable-5-1#3",
-     "gemini-3.6-flash#0"
+     "claude-fable-5-1#3"
     ],
     [
      "gemma-4-26b-a4b-it#4",
@@ -7316,20 +8192,28 @@
      "claude-opus-5-5#1"
     ],
     [
+     "llama3.2:3b#3"
+    ],
+    [
+     "mistral:7b#2",
+     "gemma-4-26b-a4b-it#3",
+     "GigaChat-2-Max#4"
+    ],
+    [
      "claude-opus-5-5#0",
-     "gemini-3.6-flash#3",
      "gemini-3.8-flash#2"
     ],
     [
      "GigaChat-2-Max#3"
     ],
     [
-     "gemma-4-26b-a4b-it#3",
-     "GigaChat-2-Max#4",
-     "claude-fable-5-1#4"
+     "claude-haiku-4-5#3"
     ],
     [
-     "claude-haiku-4-5#3"
+     "gemini-3.5-flash-lite#4"
+    ],
+    [
+     "gemini-3.8-flash#3"
     ],
     [
      "gemma-4-31b-it#3"
@@ -7338,10 +8222,26 @@
      "claude-opus-5-5#4"
     ],
     [
+     "mistral:7b#4"
+    ],
+    [
+     "llama3.2:3b#0"
+    ],
+    [
      "GigaChat-2#1"
     ],
     [
      "GigaChat-2-Pro#1"
+    ],
+    [
+     "mistral:7b#0",
+     "llama3.2:3b#1"
+    ],
+    [
+     "qwen3:4b#3"
+    ],
+    [
+     "qwen3:4b#0"
     ]
    ],
    "Name ideas for a new productivity app": [
@@ -7373,6 +8273,9 @@
      "gemini-3.6-flash#2"
     ],
     [
+     "mistral:7b#3"
+    ],
+    [
      "claude-haiku-4-5#2"
     ],
     [
@@ -7399,6 +8302,9 @@
      "claude-haiku-5-5#0"
     ],
     [
+     "llama3.2:3b#2"
+    ],
+    [
      "GigaChat-2#2"
     ],
     [
@@ -7420,13 +8326,22 @@
      "GigaChat-2-Max#2"
     ],
     [
-     "GigaChat-2-Pro#4"
+     "mistral:7b#0"
     ],
     [
-     "GigaChat-2-Max#3"
+     "qwen3:4b#1"
     ],
     [
      "claude-haiku-4-5#4"
+    ],
+    [
+     "GigaChat-2-Pro#4"
+    ],
+    [
+     "qwen3:4b#2"
+    ],
+    [
+     "GigaChat-2-Max#3"
     ],
     [
      "claude-sonnet-5-5#1"
@@ -7442,6 +8357,9 @@
      "claude-sonnet-5-5#2"
     ],
     [
+     "mistral:7b#1"
+    ],
+    [
      "gemma-4-31b-it#4"
     ],
     [
@@ -7449,6 +8367,9 @@
     ],
     [
      "gemma-4-26b-a4b-it#1"
+    ],
+    [
+     "qwen3:4b#3"
     ],
     [
      "gemini-3.6-flash#1"
@@ -7467,6 +8388,9 @@
     ],
     [
      "claude-haiku-5-5#4"
+    ],
+    [
+     "mistral:7b#2"
     ],
     [
      "GigaChat-2#4"
@@ -7494,10 +8418,31 @@
      "gemini-3.8-flash#1"
     ],
     [
+     "qwen3:4b#4"
+    ],
+    [
      "gemini-3.5-flash-lite#0"
     ],
     [
+     "llama3.2:3b#1"
+    ],
+    [
      "claude-opus-5-5#3"
+    ],
+    [
+     "llama3.2:3b#4"
+    ],
+    [
+     "llama3.2:3b#3"
+    ],
+    [
+     "qwen3:4b#0"
+    ],
+    [
+     "mistral:7b#4"
+    ],
+    [
+     "llama3.2:3b#0"
     ],
     [
      "gemini-3.8-flash#4"
@@ -7512,15 +8457,21 @@
    "What could a museum do to attract teenagers?": [
     [
      "claude-haiku-4-5#2",
+     "llama3.2:3b#2",
      "gemma-4-31b-it#3",
      "gemini-3.6-flash#2",
      "claude-fable-5-1#3",
      "claude-sonnet-5-5#2",
      "gemini-3.8-flash#4",
+     "claude-haiku-5-5#4",
      "claude-haiku-5-5#2",
      "gemma-4-26b-a4b-it#4",
+     "mistral:7b#2",
      "gemini-3.5-flash-lite#4",
-     "claude-opus-5-5#2"
+     "claude-opus-5-5#2",
+     "gemini-3.5-flash-lite#2",
+     "GigaChat-2-Max#4",
+     "mistral:7b#4"
     ],
     [
      "GigaChat-2-Pro#2",
@@ -7533,31 +8484,44 @@
      "claude-haiku-4-5#4",
      "gemini-3.5-flash-lite#1",
      "gemini-3.6-flash#1",
+     "llama3.2:3b#3",
      "claude-fable-5-1#0"
     ],
     [
      "GigaChat-2-Max#1",
-     "GigaChat-2#1"
+     "GigaChat-2-Max#2",
+     "claude-opus-5-5#1",
+     "claude-haiku-4-5#0",
+     "gemma-4-31b-it#0",
+     "claude-haiku-5-5#3",
+     "claude-sonnet-5-5#1",
+     "mistral:7b#1",
+     "llama3.2:3b#1",
+     "gemini-3.6-flash#0",
+     "gemini-3.5-flash-lite#3",
+     "qwen3:4b#0",
+     "claude-fable-5-1#1",
+     "gemini-3.8-flash#0",
+     "gemma-4-26b-a4b-it#0",
+     "GigaChat-2-Pro#3"
+    ],
+    [
+     "gemini-3.6-flash#3",
+     "mistral:7b#3",
+     "gemini-3.8-flash#3",
+     "claude-haiku-4-5#3"
     ],
     [
      "claude-fable-5-1#2",
-     "claude-opus-5-5#4"
-    ],
-    [
      "claude-haiku-4-5#1",
      "gemma-4-31b-it#2",
      "gemma-4-26b-a4b-it#1",
      "gemini-3.6-flash#4",
+     "qwen3:4b#2",
      "claude-sonnet-5-5#4",
-     "gemini-3.8-flash#1"
-    ],
-    [
-     "GigaChat-2-Pro#4"
-    ],
-    [
-     "gemini-3.6-flash#3",
-     "gemini-3.8-flash#3",
-     "claude-haiku-4-5#3"
+     "claude-opus-5-5#4",
+     "gemini-3.8-flash#1",
+     "gemini-3.5-flash-lite#0"
     ],
     [
      "GigaChat-2#2",
@@ -7565,48 +8529,43 @@
      "claude-opus-5-5#3"
     ],
     [
-     "GigaChat-2-Max#2",
-     "claude-opus-5-5#1",
-     "claude-haiku-4-5#0",
-     "gemma-4-31b-it#0",
-     "claude-haiku-5-5#3",
-     "claude-sonnet-5-5#1",
-     "gemini-3.6-flash#0",
-     "gemini-3.5-flash-lite#3",
-     "claude-fable-5-1#1",
-     "gemini-3.8-flash#0",
-     "gemma-4-26b-a4b-it#0",
-     "GigaChat-2-Pro#3"
-    ],
-    [
      "GigaChat-2-Pro#0",
+     "GigaChat-2-Max#0",
      "gemma-4-26b-a4b-it#3",
      "GigaChat-2#0",
-     "claude-haiku-5-5#0",
-     "gemini-3.5-flash-lite#0"
+     "mistral:7b#0",
+     "claude-haiku-5-5#0"
     ],
     [
+     "GigaChat-2-Pro#4",
      "claude-sonnet-5-5#3",
-     "GigaChat-2-Max#0",
      "GigaChat-2-Pro#1",
-     "claude-fable-5-1#4"
+     "qwen3:4b#1",
+     "claude-fable-5-1#4",
+     "llama3.2:3b#0"
     ],
     [
-     "claude-haiku-5-5#4",
-     "GigaChat-2#4",
-     "gemini-3.5-flash-lite#2",
-     "GigaChat-2-Max#4"
+     "GigaChat-2-Max#3",
+     "qwen3:4b#4"
     ],
     [
-     "GigaChat-2-Max#3"
+     "qwen3:4b#3"
     ],
     [
-     "GigaChat-2#3"
+     "GigaChat-2#3",
+     "llama3.2:3b#4"
+    ],
+    [
+     "GigaChat-2#1"
+    ],
+    [
+     "GigaChat-2#4"
     ]
    ],
    "Ideas to improve employee engagement in a remote team": [
     [
      "GigaChat-2-Max#0",
+     "qwen3:4b#0",
      "gemini-3.6-flash#0",
      "claude-fable-5-1#0",
      "gemma-4-26b-a4b-it#0",
@@ -7618,20 +8577,27 @@
      "claude-opus-5-5#0"
     ],
     [
+     "llama3.2:3b#2"
+    ],
+    [
      "claude-haiku-5-5#2",
      "claude-opus-5-5#2",
+     "qwen3:4b#3",
      "claude-fable-5-1#2",
      "claude-sonnet-5-5#3",
      "GigaChat-2-Max#3",
      "gemini-3.6-flash#4",
      "claude-haiku-4-5#3",
      "gemini-3.5-flash-lite#2",
+     "llama3.2:3b#1",
+     "mistral:7b#3",
      "GigaChat-2-Pro#2",
      "GigaChat-2#2"
     ],
     [
      "GigaChat-2-Pro#0",
      "GigaChat-2-Max#4",
+     "mistral:7b#2",
      "claude-sonnet-5-5#1",
      "claude-haiku-4-5#0",
      "claude-fable-5-1#3"
@@ -7661,6 +8627,9 @@
      "gemini-3.6-flash#1"
     ],
     [
+     "mistral:7b#0"
+    ],
+    [
      "claude-haiku-4-5#2",
      "claude-sonnet-5-5#4",
      "gemini-3.8-flash#2",
@@ -7675,22 +8644,38 @@
      "GigaChat-2-Max#1"
     ],
     [
+     "qwen3:4b#2"
+    ],
+    [
+     "llama3.2:3b#3",
+     "gemma-4-26b-a4b-it#3"
+    ],
+    [
      "gemini-3.8-flash#4",
+     "llama3.2:3b#0",
      "claude-fable-5-1#4",
      "GigaChat-2#3"
     ],
     [
      "gemma-4-31b-it#4",
+     "qwen3:4b#1",
      "gemini-3.8-flash#3",
      "gemma-4-26b-a4b-it#4"
     ],
     [
      "gemini-3.5-flash-lite#4",
      "claude-opus-5-5#3",
-     "claude-haiku-5-5#4"
+     "claude-haiku-5-5#4",
+     "llama3.2:3b#4"
     ],
     [
-     "gemma-4-26b-a4b-it#3"
+     "mistral:7b#1"
+    ],
+    [
+     "qwen3:4b#4"
+    ],
+    [
+     "mistral:7b#4"
     ],
     [
      "GigaChat-2-Pro#1",
@@ -7704,6 +8689,7 @@
      "gemini-3.5-flash-lite#3",
      "gemini-3.8-flash#4",
      "GigaChat-2-Pro#2",
+     "mistral:7b#2",
      "claude-haiku-4-5#3",
      "GigaChat-2-Max#4",
      "gemma-4-31b-it#4",
@@ -7712,10 +8698,12 @@
     ],
     [
      "gemini-3.6-flash#2",
+     "llama3.2:3b#2",
      "claude-opus-5-5#2",
      "GigaChat-2#2",
      "gemma-4-31b-it#1",
      "gemini-3.8-flash#2",
+     "mistral:7b#4",
      "claude-fable-5-1#2",
      "claude-haiku-4-5#2",
      "claude-sonnet-5-5#2",
@@ -7727,13 +8715,18 @@
     ],
     [
      "GigaChat-2-Max#0",
-     "GigaChat-2#4"
+     "qwen3:4b#1",
+     "GigaChat-2#4",
+     "qwen3:4b#3"
     ],
     [
      "gemma-4-31b-it#2",
      "claude-haiku-4-5#1",
      "gemini-3.8-flash#1",
+     "qwen3:4b#2",
      "claude-opus-5-5#1",
+     "llama3.2:3b#3",
+     "mistral:7b#3",
      "gemini-3.5-flash-lite#1",
      "claude-sonnet-5-5#1",
      "claude-haiku-5-5#1",
@@ -7752,23 +8745,22 @@
      "gemini-3.6-flash#3",
      "gemini-3.5-flash-lite#4",
      "claude-opus-5-5#3",
+     "mistral:7b#1",
      "claude-haiku-4-5#4",
+     "llama3.2:3b#0",
+     "qwen3:4b#4",
      "gemma-4-31b-it#3",
      "claude-fable-5-1#3",
      "GigaChat-2#3"
     ],
     [
-     "GigaChat-2-Pro#4"
-    ],
-    [
-     "gemma-4-26b-a4b-it#4",
-     "claude-opus-5-5#4"
-    ],
-    [
+     "llama3.2:3b#1",
      "claude-fable-5-1#0",
      "gemini-3.8-flash#0",
      "gemma-4-26b-a4b-it#0",
      "claude-haiku-4-5#0",
+     "mistral:7b#0",
+     "qwen3:4b#0",
      "GigaChat-2-Pro#0",
      "gemini-3.5-flash-lite#0",
      "GigaChat-2#0",
@@ -7777,6 +8769,14 @@
      "gemma-4-31b-it#0",
      "gemini-3.6-flash#0",
      "claude-sonnet-5-5#0"
+    ],
+    [
+     "gemma-4-26b-a4b-it#4",
+     "claude-opus-5-5#4",
+     "llama3.2:3b#4"
+    ],
+    [
+     "GigaChat-2-Pro#4"
     ],
     [
      "claude-haiku-5-5#3"
@@ -7794,21 +8794,34 @@
     ],
     [
      "claude-haiku-4-5#2",
+     "llama3.2:3b#2",
+     "mistral:7b#3",
+     "mistral:7b#1",
+     "claude-fable-5-1#2"
+    ],
+    [
+     "gemini-3.8-flash#4",
+     "gemini-3.6-flash#2",
+     "gemini-3.5-flash-lite#2"
+    ],
+    [
      "claude-opus-5-5#0",
      "claude-haiku-5-5#1",
      "claude-sonnet-5-5#1",
      "gemini-3.8-flash#0",
-     "GigaChat-2-Max#2",
-     "claude-fable-5-1#2"
-    ],
-    [
-     "gemini-3.8-flash#4"
+     "GigaChat-2-Pro#1"
     ],
     [
      "gemini-3.6-flash#3",
      "claude-opus-5-5#2",
+     "gemma-4-26b-a4b-it#3",
      "claude-haiku-5-5#3",
      "gemini-3.8-flash#3"
+    ],
+    [
+     "llama3.2:3b#1",
+     "claude-haiku-4-5#0",
+     "GigaChat-2-Max#2"
     ],
     [
      "gemma-4-31b-it#1"
@@ -7818,7 +8831,10 @@
      "claude-fable-5-1#3",
      "gemma-4-26b-a4b-it#2",
      "claude-opus-5-5#4",
-     "gemini-3.6-flash#1"
+     "gemini-3.6-flash#1",
+     "qwen3:4b#4",
+     "GigaChat-2-Pro#4",
+     "mistral:7b#0"
     ],
     [
      "GigaChat-2#2",
@@ -7831,10 +8847,13 @@
      "claude-fable-5-1#1"
     ],
     [
-     "gemma-4-31b-it#0"
+     "gemma-4-31b-it#0",
+     "claude-haiku-5-5#0",
+     "gemma-4-26b-a4b-it#0"
     ],
     [
-     "claude-opus-5-5#1"
+     "claude-opus-5-5#1",
+     "claude-fable-5-1#0"
     ],
     [
      "gemini-3.8-flash#2"
@@ -7845,19 +8864,20 @@
     ],
     [
      "gemma-4-31b-it#4",
-     "gemini-3.6-flash#2"
+     "qwen3:4b#2"
     ],
     [
-     "GigaChat-2-Max#0",
-     "GigaChat-2-Pro#1"
+     "GigaChat-2-Max#0"
     ],
     [
-     "gemini-3.5-flash-lite#1",
-     "gemma-4-31b-it#3"
+     "gemini-3.5-flash-lite#1"
     ],
     [
      "GigaChat-2-Max#1",
-     "claude-haiku-4-5#1"
+     "claude-haiku-4-5#1",
+     "GigaChat-2-Pro#0",
+     "llama3.2:3b#4",
+     "llama3.2:3b#0"
     ],
     [
      "gemini-3.6-flash#4"
@@ -7869,20 +8889,28 @@
      "GigaChat-2-Max#3"
     ],
     [
+     "mistral:7b#4"
+    ],
+    [
      "claude-sonnet-5-5#0"
     ],
     [
-     "claude-haiku-4-5#0",
-     "GigaChat-2-Pro#0"
+     "qwen3:4b#0"
+    ],
+    [
+     "qwen3:4b#3"
+    ],
+    [
+     "gemini-3.5-flash-lite#3"
     ],
     [
      "GigaChat-2-Pro#2"
     ],
     [
-     "gemini-3.5-flash-lite#4"
+     "mistral:7b#2"
     ],
     [
-     "GigaChat-2-Pro#4"
+     "gemini-3.5-flash-lite#4"
     ],
     [
      "claude-haiku-4-5#3"
@@ -7891,19 +8919,7 @@
      "GigaChat-2-Max#4"
     ],
     [
-     "gemma-4-26b-a4b-it#3"
-    ],
-    [
-     "gemini-3.5-flash-lite#2"
-    ],
-    [
-     "claude-haiku-5-5#0"
-    ],
-    [
-     "gemma-4-26b-a4b-it#0"
-    ],
-    [
-     "claude-fable-5-1#0"
+     "llama3.2:3b#3"
     ],
     [
      "gemini-3.5-flash-lite#0"
@@ -7918,29 +8934,50 @@
      "claude-sonnet-5-5#2"
     ],
     [
-     "gemini-3.5-flash-lite#3"
+     "gemma-4-31b-it#3"
+    ],
+    [
+     "qwen3:4b#1"
     ]
    ],
    "How can a non-profit raise money without asking for donations?": [
     [
      "GigaChat-2-Max#0",
+     "qwen3:4b#1",
      "gemini-3.8-flash#3",
      "claude-fable-5-1#3",
      "GigaChat-2#0",
      "claude-haiku-5-5#1",
      "gemini-3.6-flash#3",
+     "GigaChat-2-Pro#1",
      "claude-opus-5-5#3",
      "gemini-3.5-flash-lite#1",
      "claude-haiku-4-5#4",
      "gemma-4-26b-a4b-it#4",
-     "gemma-4-31b-it#2"
+     "gemma-4-31b-it#2",
+     "llama3.2:3b#1",
+     "mistral:7b#0"
     ],
     [
      "gemini-3.6-flash#2",
      "claude-sonnet-5-5#3",
+     "GigaChat-2-Pro#3",
      "GigaChat-2-Max#3",
+     "mistral:7b#1",
+     "llama3.2:3b#0",
      "gemini-3.8-flash#4",
+     "qwen3:4b#4",
+     "claude-opus-5-5#2",
+     "gemma-4-26b-a4b-it#2",
+     "GigaChat-2#1",
      "gemini-3.5-flash-lite#3"
+    ],
+    [
+     "llama3.2:3b#2",
+     "qwen3:4b#3",
+     "claude-sonnet-5-5#2",
+     "claude-haiku-5-5#2",
+     "gemma-4-31b-it#3"
     ],
     [
      "claude-opus-5-5#0",
@@ -7948,6 +8985,7 @@
      "gemini-3.6-flash#0",
      "GigaChat-2-Pro#2",
      "claude-sonnet-5-5#0",
+     "GigaChat-2#2",
      "gemini-3.8-flash#0"
     ],
     [
@@ -7955,13 +8993,12 @@
      "claude-opus-5-5#1",
      "claude-haiku-4-5#3",
      "gemma-4-26b-a4b-it#1",
+     "qwen3:4b#2",
      "claude-fable-5-1#2",
+     "mistral:7b#2",
      "claude-sonnet-5-5#1",
      "GigaChat-2#3",
      "gemini-3.6-flash#1"
-    ],
-    [
-     "GigaChat-2-Pro#3"
     ],
     [
      "gemma-4-26b-a4b-it#3",
@@ -7970,14 +9007,12 @@
      "gemini-3.8-flash#1",
      "GigaChat-2-Max#2",
      "gemma-4-31b-it#1",
-     "claude-haiku-5-5#2",
      "claude-fable-5-1#1"
     ],
     [
      "GigaChat-2-Max#4",
      "claude-opus-5-5#4",
-     "claude-fable-5-1#4",
-     "claude-sonnet-5-5#4"
+     "claude-fable-5-1#4"
     ],
     [
      "claude-haiku-4-5#2",
@@ -7985,64 +9020,56 @@
      "gemini-3.6-flash#4",
      "gemini-3.5-flash-lite#4",
      "gemini-3.8-flash#2",
+     "claude-sonnet-5-5#4",
      "gemma-4-31b-it#4"
     ],
     [
+     "qwen3:4b#0",
      "claude-fable-5-1#0",
      "claude-haiku-5-5#0",
      "gemini-3.5-flash-lite#0",
+     "mistral:7b#3",
      "gemma-4-26b-a4b-it#0",
      "gemma-4-31b-it#0",
      "GigaChat-2-Max#1",
+     "llama3.2:3b#4",
      "GigaChat-2-Pro#4"
     ],
     [
-     "GigaChat-2-Pro#0"
-    ],
-    [
-     "claude-opus-5-5#2",
-     "gemma-4-26b-a4b-it#2",
-     "GigaChat-2#1"
-    ],
-    [
+     "mistral:7b#4",
      "GigaChat-2#4"
     ],
     [
-     "claude-sonnet-5-5#2"
+     "llama3.2:3b#3"
     ],
     [
-     "gemma-4-31b-it#3"
-    ],
-    [
-     "GigaChat-2#2"
-    ],
-    [
-     "GigaChat-2-Pro#1"
+     "GigaChat-2-Pro#0"
     ]
    ],
    "Suggest a weekend project to teach kids about money": [
+    [
+     "llama3.2:3b#2",
+     "claude-haiku-5-5#2",
+     "GigaChat-2-Max#0",
+     "claude-haiku-4-5#2",
+     "gemini-3.5-flash-lite#4",
+     "gemini-3.8-flash#4",
+     "GigaChat-2#3"
+    ],
     [
      "claude-opus-5-5#1",
      "gemma-4-31b-it#2",
      "gemini-3.8-flash#1",
      "gemini-3.6-flash#2",
      "gemini-3.5-flash-lite#2",
+     "mistral:7b#0",
      "claude-fable-5-1#1",
      "gemma-4-26b-a4b-it#2",
+     "llama3.2:3b#0",
      "claude-sonnet-5-5#2"
     ],
     [
-     "claude-haiku-5-5#2",
-     "claude-haiku-4-5#2",
-     "gemini-3.5-flash-lite#4",
-     "gemini-3.8-flash#4"
-    ],
-    [
-     "claude-haiku-5-5#4",
-     "GigaChat-2-Max#1",
-     "claude-opus-5-5#4"
-    ],
-    [
+     "llama3.2:3b#1",
      "claude-sonnet-5-5#0",
      "claude-haiku-4-5#0",
      "GigaChat-2-Pro#0",
@@ -8056,6 +9083,14 @@
      "gemma-4-26b-a4b-it#3"
     ],
     [
+     "claude-haiku-5-5#4",
+     "gemma-4-26b-a4b-it#4",
+     "GigaChat-2-Max#1",
+     "mistral:7b#3",
+     "claude-opus-5-5#4",
+     "claude-haiku-4-5#1"
+    ],
+    [
      "gemma-4-31b-it#1",
      "gemma-4-26b-a4b-it#1",
      "claude-sonnet-5-5#1",
@@ -8064,35 +9099,44 @@
      "claude-fable-5-1#2",
      "gemini-3.5-flash-lite#1",
      "gemini-3.8-flash#2",
+     "mistral:7b#4",
      "GigaChat-2-Pro#3",
+     "qwen3:4b#1",
      "gemini-3.6-flash#1"
     ],
     [
      "GigaChat-2-Max#2"
     ],
     [
-     "GigaChat-2-Max#0",
-     "gemma-4-31b-it#3",
-     "GigaChat-2#3"
-    ],
-    [
      "GigaChat-2-Max#4"
     ],
     [
+     "qwen3:4b#0",
      "claude-haiku-4-5#3",
      "claude-haiku-5-5#3",
      "claude-sonnet-5-5#4",
+     "GigaChat-2-Pro#2",
+     "GigaChat-2#4",
+     "GigaChat-2-Max#3",
      "GigaChat-2#2"
+    ],
+    [
+     "qwen3:4b#2"
     ],
     [
      "claude-haiku-4-5#4"
     ],
     [
-     "gemma-4-26b-a4b-it#4",
-     "claude-haiku-4-5#1"
+     "GigaChat-2-Pro#4"
     ],
     [
-     "GigaChat-2-Pro#4"
+     "llama3.2:3b#3"
+    ],
+    [
+     "mistral:7b#2",
+     "llama3.2:3b#4",
+     "qwen3:4b#4",
+     "GigaChat-2#1"
     ],
     [
      "gemini-3.5-flash-lite#0"
@@ -8106,33 +9150,31 @@
      "claude-sonnet-5-5#3"
     ],
     [
-     "GigaChat-2#0",
-     "GigaChat-2-Pro#1"
-    ],
-    [
+     "mistral:7b#1",
      "gemma-4-31b-it#4"
     ],
     [
-     "GigaChat-2-Pro#2",
-     "GigaChat-2-Max#3"
+     "qwen3:4b#3"
     ],
     [
-     "GigaChat-2#4"
-    ],
-    [
-     "claude-fable-5-1#4"
-    ],
-    [
-     "GigaChat-2#1"
+     "GigaChat-2#0",
+     "claude-fable-5-1#4",
+     "GigaChat-2-Pro#1"
     ],
     [
      "gemini-3.6-flash#4"
+    ],
+    [
+     "gemma-4-31b-it#3"
     ]
    ],
    "How can a public library stay relevant?": [
     [
      "gemma-4-26b-a4b-it#4",
+     "mistral:7b#3",
      "claude-haiku-4-5#4",
+     "llama3.2:3b#4",
+     "qwen3:4b#4",
      "GigaChat-2-Pro#4"
     ],
     [
@@ -8140,14 +9182,19 @@
      "GigaChat-2#4",
      "gemma-4-31b-it#4",
      "gemini-3.8-flash#3",
-     "gemini-3.5-flash-lite#2",
-     "claude-fable-5-1#0"
+     "qwen3:4b#0",
+     "claude-fable-5-1#0",
+     "llama3.2:3b#0"
     ],
     [
      "claude-sonnet-5-5#3",
+     "gemini-3.6-flash#3",
      "GigaChat-2#2",
+     "mistral:7b#1",
      "claude-opus-5-5#4",
      "claude-haiku-4-5#3",
+     "qwen3:4b#1",
+     "gemini-3.8-flash#4",
      "claude-haiku-5-5#3",
      "GigaChat-2-Pro#3",
      "GigaChat-2-Max#3",
@@ -8160,20 +9207,29 @@
      "claude-haiku-5-5#1",
      "claude-sonnet-5-5#2",
      "gemini-3.6-flash#1",
+     "mistral:7b#2",
      "claude-opus-5-5#0",
      "claude-fable-5-1#4",
      "gemini-3.8-flash#1",
-     "gemini-3.5-flash-lite#0"
+     "gemini-3.5-flash-lite#0",
+     "llama3.2:3b#1"
     ],
     [
-     "gemini-3.6-flash#3",
+     "llama3.2:3b#2",
+     "qwen3:4b#3",
      "claude-sonnet-5-5#0",
      "claude-haiku-4-5#1",
+     "GigaChat-2-Pro#1",
      "GigaChat-2#1",
      "claude-haiku-5-5#2",
+     "GigaChat-2-Max#1",
      "claude-fable-5-1#2",
      "gemini-3.5-flash-lite#3",
-     "GigaChat-2-Max#2"
+     "gemma-4-26b-a4b-it#3",
+     "GigaChat-2#3",
+     "GigaChat-2-Pro#2",
+     "GigaChat-2-Max#2",
+     "mistral:7b#4"
     ],
     [
      "gemma-4-31b-it#3",
@@ -8187,7 +9243,8 @@
     [
      "gemma-4-26b-a4b-it#2",
      "gemma-4-31b-it#2",
-     "gemini-3.6-flash#0"
+     "gemini-3.6-flash#0",
+     "llama3.2:3b#3"
     ],
     [
      "claude-sonnet-5-5#1",
@@ -8196,18 +9253,16 @@
      "claude-haiku-5-5#0",
      "GigaChat-2#0",
      "claude-opus-5-5#3",
+     "gemini-3.5-flash-lite#2",
      "gemini-3.8-flash#0",
      "gemma-4-31b-it#0",
+     "mistral:7b#0",
      "claude-haiku-4-5#0",
      "gemma-4-26b-a4b-it#0"
     ],
     [
-     "GigaChat-2-Pro#1",
-     "GigaChat-2-Max#1",
-     "GigaChat-2-Pro#2"
-    ],
-    [
-     "gemini-3.8-flash#4"
+     "qwen3:4b#2",
+     "GigaChat-2-Max#4"
     ],
     [
      "gemini-3.5-flash-lite#4"
@@ -8216,32 +9271,34 @@
      "claude-sonnet-5-5#4"
     ],
     [
-     "gemma-4-26b-a4b-it#3"
-    ],
-    [
-     "GigaChat-2-Max#4"
-    ],
-    [
      "gemini-3.6-flash#4"
-    ],
-    [
-     "GigaChat-2#3"
     ]
    ],
    "Suggest a new feature for a note-taking app": [
     [
      "claude-sonnet-5-5#4",
-     "gemini-3.8-flash#4"
+     "gemini-3.8-flash#4",
+     "qwen3:4b#1"
     ],
     [
      "claude-haiku-4-5#2",
      "claude-haiku-5-5#2",
+     "mistral:7b#1",
      "GigaChat-2#1",
+     "GigaChat-2-Max#2",
+     "gemini-3.5-flash-lite#4",
      "GigaChat-2-Pro#3"
     ],
     [
      "GigaChat-2-Pro#2",
      "claude-haiku-4-5#0"
+    ],
+    [
+     "llama3.2:3b#2",
+     "GigaChat-2#2",
+     "mistral:7b#0",
+     "GigaChat-2-Max#0",
+     "claude-haiku-5-5#0"
     ],
     [
      "gemini-3.8-flash#3",
@@ -8258,6 +9315,7 @@
     ],
     [
      "gemini-3.8-flash#0",
+     "GigaChat-2-Max#1",
      "claude-opus-5-5#3",
      "gemma-4-26b-a4b-it#3"
     ],
@@ -8267,36 +9325,29 @@
      "gemini-3.6-flash#4"
     ],
     [
-     "GigaChat-2#2",
-     "GigaChat-2-Max#0",
-     "claude-haiku-5-5#0"
-    ],
-    [
-     "claude-fable-5-1#1",
-     "claude-sonnet-5-5#0",
-     "claude-opus-5-5#0"
+     "claude-fable-5-1#1"
     ],
     [
      "claude-sonnet-5-5#3"
     ],
     [
      "gemma-4-31b-it#0",
+     "llama3.2:3b#0",
      "GigaChat-2-Pro#0"
     ],
     [
      "claude-sonnet-5-5#2",
      "gemma-4-26b-a4b-it#1",
      "gemini-3.5-flash-lite#3",
-     "claude-haiku-4-5#1",
      "gemini-3.6-flash#1",
      "gemma-4-31b-it#1",
-     "gemini-3.8-flash#1",
-     "claude-fable-5-1#3"
+     "GigaChat-2-Max#4"
     ],
     [
      "claude-haiku-5-5#3",
      "GigaChat-2-Max#3",
      "claude-haiku-4-5#3",
+     "qwen3:4b#0",
      "gemma-4-26b-a4b-it#0"
     ],
     [
@@ -8304,56 +9355,79 @@
     ],
     [
      "claude-haiku-5-5#1",
-     "GigaChat-2#0",
-     "GigaChat-2-Max#1"
+     "GigaChat-2#0"
     ],
     [
      "claude-sonnet-5-5#1",
      "gemma-4-26b-a4b-it#2",
+     "gemini-3.6-flash#2",
      "claude-fable-5-1#2",
      "gemma-4-31b-it#2",
      "gemini-3.5-flash-lite#1"
     ],
     [
-     "gemini-3.6-flash#2"
+     "mistral:7b#3"
     ],
     [
      "GigaChat-2#4"
     ],
     [
+     "claude-sonnet-5-5#0",
+     "gemma-4-31b-it#4",
+     "claude-opus-5-5#0"
+    ],
+    [
      "gemma-4-26b-a4b-it#4"
     ],
     [
-     "gemma-4-31b-it#4",
-     "GigaChat-2-Pro#1"
+     "qwen3:4b#2",
+     "gemini-3.5-flash-lite#2",
+     "llama3.2:3b#4"
     ],
     [
-     "GigaChat-2-Max#2",
-     "gemini-3.5-flash-lite#4"
-    ],
-    [
-     "gemini-3.5-flash-lite#2"
-    ],
-    [
-     "GigaChat-2#3"
+     "mistral:7b#4"
     ],
     [
      "claude-opus-5-5#4"
+    ],
+    [
+     "GigaChat-2-Pro#1"
     ],
     [
      "claude-haiku-5-5#4",
      "claude-haiku-4-5#4"
     ],
     [
+     "claude-haiku-4-5#1",
+     "gemini-3.8-flash#1",
+     "claude-fable-5-1#3"
+    ],
+    [
+     "llama3.2:3b#1"
+    ],
+    [
+     "mistral:7b#2"
+    ],
+    [
+     "qwen3:4b#3"
+    ],
+    [
      "claude-fable-5-1#4"
     ],
     [
-     "GigaChat-2-Max#4"
+     "qwen3:4b#4"
+    ],
+    [
+     "llama3.2:3b#3"
+    ],
+    [
+     "GigaChat-2#3"
     ]
    ],
    "How can a restaurant reduce food waste?": [
     [
      "gemma-4-26b-a4b-it#4",
+     "llama3.2:3b#1",
      "claude-haiku-5-5#4",
      "claude-sonnet-5-5#0",
      "claude-fable-5-1#0",
@@ -8366,17 +9440,17 @@
      "gemini-3.8-flash#0",
      "claude-fable-5-1#1",
      "claude-haiku-5-5#1",
-     "GigaChat-2-Max#2",
      "GigaChat-2-Max#1",
-     "claude-haiku-4-5#3",
-     "GigaChat-2-Pro#1",
      "claude-sonnet-5-5#2",
      "gemma-4-31b-it#0",
+     "qwen3:4b#1",
+     "llama3.2:3b#0",
      "gemini-3.5-flash-lite#0",
      "claude-opus-5-5#1"
     ],
     [
      "claude-haiku-4-5#2",
+     "llama3.2:3b#2",
      "claude-haiku-5-5#2",
      "claude-fable-5-1#3",
      "gemini-3.8-flash#2",
@@ -8385,45 +9459,63 @@
      "GigaChat-2#2",
      "gemini-3.6-flash#2",
      "gemini-3.5-flash-lite#3",
+     "qwen3:4b#2",
      "GigaChat-2-Max#4",
      "claude-sonnet-5-5#3",
      "GigaChat-2-Pro#2"
     ],
     [
      "gemini-3.6-flash#3",
-     "GigaChat-2#3",
+     "qwen3:4b#3",
+     "GigaChat-2-Max#2",
+     "claude-haiku-4-5#3",
+     "GigaChat-2-Pro#1",
      "GigaChat-2-Pro#3"
     ],
     [
      "gemma-4-31b-it#2",
      "GigaChat-2-Max#0",
+     "mistral:7b#0",
+     "GigaChat-2#3",
      "gemma-4-26b-a4b-it#1",
-     "GigaChat-2-Pro#0",
+     "llama3.2:3b#3",
      "claude-haiku-4-5#0"
-    ],
-    [
-     "GigaChat-2#4",
-     "GigaChat-2-Pro#4",
-     "gemini-3.8-flash#3"
     ],
     [
      "gemini-3.6-flash#4",
      "gemma-4-26b-a4b-it#3",
+     "llama3.2:3b#4",
+     "mistral:7b#4",
      "claude-opus-5-5#4",
      "gemini-3.5-flash-lite#4",
+     "qwen3:4b#4",
      "claude-fable-5-1#4",
      "GigaChat-2-Max#3",
      "gemma-4-31b-it#3",
      "claude-haiku-4-5#1",
-     "claude-sonnet-5-5#4"
+     "claude-sonnet-5-5#4",
+     "gemini-3.8-flash#3"
     ],
     [
+     "GigaChat-2#4",
      "claude-haiku-5-5#3",
      "claude-fable-5-1#2",
      "gemini-3.5-flash-lite#2",
+     "GigaChat-2-Pro#4",
      "gemini-3.6-flash#1",
      "claude-opus-5-5#3",
+     "mistral:7b#2",
      "gemini-3.8-flash#1"
+    ],
+    [
+     "mistral:7b#3"
+    ],
+    [
+     "mistral:7b#1",
+     "claude-haiku-5-5#0",
+     "GigaChat-2#0",
+     "gemma-4-26b-a4b-it#0",
+     "claude-haiku-4-5#4"
     ],
     [
      "GigaChat-2#1",
@@ -8431,10 +9523,8 @@
      "gemma-4-31b-it#1"
     ],
     [
-     "claude-haiku-5-5#0",
-     "GigaChat-2#0",
-     "gemma-4-26b-a4b-it#0",
-     "claude-haiku-4-5#4"
+     "qwen3:4b#0",
+     "GigaChat-2-Pro#0"
     ],
     [
      "gemma-4-31b-it#4"
@@ -8443,21 +9533,27 @@
    "How can a university improve student retention?": [
     [
      "gemini-3.6-flash#0",
-     "GigaChat-2-Max#0",
+     "mistral:7b#0",
+     "claude-fable-5-1#3",
      "GigaChat-2#0",
-     "claude-haiku-4-5#0",
      "gemma-4-31b-it#0",
+     "claude-sonnet-5-5#3",
      "gemma-4-26b-a4b-it#0"
     ],
     [
      "claude-haiku-4-5#2",
      "gemini-3.6-flash#4",
+     "llama3.2:3b#4",
+     "gemini-3.5-flash-lite#3",
+     "claude-opus-5-5#4",
      "GigaChat-2-Max#2",
      "GigaChat-2#4",
      "gemini-3.8-flash#4"
     ],
     [
      "GigaChat-2-Max#1",
+     "llama3.2:3b#0",
+     "mistral:7b#3",
      "claude-sonnet-5-5#2",
      "claude-opus-5-5#2",
      "gemini-3.6-flash#3",
@@ -8468,11 +9564,22 @@
      "claude-fable-5-1#1",
      "claude-fable-5-1#4",
      "gemini-3.8-flash#3",
+     "qwen3:4b#2",
+     "qwen3:4b#4",
      "gemma-4-26b-a4b-it#3",
      "GigaChat-2-Pro#2",
      "gemini-3.5-flash-lite#1",
      "gemma-4-31b-it#3",
      "GigaChat-2-Pro#3"
+    ],
+    [
+     "llama3.2:3b#2",
+     "GigaChat-2-Pro#1",
+     "GigaChat-2-Max#0",
+     "claude-haiku-4-5#0",
+     "qwen3:4b#0",
+     "claude-haiku-5-5#3",
+     "GigaChat-2-Pro#4"
     ],
     [
      "gemma-4-31b-it#2",
@@ -8481,17 +9588,12 @@
      "claude-fable-5-1#2",
      "gemma-4-26b-a4b-it#1",
      "GigaChat-2#2",
+     "qwen3:4b#3",
      "gemini-3.5-flash-lite#4",
      "gemini-3.6-flash#1",
      "GigaChat-2-Max#4",
      "gemini-3.8-flash#1",
      "claude-opus-5-5#1"
-    ],
-    [
-     "claude-fable-5-1#3",
-     "gemini-3.5-flash-lite#3",
-     "claude-opus-5-5#4",
-     "claude-sonnet-5-5#3"
     ],
     [
      "gemini-3.8-flash#0",
@@ -8511,18 +9613,29 @@
      "gemini-3.5-flash-lite#2",
      "claude-haiku-4-5#4",
      "claude-sonnet-5-5#4",
+     "llama3.2:3b#3",
+     "qwen3:4b#1",
      "gemma-4-31b-it#1",
      "claude-opus-5-5#3",
      "GigaChat-2-Max#3"
     ],
     [
-     "GigaChat-2-Pro#0",
-     "GigaChat-2-Pro#1"
+     "GigaChat-2-Pro#0"
     ],
     [
-     "claude-haiku-5-5#3",
-     "GigaChat-2#3",
-     "GigaChat-2-Pro#4"
+     "llama3.2:3b#1"
+    ],
+    [
+     "mistral:7b#2"
+    ],
+    [
+     "mistral:7b#1"
+    ],
+    [
+     "mistral:7b#4"
+    ],
+    [
+     "GigaChat-2#3"
     ]
    ],
    "Ideas for a team-building activity for software engineers": [
@@ -8535,6 +9648,20 @@
      "gemini-3.5-flash-lite#3"
     ],
     [
+     "qwen3:4b#1",
+     "qwen3:4b#0",
+     "GigaChat-2-Pro#2"
+    ],
+    [
+     "llama3.2:3b#2",
+     "GigaChat-2-Max#0",
+     "gemma-4-31b-it#3",
+     "GigaChat-2#0",
+     "GigaChat-2-Pro#0",
+     "qwen3:4b#4",
+     "mistral:7b#0"
+    ],
+    [
      "claude-sonnet-5-5#2",
      "gemini-3.5-flash-lite#2",
      "claude-opus-5-5#3",
@@ -8542,17 +9669,17 @@
      "claude-haiku-5-5#3"
     ],
     [
-     "GigaChat-2-Max#0",
      "GigaChat-2-Pro#4",
      "gemini-3.8-flash#3",
      "claude-fable-5-1#0",
      "gemma-4-31b-it#0",
      "gemini-3.6-flash#0",
+     "llama3.2:3b#3",
      "claude-opus-5-5#0",
+     "mistral:7b#1",
      "gemma-4-26b-a4b-it#0",
      "claude-haiku-5-5#1",
      "claude-sonnet-5-5#1",
-     "GigaChat-2-Pro#2",
      "GigaChat-2#3",
      "claude-haiku-4-5#0"
     ],
@@ -8560,23 +9687,25 @@
      "gemini-3.6-flash#2"
     ],
     [
-     "GigaChat-2-Max#4"
+     "GigaChat-2-Max#4",
+     "llama3.2:3b#1"
     ],
     [
      "gemini-3.8-flash#1"
     ],
     [
      "claude-haiku-4-5#2",
-     "gemma-4-31b-it#3",
-     "GigaChat-2-Pro#0"
+     "mistral:7b#2"
     ],
     [
      "claude-haiku-4-5#3",
      "gemma-4-26b-a4b-it#1",
      "gemini-3.8-flash#2",
      "claude-haiku-5-5#0",
+     "qwen3:4b#2",
      "GigaChat-2-Max#1",
      "gemini-3.5-flash-lite#0",
+     "llama3.2:3b#0",
      "gemma-4-31b-it#1",
      "GigaChat-2-Pro#3",
      "GigaChat-2#1",
@@ -8588,6 +9717,10 @@
     [
      "gemma-4-26b-a4b-it#4",
      "claude-haiku-5-5#4"
+    ],
+    [
+     "mistral:7b#4",
+     "llama3.2:3b#4"
     ],
     [
      "gemma-4-31b-it#4"
@@ -8602,16 +9735,20 @@
      "gemini-3.8-flash#4"
     ],
     [
+     "mistral:7b#3"
+    ],
+    [
      "gemma-4-26b-a4b-it#3"
     ],
     [
      "gemini-3.5-flash-lite#4"
     ],
     [
-     "GigaChat-2#0"
+     "qwen3:4b#3"
     ],
     [
-     "claude-haiku-4-5#4"
+     "claude-haiku-4-5#4",
+     "gemini-3.6-flash#4"
     ],
     [
      "claude-opus-5-5#2",
@@ -8624,9 +9761,6 @@
     ],
     [
      "claude-fable-5-1#3"
-    ],
-    [
-     "gemini-3.6-flash#4"
     ],
     [
      "claude-sonnet-5-5#3"
@@ -8640,6 +9774,21 @@
    ],
    "Suggest a gift for a grandmother who has everything": [
     [
+     "qwen3:4b#3",
+     "claude-sonnet-5-5#0",
+     "claude-fable-5-1#0",
+     "GigaChat-2-Pro#0",
+     "claude-haiku-4-5#3",
+     "claude-haiku-5-5#0",
+     "gemma-4-26b-a4b-it#0",
+     "mistral:7b#0",
+     "GigaChat-2#0",
+     "gemma-4-31b-it#1",
+     "claude-opus-5-5#0",
+     "claude-haiku-4-5#0",
+     "llama3.2:3b#0"
+    ],
+    [
      "gemini-3.8-flash#0",
      "claude-sonnet-5-5#2",
      "gemma-4-31b-it#0",
@@ -8648,11 +9797,27 @@
      "gemini-3.6-flash#0"
     ],
     [
+     "llama3.2:3b#2",
+     "claude-opus-5-5#3",
+     "gemma-4-31b-it#3",
+     "gemini-3.5-flash-lite#3"
+    ],
+    [
      "gemini-3.5-flash-lite#2"
     ],
     [
      "claude-haiku-5-5#2",
+     "gemma-4-31b-it#4",
+     "gemini-3.8-flash#2",
+     "llama3.2:3b#3",
+     "gemini-3.6-flash#2",
+     "GigaChat-2-Pro#4",
      "gemma-4-26b-a4b-it#1",
+     "claude-sonnet-5-5#1",
+     "claude-fable-5-1#2",
+     "claude-haiku-5-5#4",
+     "qwen3:4b#1",
+     "claude-opus-5-5#1",
      "claude-haiku-4-5#1"
     ],
     [
@@ -8661,11 +9826,9 @@
      "GigaChat-2-Pro#1"
     ],
     [
-     "claude-sonnet-5-5#0",
-     "claude-haiku-4-5#3"
-    ],
-    [
-     "GigaChat-2-Pro#3"
+     "GigaChat-2-Pro#3",
+     "GigaChat-2-Max#1",
+     "mistral:7b#1"
     ],
     [
      "GigaChat-2-Max#0",
@@ -8678,32 +9841,13 @@
     ],
     [
      "gemini-3.8-flash#4",
-     "claude-haiku-5-5#3",
-     "claude-haiku-4-5#0"
-    ],
-    [
-     "gemma-4-31b-it#4",
-     "gemini-3.8-flash#2",
-     "gemini-3.6-flash#2",
-     "GigaChat-2-Pro#4",
-     "claude-sonnet-5-5#1",
-     "claude-fable-5-1#2",
-     "claude-haiku-5-5#4",
-     "claude-opus-5-5#1"
-    ],
-    [
-     "claude-fable-5-1#0",
-     "claude-haiku-5-5#0",
-     "gemma-4-26b-a4b-it#0",
-     "gemma-4-31b-it#1",
-     "claude-opus-5-5#0"
-    ],
-    [
-     "GigaChat-2-Pro#0",
-     "GigaChat-2#0"
+     "claude-haiku-5-5#3"
     ],
     [
      "GigaChat-2-Max#4"
+    ],
+    [
+     "qwen3:4b#0"
     ],
     [
      "claude-haiku-4-5#2",
@@ -8711,26 +9855,30 @@
      "claude-fable-5-1#3"
     ],
     [
-     "GigaChat-2-Max#1"
-    ],
-    [
      "claude-sonnet-5-5#4"
     ],
     [
      "gemini-3.6-flash#4",
-     "claude-opus-5-5#3"
+     "GigaChat-2#1"
     ],
     [
      "claude-haiku-4-5#4"
     ],
     [
-     "GigaChat-2#2"
+     "mistral:7b#2",
+     "GigaChat-2-Pro#2",
+     "GigaChat-2-Max#2"
+    ],
+    [
+     "GigaChat-2#2",
+     "qwen3:4b#4",
+     "mistral:7b#4"
+    ],
+    [
+     "qwen3:4b#2"
     ],
     [
      "GigaChat-2#4"
-    ],
-    [
-     "GigaChat-2-Pro#2"
     ],
     [
      "claude-haiku-5-5#1",
@@ -8741,23 +9889,20 @@
      "gemini-3.5-flash-lite#4"
     ],
     [
-     "gemma-4-31b-it#3"
+     "llama3.2:3b#4"
+    ],
+    [
+     "llama3.2:3b#1"
+    ],
+    [
+     "mistral:7b#3"
     ],
     [
      "gemini-3.6-flash#3",
      "claude-opus-5-5#4"
     ],
     [
-     "GigaChat-2#1"
-    ],
-    [
      "claude-fable-5-1#4"
-    ],
-    [
-     "gemini-3.5-flash-lite#3"
-    ],
-    [
-     "GigaChat-2-Max#2"
     ],
     [
      "GigaChat-2#3"
@@ -8771,6 +9916,7 @@
      "claude-haiku-5-5#1",
      "claude-sonnet-5-5#1",
      "claude-opus-5-5#0",
+     "qwen3:4b#1",
      "gemma-4-31b-it#0",
      "gemini-3.5-flash-lite#0",
      "claude-fable-5-1#1",
@@ -8779,8 +9925,11 @@
     ],
     [
      "claude-sonnet-5-5#4",
+     "gemini-3.5-flash-lite#2",
      "gemini-3.8-flash#0",
-     "gemini-3.6-flash#1"
+     "gemini-3.6-flash#1",
+     "claude-fable-5-1#0",
+     "claude-opus-5-5#1"
     ],
     [
      "claude-haiku-4-5#2",
@@ -8788,42 +9937,50 @@
      "claude-haiku-5-5#2",
      "gemma-4-26b-a4b-it#1",
      "gemini-3.6-flash#2",
+     "qwen3:4b#2",
+     "claude-sonnet-5-5#3",
      "claude-fable-5-1#2",
      "gemini-3.5-flash-lite#1",
      "gemma-4-31b-it#2"
     ],
     [
-     "gemini-3.5-flash-lite#2",
-     "gemma-4-31b-it#1",
-     "gemma-4-26b-a4b-it#2",
-     "GigaChat-2-Max#0",
-     "claude-haiku-4-5#0",
-     "claude-haiku-5-5#0",
-     "claude-fable-5-1#0",
-     "gemini-3.8-flash#2",
-     "claude-opus-5-5#1",
-     "GigaChat-2-Pro#0",
-     "claude-sonnet-5-5#0"
-    ],
-    [
+     "llama3.2:3b#2",
      "gemini-3.8-flash#4",
      "gemma-4-26b-a4b-it#3",
      "gemini-3.5-flash-lite#4",
-     "GigaChat-2#2",
-     "GigaChat-2-Pro#1",
      "gemini-3.6-flash#4",
      "claude-opus-5-5#2",
+     "mistral:7b#1",
+     "GigaChat-2-Max#3",
      "claude-fable-5-1#3",
      "gemma-4-31b-it#3"
     ],
     [
+     "llama3.2:3b#0",
+     "gemma-4-31b-it#1",
+     "gemma-4-26b-a4b-it#2",
+     "mistral:7b#3",
+     "GigaChat-2-Max#0",
+     "qwen3:4b#0",
+     "claude-haiku-4-5#0",
+     "GigaChat-2#0",
+     "claude-haiku-5-5#0",
+     "gemini-3.8-flash#2",
+     "GigaChat-2-Pro#0",
+     "claude-sonnet-5-5#0"
+    ],
+    [
      "claude-sonnet-5-5#2",
-     "claude-haiku-4-5#3",
      "claude-fable-5-1#4",
-     "GigaChat-2-Max#3",
+     "mistral:7b#4",
      "claude-opus-5-5#4",
      "claude-haiku-5-5#3",
      "GigaChat-2#4"
+    ],
+    [
+     "claude-haiku-4-5#3",
+     "llama3.2:3b#3",
+     "qwen3:4b#3"
     ],
     [
      "GigaChat-2-Pro#4",
@@ -8837,9 +9994,13 @@
     ],
     [
      "GigaChat-2#1",
-     "claude-sonnet-5-5#3",
+     "mistral:7b#2",
      "GigaChat-2-Max#1",
-     "GigaChat-2-Pro#2"
+     "GigaChat-2-Pro#2",
+     "llama3.2:3b#1"
+    ],
+    [
+     "llama3.2:3b#4"
     ],
     [
      "GigaChat-2#3",
@@ -8847,93 +10008,117 @@
      "GigaChat-2-Pro#3"
     ],
     [
-     "GigaChat-2#0"
+     "GigaChat-2#2",
+     "GigaChat-2-Pro#1"
+    ],
+    [
+     "mistral:7b#0"
+    ],
+    [
+     "qwen3:4b#4"
     ]
    ],
    "Ideas for a mobile game to play during a commute": [
     [
      "gemma-4-26b-a4b-it#4",
-     "gemma-4-31b-it#4"
+     "qwen3:4b#0",
+     "gemini-3.8-flash#0",
+     "gemma-4-31b-it#4",
+     "gemini-3.6-flash#3",
+     "claude-haiku-4-5#1",
+     "claude-fable-5-1#4"
+    ],
+    [
+     "qwen3:4b#4"
     ],
     [
      "gemini-3.6-flash#0",
      "GigaChat-2-Max#3",
+     "llama3.2:3b#0",
      "claude-fable-5-1#1",
+     "claude-sonnet-5-5#3",
      "gemini-3.5-flash-lite#3",
      "gemma-4-26b-a4b-it#3",
-     "claude-opus-5-5#1"
+     "claude-opus-5-5#1",
+     "gemini-3.8-flash#2"
     ],
     [
      "claude-haiku-4-5#2",
+     "mistral:7b#3",
      "claude-sonnet-5-5#0",
      "claude-fable-5-1#3"
     ],
     [
-     "gemini-3.5-flash-lite#1"
+     "gemini-3.5-flash-lite#1",
+     "gemini-3.8-flash#1",
+     "claude-haiku-5-5#4",
+     "claude-fable-5-1#0"
     ],
     [
+     "llama3.2:3b#2",
      "gemini-3.6-flash#2",
-     "claude-opus-5-5#4"
+     "gemma-4-26b-a4b-it#2",
+     "gemini-3.5-flash-lite#4",
+     "GigaChat-2#2",
+     "GigaChat-2-Max#4"
     ],
     [
-     "gemini-3.8-flash#0",
-     "claude-fable-5-1#4"
+     "llama3.2:3b#1",
+     "claude-haiku-5-5#3"
+    ],
+    [
+     "mistral:7b#4",
+     "gemma-4-26b-a4b-it#0"
     ],
     [
      "claude-haiku-4-5#0"
     ],
     [
-     "gemini-3.8-flash#1"
-    ],
-    [
-     "gemma-4-26b-a4b-it#2"
-    ],
-    [
      "claude-haiku-4-5#3",
-     "gemma-4-31b-it#1"
+     "gemma-4-31b-it#1",
+     "mistral:7b#0"
     ],
     [
-     "gemini-3.6-flash#3"
-    ],
-    [
-     "claude-haiku-4-5#1"
-    ],
-    [
-     "claude-haiku-5-5#3"
+     "mistral:7b#1",
+     "claude-haiku-5-5#1",
+     "GigaChat-2-Max#1",
+     "llama3.2:3b#3",
+     "GigaChat-2#3",
+     "gemini-3.8-flash#4",
+     "gemma-4-31b-it#3"
     ],
     [
      "GigaChat-2-Pro#1"
     ],
     [
-     "claude-haiku-5-5#1"
+     "qwen3:4b#2",
+     "GigaChat-2#1",
+     "GigaChat-2-Max#2"
     ],
     [
      "claude-haiku-4-5#4",
+     "gemini-3.6-flash#4",
      "gemma-4-31b-it#2"
     ],
     [
-     "gemini-3.5-flash-lite#4",
-     "GigaChat-2#2"
-    ],
-    [
      "GigaChat-2-Max#0",
-     "GigaChat-2#0"
+     "claude-haiku-5-5#0",
+     "GigaChat-2#0",
+     "claude-opus-5-5#0",
+     "mistral:7b#2",
+     "gemma-4-31b-it#0",
+     "GigaChat-2-Pro#3",
+     "claude-fable-5-1#2"
     ],
     [
      "claude-haiku-5-5#2"
     ],
     [
-     "claude-sonnet-5-5#1"
+     "claude-sonnet-5-5#1",
+     "GigaChat-2-Pro#4"
     ],
     [
      "GigaChat-2-Pro#0"
-    ],
-    [
-     "GigaChat-2-Max#1"
-    ],
-    [
-     "GigaChat-2#1",
-     "GigaChat-2-Max#2"
     ],
     [
      "gemini-3.8-flash#3",
@@ -8942,25 +10127,13 @@
      "gemini-3.5-flash-lite#0"
     ],
     [
-     "gemma-4-26b-a4b-it#0"
-    ],
-    [
-     "claude-sonnet-5-5#3"
-    ],
-    [
-     "claude-haiku-5-5#0"
-    ],
-    [
-     "claude-haiku-5-5#4"
+     "qwen3:4b#3"
     ],
     [
      "claude-sonnet-5-5#2"
     ],
     [
-     "gemini-3.6-flash#4"
-    ],
-    [
-     "GigaChat-2-Pro#4"
+     "qwen3:4b#1"
     ],
     [
      "claude-opus-5-5#3",
@@ -8979,75 +10152,12 @@
      "claude-opus-5-5#2"
     ],
     [
-     "GigaChat-2#3"
-    ],
-    [
-     "claude-opus-5-5#0"
-    ],
-    [
-     "gemma-4-31b-it#0"
-    ],
-    [
-     "GigaChat-2-Max#4"
-    ],
-    [
-     "gemini-3.8-flash#2"
-    ],
-    [
-     "GigaChat-2-Pro#3"
-    ],
-    [
-     "gemini-3.8-flash#4"
-    ],
-    [
-     "claude-fable-5-1#0"
-    ],
-    [
-     "gemma-4-31b-it#3"
-    ],
-    [
-     "claude-fable-5-1#2"
+     "claude-opus-5-5#4"
     ]
    ],
    "How can a city get more people to commute by bike?": [
     [
-     "gemini-3.8-flash#0",
-     "GigaChat-2-Max#0",
-     "gemma-4-26b-a4b-it#0",
-     "claude-fable-5-1#0",
-     "gemma-4-31b-it#0",
-     "claude-opus-5-5#0",
-     "GigaChat-2-Pro#0",
-     "claude-haiku-5-5#0",
-     "gemini-3.5-flash-lite#0",
-     "claude-haiku-4-5#0",
-     "GigaChat-2#0",
-     "claude-sonnet-5-5#0",
-     "gemini-3.6-flash#0"
-    ],
-    [
-     "claude-haiku-5-5#2",
-     "claude-opus-5-5#2",
-     "gemini-3.5-flash-lite#1",
-     "claude-fable-5-1#3",
-     "gemma-4-26b-a4b-it#1",
-     "GigaChat-2-Max#1",
-     "gemma-4-31b-it#3",
-     "gemini-3.8-flash#2",
-     "gemini-3.6-flash#1",
-     "GigaChat-2#3",
-     "claude-haiku-4-5#3"
-    ],
-    [
-     "gemini-3.8-flash#4",
-     "gemini-3.5-flash-lite#4",
-     "gemma-4-26b-a4b-it#4",
-     "gemma-4-31b-it#4",
-     "gemini-3.6-flash#4",
-     "claude-sonnet-5-5#2",
-     "claude-opus-5-5#4"
-    ],
-    [
+     "llama3.2:3b#2",
      "gemma-4-26b-a4b-it#3",
      "GigaChat-2-Max#3",
      "claude-haiku-4-5#2",
@@ -9059,21 +10169,69 @@
      "claude-haiku-5-5#1",
      "gemma-4-31b-it#2",
      "gemini-3.8-flash#3",
-     "GigaChat-2-Pro#3"
+     "mistral:7b#0"
+    ],
+    [
+     "gemini-3.8-flash#0",
+     "llama3.2:3b#0",
+     "GigaChat-2-Max#0",
+     "gemma-4-26b-a4b-it#0",
+     "claude-fable-5-1#0",
+     "gemma-4-31b-it#0",
+     "qwen3:4b#0",
+     "claude-opus-5-5#0",
+     "GigaChat-2-Pro#0",
+     "claude-haiku-5-5#0",
+     "gemini-3.5-flash-lite#0",
+     "claude-haiku-4-5#0",
+     "GigaChat-2#0",
+     "claude-sonnet-5-5#0",
+     "gemini-3.6-flash#0"
+    ],
+    [
+     "llama3.2:3b#3",
+     "claude-haiku-5-5#2",
+     "claude-opus-5-5#2",
+     "gemini-3.5-flash-lite#1",
+     "claude-fable-5-1#3",
+     "qwen3:4b#2",
+     "gemma-4-26b-a4b-it#1",
+     "GigaChat-2-Max#1",
+     "gemma-4-31b-it#3",
+     "gemini-3.8-flash#2",
+     "gemini-3.6-flash#1",
+     "GigaChat-2#3",
+     "claude-haiku-4-5#3"
+    ],
+    [
+     "gemini-3.8-flash#4",
+     "llama3.2:3b#1",
+     "gemini-3.5-flash-lite#4",
+     "gemma-4-26b-a4b-it#4",
+     "gemma-4-31b-it#4",
+     "gemini-3.6-flash#4",
+     "claude-sonnet-5-5#2",
+     "mistral:7b#1"
     ],
     [
      "claude-haiku-5-5#4",
+     "llama3.2:3b#4",
      "GigaChat-2-Pro#4",
      "GigaChat-2#4",
      "GigaChat-2-Max#4",
      "claude-haiku-4-5#4",
+     "GigaChat-2-Pro#2",
      "claude-sonnet-5-5#4",
+     "GigaChat-2-Max#2",
+     "qwen3:4b#4",
+     "mistral:7b#4",
      "GigaChat-2#1"
     ],
     [
      "claude-fable-5-1#2",
      "GigaChat-2#2",
      "claude-sonnet-5-5#3",
+     "qwen3:4b#1",
      "gemma-4-31b-it#1",
      "gemini-3.6-flash#3",
      "claude-opus-5-5#1",
@@ -9082,21 +10240,53 @@
      "gemini-3.5-flash-lite#3"
     ],
     [
-     "GigaChat-2-Pro#2",
-     "GigaChat-2-Max#2"
-    ],
-    [
-     "claude-fable-5-1#4"
+     "claude-fable-5-1#4",
+     "GigaChat-2-Pro#3",
+     "claude-opus-5-5#4"
     ],
     [
      "gemma-4-26b-a4b-it#2",
      "gemini-3.8-flash#1",
      "claude-haiku-5-5#3"
+    ],
+    [
+     "mistral:7b#2"
+    ],
+    [
+     "qwen3:4b#3"
+    ],
+    [
+     "mistral:7b#3"
     ]
    ],
    "Ideas for a podcast about history": [
     [
-     "claude-opus-5-5#4"
+     "claude-fable-5-1#0",
+     "gemini-3.6-flash#2",
+     "gemini-3.8-flash#4",
+     "qwen3:4b#0",
+     "gemma-4-31b-it#1",
+     "mistral:7b#4",
+     "claude-haiku-4-5#0",
+     "GigaChat-2-Pro#1",
+     "gemma-4-26b-a4b-it#2",
+     "GigaChat-2#1",
+     "claude-sonnet-5-5#0",
+     "llama3.2:3b#0"
+    ],
+    [
+     "gemma-4-31b-it#0",
+     "gemini-3.6-flash#4",
+     "gemini-3.8-flash#1",
+     "claude-fable-5-1#3",
+     "gemma-4-26b-a4b-it#0",
+     "gemma-4-26b-a4b-it#3",
+     "claude-haiku-5-5#1",
+     "claude-haiku-5-5#3",
+     "gemini-3.6-flash#0",
+     "claude-sonnet-5-5#4",
+     "claude-opus-5-5#1",
+     "gemini-3.5-flash-lite#3"
     ],
     [
      "gemini-3.5-flash-lite#1",
@@ -9106,29 +10296,68 @@
      "GigaChat-2-Max#1"
     ],
     [
-     "claude-opus-5-5#2"
+     "gemini-3.8-flash#0",
+     "gemini-3.5-flash-lite#0",
+     "gemma-4-26b-a4b-it#1",
+     "claude-fable-5-1#2",
+     "claude-opus-5-5#0"
+    ],
+    [
+     "claude-haiku-4-5#2",
+     "gemini-3.8-flash#3",
+     "gemini-3.5-flash-lite#4",
+     "gemma-4-31b-it#3",
+     "claude-sonnet-5-5#2"
+    ],
+    [
+     "claude-haiku-4-5#1",
+     "claude-sonnet-5-5#1",
+     "gemini-3.8-flash#2",
+     "gemini-3.6-flash#1"
+    ],
+    [
+     "mistral:7b#2",
+     "claude-fable-5-1#4",
+     "claude-sonnet-5-5#3",
+     "claude-haiku-4-5#3"
+    ],
+    [
+     "GigaChat-2-Max#0",
+     "mistral:7b#0",
+     "claude-haiku-5-5#0",
+     "mistral:7b#3",
+     "GigaChat-2#0",
+     "GigaChat-2-Max#3",
+     "GigaChat-2-Pro#0",
+     "GigaChat-2-Pro#4"
+    ],
+    [
+     "claude-opus-5-5#2",
+     "qwen3:4b#2"
+    ],
+    [
+     "claude-opus-5-5#3",
+     "claude-fable-5-1#1"
+    ],
+    [
+     "qwen3:4b#3",
+     "qwen3:4b#4"
+    ],
+    [
+     "claude-opus-5-5#4"
+    ],
+    [
+     "llama3.2:3b#2",
+     "mistral:7b#1"
+    ],
+    [
+     "llama3.2:3b#3"
     ],
     [
      "claude-haiku-5-5#4"
     ],
     [
      "GigaChat-2-Pro#3"
-    ],
-    [
-     "GigaChat-2-Max#0",
-     "claude-haiku-5-5#0",
-     "GigaChat-2#0",
-     "GigaChat-2-Pro#4"
-    ],
-    [
-     "claude-fable-5-1#0",
-     "gemini-3.6-flash#2",
-     "gemma-4-31b-it#1",
-     "claude-haiku-4-5#0",
-     "GigaChat-2-Pro#1",
-     "gemma-4-26b-a4b-it#2",
-     "GigaChat-2#1",
-     "claude-sonnet-5-5#0"
     ],
     [
      "GigaChat-2#4",
@@ -9140,66 +10369,12 @@
      "claude-haiku-5-5#2"
     ],
     [
-     "claude-haiku-4-5#2",
-     "gemini-3.5-flash-lite#4",
-     "gemma-4-31b-it#3",
-     "claude-sonnet-5-5#2"
-    ],
-    [
-     "gemini-3.8-flash#3"
-    ],
-    [
-     "gemma-4-31b-it#0",
-     "gemini-3.6-flash#4",
-     "gemma-4-26b-a4b-it#3",
-     "gemini-3.5-flash-lite#3"
-    ],
-    [
-     "gemini-3.8-flash#4"
-    ],
-    [
-     "gemini-3.8-flash#1",
-     "claude-fable-5-1#3",
-     "gemma-4-26b-a4b-it#0",
-     "claude-haiku-5-5#3",
-     "gemini-3.6-flash#0",
-     "claude-opus-5-5#1"
-    ],
-    [
-     "gemini-3.8-flash#0",
-     "gemini-3.5-flash-lite#0",
-     "gemma-4-26b-a4b-it#1",
-     "claude-fable-5-1#2",
-     "claude-opus-5-5#0"
-    ],
-    [
-     "claude-opus-5-5#3",
-     "claude-fable-5-1#1"
-    ],
-    [
-     "claude-haiku-4-5#1",
-     "claude-sonnet-5-5#1",
-     "gemini-3.8-flash#2",
-     "gemini-3.6-flash#1"
-    ],
-    [
-     "GigaChat-2-Pro#2",
-     "gemma-4-31b-it#2"
-    ],
-    [
-     "claude-haiku-5-5#1",
-     "claude-sonnet-5-5#4"
-    ],
-    [
-     "claude-fable-5-1#4",
-     "claude-sonnet-5-5#3",
-     "claude-haiku-4-5#3"
-    ],
-    [
      "claude-haiku-4-5#4"
     ],
     [
-     "GigaChat-2-Pro#0"
+     "GigaChat-2-Pro#2",
+     "gemma-4-31b-it#2",
+     "qwen3:4b#1"
     ],
     [
      "GigaChat-2#3"
@@ -9208,7 +10383,10 @@
      "gemini-3.5-flash-lite#2"
     ],
     [
-     "GigaChat-2-Max#3"
+     "llama3.2:3b#1"
+    ],
+    [
+     "llama3.2:3b#4"
     ]
    ],
    "Suggest a name for a black cat": [
@@ -9223,7 +10401,17 @@
      "claude-fable-5-1#4"
     ],
     [
+     "llama3.2:3b#2",
+     "gemma-4-31b-it#0"
+    ],
+    [
+     "llama3.2:3b#3",
+     "mistral:7b#2",
+     "qwen3:4b#3"
+    ],
+    [
      "claude-opus-5-5#2",
+     "llama3.2:3b#0",
      "GigaChat-2-Max#2",
      "gemini-3.5-flash-lite#1",
      "claude-fable-5-1#0",
@@ -9232,6 +10420,7 @@
      "gemma-4-26b-a4b-it#1",
      "claude-haiku-4-5#4",
      "gemma-4-31b-it#3",
+     "qwen3:4b#1",
      "GigaChat-2#3"
     ],
     [
@@ -9274,6 +10463,10 @@
      "claude-opus-5-5#3"
     ],
     [
+     "llama3.2:3b#4",
+     "GigaChat-2#4"
+    ],
+    [
      "GigaChat-2-Max#4"
     ],
     [
@@ -9281,7 +10474,7 @@
      "gemini-3.8-flash#4"
     ],
     [
-     "gemma-4-31b-it#0"
+     "qwen3:4b#0"
     ],
     [
      "gemma-4-26b-a4b-it#4"
@@ -9289,6 +10482,9 @@
     [
      "gemini-3.8-flash#2",
      "gemini-3.6-flash#0"
+    ],
+    [
+     "mistral:7b#4"
     ],
     [
      "GigaChat-2-Pro#2"
@@ -9300,6 +10496,18 @@
     [
      "GigaChat-2#2",
      "claude-haiku-5-5#4"
+    ],
+    [
+     "mistral:7b#3"
+    ],
+    [
+     "qwen3:4b#2"
+    ],
+    [
+     "llama3.2:3b#1"
+    ],
+    [
+     "mistral:7b#0"
     ],
     [
      "GigaChat-2-Pro#1"
@@ -9314,10 +10522,13 @@
      "gemini-3.8-flash#1"
     ],
     [
+     "qwen3:4b#4"
+    ],
+    [
      "gemini-3.6-flash#3"
     ],
     [
-     "GigaChat-2#4"
+     "mistral:7b#1"
     ],
     [
      "GigaChat-2-Pro#3"
@@ -9328,9 +10539,29 @@
    ],
    "How can I learn a new language faster?": [
     [
+     "llama3.2:3b#4",
+     "gemma-4-31b-it#1",
+     "claude-opus-5-5#0",
+     "gemma-4-26b-a4b-it#1",
+     "gemini-3.8-flash#2",
+     "GigaChat-2-Pro#1",
+     "claude-haiku-4-5#1",
+     "qwen3:4b#3",
+     "claude-haiku-5-5#0",
+     "gemini-3.5-flash-lite#3",
+     "gemini-3.6-flash#1",
+     "GigaChat-2#3",
+     "claude-sonnet-5-5#0",
+     "claude-fable-5-1#2"
+    ],
+    [
+     "llama3.2:3b#2",
+     "GigaChat-2#2",
+     "mistral:7b#2"
+    ],
+    [
      "gemma-4-31b-it#3",
      "gemini-3.6-flash#2",
-     "GigaChat-2-Pro#2",
      "claude-fable-5-1#3",
      "gemma-4-26b-a4b-it#2",
      "claude-haiku-4-5#3",
@@ -9342,65 +10573,63 @@
      "gemini-3.5-flash-lite#0"
     ],
     [
-     "GigaChat-2-Pro#3",
-     "GigaChat-2-Max#3"
-    ],
-    [
-     "gemini-3.8-flash#3",
+     "llama3.2:3b#0",
+     "mistral:7b#1",
+     "GigaChat-2-Max#4",
+     "gemini-3.5-flash-lite#1",
+     "claude-haiku-4-5#4",
      "gemini-3.8-flash#0",
-     "gemini-3.5-flash-lite#4",
+     "GigaChat-2-Max#0",
      "claude-haiku-5-5#2",
      "GigaChat-2-Pro#0",
      "claude-fable-5-1#1",
-     "gemma-4-26b-a4b-it#4",
+     "GigaChat-2#0",
      "gemini-3.6-flash#0",
      "gemma-4-26b-a4b-it#0",
+     "qwen3:4b#0",
      "claude-sonnet-5-5#2",
      "claude-opus-5-5#2",
      "gemma-4-31b-it#0",
+     "claude-haiku-4-5#0"
+    ],
+    [
+     "GigaChat-2-Pro#3",
+     "GigaChat-2-Max#3",
+     "qwen3:4b#1"
+    ],
+    [
+     "GigaChat-2-Pro#2",
+     "llama3.2:3b#1"
+    ],
+    [
+     "gemini-3.8-flash#3",
+     "gemini-3.5-flash-lite#4",
+     "gemma-4-26b-a4b-it#4",
      "gemini-3.6-flash#4"
     ],
     [
-     "gemma-4-31b-it#1",
-     "claude-opus-5-5#0",
-     "gemma-4-26b-a4b-it#1",
-     "gemini-3.8-flash#2",
-     "GigaChat-2-Pro#1",
-     "claude-haiku-4-5#1",
-     "GigaChat-2-Max#0",
-     "claude-haiku-5-5#0",
-     "gemini-3.5-flash-lite#3",
-     "gemini-3.6-flash#1",
-     "GigaChat-2#3",
-     "claude-sonnet-5-5#0",
-     "claude-haiku-4-5#0",
-     "claude-fable-5-1#2"
-    ],
-    [
-     "GigaChat-2-Max#4",
-     "claude-haiku-4-5#4",
-     "GigaChat-2#0"
+     "mistral:7b#3",
+     "GigaChat-2-Max#2"
     ],
     [
      "gemini-3.8-flash#4"
     ],
     [
-     "gemini-3.5-flash-lite#1"
+     "claude-haiku-5-5#4",
+     "GigaChat-2-Pro#4",
+     "qwen3:4b#4"
+    ],
+    [
+     "gemini-3.6-flash#3"
     ],
     [
      "gemini-3.5-flash-lite#2",
      "claude-haiku-5-5#3",
      "claude-haiku-4-5#2",
      "claude-fable-5-1#4",
+     "qwen3:4b#2",
      "gemma-4-31b-it#2",
      "claude-opus-5-5#4"
-    ],
-    [
-     "claude-haiku-5-5#4",
-     "GigaChat-2-Pro#4"
-    ],
-    [
-     "gemini-3.6-flash#3"
     ],
     [
      "claude-sonnet-5-5#3",
@@ -9410,23 +10639,25 @@
      "claude-fable-5-1#0"
     ],
     [
-     "GigaChat-2-Max#2"
-    ],
-    [
-     "GigaChat-2#2"
-    ],
-    [
      "GigaChat-2#4",
      "claude-sonnet-5-5#4"
     ],
     [
-     "GigaChat-2#1"
+     "llama3.2:3b#3"
+    ],
+    [
+     "GigaChat-2#1",
+     "mistral:7b#0"
+    ],
+    [
+     "mistral:7b#4"
     ]
    ],
    "Suggest a theme for a wedding": [
     [
      "GigaChat-2-Max#1",
      "gemma-4-26b-a4b-it#0",
+     "mistral:7b#0",
      "gemini-3.8-flash#0",
      "gemini-3.5-flash-lite#1",
      "claude-opus-5-5#0",
@@ -9434,20 +10665,20 @@
      "gemini-3.6-flash#1"
     ],
     [
-     "gemini-3.5-flash-lite#2",
-     "gemini-3.6-flash#4"
-    ],
-    [
+     "llama3.2:3b#2",
      "claude-haiku-5-5#2",
      "claude-sonnet-5-5#2",
      "GigaChat-2-Max#4",
      "claude-fable-5-1#4"
     ],
     [
+     "gemini-3.5-flash-lite#2",
+     "gemini-3.6-flash#4"
+    ],
+    [
+     "llama3.2:3b#3",
      "claude-opus-5-5#2",
-     "GigaChat-2-Max#0",
      "claude-fable-5-1#2",
-     "gemma-4-31b-it#0",
      "claude-sonnet-5-5#3",
      "claude-haiku-4-5#2",
      "claude-haiku-5-5#4"
@@ -9455,13 +10686,22 @@
     [
      "gemma-4-26b-a4b-it#3",
      "GigaChat-2-Max#3",
-     "gemini-3.5-flash-lite#0"
+     "GigaChat-2#2",
+     "gemini-3.5-flash-lite#0",
+     "mistral:7b#4"
+    ],
+    [
+     "GigaChat-2-Max#0",
+     "gemma-4-31b-it#0",
+     "GigaChat-2#0",
+     "mistral:7b#1"
     ],
     [
      "claude-haiku-4-5#0",
      "claude-fable-5-1#0",
      "claude-haiku-5-5#0",
-     "claude-sonnet-5-5#0"
+     "claude-sonnet-5-5#0",
+     "llama3.2:3b#0"
     ],
     [
      "gemma-4-31b-it#4",
@@ -9470,9 +10710,24 @@
      "claude-haiku-4-5#3"
     ],
     [
+     "llama3.2:3b#4",
+     "gemini-3.6-flash#2",
+     "gemma-4-31b-it#2",
+     "qwen3:4b#1",
+     "claude-opus-5-5#1",
+     "gemini-3.8-flash#1",
+     "claude-fable-5-1#3",
+     "gemini-3.5-flash-lite#3",
+     "claude-haiku-4-5#1"
+    ],
+    [
      "claude-opus-5-5#4",
      "gemini-3.5-flash-lite#4",
+     "gemini-3.8-flash#3",
      "gemini-3.6-flash#3"
+    ],
+    [
+     "qwen3:4b#0"
     ],
     [
      "GigaChat-2-Pro#3"
@@ -9486,37 +10741,34 @@
      "claude-opus-5-5#3"
     ],
     [
-     "GigaChat-2#2"
-    ],
-    [
      "claude-fable-5-1#1"
     ],
     [
      "GigaChat-2-Pro#0"
     ],
     [
-     "claude-haiku-4-5#4"
+     "claude-haiku-4-5#4",
+     "mistral:7b#3"
     ],
     [
-     "gemini-3.6-flash#2",
-     "gemma-4-31b-it#2",
-     "claude-sonnet-5-5#1",
-     "claude-haiku-5-5#1",
-     "gemma-4-26b-a4b-it#2",
-     "claude-opus-5-5#1",
-     "gemini-3.8-flash#1",
-     "claude-fable-5-1#3",
-     "gemini-3.5-flash-lite#3",
-     "claude-haiku-4-5#1"
+     "mistral:7b#2"
+    ],
+    [
+     "qwen3:4b#2"
     ],
     [
      "gemini-3.8-flash#4"
     ],
     [
-     "gemini-3.8-flash#3"
+     "claude-sonnet-5-5#1",
+     "claude-haiku-5-5#1",
+     "gemma-4-26b-a4b-it#2"
     ],
     [
-     "GigaChat-2#0"
+     "qwen3:4b#4"
+    ],
+    [
+     "llama3.2:3b#1"
     ],
     [
      "GigaChat-2-Pro#2"
@@ -9531,6 +10783,9 @@
      "GigaChat-2#1"
     ],
     [
+     "qwen3:4b#3"
+    ],
+    [
      "GigaChat-2#4"
     ],
     [
@@ -9543,6 +10798,16 @@
    "Give me a premise for a short science fiction story": [
     [
      "gemma-4-26b-a4b-it#4"
+    ],
+    [
+     "qwen3:4b#3"
+    ],
+    [
+     "llama3.2:3b#4"
+    ],
+    [
+     "llama3.2:3b#2",
+     "GigaChat-2-Pro#2"
     ],
     [
      "gemini-3.8-flash#4"
@@ -9581,13 +10846,15 @@
      "claude-haiku-4-5#3"
     ],
     [
+     "llama3.2:3b#0"
+    ],
+    [
      "gemma-4-31b-it#1"
     ],
     [
      "gemini-3.6-flash#3",
      "claude-sonnet-5-5#1",
      "gemma-4-26b-a4b-it#0",
-     "gemma-4-31b-it#0",
      "claude-opus-5-5#2"
     ],
     [
@@ -9598,20 +10865,29 @@
      "gemma-4-31b-it#4"
     ],
     [
-     "gemini-3.8-flash#2"
+     "gemini-3.8-flash#2",
+     "llama3.2:3b#3"
     ],
     [
      "gemma-4-26b-a4b-it#2"
     ],
     [
-     "claude-haiku-5-5#1"
+     "claude-haiku-5-5#1",
+     "claude-opus-5-5#3"
     ],
     [
      "gemini-3.5-flash-lite#4",
      "claude-opus-5-5#0"
     ],
     [
-     "GigaChat-2-Max#0"
+     "GigaChat-2-Max#0",
+     "claude-fable-5-1#1"
+    ],
+    [
+     "mistral:7b#3"
+    ],
+    [
+     "llama3.2:3b#1"
     ],
     [
      "gemini-3.6-flash#2"
@@ -9635,6 +10911,15 @@
      "gemini-3.8-flash#0"
     ],
     [
+     "qwen3:4b#0"
+    ],
+    [
+     "mistral:7b#4"
+    ],
+    [
+     "qwen3:4b#1"
+    ],
+    [
      "GigaChat-2#3"
     ],
     [
@@ -9653,16 +10938,13 @@
      "gemini-3.5-flash-lite#3"
     ],
     [
+     "qwen3:4b#2"
+    ],
+    [
      "claude-sonnet-5-5#2"
     ],
     [
      "gemini-3.6-flash#1"
-    ],
-    [
-     "claude-opus-5-5#3"
-    ],
-    [
-     "GigaChat-2-Pro#2"
     ],
     [
      "GigaChat-2#0"
@@ -9671,19 +10953,28 @@
      "GigaChat-2#4"
     ],
     [
+     "mistral:7b#2"
+    ],
+    [
+     "gemma-4-31b-it#0"
+    ],
+    [
+     "qwen3:4b#4"
+    ],
+    [
      "gemma-4-31b-it#2"
     ],
     [
      "claude-opus-5-5#1"
     ],
     [
+     "mistral:7b#1"
+    ],
+    [
      "claude-opus-5-5#4"
     ],
     [
      "claude-haiku-4-5#1"
-    ],
-    [
-     "claude-fable-5-1#1"
     ],
     [
      "claude-sonnet-5-5#4"
@@ -9704,7 +10995,8 @@
      "gemini-3.5-flash-lite#0"
     ],
     [
-     "GigaChat-2-Pro#4"
+     "GigaChat-2-Pro#4",
+     "mistral:7b#0"
     ],
     [
      "GigaChat-2-Max#2"
@@ -9727,8 +11019,7 @@
    ],
    "Ideas for a first date": [
     [
-     "claude-haiku-5-5#4",
-     "claude-opus-5-5#3"
+     "claude-haiku-5-5#4"
     ],
     [
      "gemini-3.6-flash#2",
@@ -9737,17 +11028,37 @@
      "claude-fable-5-1#2",
      "claude-haiku-5-5#3",
      "gemini-3.5-flash-lite#1",
-     "claude-haiku-4-5#3",
      "gemma-4-26b-a4b-it#2",
-     "gemini-3.8-flash#2",
+     "gemini-3.8-flash#2"
+    ],
+    [
+     "llama3.2:3b#2",
      "gemma-4-31b-it#1"
+    ],
+    [
+     "qwen3:4b#1",
+     "llama3.2:3b#3",
+     "mistral:7b#3",
+     "claude-haiku-5-5#1",
+     "claude-opus-5-5#1",
+     "GigaChat-2-Max#1",
+     "GigaChat-2-Pro#2"
     ],
     [
      "gemini-3.6-flash#4"
     ],
     [
+     "mistral:7b#4"
+    ],
+    [
+     "llama3.2:3b#1",
+     "claude-fable-5-1#4"
+    ],
+    [
      "GigaChat-2-Max#0",
-     "GigaChat-2#3"
+     "GigaChat-2#3",
+     "mistral:7b#2",
+     "claude-opus-5-5#3"
     ],
     [
      "claude-sonnet-5-5#3",
@@ -9755,29 +11066,31 @@
     ],
     [
      "gemma-4-26b-a4b-it#0",
-     "gemma-4-31b-it#0"
+     "gemma-4-31b-it#0",
+     "mistral:7b#0"
     ],
     [
+     "llama3.2:3b#4",
      "GigaChat-2-Max#3",
-     "GigaChat-2-Pro#4",
-     "claude-haiku-4-5#4"
+     "GigaChat-2-Pro#4"
     ],
     [
      "gemini-3.5-flash-lite#4"
     ],
     [
-     "GigaChat-2-Pro#3",
-     "claude-fable-5-1#4"
+     "GigaChat-2-Pro#3"
     ],
     [
      "GigaChat-2#2"
     ],
     [
      "gemma-4-26b-a4b-it#1",
+     "qwen3:4b#0",
      "GigaChat-2-Pro#0",
      "gemma-4-31b-it#3"
     ],
     [
+     "mistral:7b#1",
      "gemini-3.6-flash#1",
      "gemma-4-31b-it#2",
      "claude-fable-5-1#3",
@@ -9789,7 +11102,8 @@
      "claude-haiku-5-5#2",
      "claude-sonnet-5-5#4",
      "gemini-3.5-flash-lite#2",
-     "GigaChat-2#1"
+     "GigaChat-2#1",
+     "llama3.2:3b#0"
     ],
     [
      "gemini-3.6-flash#0",
@@ -9807,26 +11121,30 @@
      "claude-opus-5-5#0"
     ],
     [
-     "claude-haiku-4-5#1"
+     "qwen3:4b#2"
     ],
     [
      "GigaChat-2#0"
     ],
     [
-     "claude-haiku-5-5#1",
-     "claude-opus-5-5#1",
-     "GigaChat-2-Max#1",
-     "GigaChat-2-Pro#2"
+     "qwen3:4b#4"
+    ],
+    [
+     "GigaChat-2-Max#4"
+    ],
+    [
+     "claude-haiku-4-5#4",
+     "GigaChat-2#4"
+    ],
+    [
+     "claude-haiku-4-5#3"
     ],
     [
      "gemini-3.8-flash#4",
      "gemini-3.6-flash#3"
     ],
     [
-     "GigaChat-2-Max#4"
-    ],
-    [
-     "GigaChat-2#4"
+     "qwen3:4b#3"
     ],
     [
      "gemini-3.5-flash-lite#3"
@@ -9836,42 +11154,32 @@
     ],
     [
      "GigaChat-2-Max#2"
+    ],
+    [
+     "claude-haiku-4-5#1"
     ]
    ],
    "How can a hospital reduce patient wait times?": [
     [
-     "claude-haiku-5-5#4"
+     "claude-haiku-5-5#4",
+     "claude-fable-5-1#1",
+     "claude-haiku-5-5#0",
+     "llama3.2:3b#4",
+     "gemini-3.5-flash-lite#2"
     ],
     [
-     "claude-sonnet-5-5#3"
-    ],
-    [
-     "claude-haiku-5-5#2",
-     "claude-opus-5-5#0",
-     "gemma-4-31b-it#0",
-     "claude-fable-5-1#0",
-     "GigaChat-2#3",
-     "gemini-3.5-flash-lite#1",
-     "gemma-4-26b-a4b-it#2",
-     "claude-sonnet-5-5#0",
-     "GigaChat-2-Pro#2",
-     "claude-haiku-4-5#0"
-    ],
-    [
-     "gemma-4-26b-a4b-it#3",
-     "claude-haiku-4-5#4",
-     "gemma-4-31b-it#4"
-    ],
-    [
-     "GigaChat-2-Max#0"
-    ],
-    [
+     "claude-sonnet-5-5#3",
      "gemma-4-26b-a4b-it#0",
+     "gemini-3.8-flash#0",
      "gemma-4-31b-it#1",
+     "gemini-3.6-flash#0",
      "gemini-3.5-flash-lite#0",
-     "claude-opus-5-5#1"
+     "claude-opus-5-5#1",
+     "claude-fable-5-1#2",
+     "claude-haiku-4-5#3"
     ],
     [
+     "llama3.2:3b#2",
      "claude-sonnet-5-5#2",
      "gemini-3.5-flash-lite#4",
      "gemma-4-26b-a4b-it#1",
@@ -9882,57 +11190,78 @@
      "gemma-4-31b-it#2",
      "claude-opus-5-5#2",
      "GigaChat-2-Pro#1",
-     "gemini-3.8-flash#2"
+     "gemini-3.8-flash#2",
+     "claude-haiku-4-5#1"
     ],
     [
-     "claude-opus-5-5#4",
-     "gemini-3.6-flash#4",
-     "claude-haiku-5-5#3",
-     "claude-fable-5-1#4",
-     "gemini-3.8-flash#4",
-     "gemini-3.5-flash-lite#2"
+     "llama3.2:3b#3",
+     "GigaChat-2-Pro#0",
+     "claude-sonnet-5-5#1",
+     "mistral:7b#0",
+     "claude-haiku-4-5#2",
+     "GigaChat-2#1"
+    ],
+    [
+     "claude-haiku-5-5#2",
+     "claude-opus-5-5#0",
+     "gemma-4-31b-it#0",
+     "gemini-3.6-flash#2",
+     "claude-fable-5-1#0",
+     "qwen3:4b#3",
+     "GigaChat-2#3",
+     "gemini-3.5-flash-lite#1",
+     "gemini-3.8-flash#1",
+     "gemma-4-26b-a4b-it#2",
+     "claude-sonnet-5-5#0",
+     "GigaChat-2-Pro#2",
+     "claude-haiku-4-5#0"
+    ],
+    [
+     "llama3.2:3b#0",
+     "GigaChat-2#0",
+     "mistral:7b#3"
+    ],
+    [
+     "gemma-4-26b-a4b-it#3",
+     "claude-haiku-4-5#4",
+     "mistral:7b#4",
+     "gemma-4-31b-it#4"
+    ],
+    [
+     "GigaChat-2-Max#0"
+    ],
+    [
+     "qwen3:4b#0"
     ],
     [
      "gemini-3.8-flash#3",
      "gemma-4-26b-a4b-it#4",
      "claude-sonnet-5-5#4",
      "claude-opus-5-5#3",
-     "claude-fable-5-1#2",
+     "qwen3:4b#2",
      "GigaChat-2-Max#4",
      "gemini-3.6-flash#3",
      "gemma-4-31b-it#3",
      "gemini-3.5-flash-lite#3"
     ],
     [
-     "gemini-3.8-flash#0",
-     "gemini-3.6-flash#0",
-     "claude-haiku-4-5#3"
+     "claude-opus-5-5#4",
+     "gemini-3.6-flash#4",
+     "claude-haiku-5-5#3",
+     "claude-fable-5-1#4",
+     "gemini-3.8-flash#4"
     ],
     [
      "GigaChat-2#2"
     ],
     [
-     "claude-fable-5-1#1",
-     "claude-haiku-5-5#0"
+     "mistral:7b#1"
     ],
     [
-     "gemini-3.6-flash#2",
-     "gemini-3.8-flash#1"
+     "mistral:7b#2"
     ],
     [
-     "GigaChat-2-Max#2",
-     "GigaChat-2-Pro#3"
-    ],
-    [
-     "GigaChat-2-Pro#0",
-     "claude-haiku-4-5#2"
-    ],
-    [
-     "claude-sonnet-5-5#1",
-     "GigaChat-2#1"
-    ],
-    [
-     "GigaChat-2#0"
+     "llama3.2:3b#1"
     ],
     [
      "GigaChat-2-Pro#4"
@@ -9941,15 +11270,33 @@
      "GigaChat-2#4"
     ],
     [
-     "GigaChat-2-Max#3"
+     "qwen3:4b#4"
     ],
     [
-     "claude-haiku-4-5#1"
+     "qwen3:4b#1"
+    ],
+    [
+     "GigaChat-2-Max#2",
+     "GigaChat-2-Pro#3"
+    ],
+    [
+     "GigaChat-2-Max#3"
     ]
    ],
    "Suggest a startup idea in climate tech": [
     [
      "claude-sonnet-5-5#4"
+    ],
+    [
+     "llama3.2:3b#4"
+    ],
+    [
+     "llama3.2:3b#2",
+     "gemma-4-26b-a4b-it#4",
+     "gemma-4-31b-it#1"
+    ],
+    [
+     "llama3.2:3b#0"
     ],
     [
      "gemini-3.5-flash-lite#2"
@@ -9961,13 +11308,20 @@
      "claude-haiku-5-5#2"
     ],
     [
+     "mistral:7b#1"
+    ],
+    [
      "gemma-4-31b-it#3",
      "gemini-3.6-flash#4",
      "gemini-3.5-flash-lite#4",
-     "claude-opus-5-5#3"
+     "claude-opus-5-5#3",
+     "GigaChat-2-Pro#4"
     ],
     [
-     "GigaChat-2-Max#3"
+     "GigaChat-2-Max#3",
+     "GigaChat-2-Pro#1",
+     "qwen3:4b#4",
+     "claude-haiku-4-5#4"
     ],
     [
      "gemini-3.8-flash#1",
@@ -9978,6 +11332,9 @@
      "claude-haiku-5-5#4"
     ],
     [
+     "mistral:7b#4"
+    ],
+    [
      "GigaChat-2-Max#4"
     ],
     [
@@ -9985,6 +11342,10 @@
     ],
     [
      "gemma-4-26b-a4b-it#1"
+    ],
+    [
+     "mistral:7b#0",
+     "GigaChat-2-Max#2"
     ],
     [
      "claude-haiku-5-5#3"
@@ -10002,19 +11363,25 @@
     [
      "claude-haiku-5-5#1",
      "gemma-4-26b-a4b-it#2",
+     "gemini-3.6-flash#0",
      "claude-sonnet-5-5#2"
     ],
     [
-     "claude-fable-5-1#2"
+     "claude-fable-5-1#2",
+     "claude-opus-5-5#1",
+     "claude-sonnet-5-5#0"
     ],
     [
      "gemini-3.5-flash-lite#1"
     ],
     [
-     "GigaChat-2-Max#0"
+     "mistral:7b#3",
+     "GigaChat-2-Max#0",
+     "qwen3:4b#0"
     ],
     [
-     "GigaChat-2#2"
+     "GigaChat-2#2",
+     "mistral:7b#2"
     ],
     [
      "GigaChat-2#4",
@@ -10028,31 +11395,25 @@
      "claude-opus-5-5#0"
     ],
     [
-     "gemma-4-26b-a4b-it#4",
-     "gemma-4-31b-it#1"
-    ],
-    [
-     "claude-haiku-4-5#2",
-     "GigaChat-2-Max#2"
+     "claude-haiku-4-5#2"
     ],
     [
      "GigaChat-2#1"
     ],
     [
-     "gemma-4-31b-it#4"
+     "qwen3:4b#3"
     ],
     [
-     "gemini-3.6-flash#0"
+     "llama3.2:3b#3"
+    ],
+    [
+     "gemma-4-31b-it#4"
     ],
     [
      "gemma-4-26b-a4b-it#0"
     ],
     [
      "GigaChat-2#0"
-    ],
-    [
-     "GigaChat-2-Pro#1",
-     "claude-haiku-4-5#4"
     ],
     [
      "GigaChat-2-Max#1"
@@ -10067,19 +11428,14 @@
      "claude-fable-5-1#4"
     ],
     [
-     "claude-opus-5-5#1",
-     "claude-sonnet-5-5#0"
-    ],
-    [
-     "GigaChat-2-Pro#4"
+     "qwen3:4b#2"
     ],
     [
      "gemma-4-31b-it#0",
      "gemini-3.6-flash#1"
     ],
     [
-     "gemini-3.8-flash#0",
-     "claude-fable-5-1#1"
+     "gemini-3.8-flash#0"
     ],
     [
      "gemini-3.5-flash-lite#0",
@@ -10089,10 +11445,16 @@
      "claude-fable-5-1#3"
     ],
     [
+     "qwen3:4b#1"
+    ],
+    [
      "GigaChat-2-Pro#3"
     ],
     [
      "gemini-3.8-flash#2"
+    ],
+    [
+     "claude-fable-5-1#1"
     ],
     [
      "claude-haiku-4-5#1"
@@ -10104,6 +11466,9 @@
      "claude-fable-5-1#0"
     ],
     [
+     "llama3.2:3b#1"
+    ],
+    [
      "GigaChat-2#3"
     ],
     [
@@ -10112,46 +11477,24 @@
    ],
    "Suggest a plot twist for a detective novel": [
     [
-     "gemma-4-26b-a4b-it#4"
+     "gemma-4-26b-a4b-it#4",
+     "gemini-3.6-flash#2",
+     "claude-haiku-4-5#0",
+     "claude-haiku-5-5#0",
+     "qwen3:4b#3"
     ],
     [
-     "gemini-3.8-flash#3",
+     "gemma-4-31b-it#1",
      "gemma-4-26b-a4b-it#1",
+     "GigaChat-2-Max#1",
+     "claude-haiku-4-5#1",
+     "claude-haiku-5-5#1",
+     "GigaChat-2-Pro#1",
+     "claude-fable-5-1#1",
+     "claude-opus-5-5#1",
+     "mistral:7b#2",
+     "claude-sonnet-5-5#0",
      "gemini-3.6-flash#1"
-    ],
-    [
-     "claude-sonnet-5-5#3"
-    ],
-    [
-     "gemini-3.5-flash-lite#2"
-    ],
-    [
-     "GigaChat-2#3"
-    ],
-    [
-     "GigaChat-2#4"
-    ],
-    [
-     "gemini-3.6-flash#4"
-    ],
-    [
-     "gemma-4-31b-it#3"
-    ],
-    [
-     "gemma-4-31b-it#1"
-    ],
-    [
-     "GigaChat-2-Max#2"
-    ],
-    [
-     "gemini-3.8-flash#1",
-     "gemma-4-31b-it#4"
-    ],
-    [
-     "GigaChat-2-Max#4"
-    ],
-    [
-     "gemma-4-26b-a4b-it#2"
     ],
     [
      "gemma-4-31b-it#0",
@@ -10163,120 +11506,119 @@
      "claude-opus-5-5#0"
     ],
     [
-     "GigaChat-2-Max#1",
-     "claude-haiku-4-5#1",
-     "GigaChat-2-Pro#1",
-     "claude-opus-5-5#1"
+     "gemini-3.6-flash#4",
+     "gemma-4-31b-it#3",
+     "claude-opus-5-5#3",
+     "gemini-3.8-flash#4",
+     "claude-fable-5-1#4",
+     "claude-sonnet-5-5#2"
     ],
     [
-     "claude-opus-5-5#2"
-    ],
-    [
-     "gemini-3.6-flash#2"
-    ],
-    [
-     "gemini-3.6-flash#3"
-    ],
-    [
-     "gemini-3.5-flash-lite#4"
-    ],
-    [
-     "claude-sonnet-5-5#1"
-    ],
-    [
-     "claude-haiku-5-5#1",
-     "claude-fable-5-1#1"
-    ],
-    [
-     "claude-haiku-4-5#4"
-    ],
-    [
-     "gemini-3.8-flash#0"
-    ],
-    [
-     "GigaChat-2-Max#0"
-    ],
-    [
-     "GigaChat-2#2"
-    ],
-    [
-     "claude-haiku-5-5#2"
-    ],
-    [
-     "claude-opus-5-5#3"
-    ],
-    [
-     "claude-haiku-4-5#0"
-    ],
-    [
-     "GigaChat-2#1"
-    ],
-    [
-     "gemini-3.5-flash-lite#1"
-    ],
-    [
-     "GigaChat-2-Pro#0",
-     "claude-haiku-4-5#3"
-    ],
-    [
-     "gemini-3.5-flash-lite#3"
-    ],
-    [
-     "gemini-3.8-flash#4"
-    ],
-    [
-     "GigaChat-2#0"
-    ],
-    [
-     "claude-sonnet-5-5#4"
-    ],
-    [
-     "claude-haiku-5-5#3"
-    ],
-    [
-     "claude-fable-5-1#4"
-    ],
-    [
-     "GigaChat-2-Max#3"
-    ],
-    [
-     "claude-sonnet-5-5#0"
-    ],
-    [
-     "gemini-3.5-flash-lite#0"
-    ],
-    [
-     "claude-fable-5-1#0"
-    ],
-    [
-     "claude-fable-5-1#3"
-    ],
-    [
-     "GigaChat-2-Pro#3"
-    ],
-    [
+     "gemma-4-26b-a4b-it#2",
+     "claude-opus-5-5#2",
+     "claude-sonnet-5-5#4",
+     "claude-fable-5-1#0",
      "gemini-3.8-flash#2"
     ],
     [
-     "claude-haiku-5-5#0"
+     "llama3.2:3b#1",
+     "GigaChat-2#1",
+     "GigaChat-2-Pro#0",
+     "mistral:7b#0",
+     "claude-haiku-4-5#3"
     ],
     [
-     "claude-opus-5-5#4"
+     "GigaChat-2-Max#2",
+     "gemini-3.8-flash#1",
+     "gemma-4-31b-it#4",
+     "qwen3:4b#4"
     ],
     [
+     "gemini-3.8-flash#0",
+     "gemini-3.5-flash-lite#1",
+     "gemma-4-31b-it#2"
+    ],
+    [
+     "llama3.2:3b#2",
+     "claude-sonnet-5-5#3",
+     "gemini-3.5-flash-lite#2",
+     "claude-haiku-5-5#2"
+    ],
+    [
+     "gemini-3.8-flash#3",
      "gemma-4-26b-a4b-it#3"
+    ],
+    [
+     "gemini-3.6-flash#3",
+     "claude-sonnet-5-5#1"
+    ],
+    [
+     "GigaChat-2#2",
+     "claude-haiku-5-5#3"
     ],
     [
      "GigaChat-2-Pro#2"
     ],
     [
-     "claude-sonnet-5-5#2"
+     "mistral:7b#1",
+     "mistral:7b#3",
+     "llama3.2:3b#0"
     ],
     [
+     "GigaChat-2-Max#4"
+    ],
+    [
+     "gemini-3.5-flash-lite#4"
+    ],
+    [
+     "GigaChat-2-Max#0",
      "GigaChat-2-Pro#4"
     ],
     [
-     "gemma-4-31b-it#2"
+     "qwen3:4b#1",
+     "qwen3:4b#0"
+    ],
+    [
+     "gemini-3.5-flash-lite#3"
+    ],
+    [
+     "GigaChat-2-Max#3"
+    ],
+    [
+     "GigaChat-2#0"
+    ],
+    [
+     "GigaChat-2-Pro#3"
+    ],
+    [
+     "qwen3:4b#2"
+    ],
+    [
+     "gemini-3.5-flash-lite#0"
+    ],
+    [
+     "claude-fable-5-1#3"
+    ],
+    [
+     "claude-opus-5-5#4"
+    ],
+    [
+     "llama3.2:3b#3"
+    ],
+    [
+     "GigaChat-2#3"
+    ],
+    [
+     "GigaChat-2#4"
+    ],
+    [
+     "llama3.2:3b#4"
+    ],
+    [
+     "claude-haiku-4-5#4"
+    ],
+    [
+     "mistral:7b#4"
     ]
    ],
    "How can a supermarket reduce plastic use?": [
@@ -10287,16 +11629,12 @@
      "GigaChat-2-Max#1",
      "gemini-3.5-flash-lite#4",
      "gemini-3.8-flash#1",
-     "gemma-4-26b-a4b-it#2",
      "claude-fable-5-1#0",
-     "gemma-4-31b-it#1",
      "claude-opus-5-5#0",
-     "GigaChat-2-Pro#0",
      "claude-sonnet-5-5#0"
     ],
     [
      "gemma-4-31b-it#4",
-     "GigaChat-2-Max#4",
      "claude-sonnet-5-5#4",
      "claude-haiku-5-5#4",
      "GigaChat-2-Pro#4",
@@ -10304,6 +11642,19 @@
      "gemini-3.8-flash#3",
      "gemini-3.6-flash#4",
      "claude-haiku-4-5#3"
+    ],
+    [
+     "llama3.2:3b#2",
+     "claude-fable-5-1#3",
+     "GigaChat-2#2",
+     "gemma-4-26b-a4b-it#2",
+     "gemini-3.6-flash#2",
+     "gemma-4-31b-it#3",
+     "claude-haiku-4-5#1",
+     "gemini-3.5-flash-lite#2",
+     "qwen3:4b#3",
+     "claude-sonnet-5-5#3",
+     "GigaChat-2-Pro#0"
     ],
     [
      "GigaChat-2-Pro#3",
@@ -10314,58 +11665,76 @@
      "gemini-3.8-flash#0",
      "gemma-4-31b-it#2",
      "claude-fable-5-1#1",
+     "claude-haiku-5-5#0",
      "gemini-3.5-flash-lite#0",
      "gemini-3.6-flash#1",
      "claude-haiku-4-5#4",
      "claude-sonnet-5-5#1"
     ],
     [
-     "claude-fable-5-1#3",
-     "GigaChat-2#2",
-     "gemini-3.6-flash#2",
-     "gemma-4-31b-it#3",
-     "claude-haiku-4-5#1",
-     "claude-sonnet-5-5#3"
+     "mistral:7b#1"
     ],
     [
+     "mistral:7b#0",
      "gemma-4-31b-it#0",
+     "llama3.2:3b#0",
      "claude-opus-5-5#2",
-     "gemini-3.6-flash#3",
      "claude-haiku-5-5#1",
      "claude-fable-5-1#2",
      "GigaChat-2-Max#0",
      "claude-haiku-4-5#0",
+     "qwen3:4b#0",
+     "llama3.2:3b#1",
      "gemini-3.5-flash-lite#3",
      "GigaChat-2#0",
+     "qwen3:4b#2",
      "GigaChat-2-Pro#2",
      "claude-sonnet-5-5#2"
     ],
     [
+     "mistral:7b#4"
+    ],
+    [
+     "GigaChat-2-Max#4"
+    ],
+    [
      "claude-haiku-5-5#3",
+     "gemini-3.6-flash#3",
      "gemini-3.8-flash#2",
      "gemma-4-26b-a4b-it#3",
+     "mistral:7b#2",
      "GigaChat-2-Max#3",
+     "qwen3:4b#1",
      "claude-opus-5-5#4"
+    ],
+    [
+     "gemma-4-26b-a4b-it#1",
+     "gemini-3.5-flash-lite#1",
+     "gemma-4-31b-it#1"
     ],
     [
      "claude-haiku-4-5#2",
      "GigaChat-2#1",
-     "GigaChat-2-Pro#1",
-     "claude-haiku-5-5#0"
+     "GigaChat-2-Pro#1"
     ],
     [
-     "gemma-4-26b-a4b-it#1",
-     "gemini-3.5-flash-lite#1"
+     "llama3.2:3b#3"
+    ],
+    [
+     "llama3.2:3b#4"
     ],
     [
      "claude-fable-5-1#4",
      "gemini-3.8-flash#4"
     ],
     [
-     "gemini-3.5-flash-lite#2"
+     "qwen3:4b#4"
     ],
     [
      "GigaChat-2#3"
+    ],
+    [
+     "mistral:7b#3"
     ]
    ],
    "Ideas for a high school science fair project": [
@@ -10373,18 +11742,38 @@
      "claude-sonnet-5-5#4"
     ],
     [
+     "qwen3:4b#1"
+    ],
+    [
+     "llama3.2:3b#2"
+    ],
+    [
+     "mistral:7b#4",
+     "claude-opus-5-5#4",
+     "gemini-3.6-flash#1",
+     "GigaChat-2-Max#4"
+    ],
+    [
+     "llama3.2:3b#3"
+    ],
+    [
      "claude-sonnet-5-5#1",
      "claude-opus-5-5#0",
-     "claude-haiku-5-5#0"
+     "claude-haiku-5-5#0",
+     "qwen3:4b#4"
+    ],
+    [
+     "llama3.2:3b#0",
+     "claude-fable-5-1#0",
+     "qwen3:4b#3"
     ],
     [
      "GigaChat-2-Max#0",
-     "gemma-4-26b-a4b-it#0",
-     "gemini-3.6-flash#0",
      "gemma-4-31b-it#1"
     ],
     [
-     "claude-fable-5-1#0"
+     "gemma-4-26b-a4b-it#0",
+     "gemini-3.6-flash#0"
     ],
     [
      "gemini-3.6-flash#2",
@@ -10394,11 +11783,7 @@
      "GigaChat-2-Max#2"
     ],
     [
-     "gemini-3.5-flash-lite#4",
-     "claude-haiku-4-5#1",
-     "claude-sonnet-5-5#0",
-     "claude-opus-5-5#2",
-     "claude-fable-5-1#1"
+     "gemini-3.5-flash-lite#4"
     ],
     [
      "gemini-3.6-flash#4",
@@ -10410,25 +11795,31 @@
      "claude-haiku-5-5#1"
     ],
     [
-     "claude-opus-5-5#4",
-     "gemini-3.6-flash#1",
-     "GigaChat-2-Max#4"
-    ],
-    [
      "GigaChat-2#2"
     ],
     [
      "gemma-4-26b-a4b-it#1"
     ],
     [
+     "mistral:7b#1"
+    ],
+    [
+     "qwen3:4b#0",
+     "claude-haiku-4-5#2",
+     "mistral:7b#0"
+    ],
+    [
      "gemma-4-26b-a4b-it#4",
      "gemma-4-31b-it#4",
-     "claude-fable-5-1#3",
      "GigaChat-2-Pro#3"
     ],
     [
      "GigaChat-2-Max#1",
      "claude-sonnet-5-5#3"
+    ],
+    [
+     "mistral:7b#2",
+     "llama3.2:3b#1"
     ],
     [
      "claude-haiku-4-5#0"
@@ -10439,8 +11830,17 @@
      "claude-fable-5-1#2"
     ],
     [
+     "claude-haiku-4-5#1",
+     "claude-sonnet-5-5#0",
+     "claude-opus-5-5#2",
+     "claude-fable-5-1#1"
+    ],
+    [
      "GigaChat-2#4",
      "gemini-3.5-flash-lite#3"
+    ],
+    [
+     "mistral:7b#3"
     ],
     [
      "claude-sonnet-5-5#2",
@@ -10451,13 +11851,13 @@
      "claude-fable-5-1#4"
     ],
     [
+     "qwen3:4b#2"
+    ],
+    [
      "GigaChat-2#0"
     ],
     [
      "GigaChat-2-Pro#1"
-    ],
-    [
-     "claude-haiku-4-5#2"
     ],
     [
      "gemma-4-31b-it#2",
@@ -10488,6 +11888,12 @@
     ],
     [
      "gemma-4-26b-a4b-it#2"
+    ],
+    [
+     "claude-fable-5-1#3"
+    ],
+    [
+     "llama3.2:3b#4"
     ],
     [
      "GigaChat-2-Pro#0"
@@ -10537,170 +11943,209 @@
   {
    "model": "gemma-4-26b-a4b-it",
    "vendor": "Google",
-   "shared": 0.7966666666666666,
+   "shared": 0.8400000000000001,
    "ci": [
-    0.7000000000000001,
-    0.8833333333333334
+    0.7533333333333334,
+    0.9133333333333333
    ],
    "byJudge": {
-    "claude-opus-5-5": 0.8333333333333335,
-    "gemini-3.5-flash-lite": 0.76
-   }
-  },
-  {
-   "model": "claude-opus-5-5",
-   "vendor": "Anthropic",
-   "shared": 0.7899999999999999,
-   "ci": [
-    0.6933333333333335,
-    0.8766666666666667
-   ],
-   "byJudge": {
-    "claude-opus-5-5": 0.7866666666666668,
-    "gemini-3.5-flash-lite": 0.7933333333333333
-   }
-  },
-  {
-   "model": "claude-fable-5-1",
-   "vendor": "Anthropic",
-   "shared": 0.7699999999999999,
-   "ci": [
-    0.6633333333333334,
-    0.8633333333333332
-   ],
-   "byJudge": {
-    "claude-opus-5-5": 0.7733333333333334,
-    "gemini-3.5-flash-lite": 0.7666666666666667
-   }
-  },
-  {
-   "model": "claude-haiku-5-5",
-   "vendor": "Anthropic",
-   "shared": 0.7699999999999999,
-   "ci": [
-    0.6499999999999999,
-    0.8766666666666666
-   ],
-   "byJudge": {
-    "claude-opus-5-5": 0.7733333333333332,
-    "gemini-3.5-flash-lite": 0.7666666666666667
+    "claude-opus-5-5": 0.8333333333333336,
+    "gemini-3.5-flash-lite": 0.8466666666666668
    }
   },
   {
    "model": "gemma-4-31b-it",
    "vendor": "Google",
-   "shared": 0.7600000000000002,
+   "shared": 0.8366666666666668,
    "ci": [
-    0.68,
-    0.8366666666666667
+    0.7533333333333334,
+    0.9066666666666666
    ],
    "byJudge": {
-    "claude-opus-5-5": 0.7800000000000004,
-    "gemini-3.5-flash-lite": 0.7400000000000002
+    "claude-opus-5-5": 0.8333333333333336,
+    "gemini-3.5-flash-lite": 0.8400000000000001
    }
   },
   {
-   "model": "claude-haiku-4-5",
+   "model": "claude-fable-5-1",
    "vendor": "Anthropic",
-   "shared": 0.7599999999999999,
+   "shared": 0.8300000000000001,
    "ci": [
-    0.6600000000000001,
-    0.85
+    0.7333333333333333,
+    0.9166666666666666
    ],
    "byJudge": {
-    "claude-opus-5-5": 0.7533333333333335,
-    "gemini-3.5-flash-lite": 0.7666666666666668
+    "claude-opus-5-5": 0.82,
+    "gemini-3.5-flash-lite": 0.8400000000000001
+   }
+  },
+  {
+   "model": "claude-haiku-5-5",
+   "vendor": "Anthropic",
+   "shared": 0.8299999999999997,
+   "ci": [
+    0.7266666666666666,
+    0.9133333333333334
+   ],
+   "byJudge": {
+    "claude-opus-5-5": 0.8066666666666666,
+    "gemini-3.5-flash-lite": 0.8533333333333334
    }
   },
   {
    "model": "claude-sonnet-5-5",
    "vendor": "Anthropic",
-   "shared": 0.7399999999999999,
+   "shared": 0.8266666666666665,
    "ci": [
-    0.6299999999999998,
-    0.8433333333333335
+    0.7299999999999999,
+    0.9133333333333334
    ],
    "byJudge": {
-    "claude-opus-5-5": 0.7466666666666667,
-    "gemini-3.5-flash-lite": 0.7333333333333335
+    "claude-opus-5-5": 0.8133333333333334,
+    "gemini-3.5-flash-lite": 0.8400000000000002
    }
   },
   {
-   "model": "gemini-3.5-flash-lite",
-   "vendor": "Google",
-   "shared": 0.7233333333333333,
+   "model": "claude-haiku-4-5",
+   "vendor": "Anthropic",
+   "shared": 0.8133333333333334,
    "ci": [
-    0.6133333333333334,
-    0.8233333333333335
+    0.7200000000000001,
+    0.8933333333333333
    ],
    "byJudge": {
-    "claude-opus-5-5": 0.7133333333333333,
-    "gemini-3.5-flash-lite": 0.7333333333333335
+    "claude-opus-5-5": 0.8066666666666668,
+    "gemini-3.5-flash-lite": 0.8200000000000003
    }
   },
   {
-   "model": "gemini-3.8-flash",
-   "vendor": "Google",
-   "shared": 0.7100000000000001,
+   "model": "claude-opus-5-5",
+   "vendor": "Anthropic",
+   "shared": 0.81,
    "ci": [
-    0.6066666666666667,
-    0.8066666666666665
+    0.72,
+    0.8900000000000001
    ],
    "byJudge": {
-    "claude-opus-5-5": 0.7000000000000001,
-    "gemini-3.5-flash-lite": 0.7200000000000001
-   }
-  },
-  {
-   "model": "gemini-3.6-flash",
-   "vendor": "Google",
-   "shared": 0.6966666666666668,
-   "ci": [
-    0.6033333333333333,
-    0.7899999999999999
-   ],
-   "byJudge": {
-    "claude-opus-5-5": 0.6733333333333335,
-    "gemini-3.5-flash-lite": 0.7200000000000001
+    "claude-opus-5-5": 0.7866666666666668,
+    "gemini-3.5-flash-lite": 0.8333333333333334
    }
   },
   {
    "model": "GigaChat-2-Max",
    "vendor": "Sber",
-   "shared": 0.6466666666666667,
+   "shared": 0.7766666666666666,
    "ci": [
-    0.5399999999999999,
-    0.7466666666666667
+    0.6833333333333336,
+    0.86
    ],
    "byJudge": {
-    "claude-opus-5-5": 0.6466666666666667,
-    "gemini-3.5-flash-lite": 0.6466666666666666
+    "claude-opus-5-5": 0.7533333333333335,
+    "gemini-3.5-flash-lite": 0.8000000000000002
+   }
+  },
+  {
+   "model": "gemini-3.8-flash",
+   "vendor": "Google",
+   "shared": 0.77,
+   "ci": [
+    0.6833333333333332,
+    0.8533333333333334
+   ],
+   "byJudge": {
+    "claude-opus-5-5": 0.7466666666666668,
+    "gemini-3.5-flash-lite": 0.7933333333333334
+   }
+  },
+  {
+   "model": "gemini-3.6-flash",
+   "vendor": "Google",
+   "shared": 0.7366666666666666,
+   "ci": [
+    0.6466666666666665,
+    0.8233333333333334
+   ],
+   "byJudge": {
+    "claude-opus-5-5": 0.6800000000000002,
+    "gemini-3.5-flash-lite": 0.7933333333333334
+   }
+  },
+  {
+   "model": "gemini-3.5-flash-lite",
+   "vendor": "Google",
+   "shared": 0.7366666666666665,
+   "ci": [
+    0.6333333333333334,
+    0.8300000000000001
+   ],
+   "byJudge": {
+    "claude-opus-5-5": 0.7066666666666667,
+    "gemini-3.5-flash-lite": 0.7666666666666668
    }
   },
   {
    "model": "GigaChat-2-Pro",
    "vendor": "Sber",
-   "shared": 0.62,
+   "shared": 0.7033333333333334,
    "ci": [
-    0.52,
-    0.72
+    0.6133333333333334,
+    0.7900000000000001
    ],
    "byJudge": {
-    "claude-opus-5-5": 0.6466666666666666,
-    "gemini-3.5-flash-lite": 0.5933333333333334
+    "claude-opus-5-5": 0.6866666666666666,
+    "gemini-3.5-flash-lite": 0.7200000000000001
+   }
+  },
+  {
+   "model": "llama3.2:3b",
+   "vendor": "Meta",
+   "shared": 0.6808333333333334,
+   "ci": [
+    0.5783333333333334,
+    0.7741666666666663
+   ],
+   "byJudge": {
+    "claude-opus-5-5": 0.6349999999999999,
+    "gemini-3.5-flash-lite": 0.7266666666666667
    }
   },
   {
    "model": "GigaChat-2",
    "vendor": "Sber",
-   "shared": 0.5533333333333333,
+   "shared": 0.6733333333333333,
    "ci": [
-    0.4433333333333334,
-    0.66
+    0.5633333333333334,
+    0.7733333333333333
    ],
    "byJudge": {
-    "claude-opus-5-5": 0.5733333333333335,
-    "gemini-3.5-flash-lite": 0.5333333333333333
+    "claude-opus-5-5": 0.6533333333333334,
+    "gemini-3.5-flash-lite": 0.6933333333333334
+   }
+  },
+  {
+   "model": "mistral:7b",
+   "vendor": "Mistral",
+   "shared": 0.6533333333333335,
+   "ci": [
+    0.5633333333333332,
+    0.7400000000000001
+   ],
+   "byJudge": {
+    "claude-opus-5-5": 0.6266666666666667,
+    "gemini-3.5-flash-lite": 0.6800000000000002
+   }
+  },
+  {
+   "model": "qwen3:4b",
+   "vendor": "Alibaba",
+   "shared": 0.6400000000000002,
+   "ci": [
+    0.5366666666666667,
+    0.7333333333333333
+   ],
+   "byJudge": {
+    "claude-opus-5-5": 0.6466666666666668,
+    "gemini-3.5-flash-lite": 0.6333333333333332
    }
   }
  ]
